@@ -258,6 +258,15 @@ $route['admin/update-stream'] = 'Admin/Stream/updateStream';
 $route['admin/edit-stream/(:any)'] = 'Admin/Stream/editStream/$1';
 $route['admin/delete-stream'] = 'Admin/Stream/deleteStream';
 
+
+$route['admin/degreetype'] = 'Admin/DegreeType/index';
+$route['admin/add-degreetype'] = 'Admin/DegreeType/add';
+$route['admin/save-degreetype'] = 'Admin/DegreeType/saveDegreeType';
+$route['admin/update-stream'] = 'Admin/DegreeType/updateDegreeType';
+$route['admin/edit-degreetype/(:any)'] = 'Admin/DegreeType/editDegreeType/$1';
+$route['admin/delete-degreetype'] = 'Admin/DegreeType/deleteDegreeType';
+
+
 $route['admin/exams'] = 'Admin/Exams/index';
 $route['admin/add-exams'] = 'Admin/Exams/add';
 $route['admin/save-exams'] = 'Admin/Exams/saveExams';

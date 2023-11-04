@@ -46,7 +46,7 @@
                                 <a href="<?= base_url('admin/stream'); ?>" class="nav-link" data-key="t-calendar">Streams </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/student-review'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
+                                <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?= base_url('admin/student-review'); ?>" class="nav-link" data-key="t-calendar">Nature/Group  </a>
