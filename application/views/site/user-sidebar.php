@@ -1,0 +1,18 @@
+<div class="col-md-3 col-12 pt-5 mb-3 mt-3" style="border-radius: 0px 50px 50px 0px;background: #F68F45;">
+    <ul class="nav w-100">
+        <li class="nav-item <?=$pagelink=='profile'?'active':"";?> w-100"><a href="<?=base_url('profile');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>  Personal Detail </span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='education'?'active':"";?> w-100"><a href="<?=base_url('education');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>  Educational Qualification </span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='experience'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>  Work Experience</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='quiz'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Quiz</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='scholarship'?'active':"";?> w-100"><a href="" class="nav-link d-flex justify-content-between"><span> <i class="fas fa-certificate"></i>   Scholarship</span><span><i class="fa fa-lock"></i> <i class="far fa-arrow-alt-circle-right"></i> </span> </a> </li>
+        <li class="nav-item <?=$pagelink=='quiz'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-image"> </i>   Photography Contest</span><span><i class="fa fa-lock"></i> <i class="far fa-arrow-alt-circle-right"></i> </span></a> </li>
+
+        <li class="nav-item <?=$pagelink=='training'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   10 Days Training Module</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='task'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Task & Assignment</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='advtraining'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Advance Training Module</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='joinus'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Join Us</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='download'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Download</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item <?=$pagelink=='support'?'active':"";?> w-100"><a href="<?=base_url('experience');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i>   Support</span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+        <li class="nav-item  w-100"><a href="<?=base_url('logout');?>" class="nav-link d-flex justify-content-between"><span> <i class="fa fa-user"> </i> Log Out </span><i class="far fa-arrow-alt-circle-right"></i></a> </li>
+    </ul>
+</div>
