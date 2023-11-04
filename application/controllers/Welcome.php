@@ -32,10 +32,6 @@ class Welcome extends CI_Controller {
     }
 	public function index()
 	{
-		$data['user_session'] = $this->session->userdata('user');
-		$data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);	
-
-		$data['sliderList'] = $this->slider->getRecords('tbl_slider');
-		$this->load->view('site/home',$data);
+		return redirect('admin');
 	}
 }
