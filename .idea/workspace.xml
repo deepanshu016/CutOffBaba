@@ -5,70 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Branch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Course.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Nature.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Banner.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Blog.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Company.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Departement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Faq.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Feature.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/ImageGallery.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Institute.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Instructor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Language.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Media.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Messages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Slider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Student.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Team.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Testimonials.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/VideoGallery.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Content.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Course.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Education.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Experience.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Institute.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Instructor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Student.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Site/Subject.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/banner/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/banner/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/blog/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/blog/importBlog.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/blog/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/category/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/category/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/contact/contact-list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/contact/view-contact-details.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/course/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/course/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/degreetype/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/degreetype/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/departement/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/departement/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/faq/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/faq/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/feature/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/feature/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/imagegallery/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/imagegallery/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/language/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/language/importLanguage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/language/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/media/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/media/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/slider/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/slider/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/team/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/team/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/testimonial/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/testimonial/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/videogallery/add-edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/videogallery/list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +73,7 @@
       <workItem from="1698952082928" duration="5863000" />
       <workItem from="1699031242218" duration="9564000" />
       <workItem from="1699095794227" duration="59000" />
-      <workItem from="1699121851497" duration="5566000" />
+      <workItem from="1699121851497" duration="8030000" />
     </task>
     <servers />
   </component>
@@ -238,6 +183,65 @@
             <option name="methodName" value="updateDegreeType" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Nature.php</url>
+          <line>21</line>
+          <properties>
+            <option name="className" value="\Nature" />
+            <option name="methodName" value="add" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Nature.php</url>
+          <line>9</line>
+          <properties>
+            <option name="className" value="\Nature" />
+            <option name="methodName" value="index" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Course.php</url>
+          <line>69</line>
+          <properties>
+            <option name="className" value="\Course" />
+            <option name="methodName" value="updateCourse" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
+          <line>89</line>
+          <properties>
+            <option name="className" value="\Branch" />
+            <option name="methodName" value="deleteBranch" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
+          <line>43</line>
+          <properties>
+            <option name="className" value="\Branch" />
+            <option name="methodName" value="saveBranch" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
+          <line>31</line>
+          <properties>
+            <option name="className" value="\Branch" />
+            <option name="methodName" value="editBranch" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
+          <line>22</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

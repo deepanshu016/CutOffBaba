@@ -49,13 +49,13 @@
                                 <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/student-review'); ?>" class="nav-link" data-key="t-calendar">Nature/Group  </a>
+                                <a href="<?= base_url('admin/nature'); ?>" class="nav-link" data-key="t-calendar">Nature/Group  </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/student-review'); ?>" class="nav-link" data-key="t-calendar">Course   </a>
+                                <a href="<?= base_url('admin/course'); ?>" class="nav-link" data-key="t-calendar">Course   </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/student-review'); ?>" class="nav-link" data-key="t-calendar">Branches   </a>
+                                <a href="<?= base_url('admin/branch'); ?>" class="nav-link" data-key="t-calendar">Branches   </a>
                             </li>
                         </ul>
                     </div>
@@ -153,6 +153,11 @@
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/settings'); ?>">
                         <i class="ri-settings-3-line"></i> <span data-key="t-landing">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/logout'); ?>">
+                        <i class="ri-lock-3-line"></i> <span data-key="t-landing">Logout</span>
                     </a>
                 </li>
             </ul>
