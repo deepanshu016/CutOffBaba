@@ -268,3 +268,14 @@ $(document).on('click','.delete-product-images', function (e) {
       }
     }); 
 })
+$(".switch-photo-video").change(function(e){
+    var type = $(this).val();
+    if(type === 'photo'){
+        $(".gallery-image-show").show();
+        $(".gallery-video-show").hide();
+    }
+    if(type === 'video'){
+        $(".gallery-image-show").hide();
+        $(".gallery-video-show").show();
+    }
+});

@@ -89,6 +89,19 @@ class MY_Controller extends CI_Controller {
 
 	    return $string.'-'.sha1($string);
 	}
+
+    public function remove_file_from_directory($file_path,$file_name){
+        $full_path = $file_path.'/'.$file_name;
+        if (file_exists($full_path)) {
+            if (unlink($full_path)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+    }
 } // end of class
 
 ?>

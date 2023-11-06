@@ -4,16 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Branch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Nature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
+    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="06-11-2023 Changes">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/gallery/add-edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/admin/gallery/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/9c4e781e0243d682640a6f7b85b3cedf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/45f075dbeefd7fff5d116c5c3636b5e6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/5105698d4fec9ae72d98543816eb342d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/5f9efda88f41a6dd2af284302b12e15a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/758d75a7f2ce9ed95be957ce8f50f70e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/a08c0ed0c32fbc91de3bd7b79e262ad0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/ba7c9dede64d18acaee2345edfa442f2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/image/d11116e34664c2cfafffe3e7f72b4dce.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/video/6badf222354d92dd9543891677e163d5.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/video/9a08e2b59468eb8e1bd4e6ffde05b57c.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/video/c8ae40dfef0b8c11d8713e960344b6fb.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/uploads/gallery_media/video/ead1b1e9559b2c77a31837948f136fe3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c01da9c3-1892-4e1c-a4b5-562e3c524efa/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/application - Shortcut.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +70,7 @@
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/deepanshu/photo-gallery",
+    "last_opened_file_path": "C:/xampp/htdocs/brandzzyTask",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +81,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mariadb"
+      "mariadb",
+      "mysql"
     ]
   }
 }]]></component>
@@ -73,7 +97,9 @@
       <workItem from="1698952082928" duration="5863000" />
       <workItem from="1699031242218" duration="9564000" />
       <workItem from="1699095794227" duration="59000" />
-      <workItem from="1699121851497" duration="8030000" />
+      <workItem from="1699121851497" duration="8406000" />
+      <workItem from="1699170911517" duration="721000" />
+      <workItem from="1699289687310" duration="8620000" />
     </task>
     <servers />
   </component>
@@ -117,6 +143,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="06-11-2023 Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="06-11-2023 Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -238,10 +268,24 @@
           </properties>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Gallery.php</url>
+          <line>151</line>
+          <properties>
+            <option name="className" value="\Gallery" />
+            <option name="methodName" value="updateApproval" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
           <line>22</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/Gallery.php</url>
+          <line>113</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

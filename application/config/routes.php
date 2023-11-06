@@ -122,7 +122,13 @@ $route['admin/update-ownership'] = 'Admin/Ownership/updateOwnership';
 $route['admin/edit-ownership/(:any)/(:any)'] = 'Admin/Ownership/editOwnership/$1/$2';
 $route['admin/delete-ownership'] = 'Admin/Ownership/deleteOwnership';
 
-
+// 06-11-2023
+$route['admin/gallery'] = 'Admin/Gallery/index';
+$route['admin/add-gallery'] = 'Admin/Gallery/add';
+$route['admin/save-gallery'] = 'Admin/Gallery/saveGallery';
+$route['admin/update-gallery'] = 'Admin/Gallery/updateGallery';
+$route['admin/edit-gallery/(:any)'] = 'Admin/Gallery/editGallery/$1';
+$route['admin/delete-gallery'] = 'Admin/Gallery/deleteGallery';
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

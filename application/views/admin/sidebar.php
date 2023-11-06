@@ -86,7 +86,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/gallery'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Gallery Master</span>
                     </a>
                 </li>
