@@ -61,7 +61,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
 

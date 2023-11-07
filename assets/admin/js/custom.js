@@ -279,3 +279,4 @@ $(".switch-photo-video").change(function(e){
         $(".gallery-video-show").show();
     }
 });
+

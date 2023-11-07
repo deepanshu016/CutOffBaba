@@ -114,6 +114,7 @@ $route['admin/update-city'] = 'Admin/City/updateCity';
 $route['admin/edit-city/(:any)'] = 'Admin/City/editCity/$1';
 $route['admin/delete-city'] = 'Admin/City/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
+$route['admin/get-city'] = 'Admin/Common/getCityByState';
 
 $route['admin/ownership'] = 'Admin/Ownership/index';
 $route['admin/add-ownership'] = 'Admin/Ownership/add';
@@ -129,6 +130,23 @@ $route['admin/save-gallery'] = 'Admin/Gallery/saveGallery';
 $route['admin/update-gallery'] = 'Admin/Gallery/updateGallery';
 $route['admin/edit-gallery/(:any)'] = 'Admin/Gallery/editGallery/$1';
 $route['admin/delete-gallery'] = 'Admin/Gallery/deleteGallery';
+
+// 07-11-2023
+$route['admin/college'] = 'Admin/College/index';
+$route['admin/add-college'] = 'Admin/College/add';
+$route['admin/save-college'] = 'Admin/College/saveCollege';
+$route['admin/update-college'] = 'Admin/College/updateCollege';
+$route['admin/edit-college/(:any)'] = 'Admin/College/editCollege/$1';
+$route['admin/delete-college'] = 'Admin/College/deleteCollege';
+
+
+
+$route['admin/feeshead'] = 'Admin/FeesHead/index';
+$route['admin/add-feeshead'] = 'Admin/FeesHead/add';
+$route['admin/save-feeshead'] = 'Admin/FeesHead/saveFeesHead';
+$route['admin/update-feeshead'] = 'Admin/FeesHead/updateFeesHead';
+$route['admin/edit-feeshead/(:any)'] = 'Admin/FeesHead/editFeesHead/$1';
+$route['admin/delete-feeshead'] = 'Admin/FeesHead/deleteFeesHead';
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

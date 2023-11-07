@@ -10,12 +10,36 @@ Class Common extends MY_Controller {
     {
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
+            $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
             $stateList = $this->master->getRecords('tbl_state',['country_id'=>$id]);
             $html = '';
             if(!empty($stateList)){
                 foreach($stateList as $state){
                     $html.= '<option value="'.$state['id'].'">'.$state['name'].'</option>';
+                }
+                $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
+                echo json_encode($response);
+                return false;
+            }
+            $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
+            echo json_encode($response);
+            return false;
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
+    public function getCityByState()
+    {
+        if ($this->is_admin_logged_in() == true) {
+            $id = $this->input->post('id');
+            $data['admin_session'] = $this->session->userdata('admin');
+            $cityList = $this->master->getRecords('tbl_city',['state_id'=>$id]);
+            $html = '';
+            if(!empty($cityList)){
+                foreach($cityList as $city){
+                    $html.= '<option value="'.$city['id'].'">'.$city['city'].'</option>';
                 }
                 $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
                 echo json_encode($response);

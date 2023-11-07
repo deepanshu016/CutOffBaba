@@ -105,4 +105,14 @@
 		$str = array_reverse($string_word);
 		return implode(' ', $str);
 	}
+
+    //get countries
+if (!function_exists('get_master_data')) {
+    function get_master_data($table, $condition)
+    {
+        $CI =& get_instance();
+        $CI->load->model('MasterModel');
+        return $CI->MasterModel->getRecords($table,$condition);
+    }
+}
 ?>
