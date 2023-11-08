@@ -95,8 +95,7 @@ Class Ownership extends MY_Controller {
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
         if ($this->form_validation->run()) {
 
-            $data['title'] = $this->input->post('banner_title');
-            $data['slug'] = $this->slug($this->input->post('banner_title'));
+            $data['title'] = $this->input->post('title');
             $data['status'] = 1;
             $data['updated_at'] = date('Y-m-d H:i:s');
             $result = $this->master->updateRecord('tbl_ownership',array('id'=>$this->input->post('ownership_id')),$data);

@@ -29,11 +29,11 @@ Class College extends MY_Controller {
             return redirect('admin');
         }
     }
-    public function editCollege($id){
+    public function editCollege($id,$slug){
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $data['singleCollege'] = $this->master->singleRecord('tbl_college',array('id'=>$id));
+            $data['singleCollege'] = $this->master->singleRecord('tbl_college',array('id'=>$id,'slug'=>$slug));
             $this->load->view('admin/college/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -82,16 +82,15 @@ Class College extends MY_Controller {
     }
     public function saveCollege(){
         $this->form_validation->set_rules('full_name', 'Full name', 'trim|required');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
-        $this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
-        $this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
-        $this->form_validation->set_rules('course_offered[]', 'Course Offered', 'trim|required');
+        //$this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
+        //$this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
+        //$this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
-        $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
-        $this->form_validation->set_rules('university', 'University', 'trim|required');
-        $this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
+       // $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
+        //$this->form_validation->set_rules('university', 'University', 'trim|required');
+        //$this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
         $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
         $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
         $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
@@ -198,19 +197,19 @@ Class College extends MY_Controller {
     //Save Gallery
     public function updateCollege(){
         $this->form_validation->set_rules('full_name', 'Full name', 'trim|required');
-        $this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
-        $this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
-        $this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
-        $this->form_validation->set_rules('course_offered[]', 'Course Offered', 'trim|required');
+//        $this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
+//        $this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
+//        $this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
+//        $this->form_validation->set_rules('course_offered[]', 'Course Offered', 'trim|required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
-        $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
-        $this->form_validation->set_rules('university', 'University', 'trim|required');
-        $this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
-        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
-        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
-        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
+//        $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
+//        $this->form_validation->set_rules('university', 'University', 'trim|required');
+//        $this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
+//        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
+//        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
+//        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
         if ($this->form_validation->run()) {
             if(!empty($_FILES['college_logo']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/logo';
@@ -224,6 +223,7 @@ Class College extends MY_Controller {
                     return false;
                 }
                 $data['college_logo'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/college/logo',$this->input->post('old_logo'));
             }
             if(!empty($_FILES['college_banner']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/banner';
@@ -237,6 +237,7 @@ Class College extends MY_Controller {
                     return false;
                 }
                 $data['college_banner'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/college/banner',$this->input->post('old_banner'));
             }
             if(!empty($_FILES['prospectus_file']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/prospectus_file';
@@ -250,6 +251,7 @@ Class College extends MY_Controller {
                     return false;
                 }
                 $data['prospectus_file'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/college/prospectus_file',$this->input->post('old_prospectus'));
             }
             $data['full_name'] = $this->input->post('full_name');
             $data['slug'] = $this->slug($this->input->post('full_name'));
@@ -271,10 +273,10 @@ Class College extends MY_Controller {
             $data['contact_one'] = $this->input->post('contact_one');
             $data['contact_two'] = $this->input->post('contact_two');
             $data['contact_three'] = $this->input->post('contact_three');
-            $data['nodal_officer_name'] = $this->input->post('nodal_offier_name');
+            $data['nodal_officer_name'] = $this->input->post('nodal_officer_name');
             $data['nodal_officer_no'] = $this->input->post('nodal_officer_no');
             $data['keywords'] = $this->input->post('keywords');
-            $data['tags'] = $this->input->post('tags');
+            $data['tags'] = $this->input->post('tags')[0];
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->updateRecord('tbl_college',array('id'=>$this->input->post('college_id')),$data);
@@ -308,10 +310,12 @@ Class College extends MY_Controller {
     public function deleteCollege(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
-//            $singleRecord = $this->master->singleRecord('tbl_college',array('id'=>$id));
+            $singleRecord = $this->master->singleRecord('tbl_college',array('id'=>$id));
             $result = $this->master->deleteRecord('tbl_college',array('id'=>$id));
             if($result > 0){
-
+                $this->remove_file_from_directory('assets/uploads/college/logo',$singleRecord['college_logo']);
+                $this->remove_file_from_directory('assets/uploads/college/banner',$singleRecord['college_banner']);
+                $this->remove_file_from_directory('assets/uploads/college/prospectus_file',$singleRecord['prospectus_file']);
                 $response = array('status' => 'success','message' => 'College deleted successfully','url'=>base_url('admin/college'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');

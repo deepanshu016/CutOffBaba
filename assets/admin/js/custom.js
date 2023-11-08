@@ -178,6 +178,14 @@ $(document).on('change','.send-to-server', function (e) {
         }
     }); 
 });
+// $(document).ready(function(){
+//     $('.all-form').keydown(function(event){
+//         if(event.keyCode == 13) {
+//             event.preventDefault();
+//             return false;
+//         }
+//     });
+// });
 $(document).on('change','.dynamic-data', function (e) {
     var id = $(this).val();
     var segment = $(this).data('segment');

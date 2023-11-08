@@ -4,18 +4,23 @@
     <meta charset="utf-8" />
     <title>CUTOFFBABA | Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="<?= base_url('assets/uploads/settings/'.$siteSettings['favicon']) ?>">
+    <link rel="shortcut icon" href="<?=
+    base_url('assets/uploads/settings/'.$siteSettings['favicon']) ?>">
     <link href="<?=base_url('assets/admin/libs/jsvectormap/css/jsvectormap.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/libs/swiper/swiper-bundle.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/libs/sweetalert2/sweetalert2.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/dataTables.bootstrap4.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/bootstrap.min.css')?>" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url('assets/admin/css/magic.css')?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('assets/admin/css/magicsuggest.css')?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('assets/admin/css/icons.min.css')?>" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url('assets/admin/css/app.min.css')?>" rel="stylesheet" type="text/css" />    
+    <link href="<?=base_url('assets/admin/css/app.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('assets/admin/css/custom.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/select2.min.css')?>" rel="stylesheet" type="text/css">
+
     <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
+    <script src="<?=base_url('/')?>assets/admin/js/magic.js"></script>
     <script src="<?=base_url('assets/admin/js/popper.min.js')?>"></script>
     <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>
     <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -42,6 +47,7 @@
     <script src="<?=base_url('/')?>assets/admin/libs/rater-js/index.js"></script>
     <!-- rating init -->
     <script src="<?=base_url('/')?>assets/admin/js/pages/rating.init.js"></script>
+
     <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
     <script src="<?=base_url('assets/admin/js/select2.min.js')?>"></script>
     <style type="text/css">

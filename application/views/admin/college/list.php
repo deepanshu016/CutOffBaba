@@ -41,7 +41,6 @@
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                     <th class="sort" data-sort="email">College Name</th>
                                     <th class="sort" data-sort="email">Establishment </th>
-                                    <th class="sort" data-sort="affiliated">Affiliated By</th>
                                     <th class="sort" data-sort="college_logo">College Logo</th>
                                     <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -54,11 +53,10 @@
                                         <td><?= $key+1; ?></td>
                                         <td><?= ucfirst($college['full_name']); ?></td>
                                         <td><?= $college['establishment']; ?></td>
-                                        <td><?= $college['establishment']; ?></td>
-                                        <td><?= $college['establishment']; ?></td>
+                                        <td><img src="<?= base_url('assets/uploads/college/logo'.'/'.$college['college_logo']) ?>" height="100" width="100" class="rounded-circle"></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-college'.'/'.$college['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="<?= base_url('admin/edit-college'.'/'.$college['id'].'/'.$college['slug']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
                                               <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $college['id']; ?>" url="<?= base_url('admin/delete-college'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>

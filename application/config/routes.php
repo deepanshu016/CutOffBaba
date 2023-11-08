@@ -136,7 +136,7 @@ $route['admin/college'] = 'Admin/College/index';
 $route['admin/add-college'] = 'Admin/College/add';
 $route['admin/save-college'] = 'Admin/College/saveCollege';
 $route['admin/update-college'] = 'Admin/College/updateCollege';
-$route['admin/edit-college/(:any)'] = 'Admin/College/editCollege/$1';
+$route['admin/edit-college/(:any)/(:any)'] = 'Admin/College/editCollege/$1/$2';
 $route['admin/delete-college'] = 'Admin/College/deleteCollege';
 
 
