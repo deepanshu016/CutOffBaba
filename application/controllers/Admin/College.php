@@ -91,9 +91,9 @@ Class College extends MY_Controller {
        // $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
         //$this->form_validation->set_rules('university', 'University', 'trim|required');
         //$this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
-        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
-        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
-        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
+//        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
+//        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
+//        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
         if ($this->form_validation->run()) {
             if(!empty($_FILES['college_logo']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/logo';
@@ -175,19 +175,19 @@ Class College extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'full_name' => form_error('full_name'),
-                    'short_description' => form_error('short_description'),
-                    'establishment' => form_error('establishment'),
-                    'gender_accepted' => form_error('gender_accepted[]'),
-                    'course_offered' => form_error('course_offered[]'),
+//                    'short_description' => form_error('short_description'),
+//                    'establishment' => form_error('establishment'),
+//                    'gender_accepted' => form_error('gender_accepted[]'),
+//                    'course_offered' => form_error('course_offered[]'),
                     'country' => form_error('country'),
                     'state' => form_error('state'),
                     'city' => form_error('city'),
-                    'affiliated_by' => form_error('affiliated_by'),
-                    'university' => form_error('university'),
-                    'approved_by' => form_error('approved_by'),
-                    'college_logo' => form_error('college_logo'),
-                    'college_banner' => form_error('college_banner'),
-                    'prospectus_file' => form_error('prospectus_file')
+//                    'affiliated_by' => form_error('affiliated_by'),
+//                    'university' => form_error('university'),
+//                    'approved_by' => form_error('approved_by'),
+//                    'college_logo' => form_error('college_logo'),
+//                    'college_banner' => form_error('college_banner'),
+//                    'prospectus_file' => form_error('prospectus_file')
                 )
             );
             echo json_encode($response);
@@ -288,19 +288,9 @@ Class College extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'full_name' => form_error('full_name'),
-                    'short_description' => form_error('short_description'),
-                    'establishment' => form_error('establishment'),
-                    'gender_accepted' => form_error('gender_accepted[]'),
-                    'course_offered' => form_error('course_offered[]'),
                     'country' => form_error('country'),
                     'state' => form_error('state'),
-                    'city' => form_error('city'),
-                    'affiliated_by' => form_error('affiliated_by'),
-                    'university' => form_error('university'),
-                    'approved_by' => form_error('approved_by'),
-                    'college_logo' => form_error('college_logo'),
-                    'college_banner' => form_error('college_banner'),
-                    'prospectus_file' => form_error('prospectus_file')
+                    'city' => form_error('city')
                 )
             );
             echo json_encode($response);
