@@ -66,7 +66,7 @@
                     </a>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/fees'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Fees Master</span>
                     </a>
                 </li>

@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="07-11-2023 Changes">
-      <change afterPath="$PROJECT_DIR$/assets/admin/css/magic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/admin/css/magicsuggest.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/admin/js/magic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/uploads/college/logo/15f9fb2e70a9e2dc570a72554f1e52ca.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/uploads/college/logo/d012e8249820764d05cbee00516eda21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/uploads/college/logo/e305bda2bc612662ee803b115e51d576.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Fees.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin/College.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/College.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Ownership.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/Ownership.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/college/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/college/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/uploads/college/banner/295bb85f6905646e6f60f3b901848523.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/uploads/college/logo/9163b95a48f1264d29763fbc94bc356b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/uploads/college/prospectus_file/4781e31435bc3dd847ee37a7a8ffd20b.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/magic.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/css/magic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/css/magicsuggest.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/css/magicsuggest.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +103,7 @@
       <workItem from="1699170911517" duration="721000" />
       <workItem from="1699289687310" duration="9141000" />
       <workItem from="1699375817762" duration="9707000" />
-      <workItem from="1699458401872" duration="4697000" />
+      <workItem from="1699458401872" duration="10599000" />
     </task>
     <task id="LOCAL-00001" summary="06-11-2023 Changes">
       <option name="closed" value="true" />
@@ -126,7 +121,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699386040052</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="07-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699463438669</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699463438669</updated>
+    </task>
+    <task id="LOCAL-00004" summary="07-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699463622938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699463622938</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +326,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/FeesHead.php</url>
-          <line>89</line>
+          <line>91</line>
           <properties>
             <option name="className" value="\FeesHead" />
             <option name="methodName" value="deleteFeesHead" />
@@ -334,12 +345,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/College.php</url>
-          <line>286</line>
+          <line>287</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/College.php</url>
-          <line>212</line>
+          <line>213</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>

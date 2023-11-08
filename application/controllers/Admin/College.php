@@ -88,7 +88,7 @@ Class College extends MY_Controller {
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
-       // $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[tbl_college.email]');
         //$this->form_validation->set_rules('university', 'University', 'trim|required');
         //$this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
 //        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
@@ -156,8 +156,8 @@ Class College extends MY_Controller {
             $data['contact_three'] = $this->input->post('contact_three');
             $data['nodal_officer_name'] = $this->input->post('nodal_offier_name');
             $data['nodal_officer_no'] = $this->input->post('nodal_officer_no');
-            $data['keywords'] = $this->input->post('keywords');
-            $data['tags'] = $this->input->post('tags');
+            $data['keywords'] = implode('|',$this->input->post('keywords'));
+            $data['tags'] = implode('|',$this->input->post('tags'));
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->insert('tbl_college',$data);
@@ -182,7 +182,7 @@ Class College extends MY_Controller {
                     'country' => form_error('country'),
                     'state' => form_error('state'),
                     'city' => form_error('city'),
-//                    'affiliated_by' => form_error('affiliated_by'),
+                    'email' => form_error('email'),
 //                    'university' => form_error('university'),
 //                    'approved_by' => form_error('approved_by'),
 //                    'college_logo' => form_error('college_logo'),
@@ -201,6 +201,7 @@ Class College extends MY_Controller {
 //        $this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
 //        $this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
 //        $this->form_validation->set_rules('course_offered[]', 'Course Offered', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[tbl_college.email]');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
@@ -275,8 +276,8 @@ Class College extends MY_Controller {
             $data['contact_three'] = $this->input->post('contact_three');
             $data['nodal_officer_name'] = $this->input->post('nodal_officer_name');
             $data['nodal_officer_no'] = $this->input->post('nodal_officer_no');
-            $data['keywords'] = $this->input->post('keywords');
-            $data['tags'] = $this->input->post('tags')[0];
+            $data['keywords'] = implode('|',$this->input->post('keywords'));
+            $data['tags'] = implode('|',$this->input->post('tags'));
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->updateRecord('tbl_college',array('id'=>$this->input->post('college_id')),$data);
@@ -290,7 +291,8 @@ Class College extends MY_Controller {
                     'full_name' => form_error('full_name'),
                     'country' => form_error('country'),
                     'state' => form_error('state'),
-                    'city' => form_error('city')
+                    'city' => form_error('city'),
+                    'email' => form_error('email')
                 )
             );
             echo json_encode($response);

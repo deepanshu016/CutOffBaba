@@ -1,6 +1,6 @@
 <?php
 
-Class FeesHead extends MY_Controller {
+Class Fees extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -12,8 +12,8 @@ Class FeesHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['feesHeadList'] = $this->master->getRecords('tbl_feeshead');
-            $this->load->view('admin/feeshead/list',$data);
+            $data['feesList'] = $this->master->getRecords('tbl_gallery');
+            $this->load->view('admin/fees/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -23,7 +23,7 @@ Class FeesHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $this->load->view('admin/feeshead/add-edit',$data);
+            $this->load->view('admin/fees/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -33,22 +33,21 @@ Class FeesHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $data['singleFeesHead'] = $this->master->singleRecord('tbl_feeshead',array('id'=>$id));
-            $this->load->view('admin/feeshead/add-edit',$data);
+            $data['singleFees'] = $this->master->singleRecord('tbl_gender',array('id'=>$id));
+            $this->load->view('admin/fees/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
-    //Save Feeshead
-    public function saveFeesHead(){
-        $this->form_validation->set_rules('name', 'Feeshead', 'trim|required');
+    //Save Fees
+    public function saveFees(){
+        $this->form_validation->set_rules('gender', 'Gender', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['name'] = $this->input->post('name');
-            $data['fees_description'] = $this->input->post('fees_description');
-            $result = $this->master->insert('tbl_feeshead',$data);
+            $data['gender'] = $this->input->post('gender');
+            $result = $this->master->insert('tbl_gender',$data);
             if($result > 0){
-                $response = array('status' => 'success','message'=> 'Fees Head added successfully','url'=>base_url('admin/feeshead'));
+                $response = array('status' => 'success','message'=> 'Gender added successfully','url'=>base_url('admin/gender'));
                 echo json_encode($response);
                 return false;
             }else{
@@ -60,41 +59,40 @@ Class FeesHead extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'name' => form_error('name')
+                    'gender' => form_error('gender')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    //Save Feeshead
-    public function updateFeesHead(){
+    //Save Gender
+    public function updateFees(){
 
-        $this->form_validation->set_rules('name', 'Fees Head', 'trim|required');
+        $this->form_validation->set_rules('gender', 'Gender', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['name'] = $this->input->post('name');
-            $data['fees_description'] = $this->input->post('fees_description');
-            $result = $this->master->updateRecord('tbl_feeshead',array('id'=>$this->input->post('name_id')),$data);
-            $response = array('status' => 'success','message'=> 'Fees Head updated successfully','url'=>base_url('admin/feeshead'));
+            $data['gender'] = $this->input->post('gender');
+            $result = $this->master->updateRecord('tbl_gender',array('id'=>$this->input->post('gender_id')),$data);
+            $response = array('status' => 'success','message'=> 'Gender updated successfully','url'=>base_url('admin/gender'));
             echo json_encode($response);
             return true;
         }else{
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'name' => form_error('name')
+                    'gender' => form_error('gender')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    public function deleteFeesHead(){
+    public function deleteFees(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
-            $result = $this->master->deleteRecord('tbl_feeshead',array('id'=>$id));
+            $result = $this->master->deleteRecord('tbl_gender',array('id'=>$id));
             if($result > 0){
-                $response = array('status' => 'success','message' => 'Fees Head deleted successfully','url'=>base_url('admin/feeshead'));
+                $response = array('status' => 'success','message' => 'Gender deleted successfully','url'=>base_url('admin/gender'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }

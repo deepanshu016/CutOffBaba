@@ -148,6 +148,13 @@ $route['admin/update-feeshead'] = 'Admin/FeesHead/updateFeesHead';
 $route['admin/edit-feeshead/(:any)'] = 'Admin/FeesHead/editFeesHead/$1';
 $route['admin/delete-feeshead'] = 'Admin/FeesHead/deleteFeesHead';
 
+$route['admin/fees'] = 'Admin/Fees/index';
+$route['admin/add-fees'] = 'Admin/Fees/add';
+$route['admin/save-fees'] = 'Admin/Fees/saveFees';
+$route['admin/update-fees'] = 'Admin/Fees/updateFees';
+$route['admin/edit-fees/(:any)'] = 'Admin/Fees/editFees/$1';
+$route['admin/delete-fees'] = 'Admin/Fees/deleteFees';
+
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';

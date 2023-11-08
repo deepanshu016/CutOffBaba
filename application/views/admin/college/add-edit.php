@@ -222,7 +222,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Logo</label>
                                               <input type="file" class="form-control" placeholder="College Logo" accept="image/*" name="college_logo">
-                                              <?php if(!empty($singleCollege)) {  ?>
+                                              <?php if(!empty($singleCollege['college_logo'])) {  ?>
                                                   <img src="<?= base_url('assets/uploads/college/logo'.'/'.$singleCollege['college_logo']) ?>" height="100" width="100" class="rounded-circle">
                                               <?php } ?>
                                               <span class="text-danger" id="college_logo"></span>
@@ -234,7 +234,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Banner</label>
                                               <input type="file" class="form-control" placeholder="Banner" accept="image/*" name="college_banner">
-                                              <?php if(!empty($singleCollege)) {  ?>
+                                              <?php if(!empty($singleCollege['college_banner'])) {  ?>
                                                   <img src="<?= base_url('assets/uploads/college/banner'.'/'.$singleCollege['college_banner']) ?>" height="100" width="100" class="rounded-circle">
                                               <?php } ?>
                                               <span class="text-danger" id="college_banner"></span>
@@ -244,7 +244,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Prospectus File</label>
                                               <input type="file" class="form-control" placeholder="Prospectus File" name="prospectus_file">
-                                              <?php if(!empty($singleCollege)) {  ?>
+                                              <?php if(!empty($singleCollege['prospectus_file'])) {  ?>
                                                   <i class="ri-links-line"></i> <a href="<?= base_url('assets/uploads/college/prospectus_file'.'/'.$singleCollege['prospectus_file']) ?>" download><?= $singleCollege['prospectus_file']; ?></a>
                                               <?php } ?>
                                               <span class="text-danger" id="prospectus_file"></span>
@@ -323,13 +323,13 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Keywords</label>
-                                              <input type="text" class="form-control" placeholder="Keywords" name="keywords" value="<?= (!empty($singleCollege)) ? $singleCollege['keywords'] : ''; ?>">
+                                              <input type="text" class="form-control keywords" placeholder="Keywords" name="keywords[]" value="<?= (!empty($singleCollege)) ? $singleCollege['keywords'] : ''; ?>" style="display:none;">
                                           </div>
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Tags</label>
-                                              <input type="text" class="form-control tags" placeholder="Tags" name="tags[]" value="<?= (!empty($singleCollege)) ? $singleCollege['tags'] : ''; ?>">
+                                              <input type="text" class="form-control tags" placeholder="Tags" name="tags[]" value="<?= (!empty($singleCollege)) ? $singleCollege['tags'] : ''; ?>" style="display:none;">
                                           </div>
                                       </div>
                                   </div>
@@ -361,6 +361,7 @@
     $(document).ready(function() {
         $('.js-example-basic-multiple').select2();
     });
+    $('.keywords').tagify();
     $('.tags').tagify();
 </script>
 <?php $this->load->view('admin/footer'); ?>

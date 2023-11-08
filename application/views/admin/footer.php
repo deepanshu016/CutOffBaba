@@ -22,13 +22,13 @@
 
     <script>
          $("textarea").each(function () {
-            let id = $(this).attr('id');
+            // let id = $(this).attr('id');
            // CKEDITOR.replace(id, options);
-            CKEDITOR.replace('invoice_editor');
-        CKEDITOR.replace('about_us_editor')
-        CKEDITOR.replace('terms_condition_editor');
-        CKEDITOR.replace('return_refund_editor');
-        CKEDITOR.replace('privacy_policy_editor');
+            CKEDITOR.replace('fees_description');
+        // CKEDITOR.replace('about_us_editor')
+        // CKEDITOR.replace('fees_description');
+        // CKEDITOR.replace('return_refund_editor');
+        // CKEDITOR.replace('privacy_policy_editor');
         });
         
         $('#customerTable').DataTable({

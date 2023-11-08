@@ -11,6 +11,7 @@
     <link href="<?=base_url('assets/admin/libs/sweetalert2/sweetalert2.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/dataTables.bootstrap4.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/bootstrap.min.css')?>" rel="stylesheet" type="text/css" />
+
     <link href="<?=base_url('assets/admin/css/magic.css')?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('assets/admin/css/magicsuggest.css')?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('assets/admin/css/icons.min.css')?>" rel="stylesheet" type="text/css" />
@@ -18,9 +19,7 @@
     <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('assets/admin/css/custom.min.css')?>" rel="stylesheet" type="text/css" />
     <link href="<?=base_url('assets/admin/css/select2.min.css')?>" rel="stylesheet" type="text/css">
-
     <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
-    <script src="<?=base_url('/')?>assets/admin/js/magic.js"></script>
     <script src="<?=base_url('assets/admin/js/popper.min.js')?>"></script>
     <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>
     <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -50,35 +49,37 @@
 
     <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
     <script src="<?=base_url('assets/admin/js/select2.min.js')?>"></script>
+    <script src="<?=base_url('/')?>assets/admin/js/magic.js"></script>
     <style type="text/css">
         .logo-lg img{
-            max-width: 100%}
+            max-width: 100%
+        }
         .dataTables_info{
-  display: none !important;
-}
-.paging_simple_numbers{
-  display: none !important;
-}
+              display: none !important;
+        }
+        .paging_simple_numbers{
+          display: none !important;
+        }
         .dt-buttons{
             margin-left: 15px
         }
         input.form-control.form-control-sm {
-    border-color: var(--vz-input-border);
-    background-color: var(--vz-input-bg);
-    color: var(--vz-body-color);
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    font-size: .8125rem;
-    appearance: none;
-    outline-offset: -2px;
-    width: 250px;
-    box-sizing: border-box;
-    margin: -13px;
-    margin-right: 9px;
-    margin-top: -12px;
-    font-family: inherit;
-    padding: 8px 78px 2px;
-}
+            border-color: var(--vz-input-border);
+            background-color: var(--vz-input-bg);
+            color: var(--vz-body-color);
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            font-size: .8125rem;
+            appearance: none;
+            outline-offset: -2px;
+            width: 250px;
+            box-sizing: border-box;
+            margin: -13px;
+            margin-right: 9px;
+            margin-top: -12px;
+            font-family: inherit;
+            padding: 8px 78px 2px;
+        }
         button.dt-button.buttons-print {
             color: #fff;
             background-color: #d29c40;
@@ -163,6 +164,7 @@
             border-radius: 0.25rem;
             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
         }
+
     </style>
 </head>
 

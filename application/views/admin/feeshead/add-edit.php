@@ -9,10 +9,10 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <?php if(empty($singleGender)) { ?>
-                              <li class="breadcrumb-item active">Add Gender</li>
+                            <?php if(empty($singleFeesHead)) { ?>
+                              <li class="breadcrumb-item active">Add Fees Head</li>
                             <?php } else{  ?>
-                              <li class="breadcrumb-item active">Edit Gender</li>
+                              <li class="breadcrumb-item active">Edit Fees Head</li>
                             <?php } ?>
                         </ol>
                     </div>
@@ -25,10 +25,10 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <?php if(empty($singleGender)) { ?>
-                      <h4 class="card-title mb-0">Add Gender</h4>
+                    <?php if(empty($singleFeesHead)) { ?>
+                      <h4 class="card-title mb-0">Add Fees Head</h4>
                     <?php } else{  ?>
-                      <h4 class="card-title mb-0">Edit Gender</h4>
+                      <h4 class="card-title mb-0">Edit Fees Head</h4>
                     <?php } ?>
                  </div>
                  <!-- end card header -->
@@ -37,28 +37,36 @@
                        <div class="row g-4 mb-3">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/gender'); ?>" class="btn btn-success add-btn" > List</a>
+                                <a href="<?= base_url('admin/feeshead'); ?>" class="btn btn-success add-btn" > List</a>
                              </div>
                           </div>
-                          <?php if(empty($singleGender)) { ?>
-                            <form action="<?= base_url('admin/save-gender') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                          <?php if(empty($singleFeesHead)) { ?>
+                            <form action="<?= base_url('admin/save-feeshead') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>
-                            <form action="<?= base_url('admin/update-gender') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                            <form action="<?= base_url('admin/update-feeshead') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Gender</label>
-                                              <input class="form-control" type="text" name="gender"  placeholder="Gender" value="<?php if(!empty($singleGender)) { echo $singleGender['gender']; }?>">
-                                              <input type="hidden" class="form-control" name="gender_id" value="<?php if(!empty($singleGender)) { echo $singleGender['id']; }?>">
-                                              <span class="text-danger" id="gender"></span>
+                                              <label for="basiInput" class="form-label">Head Name</label>
+                                              <input class="form-control" type="text" name="name"  placeholder="Head Name" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['name'] : ''; ?>">
+                                              <input type="hidden" class="form-control" name="name_id" value="<?= (!empty($singleFeesHead)) ?  $singleFeesHead['id'] : ''; ?>">
+                                              <span class="text-danger" id="name"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Description</label>
+                                              <textarea class="form-control" name="fees_description" id="fees_description"><?= (!empty($singleFeesHead)) ? $singleFeesHead['fees_description'] : '';?></textarea>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6" style="margin-top: 15px;">
-                                        <?php if(empty($singleGender)) { ?>
+                                        <?php if(empty($singleFeesHead)) { ?>
                                           <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
                                           <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
