@@ -115,4 +115,12 @@ if (!function_exists('get_master_data')) {
         return $CI->MasterModel->getRecords($table,$condition);
     }
 }
+
+if (!function_exists('debugger')) {
+    function debugger($data)
+    {
+        echo "<pre>";
+        print_r($data); die;
+    }
+}
 ?>

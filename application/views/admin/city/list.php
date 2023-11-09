@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">City</li>
+                            <li class="breadcrumb-item active">District</li>
                         </ol>
                     </div>
 
@@ -21,7 +21,7 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <h4 class="card-title mb-0">City</h4>
+                    <h4 class="card-title mb-0">District</h4>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -29,7 +29,7 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-city'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                <a href="<?= base_url('admin/add-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                              </div>
                           </div>
                        </div>
@@ -40,7 +40,7 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="email">State</th>
-                                    <th class="sort" data-sort="email">City</th>
+                                    <th class="sort" data-sort="email">District</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
@@ -55,8 +55,8 @@
                                         <td><?= $city['city']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-city'.'/'.$city['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $city['id']; ?>" url="<?= base_url('admin/delete-city'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                              <a href="<?= base_url('admin/edit-district'.'/'.$city['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $city['id']; ?>" url="<?= base_url('admin/delete-district'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
                                     </tr>

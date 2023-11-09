@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="07-11-2023 Changes">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Fees.php" afterDir="false" />
+    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="08-11-2023 Changes">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/SubDistrict.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/College.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/College.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/css/magic.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/css/magic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/css/magicsuggest.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/css/magicsuggest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/city/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/country/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/country/list.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,8 @@
       <workItem from="1699170911517" duration="721000" />
       <workItem from="1699289687310" duration="9141000" />
       <workItem from="1699375817762" duration="9707000" />
-      <workItem from="1699458401872" duration="10599000" />
+      <workItem from="1699458401872" duration="11403000" />
+      <workItem from="1699548534345" duration="5170000" />
     </task>
     <task id="LOCAL-00001" summary="06-11-2023 Changes">
       <option name="closed" value="true" />
@@ -137,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699463622938</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="08-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699472269949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699472269949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +188,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="06-11-2023 Changes" />
     <MESSAGE value="07-11-2023 Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="07-11-2023 Changes" />
+    <MESSAGE value="08-11-2023 Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="08-11-2023 Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
