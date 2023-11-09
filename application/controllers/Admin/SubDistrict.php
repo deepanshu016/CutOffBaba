@@ -1,6 +1,6 @@
 <?php
 
-Class City extends MY_Controller {
+Class SubDistrict extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -12,8 +12,8 @@ Class City extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['cityList'] = $this->master->getRecords('tbl_city');
-            $this->load->view('admin/city/list',$data);
+            $data['subDistrictList'] = $this->master->getRecords('tbl_sub_district');
+            $this->load->view('admin/sub_district/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -24,38 +24,39 @@ Class City extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['stateList'] = $this->master->getRecords('tbl_state');
-            $this->load->view('admin/city/add-edit',$data);
+            $this->load->view('admin/sub_district/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
-    public function editCity($id){
+    public function editSubDistrict($id){
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['stateList'] = $this->master->getRecords('tbl_state');
-            $data['singleCity'] = $this->master->singleRecord('tbl_city',array('id'=>$id));
+            $data['singleSubDistrict'] = $this->master->singleRecord('tbl_sub_district',array('id'=>$id));
 
-            $this->load->view('admin/city/add-edit',$data);
+            $this->load->view('admin/sub_district/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
     //Save Country
-    public function saveCity(){
+    public function saveSubDistrict(){
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
-        $this->form_validation->set_rules('city', 'District', 'trim|required');
+        $this->form_validation->set_rules('district', 'District', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
+        $this->form_validation->set_rules('sub_district', 'Sub District', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['city'] = $this->input->post('city');
-            $data['state_id'] = $this->input->post('state');
+            $data['district'] = $this->input->post('district');
+            $data['state'] = $this->input->post('state');
             $data['country'] = $this->input->post('country');
-
-            $result = $this->master->insert('tbl_city',$data);
+            $data['sub_district'] = $this->input->post('sub_district');
+            $result = $this->master->insert('tbl_sub_district',$data);
             if($result > 0){
-                $response = array('status' => 'success','message'=> 'District added successfully','url'=>base_url('admin/district'));
+                $response = array('status' => 'success','message'=> 'Sub District added successfully','url'=>base_url('admin/sub-district'));
                 echo json_encode($response);
                 return false;
             }else{
@@ -67,48 +68,52 @@ Class City extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'city' => form_error('city'),
+                    'district' => form_error('district'),
                     'state' => form_error('state'),
-                    'country' => form_error('country')
+                    'country' => form_error('country'),
+                    'sub_district' => form_error('sub_district')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    //Save Category
-    public function updateCity(){
+    //Save Sub District
+    public function updateSubDistrict(){
 
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
-        $this->form_validation->set_rules('city', 'District', 'trim|required');
+        $this->form_validation->set_rules('district', 'District', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
+        $this->form_validation->set_rules('sub_district', 'Sub District', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['city'] = $this->input->post('city');
-            $data['state_id'] = $this->input->post('state');
+            $data['district'] = $this->input->post('district');
+            $data['state'] = $this->input->post('state');
             $data['country'] = $this->input->post('country');
-            $result = $this->master->updateRecord('tbl_city',array('id'=>$this->input->post('city_id')),$data);
-            $response = array('status' => 'success','message'=> 'District updated successfully','url'=>base_url('admin/district'));
+            $data['sub_district'] = $this->input->post('sub_district');
+            $result = $this->master->updateRecord('tbl_sub_district',array('id'=>$this->input->post('sub_district_id')),$data);
+            $response = array('status' => 'success','message'=> 'Sub District updated successfully','url'=>base_url('admin/sub-district'));
             echo json_encode($response);
             return true;
         }else{
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'city' => form_error('city'),
+                    'district' => form_error('district'),
                     'state' => form_error('state'),
-                    'country' => form_error('country')
+                    'country' => form_error('country'),
+                    'sub_district' => form_error('sub_district')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    public function deleteCity(){
+    public function deleteSubDistrict(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
-            $result = $this->master->deleteRecord('tbl_city',array('id'=>$id));
+            $result = $this->master->deleteRecord('tbl_sub_district',array('id'=>$id));
             if($result > 0){
-                $response = array('status' => 'success','message' => 'District deleted successfully','url'=>base_url('admin/district'));
+                $response = array('status' => 'success','message' => 'Sub District deleted successfully','url'=>base_url('admin/sub-district'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }

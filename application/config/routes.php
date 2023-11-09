@@ -107,12 +107,12 @@ $route['admin/edit-exams/(:any)'] = 'Admin/Exams/editExams/$1';
 $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
 
 
-$route['admin/city'] = 'Admin/City/index';
-$route['admin/add-city'] = 'Admin/City/add';
-$route['admin/save-city'] = 'Admin/City/saveCity';
-$route['admin/update-city'] = 'Admin/City/updateCity';
-$route['admin/edit-city/(:any)'] = 'Admin/City/editCity/$1';
-$route['admin/delete-city'] = 'Admin/City/deleteCity';
+$route['admin/district'] = 'Admin/City/index';
+$route['admin/add-district'] = 'Admin/City/add';
+$route['admin/save-district'] = 'Admin/City/saveCity';
+$route['admin/update-district'] = 'Admin/City/updateCity';
+$route['admin/edit-district/(:any)'] = 'Admin/City/editCity/$1';
+$route['admin/delete-district'] = 'Admin/City/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
 $route['admin/get-city'] = 'Admin/Common/getCityByState';
 
@@ -154,6 +154,15 @@ $route['admin/save-fees'] = 'Admin/Fees/saveFees';
 $route['admin/update-fees'] = 'Admin/Fees/updateFees';
 $route['admin/edit-fees/(:any)'] = 'Admin/Fees/editFees/$1';
 $route['admin/delete-fees'] = 'Admin/Fees/deleteFees';
+
+
+$route['admin/sub-district'] = 'Admin/SubDistrict/index';
+$route['admin/add-sub-district'] = 'Admin/SubDistrict/add';
+$route['admin/save-sub-district'] = 'Admin/SubDistrict/saveSubDistrict';
+$route['admin/update-sub-district'] = 'Admin/SubDistrict/updateSubDistrict';
+$route['admin/edit-sub-district/(:any)'] = 'Admin/SubDistrict/editSubDistrict/$1';
+$route['admin/delete-sub-district'] = 'Admin/SubDistrict/deleteSubDistrict';
+
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

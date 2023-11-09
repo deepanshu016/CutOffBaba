@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Country</li>
+                            <li class="breadcrumb-item active">Sub District</li>
                         </ol>
                     </div>
 
@@ -21,7 +21,7 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <h4 class="card-title mb-0">Country</h4>
+                    <h4 class="card-title mb-0">Sub District</h4>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -29,10 +29,7 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-country'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add Country</a>
-                                 <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> State</a>
-                                 <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> District</a>
-                                 <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i>Sub District</a>
+                                <a href="<?= base_url('admin/add-sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                              </div>
                           </div>
                        </div>
@@ -42,23 +39,27 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
-                                    <th class="sort" data-sort="email">Country Code</th>
                                    <th class="sort" data-sort="email">Country Name</th>
+                                   <th class="sort" data-sort="email">State Name</th>
+                                    <th class="sort" data-sort="email">Sub District Name</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
-                                <?php if(!empty($countryList)) {
-                                      foreach($countryList as $key=>$country){
+                                <?php if(!empty($subDistrictList)) {
+                                      foreach($subDistrictList as $key=>$sub){
+                                        $stateData = $this->db->get_where('tbl_state',array('id'=>$sub['state']))->row_array();
+                                        $countryData = $this->db->get_where('tbl_country',array('id'=>$sub['country']))->row_array();
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
-                                        <td><?= $country['countryCode']; ?></td>
-                                        <td><?= $country['name']; ?></td>
+                                        <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
+                                        <td><?= ($countryData) ? $countryData['name'] : ''; ?></td>
+                                        <td><?= $sub['sub_district']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-country'.'/'.$country['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $country['id']; ?>" url="<?= base_url('admin/delete-country'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                              <a href="<?= base_url('admin/edit-sub-district'.'/'.$sub['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $sub['id']; ?>" url="<?= base_url('admin/delete-sub-district'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
                                     </tr>
@@ -67,7 +68,6 @@
                           </table>
                           <div class="noresult" style="display: none">
                              <div class="text-center">
-                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
                                 <h5 class="mt-2">Sorry! No Result Found</h5>
                                 <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any orders for you search.</p>
                              </div>
