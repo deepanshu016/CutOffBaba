@@ -346,11 +346,5 @@
     </div>
     <!-- container-fluid -->
 </div>
-<script>
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-    });
-    $('.keywords').tagify();
-    $('.tags').tagify();
-</script>
+
 <?php $this->load->view('admin/footer'); ?>
