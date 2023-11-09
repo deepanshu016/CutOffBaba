@@ -51,7 +51,8 @@
          $("textarea").each(function () {
             // let id = $(this).attr('id');
            // CKEDITOR.replace(id, options);
-            CKEDITOR.replace('fees_description');
+             CKEDITOR.replace('fees_description');
+             CKEDITOR.replace('eligibility');
         // CKEDITOR.replace('about_us_editor')
         // CKEDITOR.replace('fees_description');
         // CKEDITOR.replace('return_refund_editor');

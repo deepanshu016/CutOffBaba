@@ -43,8 +43,12 @@ Class Branch extends MY_Controller {
     //Save Branch
     public function saveBranch(){
         $this->form_validation->set_rules('branch', 'Branch', 'trim|required');
+        $this->form_validation->set_rules('courses[]', 'Courses', 'trim|required');
+        $this->form_validation->set_rules('branch_type', 'Branch Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['branch'] = $this->input->post('branch');
+            $data['courses'] = implode('|',$this->input->post('courses'));
+            $data['branch_type'] = $this->input->post('branch_type');
             $result = $this->master->insert('tbl_branch',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Branch added successfully','url'=>base_url('admin/branch'));
@@ -59,7 +63,9 @@ Class Branch extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'branch' => form_error('branch')
+                    'branch' => form_error('branch'),
+                    'courses' => form_error('courses[]'),
+                    'branch_type' => form_error('branch_type[]')
                 )
             );
             echo json_encode($response);
@@ -70,8 +76,12 @@ Class Branch extends MY_Controller {
     public function updateBranch(){
 
         $this->form_validation->set_rules('branch', 'Branch', 'trim|required');
+        $this->form_validation->set_rules('courses[]', 'Courses', 'trim|required');
+        $this->form_validation->set_rules('branch_type', 'Branch Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['branch'] = $this->input->post('branch');
+            $data['courses'] = implode('|',$this->input->post('courses'));
+            $data['branch_type'] = $this->input->post('branch_type');
             $result = $this->master->updateRecord('tbl_branch',array('id'=>$this->input->post('branch_id')),$data);
             $response = array('status' => 'success','message'=> 'Branch updated successfully','url'=>base_url('admin/branch'));
             echo json_encode($response);
@@ -80,7 +90,9 @@ Class Branch extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'branch' => form_error('branch')
+                    'branch' => form_error('branch'),
+                    'courses' => form_error('courses[]'),
+                    'branch_type' => form_error('branch_type[]')
                 )
             );
             echo json_encode($response);

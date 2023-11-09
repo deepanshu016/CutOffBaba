@@ -123,4 +123,34 @@ if (!function_exists('debugger')) {
         print_r($data); die;
     }
 }
+if (!function_exists('show_months')){
+    function show_months()
+    {
+        $data = [];
+        for ($i = 0; $i < 12; $i++) {
+            $time = strtotime(sprintf('%d months', $i));
+            $label = date('F', $time);
+            $value = date('n', $time);
+            $data[$i]['id'] = $value;
+            $data[$i]['label'] = $label;
+        }
+        return $data;
+    }
+}
+
+if (!function_exists('branch_type_data')){
+    function branch_type_data(){
+        $array = array(
+            array(
+                'id' => 1,
+                'name' => 'Clinical'
+            ),
+            array(
+                'id' => 2,
+                'name' => 'Non- Clinical'
+            ),
+        );
+        return $array;
+    }
+}
 ?>

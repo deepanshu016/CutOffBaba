@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="08-11-2023 Changes">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/SubDistrict.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Branch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/Branch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Exams.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/Exams.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/city/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/country/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/country/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/branch/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/branch/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/exams/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/exams/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/footer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +287,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
-          <line>89</line>
+          <line>101</line>
           <properties>
             <option name="className" value="\Branch" />
             <option name="methodName" value="deleteBranch" />
