@@ -53,6 +53,10 @@
            // CKEDITOR.replace(id, options);
              CKEDITOR.replace('fees_description');
              CKEDITOR.replace('eligibility');
+             CKEDITOR.replace('course_eligibility');
+             CKEDITOR.replace('expected_salary');
+             CKEDITOR.replace('course_opportunity');
+             CKEDITOR.replace('course_fees');
         // CKEDITOR.replace('about_us_editor')
         // CKEDITOR.replace('fees_description');
         // CKEDITOR.replace('return_refund_editor');

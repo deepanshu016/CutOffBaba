@@ -249,7 +249,7 @@
                                                   if(!empty($ownerShip)){
                                                       foreach($ownerShip as $owner){ ?>
                                                           <option value="<?= $owner['id']; ?>" <?= (!empty($singleCollege) && $owner['id'] == $singleCollege['ownership']) ? 'selected' : ''; ?>><?= $owner['title']; ?></option>
-                                                      <?php } } ?>
+                                                  <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="ownership"></span>
                                           </div>

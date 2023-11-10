@@ -46,6 +46,18 @@
                                 <a href="<?= base_url('admin/stream'); ?>" class="nav-link" data-key="t-calendar">Streams </a>
                             </li>
                             <li class="nav-item">
+                                <a href="<?= base_url('admin/opens'); ?>" class="nav-link" data-key="t-calendar">Opens </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/visibility'); ?>" class="nav-link" data-key="t-calendar">Visibility </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/clinicdetails'); ?>" class="nav-link" data-key="t-calendar">Clinic Details </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/clinical-facility'); ?>" class="nav-link" data-key="t-calendar">Clinical Facility </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
                             </li>
                             <li class="nav-item">
