@@ -73,6 +73,25 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarGallery" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarGallery">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Gallery Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarGallery">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/gallery-heads'); ?>" data-key="t-calendar">
+                                    Gallery Heads
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/college-files'); ?>" data-key="t-calendar">
+                                    Upload College File
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
@@ -97,11 +116,7 @@
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Hospital Master</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/gallery'); ?>">
-                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Gallery Master</span>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Counselling Tools Master</span>

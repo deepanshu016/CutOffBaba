@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="10-11-2023 Changes">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/ClinicDetails.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/ClinicFacility.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Opens.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/Visibility.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/clinicalfacility/add-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/clinicalfacility/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/clinicdetails/add-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/clinicdetails/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/opens/add-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/opens/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/visibility/add-edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/visibility/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/uploads/course/a6ed49e7c2f977ea9f21daddd955d9dd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/GalleryHeads.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/Course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/college/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/course/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/course/add-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/MasterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/MasterModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/admin/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +101,8 @@
       <workItem from="1699375817762" duration="9707000" />
       <workItem from="1699458401872" duration="11403000" />
       <workItem from="1699548534345" duration="5170000" />
-      <workItem from="1699636377177" duration="10374000" />
+      <workItem from="1699636377177" duration="10777000" />
+      <workItem from="1699685229255" duration="10946000" />
     </task>
     <task id="LOCAL-00001" summary="06-11-2023 Changes">
       <option name="closed" value="true" />
@@ -170,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699561707348</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="10-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699647148556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699647148556</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +400,16 @@
           <url>file://$PROJECT_DIR$/application/controllers/Admin/Course.php</url>
           <line>76</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
+          <line>128</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
+          <line>116</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

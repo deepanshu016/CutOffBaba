@@ -288,3 +288,19 @@ $(".switch-photo-video").change(function(e){
     }
 });
 
+
+$(document).ready(function(){
+    $('.switch-file-type').change(function(){
+        var selectedFileType = $(this).val();
+        // Hide all file input groups
+        $('.form-group.image, .form-group.video, .form-group.documents').hide();
+        // Show the selected file input group
+        if (selectedFileType === 'image') {
+            $('.form-group.image').show();
+        } else if (selectedFileType === 'video') {
+            $('.form-group.video').show();
+        } else if (selectedFileType === 'doc') {
+            $('.form-group.documents').show();
+        }
+    });
+});

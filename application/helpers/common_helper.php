@@ -153,4 +153,26 @@ if (!function_exists('branch_type_data')){
         return $array;
     }
 }
+
+
+
+if (!function_exists('file_type_data')){
+    function file_type_data(){
+        $array = array(
+            array(
+                'id' => 'doc',
+                'name' => 'Document(doc/pdf)'
+            ),
+            array(
+                'id' => 'image',
+                'name' => 'Image'
+            ),
+            array(
+                'id' => 'video',
+                'name' => 'Video'
+            ),
+        );
+        return $array;
+    }
+}
 ?>

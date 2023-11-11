@@ -201,6 +201,24 @@ $route['admin/edit-clinical-facility/(:any)'] = 'Admin/ClinicFacility/editClinic
 $route['admin/delete-clinical-facility'] = 'Admin/ClinicFacility/deleteClinicFacility';
 
 
+$route['admin/gallery-heads'] = 'Admin/GalleryHeads/index';
+$route['admin/add-gallery-heads'] = 'Admin/GalleryHeads/add';
+$route['admin/save-gallery-heads'] = 'Admin/GalleryHeads/saveGalleryHeads';
+$route['admin/update-gallery-heads'] = 'Admin/GalleryHeads/updateGalleryHeads';
+$route['admin/edit-gallery-heads/(:any)'] = 'Admin/GalleryHeads/editGalleryHeads/$1';
+$route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
+
+
+
+$route['admin/college-files'] = 'Admin/CollegeFiles/index';
+$route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
+$route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';
+$route['admin/update-college-files'] = 'Admin/CollegeFiles/updateCollegeFiles';
+$route['admin/edit-college-files/(:any)'] = 'Admin/CollegeFiles/editCollegeFiles/$1';
+$route['admin/delete-college-files'] = 'Admin/CollegeFiles/deleteCollegeFiles';
+
+
+
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
 $route['admin/update-site-settings'] = 'Admin/Settings/updateSiteSettings';

@@ -3,7 +3,10 @@
 class MasterModel extends CI_Model {
 
 	/* INSERT ANY RECORD IN TABLE */
-
+	function insert_batch($table = '', $data = []) {
+		$this->db->insert_batch($table, $data);
+//		debugger($this->db->queries);
+	}
 	function insert($table = '', $data = []) {
 		
 		if (!empty($table) && count($data) > 0) {
