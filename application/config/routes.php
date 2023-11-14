@@ -216,7 +216,7 @@ $route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';
 $route['admin/update-college-files'] = 'Admin/CollegeFiles/updateCollegeFiles';
 $route['admin/edit-college-files/(:any)'] = 'Admin/CollegeFiles/editCollegeFiles/$1';
 $route['admin/delete-college-files'] = 'Admin/CollegeFiles/deleteCollegeFiles';
-
+$route['admin/assign-media/(:any)'] = 'Admin/CollegeFiles/assignMedia/$1';
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

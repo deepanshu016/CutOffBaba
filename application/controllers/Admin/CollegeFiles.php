@@ -12,7 +12,7 @@ Class CollegeFiles extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['galleryheadsList'] = $this->master->getRecords('tbl_gallery_heads');
+            $data['collegeFileList'] = $this->master->getProceduralData();
             $this->load->view('admin/collegefiles/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -101,30 +101,34 @@ Class CollegeFiles extends MY_Controller {
         $this->form_validation->set_rules('college_video[]', 'Video', 'callback_file_check_college_video');
         $this->form_validation->set_rules('college_doc[]', 'Video', 'callback_file_check_college_doc');
         if ($this->form_validation->run()) {
-//            $this->db->trans_start();
-            try {
+            //$this->db->trans_start();
+//            try {
                 $college_id = $this->input->post('college');
                 $file_type = $this->input->post('file_type');
                 if(isset($_FILES['college_image']['name'])){
                     $uploadedImages = $this->uploadMultipleFiles($_FILES['college_image'],'college_image',$file_type,$college_id,'media/image/','college');
-
-                    $this->master->insert_batch('tbl_uploaded_files',$uploadedImages);
+                    $res = $this->master->insert_batch('tbl_uploaded_files',$uploadedImages);
                 }
-                if(isset($_FILES['college_video']['name'])){
+                if(count($_FILES['college_video']['name']) > 1){
                     $uploadedVideos = $this->uploadMultipleFiles($_FILES['college_video'],'college_video',$file_type,$college_id,'media/video/','college');
-                    $this->master->insert_batch('tbl_uploaded_files',$uploadedVideos);
+                    $res = $this->master->insert_batch('tbl_uploaded_files',$uploadedVideos);
                 }
-                if(isset($_FILES['college_doc']['name'])){
+                if(count($_FILES['college_doc']['name']) > 1){
                     $uploadedDocs = $this->uploadMultipleFiles($_FILES['college_doc'],'college_doc',$file_type,$college_id,'media/doc/','college');
-                    $this->master->insert_batch('tbl_uploaded_files',$uploadedDocs);
+                    $res = $this->master->insert_batch('tbl_uploaded_files',$uploadedDocs);
                 }
-            } catch (Exception $e) {
-                // Handle the exception
-                echo 'Caugh t exception: ', $e->getMessage();
+//            } catch (Exception $e) {
+//                // Handle the exception
+//                echo 'Caugh t exception: ', $e->getMessage();
+//            }
+            if($res > 0){
+                $response = array('status' => 'success','message'=> 'Files uploaded successfully','url'=>base_url('admin/add-college-files'));
+                echo json_encode($response);
+                return false;
             }
-//            $response = array('status' => 'success','message'=> 'Gallery Head added successfully','url'=>base_url('admin/gallery-heads'));
-//            echo json_encode($response);
-//            return false;
+            $response = array('status' => 'error','message'=> 'Something went wrong','url'=>'');
+            echo json_encode($response);
+            return false;
         }else{
             $response = array(
                 'status' => 'error',
@@ -140,7 +144,7 @@ Class CollegeFiles extends MY_Controller {
             return false;
         }
     }
-    //Save CollegeFiles
+    //Save College Files
     public function updateCollegeFiles(){
         $this->form_validation->set_rules('head_name', 'CollegeFiles', 'trim|required');
         if ($this->form_validation->run()) {
@@ -173,6 +177,21 @@ Class CollegeFiles extends MY_Controller {
             $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+
+    public function assignMedia($id){
+        if ($this->is_admin_logged_in() == true) {
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['imageData'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id,'file_type'=>'image']);
+            $data['videoData'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id,'file_type'=>'video']);
+            $data['docData'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id,'file_type'=>'doc']);
+            $data['college_id'] = $id;
+            $this->load->view('admin/collegefiles/assign-media-gallery',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
     }
 }
 

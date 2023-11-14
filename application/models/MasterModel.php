@@ -4,7 +4,7 @@ class MasterModel extends CI_Model {
 
 	/* INSERT ANY RECORD IN TABLE */
 	function insert_batch($table = '', $data = []) {
-		$this->db->insert_batch($table, $data);
+		return  $this->db->insert_batch($table, $data);
 //		debugger($this->db->queries);
 	}
 	function insert($table = '', $data = []) {
@@ -44,6 +44,21 @@ class MasterModel extends CI_Model {
 	function deleteRecord($table = '', $condition) {
 		$q = $this->db->where($condition)->delete($table);
 		return ($this->db->affected_rows());
+	}
+
+	function getProceduralData(){
+		$query = $this->db->query("CALL GetCombinedData()");
+		return $query->result_array();
+	}
+
+	function getProceduralDataWithCondition($id,$file_types) {
+		$query = "CALL GetMediaData($id,$file_types)";
+		$result = $this->db->query($query);
+		if ($query) {
+			$data = $result->result_array();
+			return $data;
+		}
+		return NULL;
 	}
 }
 

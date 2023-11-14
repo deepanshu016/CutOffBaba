@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="10-11-2023 Changes">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/GalleryHeads.php" afterDir="false" />
+    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="11-11-2023 Changes">
+      <change afterPath="$PROJECT_DIR$/application/views/admin/collegefiles/assign-media-gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/MasterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/MasterModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin/js/custom.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +70,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\CutOffBaba\application\third_party" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="add-edit.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CutOffBaba/application/views/admin/college/add-edit.php" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -102,7 +103,10 @@
       <workItem from="1699458401872" duration="11403000" />
       <workItem from="1699548534345" duration="5170000" />
       <workItem from="1699636377177" duration="10777000" />
-      <workItem from="1699685229255" duration="10946000" />
+      <workItem from="1699685229255" duration="11224000" />
+      <workItem from="1699895493338" duration="17000" />
+      <workItem from="1699980102718" duration="150000" />
+      <workItem from="1699980348917" duration="10469000" />
     </task>
     <task id="LOCAL-00001" summary="06-11-2023 Changes">
       <option name="closed" value="true" />
@@ -168,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699647148556</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="11-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699704473620</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699704473620</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +230,8 @@
     <MESSAGE value="08-11-2023 Changes" />
     <MESSAGE value="09-11-2023 Changes" />
     <MESSAGE value="10-11-2023 Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="10-11-2023 Changes" />
+    <MESSAGE value="11-11-2023 Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="11-11-2023 Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +389,24 @@
           </properties>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
+          <line>9</line>
+          <properties>
+            <option name="className" value="\CollegeFiles" />
+            <option name="methodName" value="index" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
+          <line>147</line>
+          <properties>
+            <option name="className" value="\CollegeFiles" />
+            <option name="methodName" value="updateCollegeFiles" />
+          </properties>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/Branch.php</url>
           <line>22</line>
@@ -403,13 +434,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
-          <line>128</line>
+          <line>132</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
-          <line>116</line>
+          <line>115</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/Admin/CollegeFiles.php</url>
+          <line>184</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
