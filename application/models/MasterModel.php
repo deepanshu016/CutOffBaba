@@ -60,6 +60,21 @@ class MasterModel extends CI_Model {
 		}
 		return NULL;
 	}
+
+
+    function getFilteredDataByIds($table_name, $column_name,$ids){
+		$query = $this->db->query("CALL FilterByIDs(?, ?, ?)", array($table_name, $column_name, $ids));
+		return $query->result_array();
+    }
+
+
+	function deleteDataByIds($table_name, $column_name,$ids){
+		$this->db->query("CALL DeleteByIDs(?, ?, ?)", array($table_name, $column_name, $ids));
+		while ($this->db->more_results()) {
+			$this->db->next_result();
+		}
+		return true;
+	}
 }
 
 ?>

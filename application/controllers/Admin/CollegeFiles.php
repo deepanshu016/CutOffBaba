@@ -193,6 +193,68 @@ Class CollegeFiles extends MY_Controller {
             return redirect('admin');
         }
     }
+
+    public function saveMediaToGallery(){
+          $request_data = json_decode($this->input->post('data'),true);
+          if($request_data['head_id'] == 'college_logo'){
+               $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
+               $college_data = ['college_logo'=>$request_data['filename']];
+               $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
+          }else if($request_data['head_id'] == 'college_banner'){
+              $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
+              $college_data = ['college_logo'=>$collegeData['filename']];
+              $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
+          }else if($request_data['head_id'] == 'prospectus_file'){
+              $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
+              $college_data = ['prospectus_file'=>$collegeData['filename']];
+              $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
+          }else {
+              $this->db->trans_start();
+              $this->master->deleteRecord('tbl_gallery',['media_id'=>$request_data['media_id'],'head_id'=>$request_data['head_id'],'college_id'=>$request_data['college_id']]);
+              $gallery_data = ['media_id'=>$request_data['media_id'],'head_id'=>$request_data['head_id'],'college_id'=>$request_data['college_id']];
+              $result = $this->master->insert('tbl_gallery',$gallery_data);
+              $this->db->trans_complete();
+          }
+            if($result > 0){
+                $response = array('status' => 'success','message'=> 'Media added into gallery successfully','url'=>base_url('admin/college-files'));
+                echo json_encode($response);
+                return false;
+            }
+            $response = array('status' => 'error','message'=> 'Something went wrong','url'=>'');
+            echo json_encode($response);
+            return false;
+    }
+    public function deleteMediaToGallery(){
+        $id = $this->input->post('id');
+        $media_data = $this->master->singleRecord('tbl_uploaded_files',['id'=>$id]);
+        if(!empty($media_data)){
+            if($media_data['file_type'] == 'image'){
+                $file_path = 'assets/uploads/media/image';
+            }
+            if($media_data['file_type'] == 'video'){
+                $file_path = 'assets/uploads/media/video';
+            }
+            if($media_data['file_type'] == 'doc'){
+                $file_path = 'assets/uploads/media/doc';
+            }
+            $this->remove_file_from_directory($file_path,$media_data['file_name']);
+            $result = $this->master->deleteRecord('tbl_uploaded_files',['id'=>$id]);
+            if($result > 0){
+                $response = array('status' => 'success','message'=> 'Media added into gallery successfully','url'=>base_url('admin/college-files'));
+                echo json_encode($response);
+                return false;
+            }else{
+                $response = array('status' => 'error','message'=> 'Something went wrong','url'=>'');
+                echo json_encode($response);
+                return false;
+            }
+        }else{
+            $response = array('status' => 'error','message'=> 'Something went wrong','url'=>'');
+            echo json_encode($response);
+            return false;
+        }
+    }
+
 }
 
 ?>

@@ -574,3 +574,24 @@ DEBUG - 2023-11-14 21:45:50 --> UTF-8 Support Enabled
 DEBUG - 2023-11-14 21:45:50 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2023-11-14 21:45:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2023-11-14 21:45:51 --> Total execution time: 0.1402
+ERROR - 2023-11-14 21:59:46 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-14 21:59:46 --> UTF-8 Support Enabled
+DEBUG - 2023-11-14 21:59:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-14 21:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2023-11-14 21:59:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-14 21:59:47 --> UTF-8 Support Enabled
+DEBUG - 2023-11-14 21:59:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-14 21:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2023-11-14 21:59:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-14 21:59:47 --> UTF-8 Support Enabled
+DEBUG - 2023-11-14 21:59:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-14 21:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2023-11-14 21:59:47 --> Total execution time: 0.0868
+ERROR - 2023-11-14 22:00:18 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-14 22:00:18 --> UTF-8 Support Enabled
+DEBUG - 2023-11-14 22:00:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-14 22:00:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2023-11-14 22:00:18 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-14 22:00:18 --> UTF-8 Support Enabled
+DEBUG - 2023-11-14 22:00:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-14 22:00:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.

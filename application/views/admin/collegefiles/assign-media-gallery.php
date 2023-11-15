@@ -24,6 +24,40 @@
                         <div class="card">
                             <div class="card-body">
                                 <!-- Nav tabs -->
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="basiInput" class="form-label">Gallery Heads</label>
+                                                <input type="hidden" class="college_id" value="<?= @$college_id; ?>">
+                                                <select class="form-control gallery_heads" name="gallery_heads">
+                                                    <option value="">Select</option>
+                                                    <?php
+                                                    $galleryHeads = get_master_data('tbl_gallery_heads',[]);
+                                                    if(!empty($galleryHeads)){
+                                                        foreach($galleryHeads as $head){
+
+                                                            ?>
+                                                            <option value="<?= $head['id']; ?>"><?= $head['head_name']; ?></option>
+                                                        <?php } } ?>
+                                                    <option value="college_logo">College Logo</option>
+                                                    <option value="college_banner">College Banner</option>
+                                                    <option value="prospectus_file">Prospectus File</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <div>
+                                                <a href="javascript:void(0);" class="btn btn-success add-btn save-button submit-button" style="display: none;"> Save Data</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <div>
+                                                <a href="javascript:void(0);" class="btn btn-success add-btn delete-media-button" style="display: none;"> Delete Media</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#pill-justified-home-1" role="tab">
@@ -47,12 +81,13 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1 ms-2">
                                                 <div class="col-md-12">
-                                                    <div class="row">
+                                                    <div class="row media-data-with-checkbox">
                                                         <?php if(!empty($imageData)) {
                                                             foreach($imageData as $image){
+
                                                         ?>
                                                             <div class="col-md-2">
-                                                                <input type="checkbox" name="photo_id[]" value="<?= $image['id']; ?>">
+                                                                <input type="checkbox" name="photo_id[]" value="<?= $image['id']; ?>" class="checkbox" data-file="<?= $image['file_name']; ?>">
                                                                 <img src="<?= base_url('assets/uploads/media/image'.'/'.$image['file_name']) ?>" height="100" width="100">
                                                             </div>
                                                         <?php } } ?>
@@ -63,58 +98,43 @@
                                     </div>
                                     <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
                                         <div class="d-flex">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
                                             <div class="flex-grow-1 ms-2">
-                                                In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                                                <div class="col-md-12">
+                                                    <div class="row media-data-with-checkbox">
+                                                        <?php if(!empty($videoData)) {
+                                                            foreach($videoData as $video){
+
+                                                                ?>
+                                                                <div class="col-md-2">
+                                                                    <input type="checkbox" name="photo_id[]" value="<?= $video['id']; ?>" class="checkbox" data-file="<?= $video['file_name']; ?>">
+                                                                    <img src="<?= base_url('assets/uploads/media/video'.'/'.$video['file_name']) ?>" height="100" width="100">
+                                                                </div>
+                                                            <?php } } ?>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
                                         <div class="d-flex">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
                                             <div class="flex-grow-1 ms-2">
-                                                Each design is a new, unique piece of art birthed into this world, and while you have the opportunity to be creative and make your own style choices.
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="pill-justified-settings-1" role="tabpanel">
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mt-2">
-                                            <div class="flex-shrink-0">
-                                                <i class="ri-checkbox-circle-fill text-success"></i>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                After gathering lots of different opinions and graphic design basics, I came up with a list of 30 graphic design tips that you can start implementing.
+                                                <div class="col-md-12">
+                                                    <div class="row media-data-with-checkbox">
+                                                        <?php if(!empty($docData)) {
+                                                            foreach($docData as $doc){
+
+                                                                ?>
+                                                                <div class="col-md-2">
+                                                                    <input type="checkbox" name="photo_id[]" value="<?= $doc['id']; ?>" class="checkbox" data-file="<?= $doc['file_name']; ?>">
+                                                                    <img src="<?= base_url('assets/uploads/media/doc'.'/'.$doc['file_name']) ?>" height="100" width="100">
+                                                                </div>
+                                                            <?php } } ?>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div><!-- end card-body -->
                         </div><!-- end card -->

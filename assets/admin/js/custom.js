@@ -304,3 +304,158 @@ $(document).ready(function(){
         }
     });
 });
+
+
+$(document).on('change','.select_all', function (e) {
+    $("input[type=checkbox]"). prop('checked', $(this). prop('checked'));
+});
+
+$(document).on('change','.checkbox', function (e) {
+    var head_id = $(".gallery_heads").val();
+    var college_id = $(".college_id").val();
+    var filename = $(this).data('file');
+    var media_data = [];
+    if (this.checked) {
+        var media_id = $(this).val();
+        const mediaData = {
+            media_id: media_id,
+            head_id: head_id,
+            college_id: college_id,
+            filename: filename,
+        };
+        if(head_id == ''){
+
+            showNotify('Please select gallery head','error','');
+            $(this).prop('checked',false);
+        }else if(head_id != 'college_logo' && head_id != 'college_banner'  && head_id != 'prospectus_file'){
+            saveSingleData(mediaData,'save-single-gallery-media')
+        }else{
+            Swal.fire({
+                title: "Are you sure ?",
+                text: "You want to overwrite  the data",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes",
+                cancelButtonText: "No",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    saveSingleData(mediaData,'save-single-gallery-media')
+                } else if (result.isDenied) {
+                    showNotify('Action Cancelled','error','');
+                }
+            });
+        }
+    } else {
+        var media_id = $(this).val();
+        deleteSingleData(media_id,'delete-single-gallery-media')
+    }
+    // if ($('.checkbox:checked').length > 0) {
+    //     $('.save-button').show();
+    //     $('.delete-media-button').show();
+    // } else {
+    //     $('.save-button').hide();
+    //     $('.delete-media-button').hide();
+    // }
+})
+
+$(document).on("click",'.submit-button',function(e) {
+    e.preventDefault();
+    var all_image_id = $('input[type="checkbox"]:checked');
+    var media_data = [];
+    var head_id = $(".gallery_heads").val();
+    var college_id = $(".college_id").val();
+    var countMedia = $('.media-data-with-checkbox').find('.checkbox:checked');
+    if (head_id == ''){
+        showNotify('Please select Gallery head','error','');
+    }else if(countMedia.length == 0){
+        showNotify('Please select atleast one media','error','');
+    }else{
+        all_image_id.each(function (index, selected) {
+            var mediaData = {
+                media_id: $(this).val(),
+                head_id: head_id,
+                college_id: college_id,
+            };
+            media_data.push(mediaData);
+        });
+        console.log(media_data)
+        fetchData(media_data, head_id, college_id, '', 'save-media-to-gallery');
+    }
+});
+
+
+
+$(document).on("click",'.delete-media-button',function(e) {
+    e.preventDefault();
+    var all_image_id = $('input[type="checkbox"]:checked');
+    var media_data = [];
+    var countMedia = $('.media-data-with-checkbox').find('.checkbox:checked');
+    if(countMedia.length == 0){
+        showNotify('Please select atleast one media','error','');
+    }else{
+        all_image_id.each(function (index, selected) {
+            media_data.push($(this).val());
+        });
+        deleteMultipleData(media_data, 'delete-media-from-college');
+    }
+});
+
+
+function fetchData(body,head_id = '',college_id = '', wrapper,url) {
+    $.ajax({
+        type: 'POST',
+        url: base_url + url,
+        data:{'data':JSON.stringify(body),'head_id': head_id,'college_id' : college_id},
+        dataType: 'json',
+        success: function(data){
+            if(data.status === 'success'){
+                if(wrapper != ''){
+                    $(".close-modal").click();
+                    $(wrapper).html(data.html);
+                }else{
+                    showNotify(data.message,data.status,data.url);
+                }
+            }
+            if(data.status === 'errors'){
+                showNotify(data.message,data.status,data.url);
+            }
+        }
+    });
+}
+function saveSingleData(body,url) {
+    $.ajax({
+        type: 'POST',
+        url: base_url + url,
+        data:{'data': JSON.stringify(body)},
+        dataType: 'json',
+        success: function(data){
+            if(data.status === 'success'){
+                showNotify(data.message,data.status,data.url);
+            }
+            if(data.status === 'errors'){
+                showNotify(data.message,data.status,data.url);
+            }
+        }
+    });
+}
+
+
+function deleteSingleData(id,url) {
+    $.ajax({
+        type: 'POST',
+        url: base_url + url,
+        data:{'id':id},
+        dataType: 'json',
+        success: function(data){
+            if(data.status === 'success'){
+                showNotify(data.message,data.status,data.url);
+            }
+            if(data.status === 'errors'){
+                showNotify(data.message,data.status,data.url);
+            }
+        }
+    });
+}

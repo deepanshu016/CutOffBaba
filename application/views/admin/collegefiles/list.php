@@ -58,7 +58,7 @@
                                         </td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-college-files'.'/'.$college['college_id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="<?= base_url('admin/assign-media'.'/'.$college['college_id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
                                               <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $college['college_id']; ?>" url="<?= base_url('admin/delete-college-files'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
