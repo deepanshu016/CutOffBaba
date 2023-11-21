@@ -16769,4 +16769,9 @@ span.flatpickr-weekday {
     background-color: var(--vz-card-bg) !important
 }
 
-/*# sourceMappingURL=app.min.css.map */
+.dt-buttons{
+margin: 0 15px 15px !important;
+float: left;}
+.dataTables_filter{
+margin: 15px 0 0 0 !important;
+}

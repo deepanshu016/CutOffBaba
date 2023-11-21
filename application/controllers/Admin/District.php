@@ -1,6 +1,6 @@
 <?php
 
-Class City extends MY_Controller {
+Class District extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -13,7 +13,7 @@ Class City extends MY_Controller {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
             $data['cityList'] = $this->master->getRecords('tbl_city');
-            $this->load->view('admin/city/list',$data);
+            $this->load->view('admin/district/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -24,7 +24,7 @@ Class City extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['stateList'] = $this->master->getRecords('tbl_state');
-            $this->load->view('admin/city/add-edit',$data);
+            $this->load->view('admin/district/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -37,7 +37,7 @@ Class City extends MY_Controller {
             $data['stateList'] = $this->master->getRecords('tbl_state');
             $data['singleCity'] = $this->master->singleRecord('tbl_city',array('id'=>$id));
 
-            $this->load->view('admin/city/add-edit',$data);
+            $this->load->view('admin/district/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');

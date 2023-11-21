@@ -24,22 +24,18 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleState)) { ?>
                       <h4 class="card-title mb-0">Add State</h4>
                     <?php } else{  ?>
                       <h4 class="card-title mb-0">Edit State</h4>
                     <?php } ?>
+                    <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" > <i class="ri-list-unordered align-bottom me-1"></i> List State</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
                        <div class="row g-4 mb-3">
-                          <div class="col-sm-auto">
-                             <div>
-                                <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" > List</a>
-                             </div>
-                          </div>
                           <?php if(empty($singleState)) { ?>
                             <form action="<?= base_url('admin/save-state') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>
@@ -50,7 +46,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
-                                              <select class="form-control" name="country_id">
+                                              <select class="form-control form-select" name="country_id">
                                                 <option value="">--Select--</option>
                                                  <?php if(!empty($countryList)):
                                                     foreach($countryList as $country): ?>

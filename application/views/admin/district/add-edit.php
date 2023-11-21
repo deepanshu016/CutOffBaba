@@ -24,12 +24,13 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleCity)) { ?>
                       <h4 class="card-title mb-0">Add District</h4>
                     <?php } else{  ?>
                       <h4 class="card-title mb-0">Edit District</h4>
                     <?php } ?>
+                    <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" > <i class="ri-list-unordered align-bottom me-1"></i> List District</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -37,7 +38,7 @@
                        <div class="row g-4 mb-3">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" > List</a>
+                                
                              </div>
                           </div>
                           <?php if(empty($singleCity)) { ?>
@@ -50,7 +51,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
-                                              <select class="form-control dynamic-data" name="country" data-segment="get-state" data-wrapper=".state-wrapper">
+                                              <select class="form-control form-select dynamic-data" name="country" data-segment="admin/get-state" data-wrapper=".state-wrapper">
                                                   <option value="">Select Country</option>
                                                   <?php
                                                   $countryList = get_master_data('tbl_country',[]);
@@ -65,7 +66,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
-                                              <select class="form-control state-wrapper dynamic-data" name="state" data-segment="get-city" data-wrapper=".city-wrapper">
+                                              <select class="form-control form-select state-wrapper dynamic-data" name="state" data-segment="admin/get-city" data-wrapper=".city-wrapper">
                                                   <option value="">Select State</option>
                                                   <?php
                                                   if(!empty($singleCity)){

@@ -107,12 +107,12 @@ $route['admin/edit-exams/(:any)'] = 'Admin/Exams/editExams/$1';
 $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
 
 
-$route['admin/district'] = 'Admin/City/index';
-$route['admin/add-district'] = 'Admin/City/add';
-$route['admin/save-district'] = 'Admin/City/saveCity';
-$route['admin/update-district'] = 'Admin/City/updateCity';
-$route['admin/edit-district/(:any)'] = 'Admin/City/editCity/$1';
-$route['admin/delete-district'] = 'Admin/City/deleteCity';
+$route['admin/district'] = 'Admin/district/index';
+$route['admin/add-district'] = 'Admin/district/add';
+$route['admin/save-district'] = 'Admin/district/saveCity';
+$route['admin/update-district'] = 'Admin/district/updateCity';
+$route['admin/edit-district/(:any)'] = 'Admin/district/editCity/$1';
+$route['admin/delete-district'] = 'Admin/district/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
 $route['admin/get-city'] = 'Admin/Common/getCityByState';
 
