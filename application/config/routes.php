@@ -165,6 +165,73 @@ $route['admin/delete-sub-district'] = 'Admin/SubDistrict/deleteSubDistrict';
 
 
 
+
+$route['admin/opens'] = 'Admin/Opens/index';
+$route['admin/add-opens'] = 'Admin/Opens/add';
+$route['admin/save-opens'] = 'Admin/Opens/saveOpens';
+$route['admin/update-opens'] = 'Admin/Opens/updateOpens';
+$route['admin/edit-opens/(:any)'] = 'Admin/Opens/editOpens/$1';
+$route['admin/delete-opens'] = 'Admin/Opens/deleteOpens';
+
+
+
+
+
+$route['admin/visibility'] = 'Admin/Visibility/index';
+$route['admin/add-visibility'] = 'Admin/Visibility/add';
+$route['admin/save-visibility'] = 'Admin/Visibility/saveVisibility';
+$route['admin/update-visibility'] = 'Admin/Visibility/updateVisibility';
+$route['admin/edit-visibility/(:any)'] = 'Admin/Visibility/editVisibility/$1';
+$route['admin/delete-visibility'] = 'Admin/Visibility/deleteVisibility';
+
+
+$route['admin/clinicdetails'] = 'Admin/ClinicDetails/index';
+$route['admin/add-clinicdetails'] = 'Admin/ClinicDetails/add';
+$route['admin/save-clinicdetails'] = 'Admin/ClinicDetails/saveClinicDetails';
+$route['admin/update-clinicdetails'] = 'Admin/ClinicDetails/updateClinicDetails';
+$route['admin/edit-clinicdetails/(:any)'] = 'Admin/ClinicDetails/editClinicDetails/$1';
+$route['admin/delete-clinicdetails'] = 'Admin/ClinicDetails/deleteClinicDetails';
+
+
+
+$route['admin/clinical-facility'] = 'Admin/ClinicFacility/index';
+$route['admin/add-clinical-facility'] = 'Admin/ClinicFacility/add';
+$route['admin/save-clinical-facility'] = 'Admin/ClinicFacility/saveClinicFacility';
+$route['admin/update-clinical-facility'] = 'Admin/ClinicFacility/updateClinicFacility';
+$route['admin/edit-clinical-facility/(:any)'] = 'Admin/ClinicFacility/editClinicFacility/$1';
+$route['admin/delete-clinical-facility'] = 'Admin/ClinicFacility/deleteClinicFacility';
+
+
+$route['admin/gallery-heads'] = 'Admin/GalleryHeads/index';
+$route['admin/add-gallery-heads'] = 'Admin/GalleryHeads/add';
+$route['admin/save-gallery-heads'] = 'Admin/GalleryHeads/saveGalleryHeads';
+$route['admin/update-gallery-heads'] = 'Admin/GalleryHeads/updateGalleryHeads';
+$route['admin/edit-gallery-heads/(:any)'] = 'Admin/GalleryHeads/editGalleryHeads/$1';
+$route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
+
+
+
+$route['admin/service-rules'] = 'Admin/ServiceRules/index';
+$route['admin/add-service-rules'] = 'Admin/ServiceRules/add';
+$route['admin/save-service-rules'] = 'Admin/ServiceRules/saveServiceRule';
+$route['admin/update-service-rules'] = 'Admin/ServiceRules/updateServiceRule';
+$route['admin/edit-service-rules/(:any)'] = 'Admin/ServiceRules/editServiceRule/$1';
+$route['admin/delete-service-rules'] = 'Admin/ServiceRules/deleteServiceRule';
+
+
+
+$route['admin/college-files'] = 'Admin/CollegeFiles/index';
+$route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
+$route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';
+$route['admin/update-college-files'] = 'Admin/CollegeFiles/updateCollegeFiles';
+$route['admin/edit-college-files/(:any)'] = 'Admin/CollegeFiles/editCollegeFiles/$1';
+$route['admin/delete-college-files'] = 'Admin/CollegeFiles/deleteCollegeFiles';
+$route['admin/assign-media/(:any)'] = 'Admin/CollegeFiles/assignMedia/$1';
+$route['admin/save-single-gallery-media'] = 'Admin/CollegeFiles/saveMediaToGallery';
+$route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
+
+
+
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
 $route['admin/update-site-settings'] = 'Admin/Settings/updateSiteSettings';

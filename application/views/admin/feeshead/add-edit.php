@@ -47,25 +47,70 @@
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Head Name</label>
-                                              <input class="form-control" type="text" name="name"  placeholder="Head Name" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['name'] : ''; ?>">
+                                              <label for="basiInput" class="form-label">Fees Head Name</label>
+                                              <input class="form-control" type="text" name="fee_head_name"  placeholder="Fees Head Name" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['fee_head_name'] : ''; ?>">
                                               <input type="hidden" class="form-control" name="name_id" value="<?= (!empty($singleFeesHead)) ?  $singleFeesHead['id'] : ''; ?>">
-                                              <span class="text-danger" id="name"></span>
+                                              <span class="text-danger" id="fee_head_name"></span>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Description</label>
-                                              <textarea class="form-control" name="fees_description" id="fees_description"><?= (!empty($singleFeesHead)) ? $singleFeesHead['fees_description'] : '';?></textarea>
+                                              <label for="basiInput" class="form-label">Tution Fees</label>
+                                              <textarea class="form-control" name="tution_fees" id="tution_feess"><?= (!empty($singleFeesHead)) ? $singleFeesHead['tution_fees'] : '';?></textarea>
+                                              <span class="text-danger" id="tution_fees"></span>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-6" style="margin-top: 15px;">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Hostel Fees</label>
+                                              <textarea class="form-control" name="hostel_fees" id="hostel_fees"><?= (!empty($singleFeesHead)) ? $singleFeesHead['hostel_fees'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Miscellaneous Fees</label>
+                                              <textarea class="form-control" name="misc_fees" id="misc_fees"><?= (!empty($singleFeesHead)) ? $singleFeesHead['misc_fees'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Bank Details 1</label>
+                                              <textarea class="form-control" name="bank_details_1" id="bank_details_1"><?= (!empty($singleFeesHead)) ? $singleFeesHead['bank_details_1'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Bank Details 2</label>
+                                              <textarea class="form-control" name="bank_details_2" id="bank_details_2"><?= (!empty($singleFeesHead)) ? $singleFeesHead['bank_details_2'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Demand Draft Name</label>
+                                              <input class="form-control" type="text" name="demand_draft_name"  placeholder="Demand Draft Name" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['demand_draft_name'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-12" style="margin-top: 15px;">
                                         <?php if(empty($singleFeesHead)) { ?>
                                           <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>

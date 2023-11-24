@@ -42,10 +42,16 @@ Class FeesHead extends MY_Controller {
     }
     //Save Feeshead
     public function saveFeesHead(){
-        $this->form_validation->set_rules('name', 'Feeshead', 'trim|required');
+        $this->form_validation->set_rules('fee_head_name', 'Fees Head Name', 'trim|required');
+        $this->form_validation->set_rules('tution_fees', 'Tution Fees', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['name'] = $this->input->post('name');
-            $data['fees_description'] = $this->input->post('fees_description');
+            $data['fee_head_name'] = $this->input->post('fee_head_name');
+            $data['tution_fees'] = $this->input->post('tution_fees');
+            $data['hostel_fees'] = $this->input->post('hostel_fees');
+            $data['misc_fees'] = $this->input->post('misc_fees');
+            $data['bank_details_1'] = $this->input->post('bank_details_1');
+            $data['bank_details_2'] = $this->input->post('bank_details_2');
+            $data['demand_draft_name'] = $this->input->post('demand_draft_name');
             $result = $this->master->insert('tbl_feeshead',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Fees Head added successfully','url'=>base_url('admin/feeshead'));
@@ -60,7 +66,8 @@ Class FeesHead extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'name' => form_error('name')
+                    'fee_head_name' => form_error('fee_head_name'),
+                    'tution_fees' => form_error('tution_fees')
                 )
             );
             echo json_encode($response);
@@ -70,10 +77,16 @@ Class FeesHead extends MY_Controller {
     //Save Feeshead
     public function updateFeesHead(){
 
-        $this->form_validation->set_rules('name', 'Fees Head', 'trim|required');
+        $this->form_validation->set_rules('fee_head_name', 'Fees Head Name', 'trim|required');
+        $this->form_validation->set_rules('tution_fees', 'Tution Fees', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['name'] = $this->input->post('name');
-            $data['fees_description'] = $this->input->post('fees_description');
+            $data['fee_head_name'] = $this->input->post('fee_head_name');
+            $data['tution_fees'] = $this->input->post('tution_fees');
+            $data['hostel_fees'] = $this->input->post('hostel_fees');
+            $data['misc_fees'] = $this->input->post('misc_fees');
+            $data['bank_details_1'] = $this->input->post('bank_details_1');
+            $data['bank_details_2'] = $this->input->post('bank_details_2');
+            $data['demand_draft_name'] = $this->input->post('demand_draft_name');
             $result = $this->master->updateRecord('tbl_feeshead',array('id'=>$this->input->post('name_id')),$data);
             $response = array('status' => 'success','message'=> 'Fees Head updated successfully','url'=>base_url('admin/feeshead'));
             echo json_encode($response);
@@ -82,7 +95,8 @@ Class FeesHead extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'name' => form_error('name')
+                    'fee_head_name' => form_error('fee_head_name'),
+                    'tution_fees' => form_error('tution_fees')
                 )
             );
             echo json_encode($response);
