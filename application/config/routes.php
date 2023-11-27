@@ -220,6 +220,33 @@ $route['admin/delete-service-rules'] = 'Admin/ServiceRules/deleteServiceRule';
 
 
 
+$route['admin/counselling-level'] = 'Admin/CounsellingLevel/index';
+$route['admin/add-counselling-level'] = 'Admin/CounsellingLevel/add';
+$route['admin/save-counselling-level'] = 'Admin/CounsellingLevel/saveCounsellingLevel';
+$route['admin/update-counselling-level'] = 'Admin/CounsellingLevel/updateCounsellingLevel';
+$route['admin/edit-counselling-level/(:any)'] = 'Admin/CounsellingLevel/editCounsellingLevel/$1';
+$route['admin/delete-counselling-level'] = 'Admin/CounsellingLevel/deleteCounsellingLevel';
+
+
+
+$route['admin/cutoff-head-name'] = 'Admin/CounsellingHead/index';
+$route['admin/add-cutoff-head-name'] = 'Admin/CounsellingHead/add';
+$route['admin/save-cutoff-head-name'] = 'Admin/CounsellingHead/saveCounsellingHead';
+$route['admin/update-cutoff-head-name'] = 'Admin/CounsellingHead/updateCounsellingHead';
+$route['admin/edit-cutoff-head-name/(:any)'] = 'Admin/CounsellingHead/editCounsellingHead/$1';
+$route['admin/delete-cutoff-head-name'] = 'Admin/CounsellingHead/deleteCounsellingHead';
+
+
+
+
+$route['admin/category'] = 'Admin/Category/index';
+$route['admin/add-category'] = 'Admin/Category/add';
+$route['admin/save-category'] = 'Admin/Category/saveCategory';
+$route['admin/update-category'] = 'Admin/Category/updateCategory';
+$route['admin/edit-category/(:any)'] = 'Admin/Category/editCategory/$1';
+$route['admin/delete-category'] = 'Admin/Category/deleteCategory';
+
+
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';
 $route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
 $route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';

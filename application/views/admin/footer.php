@@ -25,6 +25,13 @@
             // let id = $(this).attr('id');
            // CKEDITOR.replace(id, options);
             CKEDITOR.replace('fees_description');
+            let id = $(this).attr('id');
+             CKEDITOR.replace(id);
+             // CKEDITOR.replace('fees_description');
+             // CKEDITOR.replace('eligibility');
+             // CKEDITOR.replace('course_eligibility');
+             // CKEDITOR.replace('expected_salary');
+             // CKEDITOR.replace('course_opportunity');
         // CKEDITOR.replace('about_us_editor')
         // CKEDITOR.replace('fees_description');
         // CKEDITOR.replace('return_refund_editor');
@@ -37,7 +44,7 @@
                 'excel', 'pdf', 'print'
             ]
         });
-
+         $('.js-example-basic-multiple').select2();
     </script>
     <?php $this->load->view('common/alert'); ?>
 </body>

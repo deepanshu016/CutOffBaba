@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="08-11-2023 Changes">
       <change afterPath="$PROJECT_DIR$/application/controllers/Admin/SubDistrict.php" afterDir="false" />
+=======
+    <list default="true" id="5dcdcd92-aa28-4ce2-926c-a0fb816f9740" name="Changes" comment="15-11-2023 Changes">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/ServiceRules.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Admin/VideoHead.php" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d9ebf55f-9b96-4c06-8d25-69813291a750/storage_v2/_src_/schema/cut_off_baba.6za6jg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/City.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/add-edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/city/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/city/list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/country/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/country/list.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin/FeesHead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2023-11-15.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2023-11-15.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2023-11-16.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2023-11-16.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/add-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/feeshead/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/sidebar.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +73,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL-Insert-Multirow.sql.groovy&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/brandzzyTask&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/CutOffBaba&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -100,6 +117,18 @@
       <workItem from="1699375817762" duration="9707000" />
       <workItem from="1699458401872" duration="11403000" />
       <workItem from="1699548534345" duration="5170000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1699636377177" duration="10777000" />
+      <workItem from="1699685229255" duration="11224000" />
+      <workItem from="1699895493338" duration="17000" />
+      <workItem from="1699980102718" duration="150000" />
+      <workItem from="1699980348917" duration="11170000" />
+      <workItem from="1700066751301" duration="12255000" />
+      <workItem from="1700157932639" duration="105000" />
+      <workItem from="1700761343070" duration="1213000" />
+      <workItem from="1700845872787" duration="5424000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="06-11-2023 Changes">
       <option name="closed" value="true" />
@@ -141,7 +170,67 @@
       <option name="project" value="LOCAL" />
       <updated>1699472269949</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="6" />
+=======
+    <task id="LOCAL-00006" summary="08-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699561321051</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699561321051</updated>
+    </task>
+    <task id="LOCAL-00007" summary="09-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699561707348</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699561707348</updated>
+    </task>
+    <task id="LOCAL-00008" summary="10-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699647148556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699647148556</updated>
+    </task>
+    <task id="LOCAL-00009" summary="11-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699704473620</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699704473620</updated>
+    </task>
+    <task id="LOCAL-00010" summary="11-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699995355566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699995355566</updated>
+    </task>
+    <task id="LOCAL-00011" summary="14-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1699995441108</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699995441108</updated>
+    </task>
+    <task id="LOCAL-00012" summary="15-11-2023 Changes">
+      <option name="closed" value="true" />
+      <created>1700079043663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700079043663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +278,16 @@
     <MESSAGE value="06-11-2023 Changes" />
     <MESSAGE value="07-11-2023 Changes" />
     <MESSAGE value="08-11-2023 Changes" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="08-11-2023 Changes" />
+=======
+    <MESSAGE value="09-11-2023 Changes" />
+    <MESSAGE value="10-11-2023 Changes" />
+    <MESSAGE value="11-11-2023 Changes" />
+    <MESSAGE value="14-11-2023 Changes" />
+    <MESSAGE value="15-11-2023 Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="15-11-2023 Changes" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -331,7 +429,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/application/controllers/Admin/FeesHead.php</url>
-          <line>91</line>
+          <line>105</line>
           <properties>
             <option name="className" value="\FeesHead" />
             <option name="methodName" value="deleteFeesHead" />
