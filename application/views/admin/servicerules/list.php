@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Fees Head</li>
+                            <li class="breadcrumb-item active">Service  & Bond Rules</li>
                         </ol>
                     </div>
 
@@ -21,7 +21,7 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <h4 class="card-title mb-0">Fees Head</h4>
+                    <h4 class="card-title mb-0">Service  & Bond Rules</h4>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -29,7 +29,7 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-feeshead'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                <a href="<?= base_url('admin/add-service-rules'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                              </div>
                           </div>
                        </div>
@@ -39,21 +39,25 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
-                                    <th class="sort" data-sort="email">Fees Head Name</th>
+                                    <th class="sort" data-sort="email">Service Bond</th>
+                                    <th class="sort" data-sort="email">Seat Indemnity Charges</th>
+                                    <th class="sort" data-sort="email">Upgradation Processing Fees</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
-                                <?php if(!empty($feesHeadList)) {
-                                      foreach($feesHeadList as $key=>$head){
+                                <?php if(!empty($serviceRulesList)) {
+                                      foreach($serviceRulesList as $key=>$rule){
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
-                                        <td><?= $head['fee_head_name']; ?></td>
+                                        <td><?= $rule['service_bond']; ?></td>
+                                        <td><?= $rule['seat_indentity_charges']; ?></td>
+                                        <td><?= $rule['upgradation_processing_fees']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-feeshead'.'/'.$head['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $head['id']; ?>" url="<?= base_url('admin/delete-feeshead'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                              <a href="<?= base_url('admin/edit-service-rules'.'/'.$rule['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $rule['id']; ?>" url="<?= base_url('admin/delete-service-rules'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
                                     </tr>

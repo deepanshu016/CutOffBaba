@@ -165,6 +165,10 @@ $route['admin/delete-sub-district'] = 'Admin/SubDistrict/deleteSubDistrict';
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
 $route['admin/opens'] = 'Admin/Opens/index';
 $route['admin/add-opens'] = 'Admin/Opens/add';
 $route['admin/save-opens'] = 'Admin/Opens/saveOpens';
@@ -210,6 +214,71 @@ $route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
 
 
 
+<<<<<<< HEAD
+=======
+$route['admin/service-rules'] = 'Admin/ServiceRules/index';
+$route['admin/add-service-rules'] = 'Admin/ServiceRules/add';
+$route['admin/save-service-rules'] = 'Admin/ServiceRules/saveServiceRule';
+$route['admin/update-service-rules'] = 'Admin/ServiceRules/updateServiceRule';
+$route['admin/edit-service-rules/(:any)'] = 'Admin/ServiceRules/editServiceRule/$1';
+$route['admin/delete-service-rules'] = 'Admin/ServiceRules/deleteServiceRule';
+
+
+
+$route['admin/counselling-level'] = 'Admin/CounsellingLevel/index';
+$route['admin/add-counselling-level'] = 'Admin/CounsellingLevel/add';
+$route['admin/save-counselling-level'] = 'Admin/CounsellingLevel/saveCounsellingLevel';
+$route['admin/update-counselling-level'] = 'Admin/CounsellingLevel/updateCounsellingLevel';
+$route['admin/edit-counselling-level/(:any)'] = 'Admin/CounsellingLevel/editCounsellingLevel/$1';
+$route['admin/delete-counselling-level'] = 'Admin/CounsellingLevel/deleteCounsellingLevel';
+
+
+
+$route['admin/cutoff-head-name'] = 'Admin/CounsellingHead/index';
+$route['admin/add-cutoff-head-name'] = 'Admin/CounsellingHead/add';
+$route['admin/save-cutoff-head-name'] = 'Admin/CounsellingHead/saveCounsellingHead';
+$route['admin/update-cutoff-head-name'] = 'Admin/CounsellingHead/updateCounsellingHead';
+$route['admin/edit-cutoff-head-name/(:any)'] = 'Admin/CounsellingHead/editCounsellingHead/$1';
+$route['admin/delete-cutoff-head-name'] = 'Admin/CounsellingHead/deleteCounsellingHead';
+
+
+
+
+$route['admin/category'] = 'Admin/Category/index';
+$route['admin/add-category'] = 'Admin/Category/add';
+$route['admin/save-category'] = 'Admin/Category/saveCategory';
+$route['admin/update-category'] = 'Admin/Category/updateCategory';
+$route['admin/edit-category/(:any)'] = 'Admin/Category/editCategory/$1';
+$route['admin/delete-category'] = 'Admin/Category/deleteCategory';
+
+
+
+
+$route['admin/sub-category'] = 'Admin/SubCategory/index';
+$route['admin/add-sub-category'] = 'Admin/SubCategory/add';
+$route['admin/save-sub-category'] = 'Admin/SubCategory/saveSubCategory';
+$route['admin/update-sub-category'] = 'Admin/SubCategory/updateSubCategory';
+$route['admin/edit-sub-category/(:any)'] = 'Admin/SubCategory/editSubCategory/$1';
+$route['admin/delete-sub-category'] = 'Admin/SubCategory/deleteSubCategory';
+
+
+$route['admin/special-category'] = 'Admin/SpecialCategory/index';
+$route['admin/add-special-category'] = 'Admin/SpecialCategory/add';
+$route['admin/save-special-category'] = 'Admin/SpecialCategory/saveSpecialCategory';
+$route['admin/update-special-category'] = 'Admin/SpecialCategory/updateSpecialCategory';
+$route['admin/edit-special-category/(:any)'] = 'Admin/SpecialCategory/editSpecialCategory/$1';
+$route['admin/delete-special-category'] = 'Admin/SpecialCategory/deleteSpecialCategory';
+
+
+$route['admin/sub-special-category'] = 'Admin/SubSpecialCategory/index';
+$route['admin/add-sub-special-category'] = 'Admin/SubSpecialCategory/add';
+$route['admin/save-sub-special-category'] = 'Admin/SubSpecialCategory/saveSubSpecialCategory';
+$route['admin/update-sub-special-category'] = 'Admin/SubSpecialCategory/updateSubSpecialCategory';
+$route['admin/edit-sub-special-category/(:any)'] = 'Admin/SubSpecialCategory/editSubSpecialCategory/$1';
+$route['admin/delete-sub-special-category'] = 'Admin/SubSpecialCategory/deleteSubSpecialCategory';
+
+
+>>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';
 $route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
 $route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';
@@ -221,6 +290,10 @@ $route['admin/save-single-gallery-media'] = 'Admin/CollegeFiles/saveMediaToGalle
 $route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
 $route['admin/update-site-settings'] = 'Admin/Settings/updateSiteSettings';

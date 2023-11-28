@@ -92,15 +92,72 @@
                     </div>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
+=======
+                    <a class="nav-link menu-link" href="#sidebarFees" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarFees">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Fees Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarFees">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/fees-heads'); ?>" data-key="t-calendar">
+                                    Fees Heads
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/service-rules'); ?>" data-key="t-calendar">
+                                    Service & Bond Rules
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarcutoff" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarcutoff">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Cutoff Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarcutoff">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/counselling-level'); ?>" data-key="t-calendar">
+                                    Counselling Level
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/cutoff-head-name'); ?>" data-key="t-calendar">
+                                    Cutoff Head Name
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/category'); ?>" data-key="t-calendar">
+                                    Category
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/sub-category'); ?>" data-key="t-calendar">
+                                    Sub Category
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/special-category'); ?>" data-key="t-calendar">
+                                    Special Category
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/sub-special-category'); ?>" data-key="t-calendar">
+                                    Special Sub Category
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+>>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
                     <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/fees'); ?>">
-                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Fees Master</span>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Central Cutoff Master</span>
@@ -162,21 +219,21 @@
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Student Profile Master</span>
                     </a>
                 </li>
-                <!--<li class="nav-item">-->
-                <!--    <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">-->
-                <!--        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>-->
-                <!--    </a>-->
-                <!--    <div class="collapse menu-dropdown" id="sidebarApps">-->
-                <!--        <ul class="nav nav-sm flex-column">-->
-                <!--            <li class="nav-item">-->
-                <!--                <a href="<?= base_url('admin/course-category'); ?>" class="nav-link" data-key="t-calendar"> Course Category </a>-->
-                <!--            </li>-->
-                <!--            <li class="nav-item">-->
-                <!--                <a class="nav-link"  href="<?= base_url('admin/courses'); ?>" data-key="t-landing">Courses</a>-->
-                <!--            </li>-->
-                <!--        </ul>-->
-                <!--    </div>-->
-                <!--</li>-->
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarApps">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/course-category'); ?>" class="nav-link" data-key="t-calendar"> Course Category </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/courses'); ?>" data-key="t-landing">Courses</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/settings'); ?>">
                         <i class="ri-settings-3-line"></i> <span data-key="t-landing">Settings</span>

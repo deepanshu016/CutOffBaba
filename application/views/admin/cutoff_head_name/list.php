@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Fees Head</li>
+                            <li class="breadcrumb-item active">Cutoff Head Name</li>
                         </ol>
                     </div>
 
@@ -21,7 +21,7 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <h4 class="card-title mb-0">Fees Head</h4>
+                    <h4 class="card-title mb-0">Cutoff Head Name</h4>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -29,7 +29,7 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-feeshead'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                <a href="<?= base_url('admin/add-cutoff-head-name'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                              </div>
                           </div>
                        </div>
@@ -38,22 +38,31 @@
                           <table class="table align-middle table-nowrap" id="customerTable">
                              <thead class="table-light">
                                 <tr>
-                                   <th class="sort" data-sort="customer_name">S.No.</th>
-                                    <th class="sort" data-sort="email">Fees Head Name</th>
-                                   <th class="sort" data-sort="action">Action</th>
+                                   <th class="sort" data-sort="s_no">S.No.</th>
+                                   <th class="sort" data-sort="head_name">Head Name</th>
+                                   <th class="sort" data-sort="state">State</th>
+                                   <th class="sort" data-sort="course">Course</th>
+                                    <th class="sort" data-sort="level">Level</th>
+                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
-                                <?php if(!empty($feesHeadList)) {
-                                      foreach($feesHeadList as $key=>$head){
+                                <?php if(!empty($counsellingHeadList)) {
+                                      foreach($counsellingHeadList as $key=>$head){
+                                        $stateData = $this->db->get_where('tbl_state',array('id'=>$head['state_id']))->row_array();
+                                        $courseData = $this->db->get_where('tbl_course',array('id'=>$head['course_id']))->row_array();
+                                        $levelData = $this->db->get_where('tbl_counselling_level',array('id'=>$head['level_id']))->row_array();
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
-                                        <td><?= $head['fee_head_name']; ?></td>
+                                        <td><?= $head['head_name']; ?></td>
+                                        <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
+                                        <td><?= ($courseData) ? $courseData['course'] : ''; ?></td>
+                                        <td><?= ($levelData) ? $levelData['level'] : ''; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-feeshead'.'/'.$head['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $head['id']; ?>" url="<?= base_url('admin/delete-feeshead'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                              <a href="<?= base_url('admin/edit-cutoff-head-name'.'/'.$head['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $head['id']; ?>" url="<?= base_url('admin/delete-cutoff-head-name'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
                                     </tr>
@@ -62,7 +71,6 @@
                           </table>
                           <div class="noresult" style="display: none">
                              <div class="text-center">
-                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
                                 <h5 class="mt-2">Sorry! No Result Found</h5>
                                 <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any orders for you search.</p>
                              </div>

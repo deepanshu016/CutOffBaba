@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Fees Head</li>
+                            <li class="breadcrumb-item active">Category</li>
                         </ol>
                     </div>
 
@@ -21,7 +21,7 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header">
-                    <h4 class="card-title mb-0">Fees Head</h4>
+                    <h4 class="card-title mb-0">Category</h4>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
@@ -29,7 +29,7 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-feeshead'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                <a href="<?= base_url('admin/add-category'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                              </div>
                           </div>
                        </div>
@@ -39,21 +39,21 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
-                                    <th class="sort" data-sort="email">Fees Head Name</th>
+                                    <th class="sort" data-sort="email">Category</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
-                                <?php if(!empty($feesHeadList)) {
-                                      foreach($feesHeadList as $key=>$head){
+                                <?php if(!empty($categoryList)) {
+                                      foreach($categoryList as $key=>$category){
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
-                                        <td><?= $head['fee_head_name']; ?></td>
+                                        <td><?= $category['category_name']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-feeshead'.'/'.$head['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $head['id']; ?>" url="<?= base_url('admin/delete-feeshead'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                              <a href="<?= base_url('admin/edit-category'.'/'.$category['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $category['id']; ?>" url="<?= base_url('admin/delete-category'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
                                            </div>
                                         </td>
                                     </tr>

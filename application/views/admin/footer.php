@@ -51,12 +51,23 @@
          $("textarea").each(function () {
             // let id = $(this).attr('id');
            // CKEDITOR.replace(id, options);
+<<<<<<< HEAD
              CKEDITOR.replace('fees_description');
              CKEDITOR.replace('eligibility');
              CKEDITOR.replace('course_eligibility');
              CKEDITOR.replace('expected_salary');
              CKEDITOR.replace('course_opportunity');
              CKEDITOR.replace('course_fees');
+=======
+            CKEDITOR.replace('fees_description');
+            let id = $(this).attr('id');
+             CKEDITOR.replace(id);
+             // CKEDITOR.replace('fees_description');
+             // CKEDITOR.replace('eligibility');
+             // CKEDITOR.replace('course_eligibility');
+             // CKEDITOR.replace('expected_salary');
+             // CKEDITOR.replace('course_opportunity');
+>>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
         // CKEDITOR.replace('about_us_editor')
         // CKEDITOR.replace('fees_description');
         // CKEDITOR.replace('return_refund_editor');
@@ -69,7 +80,7 @@
                 'excel', 'pdf', 'print'
             ]
         });
-
+         $('.js-example-basic-multiple').select2();
     </script>
  <script>
      $(document).ready(function() {

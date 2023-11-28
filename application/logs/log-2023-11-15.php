@@ -2771,3 +2771,16 @@ DEBUG - 2023-11-15 21:07:13 --> UTF-8 Support Enabled
 DEBUG - 2023-11-15 21:07:13 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2023-11-15 21:07:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2023-11-15 21:07:13 --> Total execution time: 0.2504
+ERROR - 2023-11-15 21:16:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-15 21:16:32 --> UTF-8 Support Enabled
+DEBUG - 2023-11-15 21:16:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-15 21:16:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2023-11-15 21:16:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-15 21:16:32 --> UTF-8 Support Enabled
+DEBUG - 2023-11-15 21:16:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-15 21:16:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2023-11-15 21:16:35 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2023-11-15 21:16:35 --> UTF-8 Support Enabled
+DEBUG - 2023-11-15 21:16:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2023-11-15 21:16:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2023-11-15 21:16:36 --> Total execution time: 0.4398
