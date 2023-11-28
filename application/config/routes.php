@@ -247,6 +247,32 @@ $route['admin/edit-category/(:any)'] = 'Admin/Category/editCategory/$1';
 $route['admin/delete-category'] = 'Admin/Category/deleteCategory';
 
 
+
+
+$route['admin/sub-category'] = 'Admin/SubCategory/index';
+$route['admin/add-sub-category'] = 'Admin/SubCategory/add';
+$route['admin/save-sub-category'] = 'Admin/SubCategory/saveSubCategory';
+$route['admin/update-sub-category'] = 'Admin/SubCategory/updateSubCategory';
+$route['admin/edit-sub-category/(:any)'] = 'Admin/SubCategory/editSubCategory/$1';
+$route['admin/delete-sub-category'] = 'Admin/SubCategory/deleteSubCategory';
+
+
+$route['admin/special-category'] = 'Admin/SpecialCategory/index';
+$route['admin/add-special-category'] = 'Admin/SpecialCategory/add';
+$route['admin/save-special-category'] = 'Admin/SpecialCategory/saveSpecialCategory';
+$route['admin/update-special-category'] = 'Admin/SpecialCategory/updateSpecialCategory';
+$route['admin/edit-special-category/(:any)'] = 'Admin/SpecialCategory/editSpecialCategory/$1';
+$route['admin/delete-special-category'] = 'Admin/SpecialCategory/deleteSpecialCategory';
+
+
+$route['admin/sub-special-category'] = 'Admin/SubSpecialCategory/index';
+$route['admin/add-sub-special-category'] = 'Admin/SubSpecialCategory/add';
+$route['admin/save-sub-special-category'] = 'Admin/SubSpecialCategory/saveSubSpecialCategory';
+$route['admin/update-sub-special-category'] = 'Admin/SubSpecialCategory/updateSubSpecialCategory';
+$route['admin/edit-sub-special-category/(:any)'] = 'Admin/SubSpecialCategory/editSubSpecialCategory/$1';
+$route['admin/delete-sub-special-category'] = 'Admin/SubSpecialCategory/deleteSubSpecialCategory';
+
+
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';
 $route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
 $route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';

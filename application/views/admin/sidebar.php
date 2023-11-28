@@ -130,7 +130,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/special-sub-category'); ?>" data-key="t-calendar">
+                                <a class="nav-link"  href="<?= base_url('admin/sub-special-category'); ?>" data-key="t-calendar">
                                     Special Sub Category
                                 </a>
                             </li>
