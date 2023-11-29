@@ -273,6 +273,34 @@ $route['admin/edit-sub-special-category/(:any)'] = 'Admin/SubSpecialCategory/edi
 $route['admin/delete-sub-special-category'] = 'Admin/SubSpecialCategory/deleteSubSpecialCategory';
 
 
+
+
+$route['admin/clinical-details'] = 'Admin/ClinicalDetails/index';
+$route['admin/add-clinical-details'] = 'Admin/ClinicalDetails/add';
+$route['admin/save-clinical-details'] = 'Admin/ClinicalDetails/saveClinicalDetails';
+$route['admin/update-clinical-details'] = 'Admin/ClinicalDetails/updateClinicalDetails';
+$route['admin/edit-clinical-details/(:any)'] = 'Admin/ClinicalDetails/editClinicalDetails/$1';
+$route['admin/delete-clinical-details'] = 'Admin/ClinicalDetails/deleteClinicalDetails';
+
+
+$route['admin/facilities'] = 'Admin/Facilities/index';
+$route['admin/add-facilities'] = 'Admin/Facilities/add';
+$route['admin/save-facilities'] = 'Admin/Facilities/saveFacilities';
+$route['admin/update-facilities'] = 'Admin/Facilities/updateFacilities';
+$route['admin/edit-facilities/(:any)'] = 'Admin/Facilities/editFacilities/$1';
+$route['admin/delete-facilities'] = 'Admin/Facilities/deleteFacilities';
+
+
+
+
+$route['admin/counselling-plan'] = 'Admin/CounsellingPlan/index';
+$route['admin/add-counselling-plan'] = 'Admin/CounsellingPlan/add';
+$route['admin/save-counselling-plan'] = 'Admin/CounsellingPlan/saveCounsellingPlan';
+$route['admin/update-counselling-plan'] = 'Admin/CounsellingPlan/updateCounsellingPlan';
+$route['admin/edit-counselling-plan/(:any)/(:any)'] = 'Admin/CounsellingPlan/editCounsellingPlan/$1/$2';
+$route['admin/delete-counselling-plan'] = 'Admin/CounsellingPlan/deleteCounsellingPlan';
+
+
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';
 $route['admin/add-college-files'] = 'Admin/CollegeFiles/add';
 $route['admin/save-college-files'] = 'Admin/CollegeFiles/saveCollegeFiles';

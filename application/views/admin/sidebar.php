@@ -138,10 +138,34 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarHospital" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHospital">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Hospital Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarHospital">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/clinical-details'); ?>" data-key="t-calendar">
+                                    Clinical Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/facilities'); ?>" data-key="t-calendar">
+                                    Facilities
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/counselling-plan'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Counselling Plan Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
-
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
