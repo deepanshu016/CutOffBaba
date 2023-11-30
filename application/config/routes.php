@@ -29,6 +29,8 @@ $route['admin/save-country'] = 'Admin/Country/saveCountry';
 $route['admin/update-country'] = 'Admin/Country/updateCountry';
 $route['admin/edit-country/(:any)'] = 'Admin/Country/editCountry/$1';
 $route['admin/delete-country'] = 'Admin/Country/deleteCountry';
+$route['admin/import-country'] = 'Admin/Country/importCountry';
+$route['admin/import-country-by-excel'] = 'Admin/Country/importCountryByExcel';
 
 
 $route['admin/state'] = 'Admin/State/index';
@@ -299,6 +301,18 @@ $route['admin/save-counselling-plan'] = 'Admin/CounsellingPlan/saveCounsellingPl
 $route['admin/update-counselling-plan'] = 'Admin/CounsellingPlan/updateCounsellingPlan';
 $route['admin/edit-counselling-plan/(:any)/(:any)'] = 'Admin/CounsellingPlan/editCounsellingPlan/$1/$2';
 $route['admin/delete-counselling-plan'] = 'Admin/CounsellingPlan/deleteCounsellingPlan';
+
+
+
+
+$route['admin/news'] = 'Admin/News/index';
+$route['admin/add-news'] = 'Admin/News/add';
+$route['admin/save-news'] = 'Admin/News/saveNews';
+$route['admin/update-news'] = 'Admin/News/updateNews';
+$route['admin/edit-news/(:any)'] = 'Admin/News/editNews/$1';
+$route['admin/delete-news'] = 'Admin/News/deleteNews';
+$route['admin/import-news'] = 'Admin/News/importNews';
+$route['admin/import-news-by-excel'] = 'Admin/News/importNewsByExcel';
 
 
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';

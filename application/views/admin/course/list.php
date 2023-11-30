@@ -38,9 +38,10 @@
                           <table class="table align-middle table-nowrap" id="customerTable">
                              <thead class="table-light">
                                 <tr>
-                                   <th class="sort" data-sort="customer_name">S.No.</th>
+                                    <th class="sort" data-sort="s_no">S.No.</th>
+                                    <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Course</th>
-                                   <th class="sort" data-sort="action">Action</th>
+                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
@@ -49,6 +50,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $course['id']; ?></td>
                                         <td><?= $course['course']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

@@ -102,6 +102,22 @@ class MY_Controller extends CI_Controller {
             return true;
         }
     }
+
+    public function csv_formatter($excelData){
+        $formattedData = array();
+        $header = $excelData[0];
+
+        for ($i = 1; $i < count($excelData); $i++) {
+            $row = array();
+            for ($j = 0; $j < count($header); $j++) {
+                if(isset($header[$j])){
+                    $row[$header[$j]] = $excelData[$i][$j];
+                }
+            }
+            $formattedData[] = $row;
+        }
+        return $formattedData;
+    }
 } // end of class
 
 ?>

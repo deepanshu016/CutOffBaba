@@ -29,11 +29,14 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-country'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add Country</a>
-                                 <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> State</a>
-                                 <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> District</a>
-                                 <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i>Sub District</a>
-                             </div>
+                                  <a href="<?= base_url('admin/add-country'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add Country</a>
+                                  <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> State</a>
+                                  <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> District</a>
+                                  <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i>Sub District</a>
+                              </div>
+                              <div>
+                                  <a href="<?= base_url('admin/import-country'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                              </div>
                           </div>
                        </div>
 

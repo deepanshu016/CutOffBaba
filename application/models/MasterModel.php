@@ -13,7 +13,9 @@ class MasterModel extends CI_Model {
 			return (0);
 		}
 	} // insert end
-
+	function insertBulk($table='',$data){
+		return $this->db->insert_batch($table, $data);
+	}
 	function singleRecord($table = '', $condition){
 		return $this->db->get_where($table,$condition)->row_array();
 	}
