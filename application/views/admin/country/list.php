@@ -45,6 +45,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                    <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Country Code</th>
                                    <th class="sort" data-sort="email">Country Name</th>
                                    <th class="sort" data-sort="action">Action</th>
@@ -56,6 +57,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $country['id']; ?></td>
                                         <td><?= $country['countryCode']; ?></td>
                                         <td><?= $country['name']; ?></td>
                                         <td>

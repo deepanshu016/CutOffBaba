@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-exams'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
@@ -39,17 +40,36 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Exam</th>
+                                    <th class="sort" data-sort="exam_full_name">Exam Full Name</th>
+                                    <th class="sort" data-sort="exam_short_name">Exam Short Name</th>
+                                    <th class="sort" data-sort="degree_type">Degree Type</th>
+                                    <th class="sort" data-sort="eligibility">Eligibility</th>
+                                    <th class="sort" data-sort="exam_duration">Exam Duration</th>
+                                    <th class="sort" data-sort="maximum_marks">Maximum Marks</th>
+                                    <th class="sort" data-sort="passing_marks">Passing Marks</th>
+                                    <th class="sort" data-sort="qualifying_marks">Qualifying Marks</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
                              <tbody class="list form-check-all">
                                 <?php if(!empty($examList)) {
                                       foreach($examList as $key=>$exam){
-                                ?>
+                                          $degreeData = $this->db->get_where('tbl_degree_type',array('id'=>$exam['degree_type']))->row_array();
+                              ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $exam['id']; ?></td>
                                         <td><?= $exam['exam']; ?></td>
+                                        <td><?= $exam['exam_full_name']; ?></td>
+                                        <td><?= $exam['exam_short_name']; ?></td>
+                                        <td><?= @$degreeData['degreetype']; ?></td>
+                                        <td><?= $exam['eligibility']; ?></td>
+                                        <td><?= $exam['exam_duration']; ?></td>
+                                        <td><?= $exam['maximum_marks']; ?></td>
+                                        <td><?= $exam['passing_marks']; ?></td>
+                                        <td><?= $exam['qualifying_marks']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
                                               <a href="<?= base_url('admin/edit-exams'.'/'.$exam['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>

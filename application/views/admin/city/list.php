@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
@@ -39,6 +40,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                    <th class="sort" data-sort="email">State</th>
                                     <th class="sort" data-sort="email">District</th>
                                    <th class="sort" data-sort="action">Action</th>
@@ -51,6 +53,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $city['id']; ?></td>
                                         <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
                                         <td><?= $city['city']; ?></td>
                                         <td>

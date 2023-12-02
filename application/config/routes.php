@@ -39,6 +39,8 @@ $route['admin/save-state'] = 'Admin/State/saveState';
 $route['admin/update-state'] = 'Admin/State/updateState';
 $route['admin/edit-state/(:any)'] = 'Admin/State/editState/$1';
 $route['admin/delete-state'] = 'Admin/State/deleteState';
+$route['admin/import-state'] = 'Admin/State/importState';
+$route['admin/import-state-by-excel'] = 'Admin/State/importStateByExcel';
 
 $route['admin/approval'] = 'Admin/Approval/index';
 $route['admin/add-approval'] = 'Admin/Approval/add';
@@ -46,6 +48,8 @@ $route['admin/save-approval'] = 'Admin/Approval/saveApproval';
 $route['admin/update-approval'] = 'Admin/Approval/updateApproval';
 $route['admin/edit-approval/(:any)'] = 'Admin/Approval/editApproval/$1';
 $route['admin/delete-approval'] = 'Admin/Approval/deleteApproval';
+$route['admin/import-approval'] = 'Admin/Approval/importApproval';
+$route['admin/import-approval-by-excel'] = 'Admin/Approval/importApprovalByExcel';
 
 $route['admin/recognition'] = 'Admin/Recognition/index';
 $route['admin/add-recognition'] = 'Admin/Recognition/add';
@@ -53,6 +57,8 @@ $route['admin/save-recognition'] = 'Admin/Recognition/saveRecognition';
 $route['admin/update-recognition'] = 'Admin/Recognition/updateRecognition';
 $route['admin/edit-recognition/(:any)'] = 'Admin/Recognition/editRecognition/$1';
 $route['admin/delete-recognition'] = 'Admin/Recognition/deleteRecognition';
+$route['admin/import-recognition'] = 'Admin/Recognition/importRecognition';
+$route['admin/import-recognition-by-excel'] = 'Admin/Recognition/importRecognitionByExcel';
 
 
 
@@ -62,6 +68,8 @@ $route['admin/save-gender'] = 'Admin/Gender/saveGender';
 $route['admin/update-gender'] = 'Admin/Gender/updateGender';
 $route['admin/edit-gender/(:any)'] = 'Admin/Gender/editGender/$1';
 $route['admin/delete-gender'] = 'Admin/Gender/deleteGender';
+$route['admin/import-gender'] = 'Admin/Gender/importGender';
+$route['admin/import-gender-by-excel'] = 'Admin/Gender/importGenderByExcel';
 
 $route['admin/stream'] = 'Admin/Stream/index';
 $route['admin/add-stream'] = 'Admin/Stream/add';
@@ -69,6 +77,8 @@ $route['admin/save-stream'] = 'Admin/Stream/saveStream';
 $route['admin/update-stream'] = 'Admin/Stream/updateStream';
 $route['admin/edit-stream/(:any)'] = 'Admin/Stream/editStream/$1';
 $route['admin/delete-stream'] = 'Admin/Stream/deleteStream';
+$route['admin/import-stream'] = 'Admin/Stream/importStream';
+$route['admin/import-stream-by-excel'] = 'Admin/Stream/importStreamByExcel';
 
 
 $route['admin/degreetype'] = 'Admin/DegreeType/index';
@@ -77,6 +87,8 @@ $route['admin/save-degreetype'] = 'Admin/DegreeType/saveDegreeType';
 $route['admin/update-degreetype'] = 'Admin/DegreeType/updateDegreeType';
 $route['admin/edit-degreetype/(:any)'] = 'Admin/DegreeType/editDegreeType/$1';
 $route['admin/delete-degreetype'] = 'Admin/DegreeType/deleteDegreeType';
+$route['admin/import-degreetype'] = 'Admin/DegreeType/importDegreeType';
+$route['admin/import-degreetype-by-excel'] = 'Admin/DegreeType/importDegreeTypeByExcel';
 
 
 $route['admin/nature'] = 'Admin/Nature/index';
@@ -85,6 +97,8 @@ $route['admin/save-nature'] = 'Admin/Nature/saveNature';
 $route['admin/update-nature'] = 'Admin/Nature/updateNature';
 $route['admin/edit-nature/(:any)'] = 'Admin/Nature/editNature/$1';
 $route['admin/delete-nature'] = 'Admin/Nature/deleteNature';
+$route['admin/import-nature'] = 'Admin/Nature/importNature';
+$route['admin/import-nature-by-excel'] = 'Admin/Nature/importNatureByExcel';
 
 
 $route['admin/course'] = 'Admin/Course/index';
@@ -107,7 +121,8 @@ $route['admin/save-exams'] = 'Admin/Exams/saveExams';
 $route['admin/update-exams'] = 'Admin/Exams/updateExams';
 $route['admin/edit-exams/(:any)'] = 'Admin/Exams/editExams/$1';
 $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
-
+$route['admin/import-exams'] = 'Admin/Exams/importExams';
+$route['admin/import-exams-by-excel'] = 'Admin/Exams/importExamsByExcel';
 
 $route['admin/district'] = 'Admin/City/index';
 $route['admin/add-district'] = 'Admin/City/add';
@@ -117,6 +132,11 @@ $route['admin/edit-district/(:any)'] = 'Admin/City/editCity/$1';
 $route['admin/delete-district'] = 'Admin/City/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
 $route['admin/get-city'] = 'Admin/Common/getCityByState';
+$route['admin/import-district'] = 'Admin/City/importCity';
+$route['admin/import-district-by-excel'] = 'Admin/City/importCityByExcel';
+
+
+
 
 $route['admin/ownership'] = 'Admin/Ownership/index';
 $route['admin/add-ownership'] = 'Admin/Ownership/add';
@@ -124,6 +144,8 @@ $route['admin/save-ownership'] = 'Admin/Ownership/saveOwnership';
 $route['admin/update-ownership'] = 'Admin/Ownership/updateOwnership';
 $route['admin/edit-ownership/(:any)/(:any)'] = 'Admin/Ownership/editOwnership/$1/$2';
 $route['admin/delete-ownership'] = 'Admin/Ownership/deleteOwnership';
+$route['admin/import-ownership'] = 'Admin/Ownership/importOwnership';
+$route['admin/import-ownership-by-excel'] = 'Admin/Ownership/importOwnershipByExcel';
 
 // 06-11-2023
 $route['admin/gallery'] = 'Admin/Gallery/index';
@@ -164,6 +186,8 @@ $route['admin/save-sub-district'] = 'Admin/SubDistrict/saveSubDistrict';
 $route['admin/update-sub-district'] = 'Admin/SubDistrict/updateSubDistrict';
 $route['admin/edit-sub-district/(:any)'] = 'Admin/SubDistrict/editSubDistrict/$1';
 $route['admin/delete-sub-district'] = 'Admin/SubDistrict/deleteSubDistrict';
+$route['admin/import-sub-district'] = 'Admin/SubDistrict/importSubDistrict';
+$route['admin/import-sub-district-by-excel'] = 'Admin/SubDistrict/importSubDistrictByExcel';
 
 
 

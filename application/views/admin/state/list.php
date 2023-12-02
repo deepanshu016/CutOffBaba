@@ -30,6 +30,8 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-state'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+
                              </div>
                           </div>
                        </div>
@@ -39,6 +41,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Country</th>
                                    <th class="sort" data-sort="email">State</th>
                                    <th class="sort" data-sort="action">Action</th>
@@ -51,6 +54,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $state['id'] ?></td>
                                         <td><?= ($countryData) ? $countryData['name'] : ''; ?></td>
                                         <td><?= $state['name']; ?></td>
                                         <td>

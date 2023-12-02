@@ -111,7 +111,7 @@ class MY_Controller extends CI_Controller {
             $row = array();
             for ($j = 0; $j < count($header); $j++) {
                 if(isset($header[$j])){
-                    $row[$header[$j]] = $excelData[$i][$j];
+                    $row[trim($header[$j])] = $excelData[$i][$j];
                 }
             }
             $formattedData[] = $row;
