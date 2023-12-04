@@ -24,22 +24,18 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleCountry)) { ?>
                       <h4 class="card-title mb-0">Add Country</h4>
                     <?php } else{  ?>
                       <h4 class="card-title mb-0">Edit Country</h4>
                     <?php } ?>
+                    <a href="<?= base_url('admin/country'); ?>" class="btn btn-success add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> List Country</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
                        <div class="row g-4 mb-3">
-                          <div class="col-sm-auto">
-                             <div>
-                                <a href="<?= base_url('admin/country'); ?>" class="btn btn-success add-btn" > List</a>
-                             </div>
-                          </div>
                           <?php if(empty($singleCountry)) { ?>
                             <form action="<?= base_url('admin/save-country') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>

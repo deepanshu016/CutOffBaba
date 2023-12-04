@@ -3,7 +3,10 @@
 class MasterModel extends CI_Model {
 
 	/* INSERT ANY RECORD IN TABLE */
-
+	function insert_batch($table = '', $data = []) {
+		return  $this->db->insert_batch($table, $data);
+//		debugger($this->db->queries);
+	}
 	function insert($table = '', $data = []) {
 		
 		if (!empty($table) && count($data) > 0) {
@@ -43,6 +46,36 @@ class MasterModel extends CI_Model {
 	function deleteRecord($table = '', $condition) {
 		$q = $this->db->where($condition)->delete($table);
 		return ($this->db->affected_rows());
+	}
+
+	function getProceduralData(){
+		$query = $this->db->query("CALL GetCombinedData()");
+		return $query->result_array();
+	}
+
+	function getProceduralDataWithCondition($id,$file_types) {
+		$query = "CALL GetMediaData($id,$file_types)";
+		$result = $this->db->query($query);
+		if ($query) {
+			$data = $result->result_array();
+			return $data;
+		}
+		return NULL;
+	}
+
+
+    function getFilteredDataByIds($table_name, $column_name,$ids){
+		$query = $this->db->query("CALL FilterByIDs(?, ?, ?)", array($table_name, $column_name, $ids));
+		return $query->result_array();
+    }
+
+
+	function deleteDataByIds($table_name, $column_name,$ids){
+		$this->db->query("CALL DeleteByIDs(?, ?, ?)", array($table_name, $column_name, $ids));
+		while ($this->db->more_results()) {
+			$this->db->next_result();
+		}
+		return true;
 	}
 }
 

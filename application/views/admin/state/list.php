@@ -20,8 +20,16 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <h4 class="card-title mb-0">State</h4>
+                    <div class="col-sm-auto">
+                       <div>
+                          <a href="<?= base_url('admin/add-state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add State</a>
+                           <a href="<?= base_url('admin/country'); ?>" class="btn btn-primary add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> List Country</a>
+                           <a href="<?= base_url('admin/district'); ?>" class="btn btn-primary add-btn" > <i class="ri-list-unordered align-bottom me-1"></i> List District</a>
+                           <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> Sub District</a>
+                       </div>
+                     </div>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">

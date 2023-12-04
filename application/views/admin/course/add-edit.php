@@ -49,10 +49,170 @@
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Course</label>
-                                              <input class="form-control" type="text" name="course"  placeholder="Course" value="<?= (!empty($singleCourse)) ? $singleCourse['course'] : ''; ?>">
+                                              <label for="basiInput" class="form-label">Course Name</label>
+                                              <input class="form-control" type="text" name="course"  placeholder="Course Name" value="<?= (!empty($singleCourse)) ? $singleCourse['course'] : ''; ?>">
                                               <input type="hidden" class="form-control" name="course_id" value="<?= (!empty($singleCourse)) ? $singleCourse['id'] : ''; ?>">
                                               <span class="text-danger" id="course"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Full Name</label>
+                                              <input class="form-control" type="text" name="course_full_name"  placeholder="Course Full Name" value="<?= (!empty($singleCourse)) ? $singleCourse['course_full_name'] : ''; ?>">
+                                              <span class="text-danger" id="course_full_name"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Short Name</label>
+                                              <input class="form-control" type="text" name="course_short_name"  placeholder="Course Short Name" value="<?= (!empty($singleCourse)) ? $singleCourse['course_short_name'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Icon</label>
+                                              <input class="form-control" type="file" name="course_icon"  accept="image/*">
+                                              <?php if(!empty($singleCourse)) { ?>
+                                                  <img  src="<?= base_url('assets/uploads/course/').$singleCourse['course_icon']; ?>" style="height:100px;width: 100px;">
+                                                  <input type="hidden" class="form-control" name="old_media" value="<?= (!empty($singleCourse)) ? $singleCourse['course_icon'] : ''; ?>">
+                                              <?php } ?>
+                                              <span class="text-danger" id="course_icon"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Stream</label>
+                                              <select class="form-control" name="stream">
+                                                  <option value="">Select</option>
+                                                  <?php
+                                                  $streamList = get_master_data('tbl_stream',[]);
+                                                  if(!empty($streamList)){
+                                                      foreach($streamList as $stream){ ?>
+                                                          <option value="<?= $stream['id']; ?>" <?= (!empty($singleCourse) && $stream['id'] == $singleCourse['stream']) ? 'selected' : ''; ?>><?= $stream['stream']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="stream"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Degree Type</label>
+                                              <select class="form-control" name="degree_type">
+                                                  <option value="">Select</option>
+                                                  <?php
+                                                  $degreeTypeList = get_master_data('tbl_degree_type',[]);
+                                                  if(!empty($degreeTypeList)){
+                                                      foreach($degreeTypeList as $degree){ ?>
+                                                          <option value="<?= $degree['id']; ?>" <?= (!empty($singleCourse) && $degree['id'] == $singleCourse['degree_type']) ? 'selected' : ''; ?>><?= $degree['degreetype']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="degree_type"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Duration</label>
+                                              <input class="form-control" type="text" name="course_duration"  placeholder="Course Duration" value="<?= (!empty($singleCourse)) ? $singleCourse['course_duration'] : ''; ?>">
+                                              <span class="text-danger" id="course_duration"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Entrance Exam</label>
+                                              <select class="form-control js-example-basic-multiple" name="exam[]" multiple>
+                                                  <option value="">Select</option>
+                                                  <?php
+                                                  $examList = get_master_data('tbl_exam',[]);
+                                                  $selectedExam = [];
+                                                  if(!empty($singleCourse)){
+                                                      $selectedExam = explode("|",$singleCourse['exam']);
+                                                  };
+                                                  if(!empty($examList)){
+                                                      foreach($examList as $exam){ ?>
+                                                          <option value="<?= $exam['id']; ?>" <?= (!empty($singleCourse) && in_array($exam['id'],$selectedExam)) ? 'selected' : ''; ?>><?= $exam['exam']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="exam"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Eligibility</label>
+                                              <textarea class="form-control" name="course_eligibility" id="course_eligibility"><?= (!empty($singleCourse)) ? $singleCourse['course_eligibility'] : '';?></textarea>
+                                              <span class="text-danger" id="course_eligibility"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Job Opportunity</label>
+                                              <textarea class="form-control" name="course_opportunity" id="course_opportunity"><?= (!empty($singleCourse)) ? $singleCourse['course_opportunity'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Expected Salary</label>
+                                              <textarea class="form-control" name="expected_salary" id="expected_salary"><?= (!empty($singleCourse)) ? $singleCourse['expected_salary'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Fees (Approx)</label>
+                                              <textarea class="form-control" name="course_fees" id="course_fees"><?= (!empty($singleCourse)) ? $singleCourse['course_fees'] : '';?></textarea>
+                                          </div>
+                                      </div>
+
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Colleges</label>
+                                              <select class="form-control js-example-basic-multiple" name="college[]" multiple>
+                                                  <option value="">Select</option>
+                                                  <?php
+                                                  $selectedCollege = [];
+                                                  if(!empty($singleCourse)){
+                                                      $selectedCollege = explode("|",$singleCourse['college']);
+                                                  };
+                                                  $collegeList = get_master_data('tbl_college',[]);
+                                                  if(!empty($collegeList)){
+                                                      foreach($collegeList as $college){ ?>
+                                                          <option value="<?= $college['id']; ?>" <?= (!empty($singleCourse) && in_array($college['id'],$selectedCollege)) ? 'selected' : ''; ?>><?= $college['full_name']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="college"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Counselling Authority</label>
+                                              <input class="form-control" type="text" name="counselling_authority"  placeholder="Counselling Authority" value="<?= (!empty($singleCourse)) ? $singleCourse['counselling_authority'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Branch Type</label>
+                                              <select class="form-control" name="branch_types">
+                                                  <option value="">Select</option>
+                                                  <?php
+                                                  $branchType = branch_type_data();
+                                                  if(!empty($branchType)){
+                                                      foreach($branchType as $branch){ ?>
+                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleCourse) && $branch['id'] == $singleCourse['branch_type']) ? 'selected' : ''; ?>><?= $branch['name']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="branch_types"></span>
                                           </div>
                                       </div>
                                   </div>

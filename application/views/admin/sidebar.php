@@ -46,6 +46,18 @@
                                 <a href="<?= base_url('admin/stream'); ?>" class="nav-link" data-key="t-calendar">Streams </a>
                             </li>
                             <li class="nav-item">
+                                <a href="<?= base_url('admin/opens'); ?>" class="nav-link" data-key="t-calendar">Opens </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/visibility'); ?>" class="nav-link" data-key="t-calendar">Visibility </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/clinicdetails'); ?>" class="nav-link" data-key="t-calendar">Clinic Details </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/clinical-facility'); ?>" class="nav-link" data-key="t-calendar">Clinical Facility </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
                             </li>
                             <li class="nav-item">
@@ -138,22 +150,94 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarHospital" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHospital">
-                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Hospital Master</span>
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarHospital">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/clinical-details'); ?>" data-key="t-calendar">
-                                    Clinical Details
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/facilities'); ?>" data-key="t-calendar">
-                                    Facilities
-                                </a>
-                            </li>
-                        </ul>
+
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Central Cutoff Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">State Cutoff Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Hospital Master</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Counselling Tools Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">News Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">College Predictor Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Paid Counselling</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Advertisement Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Top College Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Testimonial  Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Enquiry Form Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/banner'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Student Profile Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarApps">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarApps">
+                        <a class="nav-link menu-link" href="#sidebarHospital" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHospital">
+                            <i class="ri-apps-2-line"></i> <span data-key="t-apps">Hospital Master</span>
+                        </a>
+                        <div class="collapse menu-dropdown" id="sidebarHospital">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="<?= base_url('admin/clinical-details'); ?>" data-key="t-calendar">
+                                        Clinical Details
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="<?= base_url('admin/facilities'); ?>" data-key="t-calendar">
+                                        Facilities
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </li>
                 <li class="nav-item">

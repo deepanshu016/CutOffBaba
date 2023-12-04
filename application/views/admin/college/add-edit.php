@@ -131,7 +131,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
-                                              <select class="form-control dynamic-data" name="country" data-segment="get-state" data-wrapper=".state-wrapper">
+                                              <select class="form-control dynamic-data" name="country" data-segment="admin/get-state" data-wrapper=".state-wrapper">
                                                   <option value="">Select Country</option>
                                                   <?php
                                                   $countryList = get_master_data('tbl_country',[]);
@@ -148,7 +148,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
-                                              <select class="form-control state-wrapper dynamic-data" name="state" data-segment="get-city" data-wrapper=".city-wrapper">
+                                              <select class="form-control state-wrapper dynamic-data" name="state" data-segment="admin/get-city" data-wrapper=".city-wrapper">
                                                       <option value="">Select State</option>
                                                       <?php
                                                       if(!empty($singleCollege)){
@@ -181,30 +181,6 @@
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Affiliated By</label>
-                                              <select class="form-control" name="affiliated_by">
-                                                  <option value="">Select</option>
-                                                  <?php
-                                                  $approvalList = get_master_data('tbl_approval',[]);
-                                                  if(!empty($approvalList)){
-                                                      foreach($approvalList as $approval){ ?>
-                                                          <option value="<?= $approval['id']; ?>" <?= (!empty($singleCollege) && $approval['id'] == $singleCollege['affiliated_by']) ? 'selected' : ''; ?>><?= $approval['approval']; ?></option>
-                                                      <?php } } ?>
-                                              </select>
-                                              <span class="text-danger" id="affiliated_by"></span>
-                                          </div>
-                                      </div>
-                                      <div class="col-lg-6">
-                                          <div class="form-group">
-                                              <label for="basiInput" class="form-label">University Name</label>
-                                              <input type="text" class="form-control" placeholder="University" name="university" value="<?= (!empty($singleCollege)) ? $singleCollege['university_name'] : ''; ?>">
-                                              <span class="text-danger" id="university"></span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
-                                          <div class="form-group">
                                               <label for="basiInput" class="form-label">Approved By</label>
                                               <select class="form-control" name="approved_by">
                                                   <option value="">Select</option>
@@ -220,6 +196,16 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
+                                              <label for="basiInput" class="form-label">University Name</label>
+                                              <input type="text" class="form-control" placeholder="University" name="university" value="<?= (!empty($singleCollege)) ? $singleCollege['university_name'] : ''; ?>">
+                                              <span class="text-danger" id="university"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
                                               <label for="basiInput" class="form-label">College Logo</label>
                                               <input type="file" class="form-control" placeholder="College Logo" accept="image/*" name="college_logo">
                                               <?php if(!empty($singleCollege['college_logo'])) {  ?>
@@ -228,8 +214,6 @@
                                               <span class="text-danger" id="college_logo"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Banner</label>
@@ -240,6 +224,11 @@
                                               <span class="text-danger" id="college_banner"></span>
                                           </div>
                                       </div>
+                                  </div>
+                                  <div class="row">
+
+                                  </div>
+                                  <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Prospectus File</label>
@@ -250,8 +239,6 @@
                                               <span class="text-danger" id="prospectus_file"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Ownership</label>
@@ -262,11 +249,14 @@
                                                   if(!empty($ownerShip)){
                                                       foreach($ownerShip as $owner){ ?>
                                                           <option value="<?= $owner['id']; ?>" <?= (!empty($singleCollege) && $owner['id'] == $singleCollege['ownership']) ? 'selected' : ''; ?>><?= $owner['title']; ?></option>
-                                                      <?php } } ?>
+                                                  <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="ownership"></span>
                                           </div>
                                       </div>
+
+                                  </div>
+                                  <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Website</label>
@@ -274,8 +264,6 @@
                                               <span class="text-danger" id="website"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Email</label>
@@ -283,22 +271,23 @@
                                               <span class="text-danger" id="email"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Contact Number 1</label>
                                               <input type="text" class="form-control" placeholder="Contact Number 1" name="contact_one" value="<?= (!empty($singleCollege)) ? $singleCollege['contact_one'] : ''; ?>">
                                               <span class="text-danger" id="contact_one"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Contact Number 2</label>
                                               <input type="text" class="form-control" placeholder="Contact Number 2" name="contact_two" value="<?= (!empty($singleCollege)) ? $singleCollege['contact_two'] : ''; ?>">
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Contact Number 3</label>
                                               <input type="text" class="form-control" placeholder="Contact Number 3" name="contact_three" value="<?= (!empty($singleCollege)) ? $singleCollege['contact_three'] : ''; ?>">
@@ -357,11 +346,5 @@
     </div>
     <!-- container-fluid -->
 </div>
-<script>
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-    });
-    $('.keywords').tagify();
-    $('.tags').tagify();
-</script>
+
 <?php $this->load->view('admin/footer'); ?>

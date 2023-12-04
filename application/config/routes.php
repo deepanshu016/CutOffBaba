@@ -124,12 +124,12 @@ $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
 $route['admin/import-exams'] = 'Admin/Exams/importExams';
 $route['admin/import-exams-by-excel'] = 'Admin/Exams/importExamsByExcel';
 
-$route['admin/district'] = 'Admin/City/index';
-$route['admin/add-district'] = 'Admin/City/add';
-$route['admin/save-district'] = 'Admin/City/saveCity';
-$route['admin/update-district'] = 'Admin/City/updateCity';
-$route['admin/edit-district/(:any)'] = 'Admin/City/editCity/$1';
-$route['admin/delete-district'] = 'Admin/City/deleteCity';
+$route['admin/district'] = 'Admin/district/index';
+$route['admin/add-district'] = 'Admin/district/add';
+$route['admin/save-district'] = 'Admin/district/saveCity';
+$route['admin/update-district'] = 'Admin/district/updateCity';
+$route['admin/edit-district/(:any)'] = 'Admin/district/editCity/$1';
+$route['admin/delete-district'] = 'Admin/district/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
 $route['admin/get-city'] = 'Admin/Common/getCityByState';
 $route['admin/import-district'] = 'Admin/City/importCity';
@@ -191,7 +191,6 @@ $route['admin/import-sub-district-by-excel'] = 'Admin/SubDistrict/importSubDistr
 
 
 
-
 $route['admin/opens'] = 'Admin/Opens/index';
 $route['admin/add-opens'] = 'Admin/Opens/add';
 $route['admin/save-opens'] = 'Admin/Opens/saveOpens';
@@ -234,8 +233,6 @@ $route['admin/save-gallery-heads'] = 'Admin/GalleryHeads/saveGalleryHeads';
 $route['admin/update-gallery-heads'] = 'Admin/GalleryHeads/updateGalleryHeads';
 $route['admin/edit-gallery-heads/(:any)'] = 'Admin/GalleryHeads/editGalleryHeads/$1';
 $route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
-
-
 
 $route['admin/service-rules'] = 'Admin/ServiceRules/index';
 $route['admin/add-service-rules'] = 'Admin/ServiceRules/add';
