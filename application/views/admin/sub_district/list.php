@@ -34,11 +34,21 @@
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
+                       <div class="row g-4">
+                          <div class="col-sm-auto">
+                             <div>
+                                <a href="<?= base_url('admin/add-sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-sub-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                             </div>
+                          </div>
+                       </div>
+
                        <div class="table-responsive table-card mt-3 mb-1">
                           <table class="table align-middle table-nowrap" id="customerTable">
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                    <th class="sort" data-sort="email">Country Name</th>
                                    <th class="sort" data-sort="email">State Name</th>
                                     <th class="sort" data-sort="email">Sub District Name</th>
@@ -53,6 +63,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $sub['id']; ?></td>
                                         <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
                                         <td><?= ($countryData) ? $countryData['name'] : ''; ?></td>
                                         <td><?= $sub['sub_district']; ?></td>

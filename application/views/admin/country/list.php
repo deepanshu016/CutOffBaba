@@ -34,13 +34,26 @@
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
-                       
+                       <div class="row g-4">
+                          <div class="col-sm-auto">
+                             <div>
+                                  <a href="<?= base_url('admin/add-country'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add Country</a>
+                                  <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> State</a>
+                                  <a href="<?= base_url('admin/district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> District</a>
+                                  <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i>Sub District</a>
+                              </div>
+                              <div>
+                                  <a href="<?= base_url('admin/import-country'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                              </div>
+                          </div>
+                       </div>
 
                        <div class="table-responsive table-card mt-3 mb-1">
                           <table class="table align-middle table-nowrap" id="customerTable">
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                    <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Country Code</th>
                                    <th class="sort" data-sort="email">Country Name</th>
                                    <th class="sort" data-sort="action">Action</th>
@@ -52,6 +65,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $country['id']; ?></td>
                                         <td><?= $country['countryCode']; ?></td>
                                         <td><?= $country['name']; ?></td>
                                         <td>

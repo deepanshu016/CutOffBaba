@@ -92,8 +92,6 @@
                     </div>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-=======
                     <a class="nav-link menu-link" href="#sidebarFees" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarFees">
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Fees Master</span>
                     </a>
@@ -152,7 +150,6 @@
                     </div>
                 </li>
                 <li class="nav-item">
->>>>>>> d37a68b6537081b263892587ff346ef1ecb1187d
                     <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
@@ -224,15 +221,34 @@
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarApps">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/course-category'); ?>" class="nav-link" data-key="t-calendar"> Course Category </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/courses'); ?>" data-key="t-landing">Courses</a>
-                            </li>
-                        </ul>
+                        <a class="nav-link menu-link" href="#sidebarHospital" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHospital">
+                            <i class="ri-apps-2-line"></i> <span data-key="t-apps">Hospital Master</span>
+                        </a>
+                        <div class="collapse menu-dropdown" id="sidebarHospital">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="<?= base_url('admin/clinical-details'); ?>" data-key="t-calendar">
+                                        Clinical Details
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"  href="<?= base_url('admin/facilities'); ?>" data-key="t-calendar">
+                                        Facilities
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/counselling-plan'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Counselling Plan Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/news'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">News</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/settings'); ?>">
@@ -241,7 +257,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/logout'); ?>">
-                        <i class="ri-lock-3-line"></i> <span data-key="t-landing">Logout</span>
+                        <i class="ri-logout-circle-line"></i> <span data-key="t-landing">Logout</span>
                     </a>
                 </li>
             </ul>

@@ -102,29 +102,21 @@ class MY_Controller extends CI_Controller {
             return true;
         }
     }
-    public function uploadMultipleFiles($fileData,$fileNames_old,$file_type,$data = '' ,$path,$file_for){
-        $targetDir = 'assets/uploads/'.$path;
-        $fileNames = array_filter($fileData['name']);
-        $insertValuesSQL = '';
-        $filesssData = [];
-        if(!empty($fileNames)){
-            foreach($fileData['name'] as $key=>$val){
-                $extensions = explode('/',$fileData["type"][$key]);
-                $fileName = strtoupper($fileNames_old).rand().time().'.'.$extensions[1];
-                $targetFilePath = $targetDir.$fileName;
-                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-                if(move_uploaded_file($fileData["tmp_name"][$key], $targetFilePath)){
-                    // Image db insert sql
-                    $filesssData[$key]['file_from'] = $file_for;
-                    $filesssData[$key]['file_type'] = $file_type;
-                    $filesssData[$key]['file_name'] = $fileName;
-                    $filesssData[$key]['file_data'] = $data;
-                    $filesssData[$key]['status'] = 1;
-                    $filesssData[$key]['created_at'] = date('Y-m-d H:i:s');
+
+    public function csv_formatter($excelData){
+        $formattedData = array();
+        $header = $excelData[0];
+
+        for ($i = 1; $i < count($excelData); $i++) {
+            $row = array();
+            for ($j = 0; $j < count($header); $j++) {
+                if(isset($header[$j])){
+                    $row[trim($header[$j])] = $excelData[$i][$j];
                 }
             }
+            $formattedData[] = $row;
         }
-        return $filesssData;
+        return $formattedData;
     }
 } // end of class
 
