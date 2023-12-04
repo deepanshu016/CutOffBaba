@@ -107,6 +107,11 @@ $route['admin/save-course'] = 'Admin/Course/saveCourse';
 $route['admin/update-course'] = 'Admin/Course/updateCourse';
 $route['admin/edit-course/(:any)'] = 'Admin/Course/editCourse/$1';
 $route['admin/delete-course'] = 'Admin/Course/deleteCourse';
+$route['admin/import-course'] = 'Admin/Course/importCourse';
+$route['admin/import-course-by-excel'] = 'Admin/Course/importCourseByExcel';
+
+
+
 
 $route['admin/branch'] = 'Admin/Branch/index';
 $route['admin/add-branch'] = 'Admin/Branch/add';
@@ -114,6 +119,8 @@ $route['admin/save-branch'] = 'Admin/Branch/saveBranch';
 $route['admin/update-branch'] = 'Admin/Branch/updateBranch';
 $route['admin/edit-branch/(:any)'] = 'Admin/Branch/editBranch/$1';
 $route['admin/delete-branch'] = 'Admin/Branch/deleteBranch';
+$route['admin/import-branch'] = 'Admin/Branch/importBranch';
+$route['admin/import-branch-by-excel'] = 'Admin/Branch/importBranchByExcel';
 
 $route['admin/exams'] = 'Admin/Exams/index';
 $route['admin/add-exams'] = 'Admin/Exams/add';
@@ -197,6 +204,8 @@ $route['admin/save-opens'] = 'Admin/Opens/saveOpens';
 $route['admin/update-opens'] = 'Admin/Opens/updateOpens';
 $route['admin/edit-opens/(:any)'] = 'Admin/Opens/editOpens/$1';
 $route['admin/delete-opens'] = 'Admin/Opens/deleteOpens';
+$route['admin/import-opens'] = 'Admin/Opens/importOpens';
+$route['admin/import-opens-by-excel'] = 'Admin/Opens/importOpensByExcel';
 
 
 
@@ -208,6 +217,8 @@ $route['admin/save-visibility'] = 'Admin/Visibility/saveVisibility';
 $route['admin/update-visibility'] = 'Admin/Visibility/updateVisibility';
 $route['admin/edit-visibility/(:any)'] = 'Admin/Visibility/editVisibility/$1';
 $route['admin/delete-visibility'] = 'Admin/Visibility/deleteVisibility';
+$route['admin/import-visibility'] = 'Admin/Visibility/importVisibility';
+$route['admin/import-visibility-by-excel'] = 'Admin/Visibility/importVisibilityByExcel';
 
 
 $route['admin/clinicdetails'] = 'Admin/ClinicDetails/index';
@@ -216,6 +227,8 @@ $route['admin/save-clinicdetails'] = 'Admin/ClinicDetails/saveClinicDetails';
 $route['admin/update-clinicdetails'] = 'Admin/ClinicDetails/updateClinicDetails';
 $route['admin/edit-clinicdetails/(:any)'] = 'Admin/ClinicDetails/editClinicDetails/$1';
 $route['admin/delete-clinicdetails'] = 'Admin/ClinicDetails/deleteClinicDetails';
+$route['admin/import-clinicdetails'] = 'Admin/ClinicDetails/importClinicDetails';
+$route['admin/import-clinicdetails-by-excel'] = 'Admin/ClinicDetails/importClinicDetailsByExcel';
 
 
 
@@ -225,6 +238,8 @@ $route['admin/save-clinical-facility'] = 'Admin/ClinicFacility/saveClinicFacilit
 $route['admin/update-clinical-facility'] = 'Admin/ClinicFacility/updateClinicFacility';
 $route['admin/edit-clinical-facility/(:any)'] = 'Admin/ClinicFacility/editClinicFacility/$1';
 $route['admin/delete-clinical-facility'] = 'Admin/ClinicFacility/deleteClinicFacility';
+$route['admin/import-clinical-facility'] = 'Admin/ClinicFacility/importClinicFacility';
+$route['admin/import-clinical-facility-by-excel'] = 'Admin/ClinicFacility/importClinicFacilityByExcel';
 
 
 $route['admin/gallery-heads'] = 'Admin/GalleryHeads/index';
@@ -304,6 +319,8 @@ $route['admin/save-clinical-details'] = 'Admin/ClinicalDetails/saveClinicalDetai
 $route['admin/update-clinical-details'] = 'Admin/ClinicalDetails/updateClinicalDetails';
 $route['admin/edit-clinical-details/(:any)'] = 'Admin/ClinicalDetails/editClinicalDetails/$1';
 $route['admin/delete-clinical-details'] = 'Admin/ClinicalDetails/deleteClinicalDetails';
+$route['admin/import-clinical-details'] = 'Admin/ClinicalDetails/importClinicalDetails';
+$route['admin/import-clinical-details-by-excel'] = 'Admin/ClinicalDetails/importClinicalDetailsByExcel';
 
 
 $route['admin/facilities'] = 'Admin/Facilities/index';
@@ -312,6 +329,8 @@ $route['admin/save-facilities'] = 'Admin/Facilities/saveFacilities';
 $route['admin/update-facilities'] = 'Admin/Facilities/updateFacilities';
 $route['admin/edit-facilities/(:any)'] = 'Admin/Facilities/editFacilities/$1';
 $route['admin/delete-facilities'] = 'Admin/Facilities/deleteFacilities';
+$route['admin/import-facilities'] = 'Admin/Facilities/importFacilities';
+$route['admin/import-facilities-by-excel'] = 'Admin/Facilities/importFacilitiesByExcel';
 
 
 

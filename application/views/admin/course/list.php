@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-course'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-course'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>

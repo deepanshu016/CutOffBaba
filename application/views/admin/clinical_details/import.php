@@ -9,7 +9,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active">Import Exams</li>
+                                <li class="breadcrumb-item active">Import Clinical Details</li>
                             </ol>
                         </div>
 
@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title mb-0">Import Exams</h4>
+                            <h4 class="card-title mb-0">Import Clinical Details</h4>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
@@ -29,20 +29,11 @@
                                 <div class="row g-4 mb-3">
                                     <div class="col-sm-auto">
                                         <div>
-                                            <a href="<?= base_url('admin/exams'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/examsImport.xlsx'); ?>" class="btn btn-success add-btn" download="approvalList"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/clinical-details'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
+                                            <a href="<?= base_url('assets/uploads/excels/clinicalDetailsImport.xlsx'); ?>" class="btn btn-success add-btn" download="clinicalDetailsImport"><i class="ri-download-2-line"></i> View Sample</a>
                                         </div>
                                     </div>
-                                    <span class="">Notes:-</span>
-                                    <ul style="color:red;margin-left: 15px;">
-                                        <li>Please fill all details properly in excel file which you need to upload</li>
-                                        <li>Please download sample file to view the required format for importing</li>
-                                        <li>All Date should be in valid format (YYYY-MM-DD) </li>
-                                        <li>Please check data in specific section there is dynamic data required in excel </li>
-                                        <li>Please add course id in  comma separated for fields course_accepting</li>
-                                    </ul>
-
-                                    <form action="<?= base_url('admin/import-exams-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                                    <form action="<?= base_url('admin/import-clinical-details-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                                         <div class="live-preview">
                                             <div class="row">
                                                 <div class="col-lg-12">
