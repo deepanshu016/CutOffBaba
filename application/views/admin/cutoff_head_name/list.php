@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-cutoff-head-name'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-cutoff-head-name'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
@@ -39,6 +40,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="s_no">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                    <th class="sort" data-sort="head_name">Head Name</th>
                                    <th class="sort" data-sort="state">State</th>
                                    <th class="sort" data-sort="course">Course</th>
@@ -55,6 +57,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $head['id']; ?></td>
                                         <td><?= $head['head_name']; ?></td>
                                         <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
                                         <td><?= ($courseData) ? $courseData['course'] : ''; ?></td>

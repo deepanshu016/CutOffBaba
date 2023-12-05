@@ -82,18 +82,10 @@ Class College extends MY_Controller {
     }
     public function saveCollege(){
         $this->form_validation->set_rules('full_name', 'Full name', 'trim|required');
-        //$this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
-        //$this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
-        //$this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[tbl_college.email]');
-        //$this->form_validation->set_rules('university', 'University', 'trim|required');
-        //$this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
-//        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
-//        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
-//        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
         if ($this->form_validation->run()) {
             if(!empty($_FILES['college_logo']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/logo';
@@ -194,23 +186,13 @@ Class College extends MY_Controller {
             return false;
         }
     }
-    //Save Gallery
+    //Save College
     public function updateCollege(){
         $this->form_validation->set_rules('full_name', 'Full name', 'trim|required');
-//        $this->form_validation->set_rules('short_description', 'Short Description', 'trim|required');
-//        $this->form_validation->set_rules('establishment', 'Establishment Date', 'trim|required');
-//        $this->form_validation->set_rules('gender_accepted[]', 'Gender Accepted', 'trim|required');
-//        $this->form_validation->set_rules('course_offered[]', 'Course Offered', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[tbl_college.email]');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
-//        $this->form_validation->set_rules('affiliated_by', 'Affiliated By', 'trim|required');
-//        $this->form_validation->set_rules('university', 'University', 'trim|required');
-//        $this->form_validation->set_rules('approved_by', 'Approval', 'trim|required');
-//        $this->form_validation->set_rules('college_logo', 'College Logo', 'callback_file_check_college_logo');
-//        $this->form_validation->set_rules('college_banner', 'College Banner', 'callback_file_check_college_banner');
-//        $this->form_validation->set_rules('prospectus_file', 'Prospectus File', 'callback_file_check_prospectus_file');
         if ($this->form_validation->run()) {
             if(!empty($_FILES['college_logo']['name'])) {
                 $config['upload_path']  = 'assets/uploads/college/logo';
@@ -316,6 +298,106 @@ Class College extends MY_Controller {
             $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+
+
+    public function file_check_excel_file($str){
+        $allowed_mime_type_arr = array('application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/msexcel', 'application/x-msexcel', 'application/x-ms-excel', 'application/x-excel', 'application/x-dos_ms_excel', 'application/xls', 'application/x-xls', 'application/xlsx', 'application/excel');
+        if(!empty($_FILES['excel_file'])){
+            $mime = get_mime_by_extension($_FILES['excel_file']['name']);
+            if(isset($_FILES['excel_file']['name']) && $_FILES['excel_file']['name']!=""){
+                if(in_array($mime, $allowed_mime_type_arr)){
+                    return true;
+                }else{
+                    $this->form_validation->set_message('file_check_excel_file', 'Please select only xlsx file.');
+                    return false;
+                }
+            }else{
+                $this->form_validation->set_message('file_check_excel_file', 'Please choose a file to upload.');
+                return false;
+            }
+        }else{
+            $this->form_validation->set_message('file_check_excel_file', 'Please choose a file to upload.');
+            return false;
+        }
+    }
+    public function importCollege(){
+        if ($this->is_admin_logged_in() == true) {
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $this->load->view('admin/college/import',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
+
+    // Import CSV in DB
+    public function importCollegeByExcel(){
+        $this->form_validation->set_rules('excel_file', 'Excel File', 'callback_file_check_excel_file');
+        if ($this->form_validation->run()) {
+            if(!empty($_FILES['excel_file']['name'])){
+                $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+                if(isset($_FILES['excel_file']['name']) && in_array($_FILES['excel_file']['type'], $file_mimes)) {
+                    $arr_file = explode('.', $_FILES['excel_file']['name']);
+                    $extension = end($arr_file);
+                    if('xlsx' == $extension){
+                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+                    } else {
+                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+                    }
+                    $spreadsheet = $reader->load($_FILES['excel_file']['tmp_name']);
+                    $excelData = $spreadsheet->getActiveSheet()->toArray();
+                    $sheetData = $this->csv_formatter($excelData);
+                    $excelDatas = [];
+                    if(!empty($sheetData)){
+                        foreach($sheetData as $key=>$sheet){
+                            $excelDatas[$key]['full_name'] = $sheet['full_name'];
+                            $excelDatas[$key]['slug'] = $this->slug($sheet['full_name']);
+                            $excelDatas[$key]['short_description'] = $sheet['short_description'];
+                            $excelDatas[$key]['popular_name_one'] = $sheet['popular_name_one'];
+                            $excelDatas[$key]['popular_name_two'] = $sheet['popular_name_two'];
+                            $excelDatas[$key]['establishment'] = date('Y-m-d',strtotime($sheet['establishment']));
+                            $excelDatas[$key]['gender_accepted'] = ($sheet['gender_accepted']) ? implode('|',explode(',',$sheet['gender_accepted'])) : '';
+                            $excelDatas[$key]['course_offered'] = ($sheet['course_offered']) ? implode('|',explode(',',$sheet['course_offered'])) : '';
+                            $excelDatas[$key]['country'] = $sheet['country'];
+                            $excelDatas[$key]['state'] = $sheet['state'];
+                            $excelDatas[$key]['city'] = $sheet['district'];
+                            $excelDatas[$key]['affiliated_by'] = $sheet['affiliated_by'];
+                            $excelDatas[$key]['university_name'] = $sheet['university_name'];
+                            $excelDatas[$key]['approved_by'] = $sheet['approved_by'];
+                            $excelDatas[$key]['college_logo'] = $sheet['college_logo'];
+                            $excelDatas[$key]['college_banner'] = $sheet['college_banner'];
+                            $excelDatas[$key]['prospectus_file'] = $sheet['prospectus_file'];
+                            $excelDatas[$key]['ownership'] = $sheet['ownership'];
+                            $excelDatas[$key]['website'] = $sheet['website'];
+                            $excelDatas[$key]['email'] = $sheet['email'];
+                            $excelDatas[$key]['contact_one'] = $sheet['contact_one'];
+                            $excelDatas[$key]['contact_two'] = $sheet['contact_two'];
+                            $excelDatas[$key]['contact_three'] = $sheet['contact_three'];
+                            $excelDatas[$key]['nodal_officer_name'] = $sheet['nodal_officer_name'];
+                            $excelDatas[$key]['nodal_officer_no'] = $sheet['nodal_officer_no'];
+                            $excelDatas[$key]['keywords'] = ($sheet['keywords']) ? implode(',',explode(',',$sheet['keywords'])) : '';
+                            $excelDatas[$key]['tags'] = ($sheet['tags']) ? implode(',',explode(',',$sheet['tags'])) : '';
+                            $excelDatas[$key]['added_by'] = $this->session->userdata('admin')['id'];
+                        }
+                    }
+                    $stateId = $this->master->insertBulk('tbl_college',$excelDatas);
+                    $response = array('status' => 'success','message' => 'College data  imported successfully','url'=>base_url('admin/college'));
+                    echo json_encode($response);
+                    return true;
+                }
+            }
+        }else{
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+        }
     }
 }
 

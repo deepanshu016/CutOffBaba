@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-service-rules'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-service-rules'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
@@ -39,6 +40,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Service Bond</th>
                                     <th class="sort" data-sort="email">Seat Indemnity Charges</th>
                                     <th class="sort" data-sort="email">Upgradation Processing Fees</th>
@@ -51,6 +53,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $rule['id']; ?></td>
                                         <td><?= $rule['service_bond']; ?></td>
                                         <td><?= $rule['seat_indentity_charges']; ?></td>
                                         <td><?= $rule['upgradation_processing_fees']; ?></td>

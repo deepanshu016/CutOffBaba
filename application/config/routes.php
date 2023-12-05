@@ -169,6 +169,8 @@ $route['admin/save-college'] = 'Admin/College/saveCollege';
 $route['admin/update-college'] = 'Admin/College/updateCollege';
 $route['admin/edit-college/(:any)/(:any)'] = 'Admin/College/editCollege/$1/$2';
 $route['admin/delete-college'] = 'Admin/College/deleteCollege';
+$route['admin/import-college'] = 'Admin/College/importCollege';
+$route['admin/import-college-by-excel'] = 'Admin/College/importCollegeByExcel';
 
 
 
@@ -178,6 +180,8 @@ $route['admin/save-feeshead'] = 'Admin/FeesHead/saveFeesHead';
 $route['admin/update-feeshead'] = 'Admin/FeesHead/updateFeesHead';
 $route['admin/edit-feeshead/(:any)'] = 'Admin/FeesHead/editFeesHead/$1';
 $route['admin/delete-feeshead'] = 'Admin/FeesHead/deleteFeesHead';
+$route['admin/import-feeshead'] = 'Admin/FeesHead/importFeesHead';
+$route['admin/import-feeshead-by-excel'] = 'Admin/FeesHead/importFeesHeadByExcel';
 
 $route['admin/fees'] = 'Admin/Fees/index';
 $route['admin/add-fees'] = 'Admin/Fees/add';
@@ -248,6 +252,8 @@ $route['admin/save-gallery-heads'] = 'Admin/GalleryHeads/saveGalleryHeads';
 $route['admin/update-gallery-heads'] = 'Admin/GalleryHeads/updateGalleryHeads';
 $route['admin/edit-gallery-heads/(:any)'] = 'Admin/GalleryHeads/editGalleryHeads/$1';
 $route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
+$route['admin/import-gallery-heads'] = 'Admin/GalleryHeads/importGalleryHeads';
+$route['admin/import-gallery-heads-by-excel'] = 'Admin/GalleryHeads/importGalleryHeadsByExcel';
 
 $route['admin/service-rules'] = 'Admin/ServiceRules/index';
 $route['admin/add-service-rules'] = 'Admin/ServiceRules/add';
@@ -255,6 +261,8 @@ $route['admin/save-service-rules'] = 'Admin/ServiceRules/saveServiceRule';
 $route['admin/update-service-rules'] = 'Admin/ServiceRules/updateServiceRule';
 $route['admin/edit-service-rules/(:any)'] = 'Admin/ServiceRules/editServiceRule/$1';
 $route['admin/delete-service-rules'] = 'Admin/ServiceRules/deleteServiceRule';
+$route['admin/import-service-rules'] = 'Admin/ServiceRules/importServiceRules';
+$route['admin/import-service-rules-by-excel'] = 'Admin/ServiceRules/importServiceRulesByExcel';
 
 
 
@@ -264,6 +272,8 @@ $route['admin/save-counselling-level'] = 'Admin/CounsellingLevel/saveCounselling
 $route['admin/update-counselling-level'] = 'Admin/CounsellingLevel/updateCounsellingLevel';
 $route['admin/edit-counselling-level/(:any)'] = 'Admin/CounsellingLevel/editCounsellingLevel/$1';
 $route['admin/delete-counselling-level'] = 'Admin/CounsellingLevel/deleteCounsellingLevel';
+$route['admin/import-counselling-level'] = 'Admin/CounsellingLevel/importCounsellingLevel';
+$route['admin/import-counselling-level-by-excel'] = 'Admin/CounsellingLevel/importCounsellingLevelByExcel';
 
 
 
@@ -273,6 +283,8 @@ $route['admin/save-cutoff-head-name'] = 'Admin/CounsellingHead/saveCounsellingHe
 $route['admin/update-cutoff-head-name'] = 'Admin/CounsellingHead/updateCounsellingHead';
 $route['admin/edit-cutoff-head-name/(:any)'] = 'Admin/CounsellingHead/editCounsellingHead/$1';
 $route['admin/delete-cutoff-head-name'] = 'Admin/CounsellingHead/deleteCounsellingHead';
+$route['admin/import-cutoff-head-name'] = 'Admin/CounsellingHead/importCounsellingHead';
+$route['admin/import-cutoff-head-name-by-excel'] = 'Admin/CounsellingHead/importCounsellingHeadByExcel';
 
 
 
@@ -283,6 +295,8 @@ $route['admin/save-category'] = 'Admin/Category/saveCategory';
 $route['admin/update-category'] = 'Admin/Category/updateCategory';
 $route['admin/edit-category/(:any)'] = 'Admin/Category/editCategory/$1';
 $route['admin/delete-category'] = 'Admin/Category/deleteCategory';
+$route['admin/import-category'] = 'Admin/Category/importCategory';
+$route['admin/import-category-by-excel'] = 'Admin/Category/importCategoryByExcel';
 
 
 
@@ -293,6 +307,8 @@ $route['admin/save-sub-category'] = 'Admin/SubCategory/saveSubCategory';
 $route['admin/update-sub-category'] = 'Admin/SubCategory/updateSubCategory';
 $route['admin/edit-sub-category/(:any)'] = 'Admin/SubCategory/editSubCategory/$1';
 $route['admin/delete-sub-category'] = 'Admin/SubCategory/deleteSubCategory';
+$route['admin/import-sub-category'] = 'Admin/SubCategory/importSubCategory';
+$route['admin/import-sub-category-by-excel'] = 'Admin/SubCategory/importSubCategoryByExcel';
 
 
 $route['admin/special-category'] = 'Admin/SpecialCategory/index';
@@ -301,6 +317,8 @@ $route['admin/save-special-category'] = 'Admin/SpecialCategory/saveSpecialCatego
 $route['admin/update-special-category'] = 'Admin/SpecialCategory/updateSpecialCategory';
 $route['admin/edit-special-category/(:any)'] = 'Admin/SpecialCategory/editSpecialCategory/$1';
 $route['admin/delete-special-category'] = 'Admin/SpecialCategory/deleteSpecialCategory';
+$route['admin/import-special-category'] = 'Admin/SpecialCategory/importSpecialCategory';
+$route['admin/import-special-category-by-excel'] = 'Admin/SpecialCategory/importSpecialCategoryByExcel';
 
 
 $route['admin/sub-special-category'] = 'Admin/SubSpecialCategory/index';
@@ -309,6 +327,8 @@ $route['admin/save-sub-special-category'] = 'Admin/SubSpecialCategory/saveSubSpe
 $route['admin/update-sub-special-category'] = 'Admin/SubSpecialCategory/updateSubSpecialCategory';
 $route['admin/edit-sub-special-category/(:any)'] = 'Admin/SubSpecialCategory/editSubSpecialCategory/$1';
 $route['admin/delete-sub-special-category'] = 'Admin/SubSpecialCategory/deleteSubSpecialCategory';
+$route['admin/import-sub-special-category'] = 'Admin/SubSpecialCategory/importSubSpecialCategory';
+$route['admin/import-sub-special-category-by-excel'] = 'Admin/SubSpecialCategory/importSubSpecialCategoryByExcel';
 
 
 
@@ -341,6 +361,8 @@ $route['admin/save-counselling-plan'] = 'Admin/CounsellingPlan/saveCounsellingPl
 $route['admin/update-counselling-plan'] = 'Admin/CounsellingPlan/updateCounsellingPlan';
 $route['admin/edit-counselling-plan/(:any)/(:any)'] = 'Admin/CounsellingPlan/editCounsellingPlan/$1/$2';
 $route['admin/delete-counselling-plan'] = 'Admin/CounsellingPlan/deleteCounsellingPlan';
+$route['admin/import-counselling-plan'] = 'Admin/CounsellingPlan/importCounsellingPlan';
+$route['admin/import-counselling-plan-by-excel'] = 'Admin/CounsellingPlan/importCounsellingPlanByExcel';
 
 
 

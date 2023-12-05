@@ -30,6 +30,7 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-sub-category'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-sub-category'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
@@ -39,6 +40,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="s_no">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="sub_category">Sub Category</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -49,6 +51,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $sub['id']; ?></td>
                                         <td><?= $sub['sub_category_name']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
