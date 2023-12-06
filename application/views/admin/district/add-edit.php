@@ -51,7 +51,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
-                                              <select class="form-control form-select dynamic-data" name="country" data-segment="admin/get-state" data-wrapper=".state-wrapper">
+                                              <select class="form-control form-select dynamic-data" name="country" data-segment="get-state" data-wrapper=".state-wrapper">
                                                   <option value="">Select Country</option>
                                                   <?php
                                                   $countryList = get_master_data('tbl_country',[]);
@@ -66,7 +66,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
-                                              <select class="form-control form-select state-wrapper dynamic-data" name="state" data-segment="admin/get-city" data-wrapper=".city-wrapper">
+                                              <select class="form-control form-select state-wrapper dynamic-data" name="state" data-segment="get-city" data-wrapper=".city-wrapper">
                                                   <option value="">Select State</option>
                                                   <?php
                                                   if(!empty($singleCity)){

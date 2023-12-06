@@ -33,6 +33,14 @@ class MasterModel extends CI_Model {
 			return $this->db->select('*')->get($table)->result_array();
 		}
 	}
+
+	function getRecordsOrderBy($table = '', $condition=[],$order_by = ''){
+		if(empty(!$condition)){
+			return $this->db->order_by($order_by,'ASC')->get_where($table,$condition)->result_array();
+		}else{
+			return $this->db->select('*')->order_by($order_by,'ASC')->get($table)->result_array();
+		}
+	}
 	function getRecordswithOrderAndLimit($table = '', $condition=[]){
 		if(empty(!$condition)){
 			return $this->db->order_by('id','DESC')->limit(3)->get_where($table,$condition)->result_array();
