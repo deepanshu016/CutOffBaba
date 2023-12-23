@@ -30,12 +30,13 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-college'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
 
                        <div class="table-responsive table-card mt-3 mb-1">
-                          <table class="table align-middle table-nowrap" id="customerTable">
+                           <table class="table align-middle table-nowrap datatables">
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
@@ -64,26 +65,7 @@
                                 <?php } } ?>
                              </tbody>
                           </table>
-                          <div class="noresult" style="display: none">
-                             <div class="text-center">
-                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                <h5 class="mt-2">Sorry! No Result Found</h5>
-                                <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any orders for you search.</p>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="d-flex justify-content-end">
-                          <div class="pagination-wrap hstack gap-2">
-                             <a class="page-item pagination-prev disabled" href="#">
-                             Previous
-                             </a>
-                             <ul class="pagination listjs-pagination mb-0">
-                                <li class="active"><a class="page" href="#" data-i="1" data-page="8">1</a></li>
-                             </ul>
-                             <a class="page-item pagination-next" href="#">
-                             Next
-                             </a>
-                          </div>
+
                        </div>
                     </div>
                  </div>

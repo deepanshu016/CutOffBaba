@@ -19,6 +19,10 @@ class MasterModel extends CI_Model {
 	function insertBulk($table='',$data){
 		return $this->db->insert_batch($table, $data);
 	}
+	function UploadBulk($table='',$data){
+		$this->db->delete($table);
+		return $this->db->insert_batch($table, $data);
+	}
 	function singleRecord($table = '', $condition){
 		return $this->db->get_where($table,$condition)->row_array();
 	}
@@ -31,6 +35,14 @@ class MasterModel extends CI_Model {
 			return $this->db->get_where($table,$condition)->result_array();
 		}else{
 			return $this->db->select('*')->get($table)->result_array();
+		}
+	}
+
+	function getRecordsOrderBy($table = '', $condition=[],$order_by = ''){
+		if(empty(!$condition)){
+			return $this->db->order_by($order_by,'ASC')->get_where($table,$condition)->result_array();
+		}else{
+			return $this->db->select('*')->order_by($order_by,'ASC')->get($table)->result_array();
 		}
 	}
 	function getRecordswithOrderAndLimit($table = '', $condition=[]){

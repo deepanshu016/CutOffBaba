@@ -12,7 +12,7 @@ Class Common extends MY_Controller {
             $id = $this->input->post('id');
             $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
-            $stateList = $this->master->getRecords('tbl_state',['country_id'=>$id]);
+            $stateList = $this->master->getRecordsOrderBy('tbl_state',['country_id'=>$id],'name');
             $html = '';
             if(!empty($stateList)){
                 foreach($stateList as $state){
@@ -35,7 +35,7 @@ Class Common extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
-            $cityList = $this->master->getRecords('tbl_city',['state_id'=>$id]);
+            $cityList = $this->master->getRecordsOrderBy('tbl_city',['state_id'=>$id],'city');
             $html = '';
             if(!empty($cityList)){
                 foreach($cityList as $city){

@@ -2,8 +2,7 @@
         <div class="container-fluid">
             <div id="two-column-menu">
             </div>
-            <ul class="navbar-nav" id="navbar-nav" style="margin-bottom:50px">
-                <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+            <ul class="navbar-nav" id="navbar-nav" style="margin:50px 0">
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/dashboard'); ?>">
                         <i class="ri-rocket-line"></i> <span data-key="t-landing">Dashboard</span>
@@ -31,18 +30,9 @@
                                 <a href="<?= base_url('admin/gender'); ?>" class="nav-link" data-key="t-calendar">Gender Accepted   </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/exams'); ?>" class="nav-link" data-key="t-calendar">Exams   </a>
+                                <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
                             </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarCourse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCourse">
-                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarCourse">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
+                             <li class="nav-item">
                                 <a href="<?= base_url('admin/stream'); ?>" class="nav-link" data-key="t-calendar">Streams </a>
                             </li>
                             <li class="nav-item">
@@ -57,9 +47,22 @@
                             <li class="nav-item">
                                 <a href="<?= base_url('admin/clinical-facility'); ?>" class="nav-link" data-key="t-calendar">Clinical Facility </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('admin/degreetype'); ?>" class="nav-link" data-key="t-calendar"> Degree Type </a>
+                           
+                        </ul>
+                    </div>
+                </li>
+                 <li class="nav-item">
+                                <a href="<?= base_url('admin/exams'); ?>" class="nav-link" data-key="t-calendar"><i class="ri-apps-2-line"></i> <span data-key="t-apps"> Exam Master </span> </a>
                             </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarCourse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCourse">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarCourse">
+                        <ul class="nav nav-sm flex-column">
+                           
+                            
+                            
                             <li class="nav-item">
                                 <a href="<?= base_url('admin/nature'); ?>" class="nav-link" data-key="t-calendar">Nature/Group  </a>
                             </li>
@@ -73,44 +76,12 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarGallery" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarGallery">
-                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Gallery Master</span>
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="sidebarGallery">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/gallery-heads'); ?>" data-key="t-calendar">
-                                    Gallery Heads
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/college-files'); ?>" data-key="t-calendar">
-                                    Upload College File
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarFees" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarFees">
-                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Fees Master</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="sidebarFees">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/feeshead'); ?>" data-key="t-calendar">
-                                    Fees Heads
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/service-rules'); ?>" data-key="t-calendar">
-                                    Service & Bond Rules
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
+                
+                  <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarcutoff" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarcutoff">
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Cutoff Master</span>
                     </a>
@@ -150,10 +121,44 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link"  href="<?= base_url('admin/college'); ?>">
-                        <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
+                    <a class="nav-link menu-link" href="#sidebarFees" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarFees">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Fees Master</span>
                     </a>
+                    <div class="collapse menu-dropdown" id="sidebarFees">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/feeshead'); ?>" data-key="t-calendar">
+                                    Fees Heads
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/service-rules'); ?>" data-key="t-calendar">
+                                    Service & Bond Rules
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+              <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarGallery" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarGallery">
+                        <i class="ri-apps-2-line"></i> <span data-key="t-apps">Gallery Master</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarGallery">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/gallery-heads'); ?>" data-key="t-calendar">
+                                    Gallery Heads
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/college-files'); ?>" data-key="t-calendar">
+                                    Upload College File
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
                 <li class="nav-item">
                         <a class="nav-link menu-link" href="#sidebarHospital" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHospital">
                             <i class="ri-apps-2-line"></i> <span data-key="t-apps">Hospital Master</span>

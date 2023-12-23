@@ -212,8 +212,6 @@ $(document).on('click','.send-to-server-new', function (e) {
     var url = $(this).data("url");
     var wrapper = $(this).data("wrapper");
     var modal = $(this).data("modal");
-    console.log(modal)
-    console.log(wrapper)
     $.ajax({
         type: 'POST',
         url: url,

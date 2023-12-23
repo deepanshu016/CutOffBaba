@@ -37,7 +37,7 @@
                                 <div class="row g-4 mb-3">
                                     <div class="col-sm-auto">
                                         <div>
-                                            <a href="<?= base_url('admin/counselling-pla'); ?>" class="btn btn-success add-btn" > List</a>
+                                            <a href="<?= base_url('admin/counselling-plan'); ?>" class="btn btn-success add-btn" > List</a>
                                         </div>
                                     </div>
                                     <?php if(empty($singleCounsellingPlan)) { ?>

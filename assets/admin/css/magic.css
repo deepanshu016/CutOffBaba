@@ -143,3 +143,14 @@ tags .input::before {
 tags .input:focus {
     outline: none;
 }
+.page-link:hover {
+    background: #405189 !important;
+    color: white !important;
+    border-color: #405189 !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid white !important;
+    background-color: white !important;
+    background: white !important;
+}

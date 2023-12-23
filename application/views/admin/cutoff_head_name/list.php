@@ -30,15 +30,17 @@
                           <div class="col-sm-auto">
                              <div>
                                 <a href="<?= base_url('admin/add-cutoff-head-name'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/import-cutoff-head-name'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                              </div>
                           </div>
                        </div>
 
                        <div class="table-responsive table-card mt-3 mb-1">
-                          <table class="table align-middle table-nowrap" id="customerTable">
+                           <table class="table align-middle table-nowrap datatables">
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="s_no">S.No.</th>
+                                   <th class="sort" data-sort="id">ID</th>
                                    <th class="sort" data-sort="head_name">Head Name</th>
                                    <th class="sort" data-sort="state">State</th>
                                    <th class="sort" data-sort="course">Course</th>
@@ -55,6 +57,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $head['id']; ?></td>
                                         <td><?= $head['head_name']; ?></td>
                                         <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
                                         <td><?= ($courseData) ? $courseData['course'] : ''; ?></td>
@@ -69,25 +72,7 @@
                                 <?php } } ?>
                              </tbody>
                           </table>
-                          <div class="noresult" style="display: none">
-                             <div class="text-center">
-                                <h5 class="mt-2">Sorry! No Result Found</h5>
-                                <p class="text-muted mb-0">We've searched more than 150+ Orders We did not find any orders for you search.</p>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="d-flex justify-content-end">
-                          <div class="pagination-wrap hstack gap-2">
-                             <a class="page-item pagination-prev disabled" href="#">
-                             Previous
-                             </a>
-                             <ul class="pagination listjs-pagination mb-0">
-                                <li class="active"><a class="page" href="#" data-i="1" data-page="8">1</a></li>
-                             </ul>
-                             <a class="page-item pagination-next" href="#">
-                             Next
-                             </a>
-                          </div>
+
                        </div>
                     </div>
                  </div>
