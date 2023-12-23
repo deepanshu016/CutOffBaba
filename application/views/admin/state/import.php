@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/state'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/stateImport.xlsx'); ?>" class="btn btn-success add-btn" download="countryList"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-state'); ?>" class="btn btn-success add-btn" ><i class="ri-download-2-line"></i> View Sample</a>
                                         </div>
                                     </div>
                                     <form action="<?= base_url('admin/import-state-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">

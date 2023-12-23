@@ -7,16 +7,15 @@ class Export extends CI_Controller {
 	public function state()
 
 	{	
-		$query = $this->db->select('*')->get('state')->result_array(); 
+		$query = $this->db->select('s.id as state_id,s.name as state_name , s.country_id,c.countryCode,c.name')->from('tbl_state as s')->join('tbl_country as c', 's.country_id = c.id')->get()->result_array(); 
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
 		    $filename = "state_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'State Name'); 
+		    $fields = array('ID', 'State Name','Country'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
-		        $status = ($row['status'] == 1)?'Active':'Inactive'; 
-		        $lineData = array($row['id'], $row['statename']); 
+		        $lineData = array($row['state_id'], $row['state_name'], $row['country_id'].'_'.$row['name']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -47,20 +46,19 @@ class Export extends CI_Controller {
 	}
 
 	
-	public function city()
+	public function district()
 
 	{	
-
-		$query = $this->db->select('*')->get('city')->result_array(); 
+		$query = $this->db->select('s.id as state_id,s.name as state_name,s.country_id ,c.id as district_id,c.city as city_name,c.state_id, c.country')->from('tbl_city as c')->join('tbl_state as s', 'c.state_id = s.id')->get()->result_array(); 
+		
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
 		    $filename = "city_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'State ID','City Name'); 
+		    $fields = array('ID', 'State ID','City Name','COUNTRY ID'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
-		        $status = ($row['status'] == 1)?'Active':'Inactive'; 
-		        $lineData = array($row['id'], $row['stateid'], $row['cityname']); 
+		        $lineData = array($row['district_id'], $row['state_id'].'_'.$row['state_name'], $row['city_name'], $row['country_id']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 

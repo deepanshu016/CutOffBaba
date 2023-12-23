@@ -41,6 +41,7 @@ $route['admin/edit-state/(:any)'] = 'Admin/State/editState/$1';
 $route['admin/delete-state'] = 'Admin/State/deleteState';
 $route['admin/import-state'] = 'Admin/State/importState';
 $route['admin/import-state-by-excel'] = 'Admin/State/importStateByExcel';
+$route['admin/export-state'] = 'Admin/Export/state';
 
 $route['admin/approval'] = 'Admin/Approval/index';
 $route['admin/add-approval'] = 'Admin/Approval/add';
@@ -131,17 +132,17 @@ $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
 $route['admin/import-exams'] = 'Admin/Exams/importExams';
 $route['admin/import-exams-by-excel'] = 'Admin/Exams/importExamsByExcel';
 
-$route['admin/district'] = 'Admin/district/index';
-$route['admin/add-district'] = 'Admin/district/add';
-$route['admin/save-district'] = 'Admin/district/saveCity';
-$route['admin/update-district'] = 'Admin/district/updateCity';
-$route['admin/edit-district/(:any)'] = 'Admin/district/editCity/$1';
-$route['admin/delete-district'] = 'Admin/district/deleteCity';
+$route['admin/district'] = 'Admin/District/index';
+$route['admin/add-district'] = 'Admin/District/add';
+$route['admin/save-district'] = 'Admin/District/saveCity';
+$route['admin/update-district'] = 'Admin/District/updateCity';
+$route['admin/edit-district/(:any)'] = 'Admin/District/editCity/$1';
+$route['admin/delete-district'] = 'Admin/District/deleteCity';
 $route['admin/get-state'] = 'Admin/Common/getStateByCountry';
 $route['admin/get-city'] = 'Admin/Common/getCityByState';
-$route['admin/import-district'] = 'Admin/City/importCity';
-$route['admin/import-district-by-excel'] = 'Admin/City/importCityByExcel';
-
+$route['admin/import-district'] = 'Admin/District/importCity';
+$route['admin/import-district-by-excel'] = 'Admin/District/importCityByExcel';
+$route['admin/export-district'] = 'Admin/Export/district';
 
 
 

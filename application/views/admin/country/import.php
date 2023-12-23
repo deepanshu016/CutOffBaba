@@ -9,7 +9,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active">Import News</li>
+                                <li class="breadcrumb-item active">Import Country</li>
                             </ol>
                         </div>
 
@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title mb-0">Import News</h4>
+                            <h4 class="card-title mb-0">Import Country</h4>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
