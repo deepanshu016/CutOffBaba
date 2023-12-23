@@ -47,7 +47,7 @@
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Full Name</label>
                                               <input type="text" class="form-control" placeholder="College Full Name" name="full_name" value="<?= (!empty($singleCollege)) ? $singleCollege['full_name'] : ''; ?>">
@@ -58,15 +58,7 @@
                                               <span class="text-danger" id="full_name"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
-                                          <div class="form-group">
-                                              <label for="basiInput" class="form-label">Short Description</label>
-                                              <textarea name="short_description" class="form-control" placeholder="Short Description" rows="5" cols="15"><?= (!empty($singleCollege)) ? $singleCollege['short_description'] : ''; ?></textarea>
-                                              <span class="text-danger" id="short_description"></span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="row">
+                                      
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Popular Name 1</label>
@@ -77,6 +69,13 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Popular Name 2</label>
                                               <input type="text" class="form-control" placeholder="College Popular Name 2" name="popular_name_two" value="<?= (!empty($singleCollege)) ? $singleCollege['popular_name_two'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Short Description</label>
+                                              <textarea name="short_description" id="short_description" class="form-control" placeholder="Short Description" rows="5" cols="15"><?= (!empty($singleCollege)) ? $singleCollege['short_description'] : ''; ?></textarea>
+                                              <span class="text-danger" id="short_description"></span>
                                           </div>
                                       </div>
                                   </div>
@@ -312,13 +311,13 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Keywords</label>
-                                              <input type="text" class="form-control keywords" placeholder="Keywords" name="keywords[]" value="<?= (!empty($singleCollege)) ? $singleCollege['keywords'] : ''; ?>" style="display:none;">
+                                              <input type="text" class="form-control keywords" placeholder="Keywords" name="keywords[]" value="<?= (!empty($singleCollege)) ? $singleCollege['keywords'] : ''; ?>" >
                                           </div>
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Tags</label>
-                                              <input type="text" class="form-control tags" placeholder="Tags" name="tags[]" value="<?= (!empty($singleCollege)) ? $singleCollege['tags'] : ''; ?>" style="display:none;">
+                                              <input type="text" class="form-control tags" placeholder="Tags" name="tags[]" value="<?= (!empty($singleCollege)) ? $singleCollege['tags'] : ''; ?>">
                                           </div>
                                       </div>
                                   </div>

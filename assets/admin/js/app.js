@@ -122,7 +122,7 @@
                     a.checked ? (t.classList.add("d-none"), e.classList.remove("d-none")) : (t.classList.remove("d-none"), e.classList.add("d-none"))
                 })
             }), feather.replace()
-        }), window.addEventListener("resize", E), E(), Waves.init(), document.addEventListener("scroll", function() {
+        }), window.addEventListener("resize", E), E(), document.addEventListener("scroll", function() {
             var e;
             (e = document.getElementById("page-topbar")) && (50 <= document.body.scrollTop || 50 <= document.documentElement.scrollTop ? e.classList.add("topbar-shadow") : e.classList.remove("topbar-shadow"))
         }), window.addEventListener("load", function() {
@@ -427,13 +427,8 @@
 }();
 var mybutton = document.getElementById("back-to-top");
 
-function scrollFunction() {
-    100 < document.body.scrollTop || 100 < document.documentElement.scrollTop ? mybutton.style.display = "block" : mybutton.style.display = "none"
-}
+
 
 function topFunction() {
     document.body.scrollTop = 0, document.documentElement.scrollTop = 0
 }
-window.onscroll = function() {
-    scrollFunction()
-};

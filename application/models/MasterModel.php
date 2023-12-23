@@ -19,6 +19,10 @@ class MasterModel extends CI_Model {
 	function insertBulk($table='',$data){
 		return $this->db->insert_batch($table, $data);
 	}
+	function UploadBulk($table='',$data){
+		$this->db->delete($table);
+		return $this->db->insert_batch($table, $data);
+	}
 	function singleRecord($table = '', $condition){
 		return $this->db->get_where($table,$condition)->row_array();
 	}

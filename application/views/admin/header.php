@@ -25,6 +25,7 @@
     <script src="<?=base_url('assets/admin/js/popper.min.js')?>"></script>
     <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>
     <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.17.9/tagify.css" integrity="sha512-yWu5jVw5P8+IsI7tK+Uuc7pFfQvWiBfFfVlT5r0KP6UogGtZEc4BxDIhNwUysMKbLjqCezf6D8l6lWNQI6MR7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
     <style type="text/css">
         .logo-lg img{
@@ -189,28 +190,8 @@
                 </div>
             </div>
         </header>
-        <!-- ========== App Menu ========== -->
         <div class="app-menu navbar-menu">
-            <!-- LOGO -->
             <div class="navbar-brand-box">
-                <!-- Dark Logo-->
-                <a href="<?= base_url('admin/dashboard') ?>" class="logo logo-dark">
-                     <span class="logo-sm">
-                        <img src="<?= base_url('assets/uploads/settings/'.$siteSettings['favicon']) ?>">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="<?= base_url('assets/uploads/settings/'.$siteSettings['logo']) ?>">
-                    </span>
-                </a>
-                <!-- Light Logo-->
-                <a href="<?= base_url('admin/dashboard') ?>" class="logo logo-light">
-                     <span class="logo-sm">
-                        <img src="<?= base_url('assets/uploads/settings/'.$siteSettings['favicon']) ?>">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="<?= base_url('assets/uploads/settings/'.$siteSettings['logo']) ?>">
-                    </span>
-                </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
                     <i class="ri-record-circle-line"></i>
                 </button>
