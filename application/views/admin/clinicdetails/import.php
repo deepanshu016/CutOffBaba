@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/clinicdetails'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/clinicDetailsImport.xlsx'); ?>" class="btn btn-success add-btn" download="clinicDetailsImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-clinicdetails'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
                                         </div>
                                     </div>
                                     <form action="<?= base_url('admin/import-clinicdetails-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">

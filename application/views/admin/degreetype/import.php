@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/degreetype'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/degreeTypeImport.xlsx'); ?>" class="btn btn-success add-btn" download="degreeTypeList"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-degreetype'); ?>" class="btn btn-success add-btn"><i class="ri-download-2-line"></i> Sample File</a>
                                         </div>
                                     </div>
 

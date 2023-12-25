@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/stream'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/streamImport.xlsx'); ?>" class="btn btn-success add-btn" download="streamImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-stream'); ?>" class="btn btn-success add-btn"><i class="ri-download-2-line"></i> Sample File</a>
                                         </div>
                                     </div>
                                     <form action="<?= base_url('admin/import-stream-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">

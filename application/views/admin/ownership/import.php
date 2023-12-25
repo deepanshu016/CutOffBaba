@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/ownership'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/ownerShipImport.xlsx'); ?>" class="btn btn-success add-btn" download="ownerShipList"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-ownership'); ?>" class="btn btn-success add-btn"><i class="ri-download-2-line"></i> View Sample</a>
                                         </div>
                                     </div>
                                     <form action="<?= base_url('admin/import-ownership-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">

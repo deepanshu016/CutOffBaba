@@ -51,6 +51,7 @@ $route['admin/edit-approval/(:any)'] = 'Admin/Approval/editApproval/$1';
 $route['admin/delete-approval'] = 'Admin/Approval/deleteApproval';
 $route['admin/import-approval'] = 'Admin/Approval/importApproval';
 $route['admin/import-approval-by-excel'] = 'Admin/Approval/importApprovalByExcel';
+$route['admin/export-approval'] = 'Admin/Export/approval';
 
 $route['admin/recognition'] = 'Admin/Recognition/index';
 $route['admin/add-recognition'] = 'Admin/Recognition/add';
@@ -60,7 +61,7 @@ $route['admin/edit-recognition/(:any)'] = 'Admin/Recognition/editRecognition/$1'
 $route['admin/delete-recognition'] = 'Admin/Recognition/deleteRecognition';
 $route['admin/import-recognition'] = 'Admin/Recognition/importRecognition';
 $route['admin/import-recognition-by-excel'] = 'Admin/Recognition/importRecognitionByExcel';
-
+$route['admin/export-recognition'] = 'Admin/Export/recognition';
 
 
 $route['admin/gender'] = 'Admin/Gender/index';
@@ -71,6 +72,8 @@ $route['admin/edit-gender/(:any)'] = 'Admin/Gender/editGender/$1';
 $route['admin/delete-gender'] = 'Admin/Gender/deleteGender';
 $route['admin/import-gender'] = 'Admin/Gender/importGender';
 $route['admin/import-gender-by-excel'] = 'Admin/Gender/importGenderByExcel';
+$route['admin/export-gender'] = 'Admin/Export/gender';
+
 
 $route['admin/stream'] = 'Admin/Stream/index';
 $route['admin/add-stream'] = 'Admin/Stream/add';
@@ -80,7 +83,7 @@ $route['admin/edit-stream/(:any)'] = 'Admin/Stream/editStream/$1';
 $route['admin/delete-stream'] = 'Admin/Stream/deleteStream';
 $route['admin/import-stream'] = 'Admin/Stream/importStream';
 $route['admin/import-stream-by-excel'] = 'Admin/Stream/importStreamByExcel';
-
+$route['admin/export-stream'] = 'Admin/Export/stream';
 
 $route['admin/degreetype'] = 'Admin/DegreeType/index';
 $route['admin/add-degreetype'] = 'Admin/DegreeType/add';
@@ -90,6 +93,7 @@ $route['admin/edit-degreetype/(:any)'] = 'Admin/DegreeType/editDegreeType/$1';
 $route['admin/delete-degreetype'] = 'Admin/DegreeType/deleteDegreeType';
 $route['admin/import-degreetype'] = 'Admin/DegreeType/importDegreeType';
 $route['admin/import-degreetype-by-excel'] = 'Admin/DegreeType/importDegreeTypeByExcel';
+$route['admin/export-degreetype'] = 'Admin/Export/degreetype';
 
 
 $route['admin/nature'] = 'Admin/Nature/index';
@@ -131,6 +135,9 @@ $route['admin/edit-exams/(:any)'] = 'Admin/Exams/editExams/$1';
 $route['admin/delete-exams'] = 'Admin/Exams/deleteExams';
 $route['admin/import-exams'] = 'Admin/Exams/importExams';
 $route['admin/import-exams-by-excel'] = 'Admin/Exams/importExamsByExcel';
+$route['admin/export-exams'] = 'Admin/Export/exams';
+
+
 
 $route['admin/district'] = 'Admin/District/index';
 $route['admin/add-district'] = 'Admin/District/add';
@@ -154,6 +161,7 @@ $route['admin/edit-ownership/(:any)/(:any)'] = 'Admin/Ownership/editOwnership/$1
 $route['admin/delete-ownership'] = 'Admin/Ownership/deleteOwnership';
 $route['admin/import-ownership'] = 'Admin/Ownership/importOwnership';
 $route['admin/import-ownership-by-excel'] = 'Admin/Ownership/importOwnershipByExcel';
+$route['admin/export-ownership'] = 'Admin/Export/ownership';
 
 // 06-11-2023
 $route['admin/gallery'] = 'Admin/Gallery/index';
@@ -200,7 +208,7 @@ $route['admin/edit-sub-district/(:any)'] = 'Admin/SubDistrict/editSubDistrict/$1
 $route['admin/delete-sub-district'] = 'Admin/SubDistrict/deleteSubDistrict';
 $route['admin/import-sub-district'] = 'Admin/SubDistrict/importSubDistrict';
 $route['admin/import-sub-district-by-excel'] = 'Admin/SubDistrict/importSubDistrictByExcel';
-
+$route['admin/export-sub-district'] = 'Admin/Export/subDistrict';
 
 
 $route['admin/opens'] = 'Admin/Opens/index';
@@ -211,8 +219,7 @@ $route['admin/edit-opens/(:any)'] = 'Admin/Opens/editOpens/$1';
 $route['admin/delete-opens'] = 'Admin/Opens/deleteOpens';
 $route['admin/import-opens'] = 'Admin/Opens/importOpens';
 $route['admin/import-opens-by-excel'] = 'Admin/Opens/importOpensByExcel';
-
-
+$route['admin/export-opens'] = 'Admin/Export/opens';
 
 
 
@@ -224,6 +231,7 @@ $route['admin/edit-visibility/(:any)'] = 'Admin/Visibility/editVisibility/$1';
 $route['admin/delete-visibility'] = 'Admin/Visibility/deleteVisibility';
 $route['admin/import-visibility'] = 'Admin/Visibility/importVisibility';
 $route['admin/import-visibility-by-excel'] = 'Admin/Visibility/importVisibilityByExcel';
+$route['admin/export-visibility'] = 'Admin/Export/visibility';
 
 
 $route['admin/clinicdetails'] = 'Admin/ClinicDetails/index';
@@ -234,6 +242,7 @@ $route['admin/edit-clinicdetails/(:any)'] = 'Admin/ClinicDetails/editClinicDetai
 $route['admin/delete-clinicdetails'] = 'Admin/ClinicDetails/deleteClinicDetails';
 $route['admin/import-clinicdetails'] = 'Admin/ClinicDetails/importClinicDetails';
 $route['admin/import-clinicdetails-by-excel'] = 'Admin/ClinicDetails/importClinicDetailsByExcel';
+$route['admin/export-clinicdetails'] = 'Admin/Export/clinicdetails';
 
 
 
@@ -245,6 +254,7 @@ $route['admin/edit-clinical-facility/(:any)'] = 'Admin/ClinicFacility/editClinic
 $route['admin/delete-clinical-facility'] = 'Admin/ClinicFacility/deleteClinicFacility';
 $route['admin/import-clinical-facility'] = 'Admin/ClinicFacility/importClinicFacility';
 $route['admin/import-clinical-facility-by-excel'] = 'Admin/ClinicFacility/importClinicFacilityByExcel';
+$route['admin/export-clinical-facility'] = 'Admin/Export/clinicfacility';
 
 
 $route['admin/gallery-heads'] = 'Admin/GalleryHeads/index';

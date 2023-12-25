@@ -79,10 +79,10 @@
             </div>
         </div>
     </div>
-    
-    <script src="<?=base_url('assets/front');?>/jsfront/vendor/jquery-3.6.4.min.js"></script>
-<script src="<?=base_url('assets/front');?>/jsfront/popper.min.js"></script>
-<script src="<?=base_url('assets/front');?>/jsfront/bootstrap.min.js"></script>
+    <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
+    <script src="<?=base_url('assets/admin/js/popper.min.js')?>"></script>
+    <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>
+    <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?=base_url('/')?>assets/admin/libs/simplebar/simplebar.min.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>

@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/opens'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/openImport.xlsx'); ?>" class="btn btn-success add-btn" download="openImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-opens'); ?>" class="btn btn-success add-btn"><i class="ri-download-2-line"></i> Sample File</a>
                                         </div>
                                     </div>
                                     <form action="<?= base_url('admin/import-opens-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
