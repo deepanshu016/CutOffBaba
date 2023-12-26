@@ -29,8 +29,9 @@
                        <div class="row g-4">
                           <div class="col-sm-auto">
                              <div>
-                                <a href="<?= base_url('admin/add-exams'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                                 <a href="<?= base_url('admin/add-exams'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                                  <a href="<?= base_url('admin/import-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                                 <a href="<?= base_url('admin/export-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
                               </div>
                           </div>
                        </div>

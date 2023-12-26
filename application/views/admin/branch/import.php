@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/branch'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/branchImport.xlsx'); ?>" class="btn btn-success add-btn" download="branchImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-branch'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Branch </a>
                                         </div>
                                     </div>
                                     <span class="">Notes:-</span>

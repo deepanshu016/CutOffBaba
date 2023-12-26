@@ -334,59 +334,86 @@ Class College extends MY_Controller {
 
     // Import CSV in DB
     public function importCollegeByExcel(){
-        $this->form_validation->set_rules('excel_file', 'Excel File', 'callback_file_check_excel_file');
-        if ($this->form_validation->run()) {
-            if(!empty($_FILES['excel_file']['name'])){
-                $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-                if(isset($_FILES['excel_file']['name']) && in_array($_FILES['excel_file']['type'], $file_mimes)) {
-                    $arr_file = explode('.', $_FILES['excel_file']['name']);
-                    $extension = end($arr_file);
-                    if('xlsx' == $extension){
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-                    } else {
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
-                    }
-                    $spreadsheet = $reader->load($_FILES['excel_file']['tmp_name']);
-                    $excelData = $spreadsheet->getActiveSheet()->toArray();
-                    $sheetData = $this->csv_formatter($excelData);
-                    $excelDatas = [];
-                    if(!empty($sheetData)){
-                        foreach($sheetData as $key=>$sheet){
-                            $excelDatas[$key]['full_name'] = $sheet['full_name'];
-                            $excelDatas[$key]['slug'] = $this->slug($sheet['full_name']);
-                            $excelDatas[$key]['short_description'] = $sheet['short_description'];
-                            $excelDatas[$key]['popular_name_one'] = $sheet['popular_name_one'];
-                            $excelDatas[$key]['popular_name_two'] = $sheet['popular_name_two'];
-                            $excelDatas[$key]['establishment'] = date('Y-m-d',strtotime($sheet['establishment']));
-                            $excelDatas[$key]['gender_accepted'] = ($sheet['gender_accepted']) ? implode('|',explode(',',$sheet['gender_accepted'])) : '';
-                            $excelDatas[$key]['course_offered'] = ($sheet['course_offered']) ? implode('|',explode(',',$sheet['course_offered'])) : '';
-                            $excelDatas[$key]['country'] = $sheet['country'];
-                            $excelDatas[$key]['state'] = $sheet['state'];
-                            $excelDatas[$key]['city'] = $sheet['district'];
-                            $excelDatas[$key]['affiliated_by'] = $sheet['affiliated_by'];
-                            $excelDatas[$key]['university_name'] = $sheet['university_name'];
-                            $excelDatas[$key]['approved_by'] = $sheet['approved_by'];
-                            $excelDatas[$key]['college_logo'] = $sheet['college_logo'];
-                            $excelDatas[$key]['college_banner'] = $sheet['college_banner'];
-                            $excelDatas[$key]['prospectus_file'] = $sheet['prospectus_file'];
-                            $excelDatas[$key]['ownership'] = $sheet['ownership'];
-                            $excelDatas[$key]['website'] = $sheet['website'];
-                            $excelDatas[$key]['email'] = $sheet['email'];
-                            $excelDatas[$key]['contact_one'] = $sheet['contact_one'];
-                            $excelDatas[$key]['contact_two'] = $sheet['contact_two'];
-                            $excelDatas[$key]['contact_three'] = $sheet['contact_three'];
-                            $excelDatas[$key]['nodal_officer_name'] = $sheet['nodal_officer_name'];
-                            $excelDatas[$key]['nodal_officer_no'] = $sheet['nodal_officer_no'];
-                            $excelDatas[$key]['keywords'] = ($sheet['keywords']) ? implode(',',explode(',',$sheet['keywords'])) : '';
-                            $excelDatas[$key]['tags'] = ($sheet['tags']) ? implode(',',explode(',',$sheet['tags'])) : '';
-                            $excelDatas[$key]['added_by'] = $this->session->userdata('admin')['id'];
+
+        if($_FILES['excel_file']['error'] == 0){
+            $name = $_FILES['excel_file']['name'];
+            $ext = explode('.', $name);
+            
+            $type = $_FILES['excel_file']['type'];
+            $tmpName = $_FILES['excel_file']['tmp_name'];
+            if($ext[1] === 'csv'){
+                if(($handle = fopen($tmpName, 'r')) !== FALSE) {
+                    set_time_limit(0);
+                    $row = 0;
+                    while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+                        $col_count = count($data);
+                        if ($row>0) {
+                            $impdata['full_name'] = $data[1];
+                            $impdata['slug'] = $this->slug($data[1]);
+                            $impdata['short_description'] = $data[2];
+                            $impdata['popular_name_one'] = $data[3];
+                            $impdata['popular_name_two'] = $data[4];
+                            $impdata['establishment'] = $data[8];
+                            $impdata['gender_accepted'] = $data[10];
+                            $impdata['course_offered'] = $data[11];
+                            $impdata['college_banner'] = $data[5];
+                            $impdata['college_logo'] = $data[6];
+                            $impdata['prospectus_file'] = $data[7];
+                            $impdata['country'] = $data[12];
+                            $impdata['state'] = $data[13];
+                            $impdata['city'] = $data[14];
+                            $impdata['university_name'] = $data[15];
+                            $impdata['approved_by'] = $data[9];
+                            $impdata['ownership'] = $data[17];
+                            $impdata['website'] =  $data[18];
+                            $impdata['email'] = $data[19];
+                            $impdata['contact_one'] = $data[20];
+                            $impdata['contact_two'] = $data[21];
+                            $impdata['contact_three'] = $data[22];
+                            $impdata['nodal_officer_name'] = $data[23];
+                            $impdata['nodal_officer_no'] = $data[24];
+                            $impdata['keywords'] = $data[25];
+                            $impdata['tags'] = $data[26];
+                            $impdata['status'] = $data[27];
+                            $id=$data[0];
+                            if($id==""){
+                                $this->db->insert('tbl_college',$impdata);
+                            }else{
+                                $this->db->where('id',$id)->update('tbl_college',$impdata);
+                            }
                         }
-                    }
-                    $stateId = $this->master->insertBulk('tbl_college',$excelDatas);
-                    $response = array('status' => 'success','message' => 'College data  imported successfully','url'=>base_url('admin/college'));
+                        $row++;
+                     }
+                     fclose($handle);
+                    $response = array('status' => 'success','message' => 'College imported successfully','url'=>base_url('admin/college'));
                     echo json_encode($response);
                     return true;
+
+                    
+
+                }else{
+
+                    $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+
                 }
+
+            }else{
+                $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+
             }
         }else{
             $response = array(

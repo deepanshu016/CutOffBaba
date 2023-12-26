@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/special-category'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/specialCategoryImport.xlsx'); ?>" class="btn btn-success add-btn" download="specialCategoryImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-special-category'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
                                         </div>
                                     </div>
                                     <span class="">Notes:-</span>

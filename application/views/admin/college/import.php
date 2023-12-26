@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/college'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/collegeImport.xlsx'); ?>" class="btn btn-success add-btn" download="collegeImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
                                         </div>
                                     </div>
                                     <span class="">Notes:-</span>

@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/counselling-level'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('assets/uploads/excels/counsellingLevelImport.xlsx'); ?>" class="btn btn-success add-btn" download="counsellingLevelImport"><i class="ri-download-2-line"></i> View Sample</a>
+                                            <a href="<?= base_url('admin/export-counselling-level'); ?>" class="btn btn-success add-btn" ><i class="ri-download-2-line"></i> Sample File</a>
                                         </div>
                                     </div>
 

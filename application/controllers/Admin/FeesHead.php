@@ -151,38 +151,62 @@ Class FeesHead extends MY_Controller {
 
     // Import CSV in DB
     public function importFeesHeadByExcel(){
-        $this->form_validation->set_rules('excel_file', 'Excel File', 'callback_file_check_excel_file');
-        if ($this->form_validation->run()) {
-            if(!empty($_FILES['excel_file']['name'])){
-                $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-                if(isset($_FILES['excel_file']['name']) && in_array($_FILES['excel_file']['type'], $file_mimes)) {
-                    $arr_file = explode('.', $_FILES['excel_file']['name']);
-                    $extension = end($arr_file);
-                    if('xlsx' == $extension){
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-                    } else {
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
-                    }
-                    $spreadsheet = $reader->load($_FILES['excel_file']['tmp_name']);
-                    $excelData = $spreadsheet->getActiveSheet()->toArray();
-                    $sheetData = $this->csv_formatter($excelData);
-                    $excelDatas = [];
-                    if(!empty($sheetData)){
-                        foreach($sheetData as $key=>$sheet){
-                            $excelDatas[$key]['fee_head_name'] = $sheet['fee_head_name'];
-                            $excelDatas[$key]['tution_fees'] = $sheet['tution_fees'];
-                            $excelDatas[$key]['hostel_fees'] = $sheet['hostel_fees'];
-                            $excelDatas[$key]['misc_fees'] = $sheet['misc_fees'];
-                            $excelDatas[$key]['bank_details_1'] = $sheet['bank_details_1'];
-                            $excelDatas[$key]['bank_details_2'] = $sheet['bank_details_2'];
-                            $excelDatas[$key]['demand_draft_name'] = $sheet['demand_draft_name'];
+        if($_FILES['excel_file']['error'] == 0){
+            $name = $_FILES['excel_file']['name'];
+            $ext = explode('.', $name);
+            
+            $type = $_FILES['excel_file']['type'];
+            $tmpName = $_FILES['excel_file']['tmp_name'];
+            if($ext[1] === 'csv'){
+                if(($handle = fopen($tmpName, 'r')) !== FALSE) {
+                    set_time_limit(0);
+                    $row = 0;
+                    while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+                        $col_count = count($data);
+                        if ($row>0) {
+                            $impdata['fee_head_name']=$data[1];
+                            $impdata['tution_fees']=$data[2];
+                            $impdata['hostel_fees']=$data[3];
+                            $impdata['misc_fees']=$data[4];
+                            $impdata['bank_details_1']=$data[5];
+                            $impdata['bank_details_2']=$data[6];
+                            $impdata['demand_draft_name']=$data[7];
+                            $id=$data[0];
+                            if($id==""){
+                                $this->db->insert('tbl_feeshead',$impdata);
+                            }else{
+                                $this->db->where('id',$id)->update('tbl_feeshead',$impdata);
+                            }
                         }
-                    }
-                    $stateId = $this->master->insertBulk('tbl_feeshead',$excelDatas);
-                    $response = array('status' => 'success','message' => 'Fees Head data  imported successfully','url'=>base_url('admin/feeshead'));
+                        $row++;
+                     }
+                     fclose($handle);
+                    $response = array('status' => 'success','message' => 'Feeshead imported successfully','url'=>base_url('admin/feeshead'));
                     echo json_encode($response);
                     return true;
+                }else{
+
+                    $response = array(
+                        'status' => 'error',
+                        'errors' => array(
+                            'excel_file' => form_error('excel_file')
+                    )
+            );
+            echo json_encode($response);
+            return false;
+
                 }
+
+            }else{
+                $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+
             }
         }else{
             $response = array(
@@ -194,7 +218,7 @@ Class FeesHead extends MY_Controller {
             echo json_encode($response);
             return false;
         }
-    }
+    } 
 }
 
 ?>

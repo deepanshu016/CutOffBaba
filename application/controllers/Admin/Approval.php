@@ -135,7 +135,6 @@ Class Approval extends MY_Controller {
 
     // Import CSV in DB
     public function importApprovalByExcel(){
-
         if($_FILES['excel_file']['error'] == 0){
             $name = $_FILES['excel_file']['name'];
             $ext = explode('.', $name);

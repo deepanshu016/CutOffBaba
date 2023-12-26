@@ -104,7 +104,7 @@ $route['admin/edit-nature/(:any)'] = 'Admin/Nature/editNature/$1';
 $route['admin/delete-nature'] = 'Admin/Nature/deleteNature';
 $route['admin/import-nature'] = 'Admin/Nature/importNature';
 $route['admin/import-nature-by-excel'] = 'Admin/Nature/importNatureByExcel';
-
+$route['admin/export-nature'] = 'Admin/Export/nature';
 
 $route['admin/course'] = 'Admin/Course/index';
 $route['admin/add-course'] = 'Admin/Course/add';
@@ -114,6 +114,7 @@ $route['admin/edit-course/(:any)'] = 'Admin/Course/editCourse/$1';
 $route['admin/delete-course'] = 'Admin/Course/deleteCourse';
 $route['admin/import-course'] = 'Admin/Course/importCourse';
 $route['admin/import-course-by-excel'] = 'Admin/Course/importCourseByExcel';
+$route['admin/export-course'] = 'Admin/Export/courses';
 
 
 
@@ -126,6 +127,7 @@ $route['admin/edit-branch/(:any)'] = 'Admin/Branch/editBranch/$1';
 $route['admin/delete-branch'] = 'Admin/Branch/deleteBranch';
 $route['admin/import-branch'] = 'Admin/Branch/importBranch';
 $route['admin/import-branch-by-excel'] = 'Admin/Branch/importBranchByExcel';
+$route['admin/export-branch'] = 'Admin/Export/branch';
 
 $route['admin/exams'] = 'Admin/Exams/index';
 $route['admin/add-exams'] = 'Admin/Exams/add';
@@ -180,6 +182,7 @@ $route['admin/edit-college/(:any)/(:any)'] = 'Admin/College/editCollege/$1/$2';
 $route['admin/delete-college'] = 'Admin/College/deleteCollege';
 $route['admin/import-college'] = 'Admin/College/importCollege';
 $route['admin/import-college-by-excel'] = 'Admin/College/importCollegeByExcel';
+$route['admin/export-college'] = 'Admin/Export/college';
 
 
 
@@ -191,6 +194,9 @@ $route['admin/edit-feeshead/(:any)'] = 'Admin/FeesHead/editFeesHead/$1';
 $route['admin/delete-feeshead'] = 'Admin/FeesHead/deleteFeesHead';
 $route['admin/import-feeshead'] = 'Admin/FeesHead/importFeesHead';
 $route['admin/import-feeshead-by-excel'] = 'Admin/FeesHead/importFeesHeadByExcel';
+$route['admin/export-feehead'] = 'Admin/Export/feehead';
+
+
 
 $route['admin/fees'] = 'Admin/Fees/index';
 $route['admin/add-fees'] = 'Admin/Fees/add';
@@ -274,7 +280,7 @@ $route['admin/edit-service-rules/(:any)'] = 'Admin/ServiceRules/editServiceRule/
 $route['admin/delete-service-rules'] = 'Admin/ServiceRules/deleteServiceRule';
 $route['admin/import-service-rules'] = 'Admin/ServiceRules/importServiceRules';
 $route['admin/import-service-rules-by-excel'] = 'Admin/ServiceRules/importServiceRulesByExcel';
-
+$route['admin/export-service-bond-rules'] = 'Admin/Export/service_bond_rules';
 
 
 $route['admin/counselling-level'] = 'Admin/CounsellingLevel/index';
@@ -285,6 +291,7 @@ $route['admin/edit-counselling-level/(:any)'] = 'Admin/CounsellingLevel/editCoun
 $route['admin/delete-counselling-level'] = 'Admin/CounsellingLevel/deleteCounsellingLevel';
 $route['admin/import-counselling-level'] = 'Admin/CounsellingLevel/importCounsellingLevel';
 $route['admin/import-counselling-level-by-excel'] = 'Admin/CounsellingLevel/importCounsellingLevelByExcel';
+$route['admin/export-counselling-level'] = 'Admin/Export/counselling_level';
 
 
 
@@ -296,6 +303,7 @@ $route['admin/edit-cutoff-head-name/(:any)'] = 'Admin/CounsellingHead/editCounse
 $route['admin/delete-cutoff-head-name'] = 'Admin/CounsellingHead/deleteCounsellingHead';
 $route['admin/import-cutoff-head-name'] = 'Admin/CounsellingHead/importCounsellingHead';
 $route['admin/import-cutoff-head-name-by-excel'] = 'Admin/CounsellingHead/importCounsellingHeadByExcel';
+$route['admin/export-cutoff-head-name'] = 'Admin/Export/counselling_head';
 
 
 
@@ -308,6 +316,7 @@ $route['admin/edit-category/(:any)'] = 'Admin/Category/editCategory/$1';
 $route['admin/delete-category'] = 'Admin/Category/deleteCategory';
 $route['admin/import-category'] = 'Admin/Category/importCategory';
 $route['admin/import-category-by-excel'] = 'Admin/Category/importCategoryByExcel';
+$route['admin/export-category'] = 'Admin/Export/category';
 
 
 
@@ -320,7 +329,7 @@ $route['admin/edit-sub-category/(:any)'] = 'Admin/SubCategory/editSubCategory/$1
 $route['admin/delete-sub-category'] = 'Admin/SubCategory/deleteSubCategory';
 $route['admin/import-sub-category'] = 'Admin/SubCategory/importSubCategory';
 $route['admin/import-sub-category-by-excel'] = 'Admin/SubCategory/importSubCategoryByExcel';
-
+$route['admin/export-sub-category'] = 'Admin/Export/sub_category';
 
 $route['admin/special-category'] = 'Admin/SpecialCategory/index';
 $route['admin/add-special-category'] = 'Admin/SpecialCategory/add';
@@ -330,7 +339,7 @@ $route['admin/edit-special-category/(:any)'] = 'Admin/SpecialCategory/editSpecia
 $route['admin/delete-special-category'] = 'Admin/SpecialCategory/deleteSpecialCategory';
 $route['admin/import-special-category'] = 'Admin/SpecialCategory/importSpecialCategory';
 $route['admin/import-special-category-by-excel'] = 'Admin/SpecialCategory/importSpecialCategoryByExcel';
-
+$route['admin/export-special-category'] = 'Admin/Export/special_category';
 
 $route['admin/sub-special-category'] = 'Admin/SubSpecialCategory/index';
 $route['admin/add-sub-special-category'] = 'Admin/SubSpecialCategory/add';
@@ -340,7 +349,7 @@ $route['admin/edit-sub-special-category/(:any)'] = 'Admin/SubSpecialCategory/edi
 $route['admin/delete-sub-special-category'] = 'Admin/SubSpecialCategory/deleteSubSpecialCategory';
 $route['admin/import-sub-special-category'] = 'Admin/SubSpecialCategory/importSubSpecialCategory';
 $route['admin/import-sub-special-category-by-excel'] = 'Admin/SubSpecialCategory/importSubSpecialCategoryByExcel';
-
+$route['admin/export-sub-special-category'] = 'Admin/Export/sub_special_category';
 
 
 
