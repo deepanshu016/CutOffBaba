@@ -193,43 +193,63 @@ Class News extends MY_Controller {
     }
 
     // Import CSV in DB
-    public function importNewsByExcel(){
-        $this->form_validation->set_rules('excel_file', 'Excel File', 'callback_file_check_excel_file');
-        if ($this->form_validation->run()) {
-            if(!empty($_FILES['excel_file']['name'])){
-                // }
-                $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 
-                if(isset($_FILES['excel_file']['name']) && in_array($_FILES['excel_file']['type'], $file_mimes)) {
-                    $arr_file = explode('.', $_FILES['excel_file']['name']);
-                    $extension = end($arr_file);
-                    if('xlsx' == $extension){
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-                    } else {
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
-                    }
-                    $spreadsheet = $reader->load($_FILES['excel_file']['tmp_name']);
-                    $sheetData = $spreadsheet->getActiveSheet()->toArray();
-                    $newsData = [];
-                    if(!empty($sheetData)){
-                        foreach($sheetData as $key=>$sheet){
-                            if($key != 0){
-                                $newsData[$key]['title'] = $sheet[0];
-                                $newsData[$key]['slug'] = $this->slug($sheet[0]);
-                                $newsData[$key]['course_id'] = $sheet[1];
-                                $newsData[$key]['image'] = $sheet[2];
-                                $newsData[$key]['short_description'] = $sheet[3];
-                                $newsData[$key]['full_description'] = $sheet[4];
-                                $this->db->trans_start();
-                                $newsId = $this->master->insert('tbl_news',$newsData[$key]);
-                                $this->db->trans_complete();
+    public function importNewsByExcel(){
+        if($_FILES['excel_file']['error'] == 0){
+            $name = $_FILES['excel_file']['name'];
+            $ext = explode('.', $name);
+            
+            $type = $_FILES['excel_file']['type'];
+            $tmpName = $_FILES['excel_file']['tmp_name'];
+            if($ext[1] === 'csv'){
+                if(($handle = fopen($tmpName, 'r')) !== FALSE) {
+                    set_time_limit(0);
+                    $row = 0;
+                    while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+                        $col_count = count($data);
+                        if ($row>0) {
+                            $impdata['image']=$data[1];
+                            $impdata['slug']=$this->slug($data[3]);
+                            $impdata['course_id']=$data[2];
+                            $impdata['title']=$data[3];
+                            $impdata['short_description']=$data[4];
+                            $impdata['full_description']=$data[5];
+                            $id=$data[0];
+                            if($id==""){
+                                $this->db->insert('tbl_news',$impdata);
+                            }else{
+                                $this->db->where('id',$id)->update('tbl_news',$impdata);
                             }
                         }
-                    }
+                        $row++;
+                     }
+                     fclose($handle);
                     $response = array('status' => 'success','message' => 'News imported successfully','url'=>base_url('admin/news'));
                     echo json_encode($response);
                     return true;
+                }else{
+
+                    $response = array(
+                        'status' => 'error',
+                        'errors' => array(
+                            'excel_file' => form_error('excel_file')
+                    )
+            );
+            echo json_encode($response);
+            return false;
+
                 }
+
+            }else{
+                $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+
             }
         }else{
             $response = array(
@@ -241,9 +261,7 @@ Class News extends MY_Controller {
             echo json_encode($response);
             return false;
         }
-    }
-
-
+    } 
 }
 
 ?>

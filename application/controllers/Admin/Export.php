@@ -688,20 +688,80 @@ class Export extends CI_Controller {
 
 	}
 
-	public function feedesc()
-
-	{	
-
-		$query = $this->db->select('*')->get('feedesc')->result_array(); 
+	public function gallery_heads(){	
+		$query = $this->db->select('*')->get('tbl_gallery_heads')->result_array(); 
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
-		    $filename = "feedesc_" . date('Y-m-d') . ".csv"; 
+		    $filename = "gallery_heads_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Fee Title','Fee Head','Name','Fee'); 
+		    $fields = array('ID', 'Head Name'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 		        
-		        $lineData = array($row['id'], $row['feetitle'], $row['feehead'], $row['name'], $row['fee']); 
+		        $lineData = array($row['id'], $row['head_name']); 
+		        fputcsv($f, $lineData, $delimiter); 
+		    } 
+		    fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f); 
+		}
+	}
+	public function clinical_details(){	
+		$query = $this->db->select('*')->get('tbl_clinical_details')->result_array(); 
+		if(count($query) > 0){ 
+		    $delimiter = ","; 
+		    $filename = "clinical_details_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w'); 
+		    $fields = array('ID', 'clinical detail'); 
+		    fputcsv($f, $fields, $delimiter); 
+		    foreach($query as $row){ 
+		        
+		        $lineData = array($row['id'], $row['clinical_detail']); 
+		        fputcsv($f, $lineData, $delimiter); 
+		    } 
+		    fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f); 
+		}
+	}
+	public function facilities(){	
+		$query = $this->db->select('*')->get('tbl_facilities')->result_array(); 
+		if(count($query) > 0){ 
+		    $delimiter = ","; 
+		    $filename = "facilities_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w'); 
+		    $fields = array('ID', 'Facility'); 
+		    fputcsv($f, $fields, $delimiter); 
+		    foreach($query as $row){ 
+		        
+		        $lineData = array($row['id'], $row['facility']); 
+		        fputcsv($f, $lineData, $delimiter); 
+		    } 
+		    fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f); 
+		}
+	}
+	
+	public function counselling_plan(){	
+		$query = $this->db->select('cp.*,dt.degreetype as degree_type_name,c.course as course_name')
+						  ->from('tbl_counsellng_plans as cp')
+						  ->join('tbl_degree_type as dt','cp.degree_type_id = dt.id')
+						  ->join('tbl_course as c','cp.course_id = c.id')
+						  ->get() 
+						  ->result_array(); 
+		if(count($query) > 0){ 
+		    $delimiter = ","; 
+		    $filename = "counselling_plan_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w'); 
+		    $fields = array('ID', 'Plan Name','Degree Type','Course','Discount Percentage','Discounted Price','Description','Terms Condition','Paid Counselling Registration','Payment Info','Status'); 
+		    fputcsv($f, $fields, $delimiter); 
+		    foreach($query as $row){ 
+				$status = ($row['status'] == 1) ? 'Active' : 'Inactive';
+		        $lineData = array($row['id'], $row['plan_name'], $row['degree_type_id'].'_'.$row['degree_type_name'], $row['course_id'].'_'.$row['course_name'],$row['discount_percentage'],$row['discounted_price'],$row['description'],$row['terms_condition'],$row['paid_counselling_registration'],$row['payment_info'],$status); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -712,44 +772,23 @@ class Export extends CI_Controller {
 
 	}
 	
-	public function centralhead()
-
+	public function news()
 	{	
 
-		$query = $this->db->select('*')->get('centralhead')->result_array(); 
+		$query = $this->db->select('n.*,c.course as course_name')
+						  ->from('tbl_news as n')
+						  ->join('tbl_course as c','n.course_id = c.id')
+						  ->get() 
+						  ->result_array();
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
-		    $filename = "centralhead_" . date('Y-m-d') . ".csv"; 
+		    $filename = "news_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Course Id','Name'); 
+		    $fields = array('ID', 'News Image','Course ID','Title','Short Description','Full Description'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 		        
-		        $lineData = array($row['id'], $row['courseid'], $row['name']); 
-		        fputcsv($f, $lineData, $delimiter); 
-		    } 
-		    fseek($f, 0); 
-		    header('Content-Type: text/csv'); 
-		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
-		    fpassthru($f); 
-		}
-
-	}
-	
-	public function centralcategory()
-
-	{	
-
-		$query = $this->db->select('*')->get('centralcategory')->result_array(); 
-		if(count($query) > 0){ 
-		    $delimiter = ","; 
-		    $filename = "centralcategory_" . date('Y-m-d') . ".csv"; 
-		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Centralhead Id','Category'); 
-		    fputcsv($f, $fields, $delimiter); 
-		    foreach($query as $row){ 
-		        
-		        $lineData = array($row['id'], $row['ch_id'], $row['category']); 
+		        $lineData = array($row['id'], $row['image'], $row['course_id'].'_'.$row['course_name'], $row['title'], $row['short_description'], $row['full_description']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 

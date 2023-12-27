@@ -31,7 +31,8 @@
                              <div>
                                 <a href="<?= base_url('admin/add-news'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                                 <a href="<?= base_url('admin/import-news'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
-                             </div>
+                                <a href="<?= base_url('admin/export-news'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
+                              </div>
                           </div>
                        </div>
 

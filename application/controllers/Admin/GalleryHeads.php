@@ -132,35 +132,59 @@ Class GalleryHeads extends MY_Controller {
             return redirect('admin');
         }
     }
-
+ 
     // Import CSV in DB
     public function importGalleryHeadsByExcel(){
-        $this->form_validation->set_rules('excel_file', 'Excel File', 'callback_file_check_excel_file');
-        if ($this->form_validation->run()) {
-            if(!empty($_FILES['excel_file']['name'])){
-                $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-                if(isset($_FILES['excel_file']['name']) && in_array($_FILES['excel_file']['type'], $file_mimes)) {
-                    $arr_file = explode('.', $_FILES['excel_file']['name']);
-                    $extension = end($arr_file);
-                    if('xlsx' == $extension){
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-                    } else {
-                        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
-                    }
-                    $spreadsheet = $reader->load($_FILES['excel_file']['tmp_name']);
-                    $excelData = $spreadsheet->getActiveSheet()->toArray();
-                    $sheetData = $this->csv_formatter($excelData);
-                    $excelDatas = [];
-                    if(!empty($sheetData)){
-                        foreach($sheetData as $key=>$sheet){
-                            $excelDatas[$key]['head_name'] = $sheet['head_name'];
+        if($_FILES['excel_file']['error'] == 0){
+            $name = $_FILES['excel_file']['name'];
+            $ext = explode('.', $name);
+            
+            $type = $_FILES['excel_file']['type'];
+            $tmpName = $_FILES['excel_file']['tmp_name'];
+            if($ext[1] === 'csv'){
+                if(($handle = fopen($tmpName, 'r')) !== FALSE) {
+                    set_time_limit(0);
+                    $row = 0;
+                    while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+                        $col_count = count($data);
+                        if ($row>0) {
+                            $impdata['head_name']=$data[1];
+                            $id=$data[0];
+                            if($id==""){
+                                $this->db->insert('tbl_gallery_heads',$impdata);
+                            }else{
+                                $this->db->where('id',$id)->update('tbl_gallery_heads',$impdata);
+                            }
                         }
-                    }
-                    $stateId = $this->master->insertBulk('tbl_gallery_heads',$excelDatas);
-                    $response = array('status' => 'success','message' => 'Gallery Head data  imported successfully','url'=>base_url('admin/gallery-heads'));
+                        $row++;
+                     }
+                     fclose($handle);
+                    $response = array('status' => 'success','message' => 'Gallery Head imported successfully','url'=>base_url('admin/gallery-heads'));
                     echo json_encode($response);
                     return true;
+                }else{
+
+                    $response = array(
+                        'status' => 'error',
+                        'errors' => array(
+                            'excel_file' => form_error('excel_file')
+                    )
+            );
+            echo json_encode($response);
+            return false;
+
                 }
+
+            }else{
+                $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
+
             }
         }else{
             $response = array(
@@ -172,7 +196,7 @@ Class GalleryHeads extends MY_Controller {
             echo json_encode($response);
             return false;
         }
-    }
+    } 
 }
 
 ?>

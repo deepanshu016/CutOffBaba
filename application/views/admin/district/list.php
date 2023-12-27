@@ -29,7 +29,9 @@
                            <a href="<?= base_url('admin/state'); ?>" class="btn btn-primary add-btn" > <i class="ri-list-unordered align-bottom me-1"></i> List State</a>
                            <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> Sub District</a>
                            <a href="<?= base_url('admin/import-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
-                       </div>
+                           <a href="<?= base_url('admin/export-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
+
+                        </div>
                      </div>
                  </div>
                  <!-- end card header -->

@@ -33,11 +33,7 @@
         pagingType: 'full_numbers',
         lengthChange : true,
         searching: true,
-        ordering: true,
-        dom: 'Bfrtip',
-        buttons: [
-            'excel', 'pdf', 'print'
-        ]
+        ordering: true
     });
 </script>
  <script>

@@ -271,6 +271,7 @@ $route['admin/edit-gallery-heads/(:any)'] = 'Admin/GalleryHeads/editGalleryHeads
 $route['admin/delete-gallery-heads'] = 'Admin/GalleryHeads/deleteGalleryHeads';
 $route['admin/import-gallery-heads'] = 'Admin/GalleryHeads/importGalleryHeads';
 $route['admin/import-gallery-heads-by-excel'] = 'Admin/GalleryHeads/importGalleryHeadsByExcel';
+$route['admin/export-gallery-heads'] = 'Admin/Export/gallery_heads';
 
 $route['admin/service-rules'] = 'Admin/ServiceRules/index';
 $route['admin/add-service-rules'] = 'Admin/ServiceRules/add';
@@ -361,6 +362,7 @@ $route['admin/edit-clinical-details/(:any)'] = 'Admin/ClinicalDetails/editClinic
 $route['admin/delete-clinical-details'] = 'Admin/ClinicalDetails/deleteClinicalDetails';
 $route['admin/import-clinical-details'] = 'Admin/ClinicalDetails/importClinicalDetails';
 $route['admin/import-clinical-details-by-excel'] = 'Admin/ClinicalDetails/importClinicalDetailsByExcel';
+$route['admin/export-clinical-details'] = 'Admin/Export/clinical_details';
 
 
 $route['admin/facilities'] = 'Admin/Facilities/index';
@@ -371,6 +373,7 @@ $route['admin/edit-facilities/(:any)'] = 'Admin/Facilities/editFacilities/$1';
 $route['admin/delete-facilities'] = 'Admin/Facilities/deleteFacilities';
 $route['admin/import-facilities'] = 'Admin/Facilities/importFacilities';
 $route['admin/import-facilities-by-excel'] = 'Admin/Facilities/importFacilitiesByExcel';
+$route['admin/export-facilities'] = 'Admin/Export/facilities';
 
 
 
@@ -383,7 +386,7 @@ $route['admin/edit-counselling-plan/(:any)/(:any)'] = 'Admin/CounsellingPlan/edi
 $route['admin/delete-counselling-plan'] = 'Admin/CounsellingPlan/deleteCounsellingPlan';
 $route['admin/import-counselling-plan'] = 'Admin/CounsellingPlan/importCounsellingPlan';
 $route['admin/import-counselling-plan-by-excel'] = 'Admin/CounsellingPlan/importCounsellingPlanByExcel';
-
+$route['admin/export-counselling-plan'] = 'Admin/Export/counselling_plan';
 
 
 
@@ -395,6 +398,7 @@ $route['admin/edit-news/(:any)'] = 'Admin/News/editNews/$1';
 $route['admin/delete-news'] = 'Admin/News/deleteNews';
 $route['admin/import-news'] = 'Admin/News/importNews';
 $route['admin/import-news-by-excel'] = 'Admin/News/importNewsByExcel';
+$route['admin/export-news'] = 'Admin/Export/news';
 
 
 $route['admin/college-files'] = 'Admin/CollegeFiles/index';
