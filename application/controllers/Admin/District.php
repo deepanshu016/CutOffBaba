@@ -165,8 +165,8 @@ Class District extends MY_Controller {
                     while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
                         $col_count = count($data);
                         if ($row>0) {
-                            $impdata['city']=$data[1];
-                            $impdata['state_id']=$data[2];
+                            $impdata['city']=$data[2];
+                            $impdata['state_id']=$data[1];
                             $impdata['country']=$data[3];
                             $id=$data[0];
                             if($id==""){

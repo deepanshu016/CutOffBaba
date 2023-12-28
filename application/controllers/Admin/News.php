@@ -210,7 +210,7 @@ Class News extends MY_Controller {
                         if ($row>0) {
                             $impdata['image']=$data[1];
                             $impdata['slug']=$this->slug($data[3]);
-                            $impdata['course_id']=$data[2];
+                            $impdata['course_id']=explode('_',$data[2])[0];
                             $impdata['title']=$data[3];
                             $impdata['short_description']=$data[4];
                             $impdata['full_description']=$data[5];

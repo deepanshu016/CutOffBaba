@@ -88,6 +88,25 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
+                                              <label for="basiInput" class="form-label">College</label>
+                                              <select class="form-control js-example-basic-multiple" name="college[]" multiple>
+                                                  <option value="">Select College</option>
+                                                  <?php
+                                                  $collegeList = get_master_data('tbl_college',[]);
+                                                  if(!empty($collegeList)){
+                                                        if(!empty($singleCounsellingHead)){
+                                                            $collegeLists = explode('|',$singleCounsellingHead['colleges']);
+
+                                                        }
+                                                      foreach($collegeList as $college){ ?>
+                                                          <option value="<?= $college['id']; ?>" <?= (!empty($singleCounsellingHead) && in_array($college['id'],$collegeLists)) ? 'selected' : ''; ?>><?= $college['full_name']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="college"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
                                               <label for="basiInput" class="form-label">Exams</label>
                                               <select class="form-control js-example-basic-multiple" name="exam_id[]" multiple>
                                                   <option value="">Select Exams</option>

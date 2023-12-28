@@ -175,10 +175,10 @@ Class SubSpecialCategory extends MY_Controller {
                         if ($row>0) {
                             $impdata['sub_special_category_name']=$data[1];
                             $impdata['slug']= $this->slug($data[1]);
-                            $impdata['special_id']=$data[2];
-                            $impdata['head_id']=$data[3];
+                            $impdata['special_id']=explode('_',$data[2])[0];
+                            $impdata['head_id']=explode('_',$data[3])[0];
                             $impdata['short_name']=$data[4];
-                            $impdata['open_id']=$data[5];
+                            $impdata['open_id']=explode('_',$data[5])[0];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_sub_special_category',$impdata);

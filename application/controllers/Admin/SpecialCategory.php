@@ -169,9 +169,9 @@ Class SpecialCategory extends MY_Controller {
                         if ($row>0) {
                             $impdata['special_category_name']=$data[1];
                             $impdata['slug']=$this->slug($data[1]);
-                            $impdata['head_id']=$data[2];
+                            $impdata['head_id']=explode('_',$data[2])[0];
                             $impdata['short_name']=$data[3];
-                            $impdata['visibility_id']=$data[4];
+                            $impdata['visibility_id']=explode('_',$data[4])[0];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_special_category',$impdata);

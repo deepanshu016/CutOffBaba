@@ -353,7 +353,7 @@ Class College extends MY_Controller {
                             $impdata['short_description'] = $data[2];
                             $impdata['popular_name_one'] = $data[3];
                             $impdata['popular_name_two'] = $data[4];
-                            $impdata['establishment'] = $data[8];
+                            $impdata['establishment'] = date('Y-m-d',strtotime($data[8]));
                             $impdata['gender_accepted'] = $data[10];
                             $impdata['course_offered'] = $data[11];
                             $impdata['college_banner'] = $data[5];

@@ -169,7 +169,7 @@ Class Category extends MY_Controller {
                             $impdata['category_name']=$data[1];
                             $impdata['head_id ']=$data[2];
                             $impdata['short_name']=$data[3];
-                            $impdata['visibility_id ']=$data[4];
+                            $impdata['visibility_id ']=explode('_',$data[4])[0];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_category',$impdata);

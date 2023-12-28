@@ -63,7 +63,7 @@ class Export extends CI_Controller {
 
 	public function subDistrict()
 	{	
-		$query = $this->db->select('sd.id as sub_district_id,sd.country as sub_country_id,sd.state as state_sub,sd.district as sub_distrcit,sd.district as sub_district_district,s.id as state_id,s.name as state_name,s.country_id ,d.id as district_id,d.city as city_name,d.state_id, d.country,c.countryCode,c.name as country_name')->from('tbl_sub_district as sd')->join('tbl_state as s', 'sd.state = s.id')->join('tbl_city as d', 'sd.district = d.id')->join('tbl_country as c', 'sd.country = c.id')->get()->result_array(); 
+		$query = $this->db->select('sd.id as sub_district_id,sd.country as sub_country_id,sd.state as state_sub,sd.sub_district as sub_distrcit,sd.district as sub_district_district,s.id as state_id,s.name as state_name,s.country_id ,d.id as district_id,d.city as city_name,d.state_id, d.country,c.countryCode,c.name as country_name')->from('tbl_sub_district as sd')->join('tbl_state as s', 'sd.state = s.id')->join('tbl_city as d', 'sd.district = d.id')->join('tbl_country as c', 'sd.country = c.id')->get()->result_array(); 
 
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
@@ -72,7 +72,7 @@ class Export extends CI_Controller {
 		    $fields = array('ID', 'Country ID','State ID','District ID','Sub District'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
-		        $lineData = array($row['sub_district_id'], $row['sub_country_id'].'_'.$row['country_name'], $row['state_sub'].'_'.$row['state_name'], $row['sub_district_district'].'_'.$row['city_name'],$row['sub_district_district']); 
+		        $lineData = array($row['sub_district_id'], $row['sub_country_id'].'_'.$row['country_name'], $row['state_sub'].'_'.$row['state_name'], $row['sub_district_district'].'_'.$row['city_name'],$row['sub_distrcit']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -492,11 +492,10 @@ class Export extends CI_Controller {
 	}
 
 	public function counselling_head(){	
-		$query = $this->db->select('ch.*,c.course as course_name,l.level as counselling_level,e.exam as exam_name,s.name as state_name')
+		$query = $this->db->select('ch.*,c.course as course_name,l.level as counselling_level,s.name as state_name')
 						  ->from('tbl_counselling_head as ch')
 						  ->join('tbl_course as c','ch.course_id = c.id')
 						  ->join('tbl_counselling_level as l','ch.level_id = l.id')
-						  ->join('tbl_exam as e','ch.exams = e.id')
 						  ->join('tbl_state as s','ch.state_id = s.id')
 						  ->get()
 						  ->result_array(); 
@@ -504,11 +503,11 @@ class Export extends CI_Controller {
 		    $delimiter = ","; 
 		    $filename = "counselling_head_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Head Name','Course','Level','Exams','State'); 
+		    $fields = array('ID', 'Head Name','Course','Level','Exams','State','College'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 		        
-		        $lineData = array($row['id'], $row['head_name'], $row['course_id'].'_'.$row['course_name'], $row['level_id'].'_'.$row['counselling_level'], $row['exams'].'_'.$row['exam_name'], $row['state_id'].'_'.$row['state_name']); 
+		        $lineData = array($row['id'], $row['head_name'], $row['course_id'].'_'.$row['course_name'], $row['level_id'].'_'.$row['counselling_level'], $row['exams'], $row['state_id'].'_'.$row['state_name'],$row['college']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 

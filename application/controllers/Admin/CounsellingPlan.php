@@ -186,8 +186,8 @@ Class CounsellingPlan extends MY_Controller {
                         if ($row>0) {
                             $impdata['plan_name']=$data[1];
                             $impdata['slug']=$this->slug($data[1]);
-                            $impdata['degree_type_id']=$data[2];
-                            $impdata['course_id']=$data[3];
+                            $impdata['degree_type_id']=explode('_',$data[2])[0];
+                            $impdata['course_id']=explode('_',$data[3])[0];
                             $impdata['discount_percentage']=$data[4];
                             $impdata['discounted_price']=$data[5];
                             $impdata['description']=$data[6];

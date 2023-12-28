@@ -232,7 +232,7 @@ Class Exams extends MY_Controller {
                             $impdata['exam']=$data[1];
                             $impdata['exam_full_name']=$data[2];
                             $impdata['exam_short_name']=$data[3];
-                            $impdata['degree_type']=$data[4];
+                            $impdata['degree_type']=explode('_',$data[4])[0];
                             $impdata['eligibility']=$data[5];
                             $impdata['exam_duration']=$data[6];
                             $impdata['maximum_marks']=$data[7];
@@ -241,7 +241,7 @@ Class Exams extends MY_Controller {
                             $impdata['exam_held_in']=date('Y-m-d',strtotime($data[10]));
                             $impdata['registration_starts']=date('Y-m-d',strtotime($data[11]));
                             $impdata['registration_ends']=date('Y-m-d',strtotime($data[12]));
-                            $impdata['stream']=$data[13];
+                            $impdata['stream']=explode('_',$data[13])[0];
                             $impdata['course_accepting']=$data[14];
                             $impdata['slug']=$this->slug($data[1]);
                             $id=$data[0];
@@ -254,7 +254,7 @@ Class Exams extends MY_Controller {
                         $row++;
                      }
                      fclose($handle);
-                    $response = array('status' => 'success','message' => 'Clinic Facility  imported successfully','url'=>base_url('admin/clinical-facility'));
+                    $response = array('status' => 'success','message' => 'Exams  imported successfully','url'=>base_url('admin/exams'));
                     echo json_encode($response);
                     return true;
 

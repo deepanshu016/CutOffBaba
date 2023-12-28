@@ -29,7 +29,7 @@
                            <a href="<?= base_url('admin/district'); ?>" class="btn btn-primary add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> List District</a>
                            <a href="<?= base_url('admin/sub-district'); ?>" class="btn btn-primary add-btn" ><i class="ri-list-unordered align-bottom me-1"></i> List Sub District</a>
                            <a href="<?= base_url('admin/import-country'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
-                           <a href="<?= base_url('admin/export-country'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
+                           <a href="<?= base_url('admin/export/country'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
 
                         </div>
                      </div>

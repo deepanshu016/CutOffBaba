@@ -30,7 +30,7 @@
                                     <div class="col-sm-auto">
                                         <div>
                                             <a href="<?= base_url('admin/branch'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('admin/export-branch'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Branch </a>
+                                            <a href="<?= base_url('admin/export-branch'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
                                         </div>
                                     </div>
                                     <span class="">Notes:-</span>

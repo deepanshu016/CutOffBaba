@@ -257,9 +257,9 @@ Class Course extends MY_Controller {
                             $impdata['course_duration']=$data[7];
                             $impdata['exam']=$data[8];
                             $impdata['course_eligibility']=$data[9];
-                            $impdata['course_opportunity']=date('Y-m-d',strtotime($data[10]));
-                            $impdata['expected_salary']=date('Y-m-d',strtotime($data[11]));
-                            $impdata['course_fees']=date('Y-m-d',strtotime($data[12]));
+                            $impdata['course_opportunity']=$data[10];
+                            $impdata['expected_salary']=$data[11];
+                            $impdata['course_fees']=$data[12];
                             $impdata['counselling_authority']=$data[13];
                             $impdata['college']=$data[14];
                             $impdata['branch_type']=$data[15];

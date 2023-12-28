@@ -145,13 +145,12 @@ Class Country extends MY_Controller {
 
     // Import CSV in DB
     public function importCountryByExcel(){
-
         if($_FILES['excel_file']['error'] == 0){
             $name = $_FILES['excel_file']['name'];
-            $ext = strtolower(end(explode('.', $_FILES['excel_file']['name'])));
+            $ext = explode('.', $_FILES['excel_file']['name']);
             $type = $_FILES['excel_file']['type'];
             $tmpName = $_FILES['excel_file']['tmp_name'];
-            if($ext === 'csv'){
+            if($ext[1] === 'csv'){
                 if(($handle = fopen($tmpName, 'r')) !== FALSE) {
                     set_time_limit(0);
                     $row = 0;
