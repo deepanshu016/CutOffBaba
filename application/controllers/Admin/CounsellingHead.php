@@ -232,6 +232,18 @@ Class CounsellingHead extends MY_Controller {
             return false;
         }
     }  
+
+
+    public function table(){
+        if ($this->is_admin_logged_in() == true) {
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $this->load->view('admin/cutoff_head_name/table',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
 }
 
 ?>

@@ -411,7 +411,7 @@ $route['admin/assign-media/(:any)'] = 'Admin/CollegeFiles/assignMedia/$1';
 $route['admin/save-single-gallery-media'] = 'Admin/CollegeFiles/saveMediaToGallery';
 $route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
 
-
+$route['admin/cutoffheadtable'] = 'Admin/CounsellingHead/table';
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
