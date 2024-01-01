@@ -238,6 +238,7 @@ Class CounsellingHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $tableData = $this->master->getCutOffData();
             $this->load->view('admin/cutoff_head_name/table',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');

@@ -89,6 +89,10 @@ class MasterModel extends CI_Model {
 		}
 		return true;
 	}
+
+	function getCutOffData(){
+		
+	}
 }
 
 ?>
