@@ -91,7 +91,28 @@ class MasterModel extends CI_Model {
 	}
 
 	function getCutOffData(){
-		
+		$this->db->select('t1.*, 
+			c.id, c.course, c.course_full_name, c.course_short_name, c.course_icon, 
+			c.stream AS stream_id, c.degree_type AS degree_type_id, c.course_duration, c.exam, 
+			c.course_eligibility, c.course_opportunity, c.expected_salary, c.course_fees, 
+			c.counselling_authority, t2.full_name AS college_full_name,
+			b.id AS branch_id, b.branch AS branch_name, b.branch_type');
+		$this->db->from('tbl_cutfoff_marks_data AS t1');
+		$this->db->join('tbl_course AS c', 'c.id = t1.course_id');
+		$this->db->join('tbl_college AS t2', 't2.id = t1.college_id');
+		$this->db->join('tbl_branch AS b', 'b.id = t1.branch_id');
+		$this->db->group_by('t1.category_type');
+
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+	function GetCollegeForCutOff(){
+		$this->db->select('t1.id as cutoff_id, t1.college_id, t2.full_name AS college_full_name,t2.course_offered');
+		$this->db->from('tbl_cutfoff_marks_data AS t1');
+		$this->db->join('tbl_college AS t2', 't2.id = t1.college_id');
+		$this->db->group_by('t1.college_id');
+		$query = $this->db->get();
+		return $query->result_array();
 	}
 }
 

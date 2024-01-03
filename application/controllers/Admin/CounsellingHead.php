@@ -238,7 +238,10 @@ Class CounsellingHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $tableData = $this->master->getCutOffData();
+            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> 2]);
+            $data['counsellingHead'] = $this->master->getRecords('tbl_counselling_head');
+            // echo "<pre>";
+            // print_r($data['collegeData']); die;
             $this->load->view('admin/cutoff_head_name/table',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');

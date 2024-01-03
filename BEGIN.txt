@@ -10,3 +10,17 @@ BEGIN
     LEFT JOIN tbl_course AS c ON c.id = t1.course_id
     LEFT JOIN tbl_branch AS b ON b.id = t1.branch_id;
 END
+
+
+
+ns-235.awsdns-29.com
+
+
+ns-1409.awsdns-48.org
+
+
+ns-795.awsdns-35.net
+
+
+
+ns-1886.awsdns-43.co.uk
