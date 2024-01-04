@@ -1,9 +1,15 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Export extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+        $this->load->model('MasterModel','master');
+        $this->load->model('SiteSettings','site');
+    }
 	public function state(){	
 		$query = $this->db->select('s.id as state_id,s.name as state_name , s.country_id,c.countryCode,c.name')->from('tbl_state as s')->join('tbl_country as c', 's.country_id = c.id')->get()->result_array(); 
 		if(count($query) > 0){ 
@@ -918,10 +924,7 @@ class Export extends CI_Controller {
 
 	}
 	
-		public function facility()
-
-	{	
-
+	public function facility(){	
 		$query = $this->db->select('*')->get('facility')->result_array(); 
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
@@ -939,8 +942,123 @@ class Export extends CI_Controller {
 		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
 		    fpassthru($f); 
 		}
-
 	}
+
+
+	// public function cutOffExport(){
+	// 	$subCategoryData = $this->master->getRecords('tbl_sub_category',['head_id'=> 2]);
+	// 	$cutOffHead = $this->site->singleRecord('tbl_counselling_head',['id'=>6]);
+	// 	$collegeIds = ($cutOffHead['college']) ? explode('|',$cutOffHead['college']) : [];
+	// 	$collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
+	// 	if(count($subCategoryData) > 0){ 
+	// 	    $delimiter = ","; 
+	// 	    $filename = "cutoff_data_head_" . date('Y-m-d') . ".csv"; 
+	// 	    $f = fopen('php://memory', 'w'); 
+	// 	    $fields = [
+	// 			'College',
+	// 			'Course',
+	// 			'Branch',
+	// 			'Sub Category One' => [
+	// 				'R1','R2','R3','R4','R5'
+	// 			],
+	// 			'Sub Category Two' => [
+	// 				'R1','R2','R3','R4','R5'
+	// 			]
+	// 		];
+	// 		fputcsv($f, $fields, $delimiter); 
+	// 		// $dynamicData = [];
+	// 		// if(!empty($subCategoryData)){
+	// 		// 	foreach($subCategoryData as $key=>$sub){
+	// 		// 		$dynamicData = [$sub['sub_category_name']];
+	// 		// 		fputcsv($f, $dynamicData, $delimiter); 
+	// 		// 	}
+	// 		// }
+		   
+	// 	    // foreach($query as $row){ 
+		        
+	// 	    //     $lineData = array($row['id'], $row['degreeid'], $row['name']); 
+	// 	    //     fputcsv($f, $lineData, $delimiter); 
+	// 	    // } 
+	// 	    fseek($f, 0); 
+	// 	    header('Content-Type: text/csv'); 
+	// 	    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+	// 	    fpassthru($f); 
+	// 	}
+	// }
+	public function cutOffExport() {
+		require 'vendor/autoload.php';
+		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+		$sheet = $spreadsheet->getActiveSheet();
+	
+		// Example multi-dimensional array
+		$data = [
+			[
+				'College A',
+				'Course A',
+				'Branch A',
+				['Value1', 'Value2', 'Value3', 'Value4', 'Value5'], // Sub Category One - R1
+				['Val1', 'Val2', 'Val3', 'Val4', 'Val5'] // Sub Category Two - R1
+			],
+			[
+				'',
+				'',
+				'Branch B',
+				['Val11', 'Val12', 'Val13', 'Val14', 'Val15'], // Sub Category One - R1
+				['V1', 'V2', 'V3', 'V4', 'V5'] // Sub Category Two - R1
+			]
+			// Add more rows as needed
+		];
+	
+		// Define headers
+		$headers = [
+			'College',
+			'Course',
+			'Branch',
+			'Sub Category One',
+			'',
+			'',
+			'',
+			'',
+			'Sub Category Two',
+			'',
+			'',
+			'',
+			''
+		];
+	
+		// Merge cells for Sub Category columns
+		$sheet->fromArray([$headers], NULL, 'A1');
+		$sheet->mergeCells('D1:H1');
+		$sheet->mergeCells('I1:M1');
+	
+		// Add data
+		$rowIndex = 2;
+		foreach ($data as $row) {
+			$columnIndex = 0;
+			foreach ($row as $cell) {
+				if (is_array($cell)) {
+					foreach ($cell as $value) {
+						$sheet->setCellValueByColumnAndRow($columnIndex++, $rowIndex, $value);
+					}
+					$columnIndex += 5; // Move to the next set of Sub Category columns
+				} else {
+					$sheet->setCellValueByColumnAndRow($columnIndex++, $rowIndex, $cell);
+				}
+			}
+			$rowIndex++;
+		}
+	
+		$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+		$filename = "cutoff_data_head_" . date('Y-m-d') . ".xlsx";
+		$writer->save($filename);
+	
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header("Content-Disposition: attachment; filename=$filename");
+		header('Cache-Control: max-age=0');
+		readfile($filename);
+		exit;
+	}
+	
 
 }
 

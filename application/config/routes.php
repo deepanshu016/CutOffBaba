@@ -412,6 +412,7 @@ $route['admin/save-single-gallery-media'] = 'Admin/CollegeFiles/saveMediaToGalle
 $route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
 
 $route['admin/cutoffheadtable'] = 'Admin/CounsellingHead/table';
+$route['admin/export-table'] = 'Admin/Export/cutOffExport';
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
