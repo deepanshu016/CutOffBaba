@@ -993,18 +993,74 @@ class Export extends CI_Controller {
 		// Example multi-dimensional array
 		$data = [
 			[
-				'College A',
-				'Course A',
-				'Branch A',
-				['Value1', 'Value2', 'Value3', 'Value4', 'Value5'], // Sub Category One - R1
-				['Val1', 'Val2', 'Val3', 'Val4', 'Val5'] // Sub Category Two - R1
+				'',
+				'',
+				'',
+				'',
+				['R1','','','R2','','','R3','','','R4','','','R5','','','R1','','','R2','','','R3','','','R4','','','R5']
 			],
 			[
 				'',
 				'',
+				'',
+				'',
+				['AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS'],
+			],
+			[
+				'',
+				'BBD',
+				'Course A',
+				'Branch A',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'',
 				'Branch B',
-				['Val11', 'Val12', 'Val13', 'Val14', 'Val15'], // Sub Category One - R1
-				['V1', 'V2', 'V3', 'V4', 'V5'] // Sub Category Two - R1
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'Course B',
+				'Branch A',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'',
+				'Branch B',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'SRM',
+				'Course A',
+				'Branch A',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'',
+				'Branch B',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'Course B',
+				'Branch A',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			],
+			[
+				'',
+				'',
+				'',
+				'Branch B',
+				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
 			]
 			// Add more rows as needed
 		];
@@ -1014,23 +1070,23 @@ class Export extends CI_Controller {
 			'College',
 			'Course',
 			'Branch',
-			'Sub Category One',
-			'',
-			'',
-			'',
-			'',
-			'Sub Category Two',
-			'',
-			'',
-			'',
-			''
+			'Sub Category One', '', '', '', '', '', '', '', '', '', '', '', '', '', '','Sub Category Two'
 		];
 	
 		// Merge cells for Sub Category columns
 		$sheet->fromArray([$headers], NULL, 'A1');
-		$sheet->mergeCells('D1:H1');
-		$sheet->mergeCells('I1:M1');
-	
+		$sheet->mergeCells('D1:R1');
+		$sheet->mergeCells('S1:AG1');
+		$sheet->mergeCells('D2:F2');
+		$sheet->mergeCells('G2:I2');
+		$sheet->mergeCells('J2:L2');
+		$sheet->mergeCells('M2:O2');
+		$sheet->mergeCells('P2:R2');
+		$sheet->mergeCells('S2:U2');
+		$sheet->mergeCells('V2:X2');
+		$sheet->mergeCells('Y2:AA2');
+		$sheet->mergeCells('AB2:AD2');
+		$sheet->mergeCells('AE2:AG2');
 		// Add data
 		$rowIndex = 2;
 		foreach ($data as $row) {
@@ -1038,16 +1094,28 @@ class Export extends CI_Controller {
 			foreach ($row as $cell) {
 				if (is_array($cell)) {
 					foreach ($cell as $value) {
+						if ($rowIndex == 2 && $columnIndex > 2) { // Assuming the first row needs to be bold
+							$sheet->getStyleByColumnAndRow($columnIndex + 1, $rowIndex)->getFont()->setBold(true);
+						}
 						$sheet->setCellValueByColumnAndRow($columnIndex++, $rowIndex, $value);
 					}
-					$columnIndex += 5; // Move to the next set of Sub Category columns
+					$columnIndex += 5;
 				} else {
 					$sheet->setCellValueByColumnAndRow($columnIndex++, $rowIndex, $cell);
+				}
+				if ($rowIndex == 2 && $columnIndex > 2) { // Assuming the first row needs to be bold
+					$sheet->getStyleByColumnAndRow($columnIndex + 1, $rowIndex)->getFont()->setBold(true);
 				}
 			}
 			$rowIndex++;
 		}
-	
+		// \
+		$lastColumn = $sheet->getHighestColumn();
+		$lastRow = $sheet->getHighestRow();
+		$range = 'A1:' . $lastColumn . $lastRow;
+		$sheet->getStyle($range)->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+		$sheet->getStyle($range)->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+
 		$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 		$filename = "cutoff_data_head_" . date('Y-m-d') . ".xlsx";
 		$writer->save($filename);
@@ -1058,6 +1126,84 @@ class Export extends CI_Controller {
 		readfile($filename);
 		exit;
 	}
+	// public function cutOffExport() {
+	// 	require 'vendor/autoload.php';
+	// 	$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+	// 	$sheet = $spreadsheet->getActiveSheet();
+		
+	// 	// Example multi-dimensional array
+	// 	$data = [
+	// 		[
+	// 			'College A',
+	// 			'Course A',
+	// 			'Branch A',
+	// 			'R1', 'AIR', 'SR', 'MARKS',
+	// 			'R2', 'AIR', 'SR', 'MARKS',
+	// 			'R3', 'AIR', 'SR', 'MARKS',
+	// 			'R4', 'AIR', 'SR', 'MARKS',
+	// 			'R5', 'AIR', 'SR', 'MARKS',
+	// 		],
+	// 		[
+	// 			'',
+	// 			'',
+	// 			'Branch B',
+	// 			'R1', 'AIR', 'SR', 'MARKS',
+	// 			'R2', 'AIR', 'SR', 'MARKS',
+	// 			'R3', 'AIR', 'SR', 'MARKS',
+	// 			'R4', 'AIR', 'SR', 'MARKS',
+	// 			'R5', 'AIR', 'SR', 'MARKS',
+	// 		]
+	// 		// Add more rows as needed
+	// 	];
+	
+	// 	// Define headers
+	// 	$headers = [
+	// 		'College',
+	// 		'Course',
+	// 		'Branch',
+	// 		'Sub Category One',
+	// 		'', '', '','',
+	// 		'Sub Category Two',
+	// 		'', '', '','',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 		'', '', '', '',
+	// 	];
+	
+	// 	// Merge cells for Sub Category columns
+	// 	$sheet->fromArray([$headers], NULL, 'A1');
+	// 	$sheet->mergeCells('D1:G1');
+	// 	$sheet->mergeCells('H1:K1');
+	// 	$sheet->mergeCells('L1:O1');
+	// 	$sheet->mergeCells('P1:S1');
+	// 	$sheet->mergeCells('T1:W1');
+	// 	$sheet->mergeCells('X1:AA1');
+	
+	// 	// Add data
+	// 	$rowIndex = 2;
+	// 	foreach ($data as $row) {
+	// 		$columnIndex = 0;
+	// 		foreach ($row as $cell) {
+	// 			$sheet->setCellValueByColumnAndRow($columnIndex++, $rowIndex, $cell);
+	// 		}
+	// 		$rowIndex++;
+	// 	}
+	
+	// 	$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+	// 	$filename = "cutoff_data_head_" . date('Y-m-d') . ".xlsx";
+	// 	$writer->save($filename);
+	
+	// 	header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+	// 	header("Content-Disposition: attachment; filename=$filename");
+	// 	header('Cache-Control: max-age=0');
+	// 	readfile($filename);
+	// 	exit;
+	// }
 	
 
 }
