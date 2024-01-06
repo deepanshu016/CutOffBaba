@@ -985,11 +985,34 @@ class Export extends CI_Controller {
 	// 	    fpassthru($f); 
 	// 	}
 	// }
+
+
+	function getColumnIndex($colIndex)
+	{
+		
+		$letters = '';
+		while ($colIndex > 0) {
+			$remainder = ($colIndex - 1) % 26;
+			$letters = chr(65 + $remainder) . $letters;
+			$colIndex = floor(($colIndex - 1) / 26);
+		}
+		return $letters;
+	}
 	public function cutOffExport() {
 		require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
-	
+		$subCategoryData = $this->master->getRecords('tbl_sub_category',[]);
+		$count=count($subCategoryData);
+		$row=[];
+		for($i=1;$i<=$count;$i++){
+			$row=array_merge($row,['R1','','','R2','','','R3','','','R4','','','R5','','']);
+		}
+		$totalSpaces = array_filter(array_values($row));
+		$rows=[];
+		for($j=1;$j<=count($totalSpaces);$j++){
+			$rows=array_merge($rows,['AIR', 'SR', 'MARKS']);
+		}
 		// Example multi-dimensional array
 		$data = [
 			[
@@ -997,14 +1020,14 @@ class Export extends CI_Controller {
 				'',
 				'',
 				'',
-				['R1','','','R2','','','R3','','','R4','','','R5','','','R1','','','R2','','','R3','','','R4','','','R5']
+				$row
 			],
 			[
 				'',
 				'',
 				'',
 				'',
-				['AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS','AIR', 'SR', 'MARKS'],
+				$rows
 			],
 			[
 				'',
@@ -1064,17 +1087,59 @@ class Export extends CI_Controller {
 			]
 			// Add more rows as needed
 		];
-	
+		
+		$subCategoryDatas = [];
+		if(!empty($subCategoryData)){
+			foreach($subCategoryData as $sub){
+				$subCategoryDatas[] = $sub['sub_category_name'];
+				for($i = 0;$i<14; $i++){
+					$subCategoryDatas[] = '';
+				}
+
+			}
+		}
+		
+		//$subCategoryDatas = implode(',',$subCategoryDatas);
+		
 		// Define headers
 		$headers = [
 			'College',
 			'Course',
-			'Branch',
-			'Sub Category One', '', '', '', '', '', '', '', '', '', '', '', '', '', '','Sub Category Two'
+			'Branch'
 		];
-	
+		$headers=array_merge($headers,$subCategoryDatas);
+		// echo "<pre>";
+		// print_r(count($row));die;
+		
 		// Merge cells for Sub Category columns
 		$sheet->fromArray([$headers], NULL, 'A1');
+		$startColumn = 'D';
+		$mergeRanges = []; // Array to store merge ranges
+		
+		if (!empty($subCategoryData)) {
+			for ($k = 1; $k <= $count; $k++) {
+
+				// $startColumn = (strlen($startColumn) == 1) ? ord($startColumn) : ord($startColumn[0]);
+				$startColumnIndex = ord($startColumn[0]) - ord('A') + 1;
+				// echo "<br>";
+				// echo $startColumnIndex;
+				$endColumnIndex = $startColumnIndex + count($totalSpaces) - 1;
+				// echo "<br>";
+				// echo $endColumnIndex;
+				$endColumn =  $this->getColumnIndex($endColumnIndex);
+				$currentMergeRange = $startColumn . '1:' . $endColumn . '1';
+				$mergeRanges[] = $currentMergeRange;
+				$startColumn = $this->getColumnIndex($endColumnIndex + 1);
+				
+				echo'<br>';
+				echo $startColumn;
+			}
+		}
+		// Printing out the merge ranges stored in the array
+		// foreach ($mergeRanges as $range) {
+		// 	echo $range . '<br>';
+		// }
+		die;
 		$sheet->mergeCells('D1:R1');
 		$sheet->mergeCells('S1:AG1');
 		$sheet->mergeCells('D2:F2');
