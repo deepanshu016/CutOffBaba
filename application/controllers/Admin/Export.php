@@ -1003,6 +1003,7 @@ class Export extends CI_Controller {
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
 		$subCategoryData = $this->master->getRecords('tbl_sub_category',[]);
+		//$collegeData = $this->master->getRecords('tbl_college',[]);
 		$count=count($subCategoryData);
 		$row=[];
 		for($i=1;$i<=$count;$i++){
@@ -1014,6 +1015,184 @@ class Export extends CI_Controller {
 			$rows=array_merge($rows,['AIR', 'SR', 'MARKS']);
 		}
 		// Example multi-dimensional array
+		$excelData = [];
+		$g = 0;
+		$counsellingHead = $this->master->getRecords('tbl_counselling_head');
+		$i = 0;
+                       
+		if($counsellingHead){
+			foreach($counsellingHead as $head) { 
+				$collegeIds = ($head['college']) ? explode('|',$head['college']) : [];
+				if(!empty($collegeIds)){
+				$collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
+				$keys = 0;                 
+if(!empty($collegeData)){
+foreach($collegeData as $college) { 
+	$courseList = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+	if(!empty($courseList)){
+		$courseData = $this->db->select('*')->where_in('id',$courseList)->get('tbl_course')->result_array();
+	}
+	$j = 0;
+	if(!empty($courseData)){
+		foreach($courseData as $course) { 
+
+			//$sql = "SELECT * FROM tbl_branch  WHERE FIND_IN_SET('courses', ".$course['id'].")";
+			$branchData = $this->db->select('*')->like('courses',$course['id'])->get('tbl_branch')->result_array();
+			// echo $this->db->last_query();
+			// echo "<pre>";
+			// print
+			if(!empty($branchData)){
+				foreach($branchData as $branch) { 
+					$courses=($branch['courses']) ? explode('|',$branch['courses']) : [];
+					
+					if(in_array($course['id'],$courses)){
+						$excelData[$keys][] = '';
+					$excelData[$keys][] = ($i === 0) ? $college['full_name'] : '';
+					$excelData[$keys][] = ($j === 0) ? $course['course'] : '';
+					$excelData[$keys][] = $branch['branch'];
+						
+
+	if(!empty($subCategoryData)) { 
+		$excelRecords = [];
+	foreach($subCategoryData as $kysss=>$subs) {    
+
+		$cutoffMarksRoundOne = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_one'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+		$cutoffMarksRoundTwo = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_two'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+		$cutoffMarksRoundThree = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_three'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+		$cutoffMarksRoundFour = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_four'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+		$cutoffMarksRoundFive = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_five'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+	//    echo $this->db->last_query();
+	// echo "<br/>";
+	// 	echo "Keys";
+	// 	echo $keys;
+	// 	echo "<br/>";
+	// 	echo "I";
+	// 	echo $i;
+	// 	echo "<br/>";
+		array_push($excelRecords,(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['air'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['sr'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['marks'] : 0);
+
+		array_push($excelRecords,(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['air'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['sr'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['marks'] : 0);
+
+		array_push($excelRecords,(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['air'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['sr'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['marks'] : 0);
+
+		array_push($excelRecords,(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['air'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['sr'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['marks'] : 0);
+
+
+		array_push($excelRecords,(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['air'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['sr'] : 0);
+		array_push($excelRecords,(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['marks'] : 0);
+		// $excelRecords = [		
+
+			
+		// 	(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['air'] : 0,
+		// 	(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['sr'] : 0,
+		// 	(!empty($cutoffMarksRoundOne)) ? $cutoffMarksRoundOne['marks'] : 0,
+
+
+		// 	(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['air'] : 0,
+		// 	(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['sr'] : 0,
+		// 	(!empty($cutoffMarksRoundTwo)) ? $cutoffMarksRoundTwo['marks'] : 0,
+
+
+		// 	(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['air'] : 0,
+		// 	(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['sr'] : 0,
+		// 	(!empty($cutoffMarksRoundThree)) ? $cutoffMarksRoundThree['marks'] : 0,
+
+		// 	(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['air'] : 0,
+		// 	(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['sr'] : 0,
+		// 	(!empty($cutoffMarksRoundFour)) ? $cutoffMarksRoundFour['marks'] : 0,
+
+		// 	(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['air'] : 0,
+		// 	(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['sr'] : 0,
+		// 	(!empty($cutoffMarksRoundFive)) ? $cutoffMarksRoundFive['marks'] : 0
+		// ];
+		// array_flip($excelRecords[$kysss]);
+		$excelData[$keys][4] = $excelRecords;
+		
+
+	
+	 }
+	// $excelRecords[$keys] = array();
+	 
+	}
+	
+$j++;$i++; } $keys++;} 
+
+ $j = 0;
+					
+}
+
+} 
+
+
+}
+$i = 0; 
+}
+
+}
+}
+}}
+// 		if($counsellingHead){
+// 			foreach($counsellingHead as $head) { 
+// 				$collegeIds = ($head['college']) ? explode('|',$head['college']) : [];
+// 				if(!empty($collegeIds)){
+// 				$collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
+// 		if(!empty($collegeData)){
+// 			foreach($collegeData as $key=>$college){
+// 				$courseList = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+// 				$excelData[$key][] = '';
+// 				$excelData[$key][] = ($g === 0) ? $college['full_name'] : '';
+// 				if(!empty($courseList)){
+// 					$courseData = $this->db->select('*')->where_in('id',$courseList)->get('tbl_course')->result_array();
+// 					$j = 0;
+// 					if(!empty($courseData)){
+// 						foreach($courseData as $course) { 
+// 							$excelData[$key][] = ($j === 0) ? $course['course'] : '';
+// 							$branchData = $this->db->select('*')->like('courses',$course['id'])->get('tbl_branch')->result_array();	
+// 							if(!empty($branchData)){
+// 								foreach($branchData as $branch) { 
+// 									$excelData[$key][] = $branch['branch'];
+// 									$courses=($branch['courses']) ? explode('|',$branch['courses']) : [];
+// 									if(in_array($course['id'],$courses)){
+// 									$key++;	
+// 										if(!empty($subCategoryData)) { 
+// 											$excelRecord = [];
+//                                             foreach($subCategoryData as $keys=>$subs) {  
+// 												$cutoffMarksRounOne = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_one'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+//                                                 $cutoffMarksRounTwo = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_two'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+//                                                 $cutoffMarksRounThree = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_three'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+//                                                 $cutoffMarksRounFour = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_four'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+//                                                 $cutoffMarksRounFive = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_five'=>1))->get('tbl_cutfoff_marks_data')->row_array();
+// 												$excelRecord[$keys][] = (!empty($cutoffMarksRounOne)) ? $cutoffMarksRounOne['air'] : 0; 
+// 												$excelRecord[$keys][] = (!empty($cutoffMarksRounOne)) ? $cutoffMarksRounOne['sr'] : 0; 
+// 												$excelRecord[$keys][] = (!empty($cutoffMarksRounOne)) ? $cutoffMarksRounOne['marks'] : 0; 
+// 											}
+// 										}
+// 									}
+// 								}
+// 							}
+// 							$j++;$g++;
+// 						}
+// 					}
+// 					$j = 0;
+// 				}
+				
+// 				// $excelData[] = $college['full_name'];
+// 			}
+// 		}
+// 		$g = 0; 
+// 	}
+// }
+// 		}
+	
 		$data = [
 			[
 				'',
@@ -1028,66 +1207,69 @@ class Export extends CI_Controller {
 				'',
 				'',
 				$rows
-			],
-			[
-				'',
-				'BBD',
-				'Course A',
-				'Branch A',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'',
-				'Branch B',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'Course B',
-				'Branch A',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'',
-				'Branch B',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'SRM',
-				'Course A',
-				'Branch A',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'',
-				'Branch B',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'Course B',
-				'Branch A',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
-			],
-			[
-				'',
-				'',
-				'',
-				'Branch B',
-				['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
 			]
+			// [
+			// 	'',
+			// 	'BBD',
+			// 	'Course A',
+			// 	'Branch A',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'',
+			// 	'Branch B',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'Course B',
+			// 	'Branch A',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'',
+			// 	'Branch B',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'SRM',
+			// 	'Course A',
+			// 	'Branch A',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'',
+			// 	'Branch B',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'Course B',
+			// 	'Branch A',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ],
+			// [
+			// 	'',
+			// 	'',
+			// 	'',
+			// 	'Branch B',
+			// 	['30', '45', '65','87', '89', '90','87', '08', '76','56', '78', '98','90', '87', '89','90', '78', '98','87', '45', '54','67', '67', '98','99', '34', '78','76', '67', '67'],
+			// ]
 			// Add more rows as needed
 		];
 		
+		$data = array_merge($data,$excelData);	
+		// echo "<pre>";
+		// print_r($data); die;
 		$subCategoryDatas = [];
 		if(!empty($subCategoryData)){
 			foreach($subCategoryData as $sub){
@@ -1107,41 +1289,95 @@ class Export extends CI_Controller {
 			'Course',
 			'Branch'
 		];
-		$headers=array_merge($headers,$subCategoryDatas);
+		$headers = array_merge($headers,$subCategoryDatas);
 		// echo "<pre>";
 		// print_r(count($row));die;
 		
 		// Merge cells for Sub Category columns
 		$sheet->fromArray([$headers], NULL, 'A1');
-		$startColumn = 'D';
-		$mergeRanges = []; // Array to store merge ranges
+		// $startColumn = 'D';
+		// $mergeRanges = []; // Array to store merge ranges
 		
-		if (!empty($subCategoryData)) {
-			for ($k = 1; $k <= $count; $k++) {
+		// if (!empty($subCategoryData)) {
+		// 	for ($k = 1; $k <= $count; $k++) {
 
-				// $startColumn = (strlen($startColumn) == 1) ? ord($startColumn) : ord($startColumn[0]);
-				$startColumnIndex = ord($startColumn[0]) - ord('A') + 1;
+		// 		// $startColumn = (strlen($startColumn) == 1) ? ord($startColumn) : ord($startColumn[0]);
+		// 		$startColumnIndex = ord($startColumn) - ord('A') + 1;
+		// 		echo "<br>";
+		// 		echo $startColumnIndex;
+		// 		$endColumnIndex = $startColumnIndex + count($totalSpaces) - 1;
+		// 		echo "<br>";
+		// 		echo $endColumnIndex;
+		// 		$endColumn =  $this->getColumnIndex($endColumnIndex);
+		// 		$currentMergeRange = $startColumn . '1:' . $endColumn . '1';
+		// 		$mergeRanges[] = $currentMergeRange;
+		// 		$startColumn = $this->getColumnIndex($endColumnIndex + 1);
+				
+		// 		echo'<br>';
+		// 		echo $startColumn;
+		// 	}
+		// }
+		$alphabet = array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+		if (!empty($subCategoryData)) {
+			$startval=4;
+			$endval=0;
+			for ($k = 1; $k <= $count; $k++) {
+				$endval= 14 + $startval;
+				// echo "<br>";
+				// echo "Start".$startval;
+				// echo "<br>";
+				// echo $endval;
+				if($startval < 26){
+					$startAlphabet =  $alphabet[$startval-1];
+				}else{
+					// echo $startval%26;
+					// echo floor($startval/26);
+					$startAlphabet = $alphabet[floor($startval/26)-1].$alphabet[$startval%26-1];
+				}
+				if($endval<26){
+					//echo "<br>";
+					$endAlphabet =  $alphabet[$endval-1];
+				}else{
+					// echo $endval%26;
+					// echo floor($endval/26);
+					$endAlphabet =  $alphabet[floor($endval/26)-1].$alphabet[$endval%26-1];
+				}
+				// echo "<br>";
+
+
+				$cellRange = $startAlphabet."1:".$endAlphabet.'1';
+				$sheet->mergeCells($cellRange);
+				$startval=$startval+14+1;
+
+				// // $startColumn = (strlen($startColumn) == 1) ? ord($startColumn) : ord($startColumn[0]);
+				// $startColumnIndex = ord($startColumn) - ord('A') + 1;
 				// echo "<br>";
 				// echo $startColumnIndex;
-				$endColumnIndex = $startColumnIndex + count($totalSpaces) - 1;
+				// $endColumnIndex = $startColumnIndex + count($totalSpaces) - 1;
 				// echo "<br>";
 				// echo $endColumnIndex;
-				$endColumn =  $this->getColumnIndex($endColumnIndex);
-				$currentMergeRange = $startColumn . '1:' . $endColumn . '1';
-				$mergeRanges[] = $currentMergeRange;
-				$startColumn = $this->getColumnIndex($endColumnIndex + 1);
+				// $endColumn =  $this->getColumnIndex($endColumnIndex);
+				// $currentMergeRange = $startColumn . '1:' . $endColumn . '1';
+				// $mergeRanges[] = $currentMergeRange;
+				// $startColumn = $this->getColumnIndex($endColumnIndex + 1);
 				
-				echo'<br>';
-				echo $startColumn;
+				// echo'<br>';
+				// echo $startColumn;
 			}
 		}
+		// die;
+		// 4-18
+		// D-R
+		// 19-33
+		// S-AH
+		// 34-48
+		// AI-AV
 		// Printing out the merge ranges stored in the array
 		// foreach ($mergeRanges as $range) {
 		// 	echo $range . '<br>';
 		// }
-		die;
-		$sheet->mergeCells('D1:R1');
-		$sheet->mergeCells('S1:AG1');
+		// die;
+		
 		$sheet->mergeCells('D2:F2');
 		$sheet->mergeCells('G2:I2');
 		$sheet->mergeCells('J2:L2');
