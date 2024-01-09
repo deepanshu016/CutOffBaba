@@ -162,7 +162,23 @@ Class CounsellingHead extends MY_Controller {
             return redirect('admin');
         }
     }
-
+    public function importCutOffData(){
+        if ($this->is_admin_logged_in() == true) {
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $this->load->view('admin/cutoff_head_name/importCutOffData',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
+    // public function upload_config() {
+	// 	$config['upload_path'] 		= 'assets/uploads/excels';	
+	// 	$config['allowed_types'] 	= 'csv|CSV|xlsx|XLSX|xls|XLS';
+	// 	$config['encrypt_name'] 	= TRUE;
+	// 	$config['max_size'] 		= 4096; 
+	// 	$this->load->library('upload', $config);
+	// }
     // Import CSV in DB
     public function importCounsellingHeadByExcel(){
         if($_FILES['excel_file']['error'] == 0){
@@ -232,6 +248,176 @@ Class CounsellingHead extends MY_Controller {
             return false;
         }
     }  
+    public function importCutOffDataExcel(){
+        // if($_FILES['excel_file']['error'] == 0){
+            if(!empty($_FILES['excel_file']['name'])) {
+                $config['upload_path']  = 'assets/uploads/excels';
+                $config['allowed_types'] = 'csv|CSV|xlsx|XLSX|xls|XLS';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
+                $uploadedFile = $this->uploadFile($_FILES['excel_file']['name'], 'excel_file', $config);
+                $file_data = $uploadedFile['file'];
+            }
+           
+            $path = 'assets/uploads/excels/';
+            $json 		= [];
+           
+            if (!$this->upload->do_upload('excel_file')) {
+                $response = array(
+                    'status' => 'error',
+                    'errors' => $this->upload->display_errors()
+                );
+            } else {
+                $file_name 	= $path.$file_data;
+                $arr_file 	= explode('.', $file_name);
+                $extension 	= end($arr_file);
+                if('csv' == $extension) {
+                    $reader 	= new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+                } else {
+                    $reader 	= new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+                }
+                $spreadsheet 	= $reader->load($file_name);
+                $sheet_data 	= $spreadsheet->getActiveSheet()->toArray();
+                $list 			= [];
+                $categoryIndex = 3;
+                $l = 0;
+                
+                $filterSheet= array_values(array_filter($sheet_data[1]));
+                $roundsData = count($filterSheet);
+                $totalMarksData = count($sheet_data) - 3;    
+                $totalData = $totalMarksData * $roundsData;
+               
+                
+                for($i=0;$i<$totalData;$i++){
+                    // echo "HEllo";
+                    $list[$i]['sub_category'] = $sheet_data[0][3];
+                    for($j=3;$j<count($sheet_data);$j++){
+                        $marksChunks = array_chunk(array_slice($sheet_data[$j], -15),3);      
+                        foreach($filterSheet as $keysss=>$filter){
+                            if($filter == 'R1'){
+                                $list[$i]['round_one'] = 1;
+                                $list[$i]['round_two'] = 0;
+                                $list[$i]['round_three'] = 0;
+                                $list[$i]['round_four'] = 0;
+                                $list[$i]['round_five'] = 0;
+                            }
+                            if($filter == 'R2'){
+                                $list[$i]['round_one'] = 0;
+                                $list[$i]['round_two'] = 1;
+                                $list[$i]['round_three'] = 0;
+                                $list[$i]['round_four'] = 0;
+                                $list[$i]['round_five'] = 0;
+                            }
+                            if($filter == 'R3'){
+                                $list[$i]['round_one'] = 0;
+                                $list[$i]['round_two'] = 0;
+                                $list[$i]['round_three'] = 1;
+                                $list[$i]['round_four'] = 0;
+                                $list[$i]['round_five'] = 0;
+                            }
+                            if($filter == 'R4'){
+                                $list[$i]['round_one'] = 0;
+                                $list[$i]['round_two'] = 0;
+                                $list[$i]['round_three'] = 0;
+                                $list[$i]['round_four'] = 1;
+                                $list[$i]['round_five'] = 0;
+                            }
+                            if($filter == 'R5'){
+                                $list[$i]['round_one'] = 0;
+                                $list[$i]['round_two'] = 0;
+                                $list[$i]['round_three'] = 0;
+                                $list[$i]['round_four'] = 0;
+                                $list[$i]['round_five'] = 1;
+                            }
+                            foreach($marksChunks as $kessss=>$marks){
+                                $list[$i]['air'] = $marksChunks[$kessss][0];
+                                $list[$i]['sr'] = $marksChunks[$kessss][1];
+                                $list[$i]['marks'] = $marksChunks[$kessss][2];
+                            }
+                        }
+                        //      echo "<pre>";
+                        // 
+                    }
+                  
+                }
+                    
+                die;
+            }
+
+               // echo json_encode($response);
+
+                // echo "<pre>";
+                // print_r($totalData);die;
+                // foreach($sheet_data as $key => $val) {
+                //     $val = array_values(array_filter($val));
+                //     echo "<pre>";
+                //     print_r($val);
+                //     if($key == 0){
+                //         if(!empty($val)){
+                //             for($i=3; $i<count($val)-3;$i+=15){
+                //                 // echo $i;
+                //                 // echo $val[2];
+                //                 if($val[$i] != ' '){
+                //                     // echo "Hiii";
+                //                     $list[$l]['sub_category'] = $val[$i];
+                //                 }
+                                
+                //             }
+                //         }
+                //     }
+                //     if($key == 1){
+                //         for($r= 0; $r<5;$r++){
+                //             $list[$l][$val[$r]] = 1;
+                //         }
+                //     }
+                //     if($key > 2){
+                //         $chunksValue = array_chunk($val,count($val) / 5);
+                //         foreach($chunksValue as $chunk){
+                //             $list[$l]['air'] = $chunk[0];
+                //             $list[$l]['sr'] = $chunk[1];
+                //             $list[$l]['marks'] = $chunk[2];
+                //         }
+                //     }
+                //     // if($key > 2){
+                //     //     $arr = array_slice($val, -15);
+                //     //     $array_chunks = array_chunk($arr,3);
+                //     //     $list[] = $array_chunks;
+                //     //     // echo "<pre>";
+                //     //     // print_r($array_chunks);
+                //     // }
+                   
+                    
+                //     // if($key == 1){
+                //     //     for($j=3; $j<count($val)-9;$j+=3){
+                //     //         $list['round_one'] = 1;
+                //     //     }
+                //     // }
+                //     // echo "<pre>";
+                //     //             print_r($list);
+                //     //     $chunks = array_chunk(array_values(array_filter($val)),3);
+                //        // log_message('debug', json_encode($chunks), true);
+                        
+                //     // }
+                   
+                // }
+                // for($k=0;$k<5;$k++){
+
+                // }
+               
+        }
+           
+        //     return false;
+        // }else{
+        //     $response = array(
+        //         'status' => 'error',
+        //         'errors' => array(
+        //             'excel_file' => form_error('excel_file')
+        //         )
+        //     );
+        //     echo json_encode($response);
+        //     return false;
+        // }
+ 
 
 
     public function table(){

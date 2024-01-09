@@ -25,6 +25,11 @@
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
+                        <div class="col-sm-auto">
+                             <div>
+                                <a href="<?= base_url('admin/import-cutoffdata'); ?>" class="btn btn-success add-btn" > Import</a>
+                             </div>
+                        </div>
                     <div id="customerList">
                        <div class="table-responsive table-card mt-3 mb-1">
                         <table class="table align-middle table-nowrap table-bordered">
