@@ -998,7 +998,7 @@ class Export extends CI_Controller {
 		}
 		return $letters;
 	}
-	public function cutOffExport() {
+	public function exportCutOffEntryData() {
 		require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();

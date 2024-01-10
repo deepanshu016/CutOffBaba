@@ -24,7 +24,8 @@
                     <h4 class="card-title mb-0">Cutoff Entry Data</h4>
                     <div class="col-sm-auto">
                        <div>
-                             <a href="<?= base_url('admin/import-cutoffdata'); ?>" class="btn btn-success add-btn" > Import</a>
+                             <a href="<?= base_url('admin/import-cutoffdata'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
+                             <a href="<?= base_url('admin/export-cutoff-entry-data'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export</a>
                         </div>
                      </div>
                  </div>

@@ -415,7 +415,7 @@ $route['admin/cutoff-entry-data'] = 'Admin/CounsellingHead/cutOffEntryData';
 $route['admin/filter-cutoff-data'] = 'Admin/CounsellingHead/filterCutOffData';
 $route['admin/import-cutoffdata'] = 'Admin/CounsellingHead/importCutOffData';
 $route['admin/import-cutoffdata-by-excel'] = 'Admin/CounsellingHead/importCutOffDataExcel';
-$route['admin/export-table'] = 'Admin/Export/cutOffExport';
+$route['admin/export-cutoff-entry-data'] = 'Admin/Export/exportCutOffEntryData';
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
