@@ -411,7 +411,8 @@ $route['admin/assign-media/(:any)'] = 'Admin/CollegeFiles/assignMedia/$1';
 $route['admin/save-single-gallery-media'] = 'Admin/CollegeFiles/saveMediaToGallery';
 $route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
 
-$route['admin/cutoffheadtable'] = 'Admin/CounsellingHead/table';
+$route['admin/cutoff-entry-data'] = 'Admin/CounsellingHead/cutOffEntryData';
+$route['admin/filter-cutoff-data'] = 'Admin/CounsellingHead/filterCutOffData';
 $route['admin/import-cutoffdata'] = 'Admin/CounsellingHead/importCutOffData';
 $route['admin/import-cutoffdata-by-excel'] = 'Admin/CounsellingHead/importCutOffDataExcel';
 $route['admin/export-table'] = 'Admin/Export/cutOffExport';

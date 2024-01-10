@@ -59,10 +59,7 @@
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarCourse">
-                        <ul class="nav nav-sm flex-column">
-                           
-                            
-                            
+                        <ul class="nav nav-sm flex-column">    
                             <li class="nav-item">
                                 <a href="<?= base_url('admin/nature'); ?>" class="nav-link" data-key="t-calendar">Nature/Group  </a>
                             </li>
@@ -115,6 +112,11 @@
                             <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/sub-special-category'); ?>" data-key="t-calendar">
                                     Special Sub Category
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/cutoff-entry-data'); ?>" data-key="t-calendar">
+                                    Cutoff Entry Data
                                 </a>
                             </li>
                         </ul>

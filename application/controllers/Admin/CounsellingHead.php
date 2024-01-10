@@ -248,8 +248,16 @@ Class CounsellingHead extends MY_Controller {
             return false;
         }
     }  
+
+
+   
     public function importCutOffDataExcel(){
-        // if($_FILES['excel_file']['error'] == 0){
+        $this->form_validation->set_rules('head_id', 'Head Name', 'trim|required');
+        $this->form_validation->set_rules('year', 'Course', 'trim|required');
+        $this->form_validation->set_rules('excel_file', 'Image', 'callback_file_check_excel_file');
+        if ($this->form_validation->run()) {
+            $head_id = $this->input->post('head_id');  
+            $year = $this->input->post('year');  
             if(!empty($_FILES['excel_file']['name'])) {
                 $config['upload_path']  = 'assets/uploads/excels';
                 $config['allowed_types'] = 'csv|CSV|xlsx|XLSX|xls|XLS';
@@ -278,161 +286,171 @@ Class CounsellingHead extends MY_Controller {
                 }
                 $spreadsheet 	= $reader->load($file_name);
                 $sheet_data 	= $spreadsheet->getActiveSheet()->toArray();
-                $list 			= [];
+                $insertDatas 	= [];
                 $categoryIndex = 3;
                 $l = 0;
-                
+                $categoryData = [];
                 $filterSheet= array_values(array_filter($sheet_data[1]));
                 $roundsData = count($filterSheet);
                 $totalMarksData = count($sheet_data) - 3;    
                 $totalData = $totalMarksData * $roundsData;
-               
-                
-                for($i=0;$i<$totalData;$i++){
-                    // echo "HEllo";
-                    $list[$i]['sub_category'] = $sheet_data[0][3];
-                    for($j=3;$j<count($sheet_data);$j++){
-                        $marksChunks = array_chunk(array_slice($sheet_data[$j], -15),3);      
-                        foreach($filterSheet as $keysss=>$filter){
-                            if($filter == 'R1'){
-                                $list[$i]['round_one'] = 1;
-                                $list[$i]['round_two'] = 0;
-                                $list[$i]['round_three'] = 0;
-                                $list[$i]['round_four'] = 0;
-                                $list[$i]['round_five'] = 0;
-                            }
-                            if($filter == 'R2'){
-                                $list[$i]['round_one'] = 0;
-                                $list[$i]['round_two'] = 1;
-                                $list[$i]['round_three'] = 0;
-                                $list[$i]['round_four'] = 0;
-                                $list[$i]['round_five'] = 0;
-                            }
-                            if($filter == 'R3'){
-                                $list[$i]['round_one'] = 0;
-                                $list[$i]['round_two'] = 0;
-                                $list[$i]['round_three'] = 1;
-                                $list[$i]['round_four'] = 0;
-                                $list[$i]['round_five'] = 0;
-                            }
-                            if($filter == 'R4'){
-                                $list[$i]['round_one'] = 0;
-                                $list[$i]['round_two'] = 0;
-                                $list[$i]['round_three'] = 0;
-                                $list[$i]['round_four'] = 1;
-                                $list[$i]['round_five'] = 0;
-                            }
-                            if($filter == 'R5'){
-                                $list[$i]['round_one'] = 0;
-                                $list[$i]['round_two'] = 0;
-                                $list[$i]['round_three'] = 0;
-                                $list[$i]['round_four'] = 0;
-                                $list[$i]['round_five'] = 1;
-                            }
-                            foreach($marksChunks as $kessss=>$marks){
-                                $list[$i]['air'] = $marksChunks[$kessss][0];
-                                $list[$i]['sr'] = $marksChunks[$kessss][1];
-                                $list[$i]['marks'] = $marksChunks[$kessss][2];
-                            }
-                        }
-                        //      echo "<pre>";
-                        // 
-                    }
-                  
-                }
-                    
-                die;
-            }
-
-               // echo json_encode($response);
-
                 // echo "<pre>";
-                // print_r($totalData);die;
-                // foreach($sheet_data as $key => $val) {
-                //     $val = array_values(array_filter($val));
-                //     echo "<pre>";
-                //     print_r($val);
-                //     if($key == 0){
-                //         if(!empty($val)){
-                //             for($i=3; $i<count($val)-3;$i+=15){
-                //                 // echo $i;
-                //                 // echo $val[2];
-                //                 if($val[$i] != ' '){
-                //                     // echo "Hiii";
-                //                     $list[$l]['sub_category'] = $val[$i];
-                //                 }
-                                
-                //             }
-                //         }
-                //     }
-                //     if($key == 1){
-                //         for($r= 0; $r<5;$r++){
-                //             $list[$l][$val[$r]] = 1;
-                //         }
-                //     }
-                //     if($key > 2){
-                //         $chunksValue = array_chunk($val,count($val) / 5);
-                //         foreach($chunksValue as $chunk){
-                //             $list[$l]['air'] = $chunk[0];
-                //             $list[$l]['sr'] = $chunk[1];
-                //             $list[$l]['marks'] = $chunk[2];
-                //         }
-                //     }
-                //     // if($key > 2){
-                //     //     $arr = array_slice($val, -15);
-                //     //     $array_chunks = array_chunk($arr,3);
-                //     //     $list[] = $array_chunks;
-                //     //     // echo "<pre>";
-                //     //     // print_r($array_chunks);
-                //     // }
-                   
-                    
-                //     // if($key == 1){
-                //     //     for($j=3; $j<count($val)-9;$j+=3){
-                //     //         $list['round_one'] = 1;
-                //     //     }
-                //     // }
-                //     // echo "<pre>";
-                //     //             print_r($list);
-                //     //     $chunks = array_chunk(array_values(array_filter($val)),3);
-                //        // log_message('debug', json_encode($chunks), true);
-                        
-                //     // }
-                   
-                // }
-                // for($k=0;$k<5;$k++){
-
-                // }
+                // print_r($sheet_data);die;
+                for($k=3;$k<count($sheet_data[0]);$k+=15){
+                    if($sheet_data[0][$k] != ''){
+                        $categoryData[] = $sheet_data[0][$k];
+                    }
+                }
                
+                $collegeid="";
+                $course_id="";
+                $branch_id="";
+                $x=3;
+                $insertDatasss = [];
+                $round1=[];
+                foreach($categoryData as $key=>$category_type){
+                    $round1=[];
+                    $round2=[];
+                    $round3=[];
+                    $round4=[];
+                    $round5=[];
+                    for($l=3;$l< count($sheet_data);$l++){
+                        if($sheet_data[$l][0]!=""){
+                            $collegeid=$sheet_data[$l][0];
+                        }
+                        if($sheet_data[$l][1]!=""){
+                            $course_id=$sheet_data[$l][1];
+                        }
+                        if($sheet_data[$l][2]!=""){
+                            $branch_id=$sheet_data[$l][2];
+                        }
+                        $r1['round_one']=1;
+                        $r1['college_id']=$collegeid;
+                        $r1['course_id']=$course_id;
+                        $r1['branch_id']=$branch_id;
+                        $r1['air']=$sheet_data[$l][$x];
+                        $r1['sr']=$sheet_data[$l][$x+1];
+                        $r1['marks']=$sheet_data[$l][$x+2];        
+                        $r1['category_type']=$category_type;  
+                        $r1['cutoff_head']=$head_id;  
+                        $r1['year']=$year;  
+
+                        $r2['round_two']=1;
+                        $r2['college_id']=$collegeid;
+                        $r2['course_id']=$course_id;
+                        $r2['branch_id']=$branch_id;
+                        $r2['air']=$sheet_data[$l][$x+3];
+                        $r2['sr']=$sheet_data[$l][$x+4];
+                        $r2['marks']=$sheet_data[$l][$x+5];        
+                        $r2['category_type']=$category_type; 
+                        $r2['cutoff_head']=$head_id;  
+                        $r2['year']=$year;   
+
+                        $r3['round_three']=1;
+                        $r3['college_id']=$collegeid;
+                        $r3['course_id']=$course_id;
+                        $r3['branch_id']=$branch_id;
+                        $r3['air']=$sheet_data[$l][$x+6];
+                        $r3['sr']=$sheet_data[$l][$x+7];
+                        $r3['marks']=$sheet_data[$l][$x+8];        
+                        $r3['category_type']=$category_type;  
+                        $r3['cutoff_head']=$head_id;  
+                        $r3['year']=$year;   
+
+                        $r4['round_four']=1;
+                        $r4['college_id']=$collegeid;
+                        $r4['course_id']=$course_id;
+                        $r4['branch_id']=$branch_id;
+                        $r4['air']=$sheet_data[$l][$x+9];
+                        $r4['sr']=$sheet_data[$l][$x+10];
+                        $r4['marks']=$sheet_data[$l][$x+11];        
+                        $r4['category_type']=$category_type;  
+                        $r4['cutoff_head']=$head_id;  
+                        $r4['year']=$year;   
+
+
+
+                        $r5['round_five']=1;
+                        $r5['college_id']=$collegeid;
+                        $r5['course_id']=$course_id;
+                        $r5['branch_id']=$branch_id;
+                        $r5['air']=$sheet_data[$l][$x+12];
+                        $r5['sr']=$sheet_data[$l][$x+13];
+                        $r5['marks']=$sheet_data[$l][$x+14];        
+                        $r5['category_type']=$category_type;  
+                        $r5['cutoff_head']=$head_id;  
+                        $r5['year']=$year;   
+
+
+                        $round1[] =$r1;
+                        $round2[] =$r2;
+                        $round3[] =$r3;
+                        $round4[] =$r4;
+                        $round5[] =$r5;
+                    }
+                    $this->master->insertBulk('tbl_cutfoff_marks_data',$round1);
+                    $this->master->insertBulk('tbl_cutfoff_marks_data',$round2);
+                    $this->master->insertBulk('tbl_cutfoff_marks_data',$round3);
+                    $this->master->insertBulk('tbl_cutfoff_marks_data',$round4);
+                    $this->master->insertBulk('tbl_cutfoff_marks_data',$round5);
+                    $x=$x+15;
+                }
+                $response = array('status' => 'success','message'=> 'Data imported successfully','url'=>base_url('admin/cutoff-entry-data'));
+                echo json_encode($response);
+                return false;
+            }
+        }else{
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'head_id' => form_error('head_id'),
+                    'year' => form_error('year'),
+                    'excel_file' => form_error('excel_file')
+                )
+            );
+            echo json_encode($response);
+            return false;
         }
-           
-        //     return false;
-        // }else{
-        //     $response = array(
-        //         'status' => 'error',
-        //         'errors' => array(
-        //             'excel_file' => form_error('excel_file')
-        //         )
-        //     );
-        //     echo json_encode($response);
-        //     return false;
-        // }
- 
+    }
 
-
-    public function table(){
+    public function cutOffEntryData(){
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> 2]);
             $data['counsellingHead'] = $this->master->getRecords('tbl_counselling_head');
-            // echo "<pre>";
-            // print_r($data['collegeData']); die;
-            $this->load->view('admin/cutoff_head_name/table',$data);
+            $this->load->view('admin/cutoff_head_name/cutoff_entry_data',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
+    }
+
+    public function filterCutOffData(){
+        $this->form_validation->set_rules('head_id', 'Head', 'trim|required');
+        $this->form_validation->set_rules('year', 'Year', 'trim|required');
+        if ($this->form_validation->run()) {
+            $data['head_id'] = $this->input->post('head_id');
+            $data['year'] = $this->input->post('year');
+            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> $data['head_id']]);
+            $data['counsellingHead'] = $this->master->getRecords('tbl_counselling_head',['id'=>$data['head_id']]);
+            $result = $this->load->view('admin/cutoff_head_name/cutoff_entry_data_ajax',$data,TRUE);
+          
+            $response = array('status' => 'success','message'=> 'Cutoff Head found successfully','html'=>$result);
+            $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($response));
+        }else{
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'head_id' => form_error('head_id'),
+                    'year' => form_error('year')
+                )
+            );
+            echo json_encode($response);
+            return false;
+        }    
     }
 }
 

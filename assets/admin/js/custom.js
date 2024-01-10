@@ -45,12 +45,40 @@ $(document).on("submit",'.all-form',function(e){
             if(data.status == 'error'){
                 $.each(data.errors, function(key, value) {
                     $('#'+key).addClass('is-invalid');
-                    console.log(value)
                     $('#'+key).html(value);
                 });  
             }
             if(data.status == 'success'){
                 showNotify(data.message,data.status,data.url);
+            }
+            if(data.status == 'errors'){
+                showNotify(data.message,data.status,data.url);
+            }
+        }
+    }); 
+})
+$(document).on("submit",'.all-form-server',function(e){
+	e.preventDefault();
+	var method = $(this).attr('method');
+	var url = $(this).attr("action");
+    var form = $(this)[0];
+    var form_data = new FormData(form);    
+	$.ajax({
+        type: method,
+        url: url,
+        data:form_data,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        success: function(data){
+            if(data.status == 'error'){
+                $.each(data.errors, function(key, value) {
+                    $('#'+key).addClass('is-invalid');
+                    $('#'+key).html(value);
+                });  
+            }
+            if(data.status == 'success'){
+                $(".cutoff_entry_data_ajax").html(data.html);
             }
             if(data.status == 'errors'){
                 showNotify(data.message,data.status,data.url);
