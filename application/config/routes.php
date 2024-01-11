@@ -1,17 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
-$route['404_override'] = 'CustomErrors';
-$route['400_override'] = 'CustomErrors';
+// $route['404_override'] = 'CustomErrors';
+// $route['400_override'] = 'CustomErrors';
 $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'Site/Home';
 
 $route['admin/dashboard'] = 'Admin/Authenticate/index';
 $route['admin'] = 'Admin/Authenticate/login';
 $route['admin/admin-login'] = 'Admin/Authenticate/adminLogin';
+//$route['api/get'] = 'API/MasterApi/index';
 
 
-
+$route['api/categories']['get'] = 'API/MasterApi/get_user';
 
 
 
