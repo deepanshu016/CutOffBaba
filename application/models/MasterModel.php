@@ -114,6 +114,32 @@ class MasterModel extends CI_Model {
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+
+
+	function getParentChildData($table1, $table2,$common_field){
+		$this->db->select('t1.id as state_id,t1.name as state_name,t1.country_id,t2.countryCode,t2.name as country_name');
+		$this->db->from($table1.' AS t1');
+		$this->db->join($table2. ' AS t2', 't2.id = t1.'.$common_field.'');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+	function getDistrictDataWithParent($table1, $table2,$table3, $common_field1, $common_field2){
+		$this->db->select('t2.id as state_id,t2.name as state_name,t2.country_id,t3.countryCode,t3.name as country_name,t1.id as district_id,t1.city');
+		$this->db->from($table1.' AS t1');
+		$this->db->join($table2. ' AS t2', 't2.id = t1.'.$common_field1.'');
+		$this->db->join($table3. ' AS t3', 't3.id = t1.'.$common_field2.'');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+	function getSubDistrictDataWithParent($table1, $table2,$table3,$table4, $common_field1, $common_field2,$common_field3){
+		$this->db->select('t1.country as country_id,t1.state as state_id ,t1.district as district_id,t1.sub_district ,t1.district,t3.name as state_name,t4.countryCode,t4.name as country_name');
+		$this->db->from($table1.' AS t1');
+		$this->db->join($table2. ' AS t2', 't2.id = t1.'.$common_field1.'');
+		$this->db->join($table3. ' AS t3', 't3.id = t1.'.$common_field2.'');
+		$this->db->join($table4. ' AS t4', 't4.id = t1.'.$common_field3.'');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
 
 ?>

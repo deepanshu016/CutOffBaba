@@ -9,8 +9,6 @@ Class Authenticate extends MY_Controller {
     }
 	public function index()
 	{
-		echo "<pre>";
-		print_r(base64_encode('123456')); die;
 		if ($this->is_admin_logged_in() == true) {
 			$data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]); 
 			$data['admin_session'] = $this->session->userdata('admin');

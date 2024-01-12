@@ -11,8 +11,23 @@ $route['admin'] = 'Admin/Authenticate/login';
 $route['admin/admin-login'] = 'Admin/Authenticate/adminLogin';
 //$route['api/get'] = 'API/MasterApi/index';
 
+// API Routes
 
-$route['api/categories']['get'] = 'API/MasterApi/get_user';
+$route['api/categories'] = 'API/MasterApi/getCategoryList';
+$route['api/countries'] = 'API/MasterApi/getCountryList';
+$route['api/states'] = 'API/MasterApi/getStateList';
+$route['api/districts'] = 'API/MasterApi/getDistrictList';
+$route['api/sub-districts'] = 'API/MasterApi/getSubDistrictList';
+$route['api/ownerships'] = 'API/MasterApi/getOwnerShipList';
+$route['api/approval'] = 'API/MasterApi/getApprovalList';
+$route['api/recognition'] = 'API/MasterApi/getRecognitionList';
+$route['api/gender'] = 'API/MasterApi/getGenderList';
+$route['api/degree-type'] = 'API/MasterApi/getDegreeTypeList';
+$route['api/stream'] = 'API/MasterApi/getStreamsList';
+$route['api/open'] = 'API/MasterApi/getOpensList';
+$route['api/visibility'] = 'API/MasterApi/getVisibilityList';
+$route['api/clinic-details'] = 'API/MasterApi/getClinicDetailsList';
+$route['api/facility'] = 'API/MasterApi/getClinicFacilityList';
 
 
 
