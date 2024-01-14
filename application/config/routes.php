@@ -28,6 +28,14 @@ $route['api/open'] = 'API/MasterApi/getOpensList';
 $route['api/visibility'] = 'API/MasterApi/getVisibilityList';
 $route['api/clinic-details'] = 'API/MasterApi/getClinicDetailsList';
 $route['api/facility'] = 'API/MasterApi/getClinicFacilityList';
+$route['api/exams'] = 'API/MasterApi/getExamsList';
+$route['api/nature'] = 'API/MasterApi/getNatureList';
+$route['api/course'] = 'API/MasterApi/getCourseList';
+$route['api/branch'] = 'API/MasterApi/getBranchList';
+$route['api/colleges'] = 'API/MasterApi/getCollegeList';
+$route['api/counselling-levels'] = 'API/MasterApi/getCounsellingLevelList';
+$route['api/counselling-heads'] = 'API/MasterApi/getCounsellingHead';
+$route['api/sub-categories'] = 'API/MasterApi/getSubCategoryList';
 
 
 

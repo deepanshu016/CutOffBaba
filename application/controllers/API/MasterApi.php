@@ -194,6 +194,259 @@ Class MasterApi extends MY_Controller  {
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
 	}
+    // API to Get Exam Data
+    public function getExamsList()
+	{
+        try {
+            $examList = $this->master->getRecords('tbl_exam',[]);
+            $examData = [];
+            if(!empty($examList)){
+                foreach($examList as $key=>$exam){
+                    $courseAccepted = ($exam['course_accepting']) ? explode('|',$exam['course_accepting']) : [];
+                    $examData[$key]['exam_id'] = $exam['id'];
+                    $examData[$key]['slug'] = $exam['slug'];
+                    $examData[$key]['exam'] = $exam['exam'];
+                    $examData[$key]['exam_full_name'] = $exam['exam_full_name'];
+                    $examData[$key]['exam_short_name'] = $exam['exam_short_name'];
+                    $examData[$key]['degree_type'] = $this->master->singleRecord('tbl_degree_type',['id'=>$exam['degree_type']]);
+                    $examData[$key]['eligibility'] = $exam['eligibility'];
+                    $examData[$key]['exam_duration'] = $exam['exam_duration'];
+                    $examData[$key]['maximum_marks'] = $exam['maximum_marks'];
+                    $examData[$key]['passing_marks'] = $exam['passing_marks'];
+                    $examData[$key]['qualifying_marks'] = $exam['qualifying_marks'];
+                    $examData[$key]['exam_held_in'] = $exam['exam_held_in'];
+                    $examData[$key]['registration_starts'] = $exam['registration_starts'];
+                    $examData[$key]['registration_ends'] = $exam['registration_ends'];
+                    $examData[$key]['stream'] = $this->master->singleRecord('tbl_stream',['id'=>$exam['stream']]);
+                    $examData[$key]['course_accepted'] = $this->db->select('*')->where_in('id',$courseAccepted)->get('tbl_course')->result_array();
+                }
+                $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$examData);
+            }
+            $response = array('status'=>400,'message'=>'No data found','data'=>$examData);
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+	}
+    // API to Get Nature Data
+    public function getNatureList()
+	{
+        try {
+            $natureList = $this->master->getRecords('tbl_nature',[]);
+            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$natureList);
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+	}
+     // API to Get Course Data
+     public function getCourseList()
+     {
+         try {
+             $courseList = $this->master->getRecords('tbl_course',[]);
+             $courseData = [];
+             if(!empty($courseList)){
+                 foreach($courseList as $key=>$course){
+                     $exam_data = ($course['exam']) ? explode('|',$course['exam']) : [];
+                     $college_data = ($course['college']) ? explode('|',$course['college']) : [];
+                     $courseData[$key]['course_id'] = $course['id'];
+                     $courseData[$key]['course_full_name'] = $course['course_full_name'];
+                     $courseData[$key]['course_short_name'] = $course['course_short_name'];
+                     $courseData[$key]['course_icon'] = $course['course_icon'];
+                     $courseData[$key]['stream'] = $this->master->singleRecord('tbl_stream',['id'=>$course['stream']]);
+                     $courseData[$key]['degree_type'] = $this->master->singleRecord('tbl_degree_type',['id'=>$course['degree_type']]);
+                     $courseData[$key]['course_duration'] = $course['course_duration'];
+                     if(!empty($exam_data)){
+                        $courseData[$key]['exams'] = $this->db->select('*')->where_in('id',$exam_data)->get('tbl_exam')->result_array();
+                     }else{
+                        $courseData[$key]['exams'] = [];
+                     }
+                     $courseData[$key]['course_eligibility'] = $course['course_eligibility'];
+                     $courseData[$key]['course_eligibility'] = $course['course_eligibility'];
+                     $courseData[$key]['expected_salary'] = $course['expected_salary'];
+                     $courseData[$key]['course_fees'] = $course['course_fees'];
+                     $courseData[$key]['counselling_authority'] = $course['counselling_authority'];
+                     if(!empty($college_data)){
+                        $courseData[$key]['college'] = $this->db->select('*')->where_in('id',$college_data)->get('tbl_college')->result_array();
+                     }else{
+                        $courseData[$key]['college'] = [];
+                     }
+                     $courseData[$key]['branch_type'] = $course['branch_type'];
+                     $courseData[$key]['status'] = $course['status'];
+                     $courseData[$key]['created_at'] = $course['created_at'];
+                     $courseData[$key]['updated_at'] = $course['updated_at'];
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$courseData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$headData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     public function getBranchList()
+     {
+         try {
+             $branchList = $this->master->getRecords('tbl_branch',[]);
+             $branchData = [];
+             if(!empty($branchList)){
+                 foreach($branchList as $key=>$branch){
+                     $course_data = ($branch['courses']) ? explode('|',$branch['courses']) : [];
+                     $branchData[$key]['branch_id'] = $branch['id'];
+                     $branchData[$key]['branch'] = $branch['branch'];
+                     $branchData[$key]['branch_type'] = $branch['branch_type'];
+                     if(!empty($course_data)){
+                        $branchData[$key]['courses'] = $this->db->select('*')->where_in('id',$course_data)->get('tbl_course')->result_array();
+                     }else{
+                        $branchData[$key]['courses'] = [];
+                     }
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$branchData);
+             }
+             $response = array('status'=>400,'message'=>'No data found','data'=>$branchData);
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     public function getCollegeList()
+     {
+         try {
+             $collegeList = $this->master->getRecords('tbl_college',[]);
+             $collegeData = [];
+             if(!empty($collegeList)){
+                 foreach($collegeList as $key=>$college){
+                     $course_data = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+                     $gender_data = ($college['gender_accepted']) ? explode('|',$college['gender_accepted']) : [];
+                     $collegeData[$key]['college_id'] = $college['id'];
+                     $collegeData[$key]['full_name'] = $college['full_name'];
+                     $collegeData[$key]['slug'] = $college['slug'];
+                     $collegeData[$key]['short_description'] = $college['short_description'];
+                     $collegeData[$key]['popular_name_one'] = $college['popular_name_one'];
+                     $collegeData[$key]['popular_name_two'] = $college['popular_name_two'];
+                     $collegeData[$key]['establishment'] = $college['establishment'];
+                     if(!empty($course_data)){
+                        $collegeData[$key]['courses'] = $this->db->select('*')->where_in('id',$course_data)->get('tbl_course')->result_array();
+                     }else{
+                        $collegeData[$key]['courses'] = [];
+                     }
+                     if(!empty($gender_data)){
+                        $collegeData[$key]['gender'] = $this->db->select('*')->where_in('id',$gender_data)->get('tbl_gender')->result_array();
+                     }else{
+                        $collegeData[$key]['gender'] = [];
+                     }
+                     
+                     $collegeData[$key]['country'] = $this->master->singleRecord('tbl_country',['id'=>$college['country']]);
+                     $collegeData[$key]['state'] = $this->master->singleRecord('tbl_state',['id'=>$college['state']]);
+                     $collegeData[$key]['district'] = $this->master->singleRecord('tbl_city',['id'=>$college['city']]);
+                     $collegeData[$key]['affiliated_by'] = $college['affiliated_by'];
+                     $collegeData[$key]['university_name'] = $college['university_name'];
+                     $collegeData[$key]['approval'] = $this->master->singleRecord('tbl_approval',['id'=>$college['approved_by']]);
+                     $collegeData[$key]['approved_by'] = $college['approved_by'];
+                     $collegeData[$key]['college_logo'] = $college['college_logo'];
+                     $collegeData[$key]['college_banner'] = $college['college_banner'];
+                     $collegeData[$key]['prospectus_file'] = $college['prospectus_file'];
+                     $collegeData[$key]['ownership'] = $this->master->singleRecord('tbl_ownership',['id'=>$college['ownership']]);
+                     $collegeData[$key]['website'] = $college['website'];
+                     $collegeData[$key]['email'] = $college['email'];
+                     $collegeData[$key]['contact_one'] = $college['contact_one'];
+                     $collegeData[$key]['contact_two'] = $college['contact_two'];
+                     $collegeData[$key]['contact_three'] = $college['contact_three'];
+                     $collegeData[$key]['nodal_officer_name'] = $college['nodal_officer_name'];
+                     $collegeData[$key]['nodal_officer_no'] = $college['nodal_officer_no'];
+                     $collegeData[$key]['keywords'] = $college['keywords'];
+                     $collegeData[$key]['tags'] = $college['tags'];
+                     $collegeData[$key]['added_by'] = $college['added_by'];
+                     $collegeData[$key]['status'] = $college['status'];
+                     $collegeData[$key]['created_at'] = $college['created_at'];
+                     $collegeData[$key]['updated_at'] = $college['updated_at'];
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$collegeData);
+             }
+             $response = array('status'=>400,'message'=>'No data found','data'=>$collegeData);
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     // API to Get Visibility Data
+    public function getCounsellingLevelList()
+	{
+        try {
+            $counsellingLevelList = $this->master->getRecords('tbl_counselling_level',[]);
+           
+            if(!empty($counsellingLevelList)){
+                // debugger($counsellingLevelList);
+                $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$counsellingLevelList);
+            }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>[]);
+            }
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+	}
+
+    public function getCounsellingHead()
+     {
+         try {
+             $counsellingHeadList = $this->master->getRecords('tbl_counselling_head',[]);
+             $headData = [];
+             if(!empty($counsellingHeadList)){
+                 foreach($counsellingHeadList as $key=>$head){
+                     $exam_data = ($head['exams']) ? explode('|',$head['exams']) : [];
+                     $headData[$key]['head_id'] = $head['id'];
+                     $headData[$key]['head_name'] = $head['head_name'];
+                     $headData[$key]['courses'] = $this->master->singleRecord('tbl_course',['id'=>$head['course_id']]);
+                     $headData[$key]['levels'] = $this->master->singleRecord('tbl_counselling_level',['id'=>$head['level_id']]);
+                     if(!empty($exam_data)){
+                        $headData[$key]['courses'] = $this->db->select('*')->where_in('id',$exam_data)->get('tbl_exam')->result_array();
+                     }else{
+                        $headData[$key]['courses'] = [];
+                     }
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$headData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$headData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+    public function getSubCategoryList()
+     {
+         try {
+             $subCategoryList = $this->master->getRecords('tbl_sub_category',[]);
+             $subCategoryData = [];
+             if(!empty($subCategoryList)){
+                 foreach($subCategoryList as $key=>$sub){
+                     $subCategoryData[$key]['sub_category_id'] = $sub['id'];
+                     $subCategoryData[$key]['sub_category_name'] = $sub['sub_category_name'];
+                     $subCategoryData[$key]['slug'] = $sub['slug'];
+                     $subCategoryData[$key]['short_name'] = $sub['short_name'];
+                     $subCategoryData[$key]['category'] = $this->master->singleRecord('tbl_category',['id'=>$sub['category_id']]);
+                     $subCategoryData[$key]['heads'] = $this->master->singleRecord('tbl_counselling_head',['id'=>$sub['head_id']]);
+                     $subCategoryData[$key]['opens'] = $this->master->singleRecord('tbl_opens',['id'=>$sub['open_id']]);
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$subCategoryData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$subCategoryData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
 }
 
 ?>
