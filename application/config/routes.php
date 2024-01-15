@@ -36,6 +36,14 @@ $route['api/colleges'] = 'API/MasterApi/getCollegeList';
 $route['api/counselling-levels'] = 'API/MasterApi/getCounsellingLevelList';
 $route['api/counselling-heads'] = 'API/MasterApi/getCounsellingHead';
 $route['api/sub-categories'] = 'API/MasterApi/getSubCategoryList';
+$route['api/special-categories'] = 'API/MasterApi/getSpecialCategoryList';
+$route['api/special-sub-categories'] = 'API/MasterApi/getSpecialSubCategoryList';
+$route['api/fees-head'] = 'API/MasterApi/getFeesHeadList';
+$route['api/service-bond'] = 'API/MasterApi/getServiceBondRulesList';
+$route['api/gallery-head'] = 'API/MasterApi/getGalleryHeadList';
+$route['api/clinical-details'] = 'API/MasterApi/getClinicalDataList';
+$route['api/counselling-plan'] = 'API/MasterApi/getCounsellingPlanList';
+$route['api/news'] = 'API/MasterApi/getNewsList';
 
 
 

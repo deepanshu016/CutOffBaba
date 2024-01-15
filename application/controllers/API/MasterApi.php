@@ -447,6 +447,178 @@ Class MasterApi extends MY_Controller  {
          }
          $this->output->set_content_type('application/json')->set_output(json_encode($response));
      }
+    public function getSpecialCategoryList()
+     {
+         try {
+             $specialCategoryList = $this->master->getRecords('tbl_special_category',[]);
+             $specialCategoryData = [];
+             if(!empty($specialCategoryList)){
+                 foreach($specialCategoryList as $key=>$special){
+                     $specialCategoryData[$key]['special_category_id'] = $special['id'];
+                     $specialCategoryData[$key]['special_category_name'] = $special['special_category_name'];
+                     $specialCategoryData[$key]['slug'] = $special['slug'];
+                     $specialCategoryData[$key]['short_name'] = $special['short_name'];
+                     $specialCategoryData[$key]['heads'] = $this->master->singleRecord('tbl_counselling_head',['id'=>$special['head_id']]);
+                     $specialCategoryData[$key]['visibility'] = $this->master->singleRecord('tbl_visibility',['id'=>$special['visibility_id']]);
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$specialCategoryData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$specialCategoryData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     public function getSpecialSubCategoryList()
+     {
+         try {
+             $specialSubCategory = $this->master->getRecords('tbl_sub_special_category',[]);
+             $specialSubCategoryData = [];
+             if(!empty($specialSubCategory)){
+                 foreach($specialSubCategory as $key=>$sub){
+                     $specialSubCategoryData[$key]['special_sub_category_id'] = $sub['id'];
+                     $specialSubCategoryData[$key]['sub_special_category_name'] = $sub['sub_special_category_name'];
+                     $specialSubCategoryData[$key]['slug'] = $sub['slug'];
+                     $specialSubCategoryData[$key]['short_name'] = $sub['short_name'];
+                     $specialSubCategoryData[$key]['special_category'] = $this->master->singleRecord('tbl_special_category',['id'=>$sub['special_id']]);
+                     $specialSubCategoryData[$key]['heads'] = $this->master->singleRecord('tbl_counselling_head',['id'=>$sub['head_id']]);
+                     $specialSubCategoryData[$key]['opens'] = $this->master->singleRecord('tbl_opens',['id'=>$sub['open_id']]);
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$specialSubCategoryData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$specialSubCategoryData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     // API to get Fees Head List
+     public function getFeesHeadList()
+     {
+         try {
+             $feesHeadList = $this->master->getRecords('tbl_feeshead',[]);
+             if(!empty($feesHeadList)){
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$feesHeadList);
+             }else{
+                 $response = array('status'=>400,'message'=>'No data found','data'=>[]);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+    public function getServiceBondRulesList()
+    {
+        try {
+             $serviceBondRulesList = $this->master->getRecords('tbl_service_bond_rules',[]);
+             if(!empty($serviceBondRulesList)){
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$serviceBondRulesList);
+             }else{
+                 $response = array('status'=>400,'message'=>'No data found','data'=>[]);
+             }
+        } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+    public function getGalleryHeadList()
+    {
+        try {
+             $galleryHeadList = $this->master->getRecords('tbl_gallery_heads',[]);
+             if(!empty($galleryHeadList)){
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$galleryHeadList);
+             }else{
+                 $response = array('status'=>400,'message'=>'No data found','data'=>[]);
+             }
+        } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+    public function getClinicalDataList()
+    {
+        try {
+             $galleryHeadList = $this->master->getRecords('tbl_clinical_details',[]);
+             if(!empty($galleryHeadList)){
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$galleryHeadList);
+             }else{
+                 $response = array('status'=>400,'message'=>'No data found','data'=>[]);
+             }
+        } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+
+
+    public function getCounsellingPlanList()
+     {
+         try {
+             $counsellingPlanList = $this->master->getRecords('tbl_counsellng_plans',[]);
+             $counsellingPlanData = [];
+             if(!empty($counsellingPlanList)){
+                 foreach($counsellingPlanList as $key=>$counselling){
+                     $counsellingPlanData[$key]['plan_id'] = $counselling['id'];
+                     $counsellingPlanData[$key]['plan_name'] = $counselling['plan_name'];
+                     $counsellingPlanData[$key]['slug'] = $counselling['slug'];
+                     $counsellingPlanData[$key]['discount_percentage'] = $counselling['discount_percentage'];
+                     $counsellingPlanData[$key]['course'] = $this->master->singleRecord('tbl_course',['id'=>$counselling['course_id']]);
+                     $counsellingPlanData[$key]['degree_type'] = $this->master->singleRecord('tbl_degree_type',['id'=>$counselling['degree_type_id']]);
+                     $counsellingPlanData[$key]['discounted_price'] = $counselling['discounted_price'];
+                     $counsellingPlanData[$key]['description'] = $counselling['description'];
+                     $counsellingPlanData[$key]['terms_condition'] = $counselling['terms_condition'];
+                     $counsellingPlanData[$key]['paid_counselling_registration'] = $counselling['paid_counselling_registration'];
+                     $counsellingPlanData[$key]['payment_info'] = $counselling['payment_info'];
+                     $counsellingPlanData[$key]['status'] = $counselling['status'];
+                     $counsellingPlanData[$key]['created_at'] = $counselling['created_at'];
+                     $counsellingPlanData[$key]['updated_at'] = $counselling['updated_at'];
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$counsellingPlanData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$counsellingPlanData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+    public function getNewsList()
+     {
+         try {
+             $newsList = $this->master->getRecords('tbl_news',[]);
+             $newsData = [];
+             if(!empty($newsList)){
+                 foreach($newsList as $key=>$news){
+                     $newsData[$key]['news_id'] = $news['id'];
+                     $newsData[$key]['image'] = $news['image'];
+                     $newsData[$key]['slug'] = $news['slug'];
+                     $newsData[$key]['title'] = $news['title'];
+                     $newsData[$key]['course'] = $this->master->singleRecord('tbl_course',['id'=>$news['course_id']]);
+                     $newsData[$key]['short_description'] = $news['short_description'];
+                     $newsData[$key]['full_description'] = $news['full_description'];
+                     $newsData[$key]['created_at'] = $news['created_at'];
+                     $newsData[$key]['updated_at'] = $news['updated_at'];
+                 }
+                 $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$newsData);
+             }else{
+                $response = array('status'=>400,'message'=>'No data found','data'=>$newsData);
+             }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+   
 }
 
 ?>
