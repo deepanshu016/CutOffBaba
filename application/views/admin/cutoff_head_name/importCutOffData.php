@@ -9,7 +9,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active">Import Cutoff Head</li>
+                                <li class="breadcrumb-item active">Import Cutoff Data</li>
                             </ol>
                         </div>
 
@@ -20,26 +20,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Import Cutoff Head</h4>
+                        <div class="card-header d-flex justify-content-between">
+                            <h4 class="card-title mb-0">Import Cutoff Data</h4>
+                            <a href="<?= base_url('admin/cutoff-entry-data'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
                             <div id="customerList">
                                 <div class="row g-4 mb-3">
-                                    <div class="col-sm-auto">
-                                        <div>
-                                            <a href="<?= base_url('admin/cutoff-head-name'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('admin/export-cutoff-head-name'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
-                                        </div>
-                                    </div>
-                                    <!-- <span class="">Notes:-</span> -->
-                                    <!-- <ul style="color:red;margin-left: 15px;">
-                                        <li>Please fill all details properly in excel file which you need to upload</li>
-                                        <li>'head_name' field is required while uploading college data</li>
-                                        <li>You can add multiple exams in 'exams' fields with comma separated</li>
-                                        <li>course_id,level_id,state_id required dynamic IDs</li>
-                                    </ul> -->
                                     <form action="<?= base_url('admin/import-cutoffdata-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                                         <div class="live-preview">
                                             <div class="row">

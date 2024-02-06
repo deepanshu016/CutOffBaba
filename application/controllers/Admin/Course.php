@@ -23,6 +23,7 @@ Class Course extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['branchType'] = $this->site->getRecords('tbl_nature');
             $this->load->view('admin/course/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -33,6 +34,7 @@ Class Course extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['branchType'] = $this->site->getRecords('tbl_nature');
             $data['singleCourse'] = $this->master->singleRecord('tbl_course',array('id'=>$id));
             $this->load->view('admin/course/add-edit',$data);
         }else{
@@ -60,14 +62,9 @@ Class Course extends MY_Controller {
     public function saveCourse(){
         $this->form_validation->set_rules('course', 'Course', 'trim|required');
         $this->form_validation->set_rules('course_full_name', 'Course Full Name', 'trim|required');
-        $this->form_validation->set_rules('course_icon', 'Course Icon', 'callback_file_check_course_icon');
         $this->form_validation->set_rules('stream', 'Stream', 'trim|required');
         $this->form_validation->set_rules('degree_type', 'Degree Type', 'trim|required');
         $this->form_validation->set_rules('course_duration', 'Course Duration', 'trim|required');
-        $this->form_validation->set_rules('exam[]', 'Exam', 'trim|required');
-        $this->form_validation->set_rules('course_eligibility', 'Course Eligibility', 'trim|required');
-        $this->form_validation->set_rules('branch_types', 'Branch Type', 'trim|required');
-        $this->form_validation->set_rules('college[]', 'Colleges', 'trim|required');
         if ($this->form_validation->run()) {
             $config['upload_path']  = 'assets/uploads/course';
             $config['allowed_types'] = 'jpg|jpeg|png';
@@ -95,9 +92,9 @@ Class Course extends MY_Controller {
             $data['course_opportunity'] = $this->input->post('course_opportunity');
             $data['expected_salary'] = $this->input->post('expected_salary');
             $data['course_fees'] = $this->input->post('course_fees');
-            $data['branch_type'] = $this->input->post('branch_types');
             $data['counselling_authority'] = $this->input->post('counselling_authority');
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
+             $data['branch_type'] = ($this->input->post('branch_type')) ? implode('|',$this->input->post('branch_type')) : '';
             $result = $this->master->insert('tbl_course',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Course added successfully','url'=>base_url('admin/course'));
@@ -114,13 +111,9 @@ Class Course extends MY_Controller {
                 'errors' => array(
                     'course' => form_error('course'),
                     'course_full_name' => form_error('course_full_name'),
-                    'course_icon' => form_error('course_icon'),
                     'stream' => form_error('stream'),
                     'degree_type' => form_error('degree_type'),
-                    'course_duration' => form_error('course_duration'),
-                    'exam' => form_error('exam[]'),
-                    'college' => form_error('college[]'),
-                    'branch_types' => form_error('branch_types')
+                    'course_duration' => form_error('course_duration')
                 )
             );
             echo json_encode($response);
@@ -131,16 +124,9 @@ Class Course extends MY_Controller {
     public function updateCourse(){
         $this->form_validation->set_rules('course', 'Course', 'trim|required');
         $this->form_validation->set_rules('course_full_name', 'Course Full Name', 'trim|required');
-        if(!$this->input->post('course_id')) {
-            $this->form_validation->set_rules('course_icon', 'Course Icon', 'callback_file_check_course_icon');
-        }
         $this->form_validation->set_rules('stream', 'Stream', 'trim|required');
         $this->form_validation->set_rules('degree_type', 'Degree Type', 'trim|required');
         $this->form_validation->set_rules('course_duration', 'Course Duration', 'trim|required');
-        $this->form_validation->set_rules('exam[]', 'Exam', 'trim|required');
-        $this->form_validation->set_rules('course_eligibility', 'Course Eligibility', 'trim|required');
-        $this->form_validation->set_rules('branch_types', 'Branch Type', 'trim|required');
-        $this->form_validation->set_rules('college[]', 'Colleges', 'trim|required');
         if ($this->form_validation->run()) {
             if(!empty($_FILES['course_icon']['name'])) {
                 $config['upload_path']  = 'assets/uploads/course';
@@ -168,9 +154,9 @@ Class Course extends MY_Controller {
             $data['course_opportunity'] = $this->input->post('course_opportunity');
             $data['expected_salary'] = $this->input->post('expected_salary');
             $data['course_fees'] = $this->input->post('course_fees');
-            $data['branch_type'] = $this->input->post('branch_types');
             $data['counselling_authority'] = $this->input->post('counselling_authority');
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
+             $data['branch_type'] = ($this->input->post('branch_type')) ? implode('|',$this->input->post('branch_type')) : '';
             $result = $this->master->updateRecord('tbl_course',array('id'=>$this->input->post('course_id')),$data);
             $response = array('status' => 'success','message'=> 'Course updated successfully','url'=>base_url('admin/course'));
             echo json_encode($response);

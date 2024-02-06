@@ -104,7 +104,7 @@
                                     Sub Category
                                 </a>
                             </li>
-                            <li class="nav-item">
+                          <!--   <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/special-category'); ?>" data-key="t-calendar">
                                     Special Category
                                 </a>
@@ -113,7 +113,7 @@
                                 <a class="nav-link"  href="<?= base_url('admin/sub-special-category'); ?>" data-key="t-calendar">
                                     Special Sub Category
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/cutoff-entry-data'); ?>" data-key="t-calendar">
                                     Cutoff Entry Data

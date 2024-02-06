@@ -24,22 +24,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header d-flex justify-content-between">
                             <?php if(empty($singleSubCategory)) { ?>
                                 <h4 class="card-title mb-0">Add Sub Category</h4>
                             <?php } else{  ?>
                                 <h4 class="card-title mb-0">Edit Sub Category</h4>
                             <?php } ?>
+                            <a href="<?= base_url('admin/sub-category'); ?>" class="btn btn-success add-btn" > List</a>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
                             <div id="customerList">
                                 <div class="row g-4 mb-3">
-                                    <div class="col-sm-auto">
-                                        <div>
-                                            <a href="<?= base_url('admin/sub-category'); ?>" class="btn btn-success add-btn" > List</a>
-                                        </div>
-                                    </div>
                                     <?php if(empty($singleSubCategory)) { ?>
                                     <form action="<?= base_url('admin/save-sub-category') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                                         <?php } else{  ?>
@@ -50,16 +46,23 @@
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="basiInput" class="form-label">Sub Category Name</label>
-                                                            <input class="form-control" type="text" name="sub_category_name"  placeholder="Sub Category Name" value="<?= (!empty($singleSubCategory)) ? $singleSubCategory['sub_category_name'] : '';?>">
-                                                            <input class="form-control" type="hidden" name="sub_category_id"   value="<?= (!empty($singleSubCategory)) ? $singleSubCategory['id'] : '';?>">
-                                                            <span class="text-danger" id="sub_category_name"></span>
+                                                            <label for="basiInput" class="form-label">Counselling Head</label>
+                                                            <select class="form-control form-select dynamic-data" data-segment="get-catgeorybyhead" data-wrapper=".category_id-wrapper" name="head_id">
+                                                                <option value="">Select Counselling Head</option>
+                                                                <?php
+                                                                $headList = get_master_data('tbl_counselling_head',[]);
+                                                                if(!empty($headList)){
+                                                                    foreach($headList as $head){ ?>
+                                                                        <option value="<?= $head['id']; ?>" <?= (!empty($singleSubCategory) && $head['id'] == $singleSubCategory['head_id']) ? 'selected' : ''; ?>><?= $head['head_name']; ?></option>
+                                                                    <?php } } ?>
+                                                            </select>
+                                                            <span class="text-danger" id="head_id"></span>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Category</label>
-                                                            <select class="form-control" name="category_id">
+                                                            <select class="form-control form-select category_id-wrapper" name="category_id" >
                                                                 <option value="">Select Category</option>
                                                                 <?php
                                                                 $categoryList = get_master_data('tbl_category',[]);
@@ -73,19 +76,14 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="basiInput" class="form-label">Counselling Head</label>
-                                                            <select class="form-control" name="head_id">
-                                                                <option value="">Select Course</option>
-                                                                <?php
-                                                                $headList = get_master_data('tbl_counselling_head',[]);
-                                                                if(!empty($headList)){
-                                                                    foreach($headList as $head){ ?>
-                                                                        <option value="<?= $head['id']; ?>" <?= (!empty($singleSubCategory) && $head['id'] == $singleSubCategory['head_id']) ? 'selected' : ''; ?>><?= $head['head_name']; ?></option>
-                                                                    <?php } } ?>
-                                                            </select>
-                                                            <span class="text-danger" id="head_id"></span>
+                                                            <label for="basiInput" class="form-label">Sub Category Name</label>
+                                                            <input class="form-control" type="text" name="sub_category_name"  placeholder="Sub Category Name" value="<?= (!empty($singleSubCategory)) ? $singleSubCategory['sub_category_name'] : '';?>">
+                                                            <input class="form-control" type="hidden" name="sub_category_id"   value="<?= (!empty($singleSubCategory)) ? $singleSubCategory['id'] : '';?>">
+                                                            <span class="text-danger" id="sub_category_name"></span>
                                                         </div>
                                                     </div>
+
+                                                    
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Short Name</label>
@@ -96,8 +94,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Opens</label>
-                                                            <select class="form-control" name="open_id">
-                                                                <option value="">Select Open</option>
+                                                            <select class="form-control form-select" name="open_id">
                                                                 <?php
                                                                 $openList = get_master_data('tbl_opens',[]);
                                                                 if(!empty($openList)){

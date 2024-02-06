@@ -20,22 +20,17 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <h4 class="card-title mb-0">Exams</h4>
+                    <div>
+                         <a href="<?= base_url('admin/add-exams'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                         <a href="<?= base_url('admin/import-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                         <a href="<?= base_url('admin/export-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
+                      </div>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
-                       <div class="row g-4">
-                          <div class="col-sm-auto">
-                             <div>
-                                 <a href="<?= base_url('admin/add-exams'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
-                                 <a href="<?= base_url('admin/import-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
-                                 <a href="<?= base_url('admin/export-exams'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
-                              </div>
-                          </div>
-                       </div>
-
                        <div class="table-responsive table-card mt-3 mb-1">
                            <table class="table align-middle table-nowrap datatables">
                              <thead class="table-light">

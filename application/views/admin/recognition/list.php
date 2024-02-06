@@ -42,6 +42,7 @@
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
+                                    <th class="sort" data-sort="email">ID</th>
                                     <th class="sort" data-sort="email">Recognition</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -52,6 +53,7 @@
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
+                                        <td><?= $recognition['id']; ?></td>
                                         <td><?= $recognition['recognition']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

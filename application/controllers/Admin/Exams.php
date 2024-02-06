@@ -45,23 +45,18 @@ Class Exams extends MY_Controller {
         $this->form_validation->set_rules('exam', 'Exam', 'trim|required');
         $this->form_validation->set_rules('exam_full_name', 'Exam Full Name', 'trim|required');
         $this->form_validation->set_rules('exam_short_name', 'Exam Short Name', 'trim|required');
-        $this->form_validation->set_rules('degree_type', 'Degree Type', 'trim|required');
-        $this->form_validation->set_rules('eligibility', 'Eligibility', 'trim|required');
-        $this->form_validation->set_rules('exam_duration', 'Exam Duration', 'trim|required');
-        $this->form_validation->set_rules('maximum_marks', 'Maximum Marks', 'trim|required');
-        $this->form_validation->set_rules('passing_marks', 'Passing Marks', 'trim|required');
-        $this->form_validation->set_rules('qualifying_marks', 'Qualifying Marks', 'trim|required');
-        $this->form_validation->set_rules('exam_held_in[]', 'Exam helds in', 'trim|required');
-        $this->form_validation->set_rules('registration_starts','Registration Starts', 'trim|required');
-        $this->form_validation->set_rules('registration_ends','Registration Ends', 'trim|required');
-        $this->form_validation->set_rules('stream[]','Streams', 'trim|required');
-        $this->form_validation->set_rules('course_accepting[]','Course Accepting', 'trim|required');
+        $this->form_validation->set_rules('degree_type[]', 'Degree Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['exam'] = $this->input->post('exam');
             $data['slug'] = $this->slug($this->input->post('exam'));
             $data['exam_full_name'] = $this->input->post('exam_full_name');
             $data['exam_short_name'] = $this->input->post('exam_short_name');
-            $data['degree_type'] = $this->input->post('degree_type');
+            if($this->input->post('degree_type')){
+                $data['degree_type'] = implode('|',$this->input->post('degree_type[]'));
+            }else{
+                $data['degree_type'] = "";
+            }
+            
             $data['eligibility'] = $this->input->post('eligibility');
             $data['exam_duration'] = $this->input->post('exam_duration');
             $data['maximum_marks'] = $this->input->post('maximum_marks');
@@ -69,9 +64,22 @@ Class Exams extends MY_Controller {
             $data['qualifying_marks'] = $this->input->post('qualifying_marks');
             $data['registration_starts'] = date('Y-m-d H:i:s',strtotime($this->input->post('registration_starts')));
             $data['registration_ends'] = date('Y-m-d H:i:s',strtotime($this->input->post('registration_ends')));
-            $data['exam_held_in'] = implode('|',$this->input->post('exam_held_in'));
-            $data['stream'] = implode('|',$this->input->post('stream'));
-            $data['course_accepting'] = implode('|',$this->input->post('course_accepting'));
+            if(($this->input->post('exam_held_in'))){
+                $data['exam_held_in'] = implode('|',$this->input->post('exam_held_in'));
+            }else{
+                $data['exam_held_in'] = "";
+            };
+            if(($this->input->post('stream'))){
+                $data['stream'] = implode('|',$this->input->post('stream'));
+            }else{
+                $data['stream'] = "";
+            };
+            if(($this->input->post('course_accepting'))){
+                $data['course_accepting'] = implode('|',$this->input->post('course_accepting'));
+            }else{
+                $data['course_accepting'] = "";
+            };
+            
             $result = $this->master->insert('tbl_exam',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Exam added successfully','url'=>base_url('admin/exams'));
@@ -89,17 +97,7 @@ Class Exams extends MY_Controller {
                     'exam' => form_error('exam'),
                     'exam_full_name' => form_error('exam_full_name'),
                     'exam_short_name' => form_error('exam_short_name'),
-                    'degree_type' => form_error('degree_type'),
-                    'eligibility' => form_error('eligibility'),
-                    'exam_duration' => form_error('exam_duration'),
-                    'maximum_marks' => form_error('maximum_marks'),
-                    'passing_marks' => form_error('passing_marks'),
-                    'qualifying_marks' => form_error('qualifying_marks'),
-                    'exam_held_in' => form_error('exam_held_in[]'),
-                    'registration_starts' => form_error('registration_starts'),
-                    'registration_ends' => form_error('registration_ends'),
-                    'stream' => form_error('stream[]'),
-                    'course_accepting' => form_error('course_accepting[]'),
+                    'degree_type' => form_error('degree_type[]')
                 )
             );
             echo json_encode($response);
@@ -111,33 +109,39 @@ Class Exams extends MY_Controller {
         $this->form_validation->set_rules('exam', 'Exam', 'trim|required');
         $this->form_validation->set_rules('exam_full_name', 'Exam Full Name', 'trim|required');
         $this->form_validation->set_rules('exam_short_name', 'Exam Short Name', 'trim|required');
-        $this->form_validation->set_rules('degree_type', 'Degree Type', 'trim|required');
-        $this->form_validation->set_rules('eligibility', 'Eligibility', 'trim|required');
-        $this->form_validation->set_rules('exam_duration', 'Exam Duration', 'trim|required');
-        $this->form_validation->set_rules('maximum_marks', 'Maximum Marks', 'trim|required');
-        $this->form_validation->set_rules('passing_marks', 'Passing Marks', 'trim|required');
-        $this->form_validation->set_rules('qualifying_marks', 'Qualifying Marks', 'trim|required');
-        $this->form_validation->set_rules('exam_held_in[]', 'Exam helds in', 'trim|required');
-        $this->form_validation->set_rules('registration_starts','Registration Starts', 'trim|required');
-        $this->form_validation->set_rules('registration_ends','Registration Ends', 'trim|required');
-        $this->form_validation->set_rules('stream[]','Streams', 'trim|required');
-        $this->form_validation->set_rules('course_accepting[]','Course Accepting', 'trim|required');
+        $this->form_validation->set_rules('degree_type[]', 'Degree Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['exam'] = $this->input->post('exam');
             $data['slug'] = $this->slug($this->input->post('exam'));
             $data['exam_full_name'] = $this->input->post('exam_full_name');
             $data['exam_short_name'] = $this->input->post('exam_short_name');
-            $data['degree_type'] = $this->input->post('degree_type');
-            $data['eligibility'] = $this->input->post('eligibility');
+            if($this->input->post('degree_type')){
+                $data['degree_type'] = implode('|',$this->input->post('degree_type'));
+            }else{
+                $data['degree_type'] = "";
+            }
+              $data['eligibility'] = $this->input->post('eligibility');
             $data['exam_duration'] = $this->input->post('exam_duration');
             $data['maximum_marks'] = $this->input->post('maximum_marks');
             $data['passing_marks'] = $this->input->post('passing_marks');
             $data['qualifying_marks'] = $this->input->post('qualifying_marks');
             $data['registration_starts'] = date('Y-m-d H:i:s',strtotime($this->input->post('registration_starts')));
             $data['registration_ends'] = date('Y-m-d H:i:s',strtotime($this->input->post('registration_ends')));
-            $data['exam_held_in'] = implode('|',$this->input->post('exam_held_in'));
-            $data['stream'] = implode('|',$this->input->post('stream'));
-            $data['course_accepting'] = implode('|',$this->input->post('course_accepting'));
+            if(($this->input->post('exam_held_in'))){
+                $data['exam_held_in'] = implode('|',$this->input->post('exam_held_in'));
+            }else{
+                $data['exam_held_in'] = "";
+            };
+            if(($this->input->post('stream'))){
+                $data['stream'] = implode('|',$this->input->post('stream'));
+            }else{
+                $data['stream'] = "";
+            };
+            if(($this->input->post('course_accepting'))){
+                $data['course_accepting'] = implode('|',$this->input->post('course_accepting'));
+            }else{
+                $data['course_accepting'] = "";
+            };
             $result = $this->master->updateRecord('tbl_exam',array('id'=>$this->input->post('exam_id')),$data);
             $response = array('status' => 'success','message'=> 'Exam updated successfully','url'=>base_url('admin/exams'));
             echo json_encode($response);
@@ -149,17 +153,7 @@ Class Exams extends MY_Controller {
                     'exam' => form_error('exam'),
                     'exam_full_name' => form_error('exam_full_name'),
                     'exam_short_name' => form_error('exam_short_name'),
-                    'degree_type' => form_error('degree_type'),
-                    'eligibility' => form_error('eligibility'),
-                    'exam_duration' => form_error('exam_duration'),
-                    'maximum_marks' => form_error('maximum_marks'),
-                    'passing_marks' => form_error('passing_marks'),
-                    'qualifying_marks' => form_error('qualifying_marks'),
-                    'exam_held_in' => form_error('exam_held_in[]'),
-                    'registration_starts' => form_error('registration_starts'),
-                    'registration_ends' => form_error('registration_ends'),
-                    'stream' => form_error('stream[]'),
-                    'course_accepting' => form_error('course_accepting[]'),
+                    'degree_type' => form_error('degree_type[]'),
                 )
             );
             echo json_encode($response);

@@ -50,17 +50,9 @@
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="basiInput" class="form-label">Category Name</label>
-                                                            <input class="form-control" type="text" name="category_name"  placeholder="Category Name" value="<?= (!empty($singleCategory)) ? $singleCategory['category_name'] : '';?>">
-                                                            <input class="form-control" type="hidden" name="category_id"   value="<?= (!empty($singleCategory)) ? $singleCategory['id'] : '';?>">
-                                                            <span class="text-danger" id="category_name"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
                                                             <label for="basiInput" class="form-label">Counselling Head</label>
                                                             <select class="form-control" name="head_id">
-                                                                <option value="">Select Course</option>
+                                                                <option value="">Select Counselling Head</option>
                                                                 <?php
                                                                 $headList = get_master_data('tbl_counselling_head',[]);
                                                                 if(!empty($headList)){
@@ -71,6 +63,15 @@
                                                             <span class="text-danger" id="head_id"></span>
                                                         </div>
                                                     </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="basiInput" class="form-label">Category Name</label>
+                                                            <input class="form-control" type="text" name="category_name"  placeholder="Category Name" value="<?= (!empty($singleCategory)) ? $singleCategory['category_name'] : '';?>">
+                                                            <input class="form-control" type="hidden" name="category_id"   value="<?= (!empty($singleCategory)) ? $singleCategory['id'] : '';?>">
+                                                            <span class="text-danger" id="category_name"></span>
+                                                        </div>
+                                                    </div>
+                                                    
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Short Name</label>

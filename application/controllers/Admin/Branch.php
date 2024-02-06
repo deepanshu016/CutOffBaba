@@ -12,7 +12,8 @@ Class Branch extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['branchList'] = $this->master->getRecords('tbl_branch');
+            $data['branchList'] = $this->db->select('tbl_branch.*,tbl_course.course as coursename,tbl_nature.nature')->join('tbl_nature','tbl_nature.id=tbl_branch.branch_type')->join('tbl_course','tbl_course.id=tbl_branch.courses')->get('tbl_branch')->result_array();
+
             $this->load->view('admin/branch/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -23,6 +24,7 @@ Class Branch extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['branchList'] = $this->site->getRecords('tbl_nature');
             $this->load->view('admin/branch/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -33,6 +35,7 @@ Class Branch extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['branchList'] = $this->site->getRecords('tbl_nature');
             $data['singleBranch'] = $this->master->singleRecord('tbl_branch',array('id'=>$id));
             $this->load->view('admin/branch/add-edit',$data);
         }else{
@@ -43,11 +46,14 @@ Class Branch extends MY_Controller {
     //Save Branch
     public function saveBranch(){
         $this->form_validation->set_rules('branch', 'Branch', 'trim|required');
-        $this->form_validation->set_rules('courses[]', 'Courses', 'trim|required');
+        $this->form_validation->set_rules('courses', 'Courses', 'trim|required');
         $this->form_validation->set_rules('branch_type', 'Branch Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['branch'] = $this->input->post('branch');
-            $data['courses'] = implode('|',$this->input->post('courses'));
+            $data['short_branch_name'] = $this->input->post('short_branch_name');
+            $data['branch_name_1'] = $this->input->post('branch_name_1');
+            $data['branch_name_2'] = $this->input->post('branch_name_2');
+            $data['courses'] = $this->input->post('courses');
             $data['branch_type'] = $this->input->post('branch_type');
             $result = $this->master->insert('tbl_branch',$data);
             if($result > 0){
@@ -64,8 +70,8 @@ Class Branch extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'branch' => form_error('branch'),
-                    'courses' => form_error('courses[]'),
-                    'branch_type' => form_error('branch_type[]')
+                    'courses' => form_error('courses'),
+                    'branch_type' => form_error('branch_type')
                 )
             );
             echo json_encode($response);
@@ -76,11 +82,14 @@ Class Branch extends MY_Controller {
     public function updateBranch(){
 
         $this->form_validation->set_rules('branch', 'Branch', 'trim|required');
-        $this->form_validation->set_rules('courses[]', 'Courses', 'trim|required');
+        $this->form_validation->set_rules('courses', 'Courses', 'trim|required');
         $this->form_validation->set_rules('branch_type', 'Branch Type', 'trim|required');
         if ($this->form_validation->run()) {
             $data['branch'] = $this->input->post('branch');
-            $data['courses'] = implode('|',$this->input->post('courses'));
+            $data['short_branch_name'] = $this->input->post('short_branch_name');
+            $data['branch_name_1'] = $this->input->post('branch_name_1');
+            $data['branch_name_2'] = $this->input->post('branch_name_2');
+            $data['courses'] = $this->input->post('courses');
             $data['branch_type'] = $this->input->post('branch_type');
             $result = $this->master->updateRecord('tbl_branch',array('id'=>$this->input->post('branch_id')),$data);
             $response = array('status' => 'success','message'=> 'Branch updated successfully','url'=>base_url('admin/branch'));
@@ -91,8 +100,8 @@ Class Branch extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'branch' => form_error('branch'),
-                    'courses' => form_error('courses[]'),
-                    'branch_type' => form_error('branch_type[]')
+                    'courses' => form_error('courses'),
+                    'branch_type' => form_error('branch_type')
                 )
             );
             echo json_encode($response);
@@ -160,8 +169,11 @@ Class Branch extends MY_Controller {
                         $col_count = count($data);
                         if ($row>0) {
                             $impdata['branch']=$data[1];
-                            $impdata['courses']=$data[2];
-                            $impdata['branch_type']=$data[3];
+                            $impdata['short_branch_name']=$data[2];
+                            $impdata['branch_name_1']=$data[3];
+                            $impdata['branch_name_2']=$data[4];
+                            $impdata['courses']=$data[5];
+                            $impdata['branch_type']=$data[6];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_branch',$impdata);

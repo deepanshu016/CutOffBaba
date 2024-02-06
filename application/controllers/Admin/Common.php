@@ -29,7 +29,8 @@ Class Common extends MY_Controller {
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
-    }
+    } 
+
     public function getCityByState()
     {
         if ($this->is_admin_logged_in() == true) {
@@ -52,6 +53,47 @@ Class Common extends MY_Controller {
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
+    }
+    public function getSubdistrictByCity()
+    {
+        if ($this->is_admin_logged_in() == true) {
+            $id = $this->input->post('id');
+            $data['admin_session'] = $this->session->userdata('admin');
+            $cityList = $this->master->getRecordsOrderBy('tbl_sub_district',['district'=>$id],'district');
+            $html = '';
+            if(!empty($cityList)){
+                foreach($cityList as $city){
+                    $html.= '<option value="'.$city['id'].'">'.$city['sub_district'].'</option>';
+                }
+                $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
+                echo json_encode($response);
+                return false;
+            }
+            $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
+            echo json_encode($response);
+            return false;
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
+public function getCategoryByHead()
+    {
+        
+            $id = $this->input->post('id');
+            $cityList = $this->master->getRecordsOrderBy('tbl_category',['head_id'=>$id],'category_name');
+            $html = '';
+            if(!empty($cityList)){
+                foreach($cityList as $city){
+                    $html.= '<option value="'.$city['id'].'">'.$city['category_name'].'</option>';
+                }
+                $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
+                echo json_encode($response);
+                return false;
+            }
+            $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
+            echo json_encode($response);
+            return false;
     }
     public function add(){
         if ($this->is_admin_logged_in() == true) {
@@ -142,6 +184,27 @@ Class Common extends MY_Controller {
             $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+    public function getBranchesByCourse()
+    {
+         $id = $this->input->post('id');
+
+        $branchList = $this->db->select('*')->where('id',$id)->get('tbl_course')->result_array();
+        $branchList=$branchList[0]['branch_type'];
+        $branchtypeList=explode('|',$branchList);
+        $html = '';
+        if(!empty($branchtypeList)){
+            foreach($branchtypeList as $branchtypeid){
+                $nature=$this->master->singleRecord('tbl_nature',array('id'=>$branchtypeid));
+                $html.= '<option value="'.$nature['id'].'">'.$nature['nature'].'</option>';
+            }
+            $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
+            echo json_encode($response);
+            return false;
+        }
+        $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
+        echo json_encode($response);
+        return false;
     }
 }
 

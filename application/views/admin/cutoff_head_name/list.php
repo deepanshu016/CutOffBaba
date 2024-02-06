@@ -53,6 +53,12 @@
                                 <?php if(!empty($counsellingHeadList)) {
                                       foreach($counsellingHeadList as $key=>$head){
                                         $stateData = $this->db->get_where('tbl_state',array('id'=>$head['state_id']))->row_array();
+                                        $courseid=explode('|',$head['course_id']);
+                                        $courses=$this->db->select('*')->where_in('id',$courseid)->get('tbl_course')->result_array();
+                                        $coursename="";
+                                        foreach($courses as $course){
+                                            $coursename.=$course['course'].",";
+                                        }
                                         $courseData = $this->db->get_where('tbl_course',array('id'=>$head['course_id']))->row_array();
                                         $levelData = $this->db->get_where('tbl_counselling_level',array('id'=>$head['level_id']))->row_array();
                                 ?>
@@ -60,8 +66,8 @@
                                         <td><?= $key+1; ?></td>
                                         <td><?= $head['id']; ?></td>
                                         <td><?= $head['head_name']; ?></td>
-                                        <td><?= ($stateData) ? $stateData['name'] : ''; ?></td>
-                                        <td><?= ($courseData) ? $courseData['course'] : ''; ?></td>
+                                        <td><?= ($stateData) ? $stateData['name'] : 'All State'; ?></td>
+                                        <td><?= ($coursename) ? $coursename : ''; ?></td>
                                         <td><?= ($levelData) ? $levelData['level'] : ''; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

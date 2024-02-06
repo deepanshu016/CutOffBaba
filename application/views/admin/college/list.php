@@ -20,28 +20,24 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <h4 class="card-title mb-0">College</h4>
+                     <div>
+                         <a href="<?= base_url('admin/add-college'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
+                         <a href="<?= base_url('admin/import-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
+                         <a href="<?= base_url('admin/export-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
+                      </div>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
-                       <div class="row g-4">
-                          <div class="col-sm-auto">
-                             <div>
-                                 <a href="<?= base_url('admin/add-college'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
-                                 <a href="<?= base_url('admin/import-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
-                                 <a href="<?= base_url('admin/export-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export </a>
-                              </div>
-                          </div>
-                       </div>
-
                        <div class="table-responsive table-card mt-3 mb-1">
                            <table class="table align-middle table-nowrap datatables">
                              <thead class="table-light">
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                     <th class="sort" data-sort="email">College Name</th>
+                                    <th class="sort" data-sort="email">Stream</th>
                                     <th class="sort" data-sort="email">Establishment </th>
                                     <th class="sort" data-sort="college_logo">College Logo</th>
                                     <th class="sort" data-sort="action">Action</th>
@@ -50,10 +46,12 @@
                              <tbody class="list form-check-all">
                                 <?php if(!empty($collegeList)) {
                                       foreach($collegeList as $key=>$college){
+                                        $streamname=$this->site->singleRecord('tbl_stream',array('id'=>$college['stream']));
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= ucfirst($college['full_name']); ?></td>
+                                        <td><?= !empty($streamname)?$streamname['stream']:''; ?></td>
                                         <td><?= $college['establishment']; ?></td>
                                         <td><img src="<?= base_url('assets/uploads/college/logo'.'/'.$college['college_logo']) ?>" height="100" width="100" class="rounded-circle"></td>
                                         <td>

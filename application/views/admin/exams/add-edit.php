@@ -74,13 +74,15 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Degree Type</label>
-                                              <select class="form-control" name="degree_type">
-                                                  <option value="">Select</option>
+                                              <select class="form-control js-example-basic-multiple" name="degree_type[]" multiple>
                                                   <?php
                                                   $degreeTypeList = get_master_data('tbl_degree_type',[]);
+                                                   if(!empty($singleExam)){
+                                                      $degreeType = explode("|",$singleExam['degree_type']);
+                                                  };
                                                   if(!empty($degreeTypeList)){
                                                       foreach($degreeTypeList as $degree){ ?>
-                                                          <option value="<?= $degree['id']; ?>" <?= (!empty($singleExam) && $degree['id'] == $singleExam['degree_type']) ? 'selected' : ''; ?>><?= $degree['degreetype']; ?></option>
+                                                          <option value="<?= $degree['id']; ?>" <?= (!empty($singleExam) && in_array($degree['id'],$degreeType)) ? 'selected' : ''; ?>><?= $degree['degreetype']; ?></option>
                                                       <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="degree_type"></span>
@@ -88,30 +90,28 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Exam Eligibility</label>
                                               <textarea class="form-control" name="eligibility" id="eligibility"><?= (!empty($singleExam)) ? $singleExam['eligibility'] : '';?></textarea>
                                               <span class="text-danger" id="eligibility"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Exam Duration</label>
                                               <input class="form-control" type="text" name="exam_duration"  placeholder="Exam Duration" value="<?= (!empty($singleExam)) ? $singleExam['exam_duration'] : ''; ?>">
                                               <span class="text-danger" id="exam_duration"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Maximum Marks</label>
                                               <input class="form-control" type="text" name="maximum_marks"  placeholder="Maximum Marks" value="<?= (!empty($singleExam)) ? $singleExam['maximum_marks'] : ''; ?>">
                                               <span class="text-danger" id="maximum_marks"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Passing Marks</label>
                                               <input class="form-control" type="text" name="passing_marks"  placeholder="Passing Marks" value="<?= (!empty($singleExam)) ? $singleExam['passing_marks'] : ''; ?>">
@@ -120,14 +120,14 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Qualifying Marks</label>
                                               <input class="form-control" type="text" name="qualifying_marks"  placeholder="Qualifying Marks" value="<?= (!empty($singleExam)) ? $singleExam['qualifying_marks'] : ''; ?>">
                                               <span class="text-danger" id="qualifying_marks"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Exam Held In</label>
                                               <select class="form-control js-example-basic-multiple" name="exam_held_in[]" multiple>
@@ -146,25 +146,21 @@
                                               <span class="text-danger" id="exam_held_in"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Registration Starts from</label>
                                               <input class="form-control" type="date" name="registration_starts"  placeholder="Registration Starts from" value="<?= (!empty($singleExam)) ? $singleExam['registration_starts'] : ''; ?>">
                                               <span class="text-danger" id="registration_starts"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Registration Ends</label>
                                               <input class="form-control" type="date" name="registration_ends"  placeholder="Registration Ends from" value="<?= (!empty($singleExam)) ? $singleExam['registration_ends'] : ''; ?>">
                                               <span class="text-danger" id="registration_ends"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Stream Accepting</label>
                                               <select class="form-control js-example-basic-multiple" name="stream[]" multiple>
@@ -183,7 +179,7 @@
                                               <span class="text-danger" id="stream"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course Accepting</label>
                                               <select class="form-control js-example-basic-multiple" name="course_accepting[]" multiple>
@@ -205,11 +201,11 @@
                                   </div>
 
                                   <div class="row">
-                                    <div class="col-md-6" style="margin-top: 15px;">
+                                    <div class="col-md-12" style="margin-top: 15px;">
                                         <?php if(empty($singleExam)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn w-100 rounded-pill btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn w-100 rounded-pill btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

@@ -24,22 +24,18 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleCollege)) { ?>
                       <h4 class="card-title mb-0">Add College</h4>
                     <?php } else{  ?>
                       <h4 class="card-title mb-0">Edit College</h4>
                     <?php } ?>
+                    <a href="<?= base_url('admin/college'); ?>" class="btn btn-success add-btn" > List</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
                        <div class="row g-4 mb-3">
-                          <div class="col-sm-auto">
-                             <div>
-                                <a href="<?= base_url('admin/college'); ?>" class="btn btn-success add-btn" > List</a>
-                             </div>
-                          </div>
                           <?php if(empty($singleCollege)) { ?>
                             <form action="<?= base_url('admin/save-college') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>
@@ -47,7 +43,7 @@
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
-                                      <div class="col-lg-12">
+                                      <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Full Name</label>
                                               <input type="text" class="form-control" placeholder="College Full Name" name="full_name" value="<?= (!empty($singleCollege)) ? $singleCollege['full_name'] : ''; ?>">
@@ -58,13 +54,19 @@
                                               <span class="text-danger" id="full_name"></span>
                                           </div>
                                       </div>
-                                      
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">College Short Name</label>
+                                              <input type="text" class="form-control" placeholder="College Short Name" name="short_name" value="<?= (!empty($singleCollege)) ? $singleCollege['short_name'] : ''; ?>">
+                                          </div>
+                                      </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Popular Name 1</label>
                                               <input type="text" class="form-control" placeholder="College Popular Name 1" name="popular_name_one" value="<?= (!empty($singleCollege)) ? $singleCollege['popular_name_one'] : ''; ?>">
                                           </div>
                                       </div>
+                                      
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College Popular Name 2</label>
@@ -80,14 +82,14 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Establishment</label>
-                                              <input type="date" class="form-control" placeholder="Establishment" name="establishment" value="<?= (!empty($singleCollege)) ? date('Y-m-d',strtotime($singleCollege['establishment'])) : ''; ?>">
+                                              <label for="basiInput" class="form-label">Establishment Year</label>
+                                              <input type="text" class="form-control" placeholder="Establishment Year" name="establishment" value="<?= (!empty($singleCollege)) ? date('Y-m-d',strtotime($singleCollege['establishment'])) : ''; ?>">
                                               <span class="text-danger" id="establishment"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Gender Accepted</label>
                                               <select class="form-control js-example-basic-multiple" name="gender_accepted[]" multiple>
@@ -106,12 +108,27 @@
                                               <span class="text-danger" id="gender_accepted"></span>
                                           </div>
                                       </div>
+                                      <div class="col-lg-4">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Stream</label>
+                                              <select class="form-control  form-select dynamic-data" name="stream" data-segment="get-course" data-wrapper=".course">
+                                                  <option value="">Select Stream</option>
+                                                  <?php
+                                                  $countryList = get_master_data('tbl_stream',[]);
+                                                  if(!empty($countryList)){
+                                                      foreach($countryList as $country){ ?>
+                                                          <option value="<?= $country['id']; ?>" <?= (!empty($singleCollege) && $country['id'] == $singleCollege['stream']) ? 'selected' : ''; ?>><?= $country['stream']; ?></option>
+                                                  <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="stream"></span>
+                                          </div>
+                                      </div>
                                   </div>
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course Offered</label>
-                                              <select class="form-control js-example-basic-multiple" name="course_offered[]" multiple>
+                                              <select class="form-control course js-example-basic-multiple" name="course_offered[]" multiple>
                                                   <option value="">Select Course</option>
                                                   <?php
                                                   $courseList = get_master_data('tbl_course',[]);
@@ -130,7 +147,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
-                                              <select class="form-control dynamic-data" name="country" data-segment="admin/get-state" data-wrapper=".state-wrapper">
+                                              <select class="form-control  form-select dynamic-data" name="country" data-segment="get-state" data-wrapper=".state-wrapper">
                                                   <option value="">Select Country</option>
                                                   <?php
                                                   $countryList = get_master_data('tbl_country',[]);
@@ -147,7 +164,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
-                                              <select class="form-control state-wrapper dynamic-data" name="state" data-segment="admin/get-city" data-wrapper=".city-wrapper">
+                                              <select class="form-control  form-select state-wrapper dynamic-data" name="state" data-segment="get-city" data-wrapper=".city-wrapper">
                                                       <option value="">Select State</option>
                                                       <?php
                                                       if(!empty($singleCollege)){
@@ -162,9 +179,9 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">City</label>
-                                              <select class="form-control city-wrapper" name="city">
-                                                  <option value="">Select City</option>
+                                              <label for="basiInput" class="form-label">District</label>
+                                              <select class="form-control form-select city-wrapper dynamic-data" data-segment="get-subdistrict" data-wrapper=".subdistrict-wrapper" name="city">
+                                                  <option value="">Select District</option>
                                                   <?php
                                                        if(!empty($singleCollege)){
                                                           $cityList = get_master_data('tbl_city',['state_id'=>$singleCollege['state']]);
@@ -176,18 +193,32 @@
                                               <span class="text-danger" id="city"></span>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Sub District</label>
+                                              <select class="form-control form-select subdistrict-wrapper" name="subdistrict">
+                                                  <option value="">Select Sub District</option>
+                                                  <?php
+                                                       if(!empty($singleCollege)){
+                                                          $cityList = get_master_data('tbl_sub_district',['id'=>$singleCollege['sub_district']]);
+                                                          if(!empty($cityList)){
+                                                          foreach($cityList as $city){ ?>
+                                                              <option value="<?= $city['id']; ?>" <?= (!empty($singleCollege) && $city['id'] == $singleCollege['sub_district']) ? 'selected' : ''; ?>><?= $city['sub_district']; ?></option>
+                                                  <?php } } } ?>
+                                              </select>
+                                              <span class="text-danger" id="city"></span>
+                                          </div>
+                                      </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Approved By</label>
-                                              <select class="form-control" name="approved_by">
-                                                  <option value="">Select</option>
+                                              <select class="form-control js-example-basic-multiple" name="approved_by[]" multiple>
                                                   <?php
+                                                  $appby=explode('|',$singleCollege['approved_by']);
                                                   $approvalList = get_master_data('tbl_approval',[]);
                                                   if(!empty($approvalList)){
                                                       foreach($approvalList as $approval){ ?>
-                                                          <option value="<?= $approval['id']; ?>" <?= (!empty($singleCollege) && $approval['id'] == $singleCollege['approved_by']) ? 'selected' : ''; ?>><?= $approval['approval']; ?></option>
+                                                          <option value="<?= $approval['id']; ?>" <?= (!empty($singleCollege) && in_array($approval['id'],$appby)) ? 'selected' : ''; ?>><?= $approval['approval']; ?></option>
                                                       <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="approved_by"></span>
@@ -308,13 +339,13 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Keywords</label>
                                               <input type="text" class="form-control keywords" placeholder="Keywords" name="keywords[]" value="<?= (!empty($singleCollege)) ? $singleCollege['keywords'] : ''; ?>" >
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Tags</label>
                                               <input type="text" class="form-control tags" placeholder="Tags" name="tags[]" value="<?= (!empty($singleCollege)) ? $singleCollege['tags'] : ''; ?>">
@@ -347,3 +378,9 @@
 </div>
 
 <?php $this->load->view('admin/footer'); ?>
+<script type="text/javascript">
+$(document).on('click','div',function(){
+  $('.cke_toolbar_break').remove();
+  //alert('');
+})
+</script>

@@ -159,6 +159,7 @@ Class State extends MY_Controller {
                         $col_count = count($data);
                         if ($row>0) {
                             $impdata['name']=$data[1];
+                            $impdata['country_id']=$data[2];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_state',$impdata);

@@ -59,13 +59,13 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course</label>
-                                              <select class="form-control" name="course_id">
-                                                  <option value="">Select Course</option>
+                                              <select class="form-control js-example-basic-multiple" name="course_id[]" multiple>
                                                   <?php
                                                   $courseList = get_master_data('tbl_course',[]);
                                                   if(!empty($courseList)){
+                                                     $courseLists = explode('|',$singleCounsellingHead['course_id']);
                                                       foreach($courseList as $course){ ?>
-                                                          <option value="<?= $course['id']; ?>" <?= (!empty($singleCounsellingHead) && $course['id'] == $singleCounsellingHead['course_id']) ? 'selected' : ''; ?>><?= $course['course']; ?></option>
+                                                          <option value="<?= $course['id']; ?>" <?= (!empty($singleCounsellingHead) && in_array($course['id'],$courseLists)) ? 'selected' : ''; ?>><?= $course['course']; ?></option>
                                                       <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="course_id"></span>
@@ -74,7 +74,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Counselling Level</label>
-                                              <select class="form-control" name="level_id">
+                                              <select class="form-control form-select" name="level_id">
                                                   <option value="">Select Counselling Level</option>
                                                   <?php
                                                   $counsellingLevelList = get_master_data('tbl_counselling_level',[]);
@@ -90,12 +90,11 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">College</label>
                                               <select class="form-control js-example-basic-multiple" name="college[]" multiple>
-                                                  <option value="">Select College</option>
                                                   <?php
                                                   $collegeList = get_master_data('tbl_college',[]);
                                                   if(!empty($collegeList)){
                                                         if(!empty($singleCounsellingHead)){
-                                                            $collegeLists = explode('|',$singleCounsellingHead['colleges']);
+                                                            $collegeLists = explode('|',$singleCounsellingHead['college']);
 
                                                         }
                                                       foreach($collegeList as $college){ ?>
@@ -127,8 +126,8 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
-                                              <select class="form-control" name="state">
-                                                  <option value="">Select State</option>
+                                              <select class="form-control form-select" name="state">
+                                                  <option value="0">All State</option>
                                                   <?php
                                                       $stateList = get_master_data('tbl_state',[]);
                                                       if(!empty($stateList)){
@@ -153,6 +152,26 @@
                           </form>
                        </div>
                     </div>
+                 </div>
+                 <!-- end card -->
+              </div>
+               <div class="card">
+                 <div class="card-header">
+                    Added Colleges
+                 </div>
+                 <!-- end card header -->
+                 <div class="card-body">
+                  <table class="table table-bordered">
+                    <?php if(!empty($collegeLists)){foreach ($collegeLists as $key => $value) {
+                      if ($value!="") {
+                         $college=$this->db->select('*')->where('id',$value)->get('tbl_college')->result_array();
+                    
+                    echo '<tr><td>'.($key+1).'</td><td>'.$college[0]['full_name'].'</td></tr>';
+                      }}
+                   
+                  } ?>
+                  </table>
+                  
                  </div>
                  <!-- end card -->
               </div>

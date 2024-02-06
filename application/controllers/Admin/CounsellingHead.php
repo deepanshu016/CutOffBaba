@@ -44,16 +44,15 @@ Class CounsellingHead extends MY_Controller {
     //Save Counselling Level
     public function saveCounsellingHead(){
         $this->form_validation->set_rules('head_name', 'Head Name', 'trim|required');
-        $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
+        $this->form_validation->set_rules('course_id[]', 'Course', 'trim|required');
         $this->form_validation->set_rules('level_id', 'Level', 'trim|required');
-        $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('exam_id[]', 'Exams', 'trim|required');
         $this->form_validation->set_rules('college[]', 'Colleges', 'trim|required');
         if ($this->form_validation->run()) {
             $data['head_name'] = $this->input->post('head_name');
-            $data['course_id'] = $this->input->post('course_id');
             $data['level_id'] = $this->input->post('level_id');
             $data['state_id'] = $this->input->post('state');
+            $data['course_id'] = ($this->input->post('course_id')) ? implode('|',$this->input->post('course_id')) : '';
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
             $data['exams'] = ($this->input->post('exam_id')) ? implode('|',$this->input->post('exam_id')) : '';
             $result = $this->master->insert('tbl_counselling_head',$data);
@@ -71,9 +70,8 @@ Class CounsellingHead extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'head_name' => form_error('head_name'),
-                    'course_id' => form_error('course_id'),
+                    'course_id' => form_error('course_id[]'),
                     'level_id' => form_error('level_id'),
-                    'state' => form_error('state'),
                     'college' => form_error('college[]'),
                     'exam_id' => form_error('exam_id[]')
                 )
@@ -85,16 +83,15 @@ Class CounsellingHead extends MY_Controller {
     //Save Feeshead
     public function updateCounsellingHead(){
         $this->form_validation->set_rules('head_name', 'Head Name', 'trim|required');
-        $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
+        $this->form_validation->set_rules('course_id[]', 'Course', 'trim|required');
         $this->form_validation->set_rules('level_id', 'Level', 'trim|required');
-        $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('exam_id[]', 'Exams', 'trim|required');
         $this->form_validation->set_rules('college[]', 'Colleges', 'trim|required');
         if ($this->form_validation->run()) {
             $data['head_name'] = $this->input->post('head_name');
-            $data['course_id'] = $this->input->post('course_id');
             $data['level_id'] = $this->input->post('level_id');
             $data['state_id'] = $this->input->post('state');
+            $data['course_id'] = ($this->input->post('course_id')) ? implode('|',$this->input->post('course_id')) : '';
             $data['exams'] = ($this->input->post('exam_id')) ? implode('|',$this->input->post('exam_id')) : '';
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
             $result = $this->master->updateRecord('tbl_counselling_head',array('id'=>$this->input->post('head_id')),$data);
@@ -106,9 +103,8 @@ Class CounsellingHead extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'head_name' => form_error('head_name'),
-                    'course_id' => form_error('course_id'),
+                    'course_id' => form_error('course_id[]'),
                     'level_id' => form_error('level_id'),
-                    'state' => form_error('state'),
                     'college' => form_error('college[]'),
                     'exam_id' => form_error('exam_id[]')
                 )
@@ -296,18 +292,20 @@ Class CounsellingHead extends MY_Controller {
                 $totalData = $totalMarksData * $roundsData;
                 // echo "<pre>";
                 // print_r($sheet_data);die;
-                for($k=3;$k<count($sheet_data[0]);$k+=15){
+                for($k=4;$k<count($sheet_data[0]);$k+=15){
                     if($sheet_data[0][$k] != ''){
-                        $categoryData[] = $sheet_data[0][$k];
+                        $categoryDatadd=explode("-",$sheet_data[0][$k]);
+                        $categoryData[] = $categoryDatadd[0];
                     }
                 }
                
                 $collegeid="";
                 $course_id="";
                 $branch_id="";
-                $x=3;
+                $x=4;
                 $insertDatasss = [];
                 $round1=[];
+                $this->master->deleteRecord('tbl_cutfoff_marks_data',array('cutoff_head'=>$head_id,'year'=>$year));
                 foreach($categoryData as $key=>$category_type){
                     $round1=[];
                     $round2=[];
@@ -318,11 +316,13 @@ Class CounsellingHead extends MY_Controller {
                         if($sheet_data[$l][0]!=""){
                             $collegeid=$sheet_data[$l][0];
                         }
-                        if($sheet_data[$l][1]!=""){
-                            $course_id=$sheet_data[$l][1];
-                        }
                         if($sheet_data[$l][2]!=""){
-                            $branch_id=$sheet_data[$l][2];
+                            $course_iddd=explode("-",$sheet_data[$l][2]);
+                            $course_id=$course_iddd[0];
+                        }
+                        if($sheet_data[$l][3]!=""){
+                            $branch_iddd=explode("-",$sheet_data[$l][3]);
+                            $branch_id=$branch_iddd[0];
                         }
                         $r1['round_one']=1;
                         $r1['college_id']=$collegeid;
@@ -393,6 +393,7 @@ Class CounsellingHead extends MY_Controller {
                     $this->master->insertBulk('tbl_cutfoff_marks_data',$round3);
                     $this->master->insertBulk('tbl_cutfoff_marks_data',$round4);
                     $this->master->insertBulk('tbl_cutfoff_marks_data',$round5);
+
                     $x=$x+15;
                 }
                 $response = array('status' => 'success','message'=> 'Data imported successfully','url'=>base_url('admin/cutoff-entry-data'));

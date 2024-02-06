@@ -42,6 +42,7 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
+                                    <th class="sort" data-sort="email">Cutoff head</th>
                                     <th class="sort" data-sort="email">Category</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -49,10 +50,12 @@
                              <tbody class="list form-check-all">
                                 <?php if(!empty($categoryList)) {
                                       foreach($categoryList as $key=>$category){
+                                        $cutoffhead=$this->db->select('*')->where('id',$category['head_id'])->get('tbl_counselling_head')->result_array();
                                 ?>
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= $category['id']; ?></td>
+                                        <td><?= !empty($cutoffhead)?$cutoffhead[0]['head_name']:''; ?></td>
                                         <td><?= $category['category_name']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

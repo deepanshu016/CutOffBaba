@@ -42,6 +42,8 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="customer_name">ID</th>
+                                    <th class="sort" data-sort="Branch">Course</th>
+                                    <th class="sort" data-sort="Branch">Branch Type</th>
                                     <th class="sort" data-sort="Branch">Branch</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -53,6 +55,8 @@
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= $branch['id']; ?></td>
+                                        <td><?= $branch['coursename']; ?></td>
+                                        <td><?= $branch['nature']; ?></td>
                                         <td><?= $branch['branch']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

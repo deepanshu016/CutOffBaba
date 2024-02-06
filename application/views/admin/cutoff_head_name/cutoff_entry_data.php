@@ -25,10 +25,11 @@
                     <div class="col-sm-auto">
                        <div>
                              <a href="<?= base_url('admin/import-cutoffdata'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
-                             <a href="<?= base_url('admin/export-cutoff-entry-data'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Export</a>
+                             <a href="#" class="btn btn-primary add-btn" onclick="downloaddata();" ><i class="ri-download-2-line"></i> Export</a>
                         </div>
                      </div>
                  </div>
+
                  <!-- end card header -->
                  <div class="card-body">
                      <div class="col-md-12">
@@ -37,7 +38,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Head Name</label>
-                                        <select class="form-control" name="head_id">
+                                        <select class="form-control form-select" name="head_id" id="head_id">
                                             <option value="">Select</option>
                                             <?php
                                             $headList = get_master_data('tbl_counselling_head',[]);
@@ -52,7 +53,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Year</label>
-                                            <select name="year" class="form-control">
+                                            <select name="year" class="form-control" id="year">
                                             <?php
                                             // Get the current year
                                             $currentYear = date("Y");
@@ -69,7 +70,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group" style="margin-top: 26px;">
                                         <label>  </label>
-                                        <button type="submit" class="btn btn-success add-btn"> Filter</button>
+                                        <button type="submit" class="btn btn-success add-btn"> Generate</button>
                                     </div>
                                 </div>
                             </div>
@@ -94,3 +95,13 @@
     <!-- container-fluid -->
 </div>
 <?php $this->load->view('admin/footer'); ?>
+ 
+                 
+                 <script type="text/javascript">
+                    function downloaddata(){
+                        var headid=$('#head_id').val();
+                        var year=$('#year').val();
+                        //alert(''+headid+year);
+                        window.location.href='<?= base_url('admin/export-cutoff-entry-data'); ?>/'+headid+'/'+year
+                    }
+                </script>

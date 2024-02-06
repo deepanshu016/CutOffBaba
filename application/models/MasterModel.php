@@ -16,17 +16,17 @@ class MasterModel extends CI_Model {
 			return (0);
 		}
 	} // insert end
-	function insertBulk($table='',$data){
+	function insertBulk($table='',$data=null){
 		return $this->db->insert_batch($table, $data);
 	}
-	function UploadBulk($table='',$data){
+	function UploadBulk($table='',$data=null){
 		$this->db->delete($table);
 		return $this->db->insert_batch($table, $data);
 	}
-	function singleRecord($table = '', $condition){
+	function singleRecord($table = '', $condition=null){
 		return $this->db->get_where($table,$condition)->row_array();
 	}
-	function updateRecord($table = '', $condition,$data= []) {
+	function updateRecord($table = '', $condition=null,$data= []) {
 		$q = $this->db->set($data)->where($condition)->update($table);
 		return ($this->db->affected_rows());
 	}
@@ -52,10 +52,10 @@ class MasterModel extends CI_Model {
 			return $this->db->order_by('id','DESC')->limit(3)->select('*')->get($table)->result_array();
 		}
 	}
-	function getRecordsLike($table = '', $condition){
+	function getRecordsLike($table = '', $condition=null){
 		return $this->db->select('*')->from($table)->like('blog_type',$condition)->get()->result_array();
 	}
-	function deleteRecord($table = '', $condition) {
+	function deleteRecord($table = '', $condition=null) {
 		$q = $this->db->where($condition)->delete($table);
 		return ($this->db->affected_rows());
 	}

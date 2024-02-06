@@ -24,22 +24,18 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleCourse)) { ?>
                       <h4 class="card-title mb-0">Add Course</h4>
                     <?php } else{  ?>
                       <h4 class="card-title mb-0">Edit Course</h4>
                     <?php } ?>
+                    <a href="<?= base_url('admin/course'); ?>" class="btn btn-success add-btn" > List</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
                        <div class="row g-4 mb-3">
-                          <div class="col-sm-auto">
-                             <div>
-                                <a href="<?= base_url('admin/course'); ?>" class="btn btn-success add-btn" > List</a>
-                             </div>
-                          </div>
                           <?php if(empty($singleCourse)) { ?>
                             <form action="<?= base_url('admin/save-course') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>
@@ -86,7 +82,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Stream</label>
-                                              <select class="form-control" name="stream">
+                                              <select class="form-control form-select" name="stream">
                                                   <option value="">Select</option>
                                                   <?php
                                                   $streamList = get_master_data('tbl_stream',[]);
@@ -101,7 +97,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Degree Type</label>
-                                              <select class="form-control" name="degree_type">
+                                              <select class="form-control form-select" name="degree_type">
                                                   <option value="">Select</option>
                                                   <?php
                                                   $degreeTypeList = get_master_data('tbl_degree_type',[]);
@@ -125,8 +121,7 @@
                                       <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Entrance Exam</label>
-                                              <select class="form-control js-example-basic-multiple" name="exam[]" multiple>
-                                                  <option value="">Select</option>
+                                              <select class="form-control form-select js-example-basic-multiple" name="exam[]" multiple>
                                                   <?php
                                                   $examList = get_master_data('tbl_exam',[]);
                                                   $selectedExam = [];
@@ -143,14 +138,14 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course Eligibility</label>
                                               <textarea class="form-control" name="course_eligibility" id="course_eligibility"><?= (!empty($singleCourse)) ? $singleCourse['course_eligibility'] : '';?></textarea>
                                               <span class="text-danger" id="course_eligibility"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course Job Opportunity</label>
                                               <textarea class="form-control" name="course_opportunity" id="course_opportunity"><?= (!empty($singleCourse)) ? $singleCourse['course_opportunity'] : '';?></textarea>
@@ -158,13 +153,13 @@
                                       </div>
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Expected Salary</label>
                                               <textarea class="form-control" name="expected_salary" id="expected_salary"><?= (!empty($singleCourse)) ? $singleCourse['expected_salary'] : '';?></textarea>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Course Fees (Approx)</label>
                                               <textarea class="form-control" name="course_fees" id="course_fees"><?= (!empty($singleCourse)) ? $singleCourse['course_fees'] : '';?></textarea>
@@ -173,7 +168,7 @@
 
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Colleges</label>
                                               <select class="form-control js-example-basic-multiple" name="college[]" multiple>
@@ -192,36 +187,35 @@
                                               <span class="text-danger" id="college"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Counselling Authority</label>
                                               <input class="form-control" type="text" name="counselling_authority"  placeholder="Counselling Authority" value="<?= (!empty($singleCourse)) ? $singleCourse['counselling_authority'] : ''; ?>">
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-4">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Branch Type</label>
-                                              <select class="form-control" name="branch_types">
+                                              <label for="basiInput" class="form-label">Nature/Group</label>
+                                              <select class="form-control form-select js-example-basic-multiple" name="branch_type[]" multiple>
                                                   <option value="">Select</option>
                                                   <?php
-                                                  $branchType = branch_type_data();
+
+                                                  $branch_type=explode("|",$singleCourse['branch_type']);
                                                   if(!empty($branchType)){
                                                       foreach($branchType as $branch){ ?>
-                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleCourse) && $branch['id'] == $singleCourse['branch_type']) ? 'selected' : ''; ?>><?= $branch['name']; ?></option>
+                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleCourse) && in_array($branch['id'],$branch_type)) ? 'selected' : ''; ?>><?= $branch['nature']; ?></option>
                                                       <?php } } ?>
                                               </select>
-                                              <span class="text-danger" id="branch_types"></span>
+                                              <span class="text-danger" id="branch_type"></span>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-6" style="margin-top: 15px;">
+                                    <div class="col-md-12" style="margin-top: 15px;">
                                         <?php if(empty($singleCourse)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn w-100 rounded-pill btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn w-100 rounded-pill btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

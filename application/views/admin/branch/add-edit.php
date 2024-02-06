@@ -47,22 +47,10 @@
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
-                                      <div class="col-lg-6">
-                                          <div class="form-group">
-                                              <label for="basiInput" class="form-label">Branch</label>
-                                              <input class="form-control" type="text" name="branch"  placeholder="Branch" value="<?= (!empty($singleBranch)) ? $singleBranch['branch'] : ''; ?>">
-                                              <input type="hidden" class="form-control" name="branch_id" value="<?= (!empty($singleBranch)) ? $singleBranch['id'] : ''; ?>">
-                                              <span class="text-danger" id="branch"></span>
-
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                                    <div class="col-lg-6">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Courses</label>
-                                              <select class="form-control js-example-basic-multiple" name="courses[]" multiple>
-                                                  <option value="">Select</option>
+                                              <select class="form-control form-select dynamic-data" name="courses" data-segment="get-branches" data-wrapper=".branch-wrapper">
                                                   <?php
                                                   $courseList = get_master_data('tbl_course', []);
                                                   if (!empty($courseList)) {
@@ -82,19 +70,53 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Branch Type</label>
-                                              <select class="form-control" name="branch_type">
-                                                  <option value="">Select</option>
+                                              <label for="basiInput" class="form-label">Nature</label>
+                                              <select class="form-control branch-wrapper form-select" name="branch_type">
                                                   <?php
-                                                  $branchList = branch_type_data();
+                                                  //$branchList = branch_type_data();
                                                   if(!empty($branchList)){
                                                       foreach($branchList as $branch){ ?>
-                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleBranch) &&  $branch['id'] == $singleBranch['branch_type']) ? 'selected' : ''; ?>><?= $branch['name']; ?></option>
+                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleBranch) &&  $branch['id'] == $singleBranch['branch_type']) ? 'selected' : ''; ?>><?= $branch['nature']; ?></option>
                                                       <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="branch_type"></span>
                                           </div>
                                       </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Branch Name</label>
+                                              <input class="form-control" type="text" name="branch"  placeholder="Branch" value="<?= (!empty($singleBranch)) ? $singleBranch['branch'] : ''; ?>">
+                                              <input type="hidden" class="form-control" name="branch_id" value="<?= (!empty($singleBranch)) ? $singleBranch['id'] : ''; ?>">
+                                              <span class="text-danger" id="branch"></span>
+
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Branch Short Name</label>
+                                              <input class="form-control" type="text" name="short_branch_name"  placeholder="Branch Short Name" value="<?= (!empty($singleBranch)) ? $singleBranch['short_branch_name'] : ''; ?>">
+                                              <span class="text-danger" id="short_branch_name"></span>
+
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Branch Name 1</label>
+                                              <input class="form-control" type="text" name="branch_name_1"  placeholder="Branch Name 1" value="<?= (!empty($singleBranch)) ? $singleBranch['branch_name_1'] : ''; ?>">
+                                              <span class="text-danger" id="branch_name_1"></span>
+
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Branch Name 2</label>
+                                              <input class="form-control" type="text" name="branch_name_2"  placeholder="Branch Name 2" value="<?= (!empty($singleBranch)) ? $singleBranch['branch_name_2'] : ''; ?>">
+                                              <span class="text-danger" id="branch_name_2"></span>
+
+                                          </div>
+                                      </div>
+                                      
                                   </div>
                                   <div class="row">
                                     <div class="col-md-6" style="margin-top: 15px;">

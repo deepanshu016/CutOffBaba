@@ -20,26 +20,22 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header d-flex justify-content-between">
                             <h4 class="card-title mb-0">Import Branch</h4>
+                            <div>
+                                <a href="<?= base_url('admin/branch'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
+                                <a href="<?= base_url('admin/export-branch'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
+                            </div>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
                             <div id="customerList">
                                 <div class="row g-4 mb-3">
-                                    <div class="col-sm-auto">
-                                        <div>
-                                            <a href="<?= base_url('admin/branch'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                            <a href="<?= base_url('admin/export-branch'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
-                                        </div>
-                                    </div>
                                     <span class="">Notes:-</span>
                                     <ul style="color:red;margin-left: 15px;">
                                         <li>Please fill all details properly in excel file which you need to upload</li>
-                                        <li>Please add 1 for Clinical and 2 for  Non-Clinical in branch_type fields</li>
                                         <li>Please download sample file to view the required format for importing</li>
                                         <li>Please check data in specific section there is dynamic data required in excel </li>
-                                        <li>Please add course id in  comma separated for fields courses</li>
                                     </ul>
                                     <form action="<?= base_url('admin/import-branch-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                                         <div class="live-preview">

@@ -78,7 +78,7 @@
                                                         $collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
                                     if(!empty($collegeData)){
                                         foreach($collegeData as $college) { 
-                                            $courseList = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+                                            $courseList = ($head['course_id']) ? explode('|',$head['course_id']) : [];
                                             if(!empty($courseList)){
                                                 $courseData = $this->db->select('*')->where_in('id',$courseList)->get('tbl_course')->result_array();
                                             }
@@ -101,6 +101,7 @@
                                             foreach($subCategoryData as $subs) {    
 
                                                 $cutoffMarksRounOne = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_one'=>1,'year'=>$year,'cutoff_head'=>$head['id']))->get('tbl_cutfoff_marks_data')->row_array();
+                                                
                                                 $cutoffMarksRounTwo = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_two'=>1,'year'=>$year,'cutoff_head'=>$head['id']))->get('tbl_cutfoff_marks_data')->row_array();
                                                 $cutoffMarksRounThree = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_three'=>1,'year'=>$year,'cutoff_head'=>$head['id']))->get('tbl_cutfoff_marks_data')->row_array();
                                                 $cutoffMarksRounFour = $this->db->select('*')->where(array('college_id'=>$college['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id'],'category_type'=>$subs['id'],'round_four'=>1,'year'=>$year,'cutoff_head'=>$head['id']))->get('tbl_cutfoff_marks_data')->row_array();

@@ -141,7 +141,8 @@
             border-radius: 0.25rem;
             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
         }
-
+        .dataTables_wrapper .dataTables_paginate .paginate_button{
+            padding: 0 !important;}
     </style>
 </head>
 

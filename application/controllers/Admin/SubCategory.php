@@ -12,7 +12,7 @@ Class SubCategory extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['subCategoryList'] = $this->master->getRecords('tbl_sub_category');
+            $data['subCategoryList'] = $this->db->select('tbl_sub_category.*,tbl_counselling_head.head_name as headname,tbl_category.category_name as catname')->join('tbl_category','tbl_category.id=tbl_sub_category.category_id ')->join('tbl_counselling_head','tbl_counselling_head.id=tbl_sub_category.head_id')->get('tbl_sub_category')->result_array();
             $this->load->view('admin/sub_category/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
