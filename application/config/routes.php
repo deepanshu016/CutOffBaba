@@ -1,10 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Home';
 // $route['404_override'] = 'CustomErrors';
 // $route['400_override'] = 'CustomErrors';
 $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'Site/Home';
+$route['login'] = 'Home/login';
+$route['signup'] = 'Home/signup';
+$route['forgot-password'] = 'Home/forgot_password';
+$route['state-wise-colleges'] = 'Home/state_wise_colleges';
+$route['about-us'] = 'Home/about_us';
 
 $route['admin/dashboard'] = 'Admin/Authenticate/index';
 $route['admin'] = 'Admin/Authenticate/login';
