@@ -1,4 +1,4 @@
-<?php $this->load->view('frontend/header'); ?>
+<?php $this->load->view('small/frontend/header'); ?>
       
       <main>
          <div class="position-relative overflow-hidden   p-md-5 m-md-3 text-center bg-light">
@@ -201,4 +201,4 @@
             </ul>
          </footer>
       </main>
-<?php $this->load->view('frontend/footer'); ?>
+<?php $this->load->view('small/frontend/footer'); ?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('frontend/header'); ?>
+<?php $this->load->view('small/frontend/header'); ?>
       <section class="bglg">
          <div class="container">
             <div class="row">
@@ -12,4 +12,4 @@
             </div>
          </div>
       </section>
-<?php $this->load->view('frontend/footer'); ?>
+<?php $this->load->view('small/frontend/footer'); ?>

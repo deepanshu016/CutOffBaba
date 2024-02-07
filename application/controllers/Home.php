@@ -54,4 +54,16 @@ class Home extends MY_Controller {
 	{
 		$this->load->view('frontend/about_us');
 	}
+	public function testimonials()
+	{
+		$this->load->view('frontend/testimonials');
+	}
+	public function testimonials_explore()
+	{
+		$this->load->view('frontend/testimonials_explore');
+	}
+	public function splash_screen()
+	{
+		$this->load->view('frontend/splash_screen');
+	}
 }

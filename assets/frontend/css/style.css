@@ -2,12 +2,66 @@
 
 
 
+.socialCs{
+   font-size: 26px !important;
+    color: #08125d;
+}
+.btrsSs{
+  background: #183E65;
+    padding: 15px;
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+.bgSer{
+        background: #F1C144BA;
+    padding: 5px 17px;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 14px;
+}
+.dsLisy{
+      margin-left: -35px;
+}
+.sssXs{
+      display: flex;
+    padding: 0px 12px;
+    list-style: none;
+}
+.ssics{
+  float: right;
+    font-size: 17px;
+}
+.dda{
+  padding: 0px 10px;
+    margin: 0px;
+}
+.csTest{
+  background: #fff;
+    box-shadow: 0px 6px 4px 0px #00000012;
+    border-radius: 15px;
+    padding: 11px 0px 15px 0px;
+    background-image: url('../img/bfgs.png');
+}
+
+.social{
+     background: #ffffff;
+    padding: 16px 10px 11px 13px;
+    border-radius: 100px;
+    margin: 5px;
+}
+.liusss{
+  display: flex;
+    list-style: none;
+    padding: 0px 18px;
+    margin: 1px;
+}
 
 
 
-
-
-
+.abouPage{
+ object-fit: fill;
+    height: 200px;
+}
 .lesCols{
    padding: 4px;
 }
