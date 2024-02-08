@@ -11,3 +11,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	https://codeigniter.com/userguide3/general/hooks.html
 |
 */
+$hook['pre_controller'][] = array(
+    'class'    => 'CurlHook',
+    'function' => 'initialize',
+    'filename' => 'CurlHook.php',
+    'filepath' => 'hooks',
+);

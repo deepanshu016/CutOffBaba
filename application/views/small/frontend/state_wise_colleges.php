@@ -5,6 +5,9 @@
             
             <div class="col-md-5 p-lg-5 p-3 mx-auto ">
                <h4 class=" fw-bold text-start txtColor"> <img src="<?=base_url('assets/frontend/img/rightarrow.png')?>"> &nbsp;  State wise colleges</h4>
+               <?php if($this->session->userdata('user')) { ?>
+               <a href="<?= base_url('user/logout'); ?>">Logout</a>
+               <?php } ?>
                <div class="card radius">
                   <img src="<?=base_url('assets/frontend/img/selectstat.png')?>" class="card-img cuysss " alt="doc-pic">
                   <div class="card-img-overlay mbbsOverlay">

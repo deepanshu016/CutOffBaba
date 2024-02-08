@@ -25,6 +25,7 @@ class Home extends MY_Controller {
    	 	$this->load->model('CourseCategory','category');
    	 	$this->load->model('CompanyModel','company');
    	 	$this->load->model('BlogModel','blog');
+   	 	$this->load->model('MasterModel','master');
    	 	$this->load->model('CourseModel','course');
    	 	$this->load->model('SiteSettings','site');
 
@@ -34,13 +35,18 @@ class Home extends MY_Controller {
 	{
 		$this->load->view('small/frontend/home');
 	}
+	public function stream()
+	{
+		$this->load->view('small/frontend/stream');
+	}
 	public function login()
 	{
 		$this->load->view('small/frontend/login');
 	}
 	public function signup()
 	{
-		$this->load->view('small/frontend/signup');
+		$data['stateList'] = $this->master->getRecords('tbl_state');
+		$this->load->view('small/frontend/signup',$data);
 	}
 	public function forgot_password()
 	{
@@ -65,5 +71,9 @@ class Home extends MY_Controller {
 	public function splash_screen()
 	{
 		$this->load->view('small/frontend/splash_screen');
+	}
+	public function verify_done()
+	{
+		$this->load->view('small/frontend/verify_done');
 	}
 }

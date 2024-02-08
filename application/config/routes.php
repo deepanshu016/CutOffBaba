@@ -13,7 +13,13 @@ $route['small/about-us'] = 'SmallScreen/Home/about_us';
 $route['small/testimonials'] = 'SmallScreen/Home/testimonials';
 $route['small/testimonial-explore'] = 'SmallScreen/Home/testimonials_explore';
 $route['small/home'] = 'SmallScreen/Home/splash_screen';
+$route['small/verify-done'] = 'SmallScreen/Home/verify_done';
 $route['large/home'] = 'Home/index';
+$route['signup'] = 'SmallScreen/Authenticate/signup';
+$route['login'] = 'SmallScreen/Authenticate/login';
+$route['send-otp'] = 'SmallScreen/Authenticate/forgot_password';
+$route['small/stream'] = 'SmallScreen/Home/stream';
+$route['user/logout'] = 'SmallScreen/Authenticate/logout';
 
 $route['admin/dashboard'] = 'Admin/Authenticate/index';
 $route['admin'] = 'Admin/Authenticate/login';

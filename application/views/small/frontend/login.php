@@ -9,22 +9,24 @@
                      </a>
                      <h1 class="text-white my-3 p-3">Login to continue</h1>
                      <img class="img-fluid" src="<?=base_url('assets/frontend/img/unlocked.png')?>">
-                     <form>
+                     <form action="<?= base_url('/login') ?>" method="POST" class="all-form">
                         <div class="form-floating flts input-group mb-3">
                            <button class="btn btn-outline-secondary bg-white custCsss" type="button" id="button-addon1"> +91</button>
-                           <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                           <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="phone">
                            <label class="text-white" for="floatingInput ">Enter Your Phone </label>
+                           <div class="text-danger" id="phone"></div>
                         </div>
                         <div class="form-floating flts input-group mb-3"> 
                            <button class="btn btn-outline-secondary bg-white custCs" type="button" id="button-addon1"><i class="fa fa-lock" aria-hidden="true"></i></button>
-                           <input type="password" class="form-control inPut" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                           <input type="password" class="form-control inPut" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" name="password">
                            <label class="text-white" for="floatingInput">Enter Password</label>
+                           <div class="text-danger" id="password"></div>
                         </div>
-                        <span class="rights"> <a class="text-white" href="forgot-password.php">Forgot Password?</a> </span>
-                        <button class="w-100 btn btn-primary p6t">Sign In</button>
+                        <span class="rights"> <a class="text-white" href="<?= base_url('small/forgot-password') ?>">Forgot Password?</a> </span>
+                        <button type="submit" class="w-100 btn btn-primary p6t">Sign In</button>
                      </form>
                      <div class="acSing">
-                        <span class="text-white "> Don’t have an account? <a class="text-white" href="<?= base_url('signup'); ?>">Signup</a> </span>
+                        <span class="text-white "> Don’t have an account? <a class="text-white" href="<?= base_url('small/signup'); ?>">Signup</a> </span>
                      </div>
                   </div>
                </div>

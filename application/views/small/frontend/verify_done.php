@@ -5,7 +5,7 @@
                <div class="col-12 col-sm-12">
                   <div class="h0pxss "> 
                      <center>
-                        <img class="img-fluid" src="img/sucess-animation.png"> 
+                        <img class="img-fluid" src="<?=base_url('assets/frontend/img/sucess-animation.png')?>"> 
                      </center>
                   </div>
                </div>

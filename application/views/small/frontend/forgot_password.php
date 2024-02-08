@@ -12,13 +12,14 @@
                      <h1 class="text-white">Forgot your Password</h1>
                      <span class="text-white">An 4 digit code has been sent to
                      <br> +91 123-456-7890 <br><br></span>
-                     <form>
+                     <form action="<?= base_url('/send-otp') ?>" method="POST" class="all-form">
                         <div class="form-floating flts input-group mb-3">
                            <button class="btn btn-outline-secondary bg-white custCsss" type="button" id="button-addon1"> +91</button>
-                           <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                           <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1"  name="phone">
                            <label class="text-white" for="floatingInput ">Enter Your Phone </label>
+                           <div class="text-danger" id="phone"></div>
                         </div>
-                        <button class="w-100 btn btn-primary p6Wht">Send OTP</button>
+                        <button type="submit" class="w-100 btn btn-primary p6Wht">Send OTP</button>
                      </form>
                   </div>
                </div>
