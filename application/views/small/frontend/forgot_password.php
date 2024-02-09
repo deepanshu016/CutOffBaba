@@ -10,8 +10,6 @@
                      </a>
                      <img class="img-fluid" src="<?=base_url('assets/frontend/img/forgot.png')?>">
                      <h1 class="text-white">Forgot your Password</h1>
-                     <span class="text-white">An 4 digit code has been sent to
-                     <br> +91 123-456-7890 <br><br></span>
                      <form action="<?= base_url('/send-otp') ?>" method="POST" class="all-form">
                         <div class="form-floating flts input-group mb-3">
                            <button class="btn btn-outline-secondary bg-white custCsss" type="button" id="button-addon1"> +91</button>

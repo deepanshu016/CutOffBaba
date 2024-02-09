@@ -14,10 +14,12 @@ $route['small/testimonials'] = 'SmallScreen/Home/testimonials';
 $route['small/testimonial-explore'] = 'SmallScreen/Home/testimonials_explore';
 $route['small/home'] = 'SmallScreen/Home/splash_screen';
 $route['small/verify-done'] = 'SmallScreen/Home/verify_done';
+$route['small/verify-otp/(:any)'] = 'SmallScreen/Home/verify_otp/$1';
 $route['large/home'] = 'Home/index';
 $route['signup'] = 'SmallScreen/Authenticate/signup';
 $route['login'] = 'SmallScreen/Authenticate/login';
 $route['send-otp'] = 'SmallScreen/Authenticate/forgot_password';
+$route['otp-verification'] = 'SmallScreen/Authenticate/OtpVerification';
 $route['small/stream'] = 'SmallScreen/Home/stream';
 $route['user/logout'] = 'SmallScreen/Authenticate/logout';
 

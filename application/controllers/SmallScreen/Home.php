@@ -37,7 +37,9 @@ class Home extends MY_Controller {
 	}
 	public function stream()
 	{
-		$this->load->view('small/frontend/stream');
+		$selectedStream = $this->master->singleRecord('tbl_stream',['id'=>4]);
+		$courseLists = $this->master->getRecords('tbl_course',['stream'=>$selectedStream['id']]);
+		$this->load->view('small/frontend/stream',['selectedStream'=>$selectedStream,'courseLists'=>$courseLists]);
 	}
 	public function login()
 	{
@@ -76,4 +78,11 @@ class Home extends MY_Controller {
 	{
 		$this->load->view('small/frontend/verify_done');
 	}
+	public function verify_otp($phone)
+	{
+		$user_id =  base64_decode($phone);
+		$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
+		$this->load->view('small/frontend/verify_otp',['userData'=>$userData]);
+	}
+	
 }

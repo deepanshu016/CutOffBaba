@@ -35,7 +35,7 @@
        <div class="card radius">
           <img src="<?=base_url('assets/frontend/img/doc-pic.png')?>" class="card-img cuys " alt="doc-pic">
           <div class="card-img-overlay cardOverlay">
-             <h5 class="card-title">Selected Stream</h5>
+             <h5 class="card-title"><?= @$selectedStream['stream']; ?></h5>
              <p class="card-text">Lorem ipsum dolor sit <br> amet, consectetur adipiscing <br> elit, sed do eiusmod tempor <br> incididunt ut labore .</p>
           </div>
        </div>
@@ -44,188 +44,52 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
  </div>
  <div class=" w-100 my-md-3 ps-md-3 bg-light">
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">Explore MBBS</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="row">
-          <div class="col col-sm-6">
-             <div class="card shaDo bgmbs text-white">
-                <div class="card-body mbbsCss">
-                   <img src="<?=base_url('assets/frontend/img/Rectangle.png')?>" class="img-fluid rounded-start" alt="...">
-                   <h5 class="card-title mbbsFonts">MBBS</h5>
-                   <p class="card-text nop">Sed ut perspiciatis Sed ut perspiciatis Sed ut perspiciatis</p>
-                </div>
-             </div>
-          </div>
-          <div class="col col-sm-6">
-             <div class="card shaDo noHis">
-                <div class="card-body mbbsCss">
-                   <h5 class="card-title smTxt">About MBBS</h5>
-                   <p class="card-text">Nemo enim ipsam voluptatem </p>
-                </div>
-             </div>
-             <div class="card shaDo noHis">
-                <div class="card-body mbbsCss">
-                   <h5 class="card-title smTxt">State Wise Colloeges</h5>
-                   <p class="card-text">Nemo enim ipsam voluptatem </p>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">Explore MD/MS</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="row">
-          <div class="col col-sm-6">
-             <div class="card shaDo bgmbs text-white">
-                <div class="card-body mbbsCss">
-                   <img src="<?=base_url('assets/frontend/img/Rectangle.png')?>" class="img-fluid rounded-start" alt="...">
-                   <h5 class="card-title mbbsFonts">MD/MS</h5>
-                   <p class="card-text nop">Sed ut perspiciatis Sed ut perspiciatis Sed ut perspiciatis</p>
-                </div>
-             </div>
-          </div>
-          <div class="col col-sm-6">
-             <div class="card shaDo noHis">
-                <div class="card-body mbbsCss">
-                   <h5 class="card-title smTxt">About MBBS</h5>
-                   <p class="card-text">Nemo enim ipsam voluptatem </p>
-                </div>
-             </div>
-             <div class="card shaDo noHis">
-                <div class="card-body mbbsCss">
-                   <h5 class="card-title smTxt">State Wise Colloeges</h5>
-                   <p class="card-text">Nemo enim ipsam voluptatem </p>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">Explore PG Diploma</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">College Predictor</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">Our Paid Counselling</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">College CutOff</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">College Reviews</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-       <div class="card shaDo mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-             <div class="col-md-9 col">
-                <div class="card-body nopad">
-                   <h5 class="card-title">Other Courses</h5>
-                   <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
-                   <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
-                </div>
-             </div>
-             <div class="col-md-3 col">
-                <img src="<?=base_url('assets/frontend/img/medical-tr.png')?>" class="img-fluid rounded-start" alt="...">
-             </div>
-          </div>
-       </div>
-    </div>
+   <?php if(!empty($courseLists)) { 
+      foreach($courseLists as $course) { ?>
+         <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="card shaDo mb-3" style="max-width: 540px;">
+               <div class="row g-0">
+                  <div class="col-md-9 col">
+                     <div class="card-body nopad">
+                        <h5 class="card-title"><?= $course['course']; ?></h5>
+                        <p class="card-text nop"><?= $course['course_full_name']; ?></p>
+                        <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/frontend/img/CaretRight.png')?>"> </a>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col">
+                     <img src="<?= ($course['course_icon'] == '') ? base_url('assets/frontend/img/medical-tr.png') : base_url('assets/uploads/course/').'/'.$course['course_icon'];?>" class="img-fluid rounded-start" alt="...">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="row">
+               <div class="col col-sm-6">
+                  <div class="card shaDo bgmbs text-white">
+                     <div class="card-body mbbsCss">
+                        <img src="<?=base_url('assets/frontend/img/Rectangle.png')?>" class="img-fluid rounded-start" alt="...">
+                        <h5 class="card-title mbbsFonts">MBBS</h5>
+                        <p class="card-text nop">Sed ut perspiciatis Sed ut perspiciatis Sed ut perspiciatis</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col col-sm-6">
+                  <div class="card shaDo noHis">
+                     <div class="card-body mbbsCss">
+                        <h5 class="card-title smTxt">About MBBS</h5>
+                        <p class="card-text">Nemo enim ipsam voluptatem </p>
+                     </div>
+                  </div>
+                  <div class="card shaDo noHis">
+                     <div class="card-body mbbsCss">
+                        <h5 class="card-title smTxt">State Wise Colloeges</h5>
+                        <p class="card-text">Nemo enim ipsam voluptatem </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   <?php } } ?>
  </div>
  <footer >
     <ul class="nav justify-content-center border-bottom  mb-3 text-center">

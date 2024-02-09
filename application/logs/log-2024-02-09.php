@@ -58,3 +58,293 @@ ERROR - 2024-02-09 01:17:33 --> Unable to load the requested class: Curl
 DEBUG - 2024-02-09 01:21:33 --> Total execution time: 0.0309
 ERROR - 2024-02-09 01:21:38 --> Unable to load the requested class: Curl
 DEBUG - 2024-02-09 01:23:56 --> Total execution time: 0.0388
+DEBUG - 2024-02-09 18:06:33 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:33 --> No URI present. Default controller set.
+DEBUG - 2024-02-09 18:06:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:06:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:36:33 --> Total execution time: 0.1047
+DEBUG - 2024-02-09 18:06:34 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:06:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:36:34 --> Total execution time: 0.0230
+DEBUG - 2024-02-09 18:06:34 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:34 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-02-09 18:06:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:36 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:06:37 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:06:37 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:06:37 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:37 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:06:38 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:06:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:36:38 --> Total execution time: 0.0192
+DEBUG - 2024-02-09 18:06:38 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:38 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:06:38 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:38 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:06:38 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:06:38 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:06:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:06:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:08:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:08:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:08:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:38:26 --> Total execution time: 0.0329
+DEBUG - 2024-02-09 18:08:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:08:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:08:26 --> UTF-8 Support Enabled
+ERROR - 2024-02-09 18:08:26 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:08:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:08:26 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:08:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:08:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:08:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:08:26 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:08:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:08:26 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:08:29 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:08:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:08:29 --> 404 Page Not Found: Small/verify-otp
+DEBUG - 2024-02-09 18:09:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:09:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:39:05 --> Total execution time: 0.0354
+DEBUG - 2024-02-09 18:09:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Small/img
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Small/img
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:09:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:39:06 --> Total execution time: 0.0201
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Small/img
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Small/img
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:09:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:09:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:09:06 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:13:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:06 --> 404 Page Not Found: Small/verify-otp
+DEBUG - 2024-02-09 18:13:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:06 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-02-09 18:13:14 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:14 --> 404 Page Not Found: Small/verify-otp
+DEBUG - 2024-02-09 18:13:18 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:13:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:43:18 --> Total execution time: 0.0227
+DEBUG - 2024-02-09 18:13:18 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:18 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:13:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:18 --> 404 Page Not Found: Assets/frontend
+ERROR - 2024-02-09 18:13:19 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:13:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:13:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:13:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:43:19 --> Total execution time: 0.0389
+DEBUG - 2024-02-09 18:13:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:19 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:13:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:19 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:13:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:13:20 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:13:20 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:13:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:13:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:22:44 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:22:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:22:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:52:56 --> Total execution time: 11.7214
+DEBUG - 2024-02-09 18:25:10 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:25:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:25:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 23:55:21 --> Total execution time: 11.5572
+DEBUG - 2024-02-09 18:25:23 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:25:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:25:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:25:39 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:25:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:25:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:35:24 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:35:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:35:24 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:24 --> 404 Page Not Found: Small/verify-otp
+DEBUG - 2024-02-09 18:35:24 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:25 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:35:25 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:35:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:26 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:35:26 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:26 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:35:51 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:35:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:35:51 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:51 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:35:51 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:51 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:35:51 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:51 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-02-09 18:35:52 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:35:52 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:35:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:35:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:36:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:36:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:36:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:36:05 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:36:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:36:05 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:36:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:36:05 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:36:05 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:36:05 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-02-09 18:36:06 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:36:06 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:36:41 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:36:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:36:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:37:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:37:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:37:14 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:37:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:37:14 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:14 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:14 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:14 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:14 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:37:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:14 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:15 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:15 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:37:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:19 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:37:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:19 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-02-09 18:37:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:37:20 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:20 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:20 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:20 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:31 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:37:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:37:31 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:31 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:31 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:31 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:37:31 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:31 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:37:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:31 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:37:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:37:31 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:40:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:40:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:40:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:40:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:40:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:40:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:40:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:40:36 --> 404 Page Not Found: Assets/frontend
+ERROR - 2024-02-09 18:40:36 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:40:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:40:36 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:40:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:40:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:40:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:40:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:46:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-02-09 18:46:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-02-09 18:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:46:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:46:12 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:46:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:46:12 --> 404 Page Not Found: Assets/frontend
+DEBUG - 2024-02-09 18:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-02-09 18:46:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:46:12 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-02-09 18:46:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-02-09 18:46:12 --> 404 Page Not Found: Assets/admin
