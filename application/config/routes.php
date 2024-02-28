@@ -4,10 +4,16 @@ $route['default_controller'] = 'Home';
 // $route['404_override'] = 'CustomErrors';
 // $route['400_override'] = 'CustomErrors';
 $route['translate_uri_dashes'] = FALSE;
-$route['home'] = 'Home';
-$route['small/login'] = 'SmallScreen/Home/login';
-$route['small/signup'] = 'SmallScreen/Home/signup';
-$route['small/forgot-password'] = 'SmallScreen/Home/forgot_password';
+$route['home'] = 'Home/splash_screen';
+
+$route['login'] = 'home/login';
+$route['loginchk'] = 'Authenticate/login';
+$route['signup'] = 'Home/signup';
+$route['register'] = 'Authenticate/register';
+$route['forgot-password'] = 'Home/forgot_password';
+$route['stream'] = 'Home/stream';
+
+
 $route['small/state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';
 $route['small/about-us'] = 'SmallScreen/Home/about_us';
 $route['small/testimonials'] = 'SmallScreen/Home/testimonials';
@@ -16,11 +22,12 @@ $route['small/home'] = 'SmallScreen/Home/splash_screen';
 $route['small/verify-done'] = 'SmallScreen/Home/verify_done';
 $route['small/verify-otp/(:any)'] = 'SmallScreen/Home/verify_otp/$1';
 $route['large/home'] = 'Home/index';
-$route['signup'] = 'SmallScreen/Authenticate/signup';
-$route['login'] = 'SmallScreen/Authenticate/login';
+
+
+
 $route['send-otp'] = 'SmallScreen/Authenticate/forgot_password';
 $route['otp-verification'] = 'SmallScreen/Authenticate/OtpVerification';
-$route['small/stream'] = 'SmallScreen/Home/stream';
+
 $route['user/logout'] = 'SmallScreen/Authenticate/logout';
 
 $route['admin/dashboard'] = 'Admin/Authenticate/index';

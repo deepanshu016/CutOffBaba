@@ -8,16 +8,76 @@ Class Authenticate extends MY_Controller {
         $this->load->model('SiteSettings','site');
         $this->load->model('CourseCategory','category');
     }
-	public function register()
-	{
-       if ($this->is_user_logged_in() == false) {
-            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]); 
-    		$this->load->view('site/register',$data);
+
+
+    public function login()
+    {
+        $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required'); 
+        if ($this->form_validation->run()) {
+            $phone = $this->input->post('phone');
+            $password = sha1($this->input->post('password'));
+            $userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
+            if(!empty($userData)){
+                $this->session->set_userdata('user',$userData);
+                $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('small/stream'));
+            }else{
+                $response = array('status' => 'errors','message' => 'Credentials not matched','url'=>'');
+            }
         }else{
-            $this->session->set_flashdata('error','Access not allowed');
-            return redirect('/');
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'phone' => form_error('phone'),
+                    'password' => form_error('password')
+                )  
+            );
+
         }
-	}
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
+    public function register()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
+        $this->form_validation->set_rules('state', 'State', 'trim|required|numeric');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[25]|matches[confirm_password]|callback_check_strong_password');   
+        $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required'); 
+        if ($this->form_validation->run()) {
+            $data['name'] = $this->input->post('name');
+            $data['email'] = $this->input->post('email');
+            $data['mobile'] = $this->input->post('phone');
+            $data['password'] = sha1($this->input->post('password'));
+            $data['user_type'] = 1;
+            $data['permanent_state'] = $this->input->post('state');
+            $data['status'] = 0;
+            $data['created_at'] = date('Y-m-d H:i:s');
+            $result = $this->us->insert('tbl_users',$data);
+            if($result){
+                $checkLogin = $this->us->singleRecord('tbl_users',array('id'=>$result));
+                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('small/login'));
+            }else{
+                $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
+            }
+        }else{
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'name' => form_error('name'),
+                    'email' => form_error('email'),
+                    'mobile' => form_error('mobile'),
+                    'password' => form_error('password'),
+                    'confirm_password' => form_error('confirm_password'),
+                    'state' => form_error('state')
+                )  
+            );
+
+        }
+        $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode($response));
+    }
     public function demo()
     {
        if ($this->is_user_logged_in() == false) {
@@ -29,16 +89,7 @@ Class Authenticate extends MY_Controller {
         }
     }
     
-	public function login()
-	{
-        if ($this->is_user_logged_in() == false) {
-            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-    		$this->load->view('site/login',$data);
-        }else{
-            $this->session->set_flashdata('error','Access not allowed');
-            return redirect('/');
-        }
-	}
+	
 	//Forgot Password
 	public function forgotPassword()
 	{

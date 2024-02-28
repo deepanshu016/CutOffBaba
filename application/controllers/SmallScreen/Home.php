@@ -33,56 +33,51 @@ class Home extends MY_Controller {
     }
 	public function index()
 	{
-		$this->load->view('small/frontend/home');
+		$this->load->view('site/home');
 	}
-	public function stream()
-	{
-		$selectedStream = $this->master->singleRecord('tbl_stream',['id'=>4]);
-		$courseLists = $this->master->getRecords('tbl_course',['stream'=>$selectedStream['id']]);
-		$this->load->view('small/frontend/stream',['selectedStream'=>$selectedStream,'courseLists'=>$courseLists]);
-	}
+	
 	public function login()
 	{
-		$this->load->view('small/frontend/login');
+		$this->load->view('site/login');
 	}
 	public function signup()
 	{
 		$data['stateList'] = $this->master->getRecords('tbl_state');
-		$this->load->view('small/frontend/signup',$data);
+		$this->load->view('site/signup',$data);
 	}
 	public function forgot_password()
 	{
-		$this->load->view('small/frontend/forgot_password');
+		$this->load->view('site/forgot_password');
 	}
 	public function state_wise_colleges()
 	{
-		$this->load->view('small/frontend/state_wise_colleges');
+		$this->load->view('site/state_wise_colleges');
 	}
 	public function about_us()
 	{
-		$this->load->view('small/frontend/about_us');
+		$this->load->view('site/about_us');
 	}
 	public function testimonials()
 	{
-		$this->load->view('small/frontend/testimonials');
+		$this->load->view('site/testimonials');
 	}
 	public function testimonials_explore()
 	{
-		$this->load->view('small/frontend/testimonials_explore');
+		$this->load->view('site/testimonials_explore');
 	}
 	public function splash_screen()
 	{
-		$this->load->view('small/frontend/splash_screen');
+		$this->load->view('site/splash_screen');
 	}
 	public function verify_done()
 	{
-		$this->load->view('small/frontend/verify_done');
+		$this->load->view('site/verify_done');
 	}
 	public function verify_otp($phone)
 	{
 		$user_id =  base64_decode($phone);
 		$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
-		$this->load->view('small/frontend/verify_otp',['userData'=>$userData]);
+		$this->load->view('site/verify_otp',['userData'=>$userData]);
 	}
 	
 }
