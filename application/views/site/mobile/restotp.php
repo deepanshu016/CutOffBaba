@@ -20,9 +20,8 @@
                      <img class="img-fluid mb-3" src="img/verificatios.png">
                      <h1 class="text-white">Reset Password</h1>
                      <span class="text-white">An 4 digit code has been sent to
-                     <br> +91 123-456-7890 <br><br></span>
-                     <form >
-                         
+                     <br> +91 <?= @$userData['mobile']; ?><br><br></span>
+                     <form>
                         <div class="row">
                           <div class="col">
                             <input type="text" class="form-control specHeigh" placeholder=" " aria-label="First name">
@@ -36,8 +35,7 @@
                           <div class="col">
                             <input type="text" class="form-control specHeigh" placeholder=" " aria-label="Last name">
                           </div>
-                        </div>
-                          
+                        </div> 
                         <button class="w-100 btn btn-primary p6t">Verify OTP</button>
                      </form>
                   </div>

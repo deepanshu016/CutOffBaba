@@ -38,7 +38,7 @@
                   </div>
                </div>
             </section>
-            <div class="col-md-5 p-lg-5 p-3 mx-auto ">
+            <div class="col-md-5 p-lg-5 p-3 mx-auto">
                <h4 class=" fw-bold text-start txtColor">Welcome to Cutoff Baba</h4>
                <div class="card radius">
                   <img src="img/doc-pic.png" class="card-img cuys " alt="doc-pic">

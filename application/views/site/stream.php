@@ -57,7 +57,7 @@
                      </div>
                   </div>
                   <div class="col-md-3 col">
-                     <img src="<?= ($course['course_icon'] == '') ? base_url('assets/frontend/img/medical-tr.png') : base_url('assets/uploads/course/').'/'.$course['course_icon'];?>" class="img-fluid rounded-start" alt="...">
+                     <img src="<?= ($course['course_icon'] == '' || !file_exists(base_url('assets/uploads/course/').'/'.$course['course_icon'])) ? base_url('assets/site/img/medical-tr.png') : base_url('assets/uploads/course/').'/'.$course['course_icon'];?>" class="img-fluid rounded-start" alt="...">
                   </div>
                </div>
             </div>
@@ -76,8 +76,10 @@
                <div class="col col-sm-6">
                   <div class="card shaDo noHis">
                      <div class="card-body mbbsCss">
-                        <h5 class="card-title smTxt">About MBBS</h5>
-                        <p class="card-text">Nemo enim ipsam voluptatem </p>
+                        <a href="<?= base_url('about-course').'/'.$course['id']; ?>">
+                           <h5 class="card-title smTxt">About MBBS</h5>
+                           <p class="card-text">Nemo enim ipsam voluptatem </p>
+                        </a>
                      </div>
                   </div>
                   <div class="card shaDo noHis">
@@ -91,14 +93,5 @@
          </div>
    <?php } } ?>
  </div>
- <footer >
-    <ul class="nav justify-content-center border-bottom  mb-3 text-center">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/home.png')?>"> <br> Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/start.png')?>"> <br> Premium</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/serch.png')?>"> <br> Search</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Award.png')?>"> <br> Award</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Userss.png')?>"> <br> Profile</a></li>
-    </ul>
- </footer>
 </main>
 <?php $this->load->view('site/footer'); ?>

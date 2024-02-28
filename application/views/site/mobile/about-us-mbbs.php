@@ -60,8 +60,6 @@
                                                   <div class="fw-bold"><img src="img/location.png" alt=""> Patna</div> 
                                                 </div> 
                                               </li>
-                                               
-                                              
                                             </ol>
                                           <!-- <p>  <img src="img/calender.png" alt=""> 1998 </p> -->
                                        </div>
@@ -156,8 +154,6 @@
                                                   <div class="fw-bold"><img src="img/location.png" alt=""> Patna</div> 
                                                 </div> 
                                               </li>
-                                               
-                                              
                                             </ol>
                                           <!-- <p>  <img src="img/calender.png" alt=""> 1998 </p> -->
                                        </div>
@@ -178,7 +174,6 @@
                                     <div class="lc-block mb-4">
                                        <div class="sy7u" editable="rich">
                                           <h5 class="fonSix">AIIMS Patna, Bihar, India</h5> 
-                                           
                                             <ol class="list-group list-group-numbered">
                                               <li class=" d-flex justify-content-between align-items-start">
                                                 <div class=" me-auto">
@@ -188,8 +183,6 @@
                                                   <div class="fw-bold"><img src="img/location.png" alt=""> Patna</div> 
                                                 </div> 
                                               </li>
-                                               
-                                              
                                             </ol>
                                           <!-- <p>  <img src="img/calender.png" alt=""> 1998 </p> -->
                                        </div>

@@ -20,7 +20,7 @@ Class Authenticate extends MY_Controller {
             $userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
             if(!empty($userData)){
                 $this->session->set_userdata('user',$userData);
-                $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('small/stream'));
+                $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('streams'));
             }else{
                 $response = array('status' => 'errors','message' => 'Credentials not matched','url'=>'');
             }
@@ -56,7 +56,7 @@ Class Authenticate extends MY_Controller {
             $result = $this->us->insert('tbl_users',$data);
             if($result){
                 $checkLogin = $this->us->singleRecord('tbl_users',array('id'=>$result));
-                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('small/login'));
+                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('login'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }

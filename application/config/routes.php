@@ -11,7 +11,12 @@ $route['loginchk'] = 'Authenticate/login';
 $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';
 $route['forgot-password'] = 'Home/forgot_password';
-$route['stream'] = 'Home/stream';
+$route['streams'] = 'Home/streams';
+$route['course-for-stream/(:any)'] = 'Home/coursesByStream/$1';
+$route['about-course/(:any)'] = 'Home/aboutCourse/$1';
+$route['about-us'] = 'Home/aboutUs';
+$route['contact-us'] = 'Home/contactUs';
+$route['terms-condition'] = 'Home/termsConditions';
 
 
 $route['small/state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';

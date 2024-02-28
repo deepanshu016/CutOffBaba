@@ -37,6 +37,17 @@ class MasterModel extends CI_Model {
 			return $this->db->select('*')->get($table)->result_array();
 		}
 	}
+	function getRecordsFindInSet($table = '', $value,$column_name,$condition=[]){
+		$query = $this->db->select('*')->from($table);
+		$value = $this->db->escape($value);
+    	$column_name = str_replace("'","",$column_name);
+		if(empty($condition)){
+			$query = $query->where("FIND_IN_SET($value, $column_name) > 0", NULL, FALSE);
+		}else{
+			$query = $query->where($condition);
+		}
+		return $query->get()->result_array();
+	}
 
 	function getRecordsOrderBy($table = '', $condition=[],$order_by = ''){
 		if(empty(!$condition)){

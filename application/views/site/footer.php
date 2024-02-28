@@ -17,6 +17,42 @@
     <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
     <?php $this->load->view('common/alert'); ?>
+    <!-- lazily load the Swiper CSS file -->
+    <link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <!-- lazily load the Swiper JS file -->
+      <script defer="defer" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
+      <!-- lc-needs-hard-refresh -->
+      <script>
+         function initializeSwiperRANDOMID() {
+         
+             // Launch SwiperJS  
+             const swiper = new Swiper('.swiper-RANDOMID', {
+             // Default parameters
+             slidesPerView: 2,
+             spaceBetween: 10,
+             grabCursor: true,
+             
+             // Responsive breakpoints
+             breakpoints: {
+             // when window width is >= 320px
+             320: {
+             slidesPerView: 2,
+             spaceBetween: 20
+             },
+             // when window width is >= 480px
+             480: {
+             slidesPerView: 3,
+             spaceBetween: 30
+             },
+             // when window width is >= 1200px
+             1200: {
+             slidesPerView: 6,
+             spaceBetween: 40
+             }
+             }
+           });
+         }
+      </script>
   <!--  <script>
       $(function(){
          var url = window.location.href;

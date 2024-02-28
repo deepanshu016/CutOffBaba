@@ -33,11 +33,26 @@ class Home extends MY_Controller {
 		$data['stateList']=$this->site->getRecords('tbl_state',[]);
 		$this->load->view('site/signup',$data);
 	}
-	public function stream()
+	public function streams()
 	{
-		$selectedStream = $this->master->singleRecord('tbl_stream',['id'=>4]);
-		$courseLists = $this->master->getRecords('tbl_course',['stream'=>$selectedStream['id']]);
-		$this->load->view('site/stream',['selectedStream'=>$selectedStream,'courseLists'=>$courseLists]);
+		$data['title'] = 'Streams | CUTOFFBABA';
+		$data['stream'] = $this->master->getRecords('tbl_stream');
+		$this->load->view('site/landing-page',$data);
+	}
+	public function coursesByStream($stream_id)
+	{
+		$data['title'] = 'Courses | CUTOFFBABA';
+		$data['selectedStream'] = $this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
+		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
+		$this->load->view('site/stream',$data);
+	}
+	public function aboutCourse($course_id)
+	{
+		$data['title'] = 'About Courses | CUTOFFBABA';
+		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
+		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
+		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$this->load->view('site/about_us',$data);
 	}
 
 
@@ -46,9 +61,23 @@ class Home extends MY_Controller {
 	{
 		$this->load->view('frontend/state_wise_colleges');
 	}
-	public function about_us()
+	public function aboutUs()
 	{
-		$this->load->view('frontend/about_us');
+		$data['title'] = 'About Us | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/about_us',$data);
+	}
+	public function contactUs()
+	{
+		$data['title'] = 'Contacts Us | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/contact-us',$data);
+	}
+	public function termsConditions()
+	{
+		$data['title'] = 'Terms & Conditions | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/terms-condition',$data);
 	}
 	public function testimonials()
 	{
