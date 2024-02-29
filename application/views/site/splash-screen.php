@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title><?=@$title; ?></title>
      <link href="<?=base_url('assets/site/css/bootstrap.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/custom.css')?>" rel="stylesheet">
@@ -40,9 +40,16 @@
    </section> 
    <script type="text/javascript">
       $(document).ready(function(){
-        setTimeout(function () {
-          window.location.href = '<?=base_url("login");?>';
-        },2500);
+        <?php
+        if ($this->session->has_userdata('user')) { ?>
+          setTimeout(function () {
+            window.location.href = '<?=base_url("streams");?>';
+          },2500);
+        <?php } else { ?>
+            setTimeout(function () {
+              window.location.href = '<?=base_url("app-info");?>';
+            },2500);
+        <?php } ?>
       });
    </script>
   </body>

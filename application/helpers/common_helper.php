@@ -175,4 +175,16 @@ if (!function_exists('file_type_data')){
         return $array;
     }
 }
+if (!function_exists('excerpt')){
+	function excerpt($str, $limit = 50) { // function with limit 50
+		if (strlen($str) <= $limit) { // if length less than or equal to limit
+			return $str; // return string
+		}
+		$str = substr($str, 0, $limit); // extract first characters
+		$str = rtrim($str, "!,.-"); // remove trailing punctuation
+		$str .= "..."; // append '...'
+		return $str; // return excerpt
+	 }
+}
+
 ?>

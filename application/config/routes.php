@@ -5,6 +5,7 @@ $route['default_controller'] = 'Home';
 // $route['400_override'] = 'CustomErrors';
 $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'Home/splash_screen';
+$route['app-info'] = 'Home/appInfo';
 
 $route['login'] = 'home/login';
 $route['loginchk'] = 'Authenticate/login';
@@ -12,17 +13,19 @@ $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';
 $route['forgot-password'] = 'Home/forgot_password';
 $route['streams'] = 'Home/streams';
+$route['our-success-story'] = 'Home/browseSuccessStories';
 $route['course-for-stream/(:any)'] = 'Home/coursesByStream/$1';
 $route['about-course/(:any)'] = 'Home/aboutCourse/$1';
 $route['about-us'] = 'Home/aboutUs';
 $route['contact-us'] = 'Home/contactUs';
 $route['terms-condition'] = 'Home/termsConditions';
+$route['profile'] = 'Authenticate/userProfile';
+$route['state-wise-colleges/(:any)'] = 'Home/state_wise_colleges/$1';
 
-
-$route['small/state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';
+// $route['state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';
 $route['small/about-us'] = 'SmallScreen/Home/about_us';
-$route['small/testimonials'] = 'SmallScreen/Home/testimonials';
-$route['small/testimonial-explore'] = 'SmallScreen/Home/testimonials_explore';
+$route['testimonials'] = 'Home/testimonials';
+$route['testimonial-explore'] = 'Home/testimonials_explore';
 $route['small/home'] = 'SmallScreen/Home/splash_screen';
 $route['small/verify-done'] = 'SmallScreen/Home/verify_done';
 $route['small/verify-otp/(:any)'] = 'SmallScreen/Home/verify_otp/$1';

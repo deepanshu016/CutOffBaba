@@ -28,15 +28,15 @@
                         <div class="row">
                            <div class="col-md-9 col">
                               <div class="nopadSty">
-                                 <h5 class="card-title"><strong><?= $stream['stream']; ?></strong></h5>
-                                 <p class="card-text nop">Ut enim ad minim veniam, quis. </p>
+                                 <h5 class="card-title"><strong><?= @$stream['stream']; ?></strong></h5>
+                                 <p class="card-text nop"><?= @excerpt($stream['description'],30); ?></p>
                                  <div class="lfeCuy">
                                     <a class="text-dark text-decoration-none cTacss" href="<?= base_url('course-for-stream').'/'.$stream['id']; ?>">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
                                  </div>
                               </div>
                            </div>
                            <div class="col-md-3 col">
-                              <img src="<?=base_url('assets/site/img/Frame-5.png')?>" class="img-fluid riCds" alt="Frame">
+                              <img src="<?= ($stream['stream_image'] == '' || !file_exists(base_url('assets/uploads/stream/').'/'.$stream['stream_image'])) ? base_url('assets/site/img/Frame-5.png') : base_url('assets/uploads/stream/').'/'.$stream['stream_image'];?>" class="img-fluid riCds" alt="Frame">
                            </div>
                         </div>
                      </div>

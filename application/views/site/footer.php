@@ -17,6 +17,19 @@
     <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
     <?php $this->load->view('common/alert'); ?>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+            $("#testimonial-slider").owlCarousel({
+               items:3,
+               itemsDesktop:[1000,2],
+               itemsDesktopSmall:[979,2],
+               itemsTablet:[767,1],
+               pagination: true,
+               autoPlay:true
+            });
+         });
+      </script>
     <!-- lazily load the Swiper CSS file -->
     <link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <!-- lazily load the Swiper JS file -->
@@ -53,20 +66,5 @@
            });
          }
       </script>
-  <!--  <script>
-      $(function(){
-         var url = window.location.href;
-         url = url.split('/');
-         if(url[3] != 'small'){
-            function isMobile() {
-               const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-               return regex.test(navigator.userAgent);
-            }
-            if (isMobile()) {
-                  window.location= "/small/home";
-            } 
-         }
-      });
-   </script> -->
    </body>
 </html>

@@ -3,12 +3,12 @@
  <nav class="container bg-light d-flex flex-column flex-md-row justify-content-between">
     <nav class="navbar bg-light">
        <div class="container-fluid">
-          <a class="navbar-brand" href="#!" aria-label="Product">
+          <a class="navbar-brand" href="javascript:void(0);" aria-label="Product">
           <img class="logoCs" src="<?=base_url('assets/site/img/logo.png')?>"> <span class="cutCss">Cutoff Baba</span>
           </a>
           <a class="navbar-brand ctaTxt" href="#!">CTA inte</a>
           <?php if($this->session->userdata('user')) { ?>
-            <a class="navbar-brand" href="#!"> <img src="<?=base_url('assets/site/img/user.png')?>"> </a>
+            <a class="navbar-brand" href="<?= base_url('profile'); ?>"> <img src="<?=base_url('assets/site/img/user.png')?>"> </a>
           <?php } ?>
        </div>
     </nav>
@@ -82,12 +82,14 @@
                         </a>
                      </div>
                   </div>
-                  <div class="card shaDo noHis">
-                     <div class="card-body mbbsCss">
-                        <h5 class="card-title smTxt">State Wise Colloeges</h5>
-                        <p class="card-text">Nemo enim ipsam voluptatem </p>
+                  <a href="<?= base_url('state-wise-colleges').'/'.$course['id']; ?>">
+                     <div class="card shaDo noHis">
+                        <div class="card-body mbbsCss">
+                           <h5 class="card-title smTxt">State Wise Colloeges</h5>
+                           <p class="card-text">Nemo enim ipsam voluptatem </p>
+                        </div>
                      </div>
-                  </div>
+                  </a>
                </div>
             </div>
          </div>

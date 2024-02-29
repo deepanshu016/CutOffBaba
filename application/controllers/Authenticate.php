@@ -7,6 +7,7 @@ Class Authenticate extends MY_Controller {
    	 	$this->load->model('User','us');
         $this->load->model('SiteSettings','site');
         $this->load->model('CourseCategory','category');
+        $this->load->model('MasterModel','master');
     }
 
 
@@ -510,6 +511,15 @@ Class Authenticate extends MY_Controller {
             return false;
         }
     }
+    public function userProfile()
+	{
+		$data['title'] = 'Profile | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['exams'] = $this->master->getRecords('tbl_exam');
+		$data['states'] = $this->master->getRecords('tbl_state');
+		$data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$this->load->view('site/profile',$data);
+	}
 }
 
 ?>

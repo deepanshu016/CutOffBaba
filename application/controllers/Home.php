@@ -12,24 +12,33 @@ class Home extends MY_Controller {
    	 	$this->load->model('MasterModel','master');
    	 	$this->load->model('CourseModel','course');
    	 	$this->load->model('SiteSettings','site');
-
         $this->load->model('SliderModel','slider');
     }
 	public function index()
 	{
-		$this->load->view('site/splash-screen');
+		$data['title'] = 'App Info | CUTOFFBABA';
+		$this->load->view('site/splash-screen',$data);
+	}
+	public function appInfo()
+	{
+		$data['title'] = 'App Info | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/more-about-splash',$data);
 	}
 	public function login()
 	{
-		$this->load->view('site/login');
+		$data['title'] = 'LOGIN | CUTOFFBABA';
+		$this->load->view('site/login',$data);
 	}
 	public function forgot_password()
 	{
-		$this->load->view('site/forgot_password');
+		$data['title'] = 'Forgot Password | CUTOFFBABA';
+		$this->load->view('site/forgot_password',$data);
 	}
 
 	public function signup()
 	{
+		$data['title'] = 'SIGNUP | CUTOFFBABA';
 		$data['stateList']=$this->site->getRecords('tbl_state',[]);
 		$this->load->view('site/signup',$data);
 	}
@@ -52,20 +61,29 @@ class Home extends MY_Controller {
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
-		$this->load->view('site/about_us',$data);
+		$this->load->view('site/about_us_course',$data);
 	}
 
 
 
-	public function state_wise_colleges()
+	public function state_wise_colleges($course_id)
 	{
-		$this->load->view('frontend/state_wise_colleges');
+		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
+		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
+		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$this->load->view('site/state-wise-colleges',$data);
 	}
 	public function aboutUs()
 	{
 		$data['title'] = 'About Us | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
-		$this->load->view('site/about_us',$data);
+		$this->load->view('site/about-page',$data);
+	}
+	public function browseSuccessStories()
+	{
+		$data['title'] = 'Our Success Story | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/testomonial-exlore',$data);
 	}
 	public function contactUs()
 	{
@@ -81,11 +99,11 @@ class Home extends MY_Controller {
 	}
 	public function testimonials()
 	{
-		$this->load->view('frontend/testimonials');
+		$this->load->view('site/testimonials');
 	}
 	public function testimonials_explore()
 	{
-		$this->load->view('frontend/testimonials_explore');
+		$this->load->view('site/testimonials_explore');
 	}
 	
 }

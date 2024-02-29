@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title><?=@$title; ?></title>
      <link href="<?=base_url('assets/site/css/bootstrap.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/custom.css')?>" rel="stylesheet">

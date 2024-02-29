@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title><?=@$title; ?></title>
      <link href="<?=base_url('assets/site/css/bootstrap.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
       <link href="<?=base_url('assets/site/css/custom.css')?>" rel="stylesheet">
@@ -24,7 +24,7 @@
             <div class="row">
                <div class="col-12 col-sm-12">
                   <div class="h0px ">
-                     <a href="splash-screen.php">
+                     <a href="<?= base_url('/app-info') ?>">
                      <img src="<?=base_url('assets/site/img/back-CTA.png')?>">
                      </a>
                      <h1 class="text-white my-3 p-3">Login to continue</h1>
@@ -46,7 +46,7 @@
                         <button type="submit" class="w-100 btn btn-primary p6t">Sign In</button>
                      </form>
                      <div class="acSing">
-                        <span class="text-white "> Don’t have an account? <a class="text-white" href="<?= base_url('small/signup'); ?>">Signup</a> </span>
+                        <span class="text-white "> Don’t have an account? <a class="text-white" href="<?= base_url('signup'); ?>">Signup</a> </span>
                      </div>
                   </div>
                </div>

@@ -4,8 +4,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>More About Splash</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
+      <link href="<?=base_url('assets/site/css/bootstrap.css')?>" rel="stylesheet">
+      <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
@@ -14,7 +14,7 @@
             <nav class="navbar bg-white">
                <div class="container-fluid">
                   <a class="navbar-brand" href="#!" aria-label="Product">
-                  <img class="logoCs" src="img/logo.png"> <span class="cutCss">Cutoff Baba</span>
+                  <img class="logoCs" src="<?=base_url('assets/site/img/logo.png')?>"> <span class="cutCss">Cutoff Baba</span>
                   </a>
                </div>
             </nav>
@@ -34,7 +34,7 @@
                <div class="row justify-content-center">
                   <div class="col-md-8 col-lg-4 mb-4">
                      <div class="d-flex">
-                        <img class="hewid" src="img/GraduationCap.png">
+                        <img class="hewid" src="<?=base_url('assets/site/img/GraduationCap.png')?>">
                         <div>
                            <h4 editable="inline" class="rfs-7 iuCsd">Lorem ipsum dolor site</h4>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.ipsum 
@@ -44,7 +44,7 @@
                   </div>
                   <div class="col-md-8 col-lg-4 mb-4">
                      <div class="d-flex">
-                        <img class="hewid" src="img/GraduationCap.png">
+                        <img class="hewid" src="<?=base_url('assets/site/img/GraduationCap.png')?>">
                         <div>
                            <h4 editable="inline" class="rfs-7 iuCsd">Lorem ipsum dolor site</h4>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.ipsum 
@@ -54,7 +54,7 @@
                   </div>
                   <div class="col-md-8 col-lg-4 mb-4">
                      <div class="d-flex">
-                        <img class="hewid" src="img/GraduationCap.png">
+                        <img class="hewid" src="<?=base_url('assets/site/img/GraduationCap.png')?>">
                         <div>
                            <h4 editable="inline" class="rfs-7 iuCsd">Lorem ipsum dolor site</h4>
                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.ipsum 
@@ -66,14 +66,14 @@
 
                <div class="row justify-content-center">
                   <div class="col-md-12 col-sm-12">
-                      <button class="w-100 btn btn-primary stryExpo">Start Exploring</button>
+                      <a href="<?= base_url('login'); ?>" class="w-100 btn btn-primary stryExpo">Start Exploring</a>
                   </div>
                </div>
 
             </div>
-            <img class="img-fluid" src="img/unsplassy.png">
+            <img class="img-fluid" src="<?=base_url('assets/site/img/unsplassy.png')?>">
          </section>
       </main>
-      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="<?=base_url('assets/site/js/bootstrap.bundle.min.js')?>"></script>
    </body>
 </html>
