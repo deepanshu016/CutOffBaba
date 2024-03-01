@@ -151,6 +151,50 @@ class MasterModel extends CI_Model {
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+
+	function getExamCourses($exam_id){
+		$examData = $this->db->get_where('tbl_exam',['id'=>$exam_id])->row_array();
+		if(empty($examData)){
+			return [];
+		}
+		$coursesData = [];
+		$coursesOffered = explode(',',$examData['course_accepting']);
+		$allCourses = $this->db->select('*')->from('tbl_course')->where_in('id', $coursesOffered)->get()->result_array();
+		if(!empty($allCourses)){
+			foreach($allCourses as $key=>$course){
+				$coursesData[$key]['id'] = $course['id'];
+				$coursesData[$key]['course'] = $course['course'];
+				$coursesData[$key]['course_full_name'] = $course['course_full_name'];
+				$coursesData[$key]['course_short_name'] = $course['course_short_name'];
+				$coursesData[$key]['course_icon'] = $course['course_icon'];
+				$coursesData[$key]['stream'] = $course['stream'];
+				$coursesData[$key]['degree_type'] = $course['degree_type'];
+				$coursesData[$key]['course_duration'] = $course['course_duration'];
+				$coursesData[$key]['exam'] = $course['exam'];
+				$coursesData[$key]['course_eligibility'] = $course['course_eligibility'];
+				$coursesData[$key]['course_opportunity'] = $course['course_opportunity'];
+				$coursesData[$key]['expected_salary'] = $course['expected_salary'];
+				$coursesData[$key]['course_fees'] = $course['course_fees'];
+				$coursesData[$key]['counselling_authority'] = $course['counselling_authority'];
+				$coursesData[$key]['college'] = $course['college'];
+				$coursesData[$key]['branch_type'] = $course['branch_type'];
+				$coursesData[$key]['status'] = $course['status'];
+				$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
+				$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
+			}
+		}
+		return $coursesData;
+	}
+
+
+	function getDomicileCategories($user_data){
+		$head_data = $this->db->select('id')->from('tbl_counselling_head')->where('state_id',$user_data['current_state'])->get()->result_array();
+		$headIds =   array_column($head_data,'id');
+		if(empty($headIds)){
+			return [];
+		}
+		return $this->db->select('*')->from('tbl_category')->where_in('head_id', $headIds)->get()->result_array();
+	}
 }
 
 ?>

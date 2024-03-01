@@ -40,6 +40,11 @@
                     <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vectorss.png')?>" alt=""> </span>
                     <select class="form-control raformsss"  name="" id="">
                         <option value="">City & District</option>
+                        <?php 
+                        if(!empty($district)){
+                            foreach($district as $district) { ?>
+                            <option value="<?= $district['id']; ?>" <?= (!empty($user) && $user['current_city'] == $district['id']) ? 'selected' : ''; ?>><?= $district['city']; ?></option>
+                        <?php } } ?>
                     </select>
                 </div>
                 <div class="input-group mb-3">
@@ -62,25 +67,59 @@
                 <div class="row">
                 <div class="col-md-12">
                   <h4 class="f16spx">Examanation/Reservation Information</h4>
-
-                  <div class="input-group mb-3">
-                    <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
-                    <select class="form-control raffss"  name="" id="">
-                        <option value="">Select Exam</option>
-                        <?php 
-                        if(!empty($exams)){
-                            foreach($exams as $exam) { ?>
-                            <option value="<?= $exam['id']; ?>"><?= $exam['exam_full_name']; ?></option>
-                        <?php } } ?>
-                    </select>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
+                        <select class="form-control raffss get-courses"  name="exam" id="">
+                            <option value="">Select Exam</option>
+                            <?php 
+                            if(!empty($exams)){
+                                foreach($exams as $exam) { ?>
+                                <option value="<?= $exam['id']; ?>"><?= $exam['exam_full_name']; ?></option>
+                            <?php } } ?>
+                        </select>
+                    </div>
                 </div>
+                <div class="col-md-12 course-data"></div>
                 <button class="w-100 btn btn-primary sProfil">Submit</button>
-
-
-
-                </div>
-                </div>
             </div>
-         </div>
-      </main>
+        </div>
+    </div>
+</main>
 <?php $this->load->view('site/footer'); ?>
+<script>
+    $("body").on("change", ".get-courses", function(e){
+       var val = $(this).val();
+       var url = "<?= base_url('get-exam-courses'); ?>";
+       var formData = new FormData();
+       formData.append('id',val);
+        CommonLib.ajaxForm(formData,'POST',url).then(d=>{
+            if(d.status === 200){
+                $(".course-data").html(d.html);
+            }else{
+                CommonLib.notification.error(d.msg);
+            }
+        }).catch(e=>{
+            CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+    $("body").on("change",".get-sub-category",function(){
+        var currentWrapper = $(this);
+        var catId=currentWrapper.val();
+        var url = "<?= base_url('get-sub-category'); ?>";
+        var formData = new FormData();
+        formData.append('id',catId);
+        CommonLib.ajaxForm(formData,'POST',url).then(d=>{
+            console.log("Response",d);
+            if(d.status === 200){
+                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
+            }else{
+                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+                CommonLib.notification.error(d.message);
+            }
+        }).catch(e=>{
+            console.error("Error:", e);
+            currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+            CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+</script>

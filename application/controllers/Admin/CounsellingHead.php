@@ -52,9 +52,9 @@ Class CounsellingHead extends MY_Controller {
             $data['head_name'] = $this->input->post('head_name');
             $data['level_id'] = $this->input->post('level_id');
             $data['state_id'] = $this->input->post('state');
-            $data['course_id'] = ($this->input->post('course_id')) ? implode('|',$this->input->post('course_id')) : '';
-            $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
-            $data['exams'] = ($this->input->post('exam_id')) ? implode('|',$this->input->post('exam_id')) : '';
+            $data['course_id'] = ($this->input->post('course_id')) ? implode(',',$this->input->post('course_id')) : '';
+            $data['college'] = ($this->input->post('college')) ? implode(',',$this->input->post('college')) : '';
+            $data['exams'] = ($this->input->post('exam_id')) ? implode(',',$this->input->post('exam_id')) : '';
             $result = $this->master->insert('tbl_counselling_head',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Cutoff Head added successfully','url'=>base_url('admin/cutoff-head-name'));

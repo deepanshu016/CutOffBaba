@@ -517,6 +517,7 @@ Class Authenticate extends MY_Controller {
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
 		$data['exams'] = $this->master->getRecords('tbl_exam');
 		$data['states'] = $this->master->getRecords('tbl_state');
+		$data['district'] = $this->master->getRecords('tbl_city');
 		$data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/profile',$data);
 	}

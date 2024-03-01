@@ -63,7 +63,7 @@
                                                   <?php
                                                   $courseList = get_master_data('tbl_course',[]);
                                                   if(!empty($courseList)){
-                                                     $courseLists = explode('|',$singleCounsellingHead['course_id']);
+                                                     $courseLists = explode(',',$singleCounsellingHead['course_id']);
                                                       foreach($courseList as $course){ ?>
                                                           <option value="<?= $course['id']; ?>" <?= (!empty($singleCounsellingHead) && in_array($course['id'],$courseLists)) ? 'selected' : ''; ?>><?= $course['course']; ?></option>
                                                       <?php } } ?>
@@ -94,7 +94,7 @@
                                                   $collegeList = get_master_data('tbl_college',[]);
                                                   if(!empty($collegeList)){
                                                         if(!empty($singleCounsellingHead)){
-                                                            $collegeLists = explode('|',$singleCounsellingHead['college']);
+                                                            $collegeLists = explode(',',$singleCounsellingHead['college']);
 
                                                         }
                                                       foreach($collegeList as $college){ ?>
@@ -113,7 +113,7 @@
                                                   $examList = get_master_data('tbl_exam',[]);
                                                   if(!empty($examList)){
                                                       if(!empty($singleCounsellingHead)){
-                                                          $examLists = explode('|',$singleCounsellingHead['exams']);
+                                                          $examLists = explode(',',$singleCounsellingHead['exams']);
 
                                                       }
                                                       foreach($examList as $exam){ ?>

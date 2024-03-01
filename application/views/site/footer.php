@@ -16,6 +16,7 @@
     <script src="<?=base_url('/')?>assets/admin/libs/simplebar/simplebar.min.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
+    <script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
     <?php $this->load->view('common/alert'); ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
       <script type="text/javascript">
