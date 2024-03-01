@@ -1,4 +1,9 @@
 <?php $this->load->view('site/header'); ?>
+<style>
+    .input-group{
+        background-color: #183e65;
+    }
+</style>
       <main>
          <div class="position-relative overflow-hidden p-md-5 m-md-3 text-center bg-light" style="background-image: url(<?=base_url('assets/site/img/profileheader-bg.png')?>);
             height: 289px;
