@@ -21,8 +21,6 @@
        <div class="container">
           <div class="row">
              <div class="col-md-12 col">
-                <div class="card card-body cutSCards">
-                </div>
                 <div class="alert altp alert-warning alert-dismissible fade show" role="alert">
                    <strong class="youTxt">Your profile is not completed. Please Complete first! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
                    <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
