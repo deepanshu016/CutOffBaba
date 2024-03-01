@@ -3,7 +3,7 @@
    <div class="position-relative overflow-hidden   p-md-5 m-md-3 text-center bg-light">
       
       <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-         <h4 class=" fw-bold text-start txtColor"> <a href="<?= base_url('course-for-stream').'/'.$selectedCourse['id']; ?>"><img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> &nbsp;  State wise colleges</h4>
+         <h4 class=" fw-bold text-start txtColor"> <a href="<?= base_url('courses').'/'.$selectedCourse['id']; ?>"><img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> &nbsp;  State wise colleges</h4>
          <div class="card radius">
             <img src="<?=base_url('assets/site/img/selectstat.png')?>" class="card-img cuysss " alt="doc-pic">
             <div class="card-img-overlay mbbsOverlay">

@@ -46,14 +46,14 @@ class Home extends MY_Controller {
 	{
 		$data['title'] = 'Streams | CUTOFFBABA';
 		$data['stream'] = $this->master->getRecords('tbl_stream');
-		$this->load->view('site/landing-page',$data);
+		$this->load->view('site/streams',$data);
 	}
 	public function coursesByStream($stream_id)
 	{
 		$data['title'] = 'Courses | CUTOFFBABA';
 		$data['selectedStream'] = $this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
-		$this->load->view('site/stream',$data);
+		$this->load->view('site/course-by-stream',$data);
 	}
 	public function aboutCourse($course_id)
 	{

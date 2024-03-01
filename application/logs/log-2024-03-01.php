@@ -1,156 +1,65 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-DEBUG - 2024-03-01 00:05:05 --> Total execution time: 0.0356
-DEBUG - 2024-03-01 00:05:06 --> Total execution time: 0.0235
-DEBUG - 2024-03-01 00:05:22 --> Total execution time: 0.0258
-DEBUG - 2024-03-01 00:05:24 --> Total execution time: 0.0238
-DEBUG - 2024-03-01 00:06:43 --> Total execution time: 0.0266
-DEBUG - 2024-03-01 00:07:04 --> Total execution time: 0.0185
-DEBUG - 2024-03-01 00:07:44 --> Total execution time: 0.0215
-DEBUG - 2024-03-01 00:07:55 --> Total execution time: 0.0248
-DEBUG - 2024-03-01 00:08:28 --> Total execution time: 0.0270
-DEBUG - 2024-03-01 00:08:52 --> Total execution time: 0.0208
-DEBUG - 2024-03-01 00:09:38 --> Total execution time: 0.0297
-DEBUG - 2024-03-01 00:10:12 --> Total execution time: 0.0212
-DEBUG - 2024-03-01 00:11:34 --> Total execution time: 0.0207
-DEBUG - 2024-03-01 00:11:36 --> Total execution time: 0.0173
-DEBUG - 2024-03-01 00:11:37 --> Total execution time: 0.0165
-DEBUG - 2024-03-01 00:11:40 --> Total execution time: 0.0429
-DEBUG - 2024-03-01 00:11:40 --> Total execution time: 0.0233
-DEBUG - 2024-03-01 00:11:41 --> Total execution time: 0.0254
-DEBUG - 2024-03-01 00:11:42 --> Total execution time: 0.0405
-DEBUG - 2024-03-01 00:12:07 --> Total execution time: 0.0226
-DEBUG - 2024-03-01 00:12:10 --> Total execution time: 0.0189
-DEBUG - 2024-03-01 00:12:12 --> Total execution time: 0.0153
-DEBUG - 2024-03-01 00:14:33 --> Total execution time: 0.0274
-DEBUG - 2024-03-01 00:14:35 --> Total execution time: 0.0326
-DEBUG - 2024-03-01 00:14:38 --> Total execution time: 0.6328
-DEBUG - 2024-03-01 00:16:04 --> Total execution time: 0.0292
-DEBUG - 2024-03-01 00:16:12 --> Total execution time: 0.0329
-DEBUG - 2024-03-01 00:16:30 --> Total execution time: 0.0357
-DEBUG - 2024-03-01 00:16:53 --> Total execution time: 0.0169
-DEBUG - 2024-03-01 00:16:55 --> Total execution time: 0.0367
-DEBUG - 2024-03-01 00:16:59 --> Total execution time: 0.0217
-DEBUG - 2024-03-01 00:17:02 --> Total execution time: 0.0292
-DEBUG - 2024-03-01 00:17:19 --> Total execution time: 0.0221
-DEBUG - 2024-03-01 00:17:21 --> Total execution time: 0.0167
-DEBUG - 2024-03-01 00:17:38 --> Total execution time: 0.0277
-DEBUG - 2024-03-01 00:17:39 --> Total execution time: 0.0149
-DEBUG - 2024-03-01 00:17:40 --> Total execution time: 0.0312
-DEBUG - 2024-03-01 00:17:41 --> Total execution time: 0.0358
-DEBUG - 2024-03-01 00:17:52 --> Total execution time: 0.0201
-DEBUG - 2024-03-01 00:18:11 --> Total execution time: 0.0293
-DEBUG - 2024-03-01 00:18:12 --> Total execution time: 0.0213
-DEBUG - 2024-03-01 00:20:47 --> Total execution time: 0.0200
-DEBUG - 2024-03-01 00:21:53 --> Total execution time: 0.0295
-DEBUG - 2024-03-01 00:22:22 --> Total execution time: 0.0197
-DEBUG - 2024-03-01 00:22:39 --> Total execution time: 0.0207
-DEBUG - 2024-03-01 00:22:41 --> Total execution time: 0.0301
-DEBUG - 2024-03-01 00:22:43 --> Total execution time: 0.0157
-DEBUG - 2024-03-01 00:22:44 --> Total execution time: 0.0417
-DEBUG - 2024-03-01 00:22:53 --> Total execution time: 0.0280
-DEBUG - 2024-03-01 00:22:53 --> Total execution time: 0.0181
-DEBUG - 2024-03-01 00:22:55 --> Total execution time: 0.0374
-DEBUG - 2024-03-01 00:22:57 --> Total execution time: 0.0380
-DEBUG - 2024-03-01 00:22:59 --> Total execution time: 0.0203
-DEBUG - 2024-03-01 00:23:21 --> Total execution time: 0.0170
-DEBUG - 2024-03-01 00:23:23 --> Total execution time: 0.0362
-DEBUG - 2024-03-01 00:23:26 --> Total execution time: 0.2924
-DEBUG - 2024-03-01 00:23:28 --> Total execution time: 0.0328
-DEBUG - 2024-03-01 00:25:04 --> Total execution time: 0.0362
-DEBUG - 2024-03-01 00:26:16 --> Total execution time: 0.0345
-DEBUG - 2024-03-01 00:26:28 --> Total execution time: 0.0167
-DEBUG - 2024-03-01 00:28:15 --> Total execution time: 0.0197
-DEBUG - 2024-03-01 00:28:27 --> Total execution time: 0.0268
-DEBUG - 2024-03-01 00:31:47 --> Total execution time: 0.0188
-DEBUG - 2024-03-01 00:31:48 --> Total execution time: 0.0188
-DEBUG - 2024-03-01 00:31:49 --> Total execution time: 0.0282
-DEBUG - 2024-03-01 00:31:52 --> Total execution time: 0.0164
-DEBUG - 2024-03-01 00:31:53 --> Total execution time: 0.0189
-DEBUG - 2024-03-01 00:31:53 --> Total execution time: 0.0178
-DEBUG - 2024-03-01 00:31:53 --> Total execution time: 0.0434
-DEBUG - 2024-03-01 00:31:54 --> Total execution time: 0.0222
-DEBUG - 2024-03-01 00:31:54 --> Total execution time: 0.0268
-DEBUG - 2024-03-01 00:31:54 --> Total execution time: 0.0255
-DEBUG - 2024-03-01 00:31:54 --> Total execution time: 0.0292
-DEBUG - 2024-03-01 00:31:54 --> Total execution time: 0.0228
-DEBUG - 2024-03-01 00:32:00 --> Total execution time: 0.0494
-DEBUG - 2024-03-01 00:32:01 --> Total execution time: 0.0184
-DEBUG - 2024-03-01 00:32:02 --> Total execution time: 0.0533
-DEBUG - 2024-03-01 00:32:03 --> Total execution time: 0.0336
-DEBUG - 2024-03-01 00:32:13 --> Total execution time: 0.0176
-DEBUG - 2024-03-01 00:32:39 --> Total execution time: 0.0180
-DEBUG - 2024-03-01 00:37:13 --> Total execution time: 0.0205
-DEBUG - 2024-03-01 00:37:38 --> Total execution time: 0.0299
-DEBUG - 2024-03-01 00:38:26 --> Total execution time: 0.0193
-DEBUG - 2024-03-01 00:39:39 --> Total execution time: 0.0430
-DEBUG - 2024-03-01 00:44:40 --> Total execution time: 0.0307
-DEBUG - 2024-03-01 00:47:33 --> Total execution time: 0.1043
-DEBUG - 2024-03-01 00:49:19 --> Total execution time: 0.0195
-DEBUG - 2024-03-01 00:49:22 --> Total execution time: 0.0325
-DEBUG - 2024-03-01 00:50:20 --> Total execution time: 0.0217
-DEBUG - 2024-03-01 00:50:22 --> Total execution time: 0.0429
-DEBUG - 2024-03-01 00:50:23 --> Total execution time: 0.0179
-DEBUG - 2024-03-01 00:50:24 --> Total execution time: 0.0328
-DEBUG - 2024-03-01 00:51:57 --> Total execution time: 0.0173
-DEBUG - 2024-03-01 00:51:59 --> Total execution time: 0.0180
-DEBUG - 2024-03-01 00:52:00 --> Total execution time: 0.0347
-DEBUG - 2024-03-01 00:52:09 --> Total execution time: 0.0298
-DEBUG - 2024-03-01 00:52:14 --> Total execution time: 0.0185
-DEBUG - 2024-03-01 00:52:19 --> Total execution time: 0.0388
-DEBUG - 2024-03-01 00:52:21 --> Total execution time: 0.0213
-DEBUG - 2024-03-01 00:52:22 --> Total execution time: 0.0306
-DEBUG - 2024-03-01 01:02:23 --> Total execution time: 0.1316
-DEBUG - 2024-03-01 01:04:34 --> Total execution time: 0.0365
-DEBUG - 2024-03-01 01:04:37 --> Total execution time: 0.0317
-DEBUG - 2024-03-01 01:04:39 --> Total execution time: 0.0374
-DEBUG - 2024-03-01 01:04:48 --> Total execution time: 0.0308
-DEBUG - 2024-03-01 01:05:11 --> Total execution time: 0.0430
-ERROR - 2024-03-01 01:05:15 --> Severity: Notice --> Undefined variable: singleCounsellingHead C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-ERROR - 2024-03-01 01:05:15 --> Severity: Notice --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-DEBUG - 2024-03-01 01:05:15 --> Total execution time: 0.0544
-DEBUG - 2024-03-01 01:06:47 --> Total execution time: 0.0429
-DEBUG - 2024-03-01 01:06:49 --> Total execution time: 0.0202
-DEBUG - 2024-03-01 01:06:58 --> Total execution time: 0.0325
-DEBUG - 2024-03-01 01:07:00 --> Total execution time: 0.0620
-DEBUG - 2024-03-01 01:07:02 --> Total execution time: 0.0328
-ERROR - 2024-03-01 01:07:04 --> Severity: Notice --> Undefined variable: singleCounsellingHead C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-ERROR - 2024-03-01 01:07:04 --> Severity: Notice --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-DEBUG - 2024-03-01 01:07:04 --> Total execution time: 0.0393
-DEBUG - 2024-03-01 01:08:21 --> Total execution time: 0.0215
-DEBUG - 2024-03-01 01:08:23 --> Total execution time: 0.0441
-DEBUG - 2024-03-01 01:08:26 --> Total execution time: 0.0261
-DEBUG - 2024-03-01 01:08:30 --> Total execution time: 0.0297
-DEBUG - 2024-03-01 01:08:32 --> Total execution time: 0.0264
-DEBUG - 2024-03-01 01:08:34 --> Total execution time: 0.0388
-ERROR - 2024-03-01 01:08:39 --> Severity: Notice --> Undefined variable: singleCounsellingHead C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-ERROR - 2024-03-01 01:08:39 --> Severity: Notice --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\views\admin\cutoff_head_name\add-edit.php 66
-DEBUG - 2024-03-01 01:08:39 --> Total execution time: 0.0361
-DEBUG - 2024-03-01 01:19:17 --> Total execution time: 0.0947
-DEBUG - 2024-03-01 01:19:17 --> Total execution time: 0.0193
-DEBUG - 2024-03-01 01:19:20 --> Total execution time: 0.0326
-DEBUG - 2024-03-01 01:19:24 --> Total execution time: 0.0364
-DEBUG - 2024-03-01 01:19:25 --> Total execution time: 0.0188
-DEBUG - 2024-03-01 01:19:48 --> Total execution time: 0.0357
-DEBUG - 2024-03-01 01:19:49 --> Total execution time: 0.0205
-DEBUG - 2024-03-01 01:19:59 --> Total execution time: 0.0357
-DEBUG - 2024-03-01 01:20:02 --> Total execution time: 0.0325
-DEBUG - 2024-03-01 01:20:17 --> Total execution time: 0.0283
-DEBUG - 2024-03-01 01:20:23 --> Total execution time: 0.0309
-DEBUG - 2024-03-01 01:20:26 --> Total execution time: 0.0205
-DEBUG - 2024-03-01 01:20:56 --> Total execution time: 0.0276
-ERROR - 2024-03-01 01:21:12 --> Severity: Notice --> Undefined property: Authenticate::$master C:\deepanshu\CutOffBaba\application\controllers\Authenticate.php 516
-ERROR - 2024-03-01 01:21:12 --> Severity: error --> Exception: Call to a member function singleRecord() on null C:\deepanshu\CutOffBaba\application\controllers\Authenticate.php 516
-DEBUG - 2024-03-01 01:21:27 --> Total execution time: 0.0228
-DEBUG - 2024-03-01 01:21:55 --> Total execution time: 0.0466
-DEBUG - 2024-03-01 01:24:01 --> Total execution time: 0.0178
-DEBUG - 2024-03-01 01:25:00 --> Total execution time: 0.0239
-DEBUG - 2024-03-01 01:25:01 --> Total execution time: 0.0327
-DEBUG - 2024-03-01 01:25:04 --> Total execution time: 0.0310
-DEBUG - 2024-03-01 01:25:05 --> Total execution time: 0.0363
-DEBUG - 2024-03-01 01:26:48 --> Total execution time: 0.0355
-DEBUG - 2024-03-01 01:28:10 --> Total execution time: 0.0309
-DEBUG - 2024-03-01 01:29:55 --> Total execution time: 0.0246
-DEBUG - 2024-03-01 01:30:17 --> Total execution time: 0.0400
-DEBUG - 2024-03-01 01:31:24 --> Total execution time: 0.0226
-DEBUG - 2024-03-01 01:37:28 --> Total execution time: 0.0193
+DEBUG - 2024-03-01 10:41:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:50 --> 404 Page Not Found: Course-for-stream/2
+DEBUG - 2024-03-01 10:41:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-01 16:11:53 --> Total execution time: 0.0184
+DEBUG - 2024-03-01 10:41:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:53 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-01 10:41:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:53 --> UTF-8 Support Enabled
+ERROR - 2024-03-01 10:41:53 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-01 10:41:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:53 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-01 10:41:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:53 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-01 10:41:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-01 16:11:54 --> Total execution time: 0.0352
+DEBUG - 2024-03-01 10:41:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:54 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-01 10:41:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:54 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-01 10:41:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:54 --> UTF-8 Support Enabled
+ERROR - 2024-03-01 10:41:54 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-01 10:41:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:54 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-01 16:11:55 --> Total execution time: 0.0411
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Courses/img
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Courses/img
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Courses/img
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Courses/img
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-01 10:41:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-01 10:41:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-01 10:41:55 --> 404 Page Not Found: Assets/site
