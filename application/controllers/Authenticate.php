@@ -518,7 +518,10 @@ Class Authenticate extends MY_Controller {
 		$data['exams'] = $this->master->getRecords('tbl_exam');
 		$data['states'] = $this->master->getRecords('tbl_state');
 		$data['district'] = $this->master->getRecords('tbl_city');
-		$data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+        $data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$data['coursesList'] = $this->master->getExamCourses($data['user']['selected_exam']);
+        $data['levelData'] = $this->master->getRecords('tbl_counselling_level',[]);
+        $data['domicileCategory'] = $this->master->getDomicileCategories($data['user']);
 		$this->load->view('site/profile',$data);
 	}
 }

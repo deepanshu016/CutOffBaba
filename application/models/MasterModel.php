@@ -8,7 +8,6 @@ class MasterModel extends CI_Model {
 //		debugger($this->db->queries);
 	}
 	function insert($table = '', $data = []) {
-		
 		if (!empty($table) && count($data) > 0) {
 			$q = $this->db->insert($table, $data);
 			return ($q);
@@ -181,6 +180,7 @@ class MasterModel extends CI_Model {
 				$coursesData[$key]['status'] = $course['status'];
 				$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
 				$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
+				$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
 			}
 		}
 		return $coursesData;
@@ -194,6 +194,36 @@ class MasterModel extends CI_Model {
 			return [];
 		}
 		return $this->db->select('*')->from('tbl_category')->where_in('head_id', $headIds)->get()->result_array();
+	}
+	public function updateCoursePreferences($table, $data) {
+		$course_data = $data;
+		$datas = [];
+		$count = 0;
+		$this->deleteRecord($table, ['user_id'=>$course_data['user']['id']]);
+		if(!empty($course_data)){
+			foreach($course_data['course_data'] as $key => $course){
+				foreach($course['category'] as $keys=>$category){
+					$datas['user_id'] = $course_data['user']['id'];
+					$datas['course_id'] = $course['course_id'];
+					$datas['category_id'] = $category['category_id'];
+					$datas['sub_category_id'] = $category['sub_category_id'];
+					$result = $this->insert($table,$datas);
+					if($result){
+						$count += 1;
+					}
+				}
+				if($course['domicile_category_id'] != ''){
+					$datas['user_id'] = $course_data['user']['id'];
+					$datas['course_id'] = $course['course_id'];
+					$datas['domicile_category_id'] = $course['domicile_category_id'];
+					$result = $this->insert($table,$datas);
+					if($result){
+						$count += 1;
+					}
+				}
+			}
+		}
+		return $count;
 	}
 }
 

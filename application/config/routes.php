@@ -20,6 +20,7 @@ $route['about-us'] = 'Home/aboutUs';
 $route['contact-us'] = 'Home/contactUs';
 $route['terms-condition'] = 'Home/termsConditions';
 $route['profile'] = 'Authenticate/userProfile';
+$route['update-profile'] = 'ExamController/updateUserProfile';
 $route['get-exam-courses'] = 'ExamController/getExamCourses';
 $route['get-sub-category'] = 'ExamController/getSubCategory';
 $route['state-wise-colleges/(:any)'] = 'Home/state_wise_colleges/$1';
