@@ -510,3 +510,9 @@ ERROR - 2024-03-04 19:33:11 --> 404 Page Not Found: Assets/site
 DEBUG - 2024-03-04 19:33:12 --> UTF-8 Support Enabled
 DEBUG - 2024-03-04 19:33:12 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-03-04 19:33:12 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-04 20:04:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-04 20:04:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-04 20:04:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-04 20:04:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-04 20:04:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-04 20:04:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
