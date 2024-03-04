@@ -24,20 +24,22 @@ $route['update-profile'] = 'ExamController/updateUserProfile';
 $route['get-exam-courses'] = 'ExamController/getExamCourses';
 $route['get-sub-category'] = 'ExamController/getSubCategory';
 $route['state-wise-colleges/(:any)'] = 'Home/state_wise_colleges/$1';
-
+$route['send-otp'] = 'Authenticate/forgot_password';
+$route['verify-otp/(:any)'] = 'Authenticate/verify_otp/$1';
+$route['otp-verification'] = 'Authenticate/OtpVerification';
+$route['verify-done'] = 'Authenticate/verify_done';
+$route['plan'] = 'Home/plan';
 // $route['state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';
 $route['small/about-us'] = 'SmallScreen/Home/about_us';
 $route['testimonials'] = 'Home/testimonials';
 $route['testimonial-explore'] = 'Home/testimonials_explore';
 $route['small/home'] = 'SmallScreen/Home/splash_screen';
-$route['small/verify-done'] = 'SmallScreen/Home/verify_done';
-$route['small/verify-otp/(:any)'] = 'SmallScreen/Home/verify_otp/$1';
 $route['large/home'] = 'Home/index';
 
 
 
-$route['send-otp'] = 'SmallScreen/Authenticate/forgot_password';
-$route['otp-verification'] = 'SmallScreen/Authenticate/OtpVerification';
+
+
 
 $route['user/logout'] = 'SmallScreen/Authenticate/logout';
 

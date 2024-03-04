@@ -106,7 +106,7 @@
                                  <div class="lc-block card h-100 p-4 py-xl-6 shadow border-0" style="background-image: url(img/catdsbg.png); background-size: cover; background-repeat: round;">
                                     <div class="card-body d-flex flex-column justify-content-between">
                                        <div>
-                                          <div class="lc-block  text-center ">
+                                          <div class="lc-block  text-center">
                                              <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">Basic Plan</h3>
                                           </div>
                                           <center>
@@ -120,32 +120,32 @@
                                              <li> sdjhj</li>
                                              <li> sdjhj</li>
                                              </ul> -->
-                                          <div class="lc-block ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Tuition Fees Info</p>
                                              </div>
                                           </div>
-                                          <div class="lc-block ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Seat Matrix Info</p>
                                              </div>
                                           </div>
-                                          <div class="lc-block  ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Approved Colleges Info</p>
                                              </div>
                                           </div>
-                                          <div class="lc-block  ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Cutoff Info</p>
                                              </div>
                                           </div>
-                                          <div class="lc-block  ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Category Info</p>
                                              </div>
                                           </div>
-                                          <div class="lc-block  ">
+                                          <div class="lc-block">
                                              <div editable="rich">
                                                 <p class="text-white coMMons"> <img src="img/marks.png" alt=""> Counselling Dates</p>
                                              </div>

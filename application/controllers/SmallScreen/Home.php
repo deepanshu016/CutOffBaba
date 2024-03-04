@@ -69,15 +69,7 @@ class Home extends MY_Controller {
 	{
 		$this->load->view('site/splash_screen');
 	}
-	public function verify_done()
-	{
-		$this->load->view('site/verify_done');
-	}
-	public function verify_otp($phone)
-	{
-		$user_id =  base64_decode($phone);
-		$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
-		$this->load->view('site/verify_otp',['userData'=>$userData]);
-	}
+	
+
 	
 }

@@ -8,7 +8,7 @@
       </ul>
    </footer>
    
-   <script src="<?=base_url('assets/site/js/bootstrap.bundle.min.js')?>"></script>
+    <script src="<?=base_url('assets/site/js/bootstrap.bundle.min.js')?>"></script>
    
     <script src="<?=base_url('assets/admin/js/popper.min.js')?>"></script>
     <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>

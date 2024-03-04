@@ -56,7 +56,7 @@
                                                             <span class="text-danger" id="plan_name"></span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <!-- <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Degree Type</label>
                                                             <select class="form-control" name="degree_type_id">
@@ -70,8 +70,8 @@
                                                             </select>
                                                             <span class="text-danger" id="degree_type_id"></span>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
+                                                    </div> -->
+                                                    <!-- <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Course</label>
                                                             <select class="form-control" name="course_id">
@@ -85,12 +85,12 @@
                                                             </select>
                                                             <span class="text-danger" id="course_id"></span>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label for="basiInput" class="form-label">Discounted Percentage</label>
-                                                            <input type="text" class="form-control" placeholder="Discounted Percentage" name="discount_percentage" value="<?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['discount_percentage'] : '';?>">
-                                                            <span class="text-danger" id="discount_percentage"></span>
+                                                            <label for="basiInput" class="form-label">Price</label>
+                                                            <input type="text" class="form-control" placeholder="Price" name="price" value="<?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['price'] : '';?>">
+                                                            <span class="text-danger" id="price"></span>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -103,7 +103,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Description</label>
-                                                            <textarea class="form-control"  name="description" placeholder="Description"><?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['description'] : '';?></textarea>
+                                                            <textarea class="form-control"  name="description" id="description" placeholder="Description"><?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['description'] : '';?></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -112,7 +112,7 @@
                                                             <textarea class="form-control"  name="terms_condition" id="terms_condition" placeholder="Terms & Condition"> <?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['terms_condition'] : '';?></textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <!-- <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label for="basiInput" class="form-label">Paid Counselling Registration</label>
                                                             <textarea class="form-control"  name="paid_counselling_registration" id="paid_counselling_registration" placeholder="Paid Counselling Registration"> <?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['paid_counselling_registration'] : '';?></textarea>
@@ -123,7 +123,7 @@
                                                             <label for="basiInput" class="form-label">Payment Info</label>
                                                             <textarea class="form-control"  name="payment_info" id="payment_info" placeholder="Payment Info"><?= (!empty($singleCounsellingPlan)) ? $singleCounsellingPlan['payment_info'] : '';?></textarea>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6" style="margin-top: 15px;">

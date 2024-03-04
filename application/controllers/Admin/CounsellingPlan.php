@@ -44,21 +44,21 @@ Class CounsellingPlan extends MY_Controller {
     //Save Counselling Plan
     public function saveCounsellingPlan(){
         $this->form_validation->set_rules('plan_name', 'Counselling Plan Name', 'trim|required');
-        $this->form_validation->set_rules('degree_type_id', 'Degree Type', 'trim|required');
-        $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
-        $this->form_validation->set_rules('discount_percentage', 'Discounted Percentage', 'numeric');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required');
+        // $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
+        // $this->form_validation->set_rules('discount_percentage', 'Discounted Percentage', 'numeric');
         $this->form_validation->set_rules('discounted_price', 'Discounted Price', 'numeric');
         if ($this->form_validation->run()) {
             $data['plan_name'] = $this->input->post('plan_name');
             $data['slug'] = $this->slug($this->input->post('plan_name'));
-            $data['degree_type_id'] = $this->input->post('degree_type_id');
-            $data['course_id'] = $this->input->post('course_id');
-            $data['discount_percentage'] = $this->input->post('discount_percentage');
+            $data['price'] = $this->input->post('price');
+            // $data['course_id'] = $this->input->post('course_id');
+            // $data['discount_percentage'] = $this->input->post('discount_percentage');
             $data['discounted_price'] = $this->input->post('discounted_price');
             $data['description'] = $this->input->post('description');
             $data['terms_condition'] = $this->input->post('terms_condition');
-            $data['paid_counselling_registration'] = $this->input->post('paid_counselling_registration');
-            $data['payment_info'] = $this->input->post('payment_info');
+            // $data['paid_counselling_registration'] = $this->input->post('paid_counselling_registration');
+            // $data['payment_info'] = $this->input->post('payment_info');
             $result = $this->master->insert('tbl_counsellng_plans',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Counselling Plan added successfully','url'=>base_url('admin/counselling-plan'));
@@ -74,9 +74,9 @@ Class CounsellingPlan extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'plan_name' => form_error('plan_name'),
-                    'degree_type_id' => form_error('degree_type_id'),
-                    'course_id' => form_error('course_id'),
-                    'discount_percentage' => form_error('discount_percentage'),
+                    // 'degree_type_id' => form_error('degree_type_id'),
+                    // 'course_id' => form_error('course_id'),
+                    'price' => form_error('price'),
                     'discounted_price' => form_error('discounted_price')
                 )
             );
@@ -87,21 +87,21 @@ Class CounsellingPlan extends MY_Controller {
     //Save Feeshead
     public function updateCounsellingPlan(){
         $this->form_validation->set_rules('plan_name', 'Counselling Plan Name', 'trim|required');
-        $this->form_validation->set_rules('degree_type_id', 'Degree Type', 'trim|required');
-        $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
-        $this->form_validation->set_rules('discount_percentage', 'Discounted Percentage', 'numeric');
+        $this->form_validation->set_rules('price', 'Price', 'trim|required');
+        // $this->form_validation->set_rules('course_id', 'Course', 'trim|required');
+        // $this->form_validation->set_rules('discount_percentage', 'Discounted Percentage', 'numeric');
         $this->form_validation->set_rules('discounted_price', 'Discounted Price', 'numeric');
         if ($this->form_validation->run()) {
             $data['plan_name'] = $this->input->post('plan_name');
             $data['slug'] = $this->slug($this->input->post('plan_name'));
-            $data['degree_type_id'] = $this->input->post('degree_type_id');
-            $data['course_id'] = $this->input->post('course_id');
-            $data['discount_percentage'] = $this->input->post('discount_percentage');
+            // $data['degree_type_id'] = $this->input->post('degree_type_id');
+            // $data['course_id'] = $this->input->post('course_id');
+            $data['price'] = $this->input->post('price');
             $data['discounted_price'] = $this->input->post('discounted_price');
             $data['description'] = $this->input->post('description');
             $data['terms_condition'] = $this->input->post('terms_condition');
-            $data['paid_counselling_registration'] = $this->input->post('paid_counselling_registration');
-            $data['payment_info'] = $this->input->post('payment_info');
+            // $data['paid_counselling_registration'] = $this->input->post('paid_counselling_registration');
+            // $data['payment_info'] = $this->input->post('payment_info');
 
             $result = $this->master->updateRecord('tbl_counsellng_plans',array('id'=>$this->input->post('plan_id')),$data);
             $response = array('status' => 'success','message'=> 'Counselling Plan updated successfully','url'=>base_url('admin/counselling-plan'));
@@ -112,9 +112,9 @@ Class CounsellingPlan extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'plan_name' => form_error('plan_name'),
-                    'degree_type_id' => form_error('degree_type_id'),
-                    'course_id' => form_error('course_id'),
-                    'discount_percentage' => form_error('discount_percentage'),
+                    // 'degree_type_id' => form_error('degree_type_id'),
+                    // 'course_id' => form_error('course_id'),
+                    'price' => form_error('price'),
                     'discounted_price' => form_error('discounted_price')
                 )
             );

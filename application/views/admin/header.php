@@ -164,10 +164,7 @@
                             </span>
                         </button>
                     </div>
-
                     <div class="d-flex align-items-center">
-
-                        
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -180,11 +177,11 @@
                                 </span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
                                 <h6 class="dropdown-header">Welcome <?php if(!empty($admin_session)) { echo $admin_session['name']; }?>!</h6>
-                                <a class="dropdown-item" href="<?= base_url('admin/logout'); ?>"><i
-                                        class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle" data-key="t-logout">Logout</span></a>
+                                <a class="dropdown-item" href="<?= base_url('admin/logout'); ?>">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> 
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
                             </div>
                         </div>
                     </div>
