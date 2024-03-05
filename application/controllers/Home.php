@@ -110,6 +110,7 @@ class Home extends MY_Controller {
 		$data['title'] = 'Counselling Plan | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
 		$data['planList'] = $this->master->getRecords('tbl_counsellng_plans');
+		
 		$this->load->view('site/counselling_plan',$data);
 	}
 }

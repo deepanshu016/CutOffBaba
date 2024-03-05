@@ -58,7 +58,7 @@
                                     <div class="card-body d-flex flex-column justify-content-between">
                                        <div>
                                           <div class="lc-block  text-center ">
-                                             <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">Basic Plan</h3>
+                                             <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2"><?= $plan['plan_name']; ?></h3>
                                           </div>
                                           <!-- <center>
                                              <h4 class="off10rs">10% OFF</h4>
@@ -78,7 +78,7 @@
                                           </div>
                                        </div>
                                        <div class="lc-block d-grid">
-                                          <a class="btn btn-primary btn-lg srpais" href="#" role="button">Select Package</a>
+                                          <a class="btn btn-primary btn-lg srpais purchase_now" href="javascript:void(0);" data-id="<?= $plan['id']; ?>" data-amount="<?= $plan['discounted_price']; ?>">Select Package</a>
                                        </div>
                                     </div>
                                  </div>
@@ -98,6 +98,7 @@
       <!-- lazily load the Swiper JS file -->
       <script defer="defer" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
       <!-- lc-needs-hard-refresh -->
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       <script>
          function initializeSwiperRANDOMID(){
              // Launch SwiperJS  
@@ -125,6 +126,43 @@
                  },
              });
          }
+      </script>
+      <script>
+         var SITEURL = "<?php echo base_url() ?>";
+            $('body').on('click', '.purchase_now', function(e){
+               var totalAmount = $(this).attr("data-amount");
+               var product_id =  $(this).attr("data-id");
+               alert(totalAmount);
+               var options = {
+               "key": "rzp_test_q2ifqqk3pzoTyk",
+               "amount": (totalAmount*100), // 2000 paise = INR 20
+               "name": "CUTOFFBABA",
+               "description": "Plan Purchase",
+               "image": "http://cutoffbaba/assets/site/img/uyesr.png",
+               "handler": function (response){
+                  console.log("RESPONSE",response);
+                     $.ajax({
+                        url: SITEURL + 'payment/pay-success',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                           razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,product_id : product_id,
+                        }, 
+                        success: function (msg) {
+
+                           window.location.href = SITEURL + 'payment/RazorThankYou';
+                        }
+                  });
+               
+               },
+               "theme": {
+                  "color": "#528FF0"
+               }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+             e.preventDefault();
+         });
       </script>
    </body>
 </html>

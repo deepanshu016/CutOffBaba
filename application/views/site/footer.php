@@ -1,7 +1,7 @@
    <footer >
       <ul class="nav justify-content-center border-bottom  text-center">
          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/home.png')?>"> <br> Home</a></li>
-         <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/start.png')?>"> <br> Premium</a></li>
+         <li class="nav-item"><a href="<?= base_url('plan'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/start.png')?>"> <br> Premium</a></li>
          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/serch.png')?>"> <br> Search</a></li>
          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Award.png')?>"> <br> Award</a></li>
          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Userss.png')?>"> <br> Profile</a></li>
@@ -19,6 +19,7 @@
     <script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
     <?php $this->load->view('common/alert'); ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       <script type="text/javascript">
          $(document).ready(function(){
             $("#testimonial-slider").owlCarousel({
@@ -67,5 +68,6 @@
            });
          }
       </script>
+      
    </body>
 </html>
