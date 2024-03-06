@@ -225,6 +225,30 @@ class MasterModel extends CI_Model {
 		}
 		return $count;
 	}
+
+	public function getStatesWithMinimumCollege(){
+		$this->db->select('s.*');
+        $this->db->from('tbl_state as s');
+        $this->db->join('tbl_college as c', 'c.state = s.id', 'inner');
+        $this->db->group_by('s.id');
+        $query = $this->db->get();
+        return $query->result_array();
+	}
+	public function getCollegesDataStateWise($state_id){
+		$this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+		c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
+		c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
+		cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title');
+		$this->db->from('tbl_college as c');
+		$this->db->where('c.state', $state_id);
+		$this->db->join('tbl_state as s', 's.id = c.state');
+		$this->db->join('tbl_city as cit', 'cit.id = c.city');
+		$this->db->join('tbl_country as count', 'count.id = c.country');
+		$this->db->join('tbl_approval as a', 'a.id = c.approved_by');
+		$this->db->join('tbl_ownership as o', 'o.id = c.ownership');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
 
 ?>

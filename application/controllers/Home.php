@@ -66,11 +66,21 @@ class Home extends MY_Controller {
 
 
 
-	public function state_wise_colleges($course_id)
+	public function stateList($course_id)
 	{
 		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
+		$this->load->view('site/state-list',$data);
+	}
+	public function state_wise_colleges($state_id)
+	{
+		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
+		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
+		$data['selectedState'] = $this->master->singleRecord('tbl_state',['id'=>$state_id]);
+		$data['stateWiseColleges'] = $this->master->getCollegesDataStateWise($state_id);
+		
 		$this->load->view('site/state-wise-colleges',$data);
 	}
 	public function aboutUs()

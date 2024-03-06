@@ -88,7 +88,7 @@
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <a href="<?= base_url('state-wise-colleges').'/'.$course['id']; ?>">
+                                       <a href="<?= base_url('states').'/'.$course['id']; ?>">
                                        <h5 class="card-title smTxt">State Wise Colloeges</h5>
                                        <p class="card-text">Nemo enim ipsam voluptatem </p>
                                     </a>

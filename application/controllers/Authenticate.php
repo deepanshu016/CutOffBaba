@@ -511,7 +511,7 @@ Class Authenticate extends MY_Controller {
             return false;
         }
     }
-    public function userProfile()
+    public function EditUserProfile()
 	{
 		$data['title'] = 'Profile | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
@@ -612,6 +612,14 @@ Class Authenticate extends MY_Controller {
     public function verify_done()
 	{
 		$this->load->view('site/verify_done');
+	}
+    public function userProfile()
+	{
+        $data['title'] = 'User Dashboard | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+        $data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
+        $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$this->load->view('site/user_profile',$data);
 	}
 }
 

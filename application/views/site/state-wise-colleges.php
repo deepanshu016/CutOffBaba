@@ -1,195 +1,214 @@
 <?php $this->load->view('site/header'); ?>
-<main>
-   <div class="position-relative overflow-hidden   p-md-5 m-md-3 text-center bg-light">
-      
-      <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-         <h4 class=" fw-bold text-start txtColor"> <a href="<?= base_url('courses').'/'.$selectedCourse['id']; ?>"><img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> &nbsp;  State wise colleges</h4>
-         <div class="card radius">
-            <img src="<?=base_url('assets/site/img/selectstat.png')?>" class="card-img cuysss " alt="doc-pic">
-            <div class="card-img-overlay mbbsOverlay">
-               <h5 class="card-title">State wise colleges</h5>
-               <p class="card-text">Lorem ipsum dollor site amet Lorem ipsum dollor.</p>
-            </div>
-         </div>
-      </div>
-      <div class="product-device shadow-sm d-none d-md-block"></div>
-      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-
-   </div>
-   <div class=" w-100 my-md-3 ps-md-3 bg-light">
-      
-      <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-         <h4 class="text-start">State wise colleges</h4>
-         
-      </div> 
-
-      <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="row ">
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
+      <style>
+         .faCCnvs{
+         font-size: 25px;
+         }
+         .bgts{
+         margin-top: 11px;
+         margin-left: 15px;
+         }
+         .cNva{
+         margin-bottom: 27px;
+         margin-top: 5px;
+         }
+         .divcc{
+         background: #fff;
+         margin-top: 14px;
+         border-radius: 3px;
+         }
+      </style>
+      <main>
+         <section class="canvaCssss">
+            <div class="container">
+               <div class="row">
+                  <div class="col-2">
+                     <h4 class=" fw-bold text-start cNva"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> </h4>
                   </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
+                  <div class="col-8">
+                     <h5 class="card-title bgts">State wise colleges</h5>
                   </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
+                  <div class="col-2">
+                     <button class="canvaCss faCCnvs" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-filter" aria-hidden="true"></i></button>
                   </div>
-               </div>
-               </div> 
-            </div>
-            <div class="mgtus"></div>
-            <div class="row ">
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div> 
-            </div>
-            <div class="mgtus"></div>
-            <div class="row ">
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div> 
-            </div>
-            <div class="mgtus"></div>
-            <div class="row ">
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div>
-               <div class="col col-md-2 col-sm-2 lesCols">
-                  <div class="card card-body">
-                  <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                  <div class="card-body minPadding">
-                     <p class="card-text">Gujarat</p>
-                  </div>
-               </div>
-               </div> 
-            </div>
-            <br>
-      </div>
-
-      <div class="me-md-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230266.16615645168!2d84.97823174577786!3d25.60794506219498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f29937c52d4f05%3A0x831a0e05f607b270!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1706963024897!5m2!1sen!2sin" width="100%" height="340" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         <?php if(!empty($courseColleges)) { ?>
-         <div class="container">
-            <div class="row mb-4">
-               <div class="col-12 text-center">
-                  <div class="lc-block">
-                     <div editable="rich">
-                     <br>
-                        <h3 class="text-uppercase sercs fw-bold text-start">Popular Colleges</h3>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="container pb-6">
-            <div class="swiper swiper-RANDOMID">
-               <div class="swiper-wrapper d-flex align-items-center text-center">
-               <?php 
-               foreach($courseColleges as $college){ ?>
-                  <div class="swiper-slide">
-                     <div class="d-flex">
-                        <div class="bg-white">
-                           <div class="row justify-content-center">
-                              <div class="col-12 col-lg-8 col-xl-6 text-center">
-                                 <div class="lc-block mb-2">
-                                    <img class="img-fluid" alt="Photo by Sebastian Pichler" src="<?= ($college['college_logo'] == '' || !file_exists(base_url('assets/uploads/college/logo/').'/'.$college['college_logo'])) ? base_url('assets/site/img/Rectangless27.png') : base_url('assets/uploads/college/logo/').'/'.$college['college_logo'];?>">
+                  <div class="col-md-12">
+                     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="row">
+                           <div class="canvDiv">
+                              <div class="col-3">
+                                 <div class="offcanvas-header bg-light" >
+                                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"> </h5>
+                                    <button type="button" class="btn-close u7OffCan" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                  </div>
-                                 <div class="lc-block mb-4">
-                                    <div class="sy7u" editable="rich">
-                                       <h5 class="fonSix"><?= $college['full_name']; ?></h5> 
-                                       
-                                       <ol class="list-group list-group-numbered">
-                                          <li class=" d-flex justify-content-between align-items-start">
-                                             <div class="me-auto">
-                                             <div class="fw-bold"><img src="<?=base_url('assets/site/img/calender.png')?>" alt=""> <?= date('Y',strtotime($college['establishment'])); ?></div> 
-                                             </div> 
-                                             <div class=" me-auto">
-                                             <div class="fw-bold"><img src="<?=base_url('assets/site/img/location.png')?>" alt=""> Patna</div> 
-                                             </div> 
-                                          </li>
-                                       </ol>
-                                       <!-- <p>  <img src="img/calender.png" alt=""> 1998 </p> -->
+                              </div>
+                              <div class="col-9">
+                                 <a class="reSet" href="#!">Reset</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="offcanvas-body bg-light">
+                           <div>
+                           </div>
+                           <div class="divmain ">
+                              <div class="row">
+                                 <div class="col-4 col5No">
+                                    <div class="divcc">
+                                       <h6 class="cssDegre">Degree <i class="fa fa-arrow-right" aria-hidden="true"></i>  </h6>
+                                       <ul class="list-group list-group-flush">
+                                          <li class="list-group-item  bgColcanv">  State</li>
+                                          <li class="list-group-item  bgColcanv">  City</li>
+                                          <li class="list-group-item  bgColcanv">  Study Mode</li>
+                                          <li class="list-group-item  bgColcanv">  Specialization</li>
+                                          <li class="list-group-item  bgColcanv">  Institute Type</li>
+                                          <li class="list-group-item  bgColcanv">  Exam</li>
+                                          <li class="list-group-item  bgColcanv">  Hostel</li>
+                                          <li class="list-group-item  bgColcanv">  Fee Range</li>
+                                          <li class="list-group-item  bgColcanv">  Facilities</li>
+                                       </ul>
                                     </div>
+                                 </div>
+                                 <div class="col-8  ">
+                                    <ul class="list-group list-group-flush">
+                                       <div class="input-group">
+                                          <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
+                                          <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
+                                       </div>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                             <label class="form-check-label" for="flexRadioDefault1">
+                                             B.Tech(Bachelor of <br> Technology) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                             <label class="form-check-label" for="flexRadioDefault2">
+                                             Diploma (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                             <label class="form-check-label" for="flexRadioDefault3">
+                                             M.Tech(Master of <br> Technology) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                                             <label class="form-check-label" for="flexRadioDefault4">
+                                             B.Arch(Bachelor of <br> Atchitecture) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                                             <label class="form-check-label" for="flexRadioDefault5">
+                                             Ph.D.(Doctor of <br> Philosophy) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+                                             <label class="form-check-label" for="flexRadioDefault6">
+                                             Post Graduate Diploma (498) 
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+                                             <label class="form-check-label" for="flexRadioDefault7">
+                                             Certificate (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault8">
+                                             <label class="form-check-label" for="flexRadioDefault8">
+                                             M. Arch.(Master of <br> Architecture) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault9">
+                                             <label class="form-check-label" for="flexRadioDefault9">
+                                             B.Tech + M.B.A (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="list-group-item  bstyCol">
+                                          <div class="form-check">
+                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault10">
+                                             <label class="form-check-label" for="flexRadioDefault10">
+                                             M.Plan. (Master of Planning) (498)
+                                             </label>
+                                          </div>
+                                       </li>
+                                    </ul>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               <?php } ?>
                </div>
             </div>
+         </section>
          </div>
-         <?php } ?>
-      </div> 
-   </div>
-</main>
-<?php $this->load->view('site/footer'); ?>
+         <section >
+            <div>
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-12 elInpa">
+                        <h4 class="text-center"><strong>Top Engineering Colleges In <?= $selectedState['name']; ?></strong></h4>
+                        <p class="text-center">Ut enim ad minima veniam, quis ullam suscipit exercitationem ullam corporis suscipit lorem.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                  <?php 
+                    if(!empty($stateWiseColleges)) {
+                        foreach($stateWiseColleges as $college) { ?>
+                     <div class="pt-md-5 px-md-5 text-center overflow-hidden">
+                        <div class="card shaDo mb-3" style="max-width: 540px;">
+                           <div class="row g-0">
+                              <div class="col-3 col">
+                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/admin/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/admin/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Rectangless27.png');?>" class="img-fluid ins5t rounded-start" alt="...">
+                              </div>
+                              <div class="col-9 col">
+                                 <div class="card-body nopad">
+                                    <h5 class="card-title jainTxt"><?= $college['full_name']; ?></h5>
+                                    <p class="card-text"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <?= date('Y',strtotime($college['establishment'])); ?>  &nbsp;  <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $college['city_name']; ?>, <?= $college['state_name']; ?> </p>
+                                 </div>
+                              </div>
+                              <div class="row g-0 xButton">
+                                 <div class="col-6">
+                                    <a class="btn downFrees" href="#!">Download Brochure</a> 
+                                 </div>
+                                 <div class="col-6">
+                                    <a class="btn downFrees" href="#!">Fee Structure</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <?php } } ?>
+                  </div>
+               </div>
+            </div>
+         </section>
+        <?php $this->load->view('site/footer'); ?>
+      </main>

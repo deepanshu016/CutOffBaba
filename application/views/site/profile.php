@@ -10,7 +10,7 @@
             background-size: contain;
             background-repeat: no-repeat;">
             <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-               <h4 class=" fw-bold text-start txtColor">    <a href="<?=base_url('streams')?>"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> </h4>
+               <h4 class=" fw-bold text-start txtColor">    <a href="<?=base_url('profile')?>"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> </h4>
                <h5 class="card-title text-white noProf">Profile</h5>
                <center>
                <img src="<?=base_url('assets/site/img/userrss.png')?>" alt="Avatar" class="avatar">

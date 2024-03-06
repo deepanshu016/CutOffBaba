@@ -13,6 +13,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
       <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
+      <style>
+         .lc-block li {
+            color: white;
+         }
+      </style>
    </head>
    <body>
       <main>
@@ -72,9 +77,7 @@
                                              <li> sdjhj</li>
                                              </ul> -->
                                           <div class="lc-block ">
-                                             <div editable="rich">
-                                                <p class="text-white coMMons"> <img src="<?=base_url('assets/site/img/marks.png')?>" alt=""> <?= $plan['description']; ?> </p>
-                                             </div>
+                                             <?= $plan['description']; ?> 
                                           </div>
                                        </div>
                                        <div class="lc-block d-grid">
@@ -91,6 +94,15 @@
                </div>
             </div>
          </section>
+         <footer>
+            <ul class="nav justify-content-center border-bottom  text-center">
+               <li class="nav-item"><a href="<?= base_url('streams'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/home.png')?>"> <br> Home</a></li>
+               <li class="nav-item"><a href="<?= base_url('plan'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/start.png')?>"> <br> Premium</a></li>
+               <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/serch.png')?>"> <br> Search</a></li>
+               <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Award.png')?>"> <br> Award</a></li>
+               <li class="nav-item"><a href="<?= base_url('profile'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Userss.png')?>"> <br> Profile</a></li>
+            </ul>
+         </footer>
       </main>
       <script src="<?=base_url('assets/admin/js/bootstrap.min.js')?>"></script>
       <!-- lazily load the Swiper CSS file -->
@@ -131,8 +143,7 @@
          var SITEURL = "<?php echo base_url() ?>";
             $('body').on('click', '.purchase_now', function(e){
                var totalAmount = $(this).attr("data-amount");
-               var product_id =  $(this).attr("data-id");
-               alert(totalAmount);
+               var plan_id =  $(this).attr("data-id");
                var options = {
                "key": "rzp_test_q2ifqqk3pzoTyk",
                "amount": (totalAmount*100), // 2000 paise = INR 20
@@ -140,17 +151,15 @@
                "description": "Plan Purchase",
                "image": "http://cutoffbaba/assets/site/img/uyesr.png",
                "handler": function (response){
-                  console.log("RESPONSE",response);
                      $.ajax({
                         url: SITEURL + 'payment/pay-success',
                         type: 'post',
                         dataType: 'json',
                         data: {
-                           razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,product_id : product_id,
+                           razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,plan_id : plan_id,
                         }, 
                         success: function (msg) {
-
-                           window.location.href = SITEURL + 'payment/RazorThankYou';
+                           window.location.href = msg.url;
                         }
                   });
                

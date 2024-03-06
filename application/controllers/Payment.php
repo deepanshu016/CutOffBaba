@@ -9,23 +9,25 @@ class Payment extends MY_Controller {
     }
 	public function successPayment()
 	{
-        
-        $api = new Api("rzp_test_q2ifqqk3pzoTyk", "tMCiHJTx5JRFdglKDGkTt0UW");
-        $payData = $api->payment->fetch($this->input->post('razorpay_payment_id'));
-        echo "<pre>";
-        print_r($payData); die;
         $user_id =  $this->session->userdata('user')['id'];
 		$data = [
             'user_id' => $user_id,
             'txn_id' => $this->input->post('razorpay_payment_id'),
             'amount' => $this->input->post('totalAmount'),
             'plan_id' => $this->input->post('plan_id'),
+            'purchased_date' => date('Y-m-d H:i:s'),
+            'status' => '1'
         ];
         $insert = $this->master->insert('payments', $data);
-        $arr = array('msg' => 'Payment successfully credited', 'status' => true);  
+        if($insert){
+            $response =  array('status' => 200,'message' => 'Payment done successfully','url'=>base_url('profile'));
+            echo json_encode($response);
+            return true;
+        }else{
+            $response =  array('status' => 400,'message' => 'Incorrect OTP','url'=>'');
+            echo json_encode($response);
+            return true;
+        }
 	}
-
-
-
 }
 ?>
