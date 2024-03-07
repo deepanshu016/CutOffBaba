@@ -242,7 +242,7 @@
                         <div class="card shaDo mb-3" style="max-width: 540px;">
                            <div class="row g-0">
                               <div class="col-3 col">
-                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Rectangless27.png');?>" class="img-fluid ins5t rounded-start" alt="...">
+                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Frame-5.png');?>" class="img-fluid ins5t rounded-start" alt="...">
                               </div>
                               <div class="col-9 col">
                                  <div class="card-body nopad">
