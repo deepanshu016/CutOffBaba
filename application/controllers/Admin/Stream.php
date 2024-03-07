@@ -40,11 +40,51 @@ Class Stream extends MY_Controller {
             return redirect('admin');
         }
     }
+    public function file_check_stream_image($str){
+        $allowed_mime_type_arr = array('image/jpeg','image/pjpeg','image/png','image/x-png');
+        $gallery_type = $this->input->post('gallery_type');
+        if(empty($_FILES['stream_image']['name'])){
+            $this->form_validation->set_message('file_check_stream_image', 'Please choose a file to upload.');
+            return false;
+        }else{
+            $mime = get_mime_by_extension($_FILES['stream_image']['name']);
+            if(isset($_FILES['stream_image']['name']) && $_FILES['stream_image']['name']!=""){
+                if(in_array($mime, $allowed_mime_type_arr)){
+                    return true;
+                }else{
+                    $this->form_validation->set_message('file_check_stream_image', 'Please select only jpg/png file.');
+                    return false;
+                }
+            }else{
+                $this->form_validation->set_message('file_check_stream_image', 'Please choose a file to upload.');
+                return false;
+            }
+        }
+    }
     //Save Stream
     public function saveStream(){
         $this->form_validation->set_rules('stream', 'Stream', 'trim|required');
+        $this->form_validation->set_rules('description', 'Description', 'trim|required');
+        $this->form_validation->set_rules('stream_image', 'Stream Image', 'callback_file_check_stream_image');
         if ($this->form_validation->run()) {
+            
+            $config['upload_path']  = 'assets/uploads/stream';
+            $config['allowed_types'] = 'gif|jpg|jpeg|png';
+            $config['allowed_types'] = 'gif|jpg|jpeg|png';
+            $config['encrypt_name'] =  TRUE;
+            $config['max_size']      = 1024;
+            if(!empty($_FILES['stream_image']['name'])){
+	            $uploadedFile = $this->uploadFile($_FILES['stream_image']['name'],'stream_image',$config);
+	             if($uploadedFile['error_msg'] != ''){
+	            	$response = array('status' => 'errors','message'=> $uploadedFile['error_msg']);
+	            	echo json_encode($response);
+                    return false;
+	            }
+                
+	            $data['stream_image'] = $uploadedFile['file'];
+        	}
             $data['stream'] = $this->input->post('stream');
+            $data['description'] = $this->input->post('description');
             $result = $this->master->insert('tbl_stream',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Stream added successfully','url'=>base_url('admin/stream'));
@@ -59,7 +99,9 @@ Class Stream extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'stream' => form_error('stream')
+                    'stream' => form_error('stream'),
+                    'description' => form_error('description'),
+                    'stream_image' => form_error('stream_image')
                 )
             );
             echo json_encode($response);
@@ -68,10 +110,29 @@ Class Stream extends MY_Controller {
     }
     //Save Stream
     public function updateStream(){
-
         $this->form_validation->set_rules('stream', 'Stream', 'trim|required');
+        $this->form_validation->set_rules('description', 'Description', 'trim|required');
+        if(!empty($_FILES['stream_image']['name'])){
+            $this->form_validation->set_rules('image', 'Stream Image', 'callback_file_check_stream_image');
+        }
         if ($this->form_validation->run()) {
+            if(!empty($_FILES['stream_image']['name'])){
+                $config['upload_path']  = 'assets/uploads/stream';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;    
+	            $uploadedFile = $this->uploadFile($_FILES['stream_image']['name'],'stream_image',$config);
+	            if($uploadedFile['error_msg'] != ''){
+	            	$response = array('status' => 'errors','message'=> $uploadedFile['error_msg']);
+	            	echo json_encode($response);
+                    return false;
+	            }else{
+	            	$data['stream_image'] = $uploadedFile['file'];
+	            }
+        	}
             $data['stream'] = $this->input->post('stream');
+            $data['description'] = $this->input->post('description');
             $result = $this->master->updateRecord('tbl_stream',array('id'=>$this->input->post('stream_id')),$data);
             $response = array('status' => 'success','message'=> 'Stream updated successfully','url'=>base_url('admin/stream'));
             echo json_encode($response);
@@ -80,7 +141,9 @@ Class Stream extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'stream' => form_error('stream')
+                    'stream' => form_error('stream'),
+                    'description' => form_error('description'),
+                    'stream_image' => form_error('stream_image')
                 )
             );
             echo json_encode($response);
@@ -135,7 +198,6 @@ Class Stream extends MY_Controller {
 
     // Import CSV in DB
     public function importStreamByExcel(){
-
         if($_FILES['excel_file']['error'] == 0){
             $name = $_FILES['excel_file']['name'];
             $ext = explode('.', $name);
@@ -150,6 +212,8 @@ Class Stream extends MY_Controller {
                         $col_count = count($data);
                         if ($row>0) {
                             $impdata['stream']=$data[1];
+                            $impdata['description']=$data[2];
+                            $impdata['stream_image']=$data[3];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_stream',$impdata);
@@ -163,8 +227,6 @@ Class Stream extends MY_Controller {
                     $response = array('status' => 'success','message' => 'Streams imported successfully','url'=>base_url('admin/stream'));
                     echo json_encode($response);
                     return true;
-
-                    
 
                 }else{
 

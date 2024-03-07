@@ -47,12 +47,33 @@
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Stream</label>
                                               <input class="form-control" type="text" name="stream"  placeholder="Stream" value="<?= (!empty($singleStream)) ? $singleStream['stream'] : ''; ?>">
                                               <input type="hidden" class="form-control" name="stream_id" value="<?= (!empty($singleStream)) ? $singleStream['id'] : ''; ?>">
                                               <span class="text-danger" id="stream"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Description</label>
+                                              <textarea class="form-control"  name="description" id="description" placeholder="Description"><?= (!empty($singleStream)) ? $singleStream['description'] : '';?></textarea>
+                                              <span class="text-danger" id="description"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Stream Image</label>
+                                              <input class="form-control" type="file" name="stream_image" accept="images/*">
+                                              <?php if(!empty($singleStream) && $singleStream['stream_image'] != '') { ?>
+                                                <img src="<?= base_url('assets/uploads/stream/').$singleStream['stream_image'];?>" height="100" width="100">
+                                              <?php } ?>
+                                              <span class="text-danger" id="stream_image"></span>
                                           </div>
                                       </div>
                                   </div>

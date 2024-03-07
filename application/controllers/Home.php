@@ -74,13 +74,19 @@ class Home extends MY_Controller {
 		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
 		$this->load->view('site/state-list',$data);
 	}
-	public function state_wise_colleges($state_id)
+	public function state_wise_colleges($state_id,$course_id)
 	{
 		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['selectedState'] = $this->master->singleRecord('tbl_state',['id'=>$state_id]);
-		$data['stateWiseColleges'] = $this->master->getCollegesDataStateWise($state_id);
-		
+		$data['stateWiseColleges'] = $this->master->getCollegesDataStateWise($state_id,$course_id);
+		$data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type',[]);	
+		$data['stateList'] = $this->master->getRecords('tbl_state',[]);	
+		$data['cityList'] = $this->master->getRecords('tbl_city',[]);	
+		$data['examList'] = $this->master->getRecords('tbl_exam',[]);	
+		$data['facilityList'] = $this->master->getRecords('tbl_facilities',[]);	
+		$data['branchList'] = $this->master->getRecords('tbl_branch',[]);	
+		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
 		$this->load->view('site/state-wise-colleges',$data);
 	}
 	public function aboutUs()

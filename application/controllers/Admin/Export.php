@@ -203,10 +203,10 @@ class Export extends CI_Controller {
 				$delimiter = ","; 
 				$filename = "stream_" . date('Y-m-d') . ".csv"; 
 				$f = fopen('php://memory', 'w'); 
-				$fields = array('ID', 'Stream Name'); 
+				$fields = array('ID', 'Stream Name','Description','Image'); 
 				fputcsv($f, $fields, $delimiter); 
 				foreach($query as $row){ 
-					$lineData = array($row['id'], $row['stream']); 
+					$lineData = array($row['id'], $row['stream'], $row['description'], $row['stream_image']); 
 					fputcsv($f, $lineData, $delimiter); 
 				} 
 				fseek($f, 0); 

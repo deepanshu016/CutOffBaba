@@ -97,7 +97,6 @@ Class Gallery extends MY_Controller {
                 $config['max_size']      = 1024;
                 if(!empty($_FILES['gallery_image']['name'])) {
                     $uploadedFile = $this->uploadFile($_FILES['gallery_image']['name'], 'gallery_image', $config);
-
                     if (!empty($uploadedFile['error_msg'])) {
                         $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
                         echo json_encode($response);

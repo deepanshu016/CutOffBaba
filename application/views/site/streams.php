@@ -35,7 +35,7 @@
                               </div>
                            </div>
                            <div class="col-md-3 col">
-                              <img src="<?= ($stream['stream_image'] == '' || !file_exists(base_url('assets/uploads/stream/').'/'.$stream['stream_image'])) ? base_url('assets/site/img/Frame-5.png') : base_url('assets/uploads/stream/').'/'.$stream['stream_image'];?>" class="img-fluid riCds" alt="Frame">
+                              <img src="<?= ($stream['stream_image'] != '' && !file_exists(FCPATH.'assets/uploads/stream/'.$stream['stream_image'])) ? base_url('assets/site/img/Frame-5.png') : base_url('assets/uploads/stream/').'/'.$stream['stream_image'];?>" class="img-fluid riCds" alt="Frame">
                            </div>
                         </div>
                      </div>

@@ -124,14 +124,14 @@
          <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Payment List</h4>
+                    <h4>Payment History</h4>
                     <div> 
                     <table class="table table-bordered">
                     <thead class="bgCutTbale">
                         <tr>
-                        <th scope="col">T. Id</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Amout</th> 
+                        <th scope="col">Txn ID</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th> 
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -140,7 +140,7 @@
                         <tr> 
                            <td><?= $payment['txn_id']; ?></td>
                            <td><?= date('d M Y',strtotime($payment['purchased_date'])); ?></td>
-                           <td>INR <?= $payment['amount']; ?></td>
+                           <td>₹ <?= $payment['amount']; ?></td>
                         </tr>
                      <?php } } ?>
                     </tbody>

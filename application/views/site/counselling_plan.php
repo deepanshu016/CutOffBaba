@@ -69,7 +69,7 @@
                                              <h4 class="off10rs">10% OFF</h4>
                                           </center> -->
                                           <div class="text-center usitxt">
-                                             <h1 class="text-white">₹ <?= $plan['price']; ?>  <span class="srups"><?= $plan['discounted_price']; ?></span></h1>
+                                             <h1 class="text-white">₹ <?= $plan['price']; ?>  <span class="srups">₹<?= $plan['discounted_price']; ?></span></h1>
                                           </div>
                                           <!-- <ul>
                                              <li> sdjhj</li>
@@ -114,29 +114,29 @@
       <script>
          function initializeSwiperRANDOMID(){
              // Launch SwiperJS  
-             const swiper = new Swiper(".mySwiper-RANDOMID", {
-                     slidesPerView: 1,
-                     grabCursor: true,
-                     spaceBetween: 30,
-                     pagination: {
-                         el: ".swiper-pagination",
-                         clickable: true,
-                     },
-                     breakpoints: {
-                     640: {
-                         slidesPerView: 1,
-                         spaceBetween: 20,
-                     },
-                     768: {
-                         slidesPerView: 2,
-                         spaceBetween: 30,
-                     },
-                     1024: {
-                         slidesPerView: 3,
-                         spaceBetween: 30,
-                     },
-                 },
-             });
+            const swiper = new Swiper(".mySwiper-RANDOMID", {
+                  slidesPerView: 1,
+                  grabCursor: true,
+                  spaceBetween: 30,
+                  pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                  },
+                  breakpoints: {
+                  640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                  },
+                  768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                  },
+                  1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                  },
+               },
+            });
          }
       </script>
       <script>

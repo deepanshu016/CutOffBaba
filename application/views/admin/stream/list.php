@@ -32,7 +32,6 @@
                                 <a href="<?= base_url('admin/add-stream'); ?>" class="btn btn-success add-btn" ><i class="ri-add-line align-bottom me-1"></i> Add</a>
                                  <a href="<?= base_url('admin/import-stream'); ?>" class="btn btn-primary add-btn" ><i class="ri-upload-2-line"></i> Import </a>
                                  <a href="<?= base_url('admin/export-stream'); ?>" class="btn btn-success add-btn"><i class="ri-download-2-line"></i> Export</a>
-
                               </div>
                           </div>
                        </div>
@@ -44,6 +43,7 @@
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
                                     <th class="sort" data-sort="email">Stream</th>
+                                    <th class="sort" data-sort="email">Image</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
@@ -52,15 +52,22 @@
                                       foreach($streamList as $key=>$stream){
                                 ?>
                                     <tr>
-                                        <td><?= $key+1; ?></td>
-                                        <td><?= $stream['id']; ?></td>
-                                        <td><?= $stream['stream']; ?></td>
-                                        <td>
-                                           <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-stream'.'/'.$stream['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $stream['id']; ?>" url="<?= base_url('admin/delete-stream'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
-                                           </div>
-                                        </td>
+                                       <td><?= $key+1; ?></td>
+                                       <td><?= $stream['id']; ?></td>
+                                       <td><?= $stream['stream']; ?></td>
+                                       <td>
+                                          <?php if($stream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$stream['stream_image'])){?>
+                                             <img src="<?= base_url('assets/uploads/stream/').$stream['stream_image'];?>" height="100" width="100">
+                                          <?php }else{ ?>
+                                             <span class="text-danger">Not Uploaded</span>
+                                          <?php } ?>
+                                       </td>
+                                       <td>
+                                          <div class="hstack gap-3 flex-wrap">
+                                             <a href="<?= base_url('admin/edit-stream'.'/'.$stream['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                             <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $stream['id']; ?>" url="<?= base_url('admin/delete-stream'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                          </div>
+                                       </td>
                                     </tr>
                                 <?php } } ?>
                              </tbody>

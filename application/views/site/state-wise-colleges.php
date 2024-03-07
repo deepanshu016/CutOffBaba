@@ -1,20 +1,24 @@
 <?php $this->load->view('site/header'); ?>
       <style>
          .faCCnvs{
-         font-size: 25px;
+            font-size: 25px;
          }
          .bgts{
-         margin-top: 11px;
-         margin-left: 15px;
+            margin-top: 11px;
+            margin-left: 15px;
          }
          .cNva{
-         margin-bottom: 27px;
-         margin-top: 5px;
+            margin-bottom: 27px;
+            margin-top: 5px;
          }
          .divcc{
-         background: #fff;
-         margin-top: 14px;
-         border-radius: 3px;
+            background: #fff;
+            margin-top: 14px;
+            border-radius: 3px;
+         }
+         a.open-filter-tabs {
+            color: #212529;
+            text-decoration: auto;
          }
       </style>
       <main>
@@ -52,106 +56,158 @@
                               <div class="row">
                                  <div class="col-4 col5No">
                                     <div class="divcc">
-                                       <h6 class="cssDegre">Degree <i class="fa fa-arrow-right" aria-hidden="true"></i>  </h6>
-                                       <ul class="list-group list-group-flush">
-                                          <li class="list-group-item  bgColcanv">  State</li>
-                                          <li class="list-group-item  bgColcanv">  City</li>
-                                          <li class="list-group-item  bgColcanv">  Study Mode</li>
-                                          <li class="list-group-item  bgColcanv">  Specialization</li>
-                                          <li class="list-group-item  bgColcanv">  Institute Type</li>
-                                          <li class="list-group-item  bgColcanv">  Exam</li>
-                                          <li class="list-group-item  bgColcanv">  Hostel</li>
-                                          <li class="list-group-item  bgColcanv">  Fee Range</li>
-                                          <li class="list-group-item  bgColcanv">  Facilities</li>
+                                       <ul class="list-group list-group-flush main-selector">
+                                          <li class="list-group-item  bgColcanv">  <a href="#degreeList" class="open-filter-tabs">Degree </a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#stateList" class="open-filter-tabs">State</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#cityList" class="open-filter-tabs">City</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#branchList" class="open-filter-tabs">Specialization</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#ownershipList" class="open-filter-tabs">Institute Type</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#examList" class="open-filter-tabs">Exam</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#cityList" class="open-filter-tabs">Hostel</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#cityList" class="open-filter-tabs">Fee Range</a></li>
+                                          <li class="list-group-item  bgColcanv">  <a href="#facilityList" class="open-filter-tabs">Facilities</a></li>
                                        </ul>
                                     </div>
                                  </div>
-                                 <div class="col-8  ">
-                                    <ul class="list-group list-group-flush">
+                                 <div class="col-8 tab-content clearfix filter-container-wrapper">
+                                    <ul class="list-group list-group-flush" id="degreeList">
                                        <div class="input-group">
                                           <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
                                           <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
                                        </div>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                             <label class="form-check-label" for="flexRadioDefault1">
-                                             B.Tech(Bachelor of <br> Technology) (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                             <label class="form-check-label" for="flexRadioDefault2">
-                                             Diploma (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                             <label class="form-check-label" for="flexRadioDefault3">
-                                             M.Tech(Master of <br> Technology) (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                                             <label class="form-check-label" for="flexRadioDefault4">
-                                             B.Arch(Bachelor of <br> Atchitecture) (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                                             <label class="form-check-label" for="flexRadioDefault5">
-                                             Ph.D.(Doctor of <br> Philosophy) (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                                             <label class="form-check-label" for="flexRadioDefault6">
-                                             Post Graduate Diploma (498) 
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
-                                             <label class="form-check-label" for="flexRadioDefault7">
-                                             Certificate (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault8">
-                                             <label class="form-check-label" for="flexRadioDefault8">
-                                             M. Arch.(Master of <br> Architecture) (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault9">
-                                             <label class="form-check-label" for="flexRadioDefault9">
-                                             B.Tech + M.B.A (498)
-                                             </label>
-                                          </div>
-                                       </li>
-                                       <li class="list-group-item  bstyCol">
-                                          <div class="form-check">
-                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault10">
-                                             <label class="form-check-label" for="flexRadioDefault10">
-                                             M.Plan. (Master of Planning) (498)
-                                             </label>
-                                          </div>
-                                       </li>
+                                       <?php
+                                       if(!empty($degreeTypeList)){ 
+                                          foreach($degreeTypeList as $degree){ 
+                                          $courseData = $this->db->select('id')->from('tbl_course')->where('degree_type',$degree['id'])->get()->result_array();
+                                          if(!empty($courseData)){
+                                             $course_ids = array_column($courseData,'id');
+                                             $course_ids[] = $selectedCourse['id'];
+                                             $query = $this->db->select('*')->from('tbl_college');
+                                             foreach ($course_ids as $course_id) {
+                                                $query = $query->or_where("FIND_IN_SET($course_id, course_offered) > 0");
+                                             }
+                                             $degree['count'] = $query->group_by('id')->get()->num_rows();
+                                             
+                                          }else{
+                                             $degree['count'] = 0;
+                                          }
+                                       ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $degree['degreetype']; ?>(<?=$degree['count'] ; ?>)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="stateList">
+                                       <div class="input-group">
+                                          <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
+                                          <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
+                                       </div>
+                                       <?php
+                                       if(!empty($stateList)){ 
+                                          foreach($stateList as $state){ 
+                                             $state['count'] = $this->db->select('id')->from('tbl_college')->where('state',$state['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
+                                       ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $state['name']; ?>(<?= $state['count']; ?>)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="cityList">
+                                       <?php
+                                       if(!empty($cityList)){ 
+                                          foreach($cityList as $city){ 
+                                             $city['count'] = $this->db->select('id')->from('tbl_college')->where('city',$city['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
+                                       ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $city['city']; ?>(<?= $city['count']; ?>)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="examList">
+                                       <?php
+                                       if(!empty($examList)){ 
+                                          foreach($examList as $exam){ 
+                                             $courseData = $this->db->select('id')->from('tbl_course')->where("FIND_IN_SET(" . $exam['id'] . ", exam) > 0", NULL, FALSE)->get()->result_array();
+                                             if(!empty($courseData)){
+                                                $course_ids = array_column($courseData,'id');
+                                                $course_ids[] = $selectedCourse['id'];
+                                                $query = $this->db->select('*')->from('tbl_college');
+                                                foreach ($course_ids as $course_id) {
+                                                   $query = $query->or_where("FIND_IN_SET($course_id, course_offered) > 0");
+                                                }
+                                                $exam['count'] = $query->group_by('id')->get()->num_rows();
+                                             }else{
+                                                $exam['count'] = 0;
+                                             }
+                                       ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $exam['exam']; ?>(<?= $exam['count']; ?>)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="facilityList">
+                                       <?php
+                                       if(!empty($facilityList)){ 
+                                          foreach($facilityList as $facility){ ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $facility['facility']; ?>(0)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="branchList">
+                                       <?php
+                                       if(!empty($branchList)){ 
+                                          foreach($branchList as $branch){ ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $branch['branch']; ?>(0)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
+                                    </ul>
+                                    <ul class="list-group list-group-flush d-none" id="ownershipList">
+                                       <?php
+                                       if(!empty($ownershipList)){ 
+                                          foreach($ownershipList as $ownership){ 
+                                             $ownership['count'] = $this->db->select('id')->from('tbl_college')->where('ownership',$ownership['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();      
+                                       ?>
+                                          <li class="list-group-item  bstyCol">
+                                             <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                <?= $ownership['title']; ?>(<?= $ownership['count']; ?>)
+                                                </label>
+                                             </div>
+                                          </li>
+                                       <?php } } ?>
                                     </ul>
                                  </div>
                               </div>
@@ -186,7 +242,7 @@
                         <div class="card shaDo mb-3" style="max-width: 540px;">
                            <div class="row g-0">
                               <div class="col-3 col">
-                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/admin/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/admin/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Rectangless27.png');?>" class="img-fluid ins5t rounded-start" alt="...">
+                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Rectangless27.png');?>" class="img-fluid ins5t rounded-start" alt="...">
                               </div>
                               <div class="col-9 col">
                                  <div class="card-body nopad">
@@ -212,3 +268,16 @@
          </section>
         <?php $this->load->view('site/footer'); ?>
       </main>
+      <script>
+         $(function(){
+            $("body").on("click",".open-filter-tabs",function(e){
+               e.preventDefault();
+               var wrapper = $(this).attr('href');
+               $(".filter-container-wrapper").find('ul').addClass('d-none');
+               $(wrapper).removeClass('d-none');
+               $(this).addClass('active');
+               $(".main-selector .fa-arrow-right").remove();
+               $(this).append('<i class="fa fa-arrow-right" aria-hidden="true"></i>');
+            });
+         });
+      </script>

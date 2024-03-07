@@ -123,12 +123,12 @@ Class Certificate extends MY_Controller {
         $this->form_validation->set_rules('valid_till', 'Certificate Validity', 'trim|required');
         $this->form_validation->set_rules('issue_date', 'Certificate Isseu Date', 'trim|required');
         if ($this->form_validation->run()) {
-            $config['upload_path']  = 'assets/uploads/certificates';
-            $config['allowed_types'] = 'gif|jpg|jpeg|png';
-            $config['allowed_types'] = 'gif|jpg|jpeg|png';
-            $config['encrypt_name'] =  TRUE;
-            $config['max_size']      = 1024;
             if(!empty($_FILES['image']['name'])){
+                $config['upload_path']  = 'assets/uploads/certificates';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
 	            $uploadedFile = $this->uploadFile($_FILES['image']['name'],'image',$config);
 	            if($uploadedFile['error_msg'] != ''){
 	            	$response = array('status' => 'errors','message'=> $uploadedFile['error_msg']);
