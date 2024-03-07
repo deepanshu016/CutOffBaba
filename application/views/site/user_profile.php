@@ -65,7 +65,7 @@
                               </ul>
                            </div>
                            <div class="logouts">
-                              <a class="loFxt" href="#!"><img src="<?=base_url('assets/site/img/lllo.png')?>" alt=""> Log Out </a>
+                              <a class="loFxt" href="<?= base_url('logout'); ?>"><img src="<?=base_url('assets/site/img/lllo.png')?>" alt=""> Log Out </a>
                            </div>
                         </div>
                      </div>

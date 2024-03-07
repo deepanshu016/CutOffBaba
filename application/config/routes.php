@@ -31,6 +31,7 @@ $route['verify-otp/(:any)'] = 'Authenticate/verify_otp/$1';
 $route['otp-verification'] = 'Authenticate/OtpVerification';
 $route['verify-done'] = 'Authenticate/verify_done';
 $route['plan'] = 'Home/plan';
+$route['logout'] = 'Authenticate/logout';
 $route['payment/pay-success'] = 'Payment/successPayment';
 // $route['state-wise-colleges'] = 'SmallScreen/Home/state_wise_colleges';
 $route['small/about-us'] = 'SmallScreen/Home/about_us';

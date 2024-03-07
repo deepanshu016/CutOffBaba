@@ -343,7 +343,7 @@ Class Authenticate extends MY_Controller {
 	public function logout(){
         $this->session->unset_userdata('user');
         $this->session->set_flashdata('success', "Logout successfully!!!");
-        redirect('/');
+        redirect('/login');
     }
 
 
@@ -621,6 +621,7 @@ Class Authenticate extends MY_Controller {
         $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/user_profile',$data);
 	}
+   
 }
 
 ?>
