@@ -23,6 +23,7 @@ Class College extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['facilitiesList'] = $this->site->getRecords('tbl_facilities',[]);
             $this->load->view('admin/college/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -130,15 +131,16 @@ Class College extends MY_Controller {
             $data['popular_name_two'] = $this->input->post('popular_name_two');
             $data['establishment'] = $this->input->post('establishment');
             $data['stream'] = $this->input->post('stream');
-            $data['gender_accepted'] = ($this->input->post('gender_accepted')) ?implode('|',$this->input->post('gender_accepted')):'';
-            $data['course_offered'] = ($this->input->post('course_offered')) ?implode('|',$this->input->post('course_offered')):'';
+            $data['gender_accepted'] = ($this->input->post('gender_accepted')) ?implode(',',$this->input->post('gender_accepted')):'';
+            $data['course_offered'] = ($this->input->post('course_offered')) ?implode(',',$this->input->post('course_offered')):'';
+            $data['facility'] = ($this->input->post('facility')) ?implode(',',$this->input->post('facility')):'';
             $data['country'] = $this->input->post('country');
             $data['state'] = $this->input->post('state');
             $data['city'] = $this->input->post('city');
             $data['sub_district'] = $this->input->post('subdistrict');
             $data['affiliated_by'] = $this->input->post('affiliated_by');
             $data['university_name'] = $this->input->post('university');
-            $data['approved_by'] = ($this->input->post('approved_by')) ?implode('|',$this->input->post('approved_by')):'';
+            $data['approved_by'] = ($this->input->post('approved_by')) ?implode(',',$this->input->post('approved_by')):'';
             $data['ownership'] = $this->input->post('ownership');
             $data['website'] = $this->input->post('website');
             $data['email'] = $this->input->post('email');
@@ -152,6 +154,8 @@ Class College extends MY_Controller {
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->insert('tbl_college',$data);
+            echo "<pre>";
+            print_r($result); die;
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'College added successfully','url'=>base_url('admin/college'));
                 echo json_encode($response);
@@ -165,7 +169,7 @@ Class College extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'full_name' => form_error('full_name')
+                    'full_name' => form_error('full_name'),
                 )
             );
             echo json_encode($response);
@@ -230,8 +234,9 @@ Class College extends MY_Controller {
             $data['popular_name_two'] = $this->input->post('popular_name_two');
             $data['establishment'] = $this->input->post('establishment');
             $data['stream'] = $this->input->post('stream');
-            $data['gender_accepted'] = ($this->input->post('gender_accepted')) ?implode('|',$this->input->post('gender_accepted')):'';
-            $data['course_offered'] = ($this->input->post('course_offered')) ?implode('|',$this->input->post('course_offered')):'';
+            $data['gender_accepted'] = ($this->input->post('gender_accepted')) ?implode(',',$this->input->post('gender_accepted')):'';
+            $data['course_offered'] = ($this->input->post('course_offered')) ?implode(',',$this->input->post('course_offered')):'';
+            $data['facility'] = ($this->input->post('facility')) ?implode(',',$this->input->post('facility')):'';
             $data['country'] = $this->input->post('country');
             $data['state'] = $this->input->post('state');
             $data['city'] = $this->input->post('city');

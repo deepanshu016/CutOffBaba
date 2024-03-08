@@ -30,6 +30,7 @@ $route['send-otp'] = 'Authenticate/forgot_password';
 $route['verify-otp/(:any)'] = 'Authenticate/verify_otp/$1';
 $route['otp-verification'] = 'Authenticate/OtpVerification';
 $route['verify-done'] = 'Authenticate/verify_done';
+$route['filter-college'] = 'Home/filterCollegeData';
 $route['plan'] = 'Home/plan';
 $route['logout'] = 'Authenticate/logout';
 $route['payment/pay-success'] = 'Payment/successPayment';

@@ -231,6 +231,20 @@
                                               <span class="text-danger" id="university"></span>
                                           </div>
                                       </div>
+                                      <div class="col-lg-6">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Facility</label>
+                                              <select class="form-control  js-example-basic-multiple" name="facility[]" multiple>
+                                                      <option value="">Select Facility</option>
+                                                      <?php
+                                                          if(!empty($facilitiesList)){
+                                                            foreach($facilitiesList as $facility){ ?>
+                                                          <option value="<?= $facility['id']; ?>" <?= (!empty($singleCollege) && $state['id'] == $singleCollege['facility']) ? 'selected' : ''; ?>><?= $facility['facility']; ?></option>
+                                                      <?php } }  ?>
+                                              </select>
+                                              <span class="text-danger" id="facility"></span>
+                                          </div>
+                                      </div>
                                   </div>
                                   <div class="row">
 

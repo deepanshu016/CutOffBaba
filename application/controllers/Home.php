@@ -126,7 +126,17 @@ class Home extends MY_Controller {
 		$data['title'] = 'Counselling Plan | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
 		$data['planList'] = $this->master->getRecords('tbl_counsellng_plans');
-		
 		$this->load->view('site/counselling_plan',$data);
+	}
+	
+	public function filterCollegeData()
+	{
+		$state_id = $this->input->post('state_id');
+		$course_id = $this->input->post('course_id');
+		$data['stateWiseColleges'] = $this->master->getCollegesDataStateWise($state_id,$course_id,$_POST);
+		$html = $this->load->view('site/child_pages/college_data',$data,true);
+		$response = array('status' => 200,'message' => 'Profile Updated successfully','url'=>'','html'=>$html);
+		echo json_encode($response);
+		return false;
 	}
 }

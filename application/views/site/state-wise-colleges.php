@@ -41,10 +41,10 @@
                               <div class="col-3">
                                  <div class="offcanvas-header bg-light" >
                                     <h5 class="offcanvas-title" id="offcanvasScrollingLabel"> </h5>
-                                    <button type="button" class="btn-close u7OffCan" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    <button type="button" class="btn-close u7OffCan close-filter-box" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                  </div>
                               </div>
-                              <div class="col-9">
+                              <div class="col-6">
                                  <a class="reSet" href="#!">Reset</a>
                               </div>
                            </div>
@@ -52,7 +52,7 @@
                         <div class="offcanvas-body bg-light">
                            <div>
                            </div>
-                           <div class="divmain ">
+                           <div class="divmain">
                               <div class="row">
                                  <div class="col-4 col5No">
                                     <div class="divcc">
@@ -70,79 +70,18 @@
                                     </div>
                                  </div>
                                  <div class="col-8 tab-content clearfix filter-container-wrapper">
-                                    <ul class="list-group list-group-flush" id="degreeList">
-                                       <div class="input-group">
-                                          <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
-                                          <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
-                                       </div>
-                                       <?php
-                                       if(!empty($degreeTypeList)){ 
-                                          foreach($degreeTypeList as $degree){ 
-                                          $courseData = $this->db->select('id')->from('tbl_course')->where('degree_type',$degree['id'])->get()->result_array();
-                                          if(!empty($courseData)){
-                                             $course_ids = array_column($courseData,'id');
-                                             $course_ids[] = $selectedCourse['id'];
-                                             $query = $this->db->select('*')->from('tbl_college');
-                                             foreach ($course_ids as $course_id) {
-                                                $query = $query->or_where("FIND_IN_SET($course_id, course_offered) > 0");
-                                             }
-                                             $degree['count'] = $query->group_by('id')->get()->num_rows();
-                                             
-                                          }else{
-                                             $degree['count'] = 0;
-                                          }
-                                       ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $degree['degreetype']; ?>(<?=$degree['count'] ; ?>)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="stateList">
-                                       <div class="input-group">
-                                          <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
-                                          <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
-                                       </div>
-                                       <?php
-                                       if(!empty($stateList)){ 
-                                          foreach($stateList as $state){ 
-                                             $state['count'] = $this->db->select('id')->from('tbl_college')->where('state',$state['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
-                                       ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $state['name']; ?>(<?= $state['count']; ?>)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="cityList">
-                                       <?php
-                                       if(!empty($cityList)){ 
-                                          foreach($cityList as $city){ 
-                                             $city['count'] = $this->db->select('id')->from('tbl_college')->where('city',$city['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
-                                       ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $city['city']; ?>(<?= $city['count']; ?>)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="examList">
-                                       <?php
-                                       if(!empty($examList)){ 
-                                          foreach($examList as $exam){ 
-                                             $courseData = $this->db->select('id')->from('tbl_course')->where("FIND_IN_SET(" . $exam['id'] . ", exam) > 0", NULL, FALSE)->get()->result_array();
+                                    <form id="filterFormCollege" method="POST" action="<?= base_url('filter-college') ?>">
+                                       <input type="hidden" class="state_id" name="state_id" value="<?= @$selectedState['id']; ?>">
+                                       <input type="hidden" class="course_id" name="course_id" value="<?= @$selectedCourse['id']; ?>">
+                                       <ul class="list-group list-group-flush" id="degreeList">
+                                          <div class="input-group">
+                                             <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
+                                             <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
+                                          </div>
+                                          <?php
+                                          if(!empty($degreeTypeList)){ 
+                                             foreach($degreeTypeList as $degree){ 
+                                             $courseData = $this->db->select('id')->from('tbl_course')->where('degree_type',$degree['id'])->get()->result_array();
                                              if(!empty($courseData)){
                                                 $course_ids = array_column($courseData,'id');
                                                 $course_ids[] = $selectedCourse['id'];
@@ -150,65 +89,132 @@
                                                 foreach ($course_ids as $course_id) {
                                                    $query = $query->or_where("FIND_IN_SET($course_id, course_offered) > 0");
                                                 }
-                                                $exam['count'] = $query->group_by('id')->get()->num_rows();
+                                                $degree['count'] = $query->group_by('id')->get()->num_rows();
                                              }else{
-                                                $exam['count'] = 0;
+                                                $degree['count'] = 0;
                                              }
-                                       ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $exam['exam']; ?>(<?= $exam['count']; ?>)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="facilityList">
-                                       <?php
-                                       if(!empty($facilityList)){ 
-                                          foreach($facilityList as $facility){ ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $facility['facility']; ?>(0)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="branchList">
-                                       <?php
-                                       if(!empty($branchList)){ 
-                                          foreach($branchList as $branch){ ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $branch['branch']; ?>(0)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
-                                    <ul class="list-group list-group-flush d-none" id="ownershipList">
-                                       <?php
-                                       if(!empty($ownershipList)){ 
-                                          foreach($ownershipList as $ownership){ 
-                                             $ownership['count'] = $this->db->select('id')->from('tbl_college')->where('ownership',$ownership['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();      
-                                       ?>
-                                          <li class="list-group-item  bstyCol">
-                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                <?= $ownership['title']; ?>(<?= $ownership['count']; ?>)
-                                                </label>
-                                             </div>
-                                          </li>
-                                       <?php } } ?>
-                                    </ul>
+                                          ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="degree_type" id="flexRadioDefault1" value="<?= $degree['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $degree['degreetype']; ?>(<?=$degree['count'] ; ?>)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="stateList">
+                                          <div class="input-group">
+                                             <input type="text" class="form-control bhRdiu" placeholder="Search" aria-label="Dollar amount (with dot and two decimal places)">
+                                             <span class="input-group-text bgt5s"> <i class="fa fa-search" aria-hidden="true"></i> </span> 
+                                          </div>
+                                          <?php
+                                          if(!empty($stateList)){ 
+                                             foreach($stateList as $state){ 
+                                                $state['count'] = $this->db->select('id')->from('tbl_college')->where('state',$state['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
+                                          ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="states" id="flexRadioDefault1" value="<?= $state['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $state['name']; ?>(<?= $state['count']; ?>)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="cityList">
+                                          <?php
+                                          if(!empty($cityList)){ 
+                                             foreach($cityList as $city){ 
+                                                $city['count'] = $this->db->select('id')->from('tbl_college')->where('city',$city['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();
+                                          ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="city" id="flexRadioDefault1" value="<?= $city['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $city['city']; ?>(<?= $city['count']; ?>)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="examList">
+                                          <?php
+                                          if(!empty($examList)){ 
+                                             foreach($examList as $exam){ 
+                                                $courseData = $this->db->select('id')->from('tbl_course')->where("FIND_IN_SET(" . $exam['id'] . ", exam) > 0", NULL, FALSE)->get()->result_array();
+                                                if(!empty($courseData)){
+                                                   $course_ids = array_column($courseData,'id');
+                                                   $course_ids[] = $selectedCourse['id'];
+                                                   $query = $this->db->select('*')->from('tbl_college');
+                                                   foreach ($course_ids as $course_id) {
+                                                      $query = $query->or_where("FIND_IN_SET($course_id, course_offered) > 0");
+                                                   }
+                                                   $exam['count'] = $query->group_by('id')->get()->num_rows();
+                                                }else{
+                                                   $exam['count'] = 0;
+                                                }
+                                          ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="exam" id="flexRadioDefault1" value="<?= $exam['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $exam['exam']; ?>(<?= $exam['count']; ?>)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="facilityList">
+                                          <?php
+                                          if(!empty($facilityList)){ 
+                                             foreach($facilityList as $facility){ ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="facility" id="flexRadioDefault1" value="<?= $facility['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $facility['facility']; ?>(0)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="branchList">
+                                          <?php
+                                          if(!empty($branchList)){ 
+                                             foreach($branchList as $branch){ ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="branch" id="flexRadioDefault1" value="<?= $branch['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $branch['branch']; ?>(0)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <ul class="list-group list-group-flush d-none" id="ownershipList">
+                                          <?php
+                                          if(!empty($ownershipList)){ 
+                                             foreach($ownershipList as $ownership){ 
+                                                $ownership['count'] = $this->db->select('id')->from('tbl_college')->where('ownership',$ownership['id'])->where("FIND_IN_SET(" . $selectedCourse['id'] . ", course_offered) > 0", NULL, FALSE)->get()->num_rows();      
+                                          ?>
+                                             <li class="list-group-item  bstyCol">
+                                                <div class="form-check">
+                                                   <input class="form-check-input" type="radio" name="ownership" id="flexRadioDefault1" value="<?= $ownership['id']; ?>">
+                                                   <label class="form-check-label" for="flexRadioDefault1">
+                                                   <?= $ownership['title']; ?>(<?= $ownership['count']; ?>)
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          <?php } } ?>
+                                       </ul>
+                                       <div class="form-group">
+                                          <button type="submit" class="btn btn-primary">Filter</button>
+                                       </div>
+                                    </form>
                                  </div>
                               </div>
                            </div>
@@ -219,7 +225,7 @@
             </div>
          </section>
          </div>
-         <section >
+         <section>
             <div>
                <div class="container-fluid">
                   <div class="row">
@@ -233,36 +239,8 @@
          </section>
          <section>
             <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                  <?php 
-                    if(!empty($stateWiseColleges)) {
-                        foreach($stateWiseColleges as $college) { ?>
-                     <div class="pt-md-5 px-md-5 text-center overflow-hidden">
-                        <div class="card shaDo mb-3" style="max-width: 540px;">
-                           <div class="row g-0">
-                              <div class="col-3 col">
-                                 <img src="<?= ($college['college_logo'] != '' && file_exists(FCPATH.'assets/uploads/college/logo/'.$college['college_logo'])) ? base_url('assets/uploads/college/logo/').$college['college_logo'] : base_url('assets/site/img/Frame-5.png');?>" class="img-fluid ins5t rounded-start" alt="...">
-                              </div>
-                              <div class="col-9 col">
-                                 <div class="card-body nopad">
-                                    <h5 class="card-title jainTxt"><?= $college['full_name']; ?></h5>
-                                    <p class="card-text"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <?= date('Y',strtotime($college['establishment'])); ?>  &nbsp;  <i class="fa fa-map-marker" aria-hidden="true"></i> <?= $college['city_name']; ?>, <?= $college['state_name']; ?> </p>
-                                 </div>
-                              </div>
-                              <div class="row g-0 xButton">
-                                 <div class="col-6">
-                                    <a class="btn downFrees" href="#!">Download Brochure</a> 
-                                 </div>
-                                 <div class="col-6">
-                                    <a class="btn downFrees" href="#!">Fee Structure</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <?php } } ?>
-                  </div>
+               <div class="row college-container">
+                  <?php $this->load->view('site/child_pages/college_data'); ?>
                </div>
             </div>
          </section>
@@ -278,6 +256,24 @@
                $(this).addClass('active');
                $(".main-selector .fa-arrow-right").remove();
                $(this).append('<i class="fa fa-arrow-right" aria-hidden="true"></i>');
+            });
+            $("body").on("submit","#filterFormCollege",function(e){
+               e.preventDefault();
+               var currentWrapper = $(this);
+               var url = currentWrapper.attr('action');
+               var method = currentWrapper.attr('method');
+               var formData = $('#filterFormCollege')[0];
+               formData = new FormData(formData);
+               CommonLib.ajaxForm(formData,method,url).then(d=>{
+                     if(d.status == 200){
+                        $(".close-filter-box").click();
+                        $(".college-container").html(d.html);
+                     }else{
+                        CommonLib.notification.error(d.errors);
+                     }
+               }).catch(e=>{
+                     CommonLib.notification.error(e.responseJSON.errors);
+               });
             });
          });
       </script>

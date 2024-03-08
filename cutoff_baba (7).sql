@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 07, 2024 at 08:16 PM
+-- Generation Time: Mar 08, 2024 at 08:33 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.1.26
 
@@ -1022,6 +1022,7 @@ CREATE TABLE IF NOT EXISTS `tbl_college` (
   `keywords` text,
   `tags` text,
   `added_by` int DEFAULT NULL,
+  `facility` varchar(222) DEFAULT NULL,
   `status` tinyint DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -1033,10 +1034,10 @@ CREATE TABLE IF NOT EXISTS `tbl_college` (
 -- Dumping data for table `tbl_college`
 --
 
-INSERT INTO `tbl_college` (`id`, `full_name`, `slug`, `short_description`, `popular_name_one`, `popular_name_two`, `establishment`, `gender_accepted`, `course_offered`, `country`, `state`, `city`, `affiliated_by`, `university_name`, `approved_by`, `college_logo`, `college_banner`, `prospectus_file`, `ownership`, `website`, `email`, `contact_one`, `contact_two`, `contact_three`, `nodal_officer_name`, `nodal_officer_no`, `keywords`, `tags`, `added_by`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'College One', 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-20', '3|4', '3,7', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mdeepanshu205@gmail.com', '646446456', '4564', '43534534543', '', '453535453', '', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, 0, '2023-11-08 18:04:48', '2024-02-28 20:24:11'),
-(4, 'College Two', 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-21', '3|4', '3,2', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', 'COLLEGE_IMAGE3092744151699982184.jpeg', '', '', 4, 'https://www.deepanshumishra.com', '', '45645654645', '45654645656', '43534534543', 'dsfgdfgdfgdf', '455445334', 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, 0, '2023-11-08 18:07:21', '2024-03-07 17:44:20'),
-(5, 'BBD', 'bbd-9b5b2c2b02e680f7a7df71855539dc019bdddf89', 'gdsfgdfgdsfgfdgfdsgdfg', 'dfgsdfg', 'dsfgsdfgfdsg', '2024-01-22', '3|4', '2,5', 105, 19, 3, '5', 'fhdhghhghdh', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mishra100.343@rediffmail.com', '4645645645', '45646565466', '45656565655', 'dgfggfdgdsfg', '433543534', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 5, 0, '2023-12-05 17:39:46', '2024-03-06 19:24:02');
+INSERT INTO `tbl_college` (`id`, `full_name`, `slug`, `short_description`, `popular_name_one`, `popular_name_two`, `establishment`, `gender_accepted`, `course_offered`, `country`, `state`, `city`, `affiliated_by`, `university_name`, `approved_by`, `college_logo`, `college_banner`, `prospectus_file`, `ownership`, `website`, `email`, `contact_one`, `contact_two`, `contact_three`, `nodal_officer_name`, `nodal_officer_no`, `keywords`, `tags`, `added_by`, `facility`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'College One', 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-20', '3|4', '3,7', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mdeepanshu205@gmail.com', '646446456', '4564', '43534534543', '', '453535453', '', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, NULL, 0, '2023-11-08 18:04:48', '2024-02-28 20:24:11'),
+(4, 'College Two', 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-21', '3|4', '3,2', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', 'COLLEGE_IMAGE3092744151699982184.jpeg', '', '', 4, 'https://www.deepanshumishra.com', '', '45645654645', '45654645656', '43534534543', 'dsfgdfgdfgdf', '455445334', 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, NULL, 0, '2023-11-08 18:07:21', '2024-03-07 17:44:20'),
+(5, 'BBD', 'bbd-9b5b2c2b02e680f7a7df71855539dc019bdddf89', 'gdsfgdfgdsfgfdgfdsgdfg', 'dfgsdfg', 'dsfgsdfgfdsg', '2024-01-22', '3|4', '2,5', 105, 19, 3, '5', 'fhdhghhghdh', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mishra100.343@rediffmail.com', '4645645645', '45646565466', '45656565655', 'dgfggfdgdsfg', '433543534', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 5, NULL, 0, '2023-12-05 17:39:46', '2024-03-06 19:24:02');
 
 -- --------------------------------------------------------
 

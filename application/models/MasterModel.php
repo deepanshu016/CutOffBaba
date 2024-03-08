@@ -8,9 +8,11 @@ class MasterModel extends CI_Model {
 //		debugger($this->db->queries);
 	}
 	function insert($table = '', $data = []) {
+		echo "<pre>";
+		print_r($data); die;
 		if (!empty($table) && count($data) > 0) {
 			$q = $this->db->insert($table, $data);
-			return ($q);
+			return  $this->db->insert_id();
 		} else {
 			return (0);
 		}
@@ -234,21 +236,64 @@ class MasterModel extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
 	}
-	public function getCollegesDataStateWise($state_id,$course_id){
-		$this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+	public function getCollegesDataStateWise($state_id,$course_id,$data=[]){
+		
+		$course_ids = [];
+		$course_ids[] = $course_id;
+		$data['states'] = $state_id;
+		// $course_query = $this->db->select('id')->from('tbl_course');
+		if(isset($data['degree_type'])){
+			$courseData = $this->getRecords('tbl_course',['degree_type'=>$data['degree_type']]);
+			if(!empty($courseData)){
+				$course_ids = array_merge($course_ids, array_column($courseData,'id'));
+			}
+		}
+		if($data && $data['exam'] != ''){
+			$courseData = $this->db->select('*')->from('tbl_course')->where("FIND_IN_SET(" . $data['exam']. ", exam) > 0", NULL, FALSE)->get()->result_array();
+			if(!empty($courseData)){
+				$course_ids = array_merge($course_ids, array_column($courseData,'id'));
+			}
+		}
+		$college_query  = $this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
 		c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
 		c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
-		cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title');
-		$this->db->from('tbl_college as c');
-		$this->db->where('c.state', $state_id);
-		$this->db->where("FIND_IN_SET(" . $course_id . ", c.course_offered) > 0", NULL, FALSE);
-		$this->db->join('tbl_state as s', 's.id = c.state');
-		$this->db->join('tbl_city as cit', 'cit.id = c.city');
-		$this->db->join('tbl_country as count', 'count.id = c.country');
-		$this->db->join('tbl_approval as a', 'a.id = c.approved_by');
-		$this->db->join('tbl_ownership as o', 'o.id = c.ownership');
-		$query = $this->db->get();
-		return $query->result_array();
+		cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title')->from('tbl_college as c');
+		// if(isset($data['degree_type'])){
+		// 	$courseData = $course_query->where(['degree_type'=>$data['degree_type']]);
+		// 	echo "<pre>";
+		// 	print_r($courseData); die;
+		// 	if(!empty($courseData)){
+		// 		$course_ids = array_merge($course_ids, array_column($courseData,'id'));
+		// 	}
+		// }
+		foreach ($course_ids as $course_id) {
+			$college_query = $college_query->or_where("FIND_IN_SET($course_id, c.course_offered) > 0");
+		}
+		if(isset($data['states'])){
+			$college_query = $college_query->where('c.state',$data['states']);
+		}
+		if(isset($data['city'])){
+			$college_query = $college_query->where('c.city',$data['city']);
+		}
+		// if($data && $data['exam'] != ''){
+		// 	$courseData = $course_query->where("FIND_IN_SET(" . $data['exam']. ", exam) > 0", NULL, FALSE)->get()->result_array();
+		// 	if(!empty($courseData)){
+		// 		$course_ids = array_merge($course_ids, array_column($courseData,'id'));
+		// 	}
+		// }
+		if(isset($data['ownership'])){
+			$college_query = $college_query->where('c.ownership',$data['ownership']);
+		}
+		if(isset($data['facility'])){
+			$college_query = $college_query->where('c.facility',$data['facility']);
+		}
+		// $query = $query->where("FIND_IN_SET(" . $course_id . ", c.course_offered) > 0", NULL, FALSE);
+		$college_query = $college_query->join('tbl_state as s', 's.id = c.state')
+				->join('tbl_city as cit', 'cit.id = c.city')
+				->join('tbl_country as count', 'count.id = c.country')
+				->join('tbl_approval as a', 'a.id = c.approved_by')
+				->join('tbl_ownership as o', 'o.id = c.ownership');
+		return $college_query->get()->result_array();
 	}
 }
 
