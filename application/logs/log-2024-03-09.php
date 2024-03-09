@@ -526,3 +526,240 @@ DEBUG - 2024-03-09 02:02:57 --> Upload class already loaded. Second attempt igno
 DEBUG - 2024-03-09 02:03:18 --> Total execution time: 0.0206
 DEBUG - 2024-03-09 02:03:27 --> Total execution time: 0.0196
 DEBUG - 2024-03-09 02:03:30 --> Total execution time: 0.0216
+DEBUG - 2024-03-09 16:43:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:09 --> No URI present. Default controller set.
+DEBUG - 2024-03-09 16:43:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:13:09 --> Total execution time: 0.0817
+DEBUG - 2024-03-09 16:43:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:43:09 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 16:43:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:13:12 --> Total execution time: 0.0252
+DEBUG - 2024-03-09 16:43:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 16:43:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:13:18 --> Total execution time: 0.0162
+DEBUG - 2024-03-09 16:43:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:13:29 --> Total execution time: 0.0253
+DEBUG - 2024-03-09 16:43:32 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:13:32 --> Total execution time: 0.0399
+DEBUG - 2024-03-09 16:43:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:13:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:13:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:13:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:13:38 --> Total execution time: 0.0467
+DEBUG - 2024-03-09 16:43:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:43:38 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:43:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:43:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:13:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:13:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:13:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:13:40 --> Total execution time: 0.0164
+DEBUG - 2024-03-09 16:43:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:43:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:43:41 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:44:27 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:44:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:44:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:14:27 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:14:27 --> Total execution time: 0.0453
+DEBUG - 2024-03-09 16:44:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:44:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:44:29 --> 404 Page Not Found: admin/Get-course/index
+DEBUG - 2024-03-09 16:44:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:44:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:44:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:14:31 --> Total execution time: 0.0144
+DEBUG - 2024-03-09 16:44:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:44:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:44:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:14:33 --> Total execution time: 0.0355
+DEBUG - 2024-03-09 16:45:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:45:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:15:02 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `full_name` = 'College One', `short_name` = '', `slug` = 'college-one-6604730891acb75920a08e7b4ab5f9f89cc059a3', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-20', `stream` = '3', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'mdeepanshu205@gmail.com', `contact_one` = '646446456', `contact_two` = '4564', `contact_three` = '43534534543', `nodal_officer_name` = '', `nodal_officer_no` = '453535453', `keywords` = '', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '2'
+DEBUG - 2024-03-09 22:15:02 --> Total execution time: 0.0211
+DEBUG - 2024-03-09 16:45:04 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:45:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:15:04 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:15:04 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:15:04 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:15:04 --> Total execution time: 0.0281
+DEBUG - 2024-03-09 16:45:04 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:04 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:45:04 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:45:06 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:45:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:15:06 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:15:06 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:15:06 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:15:06 --> Total execution time: 0.0326
+DEBUG - 2024-03-09 16:45:06 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:45:06 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:45:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:45:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:45:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:15:08 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:15:08 --> Total execution time: 0.0297
+DEBUG - 2024-03-09 16:46:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:16:02 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:16:02 --> Total execution time: 0.0199
+DEBUG - 2024-03-09 16:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 16:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:16:12 --> Total execution time: 0.0168
+DEBUG - 2024-03-09 16:46:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:46:12 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 16:46:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:16:14 --> Total execution time: 0.0186
+DEBUG - 2024-03-09 16:46:16 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:16:16 --> Total execution time: 0.0328
+DEBUG - 2024-03-09 16:46:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:16:18 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:16:18 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:16:18 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:16:18 --> Total execution time: 0.0333
+DEBUG - 2024-03-09 16:46:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:46:18 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:46:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:46:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:16:19 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:16:19 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+ERROR - 2024-03-09 22:16:19 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\list.php 49
+DEBUG - 2024-03-09 22:16:19 --> Total execution time: 0.0133
+DEBUG - 2024-03-09 16:46:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:46:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:46:19 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 16:47:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:47:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:40 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:17:40 --> Total execution time: 0.0395
+DEBUG - 2024-03-09 16:47:43 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:47:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:17:43 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:17:43 --> Total execution time: 0.0239
+DEBUG - 2024-03-09 16:47:46 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:47:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 16:47:46 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:47:46 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 16:47:46 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:47:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 16:47:46 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:47:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:47:46 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 16:48:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:48:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:48:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 16:48:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:48:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:48:25 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 16:48:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:48:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 16:48:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:18:31 --> Total execution time: 0.0195
+DEBUG - 2024-03-09 16:48:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 16:48:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 16:48:31 --> 404 Page Not Found: Assets/uploads

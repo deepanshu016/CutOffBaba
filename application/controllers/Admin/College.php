@@ -179,7 +179,7 @@ Class College extends MY_Controller {
     //Save College
     public function updateCollege(){
         $this->form_validation->set_rules('full_name', 'Full name', 'trim|required');
-        $this->form_validation->set_rules('email', 'Email', 'valid_email|is_unique[tbl_college.email]');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('state', 'State', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
