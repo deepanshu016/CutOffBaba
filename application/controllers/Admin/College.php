@@ -35,6 +35,7 @@ Class College extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['singleCollege'] = $this->master->singleRecord('tbl_college',array('id'=>$id));
+            $data['facilitiesList'] = $this->site->getRecords('tbl_facilities',[]);
             $this->load->view('admin/college/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
