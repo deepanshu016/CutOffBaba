@@ -15,30 +15,34 @@
                     <div class="row">
                         <div class="col-12">
                              <div class="card card-body radisuForm shadow">
-                             <form>
+                             <form class="all-form" action="<?= base_url('post-enquiry'); ?>" method="POST">
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Name*</label>
-                                    <input type="text" class="form-control inpBttom" id="username" name="username" placeholder="Full Name" />
+                                    <input type="text" class="form-control inpBttom" id="username" name="name" placeholder="Full Name" />
+                                    <div class="text-danger" id="name"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Email*</label>
-                                    <input type="text" class="form-control inpBttom" id="password" name="password" placeholder="Email Address" />
+                                    <input type="text" class="form-control inpBttom" id="password" name="email" placeholder="Email Address" />
+                                    <div class="text-danger" id="email"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Mobile*</label>
-                                    <input type="text" class="form-control inpBttom" id="password" name="password" placeholder="Mobile Number*" />
+                                    <input type="text" class="form-control inpBttom" id="password" name="phone" placeholder="Mobile Number*" />
+                                    <div class="text-danger" id="phone"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Subject*</label>
-                                    <input type="text" class="form-control inpBttom" id="password" name="password" placeholder="Brief about your concern" />
+                                    <input type="text" class="form-control inpBttom" id="password" name="subject" placeholder="Brief about your concern" />
+                                    <div class="text-danger" id="subject"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Message*</label>
-                                    <input type="text" class="form-control inpBttom" id="password" name="password" placeholder="What’s this about?" />
+                                    <input type="text" class="form-control inpBttom" id="password" name="message" placeholder="What’s this about?" />
+                                    <div class="text-danger" id="message"></div>
                                 </div>
-                                 
                                 <div class="modal-footer d-block"> 
-                                <button class="w-100 btn btn-primary contsctButton">Submit</button>
+                                    <button type="submit" class="w-100 btn btn-primary contsctButton">Submit</button>
                                 </div>
                             </form>
                              </div> 

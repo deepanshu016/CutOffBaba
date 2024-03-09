@@ -98,7 +98,7 @@
                                                   $genderList = get_master_data('tbl_gender',[]);
                                                   $selectedGender = [];
                                                   if(!empty($singleCollege)){
-                                                      $selectedGender = explode("|",$singleCollege['gender_accepted']);
+                                                      $selectedGender = explode(",",$singleCollege['gender_accepted']);
                                                   }
                                                   if(!empty($genderList)){
                                                       foreach($genderList as $gender){ ?>
@@ -134,7 +134,7 @@
                                                   $courseList = get_master_data('tbl_course',[]);
                                                   $selectedCourse = [];
                                                   if(!empty($singleCollege)){
-                                                      $selectedCourse = explode("|",$singleCollege['course_offered']);
+                                                      $selectedCourse = explode(",",$singleCollege['course_offered']);
                                                   }
                                                   if(!empty($courseList)){
                                                       foreach($courseList as $course){ ?>
@@ -214,7 +214,7 @@
                                               <label for="basiInput" class="form-label">Approved By</label>
                                               <select class="form-control js-example-basic-multiple" name="approved_by[]" multiple>
                                                   <?php
-                                                  $appby=explode('|',$singleCollege['approved_by']);
+                                                  $appby=explode(',',$singleCollege['approved_by']);
                                                   $approvalList = get_master_data('tbl_approval',[]);
                                                   if(!empty($approvalList)){
                                                       foreach($approvalList as $approval){ ?>
@@ -237,9 +237,11 @@
                                               <select class="form-control  js-example-basic-multiple" name="facility[]" multiple>
                                                       <option value="">Select Facility</option>
                                                       <?php
+                                                        $facby=explode(',',$singleCollege['facility']);
+                                                        $facilitiesList = get_master_data('tbl_facilities',[]);
                                                           if(!empty($facilitiesList)){
                                                             foreach($facilitiesList as $facility){ ?>
-                                                          <option value="<?= $facility['id']; ?>" <?= (!empty($singleCollege) && $state['id'] == $singleCollege['facility']) ? 'selected' : ''; ?>><?= $facility['facility']; ?></option>
+                                                          <option value="<?= $facility['id']; ?>" <?= (!empty($singleCollege) && in_array($facility['id'],$facby)) ? 'selected' : ''; ?>><?= $facility['facility']; ?></option>
                                                       <?php } }  ?>
                                               </select>
                                               <span class="text-danger" id="facility"></span>

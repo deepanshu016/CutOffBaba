@@ -45,7 +45,7 @@
                                        ?>
                                        <?php 
                                        if(!empty($selectedExam)) { ?>
-                                       <li class="list-group-item itmsvfx"> <img src="<?=base_url('assets/site/img/edy.png')?>" alt=""> <?= $selectedExam['exam'];?></li>
+                                          <li class="list-group-item itmsvfx"> <img src="<?=base_url('assets/site/img/edy.png')?>" alt=""> <?= $selectedExam['exam'];?></li>
                                        <?php } ?>
                                        <li class="list-group-item"> </li>
                                     </div>
@@ -54,8 +54,8 @@
                            </div>
                            <div class="divmain ">
                               <ul class="list-group list-group-flush">
-                                 <li class="list-group-item  bgnonecss"> <img src="<?=base_url('assets/site/img/homeiocns.png')?>" alt=""> Home</li>
-                                 <li class="list-group-item bgnonecss"> <img src="<?=base_url('assets/site/img/collgepre.png')?>" alt=""> College Predictor</li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/homeiocns.png')?>" alt=""> Home</li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/collgepre.png')?>" alt=""><a href="<?= base_url('college-predictor'); ?>"> College Predictor </a></li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/seat.png')?>" alt=""> Seat Matrics</li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/news.png')?>" alt=""> News & Updates</li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/notis.png')?>" alt=""> Notifications</li>

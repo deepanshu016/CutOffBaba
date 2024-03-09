@@ -763,3 +763,1902 @@ DEBUG - 2024-03-09 22:18:31 --> Total execution time: 0.0195
 DEBUG - 2024-03-09 16:48:31 --> UTF-8 Support Enabled
 DEBUG - 2024-03-09 16:48:31 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-03-09 16:48:31 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:08:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:08:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:38:48 --> Total execution time: 0.1131
+DEBUG - 2024-03-09 17:08:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:48 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:08:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:51 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:51 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:53 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:53 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:08:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:56 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:08:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:08:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:08:56 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 17:09:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:09:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:02 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:39:02 --> Total execution time: 0.0375
+DEBUG - 2024-03-09 17:09:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:02 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:09:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:09:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:39:10 --> Total execution time: 0.0186
+DEBUG - 2024-03-09 17:09:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:09:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:39:17 --> Upload class already loaded. Second attempt ignored.
+ERROR - 2024-03-09 22:39:17 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `college_logo` = 'a0648f94d8d3dd4c5e9bee1163795676.png', `full_name` = 'College Two', `short_name` = '', `slug` = 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-21', `stream` = '', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'admin2342423@gmail.com', `contact_one` = '45645654645', `contact_two` = '45654645656', `contact_three` = '43534534543', `nodal_officer_name` = 'dsfgdfgdfgdf', `nodal_officer_no` = '455445334', `keywords` = 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '4'
+DEBUG - 2024-03-09 22:39:17 --> Total execution time: 0.0203
+DEBUG - 2024-03-09 17:09:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:09:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:39:19 --> Total execution time: 0.0268
+DEBUG - 2024-03-09 17:09:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:19 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:09:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:09:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:39:22 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:39:22 --> Total execution time: 0.0402
+DEBUG - 2024-03-09 17:09:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:22 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:09:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:59 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:09:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:09:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:09:59 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:10:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:03 --> Total execution time: 0.0163
+DEBUG - 2024-03-09 17:10:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:12 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:10:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:38 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:10:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:50 --> Upload class already loaded. Second attempt ignored.
+ERROR - 2024-03-09 22:40:50 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `college_logo` = 'e34cdc76286b785647787c1abd483993.png', `full_name` = 'College Two', `short_name` = '', `slug` = 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-21', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'fgdgdfg@mail.com', `contact_one` = '45645654645', `contact_two` = '45654645656', `contact_three` = '43534534543', `nodal_officer_name` = 'dsfgdfgdfgdf', `nodal_officer_no` = '455445334', `keywords` = 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '4'
+DEBUG - 2024-03-09 22:40:50 --> Total execution time: 0.0461
+DEBUG - 2024-03-09 17:10:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:52 --> Total execution time: 0.0175
+DEBUG - 2024-03-09 17:10:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:10:52 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:10:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:10:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:40:53 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:40:53 --> Total execution time: 0.0377
+DEBUG - 2024-03-09 17:10:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:10:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:10:53 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:11:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:11:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:12 --> Total execution time: 0.0223
+DEBUG - 2024-03-09 17:11:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:14 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:14 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:14 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:14 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:15 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:15 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:15 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:11:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:18 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:11:35 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:11:35 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:11:35 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:15:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:15:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:45:37 --> Total execution time: 0.0182
+DEBUG - 2024-03-09 17:15:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:37 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:15:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:15:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:45:41 --> Total execution time: 0.0258
+DEBUG - 2024-03-09 17:15:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:42 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:15:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:15:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:15:42 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:15:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:15:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:15:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:21:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:51:19 --> Total execution time: 0.0196
+DEBUG - 2024-03-09 17:21:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:19 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:21:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:21:19 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:21:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:19 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:21:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:21:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:21:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:16 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:16 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:52:16 --> Total execution time: 0.0268
+DEBUG - 2024-03-09 17:22:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:18 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:18 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:22:18 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:18 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:52:20 --> Total execution time: 0.0182
+DEBUG - 2024-03-09 17:22:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:52:24 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:52:24 --> Total execution time: 0.0361
+DEBUG - 2024-03-09 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:24 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:24 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:24 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:22:24 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:52:39 --> Upload class already loaded. Second attempt ignored.
+ERROR - 2024-03-09 22:52:39 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `college_logo` = 'f1a68f9688d3c7dd277574638038272e.png', `full_name` = 'College Two', `short_name` = '', `slug` = 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-21', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'admin@gmail.com', `contact_one` = '45645654645', `contact_two` = '45654645656', `contact_three` = '43534534543', `nodal_officer_name` = 'dsfgdfgdfgdf', `nodal_officer_no` = '455445334', `keywords` = 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '4'
+DEBUG - 2024-03-09 22:52:39 --> Total execution time: 0.0190
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:22:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:52:41 --> Total execution time: 0.2227
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:22:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:22:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:22:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:25:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:38 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:55:38 --> Total execution time: 0.0296
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:25:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:55:52 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:55:52 --> Total execution time: 0.0328
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:25:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:25:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:25:53 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:26:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:56:03 --> Total execution time: 0.0209
+DEBUG - 2024-03-09 17:26:13 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:26:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:56:13 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:26:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:56:42 --> Total execution time: 0.0450
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:42 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:42 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:26:43 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:26:43 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:26:43 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:47 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:27:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 22:57:47 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 22:57:47 --> Total execution time: 0.0315
+DEBUG - 2024-03-09 17:27:47 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:47 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:27:47 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:47 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:47 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:47 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:47 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:47 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:27:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:27:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:27:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:27:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:57:56 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:28:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:28:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:28:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:58:26 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:33:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:33:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:33:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:03:58 --> Upload class already loaded. Second attempt ignored.
+ERROR - 2024-03-09 23:03:58 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `college_logo` = 'b7443d10e4fd7bb7996a96faf45f5404.png', `full_name` = 'College Two', `short_name` = '', `slug` = 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-21', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '7,10', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'prince@gmail.com', `contact_one` = '45645654645', `contact_two` = '45654645656', `contact_three` = '43534534543', `nodal_officer_name` = 'dsfgdfgdfgdf', `nodal_officer_no` = '455445334', `keywords` = 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '4'
+DEBUG - 2024-03-09 23:03:58 --> Total execution time: 0.0749
+DEBUG - 2024-03-09 17:34:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:04:01 --> Total execution time: 0.0321
+DEBUG - 2024-03-09 17:34:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:01 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:02 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:02 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:02 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:03 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:34:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:03 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:34:03 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:34:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:04:58 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:04:58 --> Total execution time: 0.0439
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/uploads
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:34:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:34:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:34:58 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:35:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:35:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:35:05 --> 404 Page Not Found: admin/Get-course/index
+DEBUG - 2024-03-09 17:35:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:35:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:35:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:05:19 --> Total execution time: 0.0232
+DEBUG - 2024-03-09 17:35:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:35:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:35:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:05:26 --> Upload class already loaded. Second attempt ignored.
+ERROR - 2024-03-09 23:05:26 --> Query error: Unknown column 'short_name' in 'field list' - Invalid query: UPDATE `tbl_college` SET `college_logo` = '9e0025169e6f7eb98196bde5ae622325.png', `full_name` = 'College Two', `short_name` = '', `slug` = 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', `short_description` = '<p>sdfadsfdsfadsf</p>\r\n', `popular_name_one` = 'adsfasdf', `popular_name_two` = 'gdfsgdfgdfg', `establishment` = '2024-01-21', `gender_accepted` = '3,4', `course_offered` = '', `facility` = '5,9', `country` = '105', `state` = '19', `city` = '446', `sub_district` = '', `affiliated_by` = NULL, `university_name` = 'sdafsdfdsfsdff', `approved_by` = '7,8', `ownership` = '4', `website` = 'https://www.deepanshumishra.com', `email` = 'admin@gmail.com', `contact_one` = '45645654645', `contact_two` = '45654645656', `contact_three` = '43534534543', `nodal_officer_name` = 'dsfgdfgdfgdf', `nodal_officer_no` = '455445334', `keywords` = 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', `tags` = 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', `status` = 1
+WHERE `id` = '4'
+DEBUG - 2024-03-09 17:37:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:37:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:07:07 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 17:37:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:37:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:07:34 --> Upload class already loaded. Second attempt ignored.
+DEBUG - 2024-03-09 23:07:34 --> Total execution time: 0.0314
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:37:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:07:36 --> Total execution time: 0.0329
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:37:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:07:38 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:07:38 --> Total execution time: 0.0419
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:38 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:39 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:39 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:37:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:37:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:37:39 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:38:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:08:50 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:08:50 --> Total execution time: 0.0483
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:38:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:38:50 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:40:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:10:40 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:10:40 --> Total execution time: 0.0385
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:40:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:40:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:40:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:41:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "short_name" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 60
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:11:21 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:11:21 --> Total execution time: 0.0286
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:41:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:41:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:41:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:20 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:12:20 --> Total execution time: 0.0372
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:12:34 --> Total execution time: 0.0183
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:12:36 --> Total execution time: 0.0219
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:37 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:12:37 --> Total execution time: 0.0379
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:12:45 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:12:45 --> Total execution time: 0.0398
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:42:45 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:43:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "stream" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 120
+ERROR - 2024-03-09 23:13:03 --> Severity: Warning --> Undefined array key "sub_district" C:\deepanshu\CutOffBaba\application\views\admin\college\add-edit.php 203
+DEBUG - 2024-03-09 23:13:03 --> Total execution time: 0.0316
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:43:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:43:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:43:03 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:46:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:46:55 --> No URI present. Default controller set.
+DEBUG - 2024-03-09 17:46:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:46:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:16:55 --> Total execution time: 0.0317
+DEBUG - 2024-03-09 17:46:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:46:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:46:56 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 17:46:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:46:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:46:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:16:58 --> Total execution time: 0.0163
+DEBUG - 2024-03-09 17:46:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:46:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:46:59 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:46:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:46:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:46:59 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:47:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:17:01 --> Total execution time: 0.0304
+DEBUG - 2024-03-09 17:47:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:01 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:47:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:01 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:47:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:17:05 --> Total execution time: 0.0210
+DEBUG - 2024-03-09 17:47:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:17:07 --> Total execution time: 0.0179
+DEBUG - 2024-03-09 17:47:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:07 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:47:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:07 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:47:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:07 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 17:47:07 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:47:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:11 --> 404 Page Not Found: Home/college_predictor
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:17:24 --> Total execution time: 0.0322
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Css/bootstrap.min.css
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Css/style.css
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Img/uyesr.png
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+DEBUG - 2024-03-09 17:47:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Img/start.png
+DEBUG - 2024-03-09 17:47:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:24 --> 404 Page Not Found: Img/home.png
+DEBUG - 2024-03-09 17:47:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:25 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:47:25 --> 404 Page Not Found: Img/serch.png
+DEBUG - 2024-03-09 17:47:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:47:25 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 17:47:25 --> 404 Page Not Found: Img/Award.png
+DEBUG - 2024-03-09 17:47:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:25 --> 404 Page Not Found: Img/Userss.png
+DEBUG - 2024-03-09 17:47:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:47:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:47:25 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:48:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:18:11 --> Total execution time: 0.0273
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/uyesr.png
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/serch.png
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/home.png
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Img/start.png
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:48:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:11 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 17:48:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 17:48:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:12 --> 404 Page Not Found: Img/Award.png
+DEBUG - 2024-03-09 17:48:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 17:48:12 --> 404 Page Not Found: Img/Userss.png
+DEBUG - 2024-03-09 18:28:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:28:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:58:10 --> Total execution time: 0.1240
+DEBUG - 2024-03-09 18:28:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:10 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 18:28:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:10 --> 404 Page Not Found: Img/uyesr.png
+DEBUG - 2024-03-09 18:28:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:10 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 18:28:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:11 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:28:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:11 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 18:28:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:12 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:28:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:12 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:28:13 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:13 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:28:27 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:27 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:27 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:28:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:28:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 23:58:30 --> Total execution time: 0.0364
+DEBUG - 2024-03-09 18:28:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:30 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 18:28:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:30 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 18:28:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:30 --> 404 Page Not Found: Img/biharC.png
+DEBUG - 2024-03-09 18:28:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:30 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:28:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:31 --> 404 Page Not Found: Img/uyesr.png
+DEBUG - 2024-03-09 18:28:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:31 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:28:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:31 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:28:32 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:32 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:28:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:28:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:28:37 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:30:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:30:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:30:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:30:24 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 18:30:24 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 18:30:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:24 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+DEBUG - 2024-03-09 18:30:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:24 --> 404 Page Not Found: Img/home.png
+DEBUG - 2024-03-09 18:30:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:24 --> 404 Page Not Found: Img/start.png
+DEBUG - 2024-03-09 18:30:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:30:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:30:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:25 --> 404 Page Not Found: Img/Userss.png
+ERROR - 2024-03-09 18:30:25 --> 404 Page Not Found: Img/Award.png
+DEBUG - 2024-03-09 18:30:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:26 --> 404 Page Not Found: Img/serch.png
+DEBUG - 2024-03-09 18:30:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:30:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:30:26 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:31:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:31:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:31:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:31:15 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 18:31:15 --> 404 Page Not Found: Img/rightarrow.png
+DEBUG - 2024-03-09 18:31:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:15 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:31:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:15 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:31:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:15 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:31:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:31:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:31:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:30 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:31:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:30 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:31:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:31:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:31:30 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:35:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:35:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:35:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:17 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:35:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:17 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:35:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:35:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:35:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:35:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:35:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:21 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:35:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:35:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:35:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:35:21 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 18:35:21 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 18:35:21 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:35:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:35:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:35:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:37:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:37:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:37:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:37:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:37:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:37:18 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:37:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:37:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:37:18 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:38:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:38:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:05 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:05 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:38:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:38:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:24 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:24 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:38:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:38:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:26 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:26 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:38:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:38:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:29 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:29 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:29 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:38:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:38:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:38:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:41 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:38:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:38:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:38:41 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:41:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:41:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:41:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:41:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:41:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:41:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:41:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:41:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:41:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:41:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:41:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:25 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 18:41:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:41:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:41:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:41:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:42:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:33 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:33 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:33 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:33 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:37 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:37 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:42:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:39 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:39 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:39 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 18:42:39 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:42:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:41 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:41 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:41 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:41 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 18:42:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:41 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:42:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:42:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:42:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:42:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:42:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:42:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:45:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:45:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:45:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:00 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:45:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:00 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:45:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:45:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:00 --> 404 Page Not Found: Assets/admin
+ERROR - 2024-03-09 18:45:00 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:45:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:45:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:45:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:45:04 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:04 --> 404 Page Not Found: Assets/site
+ERROR - 2024-03-09 18:45:04 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:45:04 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:04 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:45:04 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:04 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:45:04 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:45:04 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:46:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:46:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:46:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:19 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:46:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:20 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:46:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:46:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:20 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 18:46:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:21 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 18:46:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 18:46:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 18:46:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 18:46:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 18:46:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 18:46:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:19:44 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:19:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:19:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:19:44 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:19:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:19:44 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:20:05 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:20:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:20:06 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:06 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:20:06 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:06 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:20:07 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:07 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:20:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:20:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:20:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:34 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:20:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:34 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:20:35 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:20:35 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:20:35 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:24:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:24:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:24:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:24:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:24:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:24:01 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:24:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:24:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:24:01 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:27:44 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:27:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:27:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:27:44 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:27:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:27:44 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:27:44 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:27:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:27:44 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:20 --> No URI present. Default controller set.
+DEBUG - 2024-03-09 22:28:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:20 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:23 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:24 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:24 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:34 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:36 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:37 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:39 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:39 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:40 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:40 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:28:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:28:49 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:49 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:49 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:49 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:28:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:28:52 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:28:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:28:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:28:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:29:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:29:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:29:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:08 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:29:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:08 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:29:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:08 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:29:35 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:29:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:29:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:36 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:29:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:36 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:29:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:29:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:29:36 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:30:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:30:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:30:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:30:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:30:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:30:52 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:30:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:30:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:30:52 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:30:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:30:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:30:52 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:32:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:32:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:32:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:00 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:00 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:00 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:01 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:32:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:32:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:32:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:32:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:32:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:32:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:32:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:32:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:25 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:32:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:32:26 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:32:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:32:26 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:39:27 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:39:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:39:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:39:28 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:39:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:39:28 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:39:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:39:28 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:39:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:39:29 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:39:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:39:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:39:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:39:30 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-09 22:39:46 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:39:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:39:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:40:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:40:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:20 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:40:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:40:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:39 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:40:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:40:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:40:50 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:40:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:40:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:11 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:41:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:41:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:41:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:41:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:41:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:41:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:41:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:41:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:41:54 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:41:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:41:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:42:04 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:42:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:42:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:42:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:42:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:42:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:42:29 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:42:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:42:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:42:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:42:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:42:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:43:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:43:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:43:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:44:11 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property CI_URI::$config is deprecated C:\deepanshu\CutOffBaba\system\core\URI.php 102
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property CI_Router::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Router.php 128
+DEBUG - 2024-03-09 22:44:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$benchmark is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$hooks is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$config is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$log is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$utf8 is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$exceptions is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$router is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$output is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$security is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$input is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$lang is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$db is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 397
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property CI_DB_mysqli_driver::$failover is deprecated C:\deepanshu\CutOffBaba\system\database\DB_driver.php 372
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 303
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 328
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 355
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 365
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 366
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 367
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 368
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 426
+DEBUG - 2024-03-09 22:44:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> session_set_save_handler(): Session save handler cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 110
+ERROR - 2024-03-09 22:44:11 --> Severity: Warning --> session_start(): Session cannot be started after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 137
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$session is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$upload is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$form_validation is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$email is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:11 --> Severity: 8192 --> Creation of dynamic property Enquiry::$pagination is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+DEBUG - 2024-03-09 22:44:36 --> UTF-8 Support Enabled
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property CI_URI::$config is deprecated C:\deepanshu\CutOffBaba\system\core\URI.php 102
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property CI_Router::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Router.php 128
+DEBUG - 2024-03-09 22:44:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$benchmark is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$hooks is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$config is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$log is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$utf8 is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$exceptions is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$router is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$output is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$security is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$input is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$lang is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$db is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 397
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property CI_DB_mysqli_driver::$failover is deprecated C:\deepanshu\CutOffBaba\system\database\DB_driver.php 372
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 303
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 328
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 355
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 365
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 366
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 367
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 368
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 426
+DEBUG - 2024-03-09 22:44:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> session_set_save_handler(): Session save handler cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 110
+ERROR - 2024-03-09 22:44:36 --> Severity: Warning --> session_start(): Session cannot be started after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 137
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$session is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$upload is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$form_validation is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$email is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-09 22:44:36 --> Severity: 8192 --> Creation of dynamic property Enquiry::$pagination is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+DEBUG - 2024-03-09 22:44:49 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:44:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:44:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:44:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:44:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:51 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:44:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:51 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:44:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:44:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:44:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:44:52 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-09 22:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:46:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:46:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:46:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-09 22:46:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-09 22:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-09 22:46:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:46:23 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-09 22:46:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-09 22:46:23 --> 404 Page Not Found: Assets/site

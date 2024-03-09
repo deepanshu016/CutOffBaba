@@ -23,7 +23,6 @@ Class College extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $data['facilitiesList'] = $this->site->getRecords('tbl_facilities',[]);
             $this->load->view('admin/college/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -35,7 +34,6 @@ Class College extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['singleCollege'] = $this->master->singleRecord('tbl_college',array('id'=>$id));
-            $data['facilitiesList'] = $this->site->getRecords('tbl_facilities',[]);
             $this->load->view('admin/college/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -138,7 +136,6 @@ Class College extends MY_Controller {
             $data['country'] = $this->input->post('country');
             $data['state'] = $this->input->post('state');
             $data['city'] = $this->input->post('city');
-            $data['sub_district'] = $this->input->post('subdistrict');
             $data['affiliated_by'] = $this->input->post('affiliated_by');
             $data['university_name'] = $this->input->post('university');
             $data['approved_by'] = ($this->input->post('approved_by')) ?implode(',',$this->input->post('approved_by')):'';
@@ -155,8 +152,6 @@ Class College extends MY_Controller {
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->insert('tbl_college',$data);
-            echo "<pre>";
-            print_r($result); die;
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'College added successfully','url'=>base_url('admin/college'));
                 echo json_encode($response);
@@ -228,23 +223,22 @@ Class College extends MY_Controller {
                 $this->remove_file_from_directory('assets/uploads/college/prospectus_file',$this->input->post('old_prospectus'));
             }
             $data['full_name'] = $this->input->post('full_name');
-            $data['short_name'] = $this->input->post('short_name');
             $data['slug'] = $this->slug($this->input->post('full_name'));
             $data['short_description'] = $this->input->post('short_description');
             $data['popular_name_one'] = $this->input->post('popular_name_one');
             $data['popular_name_two'] = $this->input->post('popular_name_two');
             $data['establishment'] = $this->input->post('establishment');
-            $data['stream'] = $this->input->post('stream');
+            $data['short_name'] = $this->input->post('short_name');
+            // $data['stream'] = $this->input->post('stream');
             $data['gender_accepted'] = ($this->input->post('gender_accepted')) ?implode(',',$this->input->post('gender_accepted')):'';
             $data['course_offered'] = ($this->input->post('course_offered')) ?implode(',',$this->input->post('course_offered')):'';
             $data['facility'] = ($this->input->post('facility')) ?implode(',',$this->input->post('facility')):'';
             $data['country'] = $this->input->post('country');
             $data['state'] = $this->input->post('state');
             $data['city'] = $this->input->post('city');
-            $data['sub_district'] = $this->input->post('subdistrict');
             $data['affiliated_by'] = $this->input->post('affiliated_by');
             $data['university_name'] = $this->input->post('university');
-            $data['approved_by'] = ($this->input->post('approved_by')) ?implode('|',$this->input->post('approved_by')):'';
+            $data['approved_by'] = ($this->input->post('approved_by')) ?implode(',',$this->input->post('approved_by')):'';
             $data['ownership'] = $this->input->post('ownership');
             $data['website'] = $this->input->post('website');
             $data['email'] = $this->input->post('email');
@@ -253,8 +247,8 @@ Class College extends MY_Controller {
             $data['contact_three'] = $this->input->post('contact_three');
             $data['nodal_officer_name'] = $this->input->post('nodal_officer_name');
             $data['nodal_officer_no'] = $this->input->post('nodal_officer_no');
-            $data['keywords'] = implode('|',$this->input->post('keywords'));
-            $data['tags'] = implode('|',$this->input->post('tags'));
+            $data['keywords'] = implode(',',$this->input->post('keywords'));
+            $data['tags'] = implode(',',$this->input->post('tags'));
             $data['status'] = 1;
             $result = $this->master->updateRecord('tbl_college',array('id'=>$this->input->post('college_id')),$data);
             $response = array('status' => 'success','message'=> 'College updated successfully','url'=>base_url('admin/college'));

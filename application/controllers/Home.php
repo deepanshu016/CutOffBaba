@@ -139,4 +139,32 @@ class Home extends MY_Controller {
 		echo json_encode($response);
 		return false;
 	}
+
+
+	public function collegePredictor(){
+		$data['title'] = 'College Predictor| CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$data['selectedState'] = $this->master->singleRecord('tbl_state',['id'=>$this->session->userdata('user')['current_state']]);
+		$data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type');
+		$this->load->view('site/college_predictor',$data);
+	}
+
+
+
+	public function selectedCourse($state_id,$course_id)
+	{
+		$data['title'] = 'Course Details | CUTOFFBABA';		
+		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
+		$data['selectedState'] = $this->master->singleRecord('tbl_state',['id'=>$state_id]);
+		$data['stateWiseColleges'] = $this->master->getCollegesDataStateWise($state_id,$course_id);
+		$data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type',[]);	
+		$data['stateList'] = $this->master->getRecords('tbl_state',[]);	
+		$data['cityList'] = $this->master->getRecords('tbl_city',[]);	
+		$data['examList'] = $this->master->getRecords('tbl_exam',[]);	
+		$data['facilityList'] = $this->master->getRecords('tbl_facilities',[]);	
+		$data['branchList'] = $this->master->getRecords('tbl_branch',[]);	
+		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
+		$this->load->view('site/state-wise-colleges',$data);
+	}
 }

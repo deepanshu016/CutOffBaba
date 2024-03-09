@@ -8,14 +8,9 @@ class MasterModel extends CI_Model {
 //		debugger($this->db->queries);
 	}
 	function insert($table = '', $data = []) {
-		echo "<pre>";
-		print_r($data); die;
-		if (!empty($table) && count($data) > 0) {
-			$q = $this->db->insert($table, $data);
-			return  $this->db->insert_id();
-		} else {
-			return (0);
-		}
+		$q = $this->db->insert($table, $data);
+		return  $this->db->insert_id();
+		
 	} // insert end
 	function insertBulk($table='',$data=null){
 		return $this->db->insert_batch($table, $data);
