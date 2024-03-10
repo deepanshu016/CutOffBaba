@@ -84,3 +84,13 @@ DEBUG - 2024-03-10 04:14:36 --> Total execution time: 0.0933
 DEBUG - 2024-03-10 04:14:49 --> Total execution time: 0.0392
 DEBUG - 2024-03-10 04:14:51 --> Total execution time: 0.0367
 DEBUG - 2024-03-10 04:16:23 --> Total execution time: 0.0239
+DEBUG - 2024-03-10 19:03:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-10 19:03:28 --> No URI present. Default controller set.
+DEBUG - 2024-03-10 19:03:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-10 19:03:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-10 19:03:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-10 19:03:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-10 19:03:28 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-10 19:03:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-10 19:03:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-10 19:03:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.

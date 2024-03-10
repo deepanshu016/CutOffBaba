@@ -9,7 +9,9 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    <body>
-      <header class="site-header sticky-top py-1 bg-white">
+      
+      <main style="background: url('<?=base_url('assets/site/img/unsplassy.png')?>'); background-repeat: no-repeat;background-position: bottom;height: 100vh;background-size: 100% auto;">
+         <header class="site-header sticky-top py-1 bg-white">
          <nav class="container bg-white d-flex flex-column flex-md-row justify-content-between">
             <nav class="navbar bg-white">
                <div class="container-fluid">
@@ -20,7 +22,6 @@
             </nav>
          </nav>
       </header>
-      <main>
          <section class="moreCss">
             <div class="container">
                <div class="col-md-12 col-sm-12">
@@ -29,7 +30,7 @@
                </div>
             </div>
          </section>
-         <section class="yuFlop">
+         <section class="yuFlop" >
             <div class="container">
                <div class="row justify-content-center">
                   <div class="col-md-8 col-lg-4 mb-4">
@@ -71,7 +72,6 @@
                </div>
 
             </div>
-            <img class="img-fluid" src="<?=base_url('assets/site/img/unsplassy.png')?>">
          </section>
       </main>
       <script src="<?=base_url('assets/site/js/bootstrap.bundle.min.js')?>"></script>
