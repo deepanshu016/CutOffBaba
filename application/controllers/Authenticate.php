@@ -57,7 +57,7 @@ Class Authenticate extends MY_Controller {
             $result = $this->us->insert('tbl_users',$data);
             if($result){
                 $checkLogin = $this->us->singleRecord('tbl_users',array('id'=>$result));
-                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('login'));
+                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('/'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }

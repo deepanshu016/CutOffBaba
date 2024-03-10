@@ -11,23 +11,16 @@
       <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
       <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
       <style type="text/css">
-        .centerbody{
-          position: absolute;
-          top:50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }</style>
+         label,input{color: #fff !important}
+      </style>
   </head>
-  <body>
-      <section class="bglg">
+  <body class="bglg">
+      <section  style="height: 100vh;">
          <div class="container">
             <div class="row">
                <div class="col-12 col-sm-12">
-                  <div class="h0px ">
-                     <a href="<?= base_url('login'); ?>">
-                     <img src="<?=base_url('assets/site/img/back-CTA.png')?>">
-                     </a>
-                     <h1 class="text-white my-3 p-3">Create your Profile</h1>
+                  <div class="text-center pt-3">
+                     <h1 class="text-white pb-2">Create Your Profile</h1>
                      <form action="<?= base_url('/register') ?>" method="POST" class="all-form">
                         <div class="form-floating input-group mb-3"> 
                            
@@ -41,11 +34,13 @@
                            <label class="text-white" for="floatingInput ">Your Email </label> <br/>
                            <div class="text-danger" id="email"></div>
                         </div>
-                        <div class="form-floating flts input-group mb-3">
-                           <button class="btn btn-outline-secondary bg-white custCsss" type="button" id="button-addon1"> +91</button>
-                           <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="phone">
-                           <label class="text-white" for="floatingInput ">Enter Your Phone </label><br/>
-                           <div class="text-danger" id="phone"></div>
+                         <div class="input-group has-validation">
+                          <span class="input-group-text add" style="font-weight: bold;">+91</span>
+                          <div class="form-floating is-invalid">
+                            <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="phone">
+                            <label for="floatingInputGroup2">Enter Your Phone</label>
+                          </div>
+                          <div class="invalid-feedback" id="phone"></div>
                         </div>
                         <div class="form-floating input-group mb-3"> 
                            <input type="password" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="password">
@@ -71,6 +66,9 @@
                         </div>
                         <button type="submit" class="w-100 btn btn-primary p6t">Sign Up</button>
                      </form>
+                      <div class="acSing">
+                        <span class="text-white "> Already have an account? <a class="text-white" href="<?= base_url('/'); ?>">Login</a> </span>
+                     </div>
                   </div>
                </div>
             </div>

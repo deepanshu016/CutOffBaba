@@ -909,7 +909,7 @@ background: var(--Demo-color3-extra, rgba(191, 200, 247, 0.60));
     margin: 0px 14px;
 }
 .uiTops{
-  margin-top: 49px;
+  padding-top: 29px;
 }
 .stryExpo{
       background: #183e65;
@@ -1186,7 +1186,7 @@ background: var(--Demo-color3-extra, rgba(191, 200, 247, 0.60));
     color: #fff;
 }
 .altp{
-   padding: 8px 0px 11px;
+   padding:5px;
     margin: 0px;
     background: linear-gradient(0deg, #183E65, #183E65), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 23px;
@@ -1332,4 +1332,39 @@ flex: 1;
 .flex-md-equal > * {
 flex: 1;
 }
+}
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
 }

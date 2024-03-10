@@ -1,7 +1,6 @@
 <?php $this->load->view('site/header'); ?>
-      <main class="bgebeef6s" style="margin-bottom: 70px;">
+      <main class="bgebeef6s">
          <section class="uiTops">
-            <!-- <img src="img/Mask-group.png" class="img-fluid"> -->
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
@@ -19,27 +18,20 @@
             </div>
          </section>
          <section>
-            <div class="container">
+            <div class="container mb-5 pb-5">
                <?php if(!empty($stream)){ 
                   foreach($stream as $stream) { ?> 
-                  <div class=" me-md-3 pt-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                     <div class="bg-white shaDo mb-3">
+                     <div class="shaDo m-2 pb-3" style="background:url('<?= ($stream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$stream['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$stream['stream_image'] : base_url('assets/site/img/Frame-5.png');?>'); background-size: 100% 100%;">
                         <div class="row">
-                           <div class="col-md-9 col">
+                           <div class="col-9">
                               <div class="nopadSty">
                                  <h5 class="card-title"><strong><?= @$stream['stream']; ?></strong></h5>
-                                 <p class="card-text nop"><?= @excerpt($stream['description'],30); ?></p>
-                                 <div class="lfeCuy">
-                                    <a class="text-dark text-decoration-none cTacss" href="<?= base_url('courses').'/'.$stream['id']; ?>">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
-                                 </div>
+                                 <p class="card-text"><?= @excerpt($stream['description'],80); ?></p>
+                                 <a class="btn btn-primary" href="<?= base_url('courses').'/'.$stream['id']; ?>">Select CTA  <i class="fa fa-angle-right"></i> </a>
                               </div>
-                           </div>
-                           <div class="col-md-3 col">
-                              <img src="<?= ($stream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$stream['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$stream['stream_image'] : base_url('assets/site/img/Frame-5.png');?>" class="img-fluid riCds" alt="Frame">
                            </div>
                         </div>
                      </div>
-                  </div>
                <?php } } ?>
             </div>
          </section>

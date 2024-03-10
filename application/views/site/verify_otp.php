@@ -9,17 +9,19 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
       <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
+       <style type="text/css">
+        
+        .add{width: 52px;text-align: center;}
+        label,input{color: #fff !important;text-align: center !important;max-height: 50px}
+      </style>
    </head>
    <body class="bfsd">
-      <section class="bglg">
+       <section style="height: 100vh;">
          <div class="container">
             <div class="row">
                <div class="col-12 col-sm-12">
-                  <div class="h0px yis">
-                     <a href="login.php">
-                     <img src="<?=base_url('assets/site/img/back-CTA.png')?>">
-                     </a>
-                     <img class="img-fluid mb-3" src="<?=base_url('assets/site/img/verificatios.png')?>">
+                  <div class="h0px yis text-center">
+                     <img class="mx-auto w-50 mb-3 " src="<?=base_url('assets/site/img/verificatios.png')?>">
                      <h1 class="text-white">Reset Password</h1>
                      <span class="text-white">An 4 digit code has been sent to
                      <br> +91 <?= @$userData['mobile']; ?><br><br></span>
@@ -27,19 +29,19 @@
                         <div class="row">
                            <input type="hidden" class="form-control inPut " id="floatingInput" placeholder="" value="<?= $userData['id']; ?>" name="user_id" aria-describedby="basic-addon1">
                            <div class="col">
-                            <input type="text" class="form-control specHeigh" id="first_digit" placeholder="X">
+                            <input type="text" class="form-control specHeigh" id="first_digit" placeholder="*">
                            </div>
                            <div class="col">
-                            <input type="text" class="form-control specHeigh" id="second_digit" placeholder="X">
+                            <input type="text" class="form-control specHeigh" id="second_digit" placeholder="*">
                            </div>
                            <div class="col">
-                            <input type="text" class="form-control specHeigh" id="third_digit" placeholder="X">
+                            <input type="text" class="form-control specHeigh" id="third_digit" placeholder="*">
                            </div>
                            <div class="col">
-                            <input type="text" class="form-control specHeigh" id="four_digit" placeholder="X">
+                            <input type="text" class="form-control specHeigh" id="four_digit" placeholder="*">
                            </div>
                         </div> 
-                        <button type="submit" class="w-100 btn btn-primary p6t">Verify OTP</button>
+                        <button type="submit" class="w-100 btn btn-primary p6t mt-3">Verify OTP</button>
                      </form>
                   </div>
                </div>
@@ -50,6 +52,9 @@
       <script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
       <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script>
+         $(document).ready(function(){
+
+         });
          $("body").on("submit","#verifyOtp",function(e){
             e.preventDefault();
             var currentWrapper = $(this);

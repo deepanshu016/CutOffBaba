@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$route['default_controller'] = 'Home';
+//$route['default_controller'] = 'Home';
 // $route['404_override'] = 'CustomErrors';
 // $route['400_override'] = 'CustomErrors';
 $route['translate_uri_dashes'] = FALSE;
-$route['home'] = 'Home/splash_screen';
-$route['app-info'] = 'Home/appInfo';
+// $route['home'] = 'Home/splash_screen';
+// $route['app-info'] = 'Home/appInfo';
 
-$route['login'] = 'home/login';
+$route['default_controller'] = 'home/login';
 $route['loginchk'] = 'Authenticate/login';
 $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';

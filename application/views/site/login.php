@@ -10,7 +10,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
       <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
-      
+      <style type="text/css">
+        
+        .add{width: 52px;text-align: center;}
+        label,input{color: #fff !important}
+      </style>
   </head>
   <body>
       <section class="bglg" style="height: 100vh;">
@@ -22,7 +26,7 @@
                      <h1 class="text-white">Login to continue</h1>
                      <form action="<?= base_url('/loginchk') ?>" method="POST" class="all-form">
                         <div class="input-group has-validation">
-                          <span class="input-group-text" style="font-weight: bold;">+91</span>
+                          <span class="input-group-text add" style="font-weight: bold;">+91</span>
                           <div class="form-floating is-invalid">
                             <input type="text" class="form-control inPut " id="floatingInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1" name="phone">
                             <label for="floatingInputGroup2">Enter Your Phone</label>
@@ -30,7 +34,7 @@
                           <div class="invalid-feedback" id="phone"></div>
                         </div>
                         <div class="input-group has-validation">
-                          <span class="input-group-text"><i class="fa fa-lock fa-2x" aria-hidden="true"></i></span>
+                          <span class="input-group-text add"><i class="fa fa-lock fa-2x" aria-hidden="true"></i></span>
                           <div class="form-floating is-invalid">
                             <input type="password" class="form-control inPut" placeholder="" name="password">
                             <label for="floatingInputGroup2">Enter Password</label>
