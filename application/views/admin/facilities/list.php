@@ -42,6 +42,7 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
+                                    <th class="sort" data-sort="email">Image</th>
                                     <th class="sort" data-sort="email">Facility</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -51,15 +52,22 @@
                                       foreach($facilitiesList as $key=>$facility){
                                 ?>
                                     <tr>
-                                        <td><?= $key+1; ?></td>
-                                        <td><?= $facility['id']; ?></td>
-                                        <td><?= $facility['facility']; ?></td>
-                                        <td>
-                                           <div class="hstack gap-3 flex-wrap">
-                                              <a href="<?= base_url('admin/edit-facilities'.'/'.$facility['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
-                                              <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $facility['id']; ?>" url="<?= base_url('admin/delete-facilities'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
-                                           </div>
-                                        </td>
+                                       <td><?= $key+1; ?></td>
+                                       <td><?= $facility['id']; ?></td>
+                                       <td>
+                                          <?php if($facility['facility_logo'] != '' && file_exists(FCPATH.'assets/uploads/facility/'.$facility['facility_logo'])){?>
+                                             <img src="<?= base_url('assets/uploads/facility/').$facility['facility_logo'];?>" height="100" width="100">
+                                          <?php }else{ ?>
+                                             <span class="text-danger">Not Uploaded</span>
+                                          <?php } ?>
+                                       </td>
+                                       <td><?= $facility['facility']; ?></td>
+                                       <td>
+                                          <div class="hstack gap-3 flex-wrap">
+                                             <a href="<?= base_url('admin/edit-facilities'.'/'.$facility['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>
+                                             <a href="javascript:void(0);" class="link-danger fs-15 delete-data" data-id="<?= $facility['id']; ?>" url="<?= base_url('admin/delete-facilities'); ?>"><i class="ri-delete-bin-6-fill"></i></a>
+                                          </div>
+                                       </td>
                                     </tr>
                                 <?php } } ?>
                              </tbody>

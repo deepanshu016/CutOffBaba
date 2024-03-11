@@ -43,6 +43,7 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
+                                    <th class="sort" data-sort="email">Logo</th>
                                     <th class="sort" data-sort="email">Country</th>
                                    <th class="sort" data-sort="email">State</th>
                                    <th class="sort" data-sort="action">Action</th>
@@ -56,6 +57,13 @@
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= $state['id'] ?></td>
+                                        <td>
+                                          <?php if($state['state_logo'] != '' && file_exists(FCPATH.'assets/uploads/state/'.$state['state_logo'])){?>
+                                             <img src="<?= base_url('assets/uploads/state/').$state['state_logo'];?>" height="100" width="100">
+                                          <?php }else{ ?>
+                                             <span class="text-danger">Not Uploaded</span>
+                                          <?php } ?>
+                                       </td>
                                         <td><?= ($countryData) ? $countryData['name'] : ''; ?></td>
                                         <td><?= $state['name']; ?></td>
                                         <td>

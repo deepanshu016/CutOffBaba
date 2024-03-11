@@ -52,8 +52,19 @@
                                               <label for="basiInput" class="form-label">Clinical Facility Name</label>
                                               <input class="form-control" type="text" name="facility"  placeholder="Clinical Facility Name" value="<?= (!empty($singleClinicFacility)) ? $singleClinicFacility['facility'] : '';?>">
                                               <input type="hidden" class="form-control" name="facility_id" value="<?= (!empty($singleClinicFacility)) ? $singleClinicFacility['id'] : '';?>">
+                                              <input type="hidden" class="form-control" name="old_clinical_facility_logo" value="<?= (!empty($singleClinicFacility)) ? $singleClinicFacility['clinical_facility_logo'] : ''; ?>">
                                               <span class="text-danger" id="facility"></span>
                                           </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                           <div class="form-group">
+                                              <label for="basiInput" class="form-label">Logo</label>
+                                              <input class="form-control" type="file" name="clinical_facility_logo"  placeholder="Facility Logo" accept="image/*">
+                                              <?php if(!empty($singleClinicFacility['clinical_facility_logo'])) {  ?>
+                                                  <img src="<?= base_url('assets/uploads/clinicalfacility'.'/'.$singleClinicFacility['clinical_facility_logo']) ?>" height="100" width="100" class="rounded-circle">
+                                              <?php } ?>
+                                              <span class="text-danger" id="clinical_facility_logo"></span>
+                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">

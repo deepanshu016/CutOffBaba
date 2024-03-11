@@ -34,7 +34,7 @@ $db['default'] = array(
 
 
 
-	'database' => 'cutoffbaba_ui',
+	'database' => 'cutoff_baba',
 
 
 

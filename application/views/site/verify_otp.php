@@ -27,7 +27,7 @@
                      <br> +91 <?= @$userData['mobile']; ?><br><br></span>
                      <form action="<?= base_url('/otp-verification') ?>" method="POST" id="verifyOtp">
                         <div class="row">
-                           <input type="hidden" class="form-control inPut " id="floatingInput" placeholder="" value="<?= $userData['id']; ?>" name="user_id" aria-describedby="basic-addon1">
+                           <input type="hidden" class="form-control inPut user_id" id="floatingInput" placeholder="" value="<?= $userData['id']; ?>" name="user_id" aria-describedby="basic-addon1">
                            <div class="col">
                             <input type="text" class="form-control specHeigh" id="first_digit" placeholder="*">
                            </div>
@@ -43,6 +43,8 @@
                         </div> 
                         <button type="submit" class="w-100 btn btn-primary p6t mt-3">Verify OTP</button>
                      </form>
+                     <p id="timer" style="color: white;">00:00</p>
+                     <a id="resendButton" style="display:none;color: #5baef3;" onclick="resendOTP()">Resend OTP</a>
                   </div>
                </div>
             </div>
@@ -69,7 +71,6 @@
             formData = new FormData(formData);
             formData.append('otp',otp);
             CommonLib.ajaxForm(formData,method,url).then(d=>{
-                  console.log("Response",d);
                   if(d.status === 200){
                      CommonLib.notification.success(d.message);
                      setTimeout(() => {
@@ -83,6 +84,49 @@
                   CommonLib.notification.error(e.responseJSON.errors);
             });
          });
+      </script>
+      <script>
+         let timerInterval;
+         let seconds = 30;
+         // Initial setup
+         updateTimerDisplay();
+         // Start the timer on page load
+         startTimer();
+         function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
+         }
+         function updateTimer() {
+            seconds--;
+            if (seconds === 0) {
+               clearInterval(timerInterval);
+               document.getElementById('resendButton').style.display = 'block';
+            }
+            updateTimerDisplay();
+         }
+         function updateTimerDisplay() {
+            const formattedTime = padNumber(Math.floor(seconds / 60)) + ':' + padNumber(seconds % 60);
+            document.getElementById('timer').innerText = formattedTime;
+         }
+         function padNumber(num) {
+            return num.toString().padStart(2, '0');
+         }
+         function resendOTP() {
+            var user_id = $(".user_id").val();
+            formData = new FormData();
+            formData.append('user_id',user_id);
+            CommonLib.ajaxForm(formData,'POST',"<?= base_url('resend-otp'); ?>").then(d=>{
+                  if(d.status === 200){
+                     CommonLib.notification.success(d.message);
+                     setTimeout(() => {
+                        window.location = d.url;
+                    }, 1000);
+                  }else{
+                     CommonLib.notification.error(d.errors);
+                  }
+            }).catch(e=>{
+                  CommonLib.notification.error(e.responseJSON.errors);
+            });
+         }
       </script>
    </body>
 </html>

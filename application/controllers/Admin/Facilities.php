@@ -48,12 +48,38 @@ class Facilities extends MY_Controller
             return redirect('admin');
         }
     }
-
+    public function file_check_facility_logo($str){
+        $allowed_mime_type_arr = array('image/jpeg','image/pjpeg','image/png','image/x-png','image/jpg');
+        if(isset($_FILES['facility_logo']['name']) && $_FILES['facility_logo']['name']!=""){
+            $mime = get_mime_by_extension($_FILES['facility_logo']['name']);
+            if(in_array($mime, $allowed_mime_type_arr)){
+                return true;
+            }else{
+                $this->form_validation->set_message('file_check_facility_logo', 'Please select only jpg/png file.');
+                return false;
+            }
+        }
+    }
     //Save Facilities
     public function saveFacilities()
     {
         $this->form_validation->set_rules('facility', 'Facilities', 'trim|required');
+        $this->form_validation->set_rules('facility_logo', 'State Logo', 'callback_file_check_facility_logo');
         if ($this->form_validation->run()) {
+            $config['upload_path']  = 'assets/uploads/facility';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['encrypt_name'] =  TRUE;
+            $config['max_size']      = 1024;
+            if(!empty($_FILES['facility_logo']['name'])) {
+                $uploadedFile = $this->uploadFile($_FILES['facility_logo']['name'], 'facility_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['facility_logo'] = $uploadedFile['file'];
+            }
             $data['facility'] = $this->input->post('facility');
             $result = $this->master->insert('tbl_facilities', $data);
             if ($result > 0) {
@@ -69,7 +95,8 @@ class Facilities extends MY_Controller
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'facility' => form_error('facility')
+                    'facility' => form_error('facility'),
+                    'facility_logo' => form_error('facility_logo')
                 )
             );
             echo json_encode($response);
@@ -81,7 +108,22 @@ class Facilities extends MY_Controller
     public function updateFacilities()
     {
         $this->form_validation->set_rules('facility', 'Facilities', 'trim|required');
+        $this->form_validation->set_rules('facility_logo', 'Facility Logo', 'callback_file_check_facility_logo');
         if ($this->form_validation->run()) {
+            if(!empty($_FILES['facility_logo']['name'])) {
+                $config['upload_path']  = 'assets/uploads/facility';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
+                $uploadedFile = $this->uploadFile($_FILES['facility_logo']['name'], 'facility_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['facility_logo'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/facility',$this->input->post('old_facility_logo'));
+            }
             $data['facility'] = $this->input->post('facility');
             $result = $this->master->updateRecord('tbl_facilities', array('id' => $this->input->post('facility_id')), $data);
             $response = array('status' => 'success', 'message' => 'Facilities updated successfully', 'url' => base_url('admin/facilities'));
@@ -91,7 +133,8 @@ class Facilities extends MY_Controller
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'facility' => form_error('facility')
+                    'facility' => form_error('facility'),
+                    'facility_logo' => form_error('facility_logo')
                 )
             );
             echo json_encode($response);
@@ -103,8 +146,10 @@ class Facilities extends MY_Controller
     {
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
+            $singleRecord = $this->master->singleRecord('tbl_facilities',array('id'=>$id));
             $result = $this->master->deleteRecord('tbl_facilities', array('id' => $id));
             if ($result > 0) {
+                $this->remove_file_from_directory('assets/uploads/facility',$singleRecord['facility_logo']);
                 $response = array('status' => 'success', 'message' => 'Facilities deleted successfully', 'url' => base_url('admin/facilities'));
             } else {
                 $response = array('status' => 'errors', 'message' => 'Something went wrong !!!', 'url' => '');

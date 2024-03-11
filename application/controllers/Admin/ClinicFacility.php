@@ -40,10 +40,37 @@ Class ClinicFacility extends MY_Controller {
             return redirect('admin');
         }
     }
+    public function file_check_clinical_facility_logo($str){
+        $allowed_mime_type_arr = array('image/jpeg','image/pjpeg','image/png','image/x-png','image/jpg');
+        if(isset($_FILES['clinical_facility_logo']['name']) && $_FILES['clinical_facility_logo']['name']!=""){
+            $mime = get_mime_by_extension($_FILES['clinical_facility_logo']['name']);
+            if(in_array($mime, $allowed_mime_type_arr)){
+                return true;
+            }else{
+                $this->form_validation->set_message('file_check_clinical_facility_logo', 'Please select only jpg/png file.');
+                return false;
+            }
+        }
+    }
     //Save Clinic Facility
     public function saveClinicFacility(){
         $this->form_validation->set_rules('facility', 'Clinical Facility','trim|required');
+        $this->form_validation->set_rules('clinical_facility_logo', 'State Logo', 'callback_file_check_clinical_facility_logo');
         if ($this->form_validation->run()) {
+            $config['upload_path']  = 'assets/uploads/clinicalfacility';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['encrypt_name'] =  TRUE;
+            $config['max_size']      = 1024;
+            if(!empty($_FILES['clinical_facility_logo']['name'])) {
+                $uploadedFile = $this->uploadFile($_FILES['clinical_facility_logo']['name'], 'clinical_facility_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['clinical_facility_logo'] = $uploadedFile['file'];
+            }
             $data['facility'] = $this->input->post('facility');
             $result = $this->master->insert('tbl_clinic_facility',$data);
             if($result > 0){
@@ -59,7 +86,8 @@ Class ClinicFacility extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'facility' => form_error('facility')
+                    'facility' => form_error('facility'),
+                    'clinical_facility_logo' => form_error('clinical_facility_logo')
                 )
             );
             echo json_encode($response);
@@ -70,7 +98,22 @@ Class ClinicFacility extends MY_Controller {
     public function updateClinicFacility(){
 
         $this->form_validation->set_rules('facility','Clinical Facility', 'trim|required');
+        $this->form_validation->set_rules('clinical_facility_logo', 'State Logo', 'callback_file_check_clinical_facility_logo');
         if ($this->form_validation->run()) {
+            if(!empty($_FILES['clinical_facility_logo']['name'])) {
+                $config['upload_path']  = 'assets/uploads/clinicalfacility';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
+                $uploadedFile = $this->uploadFile($_FILES['clinical_facility_logo']['name'], 'clinical_facility_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['clinical_facility_logo'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/clinicalfacility',$this->input->post('old_clinical_facility_logo'));
+            }
             $data['facility'] = $this->input->post('facility');
             $result = $this->master->updateRecord('tbl_clinic_facility',array('id'=>$this->input->post('facility_id')),$data);
             $response = array('status' => 'success','message'=> 'Clinical Facility updated successfully','url'=>base_url('admin/clinical-facility'));
@@ -80,7 +123,8 @@ Class ClinicFacility extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'facility' => form_error('facility')
+                    'facility' => form_error('facility'),
+                    'clinical_facility_logo' => form_error('clinical_facility_logo')
                 )
             );
             echo json_encode($response);
@@ -90,8 +134,10 @@ Class ClinicFacility extends MY_Controller {
     public function deleteClinicFacility(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
+            $singleRecord = $this->master->singleRecord('tbl_clinic_facility',array('id'=>$id));
             $result = $this->master->deleteRecord('tbl_clinic_facility',array('id'=>$id));
             if($result > 0){
+                $this->remove_file_from_directory('assets/uploads/clinicalfacility',$singleRecord['clinical_facility_logo']);
                 $response = array('status' => 'success','message' => 'Clinical Facility deleted successfully','url'=>base_url('admin/clinical-facility'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');

@@ -118,6 +118,30 @@ class MY_Controller extends CI_Controller {
         }
         return $formattedData;
     }
+	public function uploadMultipleFiles($fileData,$fileNames_old,$file_type,$data = '' ,$path,$file_for){
+        $targetDir = 'assets/uploads/'.$path;
+        $fileNames = array_filter($fileData['name']);
+        $insertValuesSQL = '';
+        $filesssData = [];
+        if(!empty($fileNames)){
+            foreach($fileData['name'] as $key=>$val){
+                $extensions = explode('/',$fileData["type"][$key]);
+                $fileName = strtoupper($fileNames_old).rand().time().'.'.$extensions[1];
+                $targetFilePath = $targetDir.$fileName;
+                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                if(move_uploaded_file($fileData["tmp_name"][$key], $targetFilePath)){
+                    // Image db insert sql
+                    $filesssData[$key]['file_from'] = $file_for;
+                    $filesssData[$key]['file_type'] = $file_type;
+                    $filesssData[$key]['file_name'] = $fileName;
+                    $filesssData[$key]['file_data'] = $data;
+                    $filesssData[$key]['status'] = 1;
+                    $filesssData[$key]['created_at'] = date('Y-m-d H:i:s');
+                }
+            }
+        }
+        return $filesssData;
+    }
 } // end of class
 
 ?>

@@ -97,7 +97,7 @@ Class Authenticate extends MY_Controller {
         if ($this->is_user_logged_in() == false) {
             $data['user_session'] = $this->session->userdata('user');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-    		$this->load->view('site/forgotpassword',$data);
+    		$this->load->view('site/forgot_password',$data);
         }else{
             $this->session->set_flashdata('error','Access not allowed');
             return redirect('/');
@@ -110,7 +110,8 @@ Class Authenticate extends MY_Controller {
             $data['token'] = $token;
             $data['user_session'] = $this->session->userdata('user');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $this->load->view('site/resetPassword',$data);
+            $data['userData'] = $userData;
+            $this->load->view('site/reset_password',$data);
         }else{
             $this->session->set_flashdata('error', "Link expired");
             return redirect('login');
@@ -313,15 +314,14 @@ Class Authenticate extends MY_Controller {
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[25]|matches[confirm_password]|callback_check_strong_password');   
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required'); 
         if ($this->form_validation->run()) {
-            $token = $this->input->post('token');
+            $user_id = $this->input->post('user_id');
             $email = base64_decode($token);
             $userData = $this->us->singleRecord('tbl_users',array('email'=>$email));
             $data['password'] = sha1($this->input->post('password'));
-            $data['token'] = NULL;
             $data['updated_at'] = date('Y-m-d H:i:s');
-            $result = $this->us->updateRecord('tbl_users',array('id'=>$userData['id']),$data);
+            $result = $this->us->updateRecord('tbl_users',array('id'=>$user_id),$data);
             if($result){
-                $response = array('status' => 'success','message' => 'Your password updated successfully','url'=>base_url('login'));
+                $response = array('status' => 'success','message' => 'Your password updated successfully','url'=>base_url('verify-done'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }
@@ -335,9 +335,7 @@ Class Authenticate extends MY_Controller {
             );
 
         }
-        $this->output
-        ->set_content_type('application/json')
-        ->set_output(json_encode($response));
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
     }
     //Logout
 	public function logout(){
@@ -531,7 +529,7 @@ Class Authenticate extends MY_Controller {
         	$phone = $this->input->post('phone');
 			$userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone));
         	if(!empty($userData)){
-				$otp = "1235";
+				$otp = substr(uniqid(), -4);
 				$msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
 				$phone = urlencode($phone);
 				$msg = urlencode($msg);
@@ -609,6 +607,7 @@ Class Authenticate extends MY_Controller {
 			return true;
 		}
 	}
+    
     public function verify_done()
 	{
 		$this->load->view('site/verify_done');
@@ -622,6 +621,54 @@ Class Authenticate extends MY_Controller {
 		$this->load->view('site/user_profile',$data);
 	}
    
+
+    public function resend_otp()
+	{
+		$this->form_validation->set_rules('user_id', 'User ID', 'trim|required|numeric');
+        if ($this->form_validation->run()) {
+        	$user_id = $this->input->post('user_id');
+			$userData = $this->us->singleRecord('tbl_users',array('id'=>$user_id));
+        	if(!empty($userData)){
+				$otp = substr(uniqid(), -4);
+				$msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
+				$phone = urlencode($userData['mobile']);
+               
+				$msg = urlencode($msg);
+				$apiUrl = "http://sms.shubhsandesh.in/vb/apikey.php?apikey=Tdp9KMSdKp6RI2G3&senderid=COBABA&&number=".$phone."&message=".$msg;
+				$ch = curl_init($apiUrl);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				$response = curl_exec($ch);
+				curl_close($ch);
+				$data = json_decode($response, true);
+                
+				if ($data['code'] == "011") {
+					$this->us->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
+					$response =  array('status' => 200,'message' => 'OTP Sent Successfully','url'=>base_url('verify-otp').'/'.base64_encode($userData['id']));
+					echo json_encode($response);
+					return true;
+				} else {
+					$response =  array('status' => 4000,'message' => 'Something went wrong','url'=>'');
+					echo json_encode($response);
+					return true;
+				}
+        		
+        	}else{
+        		$response = array('status' => 400,'message' => 'Phone number not exists in our record','url'=>'');
+				echo json_encode($response);
+				return true;
+			}   
+        }else{
+        	$response =  array(
+        		'status' => 'error',
+        		'errors' => array(
+				    'phone' => form_error('phone')
+        		)  
+		   	);
+			echo json_encode($response);
+			return true;
+        }
+	}
 }
 
 ?>

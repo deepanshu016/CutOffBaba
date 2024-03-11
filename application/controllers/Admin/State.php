@@ -42,11 +42,38 @@ Class State extends MY_Controller {
             return redirect('admin');
         }
     }
-    //Save Country
+    public function file_check_state_logo($str){
+        $allowed_mime_type_arr = array('image/jpeg','image/pjpeg','image/png','image/x-png','image/jpg');
+        if(isset($_FILES['state_logo']['name']) && $_FILES['state_logo']['name']!=""){
+            $mime = get_mime_by_extension($_FILES['state_logo']['name']);
+            if(in_array($mime, $allowed_mime_type_arr)){
+                return true;
+            }else{
+                $this->form_validation->set_message('file_check_state_logo', 'Please select only jpg/png file.');
+                return false;
+            }
+        }
+    }
+    //Save State
     public function saveState(){
         $this->form_validation->set_rules('name', 'State Name', 'trim|required');
         $this->form_validation->set_rules('country_id', 'Country', 'trim|required');
+        $this->form_validation->set_rules('state_logo', 'State Logo', 'callback_file_check_state_logo');
         if ($this->form_validation->run()) {
+            $config['upload_path']  = 'assets/uploads/state';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['encrypt_name'] =  TRUE;
+            $config['max_size']      = 1024;
+            if(!empty($_FILES['state_logo']['name'])) {
+                $uploadedFile = $this->uploadFile($_FILES['state_logo']['name'], 'state_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['state_logo'] = $uploadedFile['file'];
+            }
             $data['name'] = $this->input->post('name');
             $data['country_id'] = $this->input->post('country_id');
             $result = $this->master->insert('tbl_state',$data);
@@ -64,7 +91,8 @@ Class State extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'name' => form_error('name'),
-                    'country_id' => form_error('country_id')
+                    'country_id' => form_error('country_id'),
+                    'state_logo' => form_error('state_logo')
                 )
             );
             echo json_encode($response);
@@ -73,10 +101,24 @@ Class State extends MY_Controller {
     }
     //Save Category
     public function updateState(){
-
         $this->form_validation->set_rules('name', 'State Name', 'trim|required');
         $this->form_validation->set_rules('country_id', 'Country', 'trim|required');
+        $this->form_validation->set_rules('state_logo', 'State Logo', 'callback_file_check_state_logo');
         if ($this->form_validation->run()) {
+            if(!empty($_FILES['state_logo']['name'])) {
+                $config['upload_path']  = 'assets/uploads/state';
+                $config['allowed_types'] = 'jpg|jpeg|png';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
+                $uploadedFile = $this->uploadFile($_FILES['state_logo']['name'], 'state_logo', $config);
+                if (!empty($uploadedFile['error_msg'])) {
+                    $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                    echo json_encode($response);
+                    return false;
+                }
+                $data['state_logo'] = $uploadedFile['file'];
+                $this->remove_file_from_directory('assets/uploads/state',$this->input->post('old_state_logo'));
+            }
             $data['name'] = $this->input->post('name');
             $data['country_id'] = $this->input->post('country_id');
             $result = $this->master->updateRecord('tbl_state',array('id'=>$this->input->post('state_id')),$data);
@@ -88,7 +130,8 @@ Class State extends MY_Controller {
                 'status' => 'error',
                 'errors' => array(
                     'country_id' => form_error('country_id'),
-                    'name' => form_error('name')
+                    'name' => form_error('name'),
+                    'state_logo' => form_error('state_logo')
                 )
             );
             echo json_encode($response);
@@ -98,8 +141,10 @@ Class State extends MY_Controller {
     public function deleteState(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
+            $singleRecord = $this->master->singleRecord('tbl_state',array('id'=>$id));
             $result = $this->master->deleteRecord('tbl_state',array('id'=>$id));
             if($result > 0){
+                $this->remove_file_from_directory('assets/uploads/state',$singleRecord['state_logo']);
                 $response = array('status' => 'success','message' => 'State deleted successfully','url'=>base_url('admin/state'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');

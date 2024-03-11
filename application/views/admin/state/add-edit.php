@@ -54,8 +54,19 @@
                                                 <?php endforeach; endif;?>
                                               </select>
                                               <input type="hidden" class="form-control" name="state_id" value="<?php if(!empty($singleState)) { echo $singleState['id']; }?>">
+                                              <input type="hidden" class="form-control" name="old_state_logo" value="<?= (!empty($singleState)) ? $singleState['state_logo'] : ''; ?>">
                                               <span class="text-danger" id="country_id"></span>
                                           </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                           <div class="form-group">
+                                              <label for="basiInput" class="form-label">State Logo</label>
+                                              <input class="form-control" type="file" name="state_logo"  placeholder="State Logo" accept="image/*">
+                                              <?php if(!empty($singleNews['image'])) {  ?>
+                                                  <img src="<?= base_url('assets/uploads/state'.'/'.$singleState['state_logo']) ?>" height="100" width="100" class="rounded-circle">
+                                              <?php } ?>
+                                              <span class="text-danger" id="state_logo"></span>
+                                           </div>
                                       </div>
                                       <div class="col-lg-6">
                                            <div class="form-group">

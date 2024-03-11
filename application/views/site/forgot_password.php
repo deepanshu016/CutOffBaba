@@ -35,16 +35,16 @@
                      </div>
                   <button type="submit" class="w-100 btn btn-primary p6t">Send OTP</button>
                </form>
-                <div class="acSing">
-                        <span class="text-white "> Already have an account? <a class="text-white" href="<?= base_url('/'); ?>">Login</a> </span>
-                     </div>
+               <div class="acSing">
+                  <span class="text-white "> Already have an account? <a class="text-white" href="<?= base_url('/'); ?>">Login</a> </span>
+               </div>
             </div>
          </div>
       </div>
    </div>
 </section>
- <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
-    <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
-    <?php $this->load->view('common/alert'); ?>
+   <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
+   <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
+   <?php $this->load->view('common/alert'); ?>
   </body>
 </html>

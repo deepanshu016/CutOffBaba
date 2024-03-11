@@ -2,7 +2,7 @@
 <?php $this->load->view('admin/sidebar'); ?>
 <div class="page-content">
     <div class="container-fluid">
-        <!-- start page title -->
+        <!-- start page title --> 
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -43,6 +43,7 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
+                                   <th class="sort" data-sort="logo">Logo</th>
                                     <th class="sort" data-sort="email">Clinical Facility</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -54,6 +55,13 @@
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= $facility['id']; ?></td>
+                                        <td>
+                                          <?php if($facility['clinical_facility_logo'] != '' && file_exists(FCPATH.'assets/uploads/clinicalfacility/'.$facility['clinical_facility_logo'])){?>
+                                             <img src="<?= base_url('assets/uploads/clinicalfacility/').$facility['clinical_facility_logo'];?>" height="100" width="100">
+                                          <?php }else{ ?>
+                                             <span class="text-danger">Not Uploaded</span>
+                                          <?php } ?>
+                                       </td>
                                         <td><?= $facility['facility']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

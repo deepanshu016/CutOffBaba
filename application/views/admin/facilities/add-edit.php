@@ -52,8 +52,19 @@
                                               <label for="basiInput" class="form-label">Facility</label>
                                               <input class="form-control" type="text" name="facility"  placeholder="Facility" value="<?php if(!empty($singleFacility)) { echo $singleFacility['facility']; }?>">
                                               <input type="hidden" class="form-control" name="facility_id" value="<?php if(!empty($singleFacility)) { echo $singleFacility['id']; }?>">
+                                              <input type="hidden" class="form-control" name="old_facility_logo" value="<?= (!empty($singleFacility)) ? $singleFacility['facility_logo'] : ''; ?>">
                                               <span class="text-danger" id="facility"></span>
                                           </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                           <div class="form-group">
+                                              <label for="basiInput" class="form-label">Facility Logo</label>
+                                              <input class="form-control" type="file" name="facility_logo"  placeholder="Facility Logo" accept="image/*">
+                                              <?php if(!empty($singleFacility['facility_logo'])) {  ?>
+                                                  <img src="<?= base_url('assets/uploads/facility'.'/'.$singleFacility['facility_logo']) ?>" height="100" width="100" class="rounded-circle">
+                                              <?php } ?>
+                                              <span class="text-danger" id="facility_logo"></span>
+                                           </div>
                                       </div>
                                   </div>
                                   <div class="row">
