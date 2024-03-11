@@ -23,11 +23,11 @@
                   foreach($stream as $stream) { ?> 
                      <div class="shaDo m-2 pb-3" style="background:url('<?= ($stream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$stream['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$stream['stream_image'] : base_url('assets/site/img/Frame-5.png');?>'); background-size: 100% 100%;">
                         <div class="row">
-                           <div class="col-9">
+                           <div class="col-8">
                               <div class="nopadSty">
                                  <h5 class="card-title"><strong><?= @$stream['stream']; ?></strong></h5>
                                  <p class="card-text"><?= @excerpt($stream['description'],80); ?></p>
-                                 <a class="btn btn-primary" href="<?= base_url('courses').'/'.$stream['id']; ?>">Select CTA  <i class="fa fa-angle-right"></i> </a>
+                                 <a class="btn btn-primary" href="<?= base_url('courses').'/'.$stream['id']; ?>">Explore More  <i class="fa fa-angle-right"></i> </a>
                               </div>
                            </div>
                         </div>

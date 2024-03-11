@@ -3,6 +3,8 @@
     .input-group{
         background-color: #183e65;
     }
+    .add{width: 52px;text-align: center;}
+        label,input,.form-control{color: #fff !important}
 </style>
       <main>
          <div class="position-relative overflow-hidden p-md-5 m-md-3 text-center bg-light" style="background-image: url(<?=base_url('assets/site/img/profileheader-bg.png')?>);
@@ -32,8 +34,8 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/ststse.png')?>" alt=""> </span>
-                        <select class="form-control raformsss"  name="profile[user][current_state]" id="">
+                        <span class="input-group-text appendCXCss " id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/ststse.png')?>" alt=""> </span>
+                        <select class="form-control "  name="profile[user][current_state]" id="">
                             <option value="">Select State</option>
                             <?php 
                             if(!empty($states)){
@@ -43,8 +45,8 @@
                         </select>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vectorss.png')?>" alt=""> </span>
-                        <select class="form-control raformsss" name="profile[user][current_city]" id="">
+                        <span class="input-group-text appendCXCss " id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vectorss.png')?>" alt=""> </span>
+                        <select class="form-control " name="profile[user][current_city]" id="">
                             <option value="">City & District</option>
                             <?php 
                             if(!empty($district)){
@@ -54,8 +56,8 @@
                         </select>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/callls.png')?>" alt=""> </span>
-                        <input type="text" class="form-control raformsss" placeholder="123-456-7890" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['mobile']; ?>" name="profile[user][mobile]">
+                        <span class="input-group-text appendCXCss " id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/callls.png')?>" alt=""> </span>
+                        <input type="text" class="form-control " placeholder="123-456-7890" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['mobile']; ?>" name="profile[user][mobile]">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text appendCXCss raforms" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/emails.png')?>" alt=""> </span>

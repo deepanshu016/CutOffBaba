@@ -84,11 +84,11 @@
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarcutoff">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/counselling-level'); ?>" data-key="t-calendar">
                                     Counselling Level
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/cutoff-head-name'); ?>" data-key="t-calendar">
                                     Cutoff Head Name

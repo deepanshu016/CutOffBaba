@@ -129,8 +129,9 @@
                     <table class="table table-bordered">
                     <thead class="bgCutTbale">
                         <tr>
-                        <th scope="col">Txn ID</th>
+
                         <th scope="col">Date</th>
+                        <th scope="col">Txn ID</th>
                         <th scope="col">Amount</th> 
                         </tr>
                     </thead>
@@ -138,8 +139,9 @@
                      <?php if(!empty($paymentsData)) {
                         foreach($paymentsData as $payment) { ?>
                         <tr> 
-                           <td><?= $payment['txn_id']; ?></td>
                            <td><?= date('d M Y',strtotime($payment['purchased_date'])); ?></td>
+                           <td><?= $payment['txn_id']; ?></td>
+                           
                            <td>₹ <?= $payment['amount']; ?></td>
                         </tr>
                      <?php } } ?>
