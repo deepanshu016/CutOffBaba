@@ -51,9 +51,9 @@
                         </ul>
                     </div>
                 </li>
-                 <li class="nav-item">
-                                <a href="<?= base_url('admin/exams'); ?>" class="nav-link" data-key="t-calendar"><i class="ri-apps-2-line"></i> <span data-key="t-apps"> Exam Master </span> </a>
-                            </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('admin/exams'); ?>" class="nav-link" data-key="t-calendar"><i class="ri-apps-2-line"></i> <span data-key="t-apps"> Exam Master </span> </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarCourse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCourse">
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Course Master</span>
@@ -183,6 +183,11 @@
                 <li class="nav-item">
                     <a class="nav-link menu-link"  href="<?= base_url('admin/counselling-plan'); ?>">
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">Counselling Plan Master</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link"  href="<?= base_url('admin/candidate'); ?>">
+                        <i class="ri-user-5-line"></i> <span data-key="t-landing">Candidate</span>
                     </a>
                 </li>
                 <li class="nav-item">

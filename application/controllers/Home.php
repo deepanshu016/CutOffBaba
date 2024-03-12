@@ -61,6 +61,7 @@ class Home extends MY_Controller {
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
 		$this->load->view('site/about_us_course',$data);
 	}
 

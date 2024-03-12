@@ -504,3 +504,4 @@ $route['admin/logout'] = 'Admin/Authenticate/logout';
 $route['admin/settings'] = 'Admin/Settings/index';
 $route['admin/update-site-settings'] = 'Admin/Settings/updateSiteSettings';
 $route['admin/get-branches'] = 'Admin/Common/getBranchesByCourse';
+$route['admin/candidate'] = 'Admin/Candidate/index';

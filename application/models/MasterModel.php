@@ -185,12 +185,12 @@ class MasterModel extends CI_Model {
 
 
 	function getDomicileCategories($user_data){
-		$head_data = $this->db->select('id')->from('tbl_counselling_head')->where('state_id',$user_data['current_state'])->get()->result_array();
-		$headIds =   array_column($head_data,'id');
-		if(empty($headIds)){
+		$state_data = $this->db->select('state_id')->from('tbl_counselling_head')->where('level_id',2)->get()->result_array();
+		$stateIds =   array_column($state_data,'state_id');
+		if(empty($stateIds)){
 			return [];
 		}
-		return $this->db->select('*')->from('tbl_category')->where_in('head_id', $headIds)->get()->result_array();
+		return $this->db->select('*')->from('tbl_state')->where_in('id', $stateIds)->get()->result_array();
 	}
 	public function updateCoursePreferences($table, $data) {
 		$course_data = $data;

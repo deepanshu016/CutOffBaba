@@ -14,13 +14,13 @@
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
    </div>
-   <div class=" w-100 my-md-3 ps-md-3 bg-light">
+   <div class="w-100 my-md-3 ps-md-3 bg-light">
       <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
          <h4 class="text-start">State wise colleges</h4>
          
       </div> 
-      <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="row ">
+      <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="row">
                <?php 
                if(!empty($stateList)) {
                   foreach($stateList as $state) { ?>

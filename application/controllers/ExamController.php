@@ -32,7 +32,7 @@ class ExamController extends MY_Controller {
         $html = '';
         $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
         $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id="">';
-        $html  .= '<option value="">Select Sub Category</option>';
+        $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
             $html  .='<option value="'.$sub['id'].'">'.ucwords($sub['sub_category_name']).'</option>';
         }

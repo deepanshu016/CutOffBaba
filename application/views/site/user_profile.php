@@ -76,47 +76,105 @@
          <section class="bodyCtion">
             <div class="container">
                <div class="row">
-                  <div class="col-md-12 col">
-                     <div class="carders">
-                        <img src="<?=base_url('assets/site/img/loty.png')?>" class="card-img-top" alt="...">
-                        <div class="text-center">
-                           <h5 class="cardtitles">Lorem Ipsum</h5>
-                           <p class="card-text ptsgacss">140</p>
+               <?php if(!empty($coursesList)) { 
+                  foreach($coursesList as $course) { ?>
+                  <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                     <div class="card shaDo mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                           <div class="col-md-9 col">
+                              <div class="card-body nopad">
+                                 <h5 class="card-title">Explore <?= @$course['course']; ?></h5>
+                                 <p class="card-text nop"><?= $course['course_full_name']; ?></p>
+                                 <a class="text-dark text-decoration-none" href="<?= base_url('about-course').'/'.$course['id']; ?>">Explore More  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col">
+                              <img src="<?= ($course['course_icon'] != '' && file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>" class="img-fluid rounded-start" alt="...">
+                           </div>
                         </div>
                      </div>
                   </div>
-                  
-                  <div class="col-md-12 col">
-                     <div class="carders">
-                        <img src="<?=base_url('assets/site/img/lio.png')?>" class="card-img-top" alt="...">
-                        <div class="text-center">
-                           <h5 class="cardtitles">Lorem Ipsum</h5>
-                           <p class="card-text ptsgacss">140</p>
+               <?php } } ?>
+               <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+               <div class="card shaDo mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                     <div class="col-md-9 col">
+                        <div class="card-body nopad">
+                           <h5 class="card-title">College Predictor</h5>
+                           <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
+                           <a class="text-dark text-decoration-none" href="<?= base_url('college-predictor'); ?>">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
                         </div>
+                     </div>
+                     <div class="col-md-3 col">
+                        <img src="<?= base_url('assets/site/img/medical-tr.png'); ?>" class="img-fluid rounded-start" alt="...">
                      </div>
                   </div>
                </div>
-
-               <div class="row">
-                  <div class="col-md-12 col">
-                     <div class="carders">
-                        <img src="<?=base_url('assets/site/img/loty.png')?>" class="card-img-top" alt="...">
-                        <div class="text-center">
-                           <h5 class="cardtitles">Lorem Ipsum</h5>
-                           <p class="card-text ptsgacss">140</p>
+            </div>
+            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+               <div class="card shaDo mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                     <div class="col-md-9 col">
+                        <div class="card-body nopad">
+                           <h5 class="card-title">Our Paid Counselling</h5>
+                           <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
+                           <a class="text-dark text-decoration-none" href="<?= base_url('plan'); ?>">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
                         </div>
                      </div>
-                  </div>
-                  
-                  <div class="col-md-12 col">
-                     <div class="carders">
-                        <img src="<?=base_url('assets/site/img/lio.png')?>" class="card-img-top" alt="...">
-                        <div class="text-center">
-                           <h5 class="cardtitles">Lorem Ipsum</h5>
-                           <p class="card-text ptsgacss">140</p>
-                        </div>
+                     <div class="col-md-3 col">
+                        <img src="<?= base_url('assets/site/img/medical-tr.png'); ?>" class="img-fluid rounded-start" alt="...">
                      </div>
                   </div>
+               </div>
+            </div>
+            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+               <div class="card shaDo mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                     <div class="col-md-9 col">
+                        <div class="card-body nopad">
+                           <h5 class="card-title">College CutOff</h5>
+                           <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
+                           <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col">
+                        <img src="<?= base_url('assets/site/img/medical-tr.png'); ?>" class="img-fluid rounded-start" alt="...">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+               <div class="card shaDo mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                     <div class="col-md-9 col">
+                        <div class="card-body nopad">
+                           <h5 class="card-title">College Reviews</h5>
+                           <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
+                           <a class="text-dark text-decoration-none" href="<?= base_url('testimonial-explore'); ?>">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col">
+                        <img src="<?= base_url('assets/site/img/medical-tr.png'); ?>" class="img-fluid rounded-start" alt="...">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+               <div class="card shaDo mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                     <div class="col-md-9 col">
+                        <div class="card-body nopad">
+                           <h5 class="card-title">Other Courses</h5>
+                           <p class="card-text nop">Sed ut perspiciatis unde omnis </p>
+                           <a class="text-dark text-decoration-none" href="">Select CTA  <img src="<?=base_url('assets/site/img/CaretRight.png')?>"> </a>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col">
+                        <img src="<?= base_url('assets/site/img/medical-tr.png'); ?>" class="img-fluid rounded-start" alt="...">
+                     </div>
+                  </div>
+               </div>
+            </div>
                </div>
             </div>
          </section>

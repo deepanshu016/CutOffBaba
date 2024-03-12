@@ -3,6 +3,7 @@
   if(!empty($coursesList)){
     foreach($coursesList as $key=>$course){ 
         if(!empty($course['category_data'])){
+            $userPreferences = $this->db->select('*')->from('tbl_user_course_preferences')->where('user_id',$this->session->userdata('user')['id'])->where('course_id',$course['id'])->get()->result_array();
 ?>
     <div class="accordion-item">
         <h2 class="accordion-header">
@@ -11,7 +12,7 @@
            <input type="hidden" class="form-control" name="profile[course_data][<?=$key; ?>][course_id]" value="<?= @$course['id'];?>">
             </button>
         </h2>
-        <div id="faq-content-<?= $key; ?>" class="accordion-collapse collapse show" data-bs-parent="#faqlist">
+        <div id="faq-content-<?= $key; ?>" class="accordion-collapse collapse <?= (empty($userPreferences)) ? 'show' : ''; ?>" data-bs-parent="#faqlist">
             <div class="accordion-body fcXvcs">
             <div class="accordion" id="accordionExample" style="background-color:#141414!important;">
                 <div class="accordion-item"> 
@@ -21,7 +22,7 @@
                         <div class="input-group mb-3 category-wrapper">
                             <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
                             <select class="form-control raffss get-sub-category" data-key="<?= $key; ?>" data-keys="<?= $keys; ?>"  name="profile[course_data][<?=$key; ?>][category][<?=$keys; ?>][category_id]" id="">
-                                <option value="">Select Category</option>
+                                <option value="">Select Central Category</option>
                                 <?php 
                                     foreach($course['category_data'] as $category) { 
                                         $categoryData = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'category_id'=>$category['id'],'course_id'=>$course['id']])->get()->row_array();
@@ -38,14 +39,14 @@
                         <div class="input-group mb-3 sub-category-data"></div>
                 <?php } } ?>
                     <div class="input-group mb-3 category-wrapper">
-                            <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
-                            <select class="form-control raffss get-sub-category"  name="profile[course_data][<?=$key; ?>][domicile_category_id]" id="">
-                                <option value="">Select Domicile Category</option>
-                                <?php 
-                                    foreach($domicileCategory as $domicile) { ?>
-                                        <option value="<?= $domicile['id']; ?>"><?= $domicile['category_name']; ?></option>
-                                <?php } ?>
-                            </select>
+                        <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
+                        <select class="form-control raffss get-domicile-sub-category"  name="profile[course_data][<?=$key; ?>][domicile_category_id]" id="">
+                            <option value="">Select Domicile Central</option>
+                            <?php 
+                                foreach($domicileCategory as $domicile) { ?>
+                                    <option value="<?= $domicile['id']; ?>"><?= $domicile['name']; ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 <?php } ?>
                 </div>
@@ -54,32 +55,5 @@
     </div>
 <?php } } ?>     
 
-    <div class="rankTest">
-        <div class="row">
-            <div class="col-4 ">
-            <select class="form-select leCols" aria-label="Default select example">
-                <option selected>Enter AIR</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            </div>
-            <div class="col-4 ">
-            <select class="form-select leCols" aria-label="Default select example">
-                <option selected>State Rank</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            </div>
-            <div class="col-4 ">
-            <select class="form-select leCols" aria-label="Default select example">
-                <option selected>Marks</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            </div>
-        </div>
-    </div>
+    
 </div>

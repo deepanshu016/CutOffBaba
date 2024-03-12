@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 11, 2024 at 08:24 PM
+-- Generation Time: Mar 12, 2024 at 07:57 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.1.26
 
@@ -1070,10 +1070,10 @@ CREATE TABLE IF NOT EXISTS `tbl_counselling_head` (
 --
 
 INSERT INTO `tbl_counselling_head` (`id`, `head_name`, `course_id`, `level_id`, `exams`, `state_id`, `college`) VALUES
-(2, 'BIHAR MBBS', '3,5', 2, '1|3', 15, ''),
-(3, 'BIHAR BDS', '3,2', 2, '4_UG', 12, ''),
-(4, 'BIHAR MD', '2,4,5', 2, '4_UG', 12, ''),
-(5, 'BIHAR Phd', '5,6', 2, '4_UG', 12, '');
+(2, 'BIHAR MBBS', '3,5', 2, '1,3', 15, ''),
+(3, 'BIHAR BDS', '3,2', 2, '4', 12, ''),
+(4, 'BIHAR MD', '2,4,5', 2, '4', 12, ''),
+(5, 'BIHAR Phd', '5,6', 2, '4', 12, '');
 
 -- --------------------------------------------------------
 
@@ -2413,6 +2413,9 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `current_city` int DEFAULT NULL,
   `selected_exam` int DEFAULT NULL,
   `domicile` int DEFAULT NULL,
+  `air` varchar(55) DEFAULT NULL,
+  `sr` varchar(55) DEFAULT NULL,
+  `marks` varchar(55) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -2421,20 +2424,20 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 -- Dumping data for table `tbl_users`
 --
 
-INSERT INTO `tbl_users` (`id`, `name`, `email`, `mobile`, `user_type`, `token`, `image`, `password`, `status`, `created_at`, `updated_at`, `quiz_status`, `quiz_result`, `email_verified`, `username`, `current_address`, `permanent_address`, `city`, `is_address_same`, `profile_type`, `permanent_state`, `permanent_city`, `permanent_pincode`, `current_pincode`, `current_state`, `current_city`, `selected_exam`, `domicile`) VALUES
-(5, 'Admin', 'admin@gmail.com', '453555345', '5', NULL, NULL, '7c4a8d09ca3762af61e59520943dc26494f8941b', 0, '2023-06-07 14:39:56', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(37, 'Mukesh', 'mukesh@gmail.com', '8877552344', '1', NULL, NULL, 'dfb14e0152cba3bec7e2f8fc611573d7cc30cb84', 0, '2023-10-15 14:35:05', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(38, 'dsfgdfgfdg', 'admins@gmail.com', '2343243243', '1', NULL, NULL, 'a29c57c6894dee6e8251510d58c07078ee3f49bf', 0, '2023-10-15 15:04:19', NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(39, 'Gautam Ankit', 'admissn@gmail.com', '1234567890', '1', NULL, NULL, 'd82548a8ca229a3342a9988deaeb90658508d8aa', 0, '2023-10-15 16:29:54', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(40, 'dfgffdgdfg', 'admidfgfdgn@gmail.com', '9898989898', '1', NULL, NULL, 'feb1d0231771f8412274d9cd1937f05a174ed930', 0, '2023-10-15 16:49:29', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(41, 'cvgfygfh', 'admindsdd@gmail.com', '2323232323', '1', NULL, NULL, '29f2a9585888905331adfc092eecc8685a760e0b', 0, '2023-10-15 16:50:19', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(42, 'sdfdsf', 'admsdin@gmail.com', '3343243243', '1', NULL, NULL, '873e665305dd26f89a41b5881d13443ee9b04ace', 0, '2023-10-16 04:23:53', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(43, 'Deepanshu Mishra', 'mdeepanshu20tryy5@gmail.com', '778693128677', '1', NULL, 'fa3d58ce66792f2e41fe4aa38ca002e3.png', '30769a4ee2483bbbc2c9ebdef06a930a5bb69209', 1, '2023-10-16 11:32:38', NULL, 1, 0, 0, 'deepanshu', 'Lucknow', 'Lucknow', 'Lucknow', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(44, 'Deepanshu Mishra', 'mdeepanshu1234205@gmail.com', '778693128643', '1', NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', 1, '2023-10-17 11:04:38', NULL, 1, 0, 0, NULL, 'dfsdgdfg', 'dfsgdfgdgdfg', NULL, 0, '3', 4, 62, '127', '453534534', 13, 127, NULL, 0),
-(45, 'Deepanshu Mishra', 'mdeepanshu205@gmail.com', '7788990055', '1', NULL, '5b815db2686d605c7409069013c2e71d.JPG', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 1, '2023-10-18 12:21:03', '2023-10-19 01:09:51', 1, 1, 1, NULL, 'fghd', 'fgdhfg', NULL, 0, '1', 10, 249, '454354', '677567', 15, 368, NULL, 0),
-(46, 'Deepanshu Mishra', 'mishra134400@gmail.com', '77869312866665', '1', NULL, NULL, '845db344c37ba8e692b6fa190265424ab8622aa8', 0, '2024-02-08 18:33:39', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 12, NULL, NULL, NULL, 15, 368, 4, 4),
-(48, 'Deepanshu Mishra', 'mishra100@gmail.com', '7786931286', '1', NULL, NULL, '7c4a8d09ca3762af61e59520943dc26494f8941b', 0, '2024-02-08 18:34:27', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 12, NULL, NULL, NULL, 15, 368, 4, 0),
-(49, 'Monu Mishra', 'monu@mail.com', '7788996633', '1', NULL, NULL, '845db344c37ba8e692b6fa190265424ab8622aa8', 0, '2024-03-11 17:36:51', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 11, NULL, NULL, NULL, NULL, NULL, 6, NULL);
+INSERT INTO `tbl_users` (`id`, `name`, `email`, `mobile`, `user_type`, `token`, `image`, `password`, `status`, `created_at`, `updated_at`, `quiz_status`, `quiz_result`, `email_verified`, `username`, `current_address`, `permanent_address`, `city`, `is_address_same`, `profile_type`, `permanent_state`, `permanent_city`, `permanent_pincode`, `current_pincode`, `current_state`, `current_city`, `selected_exam`, `domicile`, `air`, `sr`, `marks`) VALUES
+(5, 'Admin', 'admin@gmail.com', '453555345', '5', NULL, NULL, '7c4a8d09ca3762af61e59520943dc26494f8941b', 0, '2023-06-07 14:39:56', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(37, 'Mukesh', 'mukesh@gmail.com', '8877552344', '1', NULL, NULL, 'dfb14e0152cba3bec7e2f8fc611573d7cc30cb84', 0, '2023-10-15 14:35:05', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(38, 'dsfgdfgfdg', 'admins@gmail.com', '2343243243', '1', NULL, NULL, 'a29c57c6894dee6e8251510d58c07078ee3f49bf', 0, '2023-10-15 15:04:19', NULL, 1, 1, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(39, 'Gautam Ankit', 'admissn@gmail.com', '1234567890', '1', NULL, NULL, 'd82548a8ca229a3342a9988deaeb90658508d8aa', 0, '2023-10-15 16:29:54', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(40, 'dfgffdgdfg', 'admidfgfdgn@gmail.com', '9898989898', '1', NULL, NULL, 'feb1d0231771f8412274d9cd1937f05a174ed930', 0, '2023-10-15 16:49:29', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(41, 'cvgfygfh', 'admindsdd@gmail.com', '2323232323', '1', NULL, NULL, '29f2a9585888905331adfc092eecc8685a760e0b', 0, '2023-10-15 16:50:19', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(42, 'sdfdsf', 'admsdin@gmail.com', '3343243243', '1', NULL, NULL, '873e665305dd26f89a41b5881d13443ee9b04ace', 0, '2023-10-16 04:23:53', NULL, 1, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(43, 'Deepanshu Mishra', 'mdeepanshu20tryy5@gmail.com', '778693128677', '1', NULL, 'fa3d58ce66792f2e41fe4aa38ca002e3.png', '30769a4ee2483bbbc2c9ebdef06a930a5bb69209', 1, '2023-10-16 11:32:38', NULL, 1, 0, 0, 'deepanshu', 'Lucknow', 'Lucknow', 'Lucknow', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(44, 'Deepanshu Mishra', 'mdeepanshu1234205@gmail.com', '778693128643', '1', NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', 1, '2023-10-17 11:04:38', NULL, 1, 0, 0, NULL, 'dfsdgdfg', 'dfsgdfgdgdfg', NULL, 0, '3', 4, 62, '127', '453534534', 13, 127, NULL, 0, NULL, NULL, NULL),
+(45, 'Deepanshu Mishra', 'mdeepanshu205@gmail.com', '7788990055', '1', NULL, '5b815db2686d605c7409069013c2e71d.JPG', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 1, '2023-10-18 12:21:03', '2023-10-19 01:09:51', 1, 1, 1, NULL, 'fghd', 'fgdhfg', NULL, 0, '1', 10, 249, '454354', '677567', 15, 368, NULL, 0, NULL, NULL, NULL),
+(46, 'Deepanshu Mishra', 'mishra134400@gmail.com', '77869312866665', '1', NULL, NULL, '845db344c37ba8e692b6fa190265424ab8622aa8', 0, '2024-02-08 18:33:39', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 12, NULL, NULL, NULL, 15, 368, 4, 4, NULL, NULL, NULL),
+(48, 'Deepanshu Mishra', 'mishra100@gmail.com', '7786931286', '1', NULL, NULL, '7c4a8d09ca3762af61e59520943dc26494f8941b', 0, '2024-02-08 18:34:27', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 12, NULL, NULL, NULL, 15, 368, 4, 0, '75', '128', '124'),
+(49, 'Monu Mishra', 'monu@mail.com', '7788996633', '1', NULL, NULL, '845db344c37ba8e692b6fa190265424ab8622aa8', 0, '2024-03-11 17:36:51', NULL, 0, 0, 0, NULL, NULL, NULL, NULL, 1, NULL, 11, NULL, NULL, NULL, NULL, NULL, 6, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2454,7 +2457,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user_course_preferences` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tbl_user_course_preferences`
@@ -2463,7 +2466,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user_course_preferences` (
 INSERT INTO `tbl_user_course_preferences` (`id`, `user_id`, `course_id`, `category_id`, `sub_category_id`, `domicile_category_id`, `status`, `created_at`, `updated_at`) VALUES
 (4, 46, 3, 4, 12, NULL, '0', '2024-03-02 20:25:31', NULL),
 (3, 46, 3, 2, 10, NULL, '0', '2024-03-02 20:25:31', NULL),
-(5, 46, 3, 4, 12, 4, '0', '2024-03-02 20:25:31', NULL);
+(5, 46, 3, 4, 12, 4, '0', '2024-03-02 20:25:31', NULL),
+(12, 48, 3, 4, NULL, NULL, '0', '2024-03-12 18:35:17', NULL),
+(11, 48, 3, 4, NULL, NULL, '0', '2024-03-12 18:35:17', NULL);
 
 -- --------------------------------------------------------
 

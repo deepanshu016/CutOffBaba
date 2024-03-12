@@ -4,7 +4,7 @@
          <div class="position-relative overflow-hidden   p-md-5 m-md-3 text-center bg-light">
             
             <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-               <h4 class=" fw-bold text-start txtColor"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> &nbsp;  Know about MBBS</h4>
+               <h4 class=" fw-bold text-start txtColor"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> &nbsp;  Know about <?= $selectedCourse['course']; ?></h4>
                <div class="card radius">
                   <img src="<?=base_url('assets/site/img/imags.png')?>" class="card-img cuysss " alt="doc-pic">
                   <div class="card-img-overlay mbbsOverlay">
@@ -81,7 +81,7 @@
                     <div class="accordion-item shadow-sm">
                       <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          Eligibility criteria for MBBS
+                          Eligibility criteria for <?= $selectedCourse['course']; ?>
                         </button>
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -113,118 +113,27 @@
             </div> 
 
              <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-              <h4 class="text-start">State wise MBBS</h4>
+              <h4 class="text-start">State wise <?= $selectedCourse['course']; ?></h4>
               <p class="text-start" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
             </div>
 
             <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div class="row ">
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Gujarat</p>
-                       </div>
+            <div class="row">
+               <?php 
+               if(!empty($stateList)) {
+                  foreach($stateList as $state) { ?>
+               <div class="col col-md-2 col-sm-2 lesCols">
+                  <div class="card card-body">
+                     <a href="<?= base_url('state-wise-colleges').'/'.$state['id'].'/'.$selectedCourse['id']; ?>">
+                     <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
+                     <div class="card-body minPadding">
+                        <p class="card-text"><?= $state['name']; ?></p>
                      </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Chattisgarh</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Haryana</p>
-                       </div>
-                     </div>
-                   </div> 
-                </div>
-                 <div class="mgtus"></div>
-                <div class="row ">
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Gujarat</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Karnataka</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Maharashtra</p>
-                       </div>
-                     </div>
-                   </div> 
-                </div>
-                 <div class="mgtus"></div>
-                <div class="row ">
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Delhi</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Odisha</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Telangana</p>
-                       </div>
-                     </div>
-                   </div> 
-                </div>
-                 <div class="mgtus"></div>
-                <div class="row ">
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Uttar Pradesh</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">West Bengal</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col col-md-2 col-sm-2 lesCols">
-                      <div class="card card-body">
-                       <img src="<?=base_url('assets/site/img/gujarat.png')?>" class="card-img-top" alt="...">
-                       <div class="card-body minPadding">
-                         <p class="card-text">Andhra Pradesh</p>
-                       </div>
-                     </div>
-                   </div> 
-                </div>
+                     </a>
+                  </div>
+               </div>
+               <?php } } ?>
+            </div>
                 <br>
             </div>
          </div>

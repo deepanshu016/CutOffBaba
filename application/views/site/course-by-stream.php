@@ -57,7 +57,7 @@
                      </div>
                   </div>
                   <div class="col-md-3 col">
-                     <img src="<?= ($course['course_icon'] !== '' && !file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>" class="img-fluid rounded-start" alt="...">
+                     <img src="<?= ($course['course_icon'] != '' && file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>" class="img-fluid rounded-start" alt="...">
                   </div>
                </div>
             </div>
@@ -210,7 +210,7 @@
                   </div>
                </div>
             </div>
-            <?php } } ?>
+   <?php } } ?>
          </div>
    
  </div>

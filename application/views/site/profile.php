@@ -71,7 +71,7 @@
             <div class="container">
                 <div class="row">
                 <div class="col-md-12">
-                  <h4 class="f16spx">Examanation/Reservation Information</h4>
+                  <h4 class="f16spx">Examination</h4>
                     <div class="input-group mb-3">
                         <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
                         <select class="form-control raffss get-courses"  name="profile[user][selected_exam]" id="">
@@ -84,7 +84,21 @@
                         </select>
                     </div>
                 </div>
+                <div class="rankTest">
+                    <div class="row">
+                        <div class="col-4 ">
+                            <input type="text" class="form-control" placeholder="Enter AIR" name="profile[user][air]" value="<?= @$user['air']; ?>"> 
+                        </div>
+                        <div class="col-4 ">
+                            <input type="text" class="form-control" placeholder="Enter SR" name="profile[user][sr]" value="<?= @$user['sr']; ?>">
+                        </div>
+                        <div class="col-4 ">
+                            <input type="text" class="form-control" placeholder="Enter Marks"name="profile[user][marks]" value="<?= @$user['marks']; ?>">
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12 course-data">
+                    <h4 class="f16spx">Reservation Details</h4>
                     <?php if(!empty($coursesList)) { 
                         $this->load->view('site/course_data', ['coursesList'=>$coursesList,'levelData'=>$levelData,'domicileCategory'=>$domicileCategory,'user'=>$user]);
                     } ?>
@@ -136,6 +150,30 @@
             CommonLib.notification.error(e.responseJSON.errors);
         });
     });
+    $("body").on("change",".get-domicile-sub-category",function(){
+        var currentWrapper = $(this);
+        var catId=currentWrapper.val();
+        var key=currentWrapper.data('key');
+        var keys=currentWrapper.data('keys');
+        var url = "<?= base_url('get-domicile-sub-category'); ?>";
+        var formData = new FormData();
+        formData.append('id',catId);
+        formData.append('key',key);
+        formData.append('keys',keys);
+        CommonLib.ajaxForm(formData,'POST',url).then(d=>{
+            console.log("Response",d);
+            if(d.status === 200){
+                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
+            }else{
+                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+                CommonLib.notification.error(d.message);
+            }
+        }).catch(e=>{
+            console.error("Error:", e);
+            currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+            CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
     $("body").on("submit","#profileForm",function(e){
         e.preventDefault();
         var currentWrapper = $(this);
@@ -146,7 +184,10 @@
         CommonLib.ajaxForm(formData,method,url).then(d=>{
             console.log("Response",d);
             if(d.status === 200){
-                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
+                CommonLib.notification.success(d.message);
+                setTimeout(function(){
+                    window.location.href = d.url;
+                },2000);
             }else{
                 currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
                 CommonLib.notification.error(d.message);
