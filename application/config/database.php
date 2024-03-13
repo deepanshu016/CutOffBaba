@@ -82,7 +82,7 @@ $db['default'] = array(
 
 
 
-	'stricton' => FALSE,
+	'strict' => FALSE,
 
 
 

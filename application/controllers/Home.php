@@ -5,14 +5,7 @@ class Home extends MY_Controller {
 	public function __construct() {
    	 	parent::__construct();
    	 	$this->load->model('SiteSettings','site');
-   	 	$this->load->model('StudentReview','review');
-   	 	$this->load->model('CourseCategory','category');
-   	 	$this->load->model('CompanyModel','company');
-   	 	$this->load->model('BlogModel','blog');
    	 	$this->load->model('MasterModel','master');
-   	 	$this->load->model('CourseModel','course');
-   	 	$this->load->model('SiteSettings','site');
-        $this->load->model('SliderModel','slider');
     }
 	public function index()
 	{
@@ -167,5 +160,37 @@ class Home extends MY_Controller {
 		$data['branchList'] = $this->master->getRecords('tbl_branch',[]);	
 		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
 		$this->load->view('site/state-wise-colleges',$data);
+	}
+
+	public function searchPage(){
+		$data['title'] = 'Search | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$this->load->view('site/search_page',$data);
+	}
+	public function searchContent(){
+		$keyword = $this->input->post('keyword');
+		$data['stateWiseColleges'] = $this->master->getCollegeForSearch('tbl_college',$keyword);
+		$data['coursesByKeyword'] = $this->master->getCoursesForSearch('tbl_course',$keyword);
+		$data['stateByKeyword'] = $this->master->getStateForSearch('tbl_state',$keyword);
+		$data['keyword'] = $keyword;
+		$html = $this->load->view('site/child_pages/search_data',$data,true);
+		$response = array('status' => 200,'message' => 'Profile Updated successfully','url'=>'','html'=>$html);
+		echo json_encode($response);
+		return false;
+	}
+
+	public function allColleges()
+	{
+		$data['title'] = 'Colleges | CUTOFFBABA';		
+		$reqData['exam'] = $this->session->userdata('user')['selected_exam'];
+		$data['stateWiseColleges'] = $this->master->getCollegesExamWise($reqData);
+		$data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type',[]);	
+		$data['stateList'] = $this->master->getRecords('tbl_state',[]);	
+		$data['cityList'] = $this->master->getRecords('tbl_city',[]);	
+		$data['examList'] = $this->master->getRecords('tbl_exam',[]);	
+		$data['facilityList'] = $this->master->getRecords('tbl_facilities',[]);	
+		$data['branchList'] = $this->master->getRecords('tbl_branch',[]);	
+		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
+		$this->load->view('site/all_colleges',$data);
 	}
 }

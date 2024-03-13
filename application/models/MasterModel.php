@@ -290,6 +290,70 @@ class MasterModel extends CI_Model {
 				->join('tbl_ownership as o', 'o.id = c.ownership');
 		return $college_query->get()->result_array();
 	}
+
+
+	public function getCollegeForSearch($table, $keyword){
+		$collegeList = $this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+						c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
+						c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
+						cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title')->from('tbl_college as c')
+					  ->like('full_name', $keyword, 'both')
+					  ->or_like('short_name', $keyword, 'both')
+					  ->or_like('popular_name_one', $keyword, 'both')
+					  ->or_like('popular_name_two', $keyword, 'both')
+					  ->or_like('university_name', $keyword, 'both')
+					  ->or_like('keywords', $keyword, 'both')
+					  ->or_like('tags', $keyword, 'both');
+		$collegeList = $collegeList->join('tbl_state as s', 's.id = c.state')
+				->join('tbl_city as cit', 'cit.id = c.city')
+				->join('tbl_country as count', 'count.id = c.country')
+				->join('tbl_approval as a', 'a.id = c.approved_by')
+				->join('tbl_ownership as o', 'o.id = c.ownership');
+		return $collegeList->get()->result_array();
+	}
+	public function getCoursesForSearch($table, $keyword){
+		$courseList = $this->db->select('*')->from($table)
+					  ->like('course', $keyword, 'both')
+					  ->or_like('course_full_name', $keyword, 'both')
+					  ->or_like('course_short_name', $keyword, 'both')
+					  ->or_like('course_eligibility', $keyword, 'both')
+					  ->or_like('course_opportunity', $keyword, 'both');
+		return $courseList->get()->result_array();
+	}
+	public function getStateForSearch($table, $keyword){
+		$stateList = $this->db->select('*')->from($table)
+					->like('name', $keyword, 'both');
+		return $stateList->get()->result_array();
+	}
+	public function getCollegesExamWise($data=[]){
+		$course_ids = [];
+		if($data && $data['exam'] != ''){
+			$courseData = $this->db->select('*')->from('tbl_course')->where("FIND_IN_SET(" . $data['exam']. ", exam) > 0", NULL, FALSE)->get()->result_array();
+			if(!empty($courseData)){
+				$course_ids = array_merge($course_ids, array_column($courseData,'id'));
+			}
+		}
+		if(!empty($course_ids)){
+			$college_query  = $this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+			c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
+			c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
+			cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title')->from('tbl_college as c');
+				
+			foreach ($course_ids as $course_id) {
+				if($course_id){
+					$college_query->or_where("FIND_IN_SET(?, c.course_offered) > 0", $course_id);
+				}
+			}
+			$college_query = $college_query->join('tbl_state as s', 's.id = c.state')
+					->join('tbl_city as cit', 'cit.id = c.city')
+					->join('tbl_country as count', 'count.id = c.country')
+					->join('tbl_approval as a', 'a.id = c.approved_by')
+					->join('tbl_ownership as o', 'o.id = c.ownership');
+			return $college_query->get()->result_array();
+		}else{
+			return [];
+		}
+	}
 }
 
 ?>
