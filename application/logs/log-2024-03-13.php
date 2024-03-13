@@ -2253,3 +2253,31 @@ ERROR - 2024-03-13 20:13:55 --> 404 Page Not Found: Faviconico/index
 DEBUG - 2024-03-13 20:13:56 --> UTF-8 Support Enabled
 DEBUG - 2024-03-13 20:13:56 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-03-13 20:13:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-13 20:14:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-13 20:14:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-13 20:14:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-13 20:14:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:48 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-13 20:14:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-13 20:14:48 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:48 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-13 20:14:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-13 20:14:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-13 20:14:51 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:51 --> No URI present. Default controller set.
+DEBUG - 2024-03-13 20:14:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-13 20:14:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-13 20:14:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:52 --> UTF-8 Support Enabled
+DEBUG - 2024-03-13 20:14:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:52 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-13 20:14:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-13 20:14:52 --> 404 Page Not Found: Assets/site
