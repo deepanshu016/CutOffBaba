@@ -33,6 +33,9 @@ class MasterModel extends CI_Model {
 			return $this->db->select('*')->get($table)->result_array();
 		}
 	}
+	function getRecordsWhereIn($table = '',$key_name = '', $data=[]){
+		return $this->db->select('*')->from($table)->where_in($key_name,$data)->get()->result_array();
+	}
 	function getRecordsFindInSet($table = '', $value,$column_name,$condition=[]){
 		$query = $this->db->select('*')->from($table);
 		$value = $this->db->escape($value);
@@ -212,7 +215,9 @@ class MasterModel extends CI_Model {
 				if($course['domicile_category_id'] != ''){
 					$datas['user_id'] = $course_data['user']['id'];
 					$datas['course_id'] = $course['course_id'];
-					$datas['domicile_category_id'] = $course['domicile_category_id'];
+					$datas['state_id'] = $course['domicile_category_id']['state_id'];
+					$datas['domicile_state_category_id'] = $course['domicile_category_id']['domicile_state_category_id'];
+					$datas['domicile_state_sub_category_id'] = $course['domicile_category_id']['domicile_state_sub_category_id'];
 					$result = $this->insert($table,$datas);
 					if($result){
 						$count += 1;
@@ -236,7 +241,6 @@ class MasterModel extends CI_Model {
 		$course_ids = [];
 		$course_ids[] = $course_id;
 		$data['states'] = $state_id;
-		// $course_query = $this->db->select('id')->from('tbl_course');
 		if(isset($data['degree_type'])){
 			$courseData = $this->getRecords('tbl_course',['degree_type'=>$data['degree_type']]);
 			if(!empty($courseData)){
@@ -349,10 +353,37 @@ class MasterModel extends CI_Model {
 					->join('tbl_country as count', 'count.id = c.country')
 					->join('tbl_approval as a', 'a.id = c.approved_by')
 					->join('tbl_ownership as o', 'o.id = c.ownership');
-			return $college_query->get()->result_array();
+			$college_query  = $college_query->get()->result_array();
+			echo $this->db->last_query();die;
 		}else{
 			return [];
 		}
+	}
+	public function getCollegesCourseWise($course_id){
+		$college_query = $this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+						c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
+						c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
+						cit.city as city_name,count.countryCode,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title')->from('tbl_college as c')
+						->where("FIND_IN_SET(" . $course_id. ", c.course_offered) > 0", NULL, FALSE)
+						->join('tbl_state as s', 's.id = c.state')
+						->join('tbl_city as cit', 'cit.id = c.city')
+						->join('tbl_country as count', 'count.id = c.country')
+						->join('tbl_approval as a', 'a.id = c.approved_by')
+						->join('tbl_ownership as o', 'o.id = c.ownership');
+		return  $college_query->get()->result_array();
+	}
+	public function getFullCollegeDetail($college_id){
+		$college_query = $this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
+						c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
+						c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,cit.id as city_id,
+						cit.city as city_name,count.countryCode,count.name as country_name,a.id as approval_id,a.approval,o.id as ownership_id,o.title as ownership_title')->from('tbl_college as c')
+						->where('c.id',$college_id)
+						->join('tbl_state as s', 's.id = c.state')
+						->join('tbl_city as cit', 'cit.id = c.city')
+						->join('tbl_country as count', 'count.id = c.country')
+						->join('tbl_approval as a', 'a.id = c.approved_by')
+						->join('tbl_ownership as o', 'o.id = c.ownership');
+		return  $college_query->get()->row_array();
 	}
 }
 

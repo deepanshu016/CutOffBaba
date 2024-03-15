@@ -1234,3 +1234,176 @@ DEBUG - 2024-03-14 01:43:54 --> Total execution time: 0.0166
 DEBUG - 2024-03-14 01:43:56 --> Total execution time: 0.0299
 DEBUG - 2024-03-14 01:44:48 --> Total execution time: 0.0367
 DEBUG - 2024-03-14 01:44:51 --> Total execution time: 0.0221
+DEBUG - 2024-03-14 18:07:12 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:12 --> No URI present. Default controller set.
+DEBUG - 2024-03-14 18:07:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:07:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:37:12 --> Total execution time: 0.0564
+DEBUG - 2024-03-14 18:07:13 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:13 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-14 18:07:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:15 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:07:15 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:15 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:07:19 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:07:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:37:19 --> Total execution time: 0.0432
+DEBUG - 2024-03-14 18:07:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:07:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:37:21 --> Total execution time: 0.0292
+DEBUG - 2024-03-14 18:07:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:21 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:07:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:21 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:07:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:07:22 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:07:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:07:22 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:08:35 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:08:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:38:35 --> Total execution time: 0.0425
+DEBUG - 2024-03-14 18:08:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:08:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:08:36 --> 404 Page Not Found: Assets/site
+ERROR - 2024-03-14 18:08:36 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:08:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:08:36 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:08:37 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:08:37 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:08:38 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:08:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:08:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:38:38 --> Total execution time: 0.0403
+DEBUG - 2024-03-14 18:09:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:09:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:39:09 --> Total execution time: 0.0161
+DEBUG - 2024-03-14 18:09:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:09 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:09:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:09 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:09:09 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:09 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:09:10 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:10 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-14 18:09:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:09:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-14 23:39:23 --> Total execution time: 0.0278
+DEBUG - 2024-03-14 18:09:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:24 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-14 18:09:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-14 18:09:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-14 23:39:24 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, c.course_offered) >0 '4'
+OR FIND_IN_SET(?, c.course_offered) >0 '7'
+OR FIND_I' at line 8 - Invalid query: SELECT `c`.`id` as `college_id`, `c`.`full_name`, `c`.`slug`, `c`.`short_description`, `c`.`popular_name_one`, `c`.`popular_name_two`, `c`.`establishment`, `c`.`gender_accepted`, `c`.`course_offered`, `c`.`affiliated_by`, `c`.`university_name`, `c`.`approved_by`, `c`.`college_logo`, `c`.`college_banner`, `c`.`prospectus_file`, `c`.`website`, `c`.`email`, `c`.`contact_one`, `c`.`contact_two`, `c`.`contact_three`, `c`.`nodal_officer_name`, `c`.`nodal_officer_no`, `c`.`keywords`, `c`.`tags`, `s`.`id` as `state_id`, `s`.`name` as `state_name`, `cit`.`id` as `city_id`, `cit`.`city` as `city_name`, `count`.`countryCode`, `a`.`id` as `approval_id`, `a`.`approval`, `o`.`id` as `ownership_id`, `o`.`title` as `ownership_title`
+FROM `tbl_college` as `c`
+JOIN `tbl_state` as `s` ON `s`.`id` = `c`.`state`
+JOIN `tbl_city` as `cit` ON `cit`.`id` = `c`.`city`
+JOIN `tbl_country` as `count` ON `count`.`id` = `c`.`country`
+JOIN `tbl_approval` as `a` ON `a`.`id` = `c`.`approved_by`
+JOIN `tbl_ownership` as `o` ON `o`.`id` = `c`.`ownership`
+WHERE FIND_IN_SET(?, c.course_offered) >0 '4'
+OR FIND_IN_SET(?, c.course_offered) >0 '7'
+OR FIND_IN_SET(?, c.course_offered) >0 '8'
+OR FIND_IN_SET(?, c.course_offered) >0 '9'
+OR FIND_IN_SET(?, c.course_offered) >0 '10'
+OR FIND_IN_SET(?, c.course_offered) >0 '11'
+ERROR - 2024-03-14 23:39:24 --> Severity: error --> Exception: Call to a member function result_array() on bool C:\deepanshu\CutOffBaba\application\models\MasterModel.php 352
+DEBUG - 2024-03-14 18:09:25 --> UTF-8 Support Enabled
+DEBUG - 2024-03-14 18:09:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:09:25 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-14 18:14:02 --> UTF-8 Support Enabled
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_URI::$config is deprecated C:\deepanshu\CutOffBaba\system\core\URI.php 102
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_Router::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Router.php 128
+DEBUG - 2024-03-14 18:14:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$benchmark is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$hooks is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$config is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$log is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$utf8 is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$exceptions is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$router is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$output is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$security is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$input is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$lang is deprecated C:\deepanshu\CutOffBaba\system\core\Controller.php 83
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$db is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 397
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_DB_mysqli_driver::$strict is deprecated C:\deepanshu\CutOffBaba\system\database\DB_driver.php 372
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_DB_mysqli_driver::$failover is deprecated C:\deepanshu\CutOffBaba\system\database\DB_driver.php 372
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 303
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> session_set_cookie_params(): Session cookie parameters cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 328
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 355
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 365
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 366
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 367
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 368
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> ini_set(): Session ini settings cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 426
+DEBUG - 2024-03-14 18:14:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> session_set_save_handler(): Session save handler cannot be changed after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 110
+ERROR - 2024-03-14 18:14:02 --> Severity: Warning --> session_start(): Session cannot be started after headers have already been sent C:\deepanshu\CutOffBaba\system\libraries\Session\Session.php 137
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$session is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$upload is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$form_validation is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$email is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property Home::$pagination is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 1284
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property Home::$site is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 359
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property Home::$master is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 359
+ERROR - 2024-03-14 23:44:02 --> Severity: Warning --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\controllers\Home.php 185
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$load is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$benchmark is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$hooks is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$config is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$log is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$utf8 is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$exceptions is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$router is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$output is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$security is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$input is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$lang is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$db is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$session is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$upload is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$form_validation is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$email is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$pagination is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$site is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: 8192 --> Creation of dynamic property CI_Loader::$master is deprecated C:\deepanshu\CutOffBaba\system\core\Loader.php 932
+ERROR - 2024-03-14 23:44:02 --> Severity: Warning --> Undefined variable $selectedCourse C:\deepanshu\CutOffBaba\application\views\site\all_colleges.php 87
+ERROR - 2024-03-14 23:44:02 --> Severity: Warning --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\views\site\all_colleges.php 87
+ERROR - 2024-03-14 23:44:02 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', course_offered) >0
+GROUP BY `id`' at line 5 - Invalid query: SELECT *
+FROM `tbl_college`
+WHERE FIND_IN_SET(4, course_offered) >0
+OR FIND_IN_SET(8, course_offered) >0
+OR FIND_IN_SET(, course_offered) >0
+GROUP BY `id`
+ERROR - 2024-03-14 23:44:02 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\deepanshu\CutOffBaba\system\core\Exceptions.php:272) C:\deepanshu\CutOffBaba\system\core\Common.php 565
+DEBUG - 2024-03-14 18:14:02 --> UTF-8 Support Enabled
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_URI::$config is deprecated C:\deepanshu\CutOffBaba\system\core\URI.php 102
+ERROR - 2024-03-14 18:14:02 --> Severity: 8192 --> Creation of dynamic property CI_Router::$uri is deprecated C:\deepanshu\CutOffBaba\system\core\Router.php 128
+DEBUG - 2024-03-14 18:14:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-14 18:14:02 --> 404 Page Not Found: Assets/site

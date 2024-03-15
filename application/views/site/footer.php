@@ -17,6 +17,7 @@
     <script src="<?=base_url('/')?>assets/admin/js/toastr.js"></script>
     <script src="<?=base_url('/')?>assets/admin/js/custom.js"></script>
     <script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
+    <script src="<?=base_url('assets/admin')?>/js/select2.min.js"></script>
     <?php $this->load->view('common/alert'); ?>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -68,6 +69,10 @@
            });
          }
       </script>
-      
+      <script>
+         $(document).ready(function() {
+               $('.js-example-basic-multiple').select2();
+         });
+      </script>
    </body>
 </html>

@@ -8,8 +8,8 @@
                 <div class="row">
                     <?php $this->load->view('site/child_pages/college_data'); ?>
                     <center>
-                    <a class="text-decoration-none" href="#">View More</a>
-                    <!-- <a class="text-decoration-none" href="<?= base_url('all-colleges'); ?>">View More</a> -->
+                    <!-- <a class="text-decoration-none" href="#">View More</a> -->
+                    <a class="text-decoration-none" href="<?= base_url('all-colleges'); ?>">View More</a>
                     </center>
                 </div>
             <?php }  ?> 

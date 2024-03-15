@@ -58,4 +58,57 @@ class ExamController extends MY_Controller {
             return false;
         }
     }
+    public function getDomicileMainCategories()
+	{
+        $id = $this->input->post('id');
+        $key = $this->input->post('key');
+        $keys = $this->input->post('keys');
+        $headData = $this->master->getRecords('tbl_counselling_head',['state_id'=>$id]);
+        if(empty($headData)){
+            $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
+            echo json_encode($response);
+            return false;
+        }
+        $headIds = array_column($headData,'id');
+        $categoryData = $this->master->getRecordsWhereIn('tbl_category','head_id',$headIds);
+        if(empty($categoryData)){
+            $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
+            echo json_encode($response);
+            return false;
+        }
+        $html = '';
+        $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
+        $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id="">';
+        $html  .= '<option value="">Select Domicile State Category</option>';
+        foreach($categoryData as $category){
+            $html  .='<option value="'.$category['id'].'">'.ucwords($category['category_name']).'</option>';
+        }
+        $html .= '</select></div>';
+        $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html);                
+        echo json_encode($response);
+        return false;
+	}
+    public function getDomicileSubCategory(){
+        $id = $this->input->post('id');
+        $key = $this->input->post('key');
+        $subCategory = $this->master->getRecords('tbl_sub_category',['category_id'=>$id]);
+        if(empty($subCategory)){
+            $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
+            echo json_encode($response);
+            return false;
+        }
+        $html = '';
+        $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
+        $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id="">';
+        $html  .= '<option value="">Select State Category</option>';
+        foreach($subCategory as $sub){
+            $html  .='<option value="'.$sub['id'].'">'.ucwords($sub['sub_category_name']).'</option>';
+        }
+        $html .= '</select></div>';
+        $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html);                
+        echo json_encode($response);
+        return false;
+    }
+
+
 }

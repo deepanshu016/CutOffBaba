@@ -193,4 +193,21 @@ class Home extends MY_Controller {
 		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
 		$this->load->view('site/all_colleges',$data);
 	}
+	public function collegeInfo($tag='',$course_id)
+	{
+		$data['title'] = 'College Info | CUTOFFBABA';	
+		$data['tag'] = $tag;	
+		$data['course_id'] = $course_id;	
+		$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
+		$this->load->view('site/college_info',$data);
+	}
+	public function collegeDetail($tag='',$course_id='',$college_id='')
+	{
+		$data['title'] = 'College Detail | CUTOFFBABA';	
+		$data['tag'] = $tag;	
+		$data['course_id'] = $course_id;	
+		$data['collegeData'] = $this->master->getFullCollegeDetail($college_id);
+		$this->load->view('site/college_detail',$data);
+	}
+	
 }

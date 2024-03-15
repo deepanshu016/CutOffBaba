@@ -90,8 +90,10 @@
                                <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Branches & Seats</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/branch'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Branches & Seats</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">

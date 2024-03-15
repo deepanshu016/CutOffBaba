@@ -137,7 +137,6 @@
         formData.append('key',key);
         formData.append('keys',keys);
         CommonLib.ajaxForm(formData,'POST',url).then(d=>{
-            console.log("Response",d);
             if(d.status === 200){
                 currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
             }else{
@@ -150,6 +149,54 @@
             CommonLib.notification.error(e.responseJSON.errors);
         });
     });
+    $("body").on("change",".get-domicile-main-category",function(){
+        var currentWrapper = $(this);
+        var catId=currentWrapper.val();
+        var key=currentWrapper.data('key');
+        var keys=currentWrapper.data('keys');
+        var url = "<?= base_url('get-domicile-main-category'); ?>";
+        var formData = new FormData();
+        formData.append('id',catId);
+        formData.append('key',key);
+        formData.append('keys',keys);
+        CommonLib.ajaxForm(formData,'POST',url).then(d=>{
+            console.log("Response",d);
+            if(d.status === 200){
+                currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html(d.html);
+            }else{
+                currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
+                CommonLib.notification.error(d.message);
+            }
+        }).catch(e=>{
+            console.error("Error:", e);
+            currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
+            CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+    // $("body").on("change",". get-domicile-sub-category",function(){
+    //     var currentWrapper = $(this);
+    //     var catId=currentWrapper.val();
+    //     var key=currentWrapper.data('key');
+    //     var keys=currentWrapper.data('keys');
+    //     var url = "<?= base_url(' get-domicile-sub-category'); ?>";
+    //     var formData = new FormData();
+    //     formData.append('id',catId);
+    //     formData.append('key',key);
+    //     formData.append('keys',keys);
+    //     CommonLib.ajaxForm(formData,'POST',url).then(d=>{
+    //         console.log("Response",d);
+    //         if(d.status === 200){
+    //             currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html(d.html);
+    //         }else{
+    //             currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
+    //             CommonLib.notification.error(d.message);
+    //         }
+    //     }).catch(e=>{
+    //         console.error("Error:", e);
+    //         currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
+    //         CommonLib.notification.error(e.responseJSON.errors);
+    //     });
+    // });
     $("body").on("change",".get-domicile-sub-category",function(){
         var currentWrapper = $(this);
         var catId=currentWrapper.val();
@@ -161,16 +208,15 @@
         formData.append('key',key);
         formData.append('keys',keys);
         CommonLib.ajaxForm(formData,'POST',url).then(d=>{
-            console.log("Response",d);
             if(d.status === 200){
-                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
+                currentWrapper.closest('.category-wrapper').next('.get-domicile-subs-category').html(d.html);
             }else{
-                currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+                currentWrapper.closest('.category-wrapper').next('.get-domicile-subs-category').html('');
                 CommonLib.notification.error(d.message);
             }
         }).catch(e=>{
             console.error("Error:", e);
-            currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
+            currentWrapper.closest('.category-wrapper').next('.get-domicile-subs-category').html('');
             CommonLib.notification.error(e.responseJSON.errors);
         });
     });

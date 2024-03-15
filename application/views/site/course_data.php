@@ -40,7 +40,7 @@
                 <?php } } ?>
                     <div class="input-group mb-3 category-wrapper">
                         <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
-                        <select class="form-control raffss get-domicile-sub-category"  name="profile[course_data][<?=$key; ?>][domicile_category_id]" id="">
+                        <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="">
                             <option value="">Select Domicile Central</option>
                             <?php 
                                 foreach($domicileCategory as $domicile) { ?>
@@ -48,6 +48,8 @@
                             <?php } ?>
                         </select>
                     </div>
+                    <div class="input-group mb-3 category-wrapper domicile-main-category-data"></div>
+                    <div class="input-group mb-3 get-domicile-subs-category"></div>
                 <?php } ?>
                 </div>
             </div>

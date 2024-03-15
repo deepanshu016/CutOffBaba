@@ -43,8 +43,8 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="id">ID</th>
-                                   <th class="sort" data-sort="email">Country Name</th>
                                    <th class="sort" data-sort="email">State Name</th>
+                                   <th class="sort" data-sort="email">Country Name</th>
                                     <th class="sort" data-sort="email">Sub District Name</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
