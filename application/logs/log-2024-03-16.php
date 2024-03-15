@@ -68,3 +68,5 @@ ERROR - 2024-03-16 01:36:29 --> Severity: Warning --> Undefined variable $colleg
 ERROR - 2024-03-16 01:36:29 --> Severity: Warning --> Trying to access array offset on value of type null C:\deepanshu\CutOffBaba\application\views\site\college_detail.php 33
 DEBUG - 2024-03-16 01:36:29 --> Total execution time: 0.0337
 DEBUG - 2024-03-16 01:37:20 --> Total execution time: 0.0189
+DEBUG - 2024-03-16 01:38:17 --> Total execution time: 0.0249
+DEBUG - 2024-03-16 01:38:21 --> Total execution time: 0.0233

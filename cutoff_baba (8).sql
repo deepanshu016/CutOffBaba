@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 12, 2024 at 07:57 PM
+-- Generation Time: Mar 15, 2024 at 08:08 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.1.26
 
@@ -2284,7 +2284,7 @@ CREATE TABLE IF NOT EXISTS `tbl_sub_category` (
 
 INSERT INTO `tbl_sub_category` (`id`, `sub_category_name`, `slug`, `category_id`, `head_id`, `short_name`, `open_id`) VALUES
 (10, 'New Sub  Category', 'new-sub-category-774d7f77518bae7cead3458f1f8a01713689a987', 2, 2, 'ED', 4),
-(11, 'Second Sub  Category', 'second-sub-category-757656b0729d04be0334140e52dad5b004b9d614', 2, 2, 'RF', 3),
+(11, 'Second Sub  Category', 'second-sub-category-757656b0729d04be0334140e52dad5b004b9d614', 5, 2, 'RF', 3),
 (12, 'Newsss Sub  Category', 'newsss-sub-category-40d949e18b3f023b39a8a1f68d6f4d6883038651', 4, 2, 'TG', 4);
 
 -- --------------------------------------------------------
@@ -2304,7 +2304,7 @@ CREATE TABLE IF NOT EXISTS `tbl_sub_district` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tbl_sub_district`
@@ -2317,7 +2317,8 @@ INSERT INTO `tbl_sub_district` (`id`, `country`, `state`, `district`, `sub_distr
 (5, 105, 2, 34, 'dfgdfg', 1, '2023-12-25 16:37:59', '2023-12-28 17:19:28'),
 (6, 105, 2, 34, 'dfgdfgdfg', 1, '2023-12-25 16:38:21', '2023-12-28 17:19:30'),
 (7, 105, 2, 34, 'dfgdfgdfg', 1, '2023-12-28 18:22:32', '2023-12-28 18:22:32'),
-(8, 105, 2, 34, 'Newsssss', 1, '2023-12-28 18:22:53', '2023-12-28 18:22:53');
+(8, 105, 2, 34, 'Newsssss', 1, '2023-12-28 18:22:53', '2023-12-28 18:22:53'),
+(9, 105, 25, 117, 'dfgdgdfgfdg', 1, '2024-03-15 18:01:08', '2024-03-15 18:01:08');
 
 -- --------------------------------------------------------
 
@@ -2452,23 +2453,26 @@ CREATE TABLE IF NOT EXISTS `tbl_user_course_preferences` (
   `course_id` int DEFAULT NULL,
   `category_id` int DEFAULT NULL,
   `sub_category_id` int DEFAULT NULL,
-  `domicile_category_id` int DEFAULT NULL,
+  `state_id` int DEFAULT NULL,
+  `domicile_state_category_id` int DEFAULT NULL,
+  `domicile_state_sub_category_id` int DEFAULT NULL,
   `status` enum('0','1') NOT NULL COMMENT '''0''="Inactive",''1''"Active",',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tbl_user_course_preferences`
 --
 
-INSERT INTO `tbl_user_course_preferences` (`id`, `user_id`, `course_id`, `category_id`, `sub_category_id`, `domicile_category_id`, `status`, `created_at`, `updated_at`) VALUES
-(4, 46, 3, 4, 12, NULL, '0', '2024-03-02 20:25:31', NULL),
-(3, 46, 3, 2, 10, NULL, '0', '2024-03-02 20:25:31', NULL),
-(5, 46, 3, 4, 12, 4, '0', '2024-03-02 20:25:31', NULL),
-(12, 48, 3, 4, NULL, NULL, '0', '2024-03-12 18:35:17', NULL),
-(11, 48, 3, 4, NULL, NULL, '0', '2024-03-12 18:35:17', NULL);
+INSERT INTO `tbl_user_course_preferences` (`id`, `user_id`, `course_id`, `category_id`, `sub_category_id`, `state_id`, `domicile_state_category_id`, `domicile_state_sub_category_id`, `status`, `created_at`, `updated_at`) VALUES
+(4, 46, 3, 4, 12, NULL, NULL, NULL, '0', '2024-03-02 20:25:31', NULL),
+(3, 46, 3, 2, 10, NULL, NULL, NULL, '0', '2024-03-02 20:25:31', NULL),
+(5, 46, 3, 4, 12, 4, NULL, NULL, '0', '2024-03-02 20:25:31', NULL),
+(18, 48, 3, 4, NULL, 12, 5, 11, '0', '2024-03-15 19:42:01', NULL),
+(17, 48, 3, 4, NULL, NULL, NULL, NULL, '0', '2024-03-15 19:42:01', NULL),
+(16, 48, 3, 4, NULL, NULL, NULL, NULL, '0', '2024-03-15 19:42:01', NULL);
 
 -- --------------------------------------------------------
 

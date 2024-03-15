@@ -1722,3 +1722,31 @@ ERROR - 2024-03-15 20:07:20 --> 404 Page Not Found: Assets/site
 DEBUG - 2024-03-15 20:07:20 --> UTF-8 Support Enabled
 DEBUG - 2024-03-15 20:07:20 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-03-15 20:07:20 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-15 20:08:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-15 20:08:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-15 20:08:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:17 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-15 20:08:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:17 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-15 20:08:17 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:17 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-15 20:08:18 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:18 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-03-15 20:08:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-15 20:08:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-15 20:08:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:21 --> No URI present. Default controller set.
+DEBUG - 2024-03-15 20:08:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-15 20:08:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-15 20:08:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:21 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-15 20:08:21 --> UTF-8 Support Enabled
+DEBUG - 2024-03-15 20:08:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-15 20:08:21 --> 404 Page Not Found: Assets/admin
