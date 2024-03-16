@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 15, 2024 at 08:08 PM
+-- Generation Time: Mar 16, 2024 at 08:10 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.1.26
 
@@ -220,23 +220,27 @@ DROP TABLE IF EXISTS `tbl_branch`;
 CREATE TABLE IF NOT EXISTS `tbl_branch` (
   `id` int NOT NULL AUTO_INCREMENT,
   `branch` varchar(255) DEFAULT NULL,
+  `short_branch_name` varchar(50) DEFAULT NULL,
+  `branch_name_1` varchar(255) DEFAULT NULL,
+  `branch_name_2` varchar(255) DEFAULT NULL,
   `courses` varchar(55) DEFAULT NULL,
   `branch_type` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tbl_branch`
 --
 
-INSERT INTO `tbl_branch` (`id`, `branch`, `courses`, `branch_type`) VALUES
-(2, 'Anatomy', '3', 1),
-(3, 'Physiology', '2', 2),
-(6, 'Biology', '2', 1),
-(8, 'Computer ', '2', 2),
-(9, 'Chemistry', '5|7', 1),
-(10, 'Physics', '7', 2),
-(11, 'Physicsaaa', '10|20|30', 1);
+INSERT INTO `tbl_branch` (`id`, `branch`, `short_branch_name`, `branch_name_1`, `branch_name_2`, `courses`, `branch_type`) VALUES
+(2, 'Anatomy', NULL, NULL, NULL, '3', 1),
+(3, 'Physiology', NULL, NULL, NULL, '2', 2),
+(6, 'Biology', NULL, NULL, NULL, '2', 1),
+(8, 'Computer ', NULL, NULL, NULL, '2', 2),
+(9, 'Chemistry', NULL, NULL, NULL, '5|7', 1),
+(10, 'Physics', NULL, NULL, NULL, '7', 2),
+(11, 'Physicsaaa', NULL, NULL, NULL, '10|20|30', 1),
+(12, 'gfhdgfh', 'hdfh', NULL, NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -1041,9 +1045,9 @@ CREATE TABLE IF NOT EXISTS `tbl_college` (
 --
 
 INSERT INTO `tbl_college` (`id`, `full_name`, `short_name`, `slug`, `short_description`, `popular_name_one`, `popular_name_two`, `establishment`, `gender_accepted`, `course_offered`, `country`, `state`, `city`, `affiliated_by`, `university_name`, `approved_by`, `college_logo`, `college_banner`, `prospectus_file`, `ownership`, `website`, `email`, `contact_one`, `contact_two`, `contact_three`, `nodal_officer_name`, `nodal_officer_no`, `keywords`, `tags`, `added_by`, `facility`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'College One', NULL, 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-20', '3|4', '3,7', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mdeepanshu205@gmail.com', '646446456', '4564', '43534534543', '', '453535453', '', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, NULL, 0, '2023-11-08 18:04:48', '2024-02-28 20:24:11'),
+(2, 'College One', NULL, 'gddfgsdfgdfgdf-5dcf70fd6199e033b74af3f03b1015192653400e', 'sdfadsfdsfadsf', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-20', '3,4', '3,7', 105, 19, 446, '5', 'sdafsdfdsfsdff', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mdeepanshu205@gmail.com', '646446456', '4564', '43534534543', '', '453535453', '', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, NULL, 0, '2023-11-08 18:04:48', '2024-03-16 17:25:12'),
 (4, 'College Two', 'dfgdgdfgfg', 'college-two-fd6d4956dc162416a8551ae89b68dc1e8d8db4d9', '<p>sdfadsfdsfadsf</p>\r\n', 'adsfasdf', 'gdfsgdfgdfg', '2024-01-21', '3,4', '3,7', 105, 19, 446, NULL, 'sdafsdfdsfsdff', '7,8', '43d36548ec9c918681d0b8a364f8712b.png', '', '', 4, 'https://www.deepanshumishra.com', 'admin@gmail.com', '45645654645', '45654645656', '43534534543', 'dsfgdfgdfgdf', '455445334', 'dgdfgsdfgdf, dsfgdfgdfg, sdfgdgdfg, dsfgdfgdfsgd', 'fsdfsafdsf, adsfdsf, adsfsdf, sadfasdf, asdfasdf', 5, '5,9', 1, '2023-11-08 18:07:21', '2024-03-09 17:42:44'),
-(5, 'BBD', NULL, 'bbd-9b5b2c2b02e680f7a7df71855539dc019bdddf89', 'gdsfgdfgdsfgfdgfdsgdfg', 'dfgsdfg', 'dsfgsdfgfdsg', '2024-01-22', '3|4', '2,5', 105, 19, 3, '5', 'fhdhghhghdh', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mishra100.343@rediffmail.com', '4645645645', '45646565466', '45656565655', 'dgfggfdgdsfg', '433543534', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 5, NULL, 0, '2023-12-05 17:39:46', '2024-03-06 19:24:02');
+(5, 'BBD', NULL, 'bbd-9b5b2c2b02e680f7a7df71855539dc019bdddf89', 'gdsfgdfgdsfgfdgfdsgdfg', 'dfgsdfg', 'dsfgsdfgfdsg', '2024-01-22', '3,4', '2,5', 105, 19, 3, '5', 'fhdhghhghdh', '8_NCISM_NCISM', '9c8af39c962c0644e2697aff8620e61d.jpg', '', '', 4, 'https://www.deepanshumishra.com', 'mishra100.343@rediffmail.com', '4645645645', '45646565466', '45656565655', 'dgfggfdgdsfg', '433543534', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 'sdfsfsfsd|asfsdfsdf|asdfasf|sdaafadsf', 5, NULL, 0, '2023-12-05 17:39:46', '2024-03-16 17:25:16');
 
 -- --------------------------------------------------------
 
@@ -2366,7 +2370,7 @@ CREATE TABLE IF NOT EXISTS `tbl_uploaded_files` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tbl_uploaded_files`
@@ -2376,7 +2380,9 @@ INSERT INTO `tbl_uploaded_files` (`id`, `file_from`, `file_type`, `file_name`, `
 (2, 'college', 'image', 'COLLEGE_IMAGE3092744151699982184.jpeg', 4, 1, '2023-11-14 17:16:24', NULL),
 (3, 'college', 'image', 'COLLEGE_IMAGE13360648991699982184.jpeg', 4, 1, '2023-11-14 17:16:24', NULL),
 (4, 'college', 'image', 'COLLEGE_IMAGE11458158711710182657.png', 2, 1, '2024-03-11 18:44:17', NULL),
-(5, 'college', 'image', 'COLLEGE_IMAGE2337547791710182674.png', 2, 1, '2024-03-11 18:44:34', NULL);
+(5, 'college', 'image', 'COLLEGE_IMAGE2337547791710182674.png', 2, 1, '2024-03-11 18:44:34', NULL),
+(6, 'college', 'image', 'COLLEGE_IMAGE8006602061710619634.png', 2, 1, '2024-03-16 20:07:14', NULL),
+(7, 'college', 'image', 'COLLEGE_IMAGE16133909541710619673.jpeg', 4, 1, '2024-03-16 20:07:53', NULL);
 
 -- --------------------------------------------------------
 
