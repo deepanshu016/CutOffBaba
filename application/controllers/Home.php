@@ -207,6 +207,8 @@ class Home extends MY_Controller {
 		$data['tag'] = $tag;	
 		$data['course_id'] = $course_id;	
 		$data['collegeData'] = $this->master->getFullCollegeDetail($college_id);
+		// echo "<pre>";
+		// print_r($data['collegeData']); die;
 		$this->load->view('site/college_detail',$data);
 	}
 	

@@ -55,6 +55,7 @@ Class Branch extends MY_Controller {
             $data['branch_name_2'] = $this->input->post('branch_name_2');
             $data['courses'] = $this->input->post('courses');
             $data['branch_type'] = $this->input->post('branch_type');
+           
             $result = $this->master->insert('tbl_branch',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Branch added successfully','url'=>base_url('admin/branch'));
@@ -80,7 +81,6 @@ Class Branch extends MY_Controller {
     }
     //Update Branch
     public function updateBranch(){
-
         $this->form_validation->set_rules('branch', 'Branch', 'trim|required');
         $this->form_validation->set_rules('courses', 'Courses', 'trim|required');
         $this->form_validation->set_rules('branch_type', 'Branch Type', 'trim|required');
@@ -170,10 +170,10 @@ Class Branch extends MY_Controller {
                         if ($row>0) {
                             $impdata['branch']=$data[1];
                             $impdata['short_branch_name']=$data[2];
-                            $impdata['branch_name_1']=$data[3];
-                            $impdata['branch_name_2']=$data[4];
-                            $impdata['courses']=$data[5];
-                            $impdata['branch_type']=$data[6];
+                            $impdata['branch_name_1']=$data[5];
+                            $impdata['branch_name_2']=$data[6];
+                            $impdata['courses']=$data[3];
+                            $impdata['branch_type']=$data[4];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_branch',$impdata);

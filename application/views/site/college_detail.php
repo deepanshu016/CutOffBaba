@@ -31,7 +31,7 @@
                               <div class="lc-block ps-2">
                                  <div editable="rich">
                                     <h3 class="h6 "><strong><?= $collegeData['full_name']; ?></strong><br></h3>
-                                    <img class="bsnXs" src="<?=base_url('assets/site/img/locations.png')?>" alt=""> <span class="loPts"><?= @$collegeData['city_name'].', '; ?> <?= @$collegeData['state_name'].', '; ?>, <?= @$collegeData['country_name'].', '; ?></span>  
+                                    <img class="bsnXs" src="<?=base_url('assets/site/img/locations.png')?>" alt=""> <span class="loPts"><?= @$collegeData['city_name'].', '; ?> <?= @$collegeData['state_name'].', '; ?>, <?= @$collegeData['country_name']; ?></span>  <br/>
                                     <img class="bsnXs" src="<?=base_url('assets/site/img/emailsss.png')?>" alt=""> <span class="loPts"><?= @$collegeData['email']; ?></span> <br>  <img class="bsnXs" src="<?=base_url('assets/site/img/website.png')?>" alt=""> <span class="loPts"> <?= @$collegeData['website']; ?> </span>
                                  </div>
                               </div>
@@ -39,15 +39,20 @@
                         </div>
                      </div>
                   </div>
+                  <?php 
+                     $genderAccepted = explode(',', $collegeData['gender_accepted']);
+                     $genderData = $this->db->select('gender')->from('tbl_gender')->where_in('id',$genderAccepted)->get()->result_array();
+                     $genderData = (!empty($genderData)) ?  implode('/',array_column($genderData,'gender')): [];
+                  ?>
                   <div class="row">
                      <div class="col-12">
-                        <div class="maiPoint"> <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts">Alternate Name1</span>
+                        <div class="maiPoint"> <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['popular_name_one']; ?></span>
                            <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts">Alternate</span>
-                           <img src="<?=base_url('assets/site/img/estd.png')?>" alt=""> <span class="apnsFonts">Estd.1995</span>
+                           <img src="<?=base_url('assets/site/img/estd.png')?>" alt=""> <span class="apnsFonts">Estd.<?= @date('Y',strtotime($collegeData['establishment'])); ?></span>
                            <img src="<?=base_url('assets/site/img/patsh.png')?>" alt=""> <span class="apnsFonts">AKU, Patna</span>
                            <img src="<?=base_url('assets/site/img/mci.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['approval']; ?> Approved</span>
                            <img src="<?=base_url('assets/site/img/yess.png')?>" alt=""> <span class="apnsFonts">Yes</span>
-                           <img src="<?=base_url('assets/site/img/mals.png')?>" alt=""> <span class="apnsFonts">Male/Female</span>
+                           <img src="<?=base_url('assets/site/img/mals.png')?>" alt=""> <span class="apnsFonts"><?= @$genderData; ?></span>
                         </div>
                      </div>
                   </div>

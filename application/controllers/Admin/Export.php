@@ -370,11 +370,11 @@ class Export extends CI_Controller {
 		    $delimiter = ","; 
 		    $filename = "branch_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Branch Name','Courses','Branch type'); 
+		    $fields = array('ID', 'Branch Name', 'Short Branch Name','Courses','Branch type','Branch Name One','Branch Name Two'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 				$branch_type = ($row['branch_type'] == 1) ? 'Clinical' : 'Non- Clinical';
-		        $lineData = array($row['id'], $row['branch'],$row['courses'],$branch_type); 
+		        $lineData = array($row['id'], $row['branch'],$row['short_branch_name'],$row['courses'],$branch_type,$row['branch_name_1'],$row['branch_name_2']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
