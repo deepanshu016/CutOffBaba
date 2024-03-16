@@ -43,10 +43,12 @@
                      $genderAccepted = explode(',', $collegeData['gender_accepted']);
                      $genderData = $this->db->select('gender')->from('tbl_gender')->where_in('id',$genderAccepted)->get()->result_array();
                      $genderData = (!empty($genderData)) ?  implode('/',array_column($genderData,'gender')): [];
+
+                     $collegeGalleryData =  $this->db->select('gender')->from('tbl_gender')->where_in('id',$genderAccepted)->get()->result_array();
                   ?>
                   <div class="row">
                      <div class="col-12">
-                        <div class="maiPoint"> <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['popular_name_one']; ?></span>
+                        <div class="maiPoint"> <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['short_description']; ?></span>
                            <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts">Alternate</span>
                            <img src="<?=base_url('assets/site/img/estd.png')?>" alt=""> <span class="apnsFonts">Estd.<?= @date('Y',strtotime($collegeData['establishment'])); ?></span>
                            <img src="<?=base_url('assets/site/img/patsh.png')?>" alt=""> <span class="apnsFonts">AKU, Patna</span>
@@ -80,7 +82,7 @@
                      <div class="tab-content tsyTops" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                            <h4>About The College</h4>
-                           <p>PMCH Patna is one of the oldest medical schools in the country and is featured among Top Medical Colleges in India. PMC is popularly known for its MBBS program admissions to which are granted on the basis of candidate’s merit in NEET-UG entrance exam. Candidates in order to be eligible for MBBS at PMC must also have passed 10+2 with PCB as compulsory subjects</p>
+                           <p><?= @$collegeData['short_description']; ?></p>
                            <div class="text-center">
                               <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
                            </div>

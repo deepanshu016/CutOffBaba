@@ -453,3 +453,69 @@ DEBUG - 2024-03-16 18:18:32 --> UTF-8 Support Enabled
 DEBUG - 2024-03-16 18:18:32 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-03-16 18:18:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2024-03-16 18:18:33 --> Total execution time: 0.0428
+DEBUG - 2024-03-16 19:43:35 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:43:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 19:43:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 19:43:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:43:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 19:43:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 19:45:31 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:45:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 19:45:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 19:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:46:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 19:46:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 19:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:46:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-16 19:46:23 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-16 19:46:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:46:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-16 19:46:23 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2024-03-16 19:46:24 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 19:46:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-16 19:46:24 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-03-16 20:06:55 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:06:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:06:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:06:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:06:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:06:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:06:58 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:06:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:06:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:06:59 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:06:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:06:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:02 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:03 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:14 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:16 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:53 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:07:56 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:07:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:07:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:08:23 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:08:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:08:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:08:28 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:08:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:08:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:08:30 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:08:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:08:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:08:33 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:08:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:08:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-16 20:08:36 --> UTF-8 Support Enabled
+DEBUG - 2024-03-16 20:08:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-16 20:08:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
