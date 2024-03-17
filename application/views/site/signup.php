@@ -64,6 +64,18 @@
                            
                            <div class="text-danger" id="state"></div>
                         </div>
+                        <div class="">
+                           <select class="form-select form-control slBgs" aria-label="Default select example" name="exam">
+                              <option value="">Exam</option>
+                              <?php if(!empty($examList)){ 
+                                 foreach($examList as $exam){  ?>
+                                    <option value="<?= $exam['id'];?>"><?= $exam['exam']; ?></option>
+                              <?php   }
+                              } ?>
+                           </select>
+                           
+                           <div class="text-danger" id="exam"></div>
+                        </div>
                         <button type="submit" class="w-100 btn btn-primary p6t">Sign Up</button>
                      </form>
                       <div class="acSing">

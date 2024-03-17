@@ -33,6 +33,7 @@ class Home extends MY_Controller {
 	{
 		$data['title'] = 'SIGNUP | CUTOFFBABA';
 		$data['stateList']=$this->site->getRecords('tbl_state',[]);
+		$data['examList']=$this->site->getRecords('tbl_exam',[]);
 		$this->load->view('site/signup',$data);
 	}
 	public function streams()
@@ -41,11 +42,19 @@ class Home extends MY_Controller {
 		$data['stream'] = $this->master->getRecords('tbl_stream');
 		$this->load->view('site/streams',$data);
 	}
+	public function paymentList()
+	{
+		$data['title'] = 'Payment History | CUTOFFBABA';
+		$data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
+		$this->load->view('site/payment-list',$data);
+	}
 	public function coursesByStream($stream_id)
 	{
 		$data['title'] = 'COURSES | CUTOFFBABA';
 		$data['selectedStream'] = $this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$data['userCoursePreferences'] = $this->master->getRecords('tbl_user_course_preferences',['user_id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/course-by-stream',$data);
 	}
 	public function aboutCourse($course_id)
@@ -54,6 +63,7 @@ class Home extends MY_Controller {
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
 		$this->load->view('site/about_us_course',$data);
 	}
@@ -65,6 +75,7 @@ class Home extends MY_Controller {
 		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
 		$this->load->view('site/state-list',$data);
 	}
@@ -81,31 +92,60 @@ class Home extends MY_Controller {
 		$data['facilityList'] = $this->master->getRecords('tbl_facilities',[]);	
 		$data['branchList'] = $this->master->getRecords('tbl_branch',[]);	
 		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/state-wise-colleges',$data);
 	}
 	public function aboutUs()
 	{
 		$data['title'] = 'ABOUT US | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/about-page',$data);
 	}
 	public function browseSuccessStories()
 	{
 		$data['title'] = 'Our Success Story | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/testomonial-exlore',$data);
 	}
 	public function contactUs()
 	{
 		$data['title'] = 'Contacts Us | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/contact-us',$data);
 	}
 	public function termsConditions()
 	{
 		$data['title'] = 'Terms & Conditions | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/terms-condition',$data);
+	}
+	public function news()
+	{
+		$data['title'] = 'News | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$data['newsList'] = $this->master->getRecords('tbl_news');
+		$this->load->view('site/news',$data);
+	}
+	public function privacyPolicy()
+	{
+		$data['title'] = 'Privacy Policy | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$this->load->view('site/privacy-policy',$data);
+	}
+	public function newsDetail($news_id,$news_slug)
+	{
+		$data['newsData'] = $this->master->singleRecord('tbl_news',['id'=>$news_id]);
+		$data['title'] = $data['newsData']['title'].' | CUTOFFBABA';
+		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+		$data['newsList'] = $this->master->getRecords('tbl_news');
+		$this->load->view('site/news-details',$data);
 	}
 	public function testimonials()
 	{
@@ -119,6 +159,7 @@ class Home extends MY_Controller {
 	public function plan(){
 		$data['title'] = 'Counselling Plan | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$data['planList'] = $this->master->getRecords('tbl_counsellng_plans');
 		$this->load->view('site/counselling_plan',$data);
 	}
@@ -141,6 +182,7 @@ class Home extends MY_Controller {
 		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$data['selectedState'] = $this->master->singleRecord('tbl_state',['id'=>$this->session->userdata('user')['current_state']]);
 		$data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type');
+		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/college_predictor',$data);
 	}
 
@@ -207,7 +249,8 @@ class Home extends MY_Controller {
 		$data['tag'] = $tag;	
 		$data['course_id'] = $course_id;	
 		$data['collegeData'] = $this->master->getFullCollegeDetail($college_id);
-		// 
+		$data['galleryList'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$college_id,'file_type'=>'image']);	
+		
 		$this->load->view('site/college_detail',$data);
 	}
 	

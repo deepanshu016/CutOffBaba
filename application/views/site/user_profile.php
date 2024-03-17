@@ -21,7 +21,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <button class=" canvaCss" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                     <a class="float-end ccsFv" href="#!"><img class="userCanv" src="<?=base_url('assets/site/img/usera.png')?>" alt=""></a>
+                     <a class="float-end ccsFv" href="#!"><img class="userCanv rounded" height="50" width="50" src="<?= ($userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>" alt=""></a>
                      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                         <div class="offcanvas-header bg-light">
                            <h5 class="offcanvas-title" id="offcanvasScrollingLabel"> </h5>
@@ -32,7 +32,7 @@
                               <div class="onnXcard">
                                  <div class="card-horizontal">
                                     <div class="img-square-wrapper">
-                                       <img src="<?=base_url('assets/site/img/usera.png')?>" alt="">
+                                       <img height="50" class="rounded" width="50" src="<?= ($userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>"  alt="">
                                        <p class="peditsc"> <a class="ediCss" href="<?= base_url('edit-profile'); ?>"> Edit <i class="fa fa-pencil-square-o edics" aria-hidden="true"></i> </a> </p>
                                     </div>
                                     <div class="radhaCss">
@@ -54,14 +54,14 @@
                            </div>
                            <div class="divmain ">
                               <ul class="list-group list-group-flush">
-                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/homeiocns.png')?>" alt=""> Home</li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/homeiocns.png')?>" alt=""><a href="<?= base_url('streams'); ?>"> Home</a></li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/collgepre.png')?>" alt=""><a href="<?= base_url('college-predictor'); ?>"> College Predictor </a></li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/seat.png')?>" alt=""> Seat Matrics</li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/news.png')?>" alt=""> News & Updates</li>
                                  <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/notis.png')?>" alt=""> Notifications</li>
-                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/papy.png')?>" alt=""> Payments</li>
-                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/privacyss.png')?>" alt=""> Privacy Policy</li>
-                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/ttrs.png')?>" alt=""> Term & Condition</li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/papy.png')?>" alt=""> <a href="<?= base_url('payments'); ?>">Payments</a></li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/privacyss.png')?>" alt=""> <a href="<?= base_url('privacy-policy'); ?>">Privacy Policy</a></li>
+                                 <li class="list-group-item bgnonecss"><img src="<?=base_url('assets/site/img/ttrs.png')?>" alt=""> <a href="<?= base_url('terms-condition'); ?>">Terms & Conditions</a></li>
                               </ul>
                            </div>
                            <div class="logouts">

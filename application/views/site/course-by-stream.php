@@ -4,11 +4,11 @@
  <nav class="container bg-light d-flex flex-column flex-md-row justify-content-between">
     <nav class="navbar bg-light">
        <div class="container-fluid">
-          <a class="text-decoration-none" href="javascript:void(0);" aria-label="Product">
+          <a class="text-decoration-none" href="<?= base_url('streams'); ?>" aria-label="Product">
           <img class="logoCs" src="<?=base_url('assets/site/img/logo.png')?>"> <span class="cutCss">Cutoff Baba</span>
           </a>
           <?php if($this->session->userdata('user')) { ?>
-            <a  href="<?= base_url('profile'); ?>"> <img src="<?=base_url('assets/site/img/user.png')?>"> </a>
+            <a  href="<?= base_url('profile'); ?>"> <img  height="50" class="rounded" width="50" src="<?= ($userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>"> </a>
           <?php } ?>
        </div>
     </nav>
@@ -16,13 +16,15 @@
 </header>
 <main>
  <div class="position-relative overflow-hidden   p-md-5 m-md-3 text-center bg-light">
+   <?php 
+   if(empty($userCoursePreferences)){ ?>
     <section>
        <div class="container">
           <div class="row">
              <div class="col-md-12 col">
                 <div class="alert altp alert-warning alert-dismissible fade show " role="alert">
                   <div class="p-2 d-flex justify-content-between">
-                   <strong class="youTxt">Your profile is not completed. Please Complete first!</strong>
+                   <a href="<?= base_url('edit-profile'); ?>"><strong class="youTxt">Your profile is not completed. Please Complete first!</strong></a>
                    <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
                    </div>
                 </div>
@@ -30,10 +32,11 @@
           </div>
        </div>
     </section>
+    <?php } ?>
     <div class="col-md-5 p-lg-5 p-3 mx-auto ">
        <h4 class=" fw-bold text-start txtColor">Welcome to Cutoff Baba</h4>
        <div class="card radius">
-          <img src="<?=base_url('assets/site/img/doc-pic.png')?>" class="card-img cuys " alt="doc-pic">
+          <img src="<?= ($selectedStream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$selectedStream['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$selectedStream['stream_image'] : base_url('assets/site/img/medical-tr.png');?>" class="card-img cuys " alt="doc-pic">
           <div class="card-img-overlay cardOverlay">
              <h5 class="card-title"><?= @$selectedStream['stream']; ?></h5>
              <p class="card-text">Lorem ipsum dolor sit <br> amet, consectetur adipiscing <br> elit, sed do eiusmod tempor <br> incididunt ut labore .</p>

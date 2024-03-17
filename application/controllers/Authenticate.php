@@ -43,6 +43,7 @@ Class Authenticate extends MY_Controller {
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
         $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
         $this->form_validation->set_rules('state', 'State', 'trim|required|numeric');
+        $this->form_validation->set_rules('exam', 'Exam', 'trim|required|numeric');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[25]|matches[confirm_password]|callback_check_strong_password');   
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required'); 
         if ($this->form_validation->run()) {
@@ -50,6 +51,7 @@ Class Authenticate extends MY_Controller {
             $data['email'] = $this->input->post('email');
             $data['mobile'] = $this->input->post('phone');
             $data['password'] = sha1($this->input->post('password'));
+            $data['selected_exam'] =$this->input->post('exam');
             $data['user_type'] = 1;
             $data['permanent_state'] = $this->input->post('state');
             $data['status'] = 0;
@@ -70,7 +72,8 @@ Class Authenticate extends MY_Controller {
                     'mobile' => form_error('mobile'),
                     'password' => form_error('password'),
                     'confirm_password' => form_error('confirm_password'),
-                    'state' => form_error('state')
+                    'state' => form_error('state'),
+                    'exam' => form_error('exam')
                 )  
             );
 
@@ -517,6 +520,7 @@ Class Authenticate extends MY_Controller {
 		$data['states'] = $this->master->getRecords('tbl_state');
 		$data['district'] = $this->master->getRecords('tbl_city');
         $data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
+        $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$data['coursesList'] = $this->master->getExamCourses($data['user']['selected_exam']);
         $data['levelData'] = $this->master->getRecords('tbl_counselling_level',[]);
         $data['domicileCategory'] = $this->master->getDomicileCategories($data['user']);

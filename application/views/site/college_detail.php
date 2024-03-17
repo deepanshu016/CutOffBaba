@@ -526,25 +526,22 @@
                         </div>
                         <div class="tab-pane fade " id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab" tabindex="0">
 
-                        <h5 class="clinkTxt">College Building</h5>
+                        <!-- <h5 class="clinkTxt">College Building</h5> -->
 
                         
-                     <div class="photo-gallery">
-                        <div class="container">
-                              
-                              <div class="row photos">
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll1.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll1.png')?>"></a></div>
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll2.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll2.png')?>"></a></div>
+                           <div class="photo-gallery">
+                              <div class="container">
+                                 <div class="row photos">
+                                 <?php if(!empty($galleryList)) {
+                                    foreach($galleryList as $gallery) { ?>
+                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?= ($gallery['file_name'] != '' && file_exists(FCPATH.'assets/uploads/media/image/'.$gallery['file_name'])) ? base_url('assets/uploads/media/image/').'/'.$gallery['file_name'] : base_url('assets/site/img/coll1.png');?>" data-lightbox="photos"><img class="img-fluid" src="<?= ($gallery['file_name'] != '' && file_exists(FCPATH.'assets/uploads/media/image/'.$gallery['file_name'])) ? base_url('assets/uploads/media/image/').'/'.$gallery['file_name'] : base_url('assets/site/img/coll1.png');?>"></a></div>
+                                 <?php }  } ?>
+                                 </div>
                               </div>
-                              <div class="row photos">
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll3.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll3.png')?>"></a></div>
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll4.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll4.png')?>"></a></div>
-                              </div>
-                        </div>
-                     </div> 
+                           </div> 
 
 
-                     <h5 class="clinkTxt">College Library</h5>
+                     <!-- <h5 class="clinkTxt">College Library</h5>
 
                         
                      <div class="photo-gallery">
@@ -594,7 +591,7 @@
                                     <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt4.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt4.png')?>"></a></div>
                                  </div>
                            </div>
-                        </div> 
+                        </div>  -->
                         
 
 

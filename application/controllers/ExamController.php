@@ -46,6 +46,19 @@ class ExamController extends MY_Controller {
         $allData = $this->input->post('profile');
         $profileData = $allData['user'];
         $courseData = $allData['course_data'];
+        if(!empty($_FILES['photo']['name'])) {
+            $config['upload_path']  = 'assets/uploads/users';
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['encrypt_name'] =  TRUE;
+            $config['max_size']      = 1024;
+            $uploadedFile = $this->uploadFile($_FILES['photo']['name'], 'photo', $config);
+            if (!empty($uploadedFile['error_msg'])) {
+                $response = array('status' => 'errors', 'message' => $uploadedFile['error_msg']);
+                echo json_encode($response);
+                return false;
+            }
+            $profileData['image'] = $uploadedFile['file'];
+        }
         $userProfile = $this->master->updateRecord('tbl_users',['id'=>$profileData['id']],$profileData);
         $result = $this->master->updateCoursePreferences('tbl_user_course_preferences',$allData);
         if($result > 0){

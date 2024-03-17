@@ -15,12 +15,12 @@
                <h4 class=" fw-bold text-start txtColor">    <a href="<?=base_url('profile')?>"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> </h4>
                <h5 class="card-title text-white noProf">Profile</h5>
                <center>
-               <img src="<?=base_url('assets/site/img/userrss.png')?>" alt="Avatar" class="avatar">
+               <img  class="userCanv rounded" height="50" width="50" src="<?= ($userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>" alt="Avatar" class="avatar">
                </center>
             </div>
          </div>
          </div>
-        <form action="<?= base_url('update-profile'); ?>" class="profile-form"  method="POST" id="profileForm">
+        <form action="<?= base_url('update-profile'); ?>" class="profile-form"  method="POST" id="profileForm" enctype="multipart/form-data">
         <div class="perTxt bg-white">
             <h4 class="f16px">Personal Information</h4>
 
@@ -31,6 +31,10 @@
                         <span class="input-group-text appendCXCss raforms" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vector.png')?>" alt=""> </span>
                         <input type="text" class="form-control raforms" placeholder="Full Name*" name="profile[user][name]" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['name']; ?>">
                         <input type="hidden" class="form-control raforms" placeholder="Full Name*" name="profile[user][id]" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['id']; ?>">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text appendCXCss raforms" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vector.png')?>" alt=""> </span>
+                        <input type="file" class="form-control raforms" name="photo" accept="images/*">
                     </div>
 
                     <div class="input-group mb-3">
