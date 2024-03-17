@@ -25,7 +25,7 @@ class Home extends MY_Controller {
 	}
 	public function forgot_password()
 	{
-		$data['title'] = 'Forgot Password | CUTOFFBABA';
+		$data['title'] = 'FORGOT PASSWORD | CUTOFFBABA';
 		$this->load->view('site/forgot_password',$data);
 	}
 
@@ -37,20 +37,20 @@ class Home extends MY_Controller {
 	}
 	public function streams()
 	{
-		$data['title'] = 'Streams | CUTOFFBABA';
+		$data['title'] = 'STREAMS | CUTOFFBABA';
 		$data['stream'] = $this->master->getRecords('tbl_stream');
 		$this->load->view('site/streams',$data);
 	}
 	public function coursesByStream($stream_id)
 	{
-		$data['title'] = 'Courses | CUTOFFBABA';
+		$data['title'] = 'COURSES | CUTOFFBABA';
 		$data['selectedStream'] = $this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
 		$this->load->view('site/course-by-stream',$data);
 	}
 	public function aboutCourse($course_id)
 	{
-		$data['title'] = 'About Courses | CUTOFFBABA';
+		$data['title'] = 'ABOUT COURSES | CUTOFFBABA';
 		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
@@ -85,7 +85,7 @@ class Home extends MY_Controller {
 	}
 	public function aboutUs()
 	{
-		$data['title'] = 'About Us | CUTOFFBABA';
+		$data['title'] = 'ABOUT US | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
 		$this->load->view('site/about-page',$data);
 	}
