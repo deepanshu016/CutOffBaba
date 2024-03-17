@@ -42,25 +42,32 @@
              <p class="card-text">Lorem ipsum dolor sit <br> amet, consectetur adipiscing <br> elit, sed do eiusmod tempor <br> incididunt ut labore .</p>
           </div>
        </div>
+       <div class="shaDo m-2 pt-4 pb-4" style="background:url('<?= ($selectedStream['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$selectedStream['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$selectedStream['stream_image'] : base_url('assets/site/img/Frame-5.png');?>'); background-size: 100% 100%;">
+         <div class="row">
+            <div class="col-12">
+               <div class="nopadSty">
+                  <h5 class="card-title"><strong><?= @$selectedStream['stream']; ?></strong></h5>
+                  <p class="card-text"><?= @excerpt($selectedStream['description'],80); ?></p>
+               </div>
+            </div>
+         </div>
+      </div>
     </div>
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
  </div>
- <div class=" w-100 my-md-3 ps-md-3 bg-light">
+ <div class=" w-100 my-md-3 ps-md-3 bg-light pb-5 mb-5">
    <?php if(!empty($courseLists)) { 
       foreach($courseLists as $course) { ?>
          <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <div class="card shaDo mb-3" style="max-width: 540px;">
+            <div class="card shaDo mb-3" style="max-width: 540px;background: url('<?= ($course['course_icon'] != '' && file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>');background-size: 100% 100%;">
                <div class="row g-0">
-                  <div class="col-md-9 col">
+                  <div class="col-8 col pb-3">
                      <div class="card-body nopad">
                         <h5 class="card-title"><?= $course['course']; ?></h5>
                         <p class="card-text nop"><?= $course['course_full_name']; ?></p>
-                        <a class="btn btn-primary" href="">Select CTA  <i class="fa fa-angle-right"></i> </a>
+                        <a class="btn btn-primary" href="<?= base_url('about-course').'/'.$course['id']; ?>">Explore More  <i class="fa fa-angle-right"></i> </a>
                      </div>
-                  </div>
-                  <div class="col-md-3 col">
-                     <img src="<?= ($course['course_icon'] != '' && file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>" class="img-fluid rounded-start" alt="...">
                   </div>
                </div>
             </div>

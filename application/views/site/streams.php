@@ -12,8 +12,8 @@
          <section>
             <div class="container">
                <div class="col-md-12 col-sm-12">
-                  <h3 class="text-center text-dark">Welcome to <span class="cusSpanm">Cutoff Baba</span> </h3>
-                  <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. </p>
+                  <h3 class="text-center text-dark mb-3">Welcome to <span class="cusSpanm">Cutoff Baba</span> </h3>
+                  <!-- <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. </p> -->
                </div>
             </div>
          </section>
