@@ -236,6 +236,15 @@ class MasterModel extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
 	}
+	public function getStatesWithMinimumCollegeWithCourse($course_id){
+		$this->db->select('s.*');
+        $this->db->from('tbl_state as s');
+        $this->db->join('tbl_college as c', 'c.state = s.id', 'inner');
+        $this->db->where("FIND_IN_SET(" . $course_id. ", c.course_offered) > 0", NULL, FALSE);
+        $this->db->group_by('s.id');
+        $query = $this->db->get();
+        return $query->result_array();
+	}
 	public function getCollegesDataStateWise($state_id,$course_id,$data=[]){
 		
 		$course_ids = [];

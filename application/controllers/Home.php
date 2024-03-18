@@ -64,7 +64,7 @@ class Home extends MY_Controller {
 		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$course_id]);
 		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
 		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
+		$data['stateList'] = $this->master->getStatesWithMinimumCollegeWithCourse($course_id);
 		$this->load->view('site/about_us_course',$data);
 	}
 
@@ -250,7 +250,8 @@ class Home extends MY_Controller {
 		$data['course_id'] = $course_id;	
 		$data['collegeData'] = $this->master->getFullCollegeDetail($college_id);
 		$data['galleryList'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$college_id,'file_type'=>'image']);	
-		
+		$data['singleCourse'] = $this->master->singleRecord('tbl_course',['id'=>$college_id]);
+		$data['courseList'] = $this->master->getRecords('tbl_course');
 		$this->load->view('site/college_detail',$data);
 	}
 	

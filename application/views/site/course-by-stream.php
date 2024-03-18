@@ -83,7 +83,7 @@
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
                                        <a href="<?= base_url('about-course').'/'.$course['id']; ?>">
-                                          <h5 class="card-title smTxt">About MBBS</h5>
+                                          <h5 class="card-title smTxt">About <?=  $course['course']; ?></h5>
                                           <p class="card-text">Nemo enim ipsam voluptatem </p>
                                        </a>
                                     </div>
@@ -91,7 +91,7 @@
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
                                        <a href="<?= base_url('states').'/'.$course['id']; ?>">
-                                       <h5 class="card-title smTxt">State Wise Colloeges</h5>
+                                       <h5 class="card-title smTxt">State Wise Colleges</h5>
                                        <p class="card-text">Nemo enim ipsam voluptatem </p>
                                     </a>
                                     </div>
@@ -108,8 +108,10 @@
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Fees & Expances</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/fee-expenses'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Fees & Expenses</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
@@ -123,28 +125,36 @@
                               <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Clinic Exposure</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/clinic-exposure'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Clinic Exposure</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Service & Bond Rules</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/service-bond-rules'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Service & Bond Rules</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
                                <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">College Reviews</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/reviews'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Reviews</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Central Curoff</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/central-cutoff'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Central Cutoff</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
@@ -157,28 +167,36 @@
                                <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">College Reviews</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/reviews'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Reviews</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">State Cutoff</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/state-cutoff'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">State Cutoff</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
                                <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Cutoff Comparison</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/cutoff-comparison'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Cutoff Comparison</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">FAQs</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/faq'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">FAQs</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
@@ -191,28 +209,36 @@
                                <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">College Predictor</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/college-predictor'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Predictor</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">College Gallery</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/college-gallery'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Gallery</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>
                               <div class="col col-sm-6">
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Counselling Updates</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/college-updates'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Counselling Updates</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                                  <div class="card shaDo noHis">
                                     <div class="card-body mbbsCss">
-                                       <h5 class="card-title smTxt">Recommended College</h5>
-                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       <a href="<?= base_url('college-info').'/recommended-colleges'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Recommended College</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
                                     </div>
                                  </div>
                               </div>

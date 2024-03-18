@@ -13,8 +13,8 @@
       <main>
          <div class="position-relative overflow-hidden p-md-5 m-md-3 text-center bg-light">
             <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-               <h4 class=" fw-bold text-start txtColorss"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> </h4>
-               <h5 class="card-title barcCtxt">Branch & Seats</h5>
+               <h4 class=" fw-bold text-start txtColorss"><a href="<?= base_url('college-info').'/'.$tag.'/'.$course_id; ?>"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> </h4>
+               <h5 class="card-title barcCtxt">College Details</h5>
             </div>
          </div>
          </div>
@@ -66,40 +66,28 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="scrollmenu " id="pills-tab" role="tablist">
-                        <a class="active text-primary" href="#home" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Info</a>
-                        <a href="#news" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Course & Seats</a>
-                        <a href="#contact" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Courses & CutOff</a>
-                        <a href="#about" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Courses & Fee</a>
-                        <a href="#support" id="pills-hopspital-tab" data-bs-toggle="pill" data-bs-target="#pills-hopspital" type="button" role="tab" aria-controls="pills-hopspital" aria-selected="false">Hospital Details</a>
-                        <a href="#blog" id="pills-college-tab" data-bs-toggle="pill" data-bs-target="#pills-college" type="button" role="tab" aria-controls="pills-college" aria-selected="false">College Reviews</a>
-                        <a href="#tools" id="pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#pills-gallery" type="button" role="tab" aria-controls="pills-gallery" aria-selected="false">College Gallery</a>  
-                        <a href="#base" id="pills-deta-tab" data-bs-toggle="pill" data-bs-target="#pills-deta" type="button" role="tab" aria-controls="pills-deta" aria-selected="false">College Cont. Deta</a>
-                        <a href="#custom" id="pills-paid-tab" data-bs-toggle="pill" data-bs-target="#pills-paid" type="button" role="tab" aria-controls="pills-paid" aria-selected="false">Paid Counselling</a>
-                        <a href="#more" id="pills-adverTise-tab" data-bs-toggle="pill" data-bs-target="#pills-adverTise" type="button" role="tab" aria-controls="pills-adverTise" aria-selected="false">Advertise</a>
-                        <a href="#logo" id="pills-counselling-tab" data-bs-toggle="pill" data-bs-target="#pills-counselling" type="button" role="tab" aria-controls="pills-counselling" aria-selected="false">Counselling</a>
-                        <a href="#friends" id="pills-simi-tab" data-bs-toggle="pill" data-bs-target="#pills-simi" type="button" role="tab" aria-controls="pills-simi" aria-selected="false">Top/Simi Col</a> 
+                        <a class="active text-primary d-none" href="#home" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Info</a>
+                        <a class="<?= ($tag != 'branch') ? 'd-none' : ''; ?>" href="#news" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Course & Seats</a>
+                        <a class="<?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>" href="#contact" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Courses & CutOff</a>
+                        <a class="<?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>" href="#about" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Courses & Fee</a>
+                        <a class="<?= ($tag != 'hospital') ? 'd-none' : ''; ?>"  href="#support" id="pills-hopspital-tab" data-bs-toggle="pill" data-bs-target="#pills-hopspital" type="button" role="tab" aria-controls="pills-hopspital" aria-selected="false">Hospital Details</a>
+                        <a class="<?= ($tag != 'reviews') ? 'd-none' : ''; ?>" href="#blog" id="pills-college-tab" data-bs-toggle="pill" data-bs-target="#pills-college" type="button" role="tab" aria-controls="pills-college" aria-selected="false">College Reviews</a>
+                        <a class="<?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>" href="#tools" id="pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#pills-gallery" type="button" role="tab" aria-controls="pills-gallery" aria-selected="false">College Gallery</a>  
+                        <a class="d-none" href="#base" id="pills-deta-tab" data-bs-toggle="pill" data-bs-target="#pills-deta" type="button" role="tab" aria-controls="pills-deta" aria-selected="false">College Cont. Deta</a>
+                        <a class="d-none" href="#custom" id="pills-paid-tab" data-bs-toggle="pill" data-bs-target="#pills-paid" type="button" role="tab" aria-controls="pills-paid" aria-selected="false">Paid Counselling</a>
+                        <a class="d-none" href="#more" id="pills-adverTise-tab" data-bs-toggle="pill" data-bs-target="#pills-adverTise" type="button" role="tab" aria-controls="pills-adverTise" aria-selected="false">Advertise</a>
+                        <a class="d-none" href="#logo" id="pills-counselling-tab" data-bs-toggle="pill" data-bs-target="#pills-counselling" type="button" role="tab" aria-controls="pills-counselling" aria-selected="false">Counselling</a>
+                        <a class="d-none" href="#friends" id="pills-simi-tab" data-bs-toggle="pill" data-bs-target="#pills-simi" type="button" role="tab" aria-controls="pills-simi" aria-selected="false">Top/Simi Col</a> 
                      </div>
                      <div class="tab-content tsyTops" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="tab-pane fade show active d-none" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                            <h4>About The College</h4>
                            <p><?= @$collegeData['short_description']; ?></p>
                            <div class="text-center">
                               <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
                            </div>
                         </div>
-                        <div class="tab-pane fade " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                           <div class="input-group mb-3">
-                              <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
-                              <select class="form-control raformsss"  name="" id="">
-                                 <option value="">Select College</option>
-                              </select>
-                           </div>
-                           <div class="input-group mb-3">
-                              <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/coou.png')?>" alt=""> </span>
-                              <select class="form-control raformsss"  name="" id="">
-                                 <option value="">Select Courses</option>
-                              </select>
-                           </div>
+                        <div class="tab-pane fade <?= ($tag != 'branch') ? 'd-none' : 'show active'; ?>" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                            <h5 class="cnTxtcou">Course & Seats</h5>
                            <div class="table-responsive">
                               <table class="table table-bordered ">
@@ -114,37 +102,66 @@
                                     </tr>
                                  </thead>
                                  <tbody>
-                                    <tr>
-                                       <td>Stream1</td>
-                                       <td>U.G</td>
-                                       <td>MBBS</td>
-                                       <td>Branch1</td>
-                                       <td>115</td>
-                                       <td>1895</td>
-                                    </tr>
-                                    <tr>
-                                       <td class="bgColosmn" colspan="3"> </td>
-                                       <td>Branch2</td>
-                                       <td>84</td>
-                                       <td class="bgColosmn" colspan="1"> </td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream2</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>99</td>
-                                       <td>1994</td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream3</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>111</td>
-                                       <td>2000</td>
-                                    </tr>
+                                    <?php
+                                    $courseStreamData = $this->db->select('*')->from('tbl_stream')->where('id', $singleCourse['stream'])->get()->row_array();
+                                    $courseDegreeTypeData = $this->db->select('*')->from('tbl_degree_type')->where('id', $singleCourse['degree_type'])->get()->row_array();
+                                    $branchListData = $this->db->select('*')->from('tbl_branch')->where('branch_type', $singleCourse['branch_type'])->get()->result_array();
+
+                                    if (!empty($branchListData)) {
+                                       foreach ($branchListData as $key => $branch) {
+                                             if ($key === 0) {
+                                                ?>
+                                                <tr>
+                                                   <td><?= $courseStreamData['stream']; ?></td>
+                                                   <td><?= $courseDegreeTypeData['degreetype']; ?></td>
+                                                   <td><?= $singleCourse['course']; ?></td>
+                                                   <td><?= $branch['branch']; ?></td>
+                                                   <td>0</td>
+                                                   <td>0</td>
+                                                </tr>
+                                             <?php } else { ?>
+                                                <tr>
+                                                   <td class="bgColosmn" colspan="3"></td>
+                                                   <td><?= $branch['branch']; ?></td>
+                                                   <td>0</td>
+                                                   <td>0</td>
+                                                </tr>
+                                             <?php }
+                                       }
+                                    }
+
+                                    if (!empty($courseList)) {
+                                       foreach ($courseList as $value) {
+                                             $courseStreamData = $this->db->select('*')->from('tbl_stream')->where('id', $value['stream'])->get()->row_array();
+                                             $courseDegreeTypeData = $this->db->select('*')->from('tbl_degree_type')->where('id', $value['degree_type'])->get()->row_array();
+                                             $branchListData = $this->db->select('*')->from('tbl_branch')->where('branch_type', $singleCourse['branch_type'])->get()->result_array();
+
+                                             if (!empty($branchListData)) {
+                                                foreach ($branchListData as $keys => $branches) {
+                                                   if ($keys === 0) { ?>
+                                                         <tr>
+                                                            <td><?= $courseStreamData['stream']; ?></td>
+                                                            <td><?= $courseDegreeTypeData['degreetype']; ?></td>
+                                                            <td><?= $value['course']; ?></td>
+                                                            <td><?= $branches['branch']; ?></td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                         </tr>
+                                                   <?php } else { ?>
+                                                         <tr>
+                                                            <td class="bgColosmn" colspan="3"></td>
+                                                            <td><?= $branches['branch']; ?></td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                         </tr>
+                                                   <?php }
+                                                }
+                                             }
+                                       }
+                                    }
+                                    ?>
                                  </tbody>
+
                               </table>
                            </div>
                            <br>
@@ -152,74 +169,75 @@
                               <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
                            </div>
                         </div>
-                        <div class="tab-pane fade " id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-                        <div class="row">
-                              <div class="input-group mb-3 col">
-                                 <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
-                                 <select class="form-control raformsss"  name="" id="">
-                                    <option value="">Select Degree Type</option>
-                                 </select>
+                        <div class="tab-pane fade <?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                           <div class="row">
+                                 <div class="input-group mb-3 col">
+                                    <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
+                                    <select class="form-control raformsss"  name="" id="">
+                                       <option value="">Select Degree Type</option>
+                                    </select>
+                                 </div>
+                                 <div class="input-group mb-3 col">
+                                    <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/coou.png')?>" alt=""> </span>
+                                    <select class="form-control raformsss"  name="" id="">
+                                       <option value="">Select Courses</option>
+                                    </select>
+                                 </div>
                               </div>
-                              <div class="input-group mb-3 col">
-                                 <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/coou.png')?>" alt=""> </span>
-                                 <select class="form-control raformsss"  name="" id="">
-                                    <option value="">Select Courses</option>
-                                 </select>
+                              <h5 class="cnTxtcou">Course & Fee</h5>
+                              <div class="table-responsive">
+                                 <table class="table table-bordered ">
+                                    <thead class="trgBgs">
+                                       <tr>
+                                          <th scope="col">Stream</th>
+                                          <th scope="col">Deg_Type</th>
+                                          <th scope="col">Course</th>
+                                          <th scope="col">Branch</th>
+                                          <th scope="col">Seats</th>
+                                          <th scope="col">Estd.</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>Stream1</td>
+                                          <td>U.G</td>
+                                          <td>MBBS</td>
+                                          <td>Branch1</td>
+                                          <td>115</td>
+                                          <td>1895</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="bgColosmn" colspan="3"> </td>
+                                          <td>Branch2</td>
+                                          <td>84</td>
+                                          <td class="bgColosmn" colspan="1"> </td>
+                                       </tr>
+                                       <tr>
+                                          <td>Stream2</td>
+                                          <td>Deg. Type</td>
+                                          <td>Course</td>
+                                          <td>Branch</td>
+                                          <td>99</td>
+                                          <td>1994</td>
+                                       </tr>
+                                       <tr>
+                                          <td>Stream3</td>
+                                          <td>Deg. Type</td>
+                                          <td>Course</td>
+                                          <td>Branch</td>
+                                          <td>111</td>
+                                          <td>2000</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
                               </div>
-                           </div>
-                           <h5 class="cnTxtcou">Course & Fee</h5>
-                           <div class="table-responsive">
-                              <table class="table table-bordered ">
-                                 <thead class="trgBgs">
-                                    <tr>
-                                       <th scope="col">Stream</th>
-                                       <th scope="col">Deg_Type</th>
-                                       <th scope="col">Course</th>
-                                       <th scope="col">Branch</th>
-                                       <th scope="col">Seats</th>
-                                       <th scope="col">Estd.</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    <tr>
-                                       <td>Stream1</td>
-                                       <td>U.G</td>
-                                       <td>MBBS</td>
-                                       <td>Branch1</td>
-                                       <td>115</td>
-                                       <td>1895</td>
-                                    </tr>
-                                    <tr>
-                                       <td class="bgColosmn" colspan="3"> </td>
-                                       <td>Branch2</td>
-                                       <td>84</td>
-                                       <td class="bgColosmn" colspan="1"> </td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream2</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>99</td>
-                                       <td>1994</td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream3</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>111</td>
-                                       <td>2000</td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                           <br>
-                           <div class="text-center">
-                              <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
+                              <br>
+                              <div class="text-center">
+                                 <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
+                              </div>
                            </div>
                         </div>
-                        <div class="tab-pane fade " id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
+                        <div class="tab-pane fade <?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
                            <div class="row">
                               <div class="input-group mb-3 col">
                                  <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
@@ -286,7 +304,7 @@
                               <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
                            </div>
                         </div>
-                        <div class="tab-pane fade " id="pills-hopspital" role="tabpanel" aria-labelledby="pills-hopspital-tab" tabindex="0">
+                        <div class="tab-pane fade <?= ($tag != 'hospital') ? 'd-none' : ''; ?>" id="pills-hopspital" role="tabpanel" aria-labelledby="pills-hopspital-tab" tabindex="0">
                            <h5 class="clinkTxt">Clinical Details</h5>
                            <div class="container">
                               <div class="row ">
@@ -407,13 +425,8 @@
 
 
                         </div>
-                        <div class="tab-pane fade " id="pills-college" role="tabpanel" aria-labelledby="pills-college-tab" tabindex="0">
-
-                        <h5 class="clinkTxt">Review & Rating</h5>
-
-                         
-  
-    
+                        <div class="tab-pane fade <?= ($tag != 'reviews') ? 'd-none' : ''; ?>" id="pills-college" role="tabpanel" aria-labelledby="pills-college-tab" tabindex="0">
+                              <h5 class="clinkTxt">Review & Rating</h5>
                               <div class="container">
                                   
                                  <div class="row">
@@ -517,18 +530,9 @@
 
 
                               </div>
-                              
-                              
-                              
-
-
-
                         </div>
                         <div class="tab-pane fade " id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab" tabindex="0">
-
                         <!-- <h5 class="clinkTxt">College Building</h5> -->
-
-                        
                            <div class="photo-gallery">
                               <div class="container">
                                  <div class="row photos">
@@ -592,91 +596,74 @@
                                  </div>
                            </div>
                         </div>  -->
-                        
-
-
                         </div>
                         <div class="tab-pane fade " id="pills-deta" role="tabpanel" aria-labelledby="pills-deta-tab" tabindex="0">
-
-                        <h5 class="clinkTxt">College Details</h5> 
-
-                        
-
-
-
-                        <ul class="list-group list-group-flush">
-                           
-                        <li class="list-group-item"> <img src="<?=base_url('assets/site/img/mamps.png')?>" alt=""> Ashok Rajpath, Patna University Campus,Patna, Bihar, India - 800001</li>
-                        <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Admission Cell - 0612-2300343</li>
-                        <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Enquiry Cell - 0612-284443</li>
-                        <li class="list-group-item"> </li> 
-                        </ul>
-                        
-
-                        <div class="maos shadow">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5184192849442!2d85.15581068885493!3d25.620914200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58e59b047959%3A0x59dab447f5633075!2sPatna%20Medical%20College%20-%20PMC!5e0!3m2!1sen!2sin!4v1708429282015!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-
-
-
-
-
+                           <h5 class="clinkTxt">College Details</h5> 
+                           <ul class="list-group list-group-flush">
+                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/mamps.png')?>" alt=""> Ashok Rajpath, Patna University Campus,Patna, Bihar, India - 800001</li>
+                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Admission Cell - 0612-2300343</li>
+                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Enquiry Cell - 0612-284443</li>
+                                 <li class="list-group-item"> </li> 
+                           </ul>
+                           <div class="maos shadow">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5184192849442!2d85.15581068885493!3d25.620914200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58e59b047959%3A0x59dab447f5633075!2sPatna%20Medical%20College%20-%20PMC!5e0!3m2!1sen!2sin!4v1708429282015!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                           </div>
                         </div>
                         <div class="tab-pane fade " id="pills-paid" role="tabpanel" aria-labelledby="pills-paid-tab" tabindex="0">
 
                          
-                        <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                        <br>
-                        <br>
-                        <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-                        
-                        <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                        <br>
-                        <br>
-                        <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-                        <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                        <br>
-                        <br>
-                        <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-
-                       
-                        <div class="position-relative">
-                     
-                     <div class="swiper mySwiper-RANDOMID position-relative">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper  ">
-                          
-                           <div class="swiper-slide lc-block">
-                              <div>
-                                 <div class="lc-block card py-xl-6 border-0">
-                                    <div class="d-flex flex-column justify-content-between">
-                                    <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
-                                     <div class="mcidis">
-                                     <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
-                                     </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
+                           <br>
+                           <br>
+                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
                            
-                           <div class="swiper-slide lc-block">
-                           <div>
-                                 <div class="lc-block card h-100 py-xl-6 border-0">
-                                    <div class="d-flex flex-column justify-content-between">
-                                    <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
-                                     <div class="mcidis">
-                                     <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
-                                     </div>
+                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
+                           <br>
+                           <br>
+                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
+                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
+                           <br>
+                           <br>
+                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
+
+                        
+                           <div class="position-relative">
+                        
+                        <div class="swiper mySwiper-RANDOMID position-relative">
+                           <!-- Additional required wrapper -->
+                           <div class="swiper-wrapper  ">
+                           
+                              <div class="swiper-slide lc-block">
+                                 <div>
+                                    <div class="lc-block card py-xl-6 border-0">
+                                       <div class="d-flex flex-column justify-content-between">
+                                       <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
+                                       <div class="mcidis">
+                                       <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
+                                       </div>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
+                              
+                              <div class="swiper-slide lc-block">
+                              <div>
+                                    <div class="lc-block card h-100 py-xl-6 border-0">
+                                       <div class="d-flex flex-column justify-content-between">
+                                       <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
+                                       <div class="mcidis">
+                                       <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
+                                       </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                           </div>
                         </div>
-                     </div>
                   </div>
 
 
