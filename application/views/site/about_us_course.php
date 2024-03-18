@@ -6,10 +6,9 @@
             <div class="col-md-5 p-lg-5 p-3 mx-auto ">
                <h4 class=" fw-bold text-start txtColor"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> &nbsp;  Know about <?= $selectedCourse['course']; ?></h4>
                <div class="card radius">
-                  <img src="<?=base_url('assets/site/img/imags.png')?>" class="card-img cuysss " alt="doc-pic">
+                  <img src="<?= ($selectedCourse['stream_image'] != '' && file_exists(FCPATH.'assets/uploads/stream/'.$selectedCourse['stream_image'])) ? base_url('assets/uploads/stream/').'/'.$selectedCourse['stream_image'] : base_url('assets/site/img/medical-tr.png');?>" class="card-img cuys " alt="doc-pic">
                   <div class="card-img-overlay mbbsOverlay">
-                     <h5 class="card-title">Lorem ipsum dollor site amet</h5>
-                     <p class="card-text">Lorem ipsum dollor site amet Lorem ipsum dollor.</p>
+                     <h5 class="card-title text-dark"><?= $selectedCourse['course_full_name']; ?></h5>
                   </div>
                </div>
             </div>
@@ -114,10 +113,9 @@
 
              <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
               <h4 class="text-start">State wise <?= $selectedCourse['course']; ?></h4>
-              <p class="text-start" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
             </div>
 
-            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden mb-5">
             <div class="row">
                <?php 
                if(!empty($stateList)) {
