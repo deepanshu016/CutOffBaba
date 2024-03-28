@@ -35,10 +35,10 @@
                      <div class="col-md-12">
                         <form action="<?= base_url('admin/filter-cutoff-data') ?>" method="POST" class="all-form-server">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Head Name</label>
-                                        <select class="form-control form-select" name="head_id" id="head_id">
+                                        <select class="form-control form-select get-category" name="head_id" id="head_id">
                                             <option value="">Select</option>
                                             <?php
                                             $headList = get_master_data('tbl_counselling_head',[]);
@@ -50,7 +50,7 @@
                                         <span class="text-danger" id="head_id"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Year</label>
                                             <select name="year" class="form-control" id="year">
@@ -67,6 +67,8 @@
                                         <span class="text-danger" id="year"></span>
                                     </div>
                                 </div>
+                                
+                                <div class="col-md-3 category-wrapper"></div>
                                 <div class="col-md-4">
                                     <div class="form-group" style="margin-top: 26px;">
                                         <label>  </label>
@@ -94,14 +96,26 @@
     </div>
     <!-- container-fluid -->
 </div>
-<?php $this->load->view('admin/footer'); ?>
- 
-                 
-                 <script type="text/javascript">
-                    function downloaddata(){
-                        var headid=$('#head_id').val();
-                        var year=$('#year').val();
-                        //alert(''+headid+year);
-                        window.location.href='<?= base_url('admin/export-cutoff-entry-data'); ?>/'+headid+'/'+year
-                    }
-                </script>
+<?php $this->load->view('admin/footer'); ?>               
+<script type="text/javascript">
+    function downloaddata(){
+        var headid=$('#head_id').val();
+        var year=$('#year').val();
+        //alert(''+headid+year);
+        window.location.href='<?= base_url('admin/export-cutoff-entry-data'); ?>/'+headid+'/'+year
+    }
+    $("body").on("change",".get-category",function(){
+        var head_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('admin/get-category');?>",
+            data:{'head_id':head_id},
+            dataType: 'json',
+            success: function(data){
+                if(data.status == 'success'){
+                    $(".category-wrapper").html(data.html);
+                }
+            }
+        }); 
+    });
+</script>

@@ -22,7 +22,7 @@ $db['default'] = array(
 
 
 
-'hostname' => 'localhost',
+	'hostname' => 'localhost',
 
 
 

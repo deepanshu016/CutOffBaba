@@ -509,6 +509,7 @@ $route['admin/cutoff-entry-data'] = 'Admin/CounsellingHead/cutOffEntryData';
 $route['admin/filter-cutoff-data'] = 'Admin/CounsellingHead/filterCutOffData';
 $route['admin/import-cutoffdata'] = 'Admin/CounsellingHead/importCutOffData';
 $route['admin/import-cutoffdata-by-excel'] = 'Admin/CounsellingHead/importCutOffDataExcel';
+$route['admin/get-category'] = 'Admin/CounsellingHead/getCategory';
 $route['admin/export-cutoff-entry-data/(:any)/(:any)'] = 'Admin/Export/exportCutOffEntryData/$1/$2';
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

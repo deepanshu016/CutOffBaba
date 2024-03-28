@@ -222,23 +222,23 @@
 <script type="text/javascript">
 function getfeedetail() {
   var id = $(".fee_head_id option:selected").val();
-      if (id!="") {
+    if (id!="") {
         $.ajax({
-        type: 'POST',
-        url: "<?=base_url('Admin/fees/getheadetail/');?>"+id,
-        data:{'id':id},
-        dataType: 'html',
-        processData: false,
-        contentType: false,
-        success: function(data){
-            $('.details').html(data);
-            $("textarea").each(function () {
-        let id = $(this).attr('id');
-         CKEDITOR.replace(id);
-    });
-        }
-    }); 
-      }
+            type: 'POST',
+            url: "<?=base_url('Admin/fees/getheadetail/');?>"+id,
+            data:{'id':id},
+            dataType: 'html',
+            processData: false,
+            contentType: false,
+            success: function(data){
+                $('.details').html(data);
+                $("textarea").each(function () {
+                    let id = $(this).attr('id');
+                    CKEDITOR.replace(id);
+                });
+            }
+        }); 
+    }
 }
 function getcourses() {
   var id = $(".college_id option:selected").val();

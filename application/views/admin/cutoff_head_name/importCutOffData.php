@@ -34,7 +34,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label for="basiInput" class="form-label">Head</label>
-                                                        <select class="form-control" name="head_id">
+                                                        <select class="form-control get-category" name="head_id">
                                                             <option value="">Select</option>
                                                             <?php
                                                             $headList = get_master_data('tbl_counselling_head',[]);
@@ -46,6 +46,7 @@
                                                         <span class="text-danger" id="head_id"></span>
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-12 category-wrapper"></div>
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label>Year</label>
@@ -92,3 +93,19 @@
         <!-- container-fluid -->
     </div>
 <?php $this->load->view('admin/footer'); ?>
+<script type="text/javascript">
+    $("body").on("change",".get-category",function(){
+        var head_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('admin/get-category');?>",
+            data:{'head_id':head_id},
+            dataType: 'json',
+            success: function(data){
+                if(data.status == 'success'){
+                    $(".category-wrapper").html(data.html);
+                }
+            }
+        }); 
+    });
+</script>

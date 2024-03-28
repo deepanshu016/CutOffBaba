@@ -249,10 +249,12 @@ Class CounsellingHead extends MY_Controller {
    
     public function importCutOffDataExcel(){
         $this->form_validation->set_rules('head_id', 'Head Name', 'trim|required');
+        $this->form_validation->set_rules('sub_category_id', 'Category', 'trim|required');
         $this->form_validation->set_rules('year', 'Course', 'trim|required');
         $this->form_validation->set_rules('excel_file', 'Image', 'callback_file_check_excel_file');
         if ($this->form_validation->run()) {
             $head_id = $this->input->post('head_id');  
+            $sub_category_id = $this->input->post('sub_category_id');  
             $year = $this->input->post('year');  
             if(!empty($_FILES['excel_file']['name'])) {
                 $config['upload_path']  = 'assets/uploads/excels';
@@ -331,7 +333,7 @@ Class CounsellingHead extends MY_Controller {
                         $r1['air']=$sheet_data[$l][$x];
                         $r1['sr']=$sheet_data[$l][$x+1];
                         $r1['marks']=$sheet_data[$l][$x+2];        
-                        $r1['category_type']=$category_type;  
+                        $r1['category_type']=$sub_category_id;  
                         $r1['cutoff_head']=$head_id;  
                         $r1['year']=$year;  
 
@@ -342,7 +344,7 @@ Class CounsellingHead extends MY_Controller {
                         $r2['air']=$sheet_data[$l][$x+3];
                         $r2['sr']=$sheet_data[$l][$x+4];
                         $r2['marks']=$sheet_data[$l][$x+5];        
-                        $r2['category_type']=$category_type; 
+                        $r2['category_type']=$sub_category_id; 
                         $r2['cutoff_head']=$head_id;  
                         $r2['year']=$year;   
 
@@ -353,7 +355,7 @@ Class CounsellingHead extends MY_Controller {
                         $r3['air']=$sheet_data[$l][$x+6];
                         $r3['sr']=$sheet_data[$l][$x+7];
                         $r3['marks']=$sheet_data[$l][$x+8];        
-                        $r3['category_type']=$category_type;  
+                        $r3['category_type']=$sub_category_id;  
                         $r3['cutoff_head']=$head_id;  
                         $r3['year']=$year;   
 
@@ -364,7 +366,7 @@ Class CounsellingHead extends MY_Controller {
                         $r4['air']=$sheet_data[$l][$x+9];
                         $r4['sr']=$sheet_data[$l][$x+10];
                         $r4['marks']=$sheet_data[$l][$x+11];        
-                        $r4['category_type']=$category_type;  
+                        $r4['category_type']=$sub_category_id;  
                         $r4['cutoff_head']=$head_id;  
                         $r4['year']=$year;   
 
@@ -377,7 +379,7 @@ Class CounsellingHead extends MY_Controller {
                         $r5['air']=$sheet_data[$l][$x+12];
                         $r5['sr']=$sheet_data[$l][$x+13];
                         $r5['marks']=$sheet_data[$l][$x+14];        
-                        $r5['category_type']=$category_type;  
+                        $r5['category_type']=$sub_category_id;  
                         $r5['cutoff_head']=$head_id;  
                         $r5['year']=$year;   
 
@@ -426,14 +428,36 @@ Class CounsellingHead extends MY_Controller {
             return redirect('admin');
         }
     }
+    public function getCategory(){
+        if ($this->is_admin_logged_in() == true) {
+            $html = '';
+            $subCategoryData = $this->master->getRecords('tbl_sub_category',['head_id'=> $this->input->post('head_id')]);
+            if(!empty($subCategoryData)){
+                $html .= '<div class="form-group"><label>Category</label> <select class="form-control form-select" name="sub_category_id">';
+                foreach($subCategoryData as $sub){
+                    $html .= '<option value="'.$sub['id'].'">'.$sub['sub_category_name'].'</option>';
+                }
+                $html .= '</select><span class="text-danger" id="sub_category_id"></span></div>';
+            }
+            $response = array('status' => 'success','message'=> 'Data imported successfully','url'=>'','html'=>$html);
+            echo json_encode($response);
+            return false;
+        }else{
+            $response = array('status' => 'errors','message'=> 'Something went Wrong','url'=>'','html'=>'');
+            echo json_encode($response);
+            return false;
+        }
+    }
 
     public function filterCutOffData(){
         $this->form_validation->set_rules('head_id', 'Head', 'trim|required');
         $this->form_validation->set_rules('year', 'Year', 'trim|required');
+        $this->form_validation->set_rules('sub_category_id', 'Category', 'trim|required');
         if ($this->form_validation->run()) {
             $data['head_id'] = $this->input->post('head_id');
+            $data['category_id'] = $this->input->post('sub_category_id');
             $data['year'] = $this->input->post('year');
-            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> $data['head_id']]);
+            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> $data['head_id'],'id'=> $data['category_id']]);
             $data['counsellingHead'] = $this->master->getRecords('tbl_counselling_head',['id'=>$data['head_id']]);
             $result = $this->load->view('admin/cutoff_head_name/cutoff_entry_data_ajax',$data,TRUE);
           
@@ -445,6 +469,7 @@ Class CounsellingHead extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
+                    'sub_category_id' => form_error('sub_category_id'),
                     'head_id' => form_error('head_id'),
                     'year' => form_error('year')
                 )
