@@ -36,6 +36,9 @@
                                 <a href="<?= base_url('admin/stream'); ?>" class="nav-link" data-key="t-calendar">Streams </a>
                             </li>
                             <li class="nav-item">
+                                <a href="<?= base_url('admin/coursegroup'); ?>" class="nav-link" data-key="t-calendar"> Course Group </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?= base_url('admin/opens'); ?>" class="nav-link" data-key="t-calendar">Opens </a>
                             </li>
                             <li class="nav-item">
@@ -134,8 +137,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="<?= base_url('admin/service-rules'); ?>" data-key="t-calendar">
-                                    Service & Bond Rules
+                                <a class="nav-link"  href="<?= base_url('admin/fees'); ?>" data-key="t-calendar">
+                                    College Fees
                                 </a>
                             </li>
                         </ul>

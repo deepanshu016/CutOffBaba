@@ -24,6 +24,7 @@ Class Course extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['branchType'] = $this->site->getRecords('tbl_nature');
+            $data['coursegroupType'] = $this->site->getRecords('tbl_coursegroup');
             $this->load->view('admin/course/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -35,6 +36,7 @@ Class Course extends MY_Controller {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['branchType'] = $this->site->getRecords('tbl_nature');
+             $data['coursegroupType'] = $this->site->getRecords('tbl_coursegroup');
             $data['singleCourse'] = $this->master->singleRecord('tbl_course',array('id'=>$id));
             $this->load->view('admin/course/add-edit',$data);
         }else{
@@ -95,6 +97,7 @@ Class Course extends MY_Controller {
             $data['counselling_authority'] = $this->input->post('counselling_authority');
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
              $data['branch_type'] = ($this->input->post('branch_type')) ? implode('|',$this->input->post('branch_type')) : '';
+             $data['coursegroup'] = ($this->input->post('coursegroup')) ? implode('|',$this->input->post('coursegroup')) : '';
             $result = $this->master->insert('tbl_course',$data);
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Course added successfully','url'=>base_url('admin/course'));
@@ -157,6 +160,7 @@ Class Course extends MY_Controller {
             $data['counselling_authority'] = $this->input->post('counselling_authority');
             $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
              $data['branch_type'] = ($this->input->post('branch_type')) ? implode('|',$this->input->post('branch_type')) : '';
+             $data['coursegroup'] = ($this->input->post('coursegroup')) ? implode('|',$this->input->post('coursegroup')) : '';
             $result = $this->master->updateRecord('tbl_course',array('id'=>$this->input->post('course_id')),$data);
             $response = array('status' => 'success','message'=> 'Course updated successfully','url'=>base_url('admin/course'));
             echo json_encode($response);
@@ -249,6 +253,7 @@ Class Course extends MY_Controller {
                             $impdata['counselling_authority']=$data[13];
                             $impdata['college']=$data[14];
                             $impdata['branch_type']=$data[15];
+                            $impdata['coursegroup']=$data[16];
                             $impdata['status']=1;
                             $id=$data[0];
                             if($id==""){

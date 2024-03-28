@@ -1,16 +1,4 @@
-1. Forget to Reset ka structure check krna hai(Done)
-2. State CRUD - Add State Icon (Done)
-3. Registration- Add Examination Given(Done)
-4. Update Profile -  Exam comes from Registration Rest Category & Subcategory Accordingly- Domicile State From Cutoff Head Filter on Course & Lavel- AIR*,SR,MARKS* ( Discussion Required )(Done)
-5. Update Profile - Personal Details, Examination Details(Exam & its Marks*, AIR*, SR), Reservation Details- Option To Submit Saperataly For Each Courses and Highlight Course After Submission(Done)
-6. Registered Candidate List With all the Details Captured.(Done)
-7. Need to Capture Course and Colleges Visited
-8. User Dashboard- Explore Courses According to his Examination Selected Along with Paid Counselling Plans & College Predictor.(Done)
+Admin Panel 
+1. Seat Matrix
 
-
-
-Admin Panel- Add College Gallery (Done)
-
-Icon in Facility(Done)
-
-
+Select College-Course According to college-

@@ -152,6 +152,7 @@ Class College extends MY_Controller {
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->insert('tbl_college',$data);
+            echo $this->db->last_query();
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'College added successfully','url'=>base_url('admin/college'));
                 echo json_encode($response);
@@ -338,20 +339,21 @@ Class College extends MY_Controller {
                         if ($row>0) {
                             $impdata['full_name'] = $data[1];
                             $impdata['slug'] = $this->slug($data[1]);
-                            $impdata['short_description'] = $data[2];
-                            $impdata['popular_name_one'] = $data[3];
-                            $impdata['popular_name_two'] = $data[4];
-                            $impdata['establishment'] = $data[8];
-                            $impdata['gender_accepted'] = $data[10];
-                            $impdata['course_offered'] = $data[11];
-                            $impdata['college_banner'] = $data[5];
-                            $impdata['college_logo'] = $data[6];
-                            $impdata['prospectus_file'] = $data[7];
-                            $impdata['country'] = $data[12];
-                            $impdata['state'] = $data[13];
-                            $impdata['city'] = $data[14];
+                            $impdata['short_name'] = $data[2];
+                            $impdata['short_description'] = $data[3];
+                            $impdata['popular_name_one'] = $data[4];
+                            $impdata['popular_name_two'] = $data[5];
+                            $impdata['establishment'] = $data[6];
+                            $impdata['gender_accepted'] = $data[7];
+                            $impdata['stream'] = $data[8];
+                            $impdata['course_offered'] = $data[9];
+                            $impdata['country'] = $data[10];
+                            $impdata['state'] = $data[11];
+                            $impdata['city'] = $data[12];
+                            $impdata['subdistrict'] = $data[13];
+                            $impdata['affiliated_by'] = $data[14];
                             $impdata['university_name'] = $data[15];
-                            $impdata['approved_by'] = $data[9];
+                            $impdata['approved_by'] = $data[16];
                             $impdata['ownership'] = $data[17];
                             $impdata['website'] =  $data[18];
                             $impdata['email'] = $data[19];
@@ -361,10 +363,9 @@ Class College extends MY_Controller {
                             $impdata['nodal_officer_name'] = $data[23];
                             $impdata['nodal_officer_no'] = $data[24];
                             $impdata['keywords'] = $data[25];
-                            $impdata['tags'] = $data[26];
-                            $impdata['status'] = $data[27];
-                            $impdata['short_name'] = $data[28];
-                            $impdata['stream'] = $data[29];
+                            $impdata['tags'] = $data[26];                            
+                            $impdata['facility'] = $data[27];
+                            $impdata['status'] = $data[28];
                             $id=$data[0];
                             if($id==""){
                                 $this->db->insert('tbl_college',$impdata);

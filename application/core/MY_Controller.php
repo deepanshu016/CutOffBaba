@@ -118,7 +118,7 @@ class MY_Controller extends CI_Controller {
         }
         return $formattedData;
     }
-	public function uploadMultipleFiles($fileData,$fileNames_old,$file_type,$data = '' ,$path,$file_for){
+	public function uploadMultipleFiles($fileData='',$fileNames_old='',$file_type='',$data = '' ,$path='',$file_for=''){
         $targetDir = 'assets/uploads/'.$path;
         $fileNames = array_filter($fileData['name']);
         $insertValuesSQL = '';

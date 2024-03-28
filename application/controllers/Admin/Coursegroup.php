@@ -1,6 +1,6 @@
 <?php
 
-Class FeesHead extends MY_Controller {
+Class Coursegroup extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -12,8 +12,8 @@ Class FeesHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['feesHeadList'] = $this->master->getRecords('tbl_feeshead');
-            $this->load->view('admin/feeshead/list',$data);
+            $data['CoursegroupList'] = $this->master->getRecords('tbl_coursegroup');
+            $this->load->view('admin/coursegroup/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -23,42 +23,54 @@ Class FeesHead extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $this->load->view('admin/feeshead/add-edit',$data);
+            $this->load->view('admin/coursegroup/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
-    public function editFeesHead($id){
+    public function editCoursegroup($id,$slug){
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $data['singleFeesHead'] = $this->master->singleRecord('tbl_feeshead',array('id'=>$id));
-            $this->load->view('admin/feeshead/add-edit',$data);
+            $data['singleCoursegroup'] = $this->master->singleRecord('tbl_coursegroup',array('id'=>$id,'slug'=>$slug));
+            $this->load->view('admin/coursegroup/add-edit',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
-    //Save Feeshead
-    public function saveFeesHead(){
-        $this->form_validation->set_rules('fee_head_name', 'Fees Head Name', 'trim|required');
-        $this->form_validation->set_rules('tution_fees', 'Tution Fees', 'trim|required');
+    public function file_check($str){
+        $allowed_mime_type_arr = array('image/jpeg','image/pjpeg','image/png','image/x-png');
+        if(!empty($_FILES['banner_image'])){
+            $mime = get_mime_by_extension($_FILES['banner_image']['name']);
+            if(isset($_FILES['banner_image']['name']) && $_FILES['banner_image']['name']!=""){
+                if(in_array($mime, $allowed_mime_type_arr)){
+                    return true;
+                }else{
+                    $this->form_validation->set_message('file_check', 'Please select only jpg/png file.');
+                    return false;
+                }
+            }else{
+                $this->form_validation->set_message('file_check', 'Please choose a file to upload.');
+                return false;
+            }
+        }else{
+            $this->form_validation->set_message('file_check', 'Please choose a file to upload.');
+            return false;
+        }
+    }
+    //Save Banner
+    public function saveCoursegroup(){
+        $this->form_validation->set_rules('title', 'Title', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['fee_head_name'] = $this->input->post('fee_head_name');
-            $data['tution_fees'] = $this->input->post('tution_fees');
-            $data['hostel_fees'] = $this->input->post('hostel_fees');
-            $data['misc_fees'] = $this->input->post('misc_fees');
-            $data['bank_details_1'] = $this->input->post('bank_details_1');
-            $data['bank_details_2'] = $this->input->post('bank_details_2');
-            $data['demand_draft_name'] = $this->input->post('demand_draft_name');
-            $data['bondrule'] = $this->input->post('bondrule');
-            $data['seat_indentity_charges'] = $this->input->post('seat_indentity_charges');
-            $data['upgradation_processing_fees'] = $this->input->post('upgradation_processing_fees');
-            $data['otfee'] = $this->input->post('otfee');
-            $result = $this->master->insert('tbl_feeshead',$data);
+            $data['title'] = $this->input->post('title');
+            $data['slug'] = $this->slug($this->input->post('title'));
+            $data['status'] = 1;
+            $data['created_at'] = date('Y-m-d H:i:s');
+            $result = $this->master->insert('tbl_coursegroup',$data);
             if($result > 0){
-                $response = array('status' => 'success','message'=> 'Fees Head added successfully','url'=>base_url('admin/feeshead'));
+                $response = array('status' => 'success','message'=> 'Course Group added successfully','url'=>base_url('admin/coursegroup'));
                 echo json_encode($response);
                 return false;
             }else{
@@ -70,53 +82,43 @@ Class FeesHead extends MY_Controller {
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'fee_head_name' => form_error('fee_head_name'),
-                    'tution_fees' => form_error('tution_fees')
+                    'title' => form_error('title')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    //Save Feeshead
-    public function updateFeesHead(){
+    //Save Category
+    public function updateCoursegroup(){
 
-        $this->form_validation->set_rules('fee_head_name', 'Fees Head Name', 'trim|required');
-        $this->form_validation->set_rules('tution_fees', 'Tution Fees', 'trim|required');
+        $this->form_validation->set_rules('title', 'Title', 'trim|required');
         if ($this->form_validation->run()) {
-            $data['fee_head_name'] = $this->input->post('fee_head_name');
-            $data['tution_fees'] = $this->input->post('tution_fees');
-            $data['hostel_fees'] = $this->input->post('hostel_fees');
-            $data['misc_fees'] = $this->input->post('misc_fees');
-            $data['bank_details_1'] = $this->input->post('bank_details_1');
-            $data['bank_details_2'] = $this->input->post('bank_details_2');
-            $data['demand_draft_name'] = $this->input->post('demand_draft_name');
-            $data['bondrule'] = $this->input->post('bondrule');
-            $data['seat_indentity_charges'] = $this->input->post('seat_indentity_charges');
-            $data['upgradation_processing_fees'] = $this->input->post('upgradation_processing_fees');
-            $data['otfee'] = $this->input->post('otfee');
-            $result = $this->master->updateRecord('tbl_feeshead',array('id'=>$this->input->post('name_id')),$data);
-            $response = array('status' => 'success','message'=> 'Fees Head updated successfully','url'=>base_url('admin/feeshead'));
+
+            $data['title'] = $this->input->post('title');
+            $data['status'] = 1;
+            $data['updated_at'] = date('Y-m-d H:i:s');
+            $result = $this->master->updateRecord('tbl_coursegroup',array('id'=>$this->input->post('coursegroup_id')),$data);
+            $response = array('status' => 'success','message'=> 'Course Group updated successfully','url'=>base_url('admin/coursegroup'));
             echo json_encode($response);
             return true;
         }else{
             $response = array(
                 'status' => 'error',
                 'errors' => array(
-                    'fee_head_name' => form_error('fee_head_name'),
-                    'tution_fees' => form_error('tution_fees')
+                    'title' => form_error('title')
                 )
             );
             echo json_encode($response);
             return false;
         }
     }
-    public function deleteFeesHead(){
+    public function deleteCoursegroup(){
         if ($this->is_admin_logged_in() == true) {
             $id = $this->input->post('id');
-            $result = $this->master->deleteRecord('tbl_feeshead',array('id'=>$id));
+            $result = $this->master->deleteRecord('tbl_coursegroup',array('id'=>$id));
             if($result > 0){
-                $response = array('status' => 'success','message' => 'Fees Head deleted successfully','url'=>base_url('admin/feeshead'));
+                $response = array('status' => 'success','message' => 'Course Group deleted successfully','url'=>base_url('admin/coursegroup'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }
@@ -146,11 +148,11 @@ Class FeesHead extends MY_Controller {
             return false;
         }
     }
-    public function importFeesHead(){
+    public function importCoursegroup(){
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $this->load->view('admin/feeshead/import',$data);
+            $this->load->view('admin/coursegroup/import',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
@@ -158,7 +160,9 @@ Class FeesHead extends MY_Controller {
     }
 
     // Import CSV in DB
-    public function importFeesHeadByExcel(){
+
+    public function importCoursegroupByExcel(){
+
         if($_FILES['excel_file']['error'] == 0){
             $name = $_FILES['excel_file']['name'];
             $ext = explode('.', $name);
@@ -172,37 +176,31 @@ Class FeesHead extends MY_Controller {
                     while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
                         $col_count = count($data);
                         if ($row>0) {
-                            $impdata['fee_head_name']=$data[1];
-                            $impdata['tution_fees']=$data[2];
-                            $impdata['hostel_fees']=$data[3];
-                            $impdata['misc_fees']=$data[4];
-                            $impdata['bank_details_1']=$data[5];
-                            $impdata['bank_details_2']=$data[6];
-                            $impdata['demand_draft_name']=$data[7];
-                            $impdata['bondrule']=$data[8];
-                            $impdata['seat_indentity_charges']=$data[9];
-                            $impdata['upgradation_processing_fees']=$data[10];
-                            $impdata['otfee']=$data[11];
+                            $impdata['title']=$data[1];
+                            $impdata['slug']=$this->slug($data[1]);
                             $id=$data[0];
                             if($id==""){
-                                $this->db->insert('tbl_feeshead',$impdata);
+                                $this->db->insert('tbl_coursegroup',$impdata);
                             }else{
-                                $this->db->where('id',$id)->update('tbl_feeshead',$impdata);
+                                $this->db->where('id',$id)->update('tbl_coursegroup',$impdata);
                             }
                         }
                         $row++;
                      }
                      fclose($handle);
-                    $response = array('status' => 'success','message' => 'Feeshead imported successfully','url'=>base_url('admin/feeshead'));
+                    $response = array('status' => 'success','message' => 'Course Group imported successfully','url'=>base_url('admin/coursegroup'));
                     echo json_encode($response);
                     return true;
+
+                    
+
                 }else{
 
                     $response = array(
-                        'status' => 'error',
-                        'errors' => array(
-                            'excel_file' => form_error('excel_file')
-                    )
+                'status' => 'error',
+                'errors' => array(
+                    'excel_file' => form_error('excel_file')
+                )
             );
             echo json_encode($response);
             return false;
@@ -230,7 +228,7 @@ Class FeesHead extends MY_Controller {
             echo json_encode($response);
             return false;
         }
-    } 
+    }
 }
 
 ?>

@@ -24,7 +24,7 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleServiceRule)) { ?>
                       <h4 class="card-title mb-0">Add Service  & Bond Rules</h4>
                     <?php } else{  ?>
@@ -77,9 +77,9 @@
                                   <div class="row">
                                     <div class="col-md-12" style="margin-top: 15px;">
                                         <?php if(empty($singleServiceRule)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

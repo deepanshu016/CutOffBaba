@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6" style="margin-top: 15px;">
-                                                    <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Upload</button>
+                                                    <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Upload</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -13,7 +13,7 @@ Class Common extends MY_Controller {
             $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
             $stateList = $this->master->getRecordsOrderBy('tbl_state',['country_id'=>$id],'name');
-            $html = '';
+            $html = '<option value="">Select State</option>';
             if(!empty($stateList)){
                 foreach($stateList as $state){
                     $html.= '<option value="'.$state['id'].'">'.$state['name'].'</option>';
@@ -37,7 +37,7 @@ Class Common extends MY_Controller {
             $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
             $cityList = $this->master->getRecordsOrderBy('tbl_city',['state_id'=>$id],'city');
-            $html = '';
+            $html = '<option value="">Select District</option>';
             if(!empty($cityList)){
                 foreach($cityList as $city){
                     $html.= '<option value="'.$city['id'].'">'.$city['city'].'</option>';
@@ -60,7 +60,7 @@ Class Common extends MY_Controller {
             $id = $this->input->post('id');
             $data['admin_session'] = $this->session->userdata('admin');
             $cityList = $this->master->getRecordsOrderBy('tbl_sub_district',['district'=>$id],'district');
-            $html = '';
+            $html = '<option value="">Select Sub District</option>';
             if(!empty($cityList)){
                 foreach($cityList as $city){
                     $html.= '<option value="'.$city['id'].'">'.$city['sub_district'].'</option>';

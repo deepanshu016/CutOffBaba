@@ -24,7 +24,7 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleCounsellingLevel)) { ?>
                       <h4 class="card-title mb-0">Add Counselling Level</h4>
                     <?php } else{  ?>
@@ -59,9 +59,9 @@
                                   <div class="row">
                                     <div class="col-md-6" style="margin-top: 15px;">
                                         <?php if(empty($singleCounsellingLevel)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

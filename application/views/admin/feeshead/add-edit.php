@@ -24,7 +24,7 @@
         <div class="row">
            <div class="col-lg-12">
               <div class="card">
-                 <div class="card-header">
+                 <div class="card-header d-flex justify-content-between">
                     <?php if(empty($singleFeesHead)) { ?>
                       <h4 class="card-title mb-0">Add Fees Head</h4>
                     <?php } else{  ?>
@@ -109,12 +109,44 @@
                                           </div>
                                       </div>
                                   </div>
+                                   <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Service & Bond Rules</label>
+                                              <textarea class="form-control" name="bondrule" id="bondrule"><?= (!empty($singleFeesHead)) ? $singleFeesHead['bondrule'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="row">
+                                      <div class="col-lg-6 col-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Seat Indemnity Charges</label>
+                                              <input class="form-control" type="text" name="seat_indentity_charges"  placeholder="Seat Indemnity Charges" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['seat_indentity_charges'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6 col-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Upgradation Processing Fees</label>
+                                              <input class="form-control" type="text" name="upgradation_processing_fees"  placeholder="Upgradation Processing Fees" value="<?= (!empty($singleFeesHead)) ? $singleFeesHead['upgradation_processing_fees'] : ''; ?>">
+                                          </div>
+                                      </div>
+                                  </div>
+                                   <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Other Fees</label>
+                                              <textarea class="form-control" name="otfee" id="otfee"><?= (!empty($singleFeesHead)) ? $singleFeesHead['otfee'] : '';?></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
                                   <div class="row">
                                     <div class="col-md-12" style="margin-top: 15px;">
                                         <?php if(empty($singleFeesHead)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

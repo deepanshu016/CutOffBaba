@@ -243,7 +243,7 @@
                       <div class="row gy-4">
                         <div class="col-md-3">
                           <div class="d-flex flex-wrap gap-2" style="margin-top:15px;">
-                              <button type="submit" class="btn rounded-pill btn-primary waves-effect waves-light" id="update">Update</button>
+                              <button type="submit" class="btn rounded-pill w-100 btn-primary waves-effect waves-light" id="update">Update</button>
                           </div>
                         </div>
                       </div>

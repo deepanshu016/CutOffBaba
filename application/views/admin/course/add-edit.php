@@ -168,7 +168,7 @@
 
                                   </div>
                                   <div class="row">
-                                      <div class="col-lg-4">
+                                      <div class="col-lg-3">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Colleges</label>
                                               <select class="form-control js-example-basic-multiple" name="college[]" multiple>
@@ -187,17 +187,16 @@
                                               <span class="text-danger" id="college"></span>
                                           </div>
                                       </div>
-                                      <div class="col-lg-4">
+                                      <div class="col-lg-3">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Counselling Authority</label>
                                               <input class="form-control" type="text" name="counselling_authority"  placeholder="Counselling Authority" value="<?= (!empty($singleCourse)) ? $singleCourse['counselling_authority'] : ''; ?>">
                                           </div>
                                       </div>
-                                      <div class="col-lg-4">
+                                      <div class="col-lg-3">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Nature/Group</label>
                                               <select class="form-control form-select js-example-basic-multiple" name="branch_type[]" multiple>
-                                                  <option value="">Select</option>
                                                   <?php
 
                                                   $branch_type=explode("|",$singleCourse['branch_type']);
@@ -207,6 +206,21 @@
                                                       <?php } } ?>
                                               </select>
                                               <span class="text-danger" id="branch_type"></span>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-3">
+                                          <div class="form-group">
+                                              <label for="basiInput" class="form-label">Course Group</label>
+                                              <select class="form-control form-select js-example-basic-multiple" name="coursegroup[]" multiple>
+                                                  <?php
+
+                                                  $coursegroup=explode("|",$singleCourse['coursegroup']);
+                                                  if(!empty($coursegroupType)){
+                                                      foreach($coursegroupType as $branch){ ?>
+                                                          <option value="<?= $branch['id']; ?>" <?= (!empty($singleCourse) && in_array($branch['id'],$coursegroup)) ? 'selected' : ''; ?>><?= $branch['title']; ?></option>
+                                                      <?php } } ?>
+                                              </select>
+                                              <span class="text-danger" id="coursegroup"></span>
                                           </div>
                                       </div>
                                   </div>

@@ -37,15 +37,15 @@
                     <div id="customerList">
                        <div class="row g-4 mb-3">
                           <?php if(empty($singleCollege)) { ?>
-                            <form action="<?= base_url('admin/save-college') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                            <form action="<?= base_url('admin/save-college') ?>" method="POST" enctype="multipart/form-data" >
                           <?php } else{  ?>
-                            <form action="<?= base_url('admin/update-college') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                            <form action="<?= base_url('admin/update-college') ?>" method="POST" enctype="multipart/form-data" >
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">College Full Name</label>
+                                              <label for="basiInput" class="form-label">College Full Name<span class="text-danger">*</span></label>
                                               <input type="text" class="form-control" placeholder="College Full Name" name="full_name" value="<?= (!empty($singleCollege)) ? $singleCollege['full_name'] : ''; ?>">
                                               <input type="hidden" class="form-control" name="college_id" value="<?= (!empty($singleCollege)) ? $singleCollege['id'] : ''; ?>">
                                               <input type="hidden" class="form-control" name="old_logo" value="<?= (!empty($singleCollege)) ? $singleCollege['college_logo'] : ''; ?>">
@@ -56,7 +56,7 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">College Short Name</label>
+                                              <label for="basiInput" class="form-label">College Short Name<span class="text-danger">*</span></label>
                                               <input type="text" class="form-control" placeholder="College Short Name" name="short_name" value="<?= (!empty($singleCollege)) ? $singleCollege['short_name'] : ''; ?>">
                                           </div>
                                       </div>
@@ -75,7 +75,7 @@
                                       </div>
                                       <div class="col-lg-12">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Short Description</label>
+                                              <label for="basiInput" class="form-label">Short Description<span class="text-danger">*</span></label>
                                               <textarea name="short_description" id="short_description" class="form-control" placeholder="Short Description" rows="5" cols="15"><?= (!empty($singleCollege)) ? $singleCollege['short_description'] : ''; ?></textarea>
                                               <span class="text-danger" id="short_description"></span>
                                           </div>
@@ -85,13 +85,13 @@
                                       <div class="col-lg-4">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Establishment Year</label>
-                                              <input type="text" class="form-control" placeholder="Establishment Year" name="establishment" value="<?= (!empty($singleCollege)) ? date('Y-m-d',strtotime($singleCollege['establishment'])) : ''; ?>">
+                                              <input type="text" class="form-control" placeholder="Establishment Year" name="establishment" value="<?= (!empty($singleCollege)) ? $singleCollege['establishment'] : ''; ?>">
                                               <span class="text-danger" id="establishment"></span>
                                           </div>
                                       </div>
                                       <div class="col-lg-4">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Gender Accepted</label>
+                                              <label for="basiInput" class="form-label">Gender Accepted<span class="text-danger">*</span></label>
                                               <select class="form-control js-example-basic-multiple" name="gender_accepted[]" multiple>
                                                   <option value="">Select Gender</option>
                                                   <?php
@@ -110,7 +110,7 @@
                                       </div>
                                       <div class="col-lg-4">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Stream</label>
+                                              <label for="basiInput" class="form-label">Stream<span class="text-danger">*</span></label>
                                               <select class="form-control  form-select dynamic-data" name="stream" data-segment="get-course" data-wrapper=".course">
                                                   <option value="">Select Stream</option>
                                                   <?php
@@ -127,7 +127,7 @@
                                   <div class="row">
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Course Offered</label>
+                                              <label for="basiInput" class="form-label">Course Offered<span class="text-danger">*</span></label>
                                               <select class="form-control course js-example-basic-multiple" name="course_offered[]" multiple>
                                                   <option value="">Select Course</option>
                                                   <?php
@@ -148,7 +148,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Country</label>
                                               <select class="form-control  form-select dynamic-data" name="country" data-segment="get-state" data-wrapper=".state-wrapper">
-                                                  <option value="">Select Country</option>
+                                                  <option value="">Select Country<span class="text-danger">*</span></option>
                                                   <?php
                                                   $countryList = get_master_data('tbl_country',[]);
                                                   if(!empty($countryList)){
@@ -165,7 +165,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">State</label>
                                               <select class="form-control  form-select state-wrapper dynamic-data" name="state" data-segment="get-city" data-wrapper=".city-wrapper">
-                                                      <option value="">Select State</option>
+                                                      <option value="">Select State<span class="text-danger">*</span></option>
                                                       <?php
                                                       if(!empty($singleCollege)){
                                                           $stateList = get_master_data('tbl_state',['country_id'=>$singleCollege['country']]);
@@ -181,7 +181,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">District</label>
                                               <select class="form-control form-select city-wrapper dynamic-data" data-segment="get-subdistrict" data-wrapper=".subdistrict-wrapper" name="city">
-                                                  <option value="">Select District</option>
+                                                  <option value="">Select District<span class="text-danger">*</span></option>
                                                   <?php
                                                        if(!empty($singleCollege)){
                                                           $cityList = get_master_data('tbl_city',['state_id'=>$singleCollege['state']]);
@@ -197,7 +197,7 @@
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Sub District</label>
                                               <select class="form-control form-select subdistrict-wrapper" name="subdistrict">
-                                                  <option value="">Select Sub District</option>
+                                                  <option value="">Select Sub District<span class="text-danger">*</span></option>
                                                   <?php
                                                        if(!empty($singleCollege)){
                                                           $cityList = get_master_data('tbl_sub_district',['id'=>$singleCollege['sub_district']]);
@@ -211,7 +211,7 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Approved By</label>
+                                              <label for="basiInput" class="form-label">Approved By<span class="text-danger">*</span></label>
                                               <select class="form-control js-example-basic-multiple" name="approved_by[]" multiple>
                                                   <?php
                                                   $appby=explode(',',$singleCollege['approved_by']);
@@ -233,7 +233,7 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Facility</label>
+                                              <label for="basiInput" class="form-label">Facility<span class="text-danger">*</span></label>
                                               <select class="form-control  js-example-basic-multiple" name="facility[]" multiple>
                                                       <option value="">Select Facility</option>
                                                       <?php
@@ -287,7 +287,7 @@
                                       </div>
                                       <div class="col-lg-6">
                                           <div class="form-group">
-                                              <label for="basiInput" class="form-label">Ownership</label>
+                                              <label for="basiInput" class="form-label">Ownership<span class="text-danger">*</span></label>
                                               <select class="form-control" name="ownership">
                                                   <option value="">Select</option>
                                                   <?php
@@ -371,9 +371,9 @@
                                   <div class="row">
                                     <div class="col-md-6" style="margin-top: 15px;">
                                         <?php if(empty($singleCollege)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

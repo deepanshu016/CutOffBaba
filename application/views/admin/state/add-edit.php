@@ -79,9 +79,9 @@
                                   <div class="row">
                                     <div class="col-md-6" style="margin-top: 15px;">
                                         <?php if(empty($singleState)) { ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Save</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>

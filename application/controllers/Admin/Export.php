@@ -108,6 +108,25 @@ class Export extends CI_Controller {
 		    fpassthru($f); 
 		}
 	}
+	public function coursegroup()
+	{	
+		$query = $this->db->select('*')->get('tbl_coursegroup')->result_array(); 
+		if(count($query) > 0){ 
+		    $delimiter = ","; 
+		    $filename = "coursegroup_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w'); 
+		    $fields = array('ID','Title'); 
+		    fputcsv($f, $fields, $delimiter); 
+		    foreach($query as $row){
+		        $lineData = array($row['id'], $row['title']); 
+		        fputcsv($f, $lineData, $delimiter); 
+		    } 
+		    fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f); 
+		}
+	}
 
 
 	public function approval()
@@ -338,22 +357,18 @@ class Export extends CI_Controller {
 	
 	public function courses()
 	{	
-		$query = $this->db->select('c.id as course_id,c.course,c.course_full_name,c.course_short_name,c.course_icon,c.stream as stream_id,c.degree_type as degree_type_id,,c.course_duration,c.exam,c.course_eligibility,c.course_opportunity,c.expected_salary,c.course_fees,c.counselling_authority,c.college,c.branch_type,c.status,dt.degreetype,s.stream')
-						  ->from('tbl_course as c')
-						  ->join('tbl_degree_type as dt', 'c.degree_type = dt.id')
-						  ->join('tbl_stream as s', 'c.stream = s.id')
+		$query = $this->db->select('*')
+						  ->from('tbl_course')
 						  ->get()
 						  ->result_array();
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
 		    $filename = "course_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Course','Course Full Name','Course Short Name','Course Icon','Stream','Degree Type','Course Duration','Exam','Course Eligibility','Course Opportunity','Expected Salary','Course Fees','Counselling Authority ','College','Branch Type','Status'); 
+		    $fields = array('ID', 'Course','Course Full Name','Course Short Name','Course Icon','Stream','Degree Type','Course Duration','Exam','Course Eligibility','Course Opportunity','Expected Salary','Course Fees','Counselling Authority ','College','Branch Type','Course Group'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
-				$status = ($row['status'] == 1) ? 'Active' : 'Inactive';
-				$branch_type = ($row['branch_type'] == 1) ? 'Clinical' : 'Non- Clinical';
-		        $lineData = array($row['course_id'], $row['course'],$row['course_full_name'], $row['course_short_name'],$row['course_icon'],$row['stream_id'].'_'.$row['stream'],$row['degree_type_id'].'_'.$row['degreetype'], $row['course_duration'],$row['exam'],$row['course_eligibility'],$row['course_opportunity'],$row['expected_salary'],$row['course_fees'],$row['counselling_authority'],$row['college'],$branch_type,$status); 
+		        $lineData = array($row['id'], $row['course'],$row['course_full_name'], $row['course_short_name'],$row['course_icon'],$row['stream'],$row['degree_type'], $row['course_duration'],$row['exam'],$row['course_eligibility'],$row['course_opportunity'],$row['expected_salary'],$row['course_fees'],$row['counselling_authority'],$row['college'],$row['branch_type'],$row['coursegroup']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -373,8 +388,8 @@ class Export extends CI_Controller {
 		    $fields = array('ID', 'Branch Name', 'Short Branch Name','Courses','Branch type','Branch Name One','Branch Name Two'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
-				$branch_type = ($row['branch_type'] == 1) ? 'Clinical' : 'Non- Clinical';
-		        $lineData = array($row['id'], $row['branch'],$row['short_branch_name'],$row['courses'],$branch_type,$row['branch_name_1'],$row['branch_name_2']); 
+				//$branch_type = ($row['branch_type'] == 1) ? 'Clinical' : 'Non- Clinical';
+		        $lineData = array($row['id'], $row['branch'],$row['short_branch_name'],$row['courses'],$row['branch_type'],$row['branch_name_1'],$row['branch_name_2']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -450,24 +465,19 @@ class Export extends CI_Controller {
 	
 
 	public function college(){	
-		$query = $this->db->select('cl.*,c.countryCode,c.name as country_name,s.name as state_name,city.city as city_name,a.approval,o.title as ownership_title')
-						  ->from('tbl_college as cl')
-						  ->join('tbl_country as c','cl.country = c.id')
-						  ->join('tbl_state as s','cl.state = s.id')
-						  ->join('tbl_city as city','cl.city = city.id')
-						  ->join('tbl_approval as a','cl.approved_by = a.id')
-						  ->join('tbl_ownership as o','cl.ownership = o.id')
+		$query = $this->db->select('*')
+						  ->from('tbl_college')
 						  ->get()
 						  ->result_array();
 		if(count($query) > 0){ 
 		    $delimiter = ","; 
 		    $filename = "college_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Name','Short Description','Popular Name One','Popular Name Two','logo','banner','prospectus','estdyear','aprovedby','gender','Course Offered','Country','State','City','University','Approved By','Ownership','Website','Email','Contact One','Contact Two','Contact Three','Nodal Officer Name','Nodal Officer Number','Keywords','Tags','Status'); 
+		    $fields = array('ID', 'Name*', 'Short Name','Short Description','Popular Name One','Popular Name Two','Establishment','Gender Accepted','Stream','Course Offered','Country','State','City','Sub District','Affiliated By','University','Approved By','Ownership','Website','Email','Contact One','Contact Two','Contact Three','Nodal Officer Name','Nodal Officer Number','Keywords','Tags','Facility','Status'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 		        $status = ($row['status'] == 1)?'Active':'Inactive'; 
-				$lineData = array($row['id'], $row['full_name'], $row['short_description'], $row['popular_name_one'], $row['popular_name_two'], $row['college_logo'], $row['college_banner'], $row['prospectus_file'], $row['establishment'], $row['approved_by'].'_'.$row['approval'], $row['gender_accepted'], $row['course_offered'], $row['country'].'_'.$row['country_name'], $row['state'].'_'.$row['state_name'], $row['city'].'_'.$row['city'], $row['university_name'], $row['approved_by'].'_'.$row['approval'], $row['ownership'].'_'.$row['ownership_title'], $row['website'], $row['email'], $row['contact_one'], $row['contact_two'], $row['contact_three'], $row['nodal_officer_name'], $row['nodal_officer_no'], $row['keywords'], $row['tags'], $status);
+				$lineData = array($row['id'], $row['full_name'], $row['short_name'], $row['short_description'], $row['popular_name_one'], $row['popular_name_two'], $row['establishment'], $row['gender_accepted'], $row['stream'], $row['course_offered'], $row['country'], $row['state'], $row['city'], $row['subdistrict'], $row['affiliated_by'], $row['university_name'], $row['approved_by'], $row['ownership'], $row['website'], $row['email'], $row['contact_one'], $row['contact_two'], $row['contact_three'], $row['nodal_officer_name'], $row['nodal_officer_no'], $row['keywords'], $row['tags'], $row['facility'], $row['status']);
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -656,11 +666,11 @@ class Export extends CI_Controller {
 		    $delimiter = ","; 
 		    $filename = "fees_head_" . date('Y-m-d') . ".csv"; 
 		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Fee Head Name','Tution Fees','Hostel Fees','Miscellaneous Fees','Bank Details One','Bank Details Two','Demand Draft Name'); 
+		    $fields = array('ID', 'Fee Head Name','Tution Fees','Hostel Fees','Miscellaneous Fees','Bank Details One','Bank Details Two','Demand Draft Name','Service & Bond Rules','Seat Indemnity Charges','Upgradation Processing Fees','Other Fees'); 
 		    fputcsv($f, $fields, $delimiter); 
 		    foreach($query as $row){ 
 		        
-		        $lineData = array($row['id'], $row['fee_head_name'], $row['tution_fees'], $row['tution_fees'], $row['misc_fees'], $row['bank_details_1'], $row['bank_details_2'], $row['demand_draft_name']); 
+		        $lineData = array($row['id'], $row['fee_head_name'], $row['tution_fees'], $row['tution_fees'], $row['misc_fees'], $row['bank_details_1'], $row['bank_details_2'], $row['demand_draft_name'], $row['bondrule'], $row['seat_indentity_charges'], $row['upgradation_processing_fees'], $row['otfee']); 
 		        fputcsv($f, $lineData, $delimiter); 
 		    } 
 		    fseek($f, 0); 
@@ -671,27 +681,7 @@ class Export extends CI_Controller {
 
 	}
 	
-	public function service_bond_rules()
-	{	
-		$query = $this->db->select('*')->get('tbl_service_bond_rules')->result_array(); 
-		if(count($query) > 0){ 
-		    $delimiter = ","; 
-		    $filename = "service_bond_rules_" . date('Y-m-d') . ".csv"; 
-		    $f = fopen('php://memory', 'w'); 
-		    $fields = array('ID', 'Service Bond Rule','Seat Indentity Charges','Upgradation  Proceessing Fees'); 
-		    fputcsv($f, $fields, $delimiter); 
-		    foreach($query as $row){ 
-		        
-		        $lineData = array($row['id'], $row['service_bond'], $row['seat_indentity_charges'], $row['upgradation_processing_fees']); 
-		        fputcsv($f, $lineData, $delimiter); 
-		    } 
-		    fseek($f, 0); 
-		    header('Content-Type: text/csv'); 
-		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
-		    fpassthru($f); 
-		}
-
-	}
+	
 
 	public function gallery_heads(){	
 		$query = $this->db->select('*')->get('tbl_gallery_heads')->result_array(); 

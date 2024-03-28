@@ -9,10 +9,10 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <?php if(empty($singleOwnership)) { ?>
-                              <li class="breadcrumb-item active">Add Ownership</li>
+                            <?php if(empty($singleCoursegroup)) { ?>
+                              <li class="breadcrumb-item active">Add Course Group</li>
                             <?php } else{  ?>
-                              <li class="breadcrumb-item active">Edit Ownership</li>
+                              <li class="breadcrumb-item active">Edit Course Group</li>
                             <?php } ?>
                         </ol>
                     </div>
@@ -25,37 +25,37 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header d-flex justify-content-between">
-                    <?php if(empty($singleOwnership)) { ?>
-                      <h4 class="card-title mb-0">Add Ownership</h4>
+                    <?php if(empty($singleCoursegroup)) { ?>
+                      <h4 class="card-title mb-0">Add Course Group</h4>
                     <?php } else{  ?>
-                      <h4 class="card-title mb-0">Edit Ownership</h4>
+                      <h4 class="card-title mb-0">Edit Course Group</h4>
                     <?php } ?>
-                    <a href="<?= base_url('admin/ownership'); ?>" class="btn btn-success add-btn" > List</a>
+                    <a href="<?= base_url('admin/coursegroup'); ?>" class="btn btn-success add-btn" > List</a>
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
                     <div id="customerList">
                        <div class="row g-4 mb-3">
-                          <?php if(empty($singleOwnership)) { ?>
-                            <form action="<?= base_url('admin/save-ownership') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                          <?php if(empty($singleCoursegroup)) { ?>
+                            <form action="<?= base_url('admin/save-coursegroup') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } else{  ?>
-                            <form action="<?= base_url('admin/update-ownership') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                            <form action="<?= base_url('admin/update-coursegroup') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">
                                     <div class="col-lg-6">
                                        <div class="form-group">
-                                          <label for="basiInput" class="form-label">Ownership</label>
-                                          <input class="form-control" type="text" name="title"  placeholder="Ownership" value="<?php if(!empty($singleOwnership)) { echo $singleOwnership['title']; }?>">
-                                          <input type="hidden" class="form-control" name="ownership_id" value="<?php if(!empty($singleOwnership)) { echo $singleOwnership['id']; }?>">
+                                          <label for="basiInput" class="form-label">Course Group</label>
+                                          <input class="form-control" type="text" name="title"  placeholder="Course Group" value="<?php if(!empty($singleCoursegroup)) { echo $singleCoursegroup['title']; }?>">
+                                          <input type="hidden" class="form-control" name="coursegroup_id" value="<?php if(!empty($singleCoursegroup)) { echo $singleCoursegroup['id']; }?>">
                                           <span class="text-danger" id="title"></span>
                                        </div>
                                     </div>
                                     <div class="col-md-6" style="margin-top: 25px;">
-                                        <?php if(empty($singleOwnership)) { ?>
+                                        <?php if(empty($singleCoursegroup)) { ?>
                                           <button type="submit" class="btn w-100 btn-success waves-effect waves-light">Save</button>
                                         <?php } else{  ?>
-                                          <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Update</button>
+                                          <button type="submit" class="btn w-100 btn-success waves-effect waves-light">Update</button>
                                         <?php } ?>
                                     </div>
                                   </div>
