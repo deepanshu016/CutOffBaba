@@ -945,11 +945,11 @@ class Export extends CI_Controller {
 		}
 		return $letters;
 	}
-	public function exportCutOffEntryData($head=null,$year=null) {
+	public function exportCutOffEntryData($head=null,$year=null,$sub_category_ids=null) {
 		require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
-		$subCategoryData = $this->master->getRecords('tbl_sub_category',array('head_id'=>$head));
+		$subCategoryData = $this->master->getRecords('tbl_sub_category',array('head_id'=>$head,'id'=>$sub_category_ids));
 		$count=count($subCategoryData);
 		$row=[];
 		for($i=1;$i<=$count;$i++){
@@ -1226,7 +1226,7 @@ $i = 0;
 				$startval=$startval+2+1;
 			}
 		}
-die();
+
 		// $sheet->mergeCells('D2:F2');
 		// $sheet->mergeCells('G2:I2');
 		// $sheet->mergeCells('J2:L2');

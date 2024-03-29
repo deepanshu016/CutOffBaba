@@ -433,13 +433,13 @@ Class CounsellingHead extends MY_Controller {
             $html = '';
             $subCategoryData = $this->master->getRecords('tbl_sub_category',['head_id'=> $this->input->post('head_id')]);
             if(!empty($subCategoryData)){
-                $html .= '<div class="form-group"><label>Category</label> <select class="form-control form-select" name="sub_category_id">';
+                $html .= '<div class="form-group"><label>Category</label> <select class="form-control form-select" name="sub_category_id" id="sub_category_ids">';
                 foreach($subCategoryData as $sub){
                     $html .= '<option value="'.$sub['id'].'">'.$sub['sub_category_name'].'</option>';
                 }
                 $html .= '</select><span class="text-danger" id="sub_category_id"></span></div>';
             }
-            $response = array('status' => 'success','message'=> 'Data imported successfully','url'=>'','html'=>$html);
+            $response = array('status' => 'success','message'=> 'Data fetched successfully','url'=>'','html'=>$html);
             echo json_encode($response);
             return false;
         }else{

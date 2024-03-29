@@ -9,7 +9,7 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Cutoff Entry Data</li>
+                            <li class="breadcrumb-item active">College Seat Matrix</li>
                         </ol>
                     </div>
 
@@ -21,11 +21,11 @@
            <div class="col-lg-12">
               <div class="card">
                  <div class="card-header d-flex justify-content-between">
-                    <h4 class="card-title mb-0">Cutoff Entry Data</h4>
+                    <h4 class="card-title mb-0">College Seat Matrix</h4>
                     <div class="col-sm-auto">
                        <div>
-                             <a href="<?= base_url('admin/import-cutoffdata'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
-                             <a href="#" class="btn btn-primary add-btn" onclick="downloaddata();" ><i class="ri-download-2-line"></i> Export</a>
+                             <a href="<?= base_url('admin/import-college-seat-matrix'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
+                             <a href="#" class="btn btn-primary add-btn"><i class="ri-download-2-line"></i> Export</a>
                         </div>
                      </div>
                  </div>
@@ -33,43 +33,38 @@
                  <!-- end card header -->
                  <div class="card-body">
                      <div class="col-md-12">
-                        <form action="<?= base_url('admin/filter-cutoff-data') ?>" method="POST" class="all-form-server">
+                        <form action="<?= base_url('admin/get-colleges-data') ?>" method="POST" class="generate-seat-matrix">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Head Name</label>
-                                        <select class="form-control form-select get-category" name="head_id" id="head_id">
+                                        <label>Streams</label>
+                                        <select class="form-control form-select get-courses" name="stream_id"  id="stream_ids">
                                             <option value="">Select</option>
                                             <?php
-                                            $headList = get_master_data('tbl_counselling_head',[]);
-                                            if(!empty($headList)){
-                                                foreach($headList as $head){ ?>
-                                                    <option value="<?= $head['id']; ?>"><?= $head['head_name']; ?></option>
+                                            if(!empty($streamList)){
+                                                foreach($streamList as $stream){ ?>
+                                                    <option value="<?= $stream['id']; ?>"><?= $stream['stream']; ?></option>
                                                 <?php } } ?>
                                         </select>
-                                        <span class="text-danger" id="head_id"></span>
+                                        <span class="text-danger" id="stream_id"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Year</label>
-                                            <select name="year" class="form-control" id="year">
+                                        <label>Degree Type</label>
+                                        <select class="form-control form-select get-courses" name="degree_type_id"  id="degree_type_ids">
+                                            <option value="">Select</option>
                                             <?php
-                                            // Get the current year
-                                            $currentYear = date("Y");
-
-                                            // Loop to display the last 4 years
-                                            for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
-                                                echo "<option value='$i'>$i</option>";
-                                            }
-                                            ?>
+                                            if(!empty($degreeTypeList)){
+                                                foreach($degreeTypeList as $degree){ ?>
+                                                    <option value="<?= $degree['id']; ?>"><?= $degree['degreetype']; ?></option>
+                                                <?php } } ?>
                                         </select>
-                                        <span class="text-danger" id="year"></span>
+                                        <span class="text-danger" id="degree_type_id"></span>
                                     </div>
                                 </div>
-                                
-                                <div class="col-md-3 category-wrapper"></div>
-                                <div class="col-md-4">
+                                <div class="col-md-3 course-wrapper"></div>
+                                <div class="col-md-3">
                                     <div class="form-group" style="margin-top: 26px;">
                                         <label>  </label>
                                         <button type="submit" class="btn btn-success add-btn"> Generate</button>
@@ -80,7 +75,7 @@
                     </div>
                     <div id="customerList">
                        <div class="table-responsive table-card mt-3 mb-1">
-                        <table class="table align-middle table-nowrap table-bordered cutoff_entry_data_ajax">
+                        <table class="table align-middle table-nowrap table-bordered college_seat_matrix_data_ajax">
                        
                         </table>
                        </div>
@@ -109,16 +104,46 @@
         //alert(''+headid+year);
         window.location.href='<?= base_url('admin/export-cutoff-entry-data'); ?>/'+headid+'/'+year+'/'+sub_category_ids
     }
-    $("body").on("change",".get-category",function(){
-        var head_id = $(this).val();
+    $("body").on("change",".get-courses",function(){
+        var stream_id = $("#stream_ids").val();
+        var degree_type_id = $("#degree_type_ids").val();
+        if(!degree_type_id || !stream_id){
+            showNotify('Please select all fields','error','');
+            return;
+        }
         $.ajax({
             type: 'POST',
-            url: "<?=base_url('admin/get-category');?>",
-            data:{'head_id':head_id},
+            url: "<?=base_url('admin/get-courses');?>",
+            data:{'stream_id':stream_id,'degree_type_id':degree_type_id},
             dataType: 'json',
             success: function(data){
                 if(data.status == 'success'){
-                    $(".category-wrapper").html(data.html);
+                    $(".course-wrapper").html(data.html);
+                }else{
+                    showNotify('Course not found','error','');
+                }
+            }
+        }); 
+    });
+    $("body").on("submit",".generate-seat-matrix",function(e){
+        e.preventDefault();
+        var url = $(this).attr('action');
+        var method = $(this).attr('method');
+        var formData = $('.generate-seat-matrix')[0]; 
+        formData = new FormData(formData);
+        $.ajax({
+            type: method,
+            url: url,
+            data: formData,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data){
+                console.log(data);
+                if(data.status == 'success'){
+                    $(".college_seat_matrix_data_ajax").html(data.html);
+                }else{
+                    showNotify('Course not found','error','');
                 }
             }
         }); 
