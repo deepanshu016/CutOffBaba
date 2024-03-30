@@ -245,13 +245,12 @@ class MasterModel extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
 	}
-	public function getMinimumCollegeWithCourse($course_id){
+	public function getMinimumCollegeWithCourse(){
 		$this->db->select('c.id as college_id,c.full_name,c.slug,c.short_description,c.popular_name_one,c.popular_name_two,c.establishment,
 		c.gender_accepted,c.course_offered,c.affiliated_by,c.university_name,c.approved_by,c.college_logo,c.college_banner,c.prospectus_file,c.website,c.email,
 		c.contact_one,c.contact_two,c.contact_three,c.nodal_officer_name,c.nodal_officer_no,c.keywords,c.tags,s.id as state_id,s.name as state_name,');
         $this->db->from('tbl_state as s');
         $this->db->join('tbl_college as c', 'c.state = s.id', 'inner');
-        $this->db->where("FIND_IN_SET(" . $course_id. ", c.course_offered) > 0", NULL, FALSE);
         $query = $this->db->get();
         return $query->result_array();
 	}

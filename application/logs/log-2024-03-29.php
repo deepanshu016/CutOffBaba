@@ -1235,3 +1235,12 @@ DEBUG - 2024-03-29 20:56:30 --> Session: "sess_save_path" is empty; using "sessi
 DEBUG - 2024-03-29 20:56:32 --> UTF-8 Support Enabled
 DEBUG - 2024-03-29 20:56:32 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-03-29 20:56:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-29 21:01:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-29 21:01:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-29 21:01:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-29 21:01:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-29 21:01:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-03-29 21:01:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-03-29 21:01:08 --> UTF-8 Support Enabled
+DEBUG - 2024-03-29 21:01:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-03-29 21:01:08 --> 404 Page Not Found: Faviconico/index

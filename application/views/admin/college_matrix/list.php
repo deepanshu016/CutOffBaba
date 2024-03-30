@@ -25,7 +25,7 @@
                     <div class="col-sm-auto">
                        <div>
                              <a href="<?= base_url('admin/import-college-seat-matrix'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
-                             <a href="#" class="btn btn-primary add-btn"><i class="ri-download-2-line"></i> Export</a>
+                             <!-- <a href="#" class="btn btn-primary add-btn"><i class="ri-download-2-line"></i> Export</a> -->
                         </div>
                      </div>
                  </div>
@@ -139,9 +139,50 @@
             processData: false,
             contentType: false,
             success: function(data){
-                console.log(data);
                 if(data.status == 'success'){
                     $(".college_seat_matrix_data_ajax").html(data.html);
+                }else{
+                    showNotify('Course not found','error','');
+                }
+            }
+        }); 
+    });
+    $("body").on("click",".save-seat-matrix-data",function(e){
+        e.preventDefault();
+        var stream_ids = $(this).closest('tbody').find('.stream_id').val();
+        var college_id = $(this).closest('tr').find('.college_id').val();
+        var degree_type_id = $(this).closest('tbody').find('.degree_type_id').val();
+        var course_id = $(this).closest('tbody').find('.course_id').val();
+        var branch_ids = $(this).closest('tr').find('input[name="branch_id[]"]').map(function() {
+            return $(this).val();
+        }).get();
+        var seats = $(this).closest('tr').find('input[name="seat[]"]').map(function() {
+            return $(this).val();
+        }).get();
+        if(branch_ids.length !== seats.length){
+            showNotify('Please fill seats for all branches','error','');
+            return;
+        }
+        const formData = {
+            stream_id:stream_ids,
+            college_id:college_id,
+            degree_type_id:degree_type_id,
+            course_id:course_id,
+            branch_id:branch_ids,
+            seats:seats
+        }
+        $.ajax({
+            type: "POST",
+            url: "<?=base_url('admin/save-colleges-seat-matrix');?>",
+            data: JSON.stringify(formData),
+            contentType: 'application/json',
+            success: function(data){
+                data = JSON.parse(data);
+                if(data.status == 'success'){
+                    showNotify(data.message,data.status,'');
+                    setTimeout(function(){
+                        location.reload();
+                    },1000);
                 }else{
                     showNotify('Course not found','error','');
                 }

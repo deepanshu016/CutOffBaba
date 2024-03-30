@@ -517,6 +517,9 @@ $route['admin/export-cutoff-entry-data/(:any)/(:any)/(:any)'] = 'Admin/Export/ex
 $route['admin/college-seat-matrix'] = 'Admin/CollegeMatrix/collegeSeatMatrix';
 $route['admin/get-courses'] = 'Admin/CollegeMatrix/getCourses';
 $route['admin/get-colleges-data'] = 'Admin/CollegeMatrix/getCOllegesData';
+$route['admin/save-colleges-seat-matrix'] = 'Admin/CollegeMatrix/saveCollegeSeatMatrix';
+$route['admin/import-college-seat-matrix'] = 'Admin/CollegeMatrix/importSeatMatrixPage';
+$route['admin/import-college-seat-matrix-data'] = 'Admin/CollegeMatrix/importSeatMatrixData';
 
 
 
