@@ -25,7 +25,7 @@
                     <div class="col-sm-auto">
                        <div>
                              <a href="<?= base_url('admin/import-college-seat-matrix'); ?>" class="btn btn-success add-btn" ><i class="ri-upload-2-line"></i> Import</a>
-                             <!-- <a href="#" class="btn btn-primary add-btn"><i class="ri-download-2-line"></i> Export</a> -->
+                             <a href="<?= base_url('admin/export-college-seat-matrix'); ?>" class="btn btn-primary add-btn"><i class="ri-download-2-line"></i> Export</a>
                         </div>
                      </div>
                  </div>

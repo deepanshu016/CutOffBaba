@@ -431,11 +431,11 @@ Class CounsellingHead extends MY_Controller {
     public function getCategory(){
         if ($this->is_admin_logged_in() == true) {
             $html = '';
-            $subCategoryData = $this->master->getRecords('tbl_sub_category',['head_id'=> $this->input->post('head_id')]);
+            $subCategoryData = $this->master->getRecords('tbl_category',['head_id'=> $this->input->post('head_id')]);
             if(!empty($subCategoryData)){
                 $html .= '<div class="form-group"><label>Category</label> <select class="form-control form-select" name="sub_category_id" id="sub_category_ids">';
                 foreach($subCategoryData as $sub){
-                    $html .= '<option value="'.$sub['id'].'">'.$sub['sub_category_name'].'</option>';
+                    $html .= '<option value="'.$sub['id'].'">'.$sub['category_name'].'</option>';
                 }
                 $html .= '</select><span class="text-danger" id="sub_category_id"></span></div>';
             }
@@ -457,10 +457,9 @@ Class CounsellingHead extends MY_Controller {
             $data['head_id'] = $this->input->post('head_id');
             $data['category_id'] = $this->input->post('sub_category_id');
             $data['year'] = $this->input->post('year');
-            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> $data['head_id'],'id'=> $data['category_id']]);
+            $data['subCategoryData'] = $this->master->getRecords('tbl_sub_category',['head_id'=> $data['head_id'],'category_id'=> $data['category_id']]);
             $data['counsellingHead'] = $this->master->getRecords('tbl_counselling_head',['id'=>$data['head_id']]);
             $result = $this->load->view('admin/cutoff_head_name/cutoff_entry_data_ajax',$data,TRUE);
-          
             $response = array('status' => 'success','message'=> 'Cutoff Head found successfully','html'=>$result);
             $this->output
             ->set_content_type('application/json')

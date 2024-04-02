@@ -115,6 +115,18 @@ Class CollegeMatrix extends MY_Controller {
             return redirect('admin');
         }
     }
+    public function exportSeatMatrixPage(){
+        if ($this->is_admin_logged_in() == true) {
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['streamList'] = $this->master->getRecords('tbl_stream');
+            $data['degreeTypeList'] = $this->master->getRecords('tbl_degree_type');
+            $this->load->view('admin/college_matrix/export_college_seat_matrix',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
     public function file_check_excel_file($str){
         $allowed_mime_type_arr = array('application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/msexcel', 'application/x-msexcel', 'application/x-ms-excel', 'application/x-excel', 'application/x-dos_ms_excel', 'application/xls', 'application/x-xls', 'application/xlsx','text/csv', 'application/excel');
         if(!empty($_FILES['excel_file'])){
@@ -155,13 +167,6 @@ Class CollegeMatrix extends MY_Controller {
                         $firstRowData = fgetcsv($handle, 1000, ',');
                         while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
                             for($k=1;$k < count($firstRowData);$k++){
-                                // echo "<pre>";
-                                // print_r($data);
-                                // if ($row>0) {
-                                // echo "<pre>";
-                                // print_r($data);
-                                // $data = array_filter($data);
-                                // $data = array_filter($data);
                                 if(!empty($data)){
                                     $col_count = count($data);
                                     $impdata['college_id']=$data[0];
@@ -213,6 +218,68 @@ Class CollegeMatrix extends MY_Controller {
             return false;
         }
     }  
+
+
+    public function exportSeatMatrixData($stream_id=null,$degree_type_id=null,$course_id=null){
+        require 'vendor/autoload.php';
+		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+		$sheet = $spreadsheet->getActiveSheet();
+        $collegeList = $this->master->getMinimumCollegeWithCourse();
+        $branchList = $this->master->getBranchesWithCourse($course_id);
+        // $data[] = 'College ID';
+        // for($i=0;$i<count($branchList);$i++){
+        //     $data[$i+1] = $branchList[$i]['id'];
+        // }
+        
+        
+        
+        
+
+        $collegeListssss = [];
+        $sheet->setCellValue('A1', 'College ID');
+        $columns = range('B', 'Z');
+        if(!empty($branchList)){
+            foreach($branchList as $key=>$branch){
+                $sheet->setCellValue($columns[$key].'1', $branch['id']);
+            }
+        }
+        
+        if(!empty($collegeList)){
+            $row = 2;
+            foreach($collegeList as $key=>$college){
+                // $collegeListssss[$key][] = $college['college_id'];
+                // foreach($branchList as $branch){
+                //     $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch['id']])->get()->row_array();
+                    // $sheet->setCellValue($columns[$key].'1', $branch['id']);
+                //     $collegeListssss[$key+1][] = $SeatMatrixData['seats'];
+                // }
+                $sheet->setCellValue('A'. $row, $college['college_id']);
+                foreach($branchList as $keys=>$branch){
+                    $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch['id']])->get()->row_array();
+                    if(!empty($SeatMatrixData)){
+                        $sheet->setCellValue($columns[$keys]. $row, $SeatMatrixData['seats']);
+                    }else{
+                        $sheet->setCellValue($columns[$keys]. $row,0);
+                    }
+                }
+                $row++;
+            }
+        }
+        
+        // if(!empty($branchList)){
+        //     $columns = range('B', 'Z');
+        //     foreach($branchList as $key=>$branch){
+        //         $sheet->setCellValue($columns[$key].'1', $branch['id']);
+        //     }
+        // }
+        $filename = 'data.csv';
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+        $writer->save('php://output');
+        exit;
+    }
 }
 
 ?>
