@@ -510,13 +510,14 @@ $route['admin/filter-cutoff-data'] = 'Admin/CounsellingHead/filterCutOffData';
 $route['admin/import-cutoffdata'] = 'Admin/CounsellingHead/importCutOffData';
 $route['admin/import-cutoffdata-by-excel'] = 'Admin/CounsellingHead/importCutOffDataExcel';
 $route['admin/get-category'] = 'Admin/CounsellingHead/getCategory';
+$route['admin/get-branches'] = 'Admin/CollegeMatrix/getBranches';
 $route['admin/export-cutoff-entry-data/(:any)/(:any)/(:any)'] = 'Admin/Export/exportCutOffEntryData/$1/$2/$3';
 
 
 
 $route['admin/college-seat-matrix'] = 'Admin/CollegeMatrix/collegeSeatMatrix';
 $route['admin/get-courses'] = 'Admin/CollegeMatrix/getCourses';
-$route['admin/get-colleges-data'] = 'Admin/CollegeMatrix/getCOllegesData';
+$route['admin/get-colleges-data'] = 'Admin/CollegeMatrix/getCollegesData';
 $route['admin/save-colleges-seat-matrix'] = 'Admin/CollegeMatrix/saveCollegeSeatMatrix';
 $route['admin/import-college-seat-matrix'] = 'Admin/CollegeMatrix/importSeatMatrixPage';
 $route['admin/export-college-seat-matrix'] = 'Admin/CollegeMatrix/exportSeatMatrixPage';

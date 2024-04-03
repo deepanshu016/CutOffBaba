@@ -48,7 +48,7 @@ Class CollegeMatrix extends MY_Controller {
             return false;
         }
     }
-    public function getCOllegesData()
+    public function getCollegesData()
     {
         if ($this->is_admin_logged_in() == true) {
             $stream_id = $this->input->post('stream_id');
@@ -279,6 +279,12 @@ Class CollegeMatrix extends MY_Controller {
         $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
         $writer->save('php://output');
         exit;
+    }
+
+
+    public function getBranches(){
+        $course_id = $this->input->post('course_id');
+        $branchResult = $this->master->getRecords('tbl_branch',)
     }
 }
 
