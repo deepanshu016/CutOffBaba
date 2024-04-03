@@ -522,7 +522,7 @@ $route['admin/save-colleges-seat-matrix'] = 'Admin/CollegeMatrix/saveCollegeSeat
 $route['admin/import-college-seat-matrix'] = 'Admin/CollegeMatrix/importSeatMatrixPage';
 $route['admin/export-college-seat-matrix'] = 'Admin/CollegeMatrix/exportSeatMatrixPage';
 $route['admin/import-college-seat-matrix-data'] = 'Admin/CollegeMatrix/importSeatMatrixData';
-$route['admin/export-college-seat-matrix-data/(:any)/(:any)/(:any)'] = 'Admin/CollegeMatrix/exportSeatMatrixData/$1/$2/$3';
+$route['admin/export-college-seat-matrix-data/(:any)/(:any)/(:any)/(:any)'] = 'Admin/CollegeMatrix/exportSeatMatrixData/$1/$2/$3/$4';
 
 
 

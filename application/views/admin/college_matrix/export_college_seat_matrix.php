@@ -60,10 +60,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 course-wrapper"></div>
+                                                <div class="col-lg-12 branch-wrapper"></div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6" style="margin-top: 15px;">
-                                                    <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Upload</button>
+                                                    <button type="submit" class="btn rounded-pill w-100 btn-success waves-effect waves-light">Export Seat Matrix</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,12 +89,13 @@
         var stream_ids=$('#stream_ids').val();
         var degree_type_id=$('#degree_type_ids').val();
         var course_id=$('#course_ids').val();
-        if(!stream_ids || !degree_type_id || !course_id){
+        var branch_id=$('#branch_ids').val();
+        if(!stream_ids || !degree_type_id || !course_id || !branch_id){
             showNotify('Please select all fields','error','');
             return false;
         }
         //alert(''+headid+year);
-        window.location.href='<?= base_url('admin/export-college-seat-matrix-data'); ?>/'+stream_ids+'/'+degree_type_id+'/'+course_id
+        window.location.href='<?= base_url('admin/export-college-seat-matrix-data'); ?>/'+stream_ids+'/'+degree_type_id+'/'+course_id+'/'+branch_id
     });
     $("body").on("change",".get-courses",function(){
         var stream_id = $("#stream_ids").val();
@@ -110,6 +112,22 @@
             success: function(data){
                 if(data.status == 'success'){
                     $(".course-wrapper").html(data.html);
+                }else{
+                    showNotify('Course not found','error','');
+                }
+            }
+        }); 
+    });
+    $("body").on("change",".get-branches",function(){
+        var course_id = $("#course_ids").val();
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('admin/get-course-branches');?>",
+            data:{'course_id':course_id},
+            dataType: 'json',
+            success: function(data){
+                if(data.status == 'success'){
+                    $(".branch-wrapper").html(data.html);
                 }else{
                     showNotify('Course not found','error','');
                 }

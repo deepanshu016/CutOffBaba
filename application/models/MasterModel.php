@@ -261,6 +261,13 @@ class MasterModel extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
 	}
+	public function getBranchesWithid($branch_id){
+		$this->db->select('*');
+        $this->db->from('tbl_branch');
+        $this->db->where("id",$branch_id);
+        $query = $this->db->get();
+        return $query->result_array();
+	}
 	public function getCollegesDataStateWise($state_id,$course_id,$data=[]){
 		
 		$course_ids = [];
