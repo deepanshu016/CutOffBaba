@@ -122,7 +122,7 @@
         var course_id = $("#course_ids").val();
         $.ajax({
             type: 'POST',
-            url: "<?=base_url('admin/get-course-branches');?>",
+            url: "<?=base_url('admin/get-branchess');?>",
             data:{'course_id':course_id},
             dataType: 'json',
             success: function(data){

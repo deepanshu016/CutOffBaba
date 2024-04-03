@@ -64,6 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3 course-wrapper"></div>
+                                <div class="col-md-3 branch-wrapper"></div>
                                 <div class="col-md-3">
                                     <div class="form-group" style="margin-top: 26px;">
                                         <label>  </label>
@@ -121,6 +122,22 @@
                     $(".course-wrapper").html(data.html);
                 }else{
                     showNotify('Course not found','error','');
+                }
+            }
+        }); 
+    });
+    $("body").on("change",".get-branches",function(){
+        var course_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('admin/get-branchess');?>",
+            data:{'course_id':course_id},
+            dataType: 'json',
+            success: function(data){
+                if(data.status == 'success'){
+                    $(".branch-wrapper").html(data.html);
+                }else{
+                    showNotify('Branch not found','error','');
                 }
             }
         }); 

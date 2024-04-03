@@ -60,6 +60,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 course-wrapper"></div>
+                                                <div class="col-lg-12 branch-wrapper"></div>
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label for="basiInput" class="form-label">Excel File</label>
@@ -121,6 +122,22 @@
             success: function(data){
                 if(data.status == 'success'){
                     $(".category-wrapper").html(data.html);
+                }
+            }
+        }); 
+    });
+    $("body").on("change",".get-branches",function(){
+        var course_id = $(this).val();
+        $.ajax({
+            type: 'POST',
+            url: "<?=base_url('admin/get-branchess');?>",
+            data:{'course_id':course_id},
+            dataType: 'json',
+            success: function(data){
+                if(data.status == 'success'){
+                    $(".branch-wrapper").html(data.html);
+                }else{
+                    showNotify('Branch not found','error','');
                 }
             }
         }); 
