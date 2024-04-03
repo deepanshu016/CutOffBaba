@@ -28,12 +28,41 @@ Class CollegeMatrix extends MY_Controller {
             $coursesList = $this->master->getRecords('tbl_course',['stream'=>$stream_id,'degree_type'=>$degree_type_id]);
             $html = '';
             if(!empty($coursesList)){
-                $html .= '<div class="form-group"><label>Courses</label> <select class="form-control form-select" name="course_id" id="course_ids">';
+                $html .= '<div class="form-group"><label>Courses</label> <select class="form-control form-select get-branches" name="course_id" id="course_ids">';
                 $html .= '<option value="">Select Course</option>';
+
                 foreach($coursesList as $course){
                     $html .= '<option value="'.$course['id'].'">'.$course['course'].'</option>';
                 }
                 $html .= '</select><span class="text-danger" id="course_id"></span></div>';
+                $response = array('status' => 'success','message'=> 'Data fetched successfully','url'=>'','html'=>$html);
+                echo json_encode($response);
+                return false;
+            }else{
+                $response = array('status' => 'errors','message'=> 'Something went Wrong','url'=>'','html'=>'');
+                echo json_encode($response);
+                return false;
+            }
+        }else{
+            $response = array('status' => 'errors','message'=> 'Something went Wrong','url'=>'','html'=>'');
+            echo json_encode($response);
+            return false;
+        }
+    }
+    public function getBranches()
+    {
+        if ($this->is_admin_logged_in() == true) {
+            $course_id = $this->input->post('course_id');
+            $branchList = $this->master->getRecords('tbl_branch',['courses'=>$course_id]);
+            $html = '';
+            if(!empty($branchList)){
+                $html .= '<div class="form-group"><label>Courses</label> <select class="form-control form-select" name="branch_id" id="branch_ids">';
+                $html .= '<option value="">Select Branch</option>';
+
+                foreach($branchList as $course){
+                    $html .= '<option value="'.$course['id'].'">'.$course['branch'].'</option>';
+                }
+                $html .= '</select><span class="text-danger" id="branch_id"></span></div>';
                 $response = array('status' => 'success','message'=> 'Data fetched successfully','url'=>'','html'=>$html);
                 echo json_encode($response);
                 return false;
@@ -168,15 +197,20 @@ Class CollegeMatrix extends MY_Controller {
                         while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
                             for($k=1;$k < count($firstRowData);$k++){
                                 if(!empty($data)){
+                                    $firstRowData[$k];
+                                    $brid=explode("-",$firstRowData[$k]);
+                                    //print_r($brid);
                                     $col_count = count($data);
                                     $impdata['college_id']=$data[0];
                                     $impdata['stream_id']=$stream_id;
                                     $impdata['degree_type_id']=$degree_type_id;
                                     $impdata['course_id']=$course_id;
-                                    $impdata['branch_id']=$firstRowData[$k];
-                                    $impdata['seats']=$data[$k];
-                                    $this->master->deleteRecord(['college_id'=>$data[0],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$$data[$k]]);
+                                    $impdata['branch_id']=$brid[0];
+                                    $impdata['seat']=$data[$k];
+                                    $this->master->deleteRecord('tbl_college_seat_matrix_data',['college_id'=>$data[0],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$brid[0]]);
+                                    //echo $this->db->last_query();
                                     $this->master->insert('tbl_college_seat_matrix_data',$impdata);
+                                    //echo $this->db->last_query();
                                 }
                                 // }
                             }
@@ -220,65 +254,46 @@ Class CollegeMatrix extends MY_Controller {
     }  
 
 
-    public function exportSeatMatrixData($stream_id=null,$degree_type_id=null,$course_id=null){
+    public function exportSeatMatrixData($stream_id=null,$degree_type_id=null,$course_id=null,$branch_id=null){
         require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
         $collegeList = $this->master->getMinimumCollegeWithCourse();
-        $branchList = $this->master->getBranchesWithCourse($course_id);
-        // $data[] = 'College ID';
-        // for($i=0;$i<count($branchList);$i++){
-        //     $data[$i+1] = $branchList[$i]['id'];
-        // }
-        
-        
-        
-        
-
+        $branchList = $this->master->getBranchesWithid($branch_id);
+        echo $branch_id;
         $collegeListssss = [];
         $sheet->setCellValue('A1', 'College ID');
-        $columns = range('B', 'Z');
+        $columns = range('A', 'Z');
         if(!empty($branchList)){
             foreach($branchList as $key=>$branch){
-                $sheet->setCellValue($columns[$key].'1', $branch['id']);
+                if ($key>=25) {
+                    $sheet->setCellValue("A".$columns[$key-25].'1', $branch['id']."-".$branch['branch']);
+                }else{
+                    $sheet->setCellValue($columns[$key+1].'1', $branch['id']."-".$branch['branch']);
+                }
+                
             }
-        }
-        
+        }        
         if(!empty($collegeList)){
             $row = 2;
             foreach($collegeList as $key=>$college){
-                // $collegeListssss[$key][] = $college['college_id'];
-                // foreach($branchList as $branch){
-                //     $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch['id']])->get()->row_array();
-                    // $sheet->setCellValue($columns[$key].'1', $branch['id']);
-                //     $collegeListssss[$key+1][] = $SeatMatrixData['seats'];
-                // }
                 $sheet->setCellValue('A'. $row, $college['college_id']);
-                foreach($branchList as $keys=>$branch){
-                    $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch['id']])->get()->row_array();
+                    $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id])->get()->row_array();
                     if(!empty($SeatMatrixData)){
-                        $sheet->setCellValue($columns[$keys]. $row, $SeatMatrixData['seats']);
+                        $sheet->setCellValue($columns[1].$row, $SeatMatrixData['seat']);
                     }else{
-                        $sheet->setCellValue($columns[$keys]. $row,0);
+                        $sheet->setCellValue($columns[1].$row, 0);
                     }
-                }
                 $row++;
             }
         }
-        
-        // if(!empty($branchList)){
-        //     $columns = range('B', 'Z');
-        //     foreach($branchList as $key=>$branch){
-        //         $sheet->setCellValue($columns[$key].'1', $branch['id']);
-        //     }
-        // }
-        $filename = 'data.csv';
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="' . $filename . '"');
-        header('Cache-Control: max-age=0');
-        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
-        $writer->save('php://output');
-        exit;
+        // $filename = 'Seat_Matrix.csv';
+        // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        // header('Content-Disposition: attachment;filename="' . $filename . '"');
+        // header('Cache-Control: max-age=0');
+        // $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+        // $writer->save('php://output');
+        // exit;
     }
 }
 
