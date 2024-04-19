@@ -36,6 +36,8 @@
                                 <tr>
                                    <th class="sort" data-sort="customer_name">S.No.</th>
                                    <th class="sort" data-sort="email">College Name</th>
+                                   <th class="sort" data-sort="email">Course Name</th>
+                                   <th class="sort" data-sort="email">Year</th>
                                    <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
@@ -46,6 +48,8 @@
                                     <tr>
                                         <td><?= $key+1; ?></td>
                                         <td><?= $banner['full_name']; ?></td>
+                                        <td><?= $banner['course']; ?></td>
+                                        <td><?= $banner['year']; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
                                               <a href="<?= base_url('admin/edit-fees'.'/'.$banner['id']) ?>" class="link-success fs-15"><i class="ri-edit-box-line"></i></a>

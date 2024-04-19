@@ -12,7 +12,7 @@ Class Fees extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
             $data['admin_session'] = $this->session->userdata('admin');
-            $data['feesList'] = $this->db->select('tbl_college_fees.*,tbl_college.full_name')->join('tbl_college','tbl_college_fees.college_id=tbl_college.id')->get('tbl_college_fees')->result_array();
+            $data['feesList'] = $this->db->select('tbl_college_fees.*,tbl_college.full_name,tbl_course.course')->join('tbl_college','tbl_college_fees.college_id=tbl_college.id')->join('tbl_course','tbl_college_fees.course_id=tbl_course.id')->get('tbl_college_fees')->result_array();
             $this->load->view('admin/fees/list',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
@@ -60,6 +60,7 @@ Class Fees extends MY_Controller {
             $data['seat_indentity_charges'] = $this->input->post('seat_indentity_charges');
             $data['upgradation_processing_fees'] = $this->input->post('upgradation_processing_fees');
             $result = $this->master->insert('tbl_college_fees',$data);
+            //echo $this->db->last_query();
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'Fees added successfully','url'=>base_url('admin/fees'));
                 echo json_encode($response);

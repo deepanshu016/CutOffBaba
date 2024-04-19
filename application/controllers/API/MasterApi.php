@@ -11,6 +11,19 @@ Class MasterApi extends MY_Controller  {
         $this->load->model('CourseCategory','category');
         $this->load->model('MasterModel','master');
     }
+// API to Get Setting
+    
+     public function getSiteSettings()
+    {
+        try {
+            $settings = $this->master->singleRecord('tbl_site_settings',[]);
+            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$settings);
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        echo json_encode($response);
+    }
 
 
     // API to Get Category
@@ -137,15 +150,79 @@ Class MasterApi extends MY_Controller  {
     // API to Get Streams Data
     public function getStreamsList()
 	{
+       
         try {
             $streamList = $this->master->getRecords('tbl_stream',[]);
-            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$streamList);
+             $finalstream=array();
+            foreach ($streamList as $stream) {
+                $degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                 $finalcourse=array();
+                 $finaldegree=array();
+                foreach ($degries as $degree) {
+                    $deg=array();
+                    $degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+                    $deg=$degry[0];
+                    $courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                    $finalcourse=array();
+                    foreach ($courses as $course) {
+                        $finalcourse[]=$course;
+                    }
+                    $deg['courses']=$finalcourse;
+                    $finaldegree[]=$deg;
+                }
+                $stream['degreetype']=$finaldegree;
+                $finalstream[]=$stream;
+            }
+            // echo '<pre>';
+            // print_r($finalstream);
+
+            
+            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$finalstream);
         } catch (Exception $e) {
             log_message('error', 'Exception: ' . $e->getMessage());
             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
 	}
+
+    public function getcoursebystream($stream=null)
+    {
+       
+        try {
+            $streamList = $this->master->getRecords('tbl_stream',['stream'=>str_replace("-"," ",$stream)]);
+             $finalstream=array();
+            foreach ($streamList as $stream) {
+                $degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                 $finalcourse=array();
+                 $finaldegree=array();
+                foreach ($degries as $degree) {
+                    $deg=array();
+                    $degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+                    $deg=$degry[0];
+                    $courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                    $finalcourse=array();
+                    foreach ($courses as $course) {
+                        $finalcourse[]=$course;
+                    }
+                    $deg['courses']=$finalcourse;
+                    $finaldegree[]=$deg;
+                }
+                $stream['degreetype']=$finaldegree;
+                $finalstream[]=$stream;
+            }
+            // echo '<pre>';
+            // print_r($finalstream);
+
+            
+            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$finalstream);
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
     // API to Get Opens Data
     public function getOpensList()
 	{
@@ -317,7 +394,7 @@ Class MasterApi extends MY_Controller  {
      public function getCollegeList()
      {
          try {
-             $collegeList = $this->master->getRecords('tbl_college',[]);
+             $collegeList = $this->master->getRecordsbyLimit('tbl_college',[],10);
              $collegeData = [];
              if(!empty($collegeList)){
                  foreach($collegeList as $key=>$college){
@@ -368,7 +445,7 @@ Class MasterApi extends MY_Controller  {
                  }
                  $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$collegeData);
              }
-             $response = array('status'=>400,'message'=>'No data found','data'=>$collegeData);
+             $response = array('status'=>200,'message'=>'No data found','data'=>$collegeData);
          } catch (Exception $e) {
              log_message('error', 'Exception: ' . $e->getMessage());
              $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
@@ -612,6 +689,26 @@ Class MasterApi extends MY_Controller  {
              }else{
                 $response = array('status'=>400,'message'=>'No data found','data'=>$newsData);
              }
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     }
+     public function getcoursedetail($id=null){
+         try {
+            $newsData = $this->master->singleRecord('tbl_course',['id'=>$id]);
+            $response = array('status'=>200,'message'=>'Data fetched successfully!','data'=>$newsData);
+         } catch (Exception $e) {
+             log_message('error', 'Exception: ' . $e->getMessage());
+             $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+         }
+         $this->output->set_content_type('application/json')->set_output(json_encode($response));
+     } 
+     public function getCollegedetail($slug=null,$id=null){
+         try {
+            $newsData = $this->master->singleRecord('tbl_college',['id'=>$id]);
+            $response = array('status'=>200,'message'=>'Data fetched successfully!','data'=>$newsData);
          } catch (Exception $e) {
              log_message('error', 'Exception: ' . $e->getMessage());
              $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);

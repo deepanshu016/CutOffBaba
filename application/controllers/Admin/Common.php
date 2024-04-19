@@ -205,6 +205,24 @@ public function getCategoryByHead()
         $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
         echo json_encode($response);
         return false;
+    } 
+    public function getCourseByStream()
+    {
+         $id = $this->input->post('id');
+
+        $branchList = $this->db->select('*')->where('stream',$id)->get('tbl_course')->result_array();
+        $html = '';
+        if(!empty($branchList)){
+            foreach($branchList as $branchtypeid){
+                $html.= '<option value="'.$branchtypeid['id'].'">'.$branchtypeid['course'].'</option>';
+            }
+            $response = array('status' =>'success', 'html'=>$html,'message'=>'Data fetched successfully');
+            echo json_encode($response);
+            return false;
+        }
+        $response = array('status' =>'errors', 'html'=>$html,'message'=>'Data not found');
+        echo json_encode($response);
+        return false;
     }
 }
 

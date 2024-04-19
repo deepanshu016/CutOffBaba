@@ -63,7 +63,7 @@
                                                   <?php
                                                   $courseList = get_master_data('tbl_course',[]);
                                                   if(!empty($courseList)){
-                                                     $courseLists = explode(',',$singleCounsellingHead['course_id']);
+                                                     $courseLists = explode('|',$singleCounsellingHead['course_id']);
                                                       foreach($courseList as $course){ ?>
                                                           <option value="<?= $course['id']; ?>" <?= (!empty($singleCounsellingHead) && in_array($course['id'],$courseLists)) ? 'selected' : ''; ?>><?= $course['course']; ?></option>
                                                       <?php } } ?>
@@ -94,7 +94,7 @@
                                                   $collegeList = get_master_data('tbl_college',[]);
                                                   if(!empty($collegeList)){
                                                         if(!empty($singleCounsellingHead)){
-                                                            $collegeLists = explode(',',$singleCounsellingHead['college']);
+                                                            $collegeLists = explode('|',$singleCounsellingHead['college']);
 
                                                         }
                                                       foreach($collegeList as $college){ ?>
@@ -113,7 +113,7 @@
                                                   $examList = get_master_data('tbl_exam',[]);
                                                   if(!empty($examList)){
                                                       if(!empty($singleCounsellingHead)){
-                                                          $examLists = explode(',',$singleCounsellingHead['exams']);
+                                                          $examLists = explode('|',$singleCounsellingHead['exams']);
 
                                                       }
                                                       foreach($examList as $exam){ ?>
@@ -161,16 +161,27 @@
                  </div>
                  <!-- end card header -->
                  <div class="card-body">
+                  <?php if(!empty($collegeLists)){ ?>
+                  <form method="post" action="<?=base_url('admin/update-cutoff-head-rank');?>" class="all-form">
+                  <?php } ?>
                   <table class="table table-bordered">
-                    <?php if(!empty($collegeLists)){foreach ($collegeLists as $key => $value) {
+
+                    <?php if(!empty($collegeLists)){
+                      $rank=explode(',',$singleCounsellingHead['rank']);
+                      echo '<input type="hidden" class="form-control" name="head_id" value="'.$singleCounsellingHead['id'].'">';
+                      foreach ($collegeLists as $key => $value) {
                       if ($value!="") {
                          $college=$this->db->select('*')->where('id',$value)->get('tbl_college')->result_array();
                     
-                    echo '<tr><td>'.($key+1).'</td><td>'.$college[0]['full_name'].'</td></tr>';
+                    echo '<tr><td>'.($key+1).'</td><td>'.$college[0]['full_name'].'</td><td><input type="text" class="form-control" name="rank[]" value="'.$rank[$key].'"></td></tr>';
                       }}
+                      
                    
-                  } ?>
-                  </table>
+                  } echo '</table>';?>
+                   <?php if(!empty($collegeLists)){ ?>
+                  <input type="submit" class="btn btn-primary" value="Save"></form>
+                  <?php } ?>
+                  
                   
                  </div>
                  <!-- end card -->

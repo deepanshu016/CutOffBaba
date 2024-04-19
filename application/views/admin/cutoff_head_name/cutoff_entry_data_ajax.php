@@ -74,8 +74,10 @@
                                                 if($counsellingHead){
                                                     foreach($counsellingHead as $head) { 
                                                         $collegeIds = ($head['college']) ? explode('|',$head['college']) : [];
+                                                       // print_r($collegeIds);
                                                         if(!empty($collegeIds)){
-                                                        $collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
+                                                            foreach ($collegeIds as $key => $value) {
+                                                        $collegeData = $this->db->select('*')->where('id',$value)->get('tbl_college')->result_array();
                                     if(!empty($collegeData)){
                                         foreach($collegeData as $college) { 
                                             $courseList = ($head['course_id']) ? explode('|',$head['course_id']) : [];
@@ -173,7 +175,7 @@
                                     }
                                     $i = 0; 
                                 }
-                                        
+                                    }    
                                     }
                                 }
                                 }}?>

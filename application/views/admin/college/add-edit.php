@@ -37,9 +37,9 @@
                     <div id="customerList">
                        <div class="row g-4 mb-3">
                           <?php if(empty($singleCollege)) { ?>
-                            <form action="<?= base_url('admin/save-college') ?>" method="POST" enctype="multipart/form-data" >
+                            <form action="<?= base_url('admin/save-college') ?>" method="POST" enctype="multipart/form-data" class="all-form" >
                           <?php } else{  ?>
-                            <form action="<?= base_url('admin/update-college') ?>" method="POST" enctype="multipart/form-data" >
+                            <form action="<?= base_url('admin/update-college') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                           <?php } ?>
                               <div class="live-preview">
                                   <div class="row">

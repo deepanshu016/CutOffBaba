@@ -195,18 +195,20 @@ Class CollegeFiles extends MY_Controller {
     }
 
     public function saveMediaToGallery(){
-          $request_data = json_decode($this->input->post('data'),true);
+          $request_datas = json_decode($this->input->post('data'),true);
+          //print_r($request_datas);
+          foreach($request_datas as $request_data){
           if($request_data['head_id'] == 'college_logo'){
                $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
-               $college_data = ['college_logo'=>$request_data['filename']];
+               $college_data = ['college_logo'=>$request_data['media_id']];
                $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else if($request_data['head_id'] == 'college_banner'){
               $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
-              $college_data = ['college_logo'=>$collegeData['filename']];
+              $college_data = ['college_logo'=>$collegeData['media_id']];
               $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else if($request_data['head_id'] == 'prospectus_file'){
               $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
-              $college_data = ['prospectus_file'=>$collegeData['filename']];
+              $college_data = ['prospectus_file'=>$collegeData['media_id']];
               $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else {
               $this->db->trans_start();
@@ -215,7 +217,9 @@ Class CollegeFiles extends MY_Controller {
               $result = $this->master->insert('tbl_gallery',$gallery_data);
               $this->db->trans_complete();
           }
-            if($result > 0){
+            
+        }
+        if($result > 0){
                 $response = array('status' => 'success','message'=> 'Media added into gallery successfully','url'=>base_url('admin/college-files'));
                 echo json_encode($response);
                 return false;

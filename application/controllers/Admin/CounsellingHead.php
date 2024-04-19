@@ -81,7 +81,7 @@ Class CounsellingHead extends MY_Controller {
         }
     }
     //Save Feeshead
-    public function updateCounsellingHead(){
+   public function updateCounsellingHead(){
         $this->form_validation->set_rules('head_name', 'Head Name', 'trim|required');
         $this->form_validation->set_rules('course_id[]', 'Course', 'trim|required');
         $this->form_validation->set_rules('level_id', 'Level', 'trim|required');
@@ -91,9 +91,9 @@ Class CounsellingHead extends MY_Controller {
             $data['head_name'] = $this->input->post('head_name');
             $data['level_id'] = $this->input->post('level_id');
             $data['state_id'] = $this->input->post('state');
-            $data['course_id'] = ($this->input->post('course_id')) ? implode('|',$this->input->post('course_id')) : '';
-            $data['exams'] = ($this->input->post('exam_id')) ? implode('|',$this->input->post('exam_id')) : '';
-            $data['college'] = ($this->input->post('college')) ? implode('|',$this->input->post('college')) : '';
+            $data['course_id'] = ($this->input->post('course_id')) ? implode(',',$this->input->post('course_id')) : '';
+            $data['exams'] = ($this->input->post('exam_id')) ? implode(',',$this->input->post('exam_id')) : '';
+            $data['college'] = ($this->input->post('college')) ? implode(',',$this->input->post('college')) : '';
             $result = $this->master->updateRecord('tbl_counselling_head',array('id'=>$this->input->post('head_id')),$data);
             $response = array('status' => 'success','message'=> 'Cutoff Head updated successfully','url'=>base_url('admin/cutoff-head-name'));
             echo json_encode($response);
@@ -107,6 +107,35 @@ Class CounsellingHead extends MY_Controller {
                     'level_id' => form_error('level_id'),
                     'college' => form_error('college[]'),
                     'exam_id' => form_error('exam_id[]')
+                )
+            );
+            echo json_encode($response);
+            return false;
+        }
+    }
+    public function updateCounsellingRank(){
+        $this->form_validation->set_rules('rank[]', 'Rank', 'trim|required');
+        if ($this->form_validation->run()) {
+            $rank=$this->input->post('rank');
+            asort($rank);
+            $colleges=$this->db->select('college')->where('id',$this->input->post('head_id'))->get('tbl_counselling_head')->result_array();
+            $college=$colleges[0]['college'];
+            $college=explode('|',$college);
+            $newcollege=array();
+            foreach ($rank as $key => $value) {
+                $newcollege[]=$college[$key];
+            }
+            $data['rank'] = implode(',',$rank);
+            $data['college'] = implode('|',$newcollege);
+            $result = $this->master->updateRecord('tbl_counselling_head',array('id'=>$this->input->post('head_id')),$data);
+            $response = array('status' => 'success','message'=> 'Cutoff Head updated successfully','url'=>base_url('admin/cutoff-head-name'));
+            echo json_encode($response);
+            return true;
+        }else{
+            $response = array(
+                'status' => 'error',
+                'errors' => array(
+                    'rank' => form_error('rank[]')
                 )
             );
             echo json_encode($response);
@@ -333,7 +362,7 @@ Class CounsellingHead extends MY_Controller {
                         $r1['air']=$sheet_data[$l][$x];
                         $r1['sr']=$sheet_data[$l][$x+1];
                         $r1['marks']=$sheet_data[$l][$x+2];        
-                        $r1['category_type']=$sub_category_id;  
+                        $r1['category_type']=$category_type;  
                         $r1['cutoff_head']=$head_id;  
                         $r1['year']=$year;  
 
@@ -344,7 +373,7 @@ Class CounsellingHead extends MY_Controller {
                         $r2['air']=$sheet_data[$l][$x+3];
                         $r2['sr']=$sheet_data[$l][$x+4];
                         $r2['marks']=$sheet_data[$l][$x+5];        
-                        $r2['category_type']=$sub_category_id; 
+                        $r2['category_type']=$category_type; 
                         $r2['cutoff_head']=$head_id;  
                         $r2['year']=$year;   
 
@@ -355,7 +384,7 @@ Class CounsellingHead extends MY_Controller {
                         $r3['air']=$sheet_data[$l][$x+6];
                         $r3['sr']=$sheet_data[$l][$x+7];
                         $r3['marks']=$sheet_data[$l][$x+8];        
-                        $r3['category_type']=$sub_category_id;  
+                        $r3['category_type']=$category_type;  
                         $r3['cutoff_head']=$head_id;  
                         $r3['year']=$year;   
 
@@ -366,7 +395,7 @@ Class CounsellingHead extends MY_Controller {
                         $r4['air']=$sheet_data[$l][$x+9];
                         $r4['sr']=$sheet_data[$l][$x+10];
                         $r4['marks']=$sheet_data[$l][$x+11];        
-                        $r4['category_type']=$sub_category_id;  
+                        $r4['category_type']=$category_type;  
                         $r4['cutoff_head']=$head_id;  
                         $r4['year']=$year;   
 
@@ -379,7 +408,7 @@ Class CounsellingHead extends MY_Controller {
                         $r5['air']=$sheet_data[$l][$x+12];
                         $r5['sr']=$sheet_data[$l][$x+13];
                         $r5['marks']=$sheet_data[$l][$x+14];        
-                        $r5['category_type']=$sub_category_id;  
+                        $r5['category_type']=$category_type;  
                         $r5['cutoff_head']=$head_id;  
                         $r5['year']=$year;   
 

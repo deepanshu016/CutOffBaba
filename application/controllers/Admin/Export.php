@@ -949,7 +949,8 @@ class Export extends CI_Controller {
 		require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
-		$subCategoryData = $this->master->getRecords('tbl_sub_category',array('head_id'=>$head,'id'=>$sub_category_ids));
+		$CategoryData = $this->master->singleRecord('tbl_category',array('head_id'=>$head,'id'=>$sub_category_ids));
+		$subCategoryData = $this->master->getRecords('tbl_sub_category',array('category_id'=>$CategoryData['id'],'head_id'=>$head));
 		$count=count($subCategoryData);
 		$row=[];
 		for($i=1;$i<=$count;$i++){

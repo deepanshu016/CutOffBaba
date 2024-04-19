@@ -62,6 +62,13 @@ class MasterModel extends CI_Model {
 			return $this->db->order_by('id','DESC')->limit(3)->select('*')->get($table)->result_array();
 		}
 	}
+	function getRecordsbyLimit($table = '', $condition=[],$limit=10){
+		if(empty(!$condition)){
+			return $this->db->order_by('id','DESC')->limit($limit)->get_where($table,$condition)->result_array();
+		}else{
+			return $this->db->order_by('id','DESC')->limit($limit)->select('*')->get($table)->result_array();
+		}
+	}
 	function getRecordsLike($table = '', $condition=null){
 		return $this->db->select('*')->from($table)->like('blog_type',$condition)->get()->result_array();
 	}

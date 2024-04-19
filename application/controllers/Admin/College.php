@@ -152,7 +152,7 @@ Class College extends MY_Controller {
             $data['added_by'] = $this->session->userdata('admin')['id'];
             $data['status'] = 1;
             $result = $this->master->insert('tbl_college',$data);
-            echo $this->db->last_query();
+            //echo $this->db->last_query();
             if($result > 0){
                 $response = array('status' => 'success','message'=> 'College added successfully','url'=>base_url('admin/college'));
                 echo json_encode($response);

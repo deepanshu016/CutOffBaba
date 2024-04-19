@@ -23,15 +23,14 @@
                         <h5 class="mb-3">Assign Media</h5>
                         <div class="card">
                             <div class="card-body">
-                                <!-- Nav tabs -->
+                                <form class="all-form" method="post" action="">
                                 <div class="col-md-12">
-                                    <div class="row">
+                                    <div class="row mb-5">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label for="basiInput" class="form-label">Gallery Heads</label>
                                                 <input type="hidden" class="college_id" value="<?= @$college_id; ?>">
                                                 <select class="form-control gallery_heads" name="gallery_heads">
-                                                    <option value="">Select</option>
+                                                    <option value="">Select Gallery Head</option>
                                                     <?php
                                                     $galleryHeads = get_master_data('tbl_gallery_heads',[]);
                                                     if(!empty($galleryHeads)){
@@ -48,36 +47,36 @@
                                         </div>
                                         <div class="col-sm-auto">
                                             <div>
-                                                <a href="javascript:void(0);" class="btn btn-success add-btn save-button submit-button" style="display: none;"> Save Data</a>
+                                                <a href="javascript:void(0);" class="btn btn-success add-btn save-button submit-button" > Save Data</a>
                                             </div>
                                         </div>
-                                        <div class="col-sm-auto">
+                                       <!--  <div class="col-sm-auto">
                                             <div>
-                                                <a href="javascript:void(0);" class="btn btn-success add-btn delete-media-button" style="display: none;"> Delete Media</a>
+                                                <a href="javascript:void(0);" class="btn btn-success add-btn delete-media-button" > Delete Media</a>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#pill-justified-home-1" role="tab">
+                                        <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#images" role="tab">
                                             Images
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#pill-justified-profile-1" role="tab">
+                                        <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#video" role="tab">
                                             Video
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#pill-justified-messages-1" role="tab">
+                                        <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#document" role="tab">
                                             Documents
                                         </a>
                                     </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content text-muted">
-                                    <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
+                                    <div class="tab-pane active" id="images" role="tabpanel">
                                         <div class="d-flex">
                                             <div class="flex-grow-1 ms-2">
                                                 <div class="col-md-12">
@@ -96,7 +95,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
+                                    <div class="tab-pane" id="video" role="tabpanel">
                                         <div class="d-flex">
                                             <div class="flex-grow-1 ms-2">
                                                 <div class="col-md-12">
@@ -115,7 +114,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
+                                    <div class="tab-pane" id="document" role="tabpanel">
                                         <div class="d-flex">
                                             <div class="flex-grow-1 ms-2">
                                                 <div class="col-md-12">
@@ -136,6 +135,8 @@
                                     </div>
 
                                 </div>
+                                </form>
+
                             </div><!-- end card-body -->
                         </div><!-- end card -->
                     </div>

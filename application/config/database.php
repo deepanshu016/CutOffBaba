@@ -22,7 +22,7 @@ $db['default'] = array(
 
 
 
-	'hostname' => 'localhost',
+'hostname' => 'localhost',
 
 
 
@@ -82,7 +82,7 @@ $db['default'] = array(
 
 
 
-	'strict' => FALSE,
+	'stricton' => FALSE,
 
 
 
