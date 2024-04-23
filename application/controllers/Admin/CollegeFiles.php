@@ -199,16 +199,13 @@ Class CollegeFiles extends MY_Controller {
           //print_r($request_datas);
           foreach($request_datas as $request_data){
           if($request_data['head_id'] == 'college_logo'){
-               $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
                $college_data = ['college_logo'=>$request_data['media_id']];
                $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else if($request_data['head_id'] == 'college_banner'){
-              $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
-              $college_data = ['college_logo'=>$collegeData['media_id']];
+              $college_data = ['college_banner'=>$request_data['media_id']];
               $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else if($request_data['head_id'] == 'prospectus_file'){
-              $collegeData = $this->master->singleRecord('tbl_college',['id'=>$request_data['college_id']]);
-              $college_data = ['prospectus_file'=>$collegeData['media_id']];
+              $college_data = ['prospectus_file'=>$request_data['media_id']];
               $result = $this->master->updateRecord('tbl_college',['id'=>$request_data['college_id']],$college_data);
           }else {
               $this->db->trans_start();

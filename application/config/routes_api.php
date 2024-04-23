@@ -5,6 +5,7 @@ $route['api/sitesettings'] = 'API/MasterApi/getSiteSettings';
 $route['api/categories'] = 'API/MasterApi/getCategoryList';
 $route['api/countries'] = 'API/MasterApi/getCountryList';
 $route['api/states'] = 'API/MasterApi/getStateList';
+$route['api/state/(:any)'] = 'API/MasterApi/getStateDetail/$1';
 $route['api/districts'] = 'API/MasterApi/getDistrictList';
 $route['api/sub-districts'] = 'API/MasterApi/getSubDistrictList';
 $route['api/ownerships'] = 'API/MasterApi/getOwnerShipList';

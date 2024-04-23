@@ -120,13 +120,13 @@ Class CounsellingHead extends MY_Controller {
             asort($rank);
             $colleges=$this->db->select('college')->where('id',$this->input->post('head_id'))->get('tbl_counselling_head')->result_array();
             $college=$colleges[0]['college'];
-            $college=explode('|',$college);
+            $college=explode(',',$college);
             $newcollege=array();
             foreach ($rank as $key => $value) {
                 $newcollege[]=$college[$key];
             }
             $data['rank'] = implode(',',$rank);
-            $data['college'] = implode('|',$newcollege);
+            $data['college'] = implode(',',$newcollege);
             $result = $this->master->updateRecord('tbl_counselling_head',array('id'=>$this->input->post('head_id')),$data);
             $response = array('status' => 'success','message'=> 'Cutoff Head updated successfully','url'=>base_url('admin/cutoff-head-name'));
             echo json_encode($response);

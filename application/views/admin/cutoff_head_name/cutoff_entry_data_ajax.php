@@ -73,7 +73,7 @@
                                         
                                                 if($counsellingHead){
                                                     foreach($counsellingHead as $head) { 
-                                                        $collegeIds = ($head['college']) ? explode('|',$head['college']) : [];
+                                                        $collegeIds = ($head['college']) ? explode(',',$head['college']) : [];
                                                        // print_r($collegeIds);
                                                         if(!empty($collegeIds)){
                                                             foreach ($collegeIds as $key => $value) {

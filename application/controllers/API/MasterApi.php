@@ -63,6 +63,17 @@ Class MasterApi extends MY_Controller  {
         }
         $this->output->set_content_type('application/json')->set_output(json_encode($response));
 	}
+    public function getStateDetail($id=null)
+    {
+        try {
+            $states = $this->db->select('tbl_college.*,tbl_college.id as college_id,tbl_state.name as statename,tbl_uploaded_files.file_name as college_bannerfile')->join('tbl_state','tbl_state.id=tbl_college.state')->join('tbl_uploaded_files','tbl_uploaded_files.id=tbl_college.college_banner')->where(['tbl_college.state'=>$id])->get('tbl_college')->result_array();
+            $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$states);
+        } catch (Exception $e) {
+            log_message('error', 'Exception: ' . $e->getMessage());
+            $response = array('status'=>500,'message'=>$e->getMessage(),'data'=>[]);
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    }
     // API to Get District
     public function getDistrictList()
 	{
@@ -427,6 +438,18 @@ Class MasterApi extends MY_Controller  {
                      $collegeData[$key]['approved_by'] = $college['approved_by'];
                      $collegeData[$key]['college_logo'] = $college['college_logo'];
                      $collegeData[$key]['college_banner'] = $college['college_banner'];
+                     $college_logo=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_logo']])->get('tbl_uploaded_files')->result_array();
+                    if (count($college_logo)>0) {
+                        $collegeData[$key]['college_logofile']=$college_logo[0]['file_name'];
+                    }else{
+                        $collegeData[$key]['college_logofile']="";
+                    }
+                    $college_banner=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_banner']])->get('tbl_uploaded_files')->result_array();
+                    if (count($college_banner)>0) {
+                        $collegeData[$key]['college_bannerfile']=$college_logo[0]['file_name'];
+                    }else{$collegeData[$key]['college_bannerfile']="";}
+
+
                      $collegeData[$key]['prospectus_file'] = $college['prospectus_file'];
                      $collegeData[$key]['ownership'] = $this->master->singleRecord('tbl_ownership',['id'=>$college['ownership']]);
                      $collegeData[$key]['website'] = $college['website'];
@@ -707,7 +730,18 @@ Class MasterApi extends MY_Controller  {
      } 
      public function getCollegedetail($slug=null,$id=null){
          try {
-            $newsData = $this->master->singleRecord('tbl_college',['id'=>$id]);
+            $newsData = $this->db->select('tbl_college.*,tbl_gender.gender,tbl_ownership.title as ownertitle')->join('tbl_gender','tbl_gender.id=tbl_college.gender_accepted')->join('tbl_ownership','tbl_ownership.id=tbl_college.ownership')->where(['tbl_college.id'=>$id])->get('tbl_college')->result_array();
+            $newsData=$newsData[0];
+            $college_logo=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$newsData['college_logo']])->get('tbl_uploaded_files')->result_array();
+            if (count($college_logo)>0) {
+                $newsData['college_logofile']=$college_logo[0]['file_name'];
+            }else{
+                $newsData['college_logofile']="";
+            }
+            $college_banner=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$newsData['college_banner']])->get('tbl_uploaded_files')->result_array();
+            if (count($college_logo)>0) {
+                $newsData['college_bannerfile']=$college_logo[0]['file_name'];
+            }else{$newsData['college_bannerfile']="";}
             $response = array('status'=>200,'message'=>'Data fetched successfully!','data'=>$newsData);
          } catch (Exception $e) {
              log_message('error', 'Exception: ' . $e->getMessage());

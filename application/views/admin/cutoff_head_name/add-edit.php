@@ -94,7 +94,7 @@
                                                   $collegeList = get_master_data('tbl_college',[]);
                                                   if(!empty($collegeList)){
                                                         if(!empty($singleCounsellingHead)){
-                                                            $collegeLists = explode('|',$singleCounsellingHead['college']);
+                                                            $collegeLists = explode(',',$singleCounsellingHead['college']);
 
                                                         }
                                                       foreach($collegeList as $college){ ?>

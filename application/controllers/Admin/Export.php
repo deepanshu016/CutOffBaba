@@ -968,9 +968,14 @@ class Export extends CI_Controller {
                        
 		if($counsellingHead){
 			foreach($counsellingHead as $head) { 
-				$collegeIds = ($head['college']) ? explode('|',$head['college']) : [];
+				$collegeIds = ($head['college']) ? explode(',',$head['college']) : [];
 				if(!empty($collegeIds)){
-				$collegeData = $this->db->select('*')->where_in('id',$collegeIds)->get('tbl_college')->result_array();
+					$collegeData=array();
+					foreach($collegeIds as $keys){
+						$dddd= $this->db->select('*')->where('id',$keys)->get('tbl_college')->result_array();
+						$collegeData[]=$dddd[0];
+					}
+				 
 				$keys = 0;                 
 if(!empty($collegeData)){
 foreach($collegeData as $college) { 

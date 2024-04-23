@@ -40,6 +40,20 @@
      $(document).ready(function() {
          $('.js-example-basic-multiple').select2();
      });
+     $(".js-example-basic-multiple").on("select2:select", function (evt) {
+          var element = evt.params.data.element;
+          var $element = $(element);
+
+          if ($(this).find(":selected").length > 1) {
+            var $second = $(this).find(":selected").eq(-1);
+            $second.after($element);
+          } else {
+            $element.detach();
+            $(this).prepend($element);
+          }
+
+          $(this).trigger("change");
+        });
  </script>
     <?php $this->load->view('common/alert'); ?>
 </body>
