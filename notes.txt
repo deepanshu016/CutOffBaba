@@ -1,4 +1,0 @@
-Admin Panel 
-1. Seat Matrix
-
-Select College-Course According to college-

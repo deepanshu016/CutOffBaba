@@ -436,7 +436,7 @@ $route['admin/save-coursegroup'] = 'Admin/Coursegroup/saveCoursegroup';
 $route['admin/update-coursegroup'] = 'Admin/Coursegroup/updateCoursegroup';
 $route['admin/edit-coursegroup/(:any)/(:any)'] = 'Admin/Coursegroup/editCoursegroup/$1/$2';
 $route['admin/delete-coursegroup'] = 'Admin/Coursegroup/deleteCoursegroup';
-$route['admin/import-coursegroup'] = 'Admin/Coursegroup/importCoursegroup';
+$route['admin/import-coursegroup'] 			= 'Admin/Coursegroup/importCoursegroup';
 $route['admin/import-coursegroup-by-excel'] = 'Admin/Coursegroup/importCoursegroupByExcel';
-$route['admin/export-coursegroup'] = 'Admin/Export/coursegroup';
+$route['admin/export-coursegroup'] 			= 'Admin/Export/coursegroup';
  ?>

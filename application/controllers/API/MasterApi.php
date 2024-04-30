@@ -161,10 +161,9 @@ Class MasterApi extends MY_Controller  {
     // API to Get Streams Data
     public function getStreamsList()
 	{
-       
         try {
             $streamList = $this->master->getRecords('tbl_stream',[]);
-             $finalstream=array();
+            $finalstream=array();
             foreach ($streamList as $stream) {
                 $degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
                  $finalcourse=array();
@@ -185,10 +184,7 @@ Class MasterApi extends MY_Controller  {
                 $stream['degreetype']=$finaldegree;
                 $finalstream[]=$stream;
             }
-            // echo '<pre>';
-            // print_r($finalstream);
 
-            
             $response = array('status'=>200,'message'=>'Data fetched successfully!!!!!','data'=>$finalstream);
         } catch (Exception $e) {
             log_message('error', 'Exception: ' . $e->getMessage());
@@ -199,8 +195,7 @@ Class MasterApi extends MY_Controller  {
 
     public function getcoursebystream($stream=null)
     {
-       
-        try {
+       try {
             $streamList = $this->master->getRecords('tbl_stream',['stream'=>str_replace("-"," ",$stream)]);
              $finalstream=array();
             foreach ($streamList as $stream) {
@@ -404,7 +399,7 @@ Class MasterApi extends MY_Controller  {
      }
      public function getCollegeList()
      {
-         try {
+        try {
              $collegeList = $this->master->getRecordsbyLimit('tbl_college',[],10);
              $collegeData = [];
              if(!empty($collegeList)){

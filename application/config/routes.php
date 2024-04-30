@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 include(APPPATH.'config/routes_admin.php');
 include(APPPATH.'config/routes_api.php');
+include(APPPATH.'config/routes_newapi.php');
 $route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'home/login';
 $route['loginchk'] = 'Authenticate/login';
