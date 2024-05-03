@@ -28,9 +28,9 @@ class MasterModel extends CI_Model {
 	}
 	function getRecords($table = '', $condition=[]){
 		if(empty(!$condition)){
-			return $this->db->order_by('id')->get_where($table,$condition)->result_array();
+			return $this->db->get_where($table,$condition)->result_array();
 		}else{
-			return $this->db->select('*')->order_by('id')->get($table)->result_array();
+			return $this->db->select('*')->get($table)->result_array();
 		}
 	}
 	function getRecordsWhereIn($table = '',$key_name = '', $data=[]){
@@ -64,9 +64,9 @@ class MasterModel extends CI_Model {
 	}
 	function getRecordsbyLimit($table = '', $condition=[],$limit=10){
 		if(empty(!$condition)){
-			return $this->db->order_by('id','DESC')->limit($limit)->get_where($table,$condition)->result_array();
+			return $this->db->order_by('id','ASC')->limit($limit)->get_where($table,$condition)->result_array();
 		}else{
-			return $this->db->order_by('id','DESC')->limit($limit)->select('*')->get($table)->result_array();
+			return $this->db->order_by('id','ASC')->limit($limit)->select('*')->get($table)->result_array();
 		}
 	}
 	function getRecordsLike($table = '', $condition=null){
@@ -134,7 +134,7 @@ class MasterModel extends CI_Model {
 
 
 	function getParentChildData($table1, $table2,$common_field){
-		$this->db->select('t1.id as state_id,t1.state_logo as statelogo,t1.name as state_name,t1.country_id,t2.countryCode,t2.name as country_name');
+		$this->db->select('t1.id as state_id,t1.name as state_name,t1.country_id,t2.countryCode,t2.name as country_name');
 		$this->db->from($table1.' AS t1');
 		$this->db->join($table2. ' AS t2', 't2.id = t1.'.$common_field.'');
 		$query = $this->db->get();

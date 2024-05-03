@@ -4,20 +4,217 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends MY_Controller {
 	public function __construct() {
    	 	parent::__construct();
-   	 	$this->load->model('SiteSettings','site');
-   	 	$this->load->model('MasterModel','master');
+   	 	// $this->load->model('User','us');
+        // $this->load->model('SiteSettings','site');
+        // $this->load->model('CourseCategory','category');
+        $this->load->model('MasterModel','master');
     }
 	public function index()
 	{
-		$data['title'] = 'App Info | CUTOFFBABA';
-		$this->load->view('site/splash-screen',$data);
+		$data['title'] = 'CUTOFFBABA';
+		$data['streams']=$this->streamdata();		
+		$data['colleges']=$this->collegeData([],'12');
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$this->load->view('site/home',$data);
 	}
-	public function appInfo()
+	function streamdata($where=[],$limit=null){
+		$streamList = $this->master->getRecordsbyLimit('tbl_stream',$where,$limit);
+             $finalstream=array();
+            foreach ($streamList as $stream) {
+                $degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                 $finalcourse=array();
+                 $finaldegree=array();
+                foreach ($degries as $degree) {
+                    $deg=array();
+                    $degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+                    $deg=$degry[0];
+                    $courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                    $finalcourse=array();
+                    foreach ($courses as $course) {
+                        $finalcourse[]=$course;
+                    }
+                    $deg['courses']=$finalcourse;
+                    $finaldegree[]=$deg;
+                }
+                $stream['degreetype']=$finaldegree;
+                $finalstream[]=$stream;
+            }	
+            return $finalstream;
+	}
+	function collegeData($where=[],$limit=null){
+
+		$collegeList = $this->master->getRecordsbyLimit('tbl_college',$where,$limit);
+             $collegeData = [];
+             if(!empty($collegeList)){
+                 foreach($collegeList as $key=>$college){
+                     $course_data = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+                     $gender_data = ($college['gender_accepted']) ? explode('|',$college['gender_accepted']) : [];
+                     $collegeData[$key]['college_id'] = $college['id'];
+                     $collegeData[$key]['full_name'] = $college['full_name'];
+                     $collegeData[$key]['slug'] = $college['slug'];
+                     $collegeData[$key]['short_description'] = $college['short_description'];
+                     $collegeData[$key]['popular_name_one'] = $college['popular_name_one'];
+                     $collegeData[$key]['popular_name_two'] = $college['popular_name_two'];
+                     $collegeData[$key]['establishment'] = $college['establishment'];
+                     if(!empty($course_data)){
+                        $collegeData[$key]['courses'] = $this->db->select('*')->where_in('id',$course_data)->get('tbl_course')->result_array();
+                     }else{
+                        $collegeData[$key]['courses'] = [];
+                     }
+                     if(!empty($gender_data)){
+                        $collegeData[$key]['gender'] = $this->db->select('*')->where_in('id',$gender_data)->get('tbl_gender')->result_array();
+                     }else{
+                        $collegeData[$key]['gender'] = [];
+                     }
+                     
+                     $collegeData[$key]['country'] = $this->master->singleRecord('tbl_country',['id'=>$college['country']]);
+                     $collegeData[$key]['state'] = $this->master->singleRecord('tbl_state',['id'=>$college['state']]);
+                     $collegeData[$key]['district'] = $this->master->singleRecord('tbl_city',['id'=>$college['city']]);
+                     $collegeData[$key]['affiliated_by'] = $college['affiliated_by'];
+                     $collegeData[$key]['university_name'] = $college['university_name'];
+                     $collegeData[$key]['approval'] = $this->master->singleRecord('tbl_approval',['id'=>$college['approved_by']]);
+                     $collegeData[$key]['approved_by'] = $college['approved_by'];
+                     $collegeData[$key]['college_logo'] = $college['college_logo'];
+                     $collegeData[$key]['college_banner'] = $college['college_banner'];
+                     $college_logo=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_logo']])->get('tbl_uploaded_files')->result_array();
+                    if (count($college_logo)>0) {
+                        $collegeData[$key]['college_logofile']=$college_logo[0]['file_name'];
+                    }else{
+                        $collegeData[$key]['college_logofile']="";
+                    }
+                    $college_banner=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_banner']])->get('tbl_uploaded_files')->result_array();
+                    if (count($college_banner)>0) {
+                        $collegeData[$key]['college_bannerfile']=$college_logo[0]['file_name'];
+                    }else{$collegeData[$key]['college_bannerfile']="";}
+
+
+                     $collegeData[$key]['prospectus_file'] = $college['prospectus_file'];
+                     $collegeData[$key]['ownership'] = $this->master->singleRecord('tbl_ownership',['id'=>$college['ownership']]);
+                     $collegeData[$key]['website'] = $college['website'];
+                     $collegeData[$key]['email'] = $college['email'];
+                     $collegeData[$key]['contact_one'] = $college['contact_one'];
+                     $collegeData[$key]['contact_two'] = $college['contact_two'];
+                     $collegeData[$key]['contact_three'] = $college['contact_three'];
+                     $collegeData[$key]['nodal_officer_name'] = $college['nodal_officer_name'];
+                     $collegeData[$key]['nodal_officer_no'] = $college['nodal_officer_no'];
+                     $collegeData[$key]['keywords'] = $college['keywords'];
+                     $collegeData[$key]['tags'] = $college['tags'];
+                     $collegeData[$key]['added_by'] = $college['added_by'];
+                     $collegeData[$key]['status'] = $college['status'];
+                     $collegeData[$key]['created_at'] = $college['created_at'];
+                     $collegeData[$key]['updated_at'] = $college['updated_at'];
+                 }
+             }
+             return $collegeData;
+	}
+
+	public function contactUs()
 	{
-		$data['title'] = 'App Info | CUTOFFBABA';
-		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
-		$this->load->view('site/more-about-splash',$data);
+		$data['title'] = 'CUTOFFBABA-Contact Us';		
+		$data['streams']=curlInfo('stream');
+		$data['colleges']=curlInfo('colleges');
+		$data['siteSettings']=curlInfo('sitesettings');
+		$this->load->view('site/contact',$data);
 	}
+
+	public function aboutUs()
+	{
+		$data['title'] = 'CUTOFFBABA-About Us';		
+		$data['streams']=curlInfo('stream');
+		$data['colleges']=curlInfo('colleges');
+		$data['siteSettings']=curlInfo('sitesettings');
+		$this->load->view('site/about',$data);
+	}
+	public function coursesByStream($stream=null)
+	{
+		$data['title'] = 'COURSES | CUTOFFBABA';
+		$data['streams']=$this->streamdata();
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$data['courseByStreams']=$this->streamdata(['stream'=>str_replace("-"," ",$stream)]);
+		$this->load->view('site/course-by-stream',$data);
+	}
+	public function getcoursedetail($id=null)
+	{
+		$data['title'] = 'COURSES | CUTOFFBABA';
+		$data['streams']=$this->streamdata();
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$data['courseDetail']=$this->master->singleRecord('tbl_course',['id'=>$id]);
+		$data['courseDetail']=$data['courseDetail'];
+		$this->load->view('site/coursedetail',$data);
+	}
+	public function collegeDetail($slug=null,$id=null)
+	{
+		$data['title'] = 'COURSES | CUTOFFBABA';
+		$data['streams']=$this->streamdata();
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$data['collegeDetail']=$this->db->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name' )->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')->join('tbl_country','tbl_country.id=tbl_college.country')->join('tbl_state','tbl_state.id=tbl_college.state')->where(['tbl_college.id'=>$id])->get('tbl_college')->result_array();
+		$data['collegeDetail']=$data['collegeDetail'][0];
+		$this->load->view('site/collegedetail',$data);
+	}
+	public function stateList($id=null)
+	{
+		
+		$data['streams']=curlInfo('stream');
+		$data['siteSettings']=curlInfo('sitesettings');
+		$data['states']=curlInfo('states');
+		if ($id) {
+			
+			$data['colleges']=curlInfo('state/'.$id);
+			//print_r($data['statedetail']);
+			$data['title'] = $data['colleges'][0]->statename;
+			$this->load->view('site/state-detail',$data);
+		}else{
+			$data['title'] = 'States';
+			$this->load->view('site/states',$data);
+		}
+	}
+	public function signup()
+	{
+		$data['title'] = 'SIGNUP | CUTOFFBABA';
+		$data['stateList']=$this->master->getRecords('tbl_state',[]);
+		$data['examList']=$this->master->getRecords('tbl_exam',[]);
+		$data['streams']=$this->streamdata();		
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$this->load->view('site/register',$data);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function login()
 	{
 		$data['title'] = 'LOGIN | CUTOFFBABA';
@@ -29,13 +226,7 @@ class Home extends MY_Controller {
 		$this->load->view('site/forgot_password',$data);
 	}
 
-	public function signup()
-	{
-		$data['title'] = 'SIGNUP | CUTOFFBABA';
-		$data['stateList']=$this->site->getRecords('tbl_state',[]);
-		$data['examList']=$this->site->getRecords('tbl_exam',[]);
-		$this->load->view('site/signup',$data);
-	}
+	
 	public function streams()
 	{
 		$data['title'] = 'STREAMS | CUTOFFBABA';
@@ -48,15 +239,7 @@ class Home extends MY_Controller {
 		$data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/payment-list',$data);
 	}
-	public function coursesByStream($stream_id)
-	{
-		$data['title'] = 'COURSES | CUTOFFBABA';
-		$data['selectedStream'] = $this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
-		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
-		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-		$data['userCoursePreferences'] = $this->master->getRecords('tbl_user_course_preferences',['user_id'=>$this->session->userdata('user')['id']]);
-		$this->load->view('site/course-by-stream',$data);
-	}
+	
 	public function aboutCourse($course_id)
 	{
 		$data['title'] = 'ABOUT COURSES | CUTOFFBABA';
@@ -70,15 +253,7 @@ class Home extends MY_Controller {
 
 
 
-	public function stateList($course_id)
-	{
-		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
-		$data['selectedCourse'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
-		$data['courseColleges'] = $this->master->getRecordsFindInSet('tbl_college',$course_id,'course_offered');
-		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-		$data['stateList'] = $this->master->getStatesWithMinimumCollege();
-		$this->load->view('site/state-list',$data);
-	}
+	
 	public function state_wise_colleges($state_id,$course_id)
 	{
 		$data['title'] = 'State Wise Colleges | CUTOFFBABA';		
@@ -95,13 +270,7 @@ class Home extends MY_Controller {
 		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/state-wise-colleges',$data);
 	}
-	public function aboutUs()
-	{
-		$data['title'] = 'ABOUT US | CUTOFFBABA';
-		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
-		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-		$this->load->view('site/about-page',$data);
-	}
+	
 	public function browseSuccessStories()
 	{
 		$data['title'] = 'Our Success Story | CUTOFFBABA';
@@ -109,13 +278,7 @@ class Home extends MY_Controller {
 		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
 		$this->load->view('site/testomonial-exlore',$data);
 	}
-	public function contactUs()
-	{
-		$data['title'] = 'Contacts Us | CUTOFFBABA';
-		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
-		$data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-		$this->load->view('site/contact-us',$data);
-	}
+	
 	public function termsConditions()
 	{
 		$data['title'] = 'Terms & Conditions | CUTOFFBABA';
@@ -243,16 +406,6 @@ class Home extends MY_Controller {
 		$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
 		$this->load->view('site/college_info',$data);
 	}
-	public function collegeDetail($tag='',$course_id='',$college_id='')
-	{
-		$data['title'] = 'College Detail | CUTOFFBABA';	
-		$data['tag'] = $tag;	
-		$data['course_id'] = $course_id;	
-		$data['collegeData'] = $this->master->getFullCollegeDetail($college_id);
-		$data['galleryList'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$college_id,'file_type'=>'image']);	
-		$data['singleCourse'] = $this->master->singleRecord('tbl_course',['id'=>$college_id]);
-		$data['courseList'] = $this->master->getRecords('tbl_course');
-		$this->load->view('site/college_detail',$data);
-	}
+	
 	
 }

@@ -4,9 +4,9 @@ Class Authenticate extends MY_Controller {
 
 	public function __construct() {
    	 	parent::__construct();
-   	 	$this->load->model('User','us');
-        $this->load->model('SiteSettings','site');
-        $this->load->model('CourseCategory','category');
+   	 	// $this->load->model('User','us');
+        // $this->load->model('SiteSettings','site');
+        // $this->load->model('CourseCategory','category');
         $this->load->model('MasterModel','master');
     }
 
@@ -18,7 +18,7 @@ Class Authenticate extends MY_Controller {
         if ($this->form_validation->run()) {
             $phone = $this->input->post('phone');
             $password = sha1($this->input->post('password'));
-            $userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
+            $userData = $this->master->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
             if(!empty($userData)){
                 $this->session->set_userdata('user',$userData);
                 $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('streams'));
@@ -56,10 +56,10 @@ Class Authenticate extends MY_Controller {
             $data['permanent_state'] = $this->input->post('state');
             $data['status'] = 0;
             $data['created_at'] = date('Y-m-d H:i:s');
-            $result = $this->us->insert('tbl_users',$data);
+            $result = $this->master->insert('tbl_users',$data);
             if($result){
-                $checkLogin = $this->us->singleRecord('tbl_users',array('id'=>$result));
-                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('/'));
+                $checkLogin = $this->master->singleRecord('tbl_users',array('id'=>$result));
+                $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('/user_dashboard'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
             }

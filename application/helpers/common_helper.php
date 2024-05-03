@@ -186,5 +186,38 @@ if (!function_exists('excerpt')){
 		return $str; // return excerpt
 	 }
 }
+if ( ! function_exists('asset_url()'))
+     {
+       function asset_url()
+       {
+          return 'https://app.cutoffbaba.in/assets/uploads/';
+       }
+     }
+     if ( ! function_exists('curlInfo()'))
+     {
+       function curlInfo($url=null,$option=[])
+		{
+			$url = 'https://app.cutoffbaba.in/api/'.$url;
+			
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt($ch, CURLOPT_POST, 1);
+			if (!empty($option)) {
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $option);
+			}
+			$result = curl_exec($ch);
+			$data=json_decode($result);
+			
+			if ($data->status==200) {
+				$result=$data->data;
+			}else{
+				$result=[];
+			}
+			//print_r($result);
+		    return $result;
+		}
+     }
 
 ?>

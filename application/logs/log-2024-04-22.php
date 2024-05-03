@@ -1,966 +1,614 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-DEBUG - 2024-04-22 00:07:32 --> Total execution time: 0.0729
-DEBUG - 2024-04-22 00:07:32 --> Total execution time: 0.0371
-DEBUG - 2024-04-22 00:07:32 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 00:07:33 --> Total execution time: 0.0632
-DEBUG - 2024-04-22 00:07:34 --> Total execution time: 0.0776
-DEBUG - 2024-04-22 00:07:34 --> Total execution time: 0.0208
-DEBUG - 2024-04-22 00:11:19 --> Total execution time: 0.0704
-DEBUG - 2024-04-22 00:11:19 --> Total execution time: 0.0407
-DEBUG - 2024-04-22 00:11:19 --> Total execution time: 0.0448
-DEBUG - 2024-04-22 00:11:22 --> Total execution time: 0.0657
-DEBUG - 2024-04-22 00:11:22 --> Total execution time: 0.0385
-DEBUG - 2024-04-22 00:11:22 --> Total execution time: 0.0253
-DEBUG - 2024-04-22 00:11:26 --> Total execution time: 0.0647
-DEBUG - 2024-04-22 00:11:26 --> Total execution time: 0.0263
-DEBUG - 2024-04-22 00:11:26 --> Total execution time: 0.0372
-DEBUG - 2024-04-22 00:11:31 --> Total execution time: 0.0576
-DEBUG - 2024-04-22 00:11:31 --> Total execution time: 0.0319
-DEBUG - 2024-04-22 00:11:31 --> Total execution time: 0.0264
-DEBUG - 2024-04-22 00:11:34 --> Total execution time: 0.0427
-DEBUG - 2024-04-22 00:11:35 --> Total execution time: 0.0359
-DEBUG - 2024-04-22 00:11:35 --> Total execution time: 0.0158
-DEBUG - 2024-04-22 00:11:38 --> Total execution time: 0.0657
-DEBUG - 2024-04-22 00:11:39 --> Total execution time: 0.0353
-DEBUG - 2024-04-22 00:11:39 --> Total execution time: 0.0358
-DEBUG - 2024-04-22 00:19:26 --> Total execution time: 0.0631
-DEBUG - 2024-04-22 00:19:26 --> Total execution time: 0.0487
-DEBUG - 2024-04-22 00:19:26 --> Total execution time: 0.0389
-DEBUG - 2024-04-22 01:00:42 --> Total execution time: 0.0509
-DEBUG - 2024-04-22 01:00:42 --> Total execution time: 0.0270
-DEBUG - 2024-04-22 01:00:42 --> Total execution time: 0.0282
-DEBUG - 2024-04-22 01:02:08 --> Total execution time: 0.0202
-DEBUG - 2024-04-22 01:02:08 --> Total execution time: 0.0213
-DEBUG - 2024-04-22 01:02:08 --> Total execution time: 0.0271
-DEBUG - 2024-04-22 01:05:35 --> Total execution time: 0.0374
-DEBUG - 2024-04-22 01:05:35 --> Total execution time: 0.0320
-DEBUG - 2024-04-22 01:05:36 --> Total execution time: 0.0285
-DEBUG - 2024-04-22 01:06:32 --> Total execution time: 0.0438
-DEBUG - 2024-04-22 01:06:32 --> Total execution time: 0.0307
-DEBUG - 2024-04-22 01:06:32 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:06:37 --> Total execution time: 0.0419
-DEBUG - 2024-04-22 01:06:37 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:06:37 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:06:37 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:07:02 --> Total execution time: 0.0468
-DEBUG - 2024-04-22 01:07:02 --> Total execution time: 0.0096
-DEBUG - 2024-04-22 01:07:02 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:07:02 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:07:12 --> Total execution time: 0.0419
-DEBUG - 2024-04-22 01:07:12 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:07:12 --> Total execution time: 0.0117
-DEBUG - 2024-04-22 01:07:12 --> Total execution time: 0.0330
-DEBUG - 2024-04-22 01:07:20 --> Total execution time: 0.0453
-DEBUG - 2024-04-22 01:07:20 --> Total execution time: 0.0349
-DEBUG - 2024-04-22 01:07:20 --> Total execution time: 0.0347
-DEBUG - 2024-04-22 01:07:20 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:07:40 --> Total execution time: 0.0202
-DEBUG - 2024-04-22 01:07:40 --> Total execution time: 0.0202
-DEBUG - 2024-04-22 01:07:40 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:07:40 --> Total execution time: 0.0117
-DEBUG - 2024-04-22 01:09:35 --> Total execution time: 0.0404
-DEBUG - 2024-04-22 01:09:35 --> Total execution time: 0.0318
-DEBUG - 2024-04-22 01:09:35 --> Total execution time: 0.0109
-DEBUG - 2024-04-22 01:09:35 --> Total execution time: 0.0303
-DEBUG - 2024-04-22 01:09:38 --> Total execution time: 0.0213
-DEBUG - 2024-04-22 01:09:38 --> Total execution time: 0.0361
-DEBUG - 2024-04-22 01:09:39 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:09:40 --> Total execution time: 0.0414
-DEBUG - 2024-04-22 01:09:40 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:09:40 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:10:44 --> Total execution time: 0.0453
-DEBUG - 2024-04-22 01:10:44 --> Total execution time: 0.0302
-DEBUG - 2024-04-22 01:10:44 --> Total execution time: 0.0100
-DEBUG - 2024-04-22 01:10:53 --> Total execution time: 0.0368
-DEBUG - 2024-04-22 01:10:53 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:10:53 --> Total execution time: 0.0210
-DEBUG - 2024-04-22 01:12:51 --> Total execution time: 0.0407
-DEBUG - 2024-04-22 01:12:51 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:12:51 --> Total execution time: 0.0218
-DEBUG - 2024-04-22 01:13:12 --> Total execution time: 0.0202
-DEBUG - 2024-04-22 01:13:12 --> Total execution time: 0.0098
-DEBUG - 2024-04-22 01:13:12 --> Total execution time: 0.0203
-DEBUG - 2024-04-22 01:13:31 --> Total execution time: 0.0220
-DEBUG - 2024-04-22 01:13:31 --> Total execution time: 0.0095
-DEBUG - 2024-04-22 01:13:31 --> Total execution time: 0.0257
-DEBUG - 2024-04-22 01:13:39 --> Total execution time: 0.0447
-DEBUG - 2024-04-22 01:13:39 --> Total execution time: 0.0103
-DEBUG - 2024-04-22 01:13:39 --> Total execution time: 0.0123
-DEBUG - 2024-04-22 01:13:50 --> Total execution time: 0.0512
-DEBUG - 2024-04-22 01:13:50 --> Total execution time: 0.0229
-DEBUG - 2024-04-22 01:13:50 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:14:04 --> Total execution time: 0.0396
-DEBUG - 2024-04-22 01:14:04 --> Total execution time: 0.0329
-DEBUG - 2024-04-22 01:14:04 --> Total execution time: 0.0261
-DEBUG - 2024-04-22 01:14:06 --> Total execution time: 0.0192
-DEBUG - 2024-04-22 01:14:06 --> Total execution time: 0.0230
-DEBUG - 2024-04-22 01:14:06 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:14:28 --> Total execution time: 0.0362
-DEBUG - 2024-04-22 01:14:28 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:14:28 --> Total execution time: 0.0291
-DEBUG - 2024-04-22 01:14:56 --> Total execution time: 0.0370
-DEBUG - 2024-04-22 01:14:56 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:14:56 --> Total execution time: 0.0203
-DEBUG - 2024-04-22 01:15:04 --> Total execution time: 0.0400
-DEBUG - 2024-04-22 01:15:04 --> Total execution time: 0.0094
-DEBUG - 2024-04-22 01:15:04 --> Total execution time: 0.0337
-DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.0407
-DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.0381
-DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.0353
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0259
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0376
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0132
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0319
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0277
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0396
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0115
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0099
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0195
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0240
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0211
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0333
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0302
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0253
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0344
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0122
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0216
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0330
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0211
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0402
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0105
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0307
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0095
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0209
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0289
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0229
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0103
-DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.0099
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0386
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0324
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0344
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0094
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0354
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0331
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0282
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0293
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0118
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0329
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0100
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0213
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0319
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0409
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0303
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0287
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0363
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0131
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0325
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0099
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0195
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0282
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0365
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.0095
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0251
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0130
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0248
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0373
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0100
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0188
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0189
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0212
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0319
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0358
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0351
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0204
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0388
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0279
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0354
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0116
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0180
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0402
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0198
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0081
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0384
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0285
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0368
-DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.0341
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0289
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0263
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0338
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0273
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0225
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0110
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0402
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0333
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0271
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0351
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0320
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0337
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0315
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0452
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0096
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0326
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0282
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0191
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0109
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0202
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0334
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0321
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.0271
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0421
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0269
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0123
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0105
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0370
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0126
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0206
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0271
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0104
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0206
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0096
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0230
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0370
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0434
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0352
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0284
-DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0239
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0185
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0180
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0266
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0269
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0392
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0191
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0273
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0350
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0363
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0081
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0368
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0314
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0207
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0100
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0219
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0346
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0355
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0192
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0372
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0188
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0296
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0219
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0269
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0390
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0266
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0392
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0312
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0368
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0360
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0214
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0245
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0098
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0355
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0268
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.0385
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0081
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0189
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0341
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0263
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0178
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0236
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0268
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0262
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0213
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0329
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0388
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0238
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0222
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0265
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0220
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0105
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0106
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0245
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0410
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0236
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0293
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0258
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0346
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0310
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0287
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0245
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0194
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.0193
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0347
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0338
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0344
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0187
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0110
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0404
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0305
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0362
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0497
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0299
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0269
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0242
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0294
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0273
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0380
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0331
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0294
-DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0205
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0200
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0339
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0121
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0148
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0353
-DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0204
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0124
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0316
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0192
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0218
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0349
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0125
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0101
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0335
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0342
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0326
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0413
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0199
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0201
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0220
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0199
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0268
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0182
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0359
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0260
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0260
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0396
-DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.0096
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0310
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0185
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0371
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0314
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0279
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0334
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0341
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0300
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0346
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0357
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0120
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0303
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0181
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0343
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0108
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0207
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0195
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0374
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0308
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0263
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0193
-DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.0321
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0279
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0324
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0329
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0094
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0442
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0287
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0390
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0317
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0282
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0094
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0411
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0302
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0350
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0265
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0330
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0279
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0120
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0181
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0217
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0351
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0338
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0322
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0366
-DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.0374
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0369
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0225
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0360
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0249
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0190
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0299
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0369
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0370
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0267
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0276
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0262
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0264
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0379
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0299
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0409
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0196
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0247
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0314
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0423
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0441
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0348
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0252
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0276
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0388
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0329
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0189
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0196
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0392
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0573
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0143
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0369
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0214
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0359
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0101
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0264
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0185
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0237
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0384
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0277
-DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0197
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0098
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0191
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0238
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0463
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0250
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0345
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0195
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0081
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0216
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0361
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0220
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0262
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0403
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0276
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0289
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0302
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0315
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0342
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0383
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0295
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0381
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0338
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0245
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0342
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0107
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0224
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0362
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0300
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0353
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0299
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0197
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0346
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0360
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0167
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0338
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0343
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0256
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0183
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0346
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.0094
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0392
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0106
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0315
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0339
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0254
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0243
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0113
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0193
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0216
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0301
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0359
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0363
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0258
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0358
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0331
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0264
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0185
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0347
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0270
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0395
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0262
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0189
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0343
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0279
-DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.0309
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0452
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0295
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0116
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0307
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0203
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0383
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0311
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0116
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0364
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0264
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0261
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0358
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0233
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0182
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0336
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0344
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0294
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0317
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0188
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0352
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0280
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0257
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.0128
-DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.0354
-DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.0095
-DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.0207
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0416
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0368
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0121
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0149
-DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.0321
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0375
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0311
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0388
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0121
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0302
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0277
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0373
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0285
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0405
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0205
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0371
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0101
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0221
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0187
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0208
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0196
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0112
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0228
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0396
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0322
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0238
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0284
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0194
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0206
-DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.0273
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0284
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0352
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0270
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0194
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0099
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0205
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0192
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0220
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0389
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0096
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0323
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0192
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0263
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0196
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0345
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0087
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0316
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0193
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0211
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0106
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0360
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0325
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0295
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0390
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0199
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.0209
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0333
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0112
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0365
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0340
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0320
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0362
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0290
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0277
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0374
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0341
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0272
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0330
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0423
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0214
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0271
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0351
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0101
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0208
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0364
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0330
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0291
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0344
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0116
-DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0379
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0110
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0306
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0278
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0199
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0352
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0248
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0383
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0102
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0382
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0333
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0370
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0236
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0366
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0315
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0332
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0374
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0230
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0210
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0298
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0292
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0275
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0186
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0098
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0341
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0392
-DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.0141
-DEBUG - 2024-04-22 01:19:39 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:19:39 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0215
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0084
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0241
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0301
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0110
-DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0135
-DEBUG - 2024-04-22 01:20:39 --> Total execution time: 0.0393
-DEBUG - 2024-04-22 01:20:39 --> Total execution time: 0.0308
-DEBUG - 2024-04-22 01:20:40 --> Total execution time: 0.0097
-DEBUG - 2024-04-22 01:20:57 --> Total execution time: 0.0153
-DEBUG - 2024-04-22 01:21:05 --> Total execution time: 0.0257
-DEBUG - 2024-04-22 01:21:07 --> Total execution time: 0.0242
-DEBUG - 2024-04-22 01:21:10 --> Total execution time: 0.0164
-DEBUG - 2024-04-22 01:21:13 --> Total execution time: 0.0320
-DEBUG - 2024-04-22 01:21:16 --> Total execution time: 0.0356
-DEBUG - 2024-04-22 01:21:23 --> Upload class already loaded. Second attempt ignored.
-DEBUG - 2024-04-22 01:21:23 --> Total execution time: 0.0124
-DEBUG - 2024-04-22 01:21:28 --> Upload class already loaded. Second attempt ignored.
-ERROR - 2024-04-22 01:21:28 --> Severity: Warning --> unlink(assets/uploads/state/): Is a directory C:\wamp64\www\Project\CutOffBaba\application\core\MY_Controller.php 96
-DEBUG - 2024-04-22 01:21:28 --> Total execution time: 0.0288
-DEBUG - 2024-04-22 01:21:30 --> Total execution time: 0.0327
-DEBUG - 2024-04-22 01:21:31 --> Total execution time: 0.0375
-DEBUG - 2024-04-22 01:21:31 --> Total execution time: 0.0306
-DEBUG - 2024-04-22 01:21:31 --> Total execution time: 0.0159
-DEBUG - 2024-04-22 01:21:33 --> Total execution time: 0.0393
-DEBUG - 2024-04-22 01:21:33 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:21:33 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:22:04 --> Total execution time: 0.0406
-DEBUG - 2024-04-22 01:22:04 --> Total execution time: 0.0316
-DEBUG - 2024-04-22 01:22:04 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:22:15 --> Total execution time: 0.0417
-DEBUG - 2024-04-22 01:22:15 --> Total execution time: 0.0085
-DEBUG - 2024-04-22 01:22:15 --> Total execution time: 0.0350
-DEBUG - 2024-04-22 01:22:15 --> Total execution time: 0.0249
-DEBUG - 2024-04-22 01:22:19 --> Total execution time: 0.0386
-DEBUG - 2024-04-22 01:22:19 --> Total execution time: 0.0318
-DEBUG - 2024-04-22 01:22:19 --> Total execution time: 0.0093
-DEBUG - 2024-04-22 01:22:20 --> Total execution time: 0.0407
-DEBUG - 2024-04-22 01:22:20 --> Total execution time: 0.0301
-DEBUG - 2024-04-22 01:22:20 --> Total execution time: 0.0116
-DEBUG - 2024-04-22 01:22:20 --> Total execution time: 0.0286
-DEBUG - 2024-04-22 01:23:25 --> Total execution time: 0.0367
-DEBUG - 2024-04-22 01:23:25 --> Total execution time: 0.0303
-DEBUG - 2024-04-22 01:23:25 --> Total execution time: 0.0115
-DEBUG - 2024-04-22 01:23:25 --> Total execution time: 0.0283
-DEBUG - 2024-04-22 01:24:08 --> Total execution time: 0.0387
-DEBUG - 2024-04-22 01:24:08 --> Total execution time: 0.0088
-DEBUG - 2024-04-22 01:24:08 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:24:08 --> Total execution time: 0.0235
-DEBUG - 2024-04-22 01:24:42 --> Total execution time: 0.0407
-DEBUG - 2024-04-22 01:24:42 --> Total execution time: 0.0299
-DEBUG - 2024-04-22 01:24:42 --> Total execution time: 0.0276
-DEBUG - 2024-04-22 01:24:42 --> Total execution time: 0.0293
-DEBUG - 2024-04-22 01:27:17 --> Total execution time: 0.0400
-DEBUG - 2024-04-22 01:27:17 --> Total execution time: 0.0090
-DEBUG - 2024-04-22 01:27:17 --> Total execution time: 0.0185
-DEBUG - 2024-04-22 01:27:18 --> Total execution time: 0.0289
-DEBUG - 2024-04-22 01:27:46 --> Total execution time: 0.0223
-DEBUG - 2024-04-22 01:27:46 --> Total execution time: 0.0234
-DEBUG - 2024-04-22 01:27:46 --> Total execution time: 0.0245
-DEBUG - 2024-04-22 01:27:46 --> Total execution time: 0.0103
-DEBUG - 2024-04-22 01:28:19 --> Total execution time: 0.0229
-DEBUG - 2024-04-22 01:28:19 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:28:20 --> Total execution time: 0.0296
-DEBUG - 2024-04-22 01:28:20 --> Total execution time: 0.0295
-DEBUG - 2024-04-22 01:28:25 --> Total execution time: 0.0203
-DEBUG - 2024-04-22 01:28:25 --> Total execution time: 0.0331
-DEBUG - 2024-04-22 01:28:25 --> Total execution time: 0.0118
-DEBUG - 2024-04-22 01:28:30 --> Total execution time: 0.0194
-DEBUG - 2024-04-22 01:28:30 --> Total execution time: 0.0208
-DEBUG - 2024-04-22 01:28:30 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:28:30 --> Total execution time: 0.0360
-DEBUG - 2024-04-22 01:28:31 --> Total execution time: 0.0189
-DEBUG - 2024-04-22 01:28:31 --> Total execution time: 0.0083
-DEBUG - 2024-04-22 01:28:31 --> Total execution time: 0.0270
-DEBUG - 2024-04-22 01:28:33 --> Total execution time: 0.0195
-DEBUG - 2024-04-22 01:28:33 --> Total execution time: 0.0207
-DEBUG - 2024-04-22 01:28:33 --> Total execution time: 0.0277
-DEBUG - 2024-04-22 01:28:34 --> Total execution time: 0.0276
-DEBUG - 2024-04-22 01:30:51 --> Total execution time: 0.0462
-DEBUG - 2024-04-22 01:30:51 --> Total execution time: 0.0086
-DEBUG - 2024-04-22 01:30:51 --> Total execution time: 0.0091
-DEBUG - 2024-04-22 01:30:51 --> Total execution time: 0.0146
-DEBUG - 2024-04-22 01:31:07 --> Total execution time: 0.0206
-DEBUG - 2024-04-22 01:31:07 --> Total execution time: 0.0092
-DEBUG - 2024-04-22 01:31:07 --> Total execution time: 0.0190
-DEBUG - 2024-04-22 01:31:07 --> Total execution time: 0.0294
-DEBUG - 2024-04-22 01:31:49 --> Total execution time: 0.0385
-DEBUG - 2024-04-22 01:31:49 --> Total execution time: 0.0101
-DEBUG - 2024-04-22 01:31:49 --> Total execution time: 0.0328
-DEBUG - 2024-04-22 01:31:49 --> Total execution time: 0.0296
-DEBUG - 2024-04-22 01:31:50 --> Total execution time: 0.0441
-DEBUG - 2024-04-22 01:31:50 --> Total execution time: 0.0313
-DEBUG - 2024-04-22 01:31:50 --> Total execution time: 0.0274
-DEBUG - 2024-04-22 01:31:50 --> Total execution time: 0.0281
-DEBUG - 2024-04-22 01:31:54 --> Total execution time: 0.0364
-DEBUG - 2024-04-22 01:31:54 --> Total execution time: 0.0082
-DEBUG - 2024-04-22 01:31:54 --> Total execution time: 0.0223
-DEBUG - 2024-04-22 01:31:59 --> Total execution time: 0.0483
-DEBUG - 2024-04-22 01:31:59 --> Total execution time: 0.0254
-DEBUG - 2024-04-22 01:31:59 --> Total execution time: 0.0306
-DEBUG - 2024-04-22 01:49:39 --> Total execution time: 0.0452
-DEBUG - 2024-04-22 01:49:39 --> Total execution time: 0.0089
-DEBUG - 2024-04-22 01:49:39 --> Total execution time: 0.0110
+DEBUG - 2024-04-22 00:07:32 --> Total execution time: 0.1760
+DEBUG - 2024-04-22 00:07:34 --> Total execution time: 0.2251
+DEBUG - 2024-04-22 00:11:19 --> Total execution time: 0.2540
+DEBUG - 2024-04-22 00:11:22 --> Total execution time: 0.2089
+DEBUG - 2024-04-22 00:11:26 --> Total execution time: 0.2286
+DEBUG - 2024-04-22 00:11:31 --> Total execution time: 0.1901
+DEBUG - 2024-04-22 00:11:35 --> Total execution time: 0.1677
+DEBUG - 2024-04-22 00:11:39 --> Total execution time: 0.2556
+DEBUG - 2024-04-22 00:19:26 --> Total execution time: 0.2414
+DEBUG - 2024-04-22 01:00:42 --> Total execution time: 0.1529
+ERROR - 2024-04-22 01:00:57 --> Severity: Warning --> Undefined property: Home::$master C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 61
+ERROR - 2024-04-22 01:00:57 --> Severity: error --> Exception: Call to a member function singleRecord() on null C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 61
+DEBUG - 2024-04-22 01:02:08 --> Total execution time: 0.1081
+DEBUG - 2024-04-22 01:05:36 --> Total execution time: 0.1450
+DEBUG - 2024-04-22 01:06:32 --> Total execution time: 0.1050
+ERROR - 2024-04-22 01:06:37 --> Severity: Warning --> Attempt to read property "name" on array C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 67
+ERROR - 2024-04-22 01:07:02 --> Severity: Warning --> Attempt to read property "name" on array C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 68
+DEBUG - 2024-04-22 01:07:40 --> Total execution time: 0.0859
+DEBUG - 2024-04-22 01:09:35 --> Total execution time: 0.1362
+DEBUG - 2024-04-22 01:09:39 --> Total execution time: 0.1060
+DEBUG - 2024-04-22 01:09:40 --> Total execution time: 0.1203
+DEBUG - 2024-04-22 01:10:44 --> Total execution time: 0.1057
+DEBUG - 2024-04-22 01:10:53 --> Total execution time: 0.1026
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:12:51 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+DEBUG - 2024-04-22 01:12:51 --> Total execution time: 0.1494
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 14
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+ERROR - 2024-04-22 01:13:12 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\states.php 17
+DEBUG - 2024-04-22 01:13:12 --> Total execution time: 0.1145
+DEBUG - 2024-04-22 01:13:31 --> Total execution time: 0.0785
+DEBUG - 2024-04-22 01:13:39 --> Total execution time: 0.1001
+DEBUG - 2024-04-22 01:13:50 --> Total execution time: 0.1739
+DEBUG - 2024-04-22 01:14:04 --> Total execution time: 0.1232
+DEBUG - 2024-04-22 01:14:06 --> Total execution time: 0.0923
+DEBUG - 2024-04-22 01:14:28 --> Total execution time: 0.1441
+DEBUG - 2024-04-22 01:14:56 --> Total execution time: 0.1139
+DEBUG - 2024-04-22 01:15:04 --> Total execution time: 0.1154
+DEBUG - 2024-04-22 01:15:26 --> Total execution time: 0.1226
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.1367
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.2645
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.3578
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.4337
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.5618
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.6565
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.6214
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.6191
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.6238
+DEBUG - 2024-04-22 01:15:27 --> Total execution time: 0.6340
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6355
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6179
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6496
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6500
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6458
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.7029
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6832
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.7123
+DEBUG - 2024-04-22 01:15:28 --> Total execution time: 0.6695
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.6346
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.6194
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5739
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5418
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5266
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5902
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5890
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.5909
+DEBUG - 2024-04-22 01:15:29 --> Total execution time: 0.6195
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.6842
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7147
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.6634
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7201
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7527
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7269
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7127
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.6897
+DEBUG - 2024-04-22 01:15:30 --> Total execution time: 0.7343
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.0899
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.1024
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.1873
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.2813
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.4181
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.4978
+DEBUG - 2024-04-22 01:16:33 --> Total execution time: 0.6387
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6105
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6500
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.7182
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.7077
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6973
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6974
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6844
+DEBUG - 2024-04-22 01:16:34 --> Total execution time: 0.6635
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.6474
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.6141
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.6647
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.6935
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.7505
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.8551
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.8211
+DEBUG - 2024-04-22 01:16:35 --> Total execution time: 0.8555
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.8063
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.7421
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.7306
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.6101
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.6028
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.5867
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.6135
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.6488
+DEBUG - 2024-04-22 01:16:36 --> Total execution time: 0.6759
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.6954
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.7340
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.8066
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.8465
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.8164
+DEBUG - 2024-04-22 01:16:37 --> Total execution time: 0.8214
+DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.0991
+DEBUG - 2024-04-22 01:16:49 --> Total execution time: 0.1253
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.2167
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.3306
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.4538
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.6051
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.7469
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.7110
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.7300
+DEBUG - 2024-04-22 01:16:50 --> Total execution time: 0.7291
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.7442
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.7645
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.7929
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.8383
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.8151
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.8033
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.7250
+DEBUG - 2024-04-22 01:16:51 --> Total execution time: 0.6916
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.6306
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.6108
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.6492
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.6628
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.7758
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.7580
+DEBUG - 2024-04-22 01:16:52 --> Total execution time: 0.7739
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8573
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8270
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8395
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8217
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8346
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8042
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.7745
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.8009
+DEBUG - 2024-04-22 01:16:53 --> Total execution time: 0.7397
+DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.6671
+DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.6812
+DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.6956
+DEBUG - 2024-04-22 01:16:54 --> Total execution time: 0.6503
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.1042
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.1431
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.2371
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.3503
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.4275
+DEBUG - 2024-04-22 01:17:23 --> Total execution time: 0.5509
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.6334
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.5766
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.6581
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.6609
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.7060
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.7273
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.8132
+DEBUG - 2024-04-22 01:17:24 --> Total execution time: 0.8577
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8254
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.7913
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8436
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8810
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8553
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8728
+DEBUG - 2024-04-22 01:17:25 --> Total execution time: 0.8402
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.9044
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.8158
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.7298
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.7102
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.6967
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.7281
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.6949
+DEBUG - 2024-04-22 01:17:26 --> Total execution time: 0.7383
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7774
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7401
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7462
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7402
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7101
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7245
+DEBUG - 2024-04-22 01:17:27 --> Total execution time: 0.7559
+DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.8088
+DEBUG - 2024-04-22 01:17:28 --> Total execution time: 0.7711
+DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.1153
+DEBUG - 2024-04-22 01:19:34 --> Total execution time: 0.1267
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.2635
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.3794
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.5006
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.5972
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.6895
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.6508
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.5896
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.5693
+DEBUG - 2024-04-22 01:19:35 --> Total execution time: 0.5593
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.5739
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6191
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6396
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6353
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6100
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6037
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6032
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.5396
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.5696
+DEBUG - 2024-04-22 01:19:36 --> Total execution time: 0.6054
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.6153
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.6399
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.6494
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.7156
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.6789
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.6838
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.7020
+DEBUG - 2024-04-22 01:19:37 --> Total execution time: 0.7159
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7202
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7024
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7261
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7344
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7975
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.8220
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.8224
+DEBUG - 2024-04-22 01:19:38 --> Total execution time: 0.7845
+DEBUG - 2024-04-22 01:19:39 --> Total execution time: 0.7620
+DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0953
+DEBUG - 2024-04-22 01:19:52 --> Total execution time: 0.0985
+DEBUG - 2024-04-22 01:20:40 --> Total execution time: 0.1127
+DEBUG - 2024-04-22 01:21:31 --> Total execution time: 0.1088
+DEBUG - 2024-04-22 01:21:33 --> Total execution time: 0.0976
+DEBUG - 2024-04-22 01:22:04 --> Total execution time: 0.1191
+DEBUG - 2024-04-22 01:22:15 --> Total execution time: 0.1647
+DEBUG - 2024-04-22 01:22:19 --> Total execution time: 0.1129
+DEBUG - 2024-04-22 01:22:20 --> Total execution time: 0.1558
+ERROR - 2024-04-22 01:23:25 --> Severity: Warning --> Undefined variable $colleges C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 15
+ERROR - 2024-04-22 01:23:25 --> Severity: Warning --> foreach() argument must be of type array|object, null given C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 15
+DEBUG - 2024-04-22 01:23:25 --> Total execution time: 0.1314
+ERROR - 2024-04-22 01:24:08 --> Severity: Warning --> Undefined property: stdClass::$name C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 68
+ERROR - 2024-04-22 01:24:08 --> Severity: Warning --> Undefined variable $colleges C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 15
+ERROR - 2024-04-22 01:24:08 --> Severity: Warning --> foreach() argument must be of type array|object, null given C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 15
+DEBUG - 2024-04-22 01:24:08 --> Total execution time: 0.1076
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined array key "statedetail" C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 68
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 68
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Attempt to read property "name" on null C:\wamp64\www\Project\CutoffBabaWebsite\application\controllers\Home.php 68
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:24:42 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+DEBUG - 2024-04-22 01:24:42 --> Total execution time: 0.1813
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:18 --> Severity: Warning --> Undefined property: stdClass::$college_id C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 25
+DEBUG - 2024-04-22 01:27:18 --> Total execution time: 0.1583
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+ERROR - 2024-04-22 01:27:46 --> Severity: Warning --> Undefined property: stdClass::$college_bannerfile C:\wamp64\www\Project\CutoffBabaWebsite\application\views\site\state-detail.php 21
+DEBUG - 2024-04-22 01:27:46 --> Total execution time: 0.1109
+DEBUG - 2024-04-22 01:28:20 --> Total execution time: 0.1167
+DEBUG - 2024-04-22 01:28:25 --> Total execution time: 0.1009
+DEBUG - 2024-04-22 01:28:30 --> Total execution time: 0.1692
+DEBUG - 2024-04-22 01:28:31 --> Total execution time: 0.0856
+DEBUG - 2024-04-22 01:28:34 --> Total execution time: 0.1339
+DEBUG - 2024-04-22 01:30:51 --> Total execution time: 0.1023
+DEBUG - 2024-04-22 01:31:07 --> Total execution time: 0.1047
+DEBUG - 2024-04-22 01:31:49 --> Total execution time: 0.1507
+DEBUG - 2024-04-22 01:31:50 --> Total execution time: 0.1563
+DEBUG - 2024-04-22 01:31:54 --> Total execution time: 0.0881
+DEBUG - 2024-04-22 01:31:59 --> Total execution time: 0.1691
+DEBUG - 2024-04-22 01:49:39 --> Total execution time: 0.0886

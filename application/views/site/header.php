@@ -1,18 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title><?= @$title; ?></title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-      <link href="<?=base_url('assets/site/css/bootstrap.css')?>" rel="stylesheet">
-      <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
-      <link href="<?=base_url('assets/site/css/custom.css')?>" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="<?=base_url('assets/admin/css/select2.min.css')?>" rel="stylesheet" type="text/css">
-      <link href="<?=base_url('assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
-      <script src="<?=base_url('assets/admin/adapters/jquery.js')?>"></script>
-   </head>
-   <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?=$siteSettings['title'];?></title>
+    <link rel="shortcut icon" href="<?=asset_url();?>settings/<?=$siteSettings['favicon'];?>" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- BASE CSS -->
+    <link href="<?=base_url('assets/css');?>/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url('assets/css');?>/style.css" rel="stylesheet">
+	<link href="<?=base_url('assets/css');?>/vendors.css" rel="stylesheet">
+	<link href="<?=base_url('app/assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
+</head>
+<body>		
+	<div id="page">
+	<?php //print_r($streams) ?>
+	<header class="header_in  is_sticky ">
+		<div class="container">
+		<div id="logo">
+			<a href="<?=base_url();?>" title="<?=$siteSettings['title'];?>">
+				<img src="<?=asset_url();?>settings/<?=$siteSettings['logo'];?>" width="165" height="80" alt="" class="logo_normal">
+			</a>
+		</div>
+		<ul id="top_menu">
+			<li><a href="#sign-in-dialog" id="sign-in" title="Sign In" class="btn_add  p-3 m-3">Login/Register</a></li>
+		</ul>
+		<a href="#menu" class="btn_mobile">
+			<div class="hamburger hamburger--spin" id="hamburger">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</div>
+		</a>
+		<nav id="menu" class="main-menu p-3">
+		    <ul>
+		        <li><span><a href="<?=base_url();?>">Home</a></span></li>
+		        <?php foreach($streams as $stream){ ?>
+		        <li><span><a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>"><?=$stream['stream'];?></a></span>		        	
+		            <ul>
+		            	<?php foreach($stream['degreetype'] as $degreetype){ ?>
+		                <li>
+		                    <span><a href="#0"><?=$degreetype['degreetype'];?></a></span>
+		                    <ul><?php $i=0;foreach($degreetype['courses'] as $courses){ ?>
+		                    	<li><a href="<?=base_url('course/').$courses['id'];?>"><?=$courses['course'];?></a></li>
+		                   		 <?php if($i>=6){echo '<li><a href="#0">View All</a></li>';break;}$i++;}	 ?>
+		                    	
+		                    </ul>
+		                </li>	
+		                 <?php } ?>	               
+		            </ul>
+		       
+
+		        </li>
+		         <?php } ?>	 
+		        <li><span><a href="<?=base_url('contact');?>" target="_parent">Contact Us</a></span></li>
+		    </ul>
+		</nav>
+		</div>
+	</header>
