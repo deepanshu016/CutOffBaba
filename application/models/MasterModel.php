@@ -424,6 +424,50 @@ class MasterModel extends CI_Model {
 						->join('tbl_ownership as o', 'o.id = c.ownership');
 		return  $college_query->get()->row_array();
 	}
+
+
+	function getRecordsbyLimitForPagination($table = '', $condition=[],$rowperpage, $rowno){
+		if(empty(!$condition)){
+			return $this->db->order_by('id','ASC')->limit($rowperpage,$rowno)->get_where($table,$condition)->result_array();
+		}else{
+			return $this->db->order_by('id','ASC')->rowperpage($limit,$rowno)->select('*')->get($table)->result_array();
+		}
+	}
+
+	public function getCollegeWithLikeQuery($keyword){
+		$collegeList = $this->db->select('full_name')->from('tbl_college')
+					  ->like('full_name', $keyword, 'both')
+					  ->or_like('short_name', $keyword, 'both')
+					  ->or_like('popular_name_one', $keyword, 'both')
+					  ->or_like('popular_name_two', $keyword, 'both')
+					  ->or_like('university_name', $keyword, 'both')
+					  ->or_like('keywords', $keyword, 'both')
+					  ->or_like('tags', $keyword, 'both');
+		return $collegeList->get()->result_array();
+	}
+	public function getNewsWithLikeQuery($keyword){
+		$collegeList = $this->db->select('title')->from('tbl_news')
+					  ->like('title', $keyword, 'both')
+					  ->or_like('short_description', $keyword, 'both')
+					  ->or_like('full_description', $keyword, 'both');
+		return $collegeList->get()->result_array();
+	}
+	public function getCoursesWithLikeQuery($keyword){
+		$collegeList = $this->db->select('course')->from('tbl_course')
+					  ->like('course', $keyword, 'both')
+					  ->or_like('course_full_name', $keyword, 'both')
+					  ->or_like('course_short_name', $keyword, 'both')
+					  ->or_like('course_short_name', $keyword, 'both');
+		return $collegeList->get()->result_array();
+	}
+	public function getBranchesWithLikeQuery($keyword){
+		$collegeList = $this->db->select('branch')->from('tbl_branch')
+					  ->like('branch', $keyword, 'both')
+					  ->or_like('short_branch_name', $keyword, 'both')
+					  ->or_like('branch_name_1', $keyword, 'both')
+					  ->or_like('branch_name_2', $keyword, 'both');
+		return $collegeList->get()->result_array();
+	}
 }
 
 ?>

@@ -1,4 +1,65 @@
 <?php $this->load->view('site/header');?>
+<style>
+		.search-container {
+            position: relative;
+            width: 600px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        #search {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .autocomplete-items .item {
+            padding: 10px;
+            /* border-bottom: 1px solid #d4d4d4; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .autocomplete-items .item:last-child {
+            border-bottom: none;
+        }
+
+        .autocomplete-items .category {
+            /* font-weight: bold; */
+            color: #333;
+            width: 80px;
+			font-style: italic;
+            flex-shrink: 0;
+			font-size: 12px;
+
+        }
+
+        .autocomplete-items .suggestion {
+            flex: 1;
+            padding-left: 10px;
+			color: black;
+        }
+
+        /* .autocomplete-items .item:hover {
+            background-color: #e9e9e9;
+        } */
+        
+</style>
 	<main>
 		<section class="hero_single version_4">
 			<div class="wrapper">
@@ -8,15 +69,18 @@
 					<h3>Find what you need!</h3>
 					<p>Discover top rated College, Courses and Exams around the world</p>
 					<form method="post" action="#">
-						<div class="row g-0 custom-search-input-2">
+						<div class="row g-0 custom-search-input-2 search-container">
 							<div class="col-lg-10">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="What are you looking for...">
+									<input class="form-control" id="search" type="text" placeholder="What are you looking for...">
 									<i class="icon_search"></i>
 								</div>
 							</div>
 							<div class="col-lg-2">
 								<input type="submit" value="Search">
+							</div>
+							<div id="autocomplete-list" class="autocomplete-items">
+								
 							</div>
 						</div>
 						<!-- /row -->
@@ -125,3 +189,30 @@
 		</div> -->
 	</main>
 <?php $this->load->view('site/footer');?>
+<script>
+	$(function(){
+		$('#search').on('keyup', function() {
+			var query = $(this).val();
+			if (query.length > 0) {
+				$.ajax({
+					url: 'get-search-filter', // Replace with the actual API endpoint
+					method: 'GET',
+					data: { search: query },
+					dataType:'json',
+					success: function(data) {
+						console.log(data)
+						// $('#autocomplete-list').empty();
+						$('#autocomplete-list').html(data.html);
+					}
+				});
+			} else {
+				$('#autocomplete-list').empty();
+			}
+		});
+		$(document).click(function(event) {
+			if (!$(event.target).closest('.search-container').length) {
+				$('#autocomplete-list').empty();
+			}
+		});
+	});
+</script>

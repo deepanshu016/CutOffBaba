@@ -1,4 +1,9 @@
 <?php $this->load->view('site/header');?>
+<style>
+	.sr-only{
+		display: none!important;
+	}
+</style>
 <div class="sub_header_in sticky_header">
 	<div class="container">
 		<h1><?=$courseDetail['course_full_name'];?> ( <?=$courseDetail['course'];?> )</h1>
@@ -84,10 +89,8 @@
 				<!-- /aside -->
 
 				<div class="col-lg-9">
-					<?php foreach ($colleges as $college){
-						$this->load->view('site/college-list',$college);
-					} ?>
-					
+					<div id='college_pagination'></div>
+					<div id='pagination'></div>  
 				</div>
 				<!-- /col -->
 			</div>		
@@ -97,3 +100,35 @@
 	</main>
 	
 <?php $this->load->view('site/footer');?>
+
+<script type='text/javascript'>  
+$(function(){  
+	var url = "<?=base_url('college-detail'); ?>";
+	var image_url = "<?=asset_url(); ?>";
+     $('#pagination').on('click','a',function(e){  
+       e.preventDefault();   
+       var pageno = $(this).attr('data-ci-pagination-page');  
+       loadPagination(pageno);  
+     });  
+   
+     loadPagination(0);  
+   
+     function loadPagination(pagno){  
+       $.ajax({  
+         url: '/get-college-data/'+"<?=$courseDetail['id'];?>"+'/'+pagno,  
+         type: 'get',  
+         dataType: 'json',  
+         success: function(response){  
+            $('#pagination').html(response.pagination);  
+            createTable(response.html,response.row);  
+         }  
+       });  
+     }  
+   
+	function createTable(result,sno){  
+		console.log(result)
+		$('#college_pagination').empty();
+		$('#college_pagination').append(result); 
+	}       
+});  
+</script>  

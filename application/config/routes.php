@@ -6,13 +6,14 @@ $route['contact'] = 'Home/contactUs';
 $route['about-us'] = 'Home/aboutUs';
 $route['courses/(:any)'] = 'Home/coursesByStream/$1';
 $route['course/(:any)'] = 'Home/getcoursedetail/$1';
+$route['get-college-data/(:any)/(:any)'] = 'Home/loadCollegesRecord/$1/$2';
 $route['college-detail/(:any)/(:any)'] = 'Home/collegeDetail/$1/$2';
 $route['states'] = 'Home/stateList';
 $route['states/(:any)'] = 'Home/stateList/$1';
 $route['loginchk'] = 'Authenticate/login';
 $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';
-
+$route['get-search-filter'] = 'Home/getSearchFilterData';
 
 
 
