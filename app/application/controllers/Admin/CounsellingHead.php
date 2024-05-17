@@ -336,7 +336,7 @@ Class CounsellingHead extends MY_Controller {
                 $x=4;
                 $insertDatasss = [];
                 $round1=[];
-                $this->master->deleteRecord('tbl_cutfoff_marks_data',array('cutoff_head'=>$head_id,'year'=>$year));
+                $this->master->deleteRecord('tbl_cutfoff_marks_data',array('cat_id'=>$sub_category_id,'year'=>$year));
                 foreach($categoryData as $key=>$category_type){
                     $round1=[];
                     $round2=[];
@@ -363,6 +363,7 @@ Class CounsellingHead extends MY_Controller {
                         $r1['sr']=$sheet_data[$l][$x+1];
                         $r1['marks']=$sheet_data[$l][$x+2];        
                         $r1['category_type']=$category_type;  
+                        $r1['cat_id']=$sub_category_id;  
                         $r1['cutoff_head']=$head_id;  
                         $r1['year']=$year;  
 
@@ -374,6 +375,7 @@ Class CounsellingHead extends MY_Controller {
                         $r2['sr']=$sheet_data[$l][$x+4];
                         $r2['marks']=$sheet_data[$l][$x+5];        
                         $r2['category_type']=$category_type; 
+                        $r2['cat_id']=$sub_category_id;  
                         $r2['cutoff_head']=$head_id;  
                         $r2['year']=$year;   
 
@@ -384,7 +386,8 @@ Class CounsellingHead extends MY_Controller {
                         $r3['air']=$sheet_data[$l][$x+6];
                         $r3['sr']=$sheet_data[$l][$x+7];
                         $r3['marks']=$sheet_data[$l][$x+8];        
-                        $r3['category_type']=$category_type;  
+                        $r3['category_type']=$category_type; 
+                        $r3['cat_id']=$sub_category_id;   
                         $r3['cutoff_head']=$head_id;  
                         $r3['year']=$year;   
 
@@ -396,6 +399,7 @@ Class CounsellingHead extends MY_Controller {
                         $r4['sr']=$sheet_data[$l][$x+10];
                         $r4['marks']=$sheet_data[$l][$x+11];        
                         $r4['category_type']=$category_type;  
+                        $r4['cat_id']=$sub_category_id;  
                         $r4['cutoff_head']=$head_id;  
                         $r4['year']=$year;   
 
@@ -408,7 +412,8 @@ Class CounsellingHead extends MY_Controller {
                         $r5['air']=$sheet_data[$l][$x+12];
                         $r5['sr']=$sheet_data[$l][$x+13];
                         $r5['marks']=$sheet_data[$l][$x+14];        
-                        $r5['category_type']=$category_type;  
+                        $r5['category_type']=$category_type; 
+                        $r5['cat_id']=$sub_category_id;   
                         $r5['cutoff_head']=$head_id;  
                         $r5['year']=$year;   
 

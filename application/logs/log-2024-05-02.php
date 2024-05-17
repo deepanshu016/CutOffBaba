@@ -7521,1124 +7521,289 @@ DEBUG - 2024-05-02 10:25:04 --> UTF-8 Support Enabled
 DEBUG - 2024-05-02 10:25:04 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-05-02 10:25:04 --> 404 Page Not Found: College-info/faq
 ERROR - 2024-05-02 10:42:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 10:42:50 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 10:42:50 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 10:42:50 --> 404 Page Not Found: Admin/index
-ERROR - 2024-05-02 10:42:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 10:42:50 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 10:42:50 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 10:42:50 --> 404 Page Not Found: Faviconico/index
-ERROR - 2024-05-02 10:42:52 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 10:42:52 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 10:42:52 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 10:42:52 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 10:42:52 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'u916255990_cutoff'@'localhost' (using password: YES) C:\wamp64\www\Project\CutOffBaba\system\database\drivers\mysqli\mysqli_driver.php 211
-ERROR - 2024-05-02 10:42:52 --> Unable to connect to the database
-ERROR - 2024-05-02 10:42:52 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 10:42:52 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 10:42:52 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 10:42:52 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 10:42:52 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'u916255990_cutoff'@'localhost' (using password: YES) C:\wamp64\www\Project\CutOffBaba\system\database\drivers\mysqli\mysqli_driver.php 211
-ERROR - 2024-05-02 10:42:52 --> Unable to connect to the database
-ERROR - 2024-05-02 11:24:18 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 11:24:18 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 11:24:18 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 11:24:18 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 11:24:18 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'u916255990_cutoff'@'localhost' (using password: YES) C:\wamp64\www\Project\CutOffBaba\system\database\drivers\mysqli\mysqli_driver.php 211
-ERROR - 2024-05-02 11:24:18 --> Unable to connect to the database
-ERROR - 2024-05-02 11:28:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 11:28:08 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 11:28:08 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 11:28:08 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 11:28:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 11:28:08 --> cURL Class Initialized
-DEBUG - 2024-05-02 16:58:08 --> Total execution time: 0.0927
-ERROR - 2024-05-02 11:30:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 11:30:11 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 11:30:11 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 11:30:11 --> 404 Page Not Found: Api/stream
-ERROR - 2024-05-02 11:30:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 11:30:11 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 11:30:11 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 11:30:11 --> 404 Page Not Found: Api/colleges
-ERROR - 2024-05-02 11:30:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 11:30:11 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 11:30:11 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 11:30:11 --> 404 Page Not Found: Api/sitesettings
-ERROR - 2024-05-02 12:07:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:32 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:07:32 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:07:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:07:32 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:37:32 --> Total execution time: 0.0732
-ERROR - 2024-05-02 12:07:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:32 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 12:07:32 --> 404 Page Not Found: Img/location_1.jpg
-ERROR - 2024-05-02 12:07:42 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:42 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:42 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:07:42 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:07:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:07:43 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:37:43 --> Total execution time: 0.0766
-ERROR - 2024-05-02 12:07:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 12:07:43 --> 404 Page Not Found: Img/location_1.jpg
-ERROR - 2024-05-02 12:07:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 12:07:43 --> 404 Page Not Found: Img/location_1.jpg
-ERROR - 2024-05-02 12:07:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:50 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:50 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:07:50 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:07:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:07:50 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:37:50 --> Total execution time: 0.0490
-ERROR - 2024-05-02 12:07:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:50 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:50 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 12:07:50 --> 404 Page Not Found: Img/location_1.jpg
-ERROR - 2024-05-02 12:07:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:55 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:55 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:07:55 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:07:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:07:55 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:37:55 --> Total execution time: 0.0537
-ERROR - 2024-05-02 12:07:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:07:55 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:07:55 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 12:07:55 --> 404 Page Not Found: Img/location_1.jpg
-ERROR - 2024-05-02 12:08:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:08:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:08:32 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:08:32 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:08:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:08:32 --> cURL Class Initialized
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:32 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-DEBUG - 2024-05-02 17:38:32 --> Total execution time: 0.0963
-ERROR - 2024-05-02 12:08:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:08:49 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:08:49 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:08:49 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:08:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:08:49 --> cURL Class Initialized
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 4
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:38:49 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-DEBUG - 2024-05-02 17:38:49 --> Total execution time: 0.0635
-ERROR - 2024-05-02 12:09:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:09:07 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:09:07 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:09:07 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:09:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:09:07 --> cURL Class Initialized
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-ERROR - 2024-05-02 17:39:07 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 5
-DEBUG - 2024-05-02 17:39:07 --> Total execution time: 0.0729
-ERROR - 2024-05-02 12:09:31 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:09:31 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:09:31 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:09:31 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:09:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:09:31 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:39:31 --> Total execution time: 0.0638
-ERROR - 2024-05-02 12:09:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:09:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:09:43 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:09:43 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:09:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:09:43 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:39:43 --> Total execution time: 0.0641
-ERROR - 2024-05-02 12:10:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:10:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:10:26 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:10:26 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:10:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:10:26 --> cURL Class Initialized
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Undefined variable: college C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-ERROR - 2024-05-02 17:40:26 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\Project\CutOffBaba\application\views\site\college-card.php 14
-DEBUG - 2024-05-02 17:40:26 --> Total execution time: 0.0659
-ERROR - 2024-05-02 12:10:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:10:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:10:39 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:10:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:10:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:10:40 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:40:40 --> Total execution time: 0.0631
-ERROR - 2024-05-02 12:11:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:11:07 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:11:07 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:11:07 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:11:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:11:07 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:41:07 --> Total execution time: 0.0701
-ERROR - 2024-05-02 12:11:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:11:17 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:11:17 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:11:17 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:11:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:11:17 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:41:17 --> Total execution time: 0.0725
-ERROR - 2024-05-02 12:11:31 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:11:31 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:11:31 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:11:31 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:11:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:11:31 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:41:31 --> Total execution time: 0.0703
-ERROR - 2024-05-02 12:12:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:12:10 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:12:10 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:12:10 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:12:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:12:10 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:42:10 --> Total execution time: 0.0664
-ERROR - 2024-05-02 12:12:35 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:12:35 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:12:35 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:12:35 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:12:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:12:35 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:42:35 --> Total execution time: 0.0734
-ERROR - 2024-05-02 12:12:42 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:12:42 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:12:42 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:12:42 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:12:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:12:42 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:42:42 --> Total execution time: 0.0671
-ERROR - 2024-05-02 12:13:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:13:09 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:13:09 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:13:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:13:09 --> cURL Class Initialized
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 17:43:10 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 17:43:10 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 17:43:10 --> Total execution time: 1.2041
-ERROR - 2024-05-02 12:14:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:14:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:14:58 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:14:58 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:14:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:14:58 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:44:58 --> Total execution time: 0.0611
-ERROR - 2024-05-02 12:15:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:15:00 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:15:00 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:15:00 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:15:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:15:00 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:45:00 --> Total execution time: 0.0710
-ERROR - 2024-05-02 12:15:25 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:15:25 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:15:25 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:15:25 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:15:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:15:25 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:45:25 --> Total execution time: 0.0688
-ERROR - 2024-05-02 12:16:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:16:53 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:16:53 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:16:53 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:16:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:16:53 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:46:53 --> Total execution time: 0.0615
-ERROR - 2024-05-02 12:17:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:17:16 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:17:16 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:17:16 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:17:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:17:16 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:47:16 --> Total execution time: 0.0477
-ERROR - 2024-05-02 12:17:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:17:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:17:26 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:17:26 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:17:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:17:26 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:47:26 --> Total execution time: 0.0693
-ERROR - 2024-05-02 12:19:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:19:15 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:19:15 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:19:15 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:19:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:19:15 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:49:15 --> Total execution time: 0.0667
-ERROR - 2024-05-02 12:19:27 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:19:27 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:19:27 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:19:27 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:19:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:19:27 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:49:27 --> Total execution time: 0.0491
-ERROR - 2024-05-02 12:19:35 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:19:35 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:19:35 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:19:35 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:19:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:19:35 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:49:35 --> Total execution time: 0.0697
-ERROR - 2024-05-02 12:19:56 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:19:56 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:19:56 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:19:56 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:19:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:19:56 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:49:56 --> Total execution time: 0.0492
-ERROR - 2024-05-02 12:20:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:20:07 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:20:07 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:20:07 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:20:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:20:08 --> cURL Class Initialized
-DEBUG - 2024-05-02 17:50:08 --> Total execution time: 0.0704
-ERROR - 2024-05-02 12:58:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:58:41 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:58:41 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:58:41 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:58:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:58:41 --> cURL Class Initialized
-DEBUG - 2024-05-02 18:28:41 --> Total execution time: 0.0590
-ERROR - 2024-05-02 12:58:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:58:53 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:58:53 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:58:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:58:53 --> cURL Class Initialized
-ERROR - 2024-05-02 18:28:54 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:28:55 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 18:28:56 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 18:28:56 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 18:28:56 --> Total execution time: 2.9938
-ERROR - 2024-05-02 12:58:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:58:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:58:58 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:58:58 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:58:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:58:58 --> cURL Class Initialized
-DEBUG - 2024-05-02 18:28:58 --> Total execution time: 0.0709
-ERROR - 2024-05-02 12:59:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:59:02 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:59:02 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:59:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:59:02 --> cURL Class Initialized
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 18:29:03 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 18:29:03 --> Total execution time: 1.1820
-ERROR - 2024-05-02 12:59:46 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:59:46 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:59:46 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:59:46 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:59:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:59:46 --> cURL Class Initialized
-DEBUG - 2024-05-02 18:29:46 --> Total execution time: 0.0532
-ERROR - 2024-05-02 12:59:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 12:59:47 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 12:59:47 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 12:59:47 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 12:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 12:59:47 --> cURL Class Initialized
-DEBUG - 2024-05-02 18:29:47 --> Total execution time: 0.0643
-ERROR - 2024-05-02 14:26:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:26:13 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:26:13 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:26:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:26:13 --> cURL Class Initialized
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:56:14 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 19:56:14 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 19:56:14 --> Total execution time: 1.3754
-ERROR - 2024-05-02 14:27:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:27:00 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:27:00 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 14:27:00 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:27:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:27:00 --> cURL Class Initialized
-DEBUG - 2024-05-02 19:57:00 --> Total execution time: 0.0528
-ERROR - 2024-05-02 14:27:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:27:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:27:45 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:27:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:27:45 --> cURL Class Initialized
-ERROR - 2024-05-02 19:57:45 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:57:46 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:57:47 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 19:57:47 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 19:57:47 --> Total execution time: 1.7612
-ERROR - 2024-05-02 14:29:24 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:29:24 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:29:24 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:29:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:29:24 --> cURL Class Initialized
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:59:24 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 19:59:24 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 19:59:24 --> Total execution time: 0.3929
-ERROR - 2024-05-02 14:29:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:29:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:29:43 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:29:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:29:43 --> cURL Class Initialized
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:59:43 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 19:59:43 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 19:59:43 --> Total execution time: 0.0471
-ERROR - 2024-05-02 14:30:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:30:08 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:30:08 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:30:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:30:08 --> cURL Class Initialized
-ERROR - 2024-05-02 20:00:08 --> Severity: Notice --> Trying to get property 'degreetype' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-ERROR - 2024-05-02 20:00:08 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 10
-DEBUG - 2024-05-02 20:00:08 --> Total execution time: 0.0263
-ERROR - 2024-05-02 14:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:30:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:30:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:30:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:30:39 --> cURL Class Initialized
-ERROR - 2024-05-02 20:00:39 --> Severity: Notice --> Trying to get property 'courses' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Notice --> Trying to get property 'courses' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Notice --> Trying to get property 'courses' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Notice --> Trying to get property 'courses' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-ERROR - 2024-05-02 20:00:39 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\www\Project\CutOffBaba\application\views\site\course-by-stream.php 16
-DEBUG - 2024-05-02 20:00:39 --> Total execution time: 0.0473
-ERROR - 2024-05-02 14:31:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:31:11 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:31:11 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:31:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:31:11 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:01:11 --> Total execution time: 0.0510
-ERROR - 2024-05-02 14:31:36 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:31:36 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:31:36 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:31:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:31:36 --> cURL Class Initialized
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 20:01:37 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 20:01:37 --> Total execution time: 1.1916
-ERROR - 2024-05-02 14:33:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:33:09 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:33:09 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:33:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:33:09 --> cURL Class Initialized
-ERROR - 2024-05-02 20:03:09 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:03:09 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-DEBUG - 2024-05-02 20:03:09 --> Total execution time: 0.0380
-ERROR - 2024-05-02 14:33:23 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:33:23 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:33:23 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:33:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:33:23 --> cURL Class Initialized
-ERROR - 2024-05-02 20:03:23 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\controllers\Home.php 146
-ERROR - 2024-05-02 20:03:23 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:03:23 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-DEBUG - 2024-05-02 20:03:23 --> Total execution time: 0.0256
-ERROR - 2024-05-02 14:33:24 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:33:24 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:33:24 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:33:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:33:24 --> cURL Class Initialized
-ERROR - 2024-05-02 20:03:24 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\www\Project\CutOffBaba\application\controllers\Home.php 146
-ERROR - 2024-05-02 20:03:24 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:03:24 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-DEBUG - 2024-05-02 20:03:24 --> Total execution time: 0.0475
-ERROR - 2024-05-02 14:33:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:33:50 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:33:50 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:33:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:33:51 --> cURL Class Initialized
-ERROR - 2024-05-02 20:03:51 --> Severity: Notice --> Trying to get property 'course_full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-ERROR - 2024-05-02 20:03:51 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-DEBUG - 2024-05-02 20:03:51 --> Total execution time: 0.0382
-ERROR - 2024-05-02 14:34:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:07 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:07 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:07 --> cURL Class Initialized
-ERROR - 2024-05-02 20:04:07 --> Severity: Notice --> Trying to get property 'course' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\coursedetail.php 4
-DEBUG - 2024-05-02 20:04:07 --> Total execution time: 0.0250
-ERROR - 2024-05-02 14:34:16 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:16 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:16 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:16 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:04:16 --> Total execution time: 0.0425
-ERROR - 2024-05-02 14:34:25 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:25 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:25 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:25 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:04:26 --> Total execution time: 0.0427
-ERROR - 2024-05-02 14:34:27 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:27 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:27 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:27 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:04:27 --> Total execution time: 0.0197
-ERROR - 2024-05-02 14:34:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:28 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:28 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:28 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:04:28 --> Total execution time: 0.0244
-ERROR - 2024-05-02 14:34:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:29 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:29 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 14:34:29 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:29 --> cURL Class Initialized
-DEBUG - 2024-05-02 20:04:30 --> Total execution time: 0.0643
-ERROR - 2024-05-02 14:34:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:32 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:34:32 --> cURL Class Initialized
-ERROR - 2024-05-02 20:04:32 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:04:32 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 6
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: favicon C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 7
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: title C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 20
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: logo C:\wamp64\www\Project\CutOffBaba\application\views\site\header.php 21
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'college_bannerfile' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'short_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 31
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: mobile_no C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 32
-ERROR - 2024-05-02 20:04:33 --> Severity: Notice --> Undefined index: email C:\wamp64\www\Project\CutOffBaba\application\views\site\footer.php 33
-DEBUG - 2024-05-02 20:04:33 --> Total execution time: 1.1689
-ERROR - 2024-05-02 14:34:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:34:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:33 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 14:34:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:34:33 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:33 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:34:33 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:34:33 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:34:33 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:34:33 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:34:33 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:34:33 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:35:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:35:02 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:02 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:35:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:35:02 --> cURL Class Initialized
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'status' of non-object C:\wamp64\www\Project\CutOffBaba\application\helpers\common_helper.php 213
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'college_bannerfile' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'short_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:05:02 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:05:02 --> Total execution time: 0.3945
-ERROR - 2024-05-02 14:35:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:35:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:35:02 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:02 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:02 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:35:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:35:02 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:35:02 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:35:02 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 14:35:02 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:35:02 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:35:02 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:35:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:35:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:32 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:35:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:35:32 --> cURL Class Initialized
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'college_bannerfile' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'full_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'short_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:05:32 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:05:32 --> Total execution time: 0.0328
-ERROR - 2024-05-02 14:35:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:35:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:35:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:32 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:35:32 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:35:32 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:35:32 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:35:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:35:32 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:35:32 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:35:32 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:36:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:36:15 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:36:15 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:36:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:36:15 --> cURL Class Initialized
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Undefined index: college_bannerfile C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:06:15 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:06:15 --> Total execution time: 0.0449
-ERROR - 2024-05-02 14:36:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:36:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:36:15 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:36:15 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:36:15 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:36:15 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:36:15 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:36:15 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:36:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:36:15 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:36:15 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:36:15 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:38:56 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:38:56 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:38:56 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:38:56 --> cURL Class Initialized
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Undefined index: college_bannerfile C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:08:57 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:08:57 --> Total execution time: 0.0415
-ERROR - 2024-05-02 14:38:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:38:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:38:57 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:38:57 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:38:57 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:38:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:38:57 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:38:57 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:38:57 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:38:57 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:38:57 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:38:57 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:43:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:43:41 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:43:41 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:43:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:43:41 --> cURL Class Initialized
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Undefined index: college_bannerfile C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 37
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:13:41 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:13:41 --> Total execution time: 0.0258
-ERROR - 2024-05-02 14:43:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:43:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:43:41 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:43:41 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:43:41 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:43:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:43:41 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:43:41 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:43:41 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 14:43:41 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:43:41 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:43:41 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:54:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:54:13 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:54:13 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:54:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 14:54:13 --> cURL Class Initialized
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Undefined index: college_bannerfile C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 4
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Undefined index: full_name C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Undefined index: short_name C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 36
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Undefined index: address C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 37
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'short_description' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 39
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'establishment' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 45
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'gender' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 46
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'university_name' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 48
-ERROR - 2024-05-02 20:24:13 --> Severity: Notice --> Trying to get property 'ownertitle' of non-object C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 50
-DEBUG - 2024-05-02 20:24:13 --> Total execution time: 0.0532
-ERROR - 2024-05-02 14:54:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:54:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 14:54:13 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:54:13 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:54:13 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 14:54:13 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:54:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 14:54:13 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 14:54:13 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 14:54:13 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 14:54:13 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 14:54:13 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:12:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:12:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:12:45 --> No URI present. Default controller set.
-DEBUG - 2024-05-02 20:12:45 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:12:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:12:45 --> cURL Class Initialized
-ERROR - 2024-05-02 20:12:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:12:48 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:12:48 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:12:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:12:48 --> cURL Class Initialized
-ERROR - 2024-05-02 20:12:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:12:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:12:48 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:12:48 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:12:48 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:12:48 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:12:48 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:12:48 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:12:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:12:48 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:12:48 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:12:48 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:13:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:13:49 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:13:49 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:13:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:13:49 --> cURL Class Initialized
-ERROR - 2024-05-02 20:13:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:13:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:13:49 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:13:49 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:13:49 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:13:49 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:13:49 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:13:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:13:49 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:13:49 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:13:49 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:13:49 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:14:03 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:14:03 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:03 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:14:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:14:03 --> cURL Class Initialized
-ERROR - 2024-05-02 20:14:03 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:14:03 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:14:03 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:03 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:03 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:14:03 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:14:03 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:14:03 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:14:03 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:14:03 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:03 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:14:03 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:14:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:14:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:43 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:14:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:14:43 --> cURL Class Initialized
-ERROR - 2024-05-02 20:14:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:14:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:14:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:14:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:14:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:14:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:14:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:14:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:14:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:14:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:15:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:08 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:08 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:15:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:15:08 --> cURL Class Initialized
-ERROR - 2024-05-02 20:15:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:08 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:15:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:08 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:15:08 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:15:08 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:15:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:08 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:15:08 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:15:08 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:08 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:15:08 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:15:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:26 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:15:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:15:26 --> cURL Class Initialized
-ERROR - 2024-05-02 20:15:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:15:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:15:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:15:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:26 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:15:26 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:15:26 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:15:26 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:15:26 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:15:26 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:15:26 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:16:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:16:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:16:43 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:16:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:16:43 --> cURL Class Initialized
-ERROR - 2024-05-02 20:16:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:16:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:16:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:16:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:16:43 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:16:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:16:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:16:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:16:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:16:43 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:16:43 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:16:43 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:28 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:28 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:17:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:17:28 --> cURL Class Initialized
-ERROR - 2024-05-02 20:17:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:17:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:28 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:28 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:28 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:28 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:28 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:17:28 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:17:28 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:17:28 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:28 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:45 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:17:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:17:45 --> cURL Class Initialized
-ERROR - 2024-05-02 20:17:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:45 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:17:45 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:17:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:45 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:45 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:45 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:45 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:45 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:58 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:17:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:17:58 --> cURL Class Initialized
-ERROR - 2024-05-02 20:17:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:17:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:17:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:17:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:58 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:17:58 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:17:58 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:17:58 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:17:58 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:58 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:17:58 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:20:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:20:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:20:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:20:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:20:39 --> cURL Class Initialized
-ERROR - 2024-05-02 20:20:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:20:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:20:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:20:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:20:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:20:39 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:20:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:20:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:20:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:20:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:20:39 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:20:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:21:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:21:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:21:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:21:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:21:39 --> cURL Class Initialized
-ERROR - 2024-05-02 20:21:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:21:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:21:39 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:21:39 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:21:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:21:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:21:39 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:21:39 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:21:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:21:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:21:39 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:21:39 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-ERROR - 2024-05-02 20:23:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:23:06 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:23:06 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:23:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
-DEBUG - 2024-05-02 20:23:06 --> cURL Class Initialized
-ERROR - 2024-05-02 20:23:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-ERROR - 2024-05-02 20:23:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:23:07 --> UTF-8 Support Enabled
-DEBUG - 2024-05-02 20:23:07 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:23:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-05-02 20:23:07 --> Global POST, GET and COOKIE data sanitized
-DEBUG - 2024-05-02 20:23:07 --> UTF-8 Support Enabled
-ERROR - 2024-05-02 20:23:07 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:23:07 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:23:07 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
-DEBUG - 2024-05-02 20:23:07 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-05-02 20:23:07 --> 404 Page Not Found: College-detail/andaman-and-nicobar-islands-institute-of-medical-scienc
+DEBUG - 2024-05-02 10:42:49 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 10:42:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 10:42:49 --> 404 Page Not Found: Admin/index
+ERROR - 2024-05-02 10:53:52 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 10:53:52 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 10:53:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 10:53:52 --> 404 Page Not Found: College-info/central-cutoff
+ERROR - 2024-05-02 10:54:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 10:54:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 10:54:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 10:54:11 --> 404 Page Not Found: State-wise-colleges/32
+ERROR - 2024-05-02 10:57:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 10:57:58 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 10:57:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 10:57:58 --> 404 Page Not Found: College-info/recommended-colleges
+ERROR - 2024-05-02 11:00:34 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:00:34 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:00:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 11:00:34 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 11:22:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:22:05 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:22:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 11:22:05 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 11:29:20 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:29:20 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:29:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 11:29:20 --> 404 Page Not Found: College-info/college-predictor
+ERROR - 2024-05-02 11:47:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:47:33 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:47:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 11:47:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 11:47:34 --> cURL Class Initialized
+ERROR - 2024-05-02 17:17:45 --> Severity: Warning --> Attempt to read property "status" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/helpers/common_helper.php 213
+ERROR - 2024-05-02 17:17:45 --> Severity: Warning --> Undefined array key 0 /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 17:17:45 --> Severity: Warning --> Attempt to read property "statename" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 17:17:45 --> Severity: error --> Exception: Cannot use object of type stdClass as array /home/u916255990/domains/cutoffbaba.in/public_html/application/views/site/header.php 6
+ERROR - 2024-05-02 11:48:30 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:48:30 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:48:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 11:48:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 11:48:30 --> cURL Class Initialized
+ERROR - 2024-05-02 17:18:41 --> Severity: Warning --> Attempt to read property "status" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/helpers/common_helper.php 213
+ERROR - 2024-05-02 17:18:41 --> Severity: Warning --> Undefined array key 0 /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 17:18:41 --> Severity: Warning --> Attempt to read property "statename" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 17:18:41 --> Severity: error --> Exception: Cannot use object of type stdClass as array /home/u916255990/domains/cutoffbaba.in/public_html/application/views/site/header.php 6
+ERROR - 2024-05-02 11:50:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:50:57 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:50:57 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 11:50:57 --> 404 Page Not Found: College/1041
+ERROR - 2024-05-02 11:53:03 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 11:53:03 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 11:53:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 11:53:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 11:53:03 --> cURL Class Initialized
+ERROR - 2024-05-02 17:23:14 --> Severity: error --> Exception: Cannot use object of type stdClass as array /home/u916255990/domains/cutoffbaba.in/public_html/application/views/site/header.php 6
+ERROR - 2024-05-02 12:05:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:05:06 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:05:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:05:06 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 12:07:34 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:07:34 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:07:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:07:34 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 12:26:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:26:13 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:26:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:26:13 --> 404 Page Not Found: Wbmenquiryphp/index
+ERROR - 2024-05-02 12:31:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:31:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:31:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:31:44 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 12:48:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:48:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:48:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:48:41 --> 404 Page Not Found: Keralaenquiryphp/index
+ERROR - 2024-05-02 12:53:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 12:53:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 12:53:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 12:53:44 --> 404 Page Not Found: Orissamenquiryphp/index
+ERROR - 2024-05-02 13:35:40 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 13:35:40 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 13:35:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 13:35:40 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 13:42:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 13:42:10 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 13:42:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 13:42:10 --> 404 Page Not Found: Viewupbdsphp/index
+ERROR - 2024-05-02 13:48:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 13:48:50 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 13:48:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 13:48:50 --> 404 Page Not Found: Denquiryphp/index
+ERROR - 2024-05-02 14:39:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 14:39:28 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 14:39:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 14:39:28 --> 404 Page Not Found: College/520
+ERROR - 2024-05-02 14:59:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 14:59:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 14:59:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 14:59:22 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 15:15:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 15:15:58 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 15:15:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 15:15:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 15:15:58 --> cURL Class Initialized
+ERROR - 2024-05-02 20:46:09 --> Severity: Warning --> Attempt to read property "status" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/helpers/common_helper.php 213
+ERROR - 2024-05-02 20:46:09 --> Severity: Warning --> Undefined array key 0 /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 20:46:09 --> Severity: Warning --> Attempt to read property "statename" on null /home/u916255990/domains/cutoffbaba.in/public_html/application/controllers/Home.php 157
+ERROR - 2024-05-02 20:46:09 --> Severity: error --> Exception: Cannot use object of type stdClass as array /home/u916255990/domains/cutoffbaba.in/public_html/application/views/site/header.php 6
+ERROR - 2024-05-02 15:34:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 15:34:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 15:34:22 --> No URI present. Default controller set.
+DEBUG - 2024-05-02 15:34:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 15:34:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 15:34:22 --> cURL Class Initialized
+DEBUG - 2024-05-02 21:04:22 --> Total execution time: 0.0952
+ERROR - 2024-05-02 15:34:23 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 15:34:23 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 15:34:23 --> No URI present. Default controller set.
+DEBUG - 2024-05-02 15:34:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 15:34:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 15:34:23 --> cURL Class Initialized
+DEBUG - 2024-05-02 21:04:23 --> Total execution time: 0.0457
+ERROR - 2024-05-02 15:37:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 15:37:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 15:37:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 15:37:11 --> 404 Page Not Found: Collegelist/4
+ERROR - 2024-05-02 15:48:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 15:48:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 15:48:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 15:48:29 --> 404 Page Not Found: State-wise-colleges/14
+ERROR - 2024-05-02 16:04:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:04:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:04:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:04:12 --> 404 Page Not Found: Wbmenquiryphp/index
+ERROR - 2024-05-02 16:04:33 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:04:33 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:04:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:04:33 --> 404 Page Not Found: Fee-and-expenses/index
+ERROR - 2024-05-02 16:11:13 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:11:13 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:11:13 --> No URI present. Default controller set.
+DEBUG - 2024-05-02 16:11:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 16:11:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 16:11:13 --> cURL Class Initialized
+DEBUG - 2024-05-02 21:41:13 --> Total execution time: 0.0860
+ERROR - 2024-05-02 16:11:20 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:11:20 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:11:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:11:20 --> 404 Page Not Found: Adstxt/index
+ERROR - 2024-05-02 16:11:20 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:11:20 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:11:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:11:20 --> 404 Page Not Found: App-adstxt/index
+ERROR - 2024-05-02 16:11:20 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:11:20 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:11:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:11:20 --> 404 Page Not Found: Sellersjson/index
+ERROR - 2024-05-02 16:21:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:21:49 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:21:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:21:49 --> 404 Page Not Found: State-wise-colleges/8
+ERROR - 2024-05-02 16:39:37 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:39:37 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:39:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:39:37 --> 404 Page Not Found: College/1126
+ERROR - 2024-05-02 16:40:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 16:40:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 16:40:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 16:40:22 --> 404 Page Not Found: Keralaenquiryphp/index
+ERROR - 2024-05-02 17:12:27 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 17:12:27 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 17:12:27 --> No URI present. Default controller set.
+DEBUG - 2024-05-02 17:12:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 17:12:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 17:12:27 --> cURL Class Initialized
+DEBUG - 2024-05-02 22:42:27 --> Total execution time: 0.0816
+ERROR - 2024-05-02 17:13:15 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 17:13:15 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 17:13:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 17:13:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 17:13:15 --> cURL Class Initialized
+ERROR - 2024-05-02 22:43:27 --> Severity: error --> Exception: Cannot use object of type stdClass as array /home/u916255990/domains/cutoffbaba.in/public_html/application/views/site/header.php 6
+ERROR - 2024-05-02 17:13:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 17:13:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 17:13:41 --> No URI present. Default controller set.
+DEBUG - 2024-05-02 17:13:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 17:13:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 17:13:41 --> cURL Class Initialized
+DEBUG - 2024-05-02 22:43:41 --> Total execution time: 0.0349
+ERROR - 2024-05-02 18:43:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 18:43:45 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 18:43:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 18:43:45 --> 404 Page Not Found: College/1398
+ERROR - 2024-05-02 18:47:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 18:47:48 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 18:47:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 18:47:48 --> 404 Page Not Found: College/290
+ERROR - 2024-05-02 19:48:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 19:48:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 19:48:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 19:48:12 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2024-05-02 19:48:24 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 19:48:24 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 19:48:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 19:48:24 --> 404 Page Not Found: State-wise-colleges/21
+ERROR - 2024-05-02 20:16:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 20:16:02 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 20:16:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 20:16:02 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 20:21:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 20:21:26 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 20:21:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 20:21:26 --> 404 Page Not Found: College-info/central-cutoff
+ERROR - 2024-05-02 20:42:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 20:42:45 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 20:42:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 20:42:45 --> 404 Page Not Found: Wbmenquiryphp/index
+ERROR - 2024-05-02 20:47:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 20:47:47 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 20:47:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 20:47:47 --> 404 Page Not Found: College-info/branch
+ERROR - 2024-05-02 21:52:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 21:52:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 21:52:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 21:52:12 --> 404 Page Not Found: College-info/college-gallery
+ERROR - 2024-05-02 21:53:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 21:53:00 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 21:53:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 21:53:00 --> 404 Page Not Found: Enquirybdsphp/index
+ERROR - 2024-05-02 22:26:37 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 22:26:37 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 22:26:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 22:26:37 --> 404 Page Not Found: Enquiryphp/index
+ERROR - 2024-05-02 22:29:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 22:29:28 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 22:29:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 22:29:28 --> 404 Page Not Found: College-info/branch
+ERROR - 2024-05-02 22:29:38 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 22:29:38 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 22:29:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 22:29:38 --> 404 Page Not Found: College-info/fee-expenses
+ERROR - 2024-05-02 22:29:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 22:29:53 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 22:29:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 22:29:53 --> 404 Page Not Found: College-info/reviews
+ERROR - 2024-05-02 22:43:47 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 22:43:47 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 22:43:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 22:43:47 --> 404 Page Not Found: Assets/img
+ERROR - 2024-05-02 23:25:43 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:25:43 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:25:43 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:25:43 --> 404 Page Not Found: College-info/clinic-exposure
+ERROR - 2024-05-02 23:25:52 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:25:52 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:25:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:25:52 --> 404 Page Not Found: College-info/cutoff-comparison
+ERROR - 2024-05-02 23:26:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:26:08 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:26:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:26:08 --> 404 Page Not Found: College-info/cutoff-comparison
+ERROR - 2024-05-02 23:39:46 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:39:46 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:39:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:39:46 --> 404 Page Not Found: College/1254
+ERROR - 2024-05-02 23:52:31 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:52:31 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:52:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:52:31 --> 404 Page Not Found: College-info/faq
+ERROR - 2024-05-02 23:52:40 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:52:40 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:52:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-02 23:52:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-02 23:52:40 --> cURL Class Initialized
+ERROR - 2024-05-02 23:54:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:54:09 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:54:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:54:09 --> 404 Page Not Found: Home/collegelist
+ERROR - 2024-05-02 23:54:17 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:54:17 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:54:17 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:54:17 --> 404 Page Not Found: College-info/college-predictor
+ERROR - 2024-05-02 23:54:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-02 23:54:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-02 23:54:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-02 23:54:41 --> 404 Page Not Found: College-info/college-updates

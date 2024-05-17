@@ -50,16 +50,16 @@
 					<div class="box_contacts">
 						<i class="ti-support"></i>
 						<h2>Need Help?</h2>
-						<a href="#0"><?=$siteSettings->mobile_no;?></a>
+						<a href="#0"><?=$siteSettings['mobile_no'];?></a>
 					</div>
 					<div class="box_contacts">
 						<i class="ti-help-alt"></i>
-						<h2>Questions?</h2><a href="#0"><?=$siteSettings->email;?></a>
+						<h2>Questions?</h2><a href="#0"><?=$siteSettings['email'];?></a>
 					</div>
 					<div class="box_contacts">
 						<i class="ti-home"></i>
 						<h2>Address</h2>
-						<a href="#0"><?=$siteSettings->address;?></a>
+						<a href="#0"><?=$siteSettings['address'];?></a>
 					</div>
 				</div>
 			</div>

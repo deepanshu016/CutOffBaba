@@ -1,7 +1,7 @@
 <?php $this->load->view('site/header');?>
 <main>		
 	<style type="text/css">
-.hero_in.restaurant_detail:before{background: url('<?=asset_url()."media/image/".$collegeDetail['college_bannerfile'];?>') no-repeat;background-size: 100% 100%;background-position: center;}
+.hero_in.restaurant_detail:before{background: url('<?=asset_url()."college/banner/".$collegeDetail['college_banner'];?>') no-repeat;background-size: 100% 100%;background-position: center;}
 	</style>
 		<div class="hero_in restaurant_detail">
 			<div class="wrapper">
@@ -31,7 +31,7 @@
 
 		<div class="container margin_60_35">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-12">
 						<section id="basic">
 							<div class="detail_title_1">
 								<h1><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h1>
@@ -88,16 +88,160 @@
 						</div>
 					<?php } ?>
 						</section>
-						<?php $cutoff=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-						echo '<pre>';
-						print_r($cutoff);
-						$cutoff2=$this->db->select('distinct(branch_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$cutoff[0]['course_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-						echo '<pre>';
-						print_r($cutoff2);
-						$cutoff3=$this->db->select('distinct(branch_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$cutoff[0]['course_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-						echo '<pre>';
-						print_r($cutoff2);
+						<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
+							
+						<?php 
+						$courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+						foreach($courseids as $courseid){
+							$coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+							if (count($coursedetaildata)>0) {
+								$coursedetaildata=$coursedetaildata[0];
+								//print_r($coursedetaildata);
+								?>
+								<div class="card">
+								<div class="card-header" role="tab">
+									<h5 class="mb-0">
+										<a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
+									</h5>
+								</div>
+								<div id="course<?=$coursedetaildata['id'];?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
+									<div class="card-body">
+										<h3>CENTRAL COUNSELLING</h3>
+										<div class="d-flex justify-content-between">
+											<div>
+												<select class="form-control form-select">
+													<option>Sub Category</option>
+												</select>
+											</div>
+											<div>
+												<select class="form-control form-select">
+													<option>Sub Category</option>
+												</select>
+											</div>
+										</div>
+								<?php 
+								$branchids=$this->db->select('distinct(branch_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+								foreach($branchids as $branchid){
+									?>
+									<table class="table table-bordered text-center">
+										<tr>
+											<th>Category</th>
+											<th>Round 1</th>
+											<th>Round 2</th>
+											<th>Round 3</th>
+											<th>Round 4</th>
+											<th>Round 5</th>
+										</tr>
+										<tr>
+											<th></th>
+											<th><table class="table table-bordered">
+												<tr>
+													<th>AIR</th>
+													<th>SR</th>
+													<th>Marks</th>
+												</tr>
+											</table></th><th><table class="table table-bordered">
+												<tr>
+													<th>AIR</th>
+													<th>SR</th>
+													<th>Marks</th>
+												</tr>
+											</table></th><th><table class="table table-bordered">
+												<tr>
+													<th>AIR</th>
+													<th>SR</th>
+													<th>Marks</th>
+												</tr>
+											</table></th><th><table class="table table-bordered">
+												<tr>
+													<th>AIR</th>
+													<th>SR</th>
+													<th>Marks</th>
+												</tr>
+											</table></th><th><table class="table table-bordered">
+												<tr>
+													<th>AIR</th>
+													<th>SR</th>
+													<th>Marks</th>
+												</tr>
+											</table></th>
+											
+										</tr>
+										<?php
+									$catids=$this->db->select('distinct(category_type)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('cat_id',20)->get('tbl_cutfoff_marks_data')->result_array(); 
+									foreach($catids as $catid){
+										$branchdetaildata=$this->db->select('*')->where('id',$catid['category_type'])->get('tbl_sub_category')->result_array();
+									$R1=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_one',1)->get('tbl_cutfoff_marks_data')->result_array();
+									//echo $this->db->last_query(); 
+									$R2=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_two',1)->get('tbl_cutfoff_marks_data')->result_array(); 
+									$R3=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_three',1)->get('tbl_cutfoff_marks_data')->result_array(); 
+									$R4=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_four',1)->get('tbl_cutfoff_marks_data')->result_array(); 
+									$R5=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_five',1)->get('tbl_cutfoff_marks_data')->result_array(); 
+									?>
+										<tr>
+											<th><?=$branchdetaildata[0]['sub_category_name'];?></th>
+											<th><table class="table table-bordered">
+												<?php if (count($R1)>0): ?>
+												<tr>
+													<th><?=$R1[0]['air']!=""?$R1[0]['air']:"0";?></th>
+													<th><?=$R1[0]['sr']!=""?$R1[0]['sr']:"0";?></th>
+													<th><?=$R1[0]['marks']!=""?$R1[0]['marks']:"0";?></th>
+												</tr>
+												<?php endif ?>
+											</table></th>
+											<th><table class="table table-bordered">
+												<?php if (count($R2)>0): ?>
+												<tr>
+													<th><?=$R2[0]['air']!=""?$R2[0]['air']:"0";?></th>
+													<th><?=$R2[0]['sr']!=""?$R2[0]['sr']:"0";?></th>
+													<th><?=$R2[0]['marks']!=""?$R2[0]['marks']:"0";?></th>
+												</tr>
+												<?php endif ?>
+											</table></th><th><table class="table table-bordered">
+												<?php if (count($R3)>0): ?>
+												<tr>
+													<th><?=$R3[0]['air']!=""?$R3[0]['air']:"0";?></th>
+													<th><?=$R3[0]['sr']!=""?$R3[0]['sr']:"0";?></th>
+													<th><?=$R3[0]['marks']!=""?$R3[0]['marks']:"0";?></th>
+												</tr>
+												<?php endif ?>
+											</table></th><th><table class="table table-bordered">
+												<?php if (count($R4)>0): ?>
+												<tr>
+													<th><?=$R4[0]['air']!=""?$R4[0]['air']:"0";?></th>
+													<th><?=$R4[0]['sr']!=""?$R4[0]['sr']:"0";?></th>
+													<th><?=$R4[0]['marks']!=""?$R4[0]['marks']:"0";?></th>
+												</tr>
+												<?php endif ?>
+											</table></th><th><table class="table table-bordered">
+												<?php if (count($R5)>0): ?>
+												<tr>
+													<th><?=$R5[0]['air']!=""?$R5[0]['air']:"0";?></th>
+													<th><?=$R5[0]['sr']!=""?$R5[0]['sr']:"0";?></th>
+													<th><?=$R5[0]['marks']!=""?$R5[0]['marks']:"0";?></th>
+												</tr>
+												<?php endif ?>
+											</table></th>
+											
+										</tr>
+									<?php } ?>
+									<!-- <?php
+
+									$catids=$this->db->select('distinct(cat_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+									foreach($catids as $catid){
+										$subcategorydatas=$this->db->select('distinct(category_type)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('cat_id',$catid['cat_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+										print_r($subcategorydatas);
+									}
+								}?> -->
+							</table>
+								</div>
+				</div>
+			</div><?php
+							}
+						}	
+
 						?>
+
 <table>
 
 	<tr>

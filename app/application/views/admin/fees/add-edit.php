@@ -232,10 +232,12 @@ function getfeedetail() {
             contentType: false,
             success: function(data){
                 $('.details').html(data);
-                $("textarea").each(function () {
+                setTimeout(function () {
+                 $("textarea").each(function () {
                     let id = $(this).attr('id');
                     CKEDITOR.replace(id);
                 });
+               },500);
             }
         }); 
     }

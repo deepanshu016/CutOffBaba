@@ -3,6 +3,8 @@
 		<section class="hero_single version_4">
 			<div class="wrapper">
 				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-8">
 					<h3>Find what you need!</h3>
 					<p>Discover top rated College, Courses and Exams around the world</p>
 					<form method="post" action="#">
@@ -19,6 +21,8 @@
 						</div>
 						<!-- /row -->
 					</form>
+					</div>
+					</div>
 					<ul class="counter">
 						<li><strong>256,020</strong> Locations</li>
 						<li><strong>150,543</strong> Active users</li>
@@ -27,13 +31,13 @@
 			</div>
 		</section>
 			<div class="bg_color_1">
-			<div class="container-fluid margin_80_55">
+			<div class="container margin_80_55">
 				<div class="row justify-content-center">
 					<?php foreach ($streams as $stream) { ?>
-						<div class="col-lg-2 col-md-6 " >
+						<div class="col-lg-4 col-md-6 " >
 							<a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>" class="box_cat_home text-left" style="background:url('<?=asset_url();?>stream/<?=$stream['stream_image'];?>') no-repeat;background-size: 100% 100%;">
 								<h3 class="text-left"><?=$stream['stream'];?></h3>
-								<?=$stream['description'];?>
+								<p style="max-width:60%;padding:10px;background:rgba(0, 0, 0, 0.3);color:#fff;border-radius:10px "><?=$stream['description'];?></p>
 								<?php $count=$this->db->select('*')->where('stream',$stream['id'])->get('tbl_college')->num_rows(); ?>
 								<ul>
 									<li><strong><?=$count;?></strong>Colleges </li>
@@ -60,7 +64,7 @@
 					<div class="item">
 					<div class="strip grid">
 						<figure>
-							<a href="<?=base_url('college-detail/'.$college['slug']."/".$college['college_id']);?>"><img src="<?=asset_url()."media/image/".$college['college_bannerfile'];?>" class="img-fluid" alt="" width="400" height="266"><div class="read_more"><span>Read more</span></div></a>
+							<a href="<?=base_url('college-detail/'.$college['slug']."/".$college['college_id']);?>"><img src="<?=asset_url()."college/banner/".$college['college_bannerfile'];?>" class="img-fluid" alt="" width="400" height="266"><div class="read_more"><span>Read more</span></div></a>
 							<small><?=$college['full_name'];?></small>
 						</figure>
 						<div class="wrapper">

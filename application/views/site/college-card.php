@@ -1,7 +1,7 @@
 <div class="col-md-3">
 	<div class="strip grid">
 		<figure>
-			<a href="<?=base_url('college-detail/'.$slug."/".$college_id);?>"><img src="<?=asset_url()."media/image/".$college_bannerfile;?>" class="img-fluid" alt="" width="400" height="266"><div class="read_more"><span>Read more</span></div></a>
+			<a href="<?=base_url('college-detail/'.$slug."/".$college_id);?>"><img src="<?=asset_url()."college/banner/".$banner;?>" class="img-fluid" alt="" width="400" height="266"><div class="read_more"><span>Read more</span></div></a>
 							<small><?=$full_name;?></small>
 		</figure>
 		<div class="wrapper">

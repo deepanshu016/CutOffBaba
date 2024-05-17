@@ -4,9 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends MY_Controller {
 	public function __construct() {
    	 	parent::__construct();
-   	 	// $this->load->model('User','us');
-        // $this->load->model('SiteSettings','site');
-        // $this->load->model('CourseCategory','category');
         $this->load->model('MasterModel','master');
     }
 	public function index()
@@ -53,6 +50,7 @@ class Home extends MY_Controller {
                      $gender_data = ($college['gender_accepted']) ? explode('|',$college['gender_accepted']) : [];
                      $collegeData[$key]['college_id'] = $college['id'];
                      $collegeData[$key]['full_name'] = $college['full_name'];
+                     $collegeData[$key]['banner'] = $college['college_banner'];
                      $collegeData[$key]['slug'] = $college['slug'];
                      $collegeData[$key]['short_description'] = $college['short_description'];
                      $collegeData[$key]['popular_name_one'] = $college['popular_name_one'];
@@ -86,7 +84,7 @@ class Home extends MY_Controller {
                     }
                     $college_banner=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_banner']])->get('tbl_uploaded_files')->result_array();
                     if (count($college_banner)>0) {
-                        $collegeData[$key]['college_bannerfile']=$college_logo[0]['file_name'];
+                        $collegeData[$key]['college_bannerfile']=$college_banner[0]['file_name'];
                     }else{$collegeData[$key]['college_bannerfile']="";}
 
 
@@ -113,18 +111,18 @@ class Home extends MY_Controller {
 	public function contactUs()
 	{
 		$data['title'] = 'CUTOFFBABA-Contact Us';		
-		$data['streams']=curlInfo('stream');
-		$data['colleges']=curlInfo('colleges');
-		$data['siteSettings']=curlInfo('sitesettings');
+		$data['streams']=$this->streamdata();		
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
 		$this->load->view('site/contact',$data);
 	}
 
 	public function aboutUs()
 	{
 		$data['title'] = 'CUTOFFBABA-About Us';		
-		$data['streams']=curlInfo('stream');
-		$data['colleges']=curlInfo('colleges');
-		$data['siteSettings']=curlInfo('sitesettings');
+		$data['streams']=$this->streamdata();		
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
 		$this->load->view('site/about',$data);
 	}
 	public function coursesByStream($stream=null)
@@ -134,6 +132,7 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['courseByStreams']=$this->streamdata(['stream'=>str_replace("-"," ",$stream)]);
+		
 		$this->load->view('site/course-by-stream',$data);
 	}
 	public function getcoursedetail($id=null)
@@ -144,6 +143,8 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['courseDetail']=$this->master->singleRecord('tbl_course',['id'=>$id]);
 		$data['courseDetail']=$data['courseDetail'];
+		$colleges=$this->collegeData(['course_offered'=>$id]);
+		$data['colleges']=$colleges;
 		$this->load->view('site/coursedetail',$data);
 	}
 	public function collegeDetail($slug=null,$id=null)

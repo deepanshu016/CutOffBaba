@@ -4,31 +4,44 @@
 			<h1><?=$this->uri->segment('2');?></h1>
 		</div>
 	</div>
-	<main class="pattern">
+	<main>
 		<div class="container margin_60_35">
-			<?php //print_r($courseByStreams); ?>
-			<?php foreach($courseByStreams[0]['degreetype'] as $degreetype){ ?>
-			<div class="main_title_3">
-				<span></span>
-				<h2><?=$degreetype['degreetype'];?></h2>
-			</div>
-			<div class="row add_bottom_30">
-				<?php $i=0;foreach($degreetype['courses'] as $courses){ ?>
-					<div class="col-lg-2 col-md-6 " >
-							<a href="<?=base_url('course/').$courses['id'];?>" class="box_cat_home text-center">
-								<img src="<?=asset_url();?>course/<?=$courses['course_icon'];?>" class="w-50">
-								<h3 class="text-center"><?=$courses['course'];?></h3>
-								<?php $count=$this->db->select('*')->where('stream',$courses['id'])->get('tbl_college')->num_rows(); ?>
-								<ul>
-									<li><strong><?=$count;?></strong>Colleges </li>
-								</ul>
-							</a>
+			<div class="row">
+				<aside class="col-lg-4" id="sidebar">
+					<div id="filters_col">
+						<a data-bs-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
+						<div class="collapse show" id="collapseFilters">
+							<div class="filter_type">
+								<?php foreach($courseByStreams[0]['degreetype'] as $degreetype){ ?>
+									<h6><?=$degreetype['degreetype'];?></h6>
+									<ul>
+										<?php $i=0;foreach($degreetype['courses'] as $courses){ ?>
+											<?php $count=$this->db->select('*')->where('course_offered like',"%".$courses['id']."%")->get('tbl_college')->num_rows(); 
+											if($count>0){?>
+											<li>
+												<a href="<?=base_url('course/').$courses['id'];?>"><label class="container_check"><?=$courses['course'];?> ( <?=$count;?> Colleges )
+												  <input type="checkbox">
+												  <span class="checkmark"></span>
+												</label></a>
+											</li>
+										<?php }} ?>											
+									</ul>
+								<?php } ?>
+							</div>
 						</div>
+						<!--/collapse -->
+					</div>
+					<!--/filters col-->
+				</aside>
+				<!-- /aside -->
 
-				<?php } ?>	
-			</div>
-			<?php } ?>	
+				<div class="col-lg-9">
+					<?php /*foreach ($colleges as $college){
+						$this->load->view('site/college-list',$college);
+					}*/ ?>
+					
+				</div>
+			</div>		
 		</div>
 	</main>
-	
 	<?php $this->load->view('site/footer');?>
