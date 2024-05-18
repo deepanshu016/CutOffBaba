@@ -4,7 +4,7 @@
     if (!empty($colleges)) {
         foreach ($colleges as $college) {
             $combined[] = [
-                'name' => $college['full_name'],
+                'name' => "<a href='".base_url('college-detail/'.$college['slug']."/".$college['id'])."'>".$college['full_name']."</a>",
                 'category' => 'College'
             ];
         }

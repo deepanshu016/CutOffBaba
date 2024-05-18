@@ -435,7 +435,7 @@ class MasterModel extends CI_Model {
 	}
 
 	public function getCollegeWithLikeQuery($keyword){
-		$collegeList = $this->db->select('full_name')->from('tbl_college')
+		$collegeList = $this->db->select('*')->from('tbl_college')
 					  ->like('full_name', $keyword, 'both')
 					  ->or_like('short_name', $keyword, 'both')
 					  ->or_like('popular_name_one', $keyword, 'both')

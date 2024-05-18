@@ -1,4 +1,3 @@
-
 <?php foreach ($result as $college){ ?>
 <div class="strip list_view">
 	<div class="row g-0">

@@ -1,0 +1,9 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2024-05-18 08:16:10 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:16:55 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:25:53 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:29:12 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:29:43 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:30:09 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
+ERROR - 2024-05-18 08:30:42 --> Severity: User Error --> Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. C:\wamp64\www\Project\CutOffBaba\app\vendor\composer\platform_check.php 28
