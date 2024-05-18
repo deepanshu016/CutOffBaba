@@ -143,6 +143,10 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['courseDetail']=$this->master->singleRecord('tbl_course',['id'=>$id]);
 		$data['courseDetail']=$data['courseDetail'];
+		$data['stateList']=$this->master->getRecords('tbl_state',[]);
+		$data['approvalList']=$this->master->getRecords('tbl_approval',[]);
+		$data['ownerList']=$this->master->getRecords('tbl_ownership',[]);
+		$data['genderList']=$this->master->getRecords('tbl_gender',[]);
 		$colleges=$this->collegeData(['course_offered'=>$id]);
 		$data['colleges']=$colleges;
 		$this->load->view('site/coursedetail',$data);
@@ -414,12 +418,16 @@ class Home extends MY_Controller {
 	/// College List with pagination 
 	public function loadCollegesRecord($id=null,$rowno=1)
 	{
+		
+		$datas = $this->input->post();
+		
 		$rowperpage = 5;
 		if($rowno != 0){  
 			$rowno = ($rowno-1) * $rowperpage;  
 		}
-		$collegeCount = count($this->collegeData(['course_offered'=>$id]));
-		$colleges = $this->master->getRecordsbyLimitForPagination('tbl_college',['course_offered'=>$id],$rowperpage,$rowno);
+		$collegeCount = count($this->master->getRecordsbyLimitWithoutPagination('tbl_college',['course_offered'=>$id],$datas));
+		$colleges = $this->master->getRecordsbyLimitForPagination('tbl_college',['course_offered'=>$id],$rowperpage,$rowno,$datas);
+		
 		$config['base_url'] = base_url().'/get-college-data'.'/'.$id.'/'.$rowno;
         $config['use_page_numbers'] = TRUE;  
         $config['total_rows'] = $collegeCount;  

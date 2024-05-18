@@ -1,4 +1,6 @@
-<?php foreach ($result as $college){ ?>
+<?php 
+	if(!empty($result)){
+foreach ($result as $college){ ?>
 <div class="strip list_view">
 	<div class="row g-0">
 		<div class="col-lg-5">
@@ -21,4 +23,10 @@
 		</div>
 	</div>
 </div>
+<?php } } else{?>
+	<div class="strip list_view">
+		<div class="row g-0">
+			No Colleges Found 
+		</div>
+	</div>
 <?php } ?>
