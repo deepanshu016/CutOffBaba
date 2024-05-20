@@ -6,7 +6,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-8">
 						<h3>Find what you need!</h3>
-						<p>Discover top rated College, Courses and Exams around the world</p>
+						<p>Discover Top Rated College, Courses And Exams Around The World</p>
 						<form method="post" action="#">
 							<div class="row g-0 custom-search-input-2 search-container">
 								<div class="col-lg-10">
@@ -37,7 +37,7 @@
 				<div class="col-lg-4 col-md-6 " >
 					<a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>" class="box_cat_home text-left" style="background:url('<?=asset_url();?>stream/<?=$stream['stream_image'];?>') no-repeat;background-size: 100% 100%;">
 						<h3 class="text-left"><?=$stream['stream'];?></h3>
-						<p style="max-width:50%;padding:10px;background:rgba(0, 0, 0, 0.3);color:#fff;border-radius:10px "><?=substr($stream['description'],0,80);?></p>
+						<p style="max-width:70%;padding:10px;background:rgb(0 0 0 / 50%);color:#fff;border-radius:2px "><?=substr($stream['description'],0,80);?></p>
 						
 						<ul>
 							<li><strong><?=$count;?></strong>Colleges </li>

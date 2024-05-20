@@ -14,7 +14,7 @@
 		
 		<nav class="secondary_nav sticky_horizontal_2">
 			<div class="container">
-				<ul class="clearfix d-flex justify-content-between">
+				<ul class="clearfix d-flex scrollmenuss justify-content-between">
 					<li><a href="#basic" class="active">Basic Information</a></li>
 					<li><a href="#fees">Courses & Fees</a></li>
 					<li><a href="#course">Courses & Seats</a></li>
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
 						</section>
-						<section id="fees">	
+						<section class="hhismns" id="fees">	
 							<h3>Course & Fees</h3>
 							<?php 
 							$courses=explode(",", $collegeDetail['course_offered']);
@@ -105,7 +105,7 @@
 									</h5>
 								</div>
 								<div id="course<?=$coursedetaildata['id'];?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
-									<div class="card-body">
+									<div class="card-body table-responsive">
 										<h3>CENTRAL COUNSELLING</h3>
 										<div class="d-flex justify-content-between">
 											<div>
