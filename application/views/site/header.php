@@ -36,7 +36,7 @@
 		    <ul>
 		        <li><span><a href="<?=base_url();?>">Home</a></span></li>
 		        <?php foreach($streams as $stream){ ?>
-		        <li><span><a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>"><?=$stream['stream'];?></a></span>		        	
+		        <li><span><a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']).'/'.$stream['id'];?>"><?=$stream['stream'];?></a></span>		        	
 		            <ul>
 		            	<?php foreach($stream['degreetype'] as $degreetype){ ?>
 		                <li>

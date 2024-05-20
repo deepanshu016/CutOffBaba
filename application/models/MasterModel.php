@@ -426,16 +426,18 @@ class MasterModel extends CI_Model {
 	}
 
 
-	function getRecordsbyLimitForPagination($table = '', $condition=[],$rowperpage, $rowno,$data){
-		$query = $this->db->order_by('id', 'ASC')->limit($rowperpage,$rowno)->where($condition);
+	function getRecordsbyLimitForPagination($table = '', $id,$rowperpage, $rowno,$data){
+		$query = $this->db->order_by('id', 'ASC')->limit($rowperpage,$rowno)->where("FIND_IN_SET('{$id}', course_offered) >",0);
 		
 		if(!empty($data['ownership'])){
 			$query = $query->where_in('affiliated_by',$data['ownership']);
 		}
 		if(!empty($data['approval'])){
+			$this->db->group_start();
 			foreach ($data['approval'] as $approval) {	
 				$query = $query->or_where("FIND_IN_SET('{$approval}', approved_by) >",0);
             }
+			$this->db->group_end();
 		}
 		if(!empty($data['state'])){
 			$query = $query->where_in('state',$data['state']);
@@ -445,18 +447,20 @@ class MasterModel extends CI_Model {
 		}
 		return $query->get($table)->result_array();
 	}
-	function getRecordsbyLimitWithoutPagination($table = '', $condition=[],$data){
+	function getRecordsbyLimitWithoutPagination($table = '', $course_id,$data){
 		$query = $this->db->order_by('id', 'ASC');
-		if(!empty($condition)){
-			$query = $query->where($condition);
+		if(!empty($course_id)){
+			$query = $query->where("FIND_IN_SET('{$course_id}', course_offered) >",0);
 		}
 		if(!empty($data['ownership'])){
 			$query = $query->where_in('affiliated_by',$data['ownership']);
 		}
 		if(!empty($data['approval'])){
+			$this->db->group_start();
 			foreach ($data['approval'] as $approval) {
-				$query = $query->or_where("FIND_IN_SET('{$approval}', approved_by) >",0);
+				$query = $query->where("FIND_IN_SET('{$approval}', approved_by) >",0);
             }
+			$this->db->group_end();
 		}
 		if(!empty($data['state'])){
 			$query = $query->where_in('state',$data['state']);
@@ -499,6 +503,64 @@ class MasterModel extends CI_Model {
 					  ->or_like('branch_name_1', $keyword, 'both')
 					  ->or_like('branch_name_2', $keyword, 'both');
 		return $collegeList->get()->result_array();
+	}
+
+
+	function getRecordsbyLimitForPaginationForStream($table = '', $id,$rowperpage, $rowno,$data){
+		$query = $this->db->order_by('id', 'ASC')->limit($rowperpage,$rowno)->where('stream',$id);
+		
+		if(!empty($data['ownership'])){
+			$query = $query->where_in('affiliated_by',$data['ownership']);
+		}
+		if(!empty($data['courses'])){
+			$this->db->group_start();
+			foreach ($data['courses'] as $course) {	
+				$query = $query->or_where("FIND_IN_SET('{$course}', course_offered) >",0);
+            }
+			$this->db->group_end();
+		}
+		if(!empty($data['approval'])){
+			$this->db->group_start();
+			foreach ($data['approval'] as $approval) {	
+				$query = $query->or_where("FIND_IN_SET('{$approval}', approved_by) >",0);
+            }
+			$this->db->group_end();
+		}
+		if(!empty($data['state'])){
+			$query = $query->where_in('state',$data['state']);
+		}
+		if(!empty($data['gender'])){
+			$query = $query->where_in('gender',$data['gender']);
+		}
+		return $query->get($table)->result_array();
+	}
+	function getRecordsbyLimitWithoutPaginationForStream($table = '', $stream_id,$data){
+		$query = $this->db->order_by('id', 'ASC')->where('stream',$stream_id);
+		
+		if(!empty($data['ownership'])){
+			$query = $query->where_in('affiliated_by',$data['ownership']);
+		}
+		if(!empty($data['courses'])){
+			$this->db->group_start();
+			foreach ($data['courses'] as $course) {	
+				$query = $query->or_where("FIND_IN_SET('{$course}', course_offered) >",0);
+            }
+			$this->db->group_end();
+		}
+		if(!empty($data['approval'])){
+			$this->db->group_start();
+			foreach ($data['approval'] as $approval) {
+				$query = $query->where("FIND_IN_SET('{$approval}', approved_by) >",0);
+            }
+			$this->db->group_end();
+		}
+		if(!empty($data['state'])){
+			$query = $query->where_in('state',$data['state']);
+		}
+		if(!empty($data['gender'])){
+			$query = $query->where_in('gender',$data['gender']);
+		}
+		return $query->get($table)->result_array();
 	}
 }
 

@@ -125,14 +125,20 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$data['siteSettings'][0];
 		$this->load->view('site/about',$data);
 	}
-	public function coursesByStream($stream=null)
+	public function coursesByStream($stream=null,$stream_id)
 	{
 		$data['title'] = 'COURSES | CUTOFFBABA';
 		$data['streams']=$this->streamdata();
 		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['courseByStreams']=$this->streamdata(['stream'=>str_replace("-"," ",$stream)]);
-		
+		$data['stateList']=$this->master->getRecords('tbl_state',[]);
+		$data['approvalList']=$this->master->getRecords('tbl_approval',[]);
+		$data['ownerList']=$this->master->getRecords('tbl_ownership',[]);
+		$data['genderList']=$this->master->getRecords('tbl_gender',[]);
+		$data['streamDetails']=$this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
+		// echo "<pre>";
+		// print_r($data['streamDetails']);die;
 		$this->load->view('site/course-by-stream',$data);
 	}
 	public function getcoursedetail($id=null)
@@ -147,6 +153,7 @@ class Home extends MY_Controller {
 		$data['approvalList']=$this->master->getRecords('tbl_approval',[]);
 		$data['ownerList']=$this->master->getRecords('tbl_ownership',[]);
 		$data['genderList']=$this->master->getRecords('tbl_gender',[]);
+		
 		$colleges=$this->collegeData(['course_offered'=>$id]);
 		$data['colleges']=$colleges;
 		$this->load->view('site/coursedetail',$data);
@@ -425,8 +432,45 @@ class Home extends MY_Controller {
 		if($rowno != 0){  
 			$rowno = ($rowno-1) * $rowperpage;  
 		}
-		$collegeCount = count($this->master->getRecordsbyLimitWithoutPagination('tbl_college',['course_offered'=>$id],$datas));
-		$colleges = $this->master->getRecordsbyLimitForPagination('tbl_college',['course_offered'=>$id],$rowperpage,$rowno,$datas);
+		$collegeCount = count($this->master->getRecordsbyLimitWithoutPagination('tbl_college',$id,$datas));
+		$colleges = $this->master->getRecordsbyLimitForPagination('tbl_college',$id,$rowperpage,$rowno,$datas);
+		
+		$config['base_url'] = base_url().'/get-college-data'.'/'.$id.'/'.$rowno;
+        $config['use_page_numbers'] = TRUE;  
+        $config['total_rows'] = $collegeCount;  
+        $config['per_page'] = $rowperpage;    
+		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';  
+        $config['full_tag_close']   = '</ul></nav></div>';  
+        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';  
+        $config['num_tag_close']    = '</span></li>';  
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';  
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';  
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';  
+        $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';  
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';  
+        $config['prev_tag_close']  = '</span></li>';  
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';  
+        $config['first_tag_close'] = '</span></li>';  
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';  
+        $config['last_tag_close']  = '</span></li>'; 
+		$this->pagination->initialize($config);  	
+		$data['pagination'] = $this->pagination->create_links();  
+        $data['result'] = $colleges;  
+        $data['row'] = $rowno; 
+		$data['html'] = $this->load->view('site/college-list-pagination',$data,true);
+		echo json_encode($data); 
+	}
+	public function loadCollegesRecordByStream($id=null,$rowno=1)
+	{
+		
+		$datas = $this->input->post();
+		
+		$rowperpage = 5;
+		if($rowno != 0){  
+			$rowno = ($rowno-1) * $rowperpage;  
+		}
+		$collegeCount = count($this->master->getRecordsbyLimitWithoutPaginationForStream('tbl_college',$id,$datas));
+		$colleges = $this->master->getRecordsbyLimitForPaginationForStream('tbl_college',$id,$rowperpage,$rowno,$datas);
 		
 		$config['base_url'] = base_url().'/get-college-data'.'/'.$id.'/'.$rowno;
         $config['use_page_numbers'] = TRUE;  
