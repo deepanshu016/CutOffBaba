@@ -19,7 +19,7 @@
 		<div class="container">
 		<div id="logo">
 			<a href="<?=base_url();?>" title="<?=$siteSettings['title'];?>">
-				<img src="<?=asset_url();?>settings/<?=$siteSettings['logo'];?>" width="165" height="80" alt="" class="logo_normal">
+				<img src="<?=asset_url();?>settings/<?=$siteSettings['logo'];?>"  alt="" class="logo_normal" style="    max-width: 77px;">
 			</a>
 		</div>
 		<ul id="top_menu">

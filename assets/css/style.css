@@ -59,7 +59,8 @@ body {
         color: #fff;
         padding: 0 8px 15px;
         font-size: .875rem;
-        font-weight: 500
+        font-weight: 500;
+            text-transform: uppercase;
     }
     .main-menu>ul>li span:hover>a {
         opacity: .7
@@ -434,17 +435,17 @@ a.btn_1.full-width.purchase {
 }
 
 a {
-    color: #004dda;
+   color: #153b62;
     text-decoration: none;
     transition: .3s ease-in-out;
-    outline: 0
+    outline: 0;
 }
 
 .btn_1,
 .btn_add,
 a.btn_1,
 a.btn_add {
-    cursor: pointer;
+       cursor: pointer;
     display: inline-block;
     font-weight: 600;
     -moz-transition: .3s ease-in-out;
@@ -452,8 +453,8 @@ a.btn_add {
     -webkit-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;
     outline: 0;
-    background: #004dda;
-    text-decoration: none
+    background: #153b62;
+    text-decoration: none;
 }
 
 a:focus,
@@ -740,9 +741,9 @@ header.header.sticky .logo_sticky {
 }
 
 header.header_in {
-    padding: 10px 0;
+   padding: 6px 0;
     background-color: #fff;
-    position: relative
+    position: relative;
 }
 
 header.header_in.is_sticky,
@@ -1031,7 +1032,7 @@ ul#additional_links li:after {
     -moz-border-radius: 0 3px 3px 0;
     -ms-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
-    background-color: #004dda;
+        background-color: #153b62;
     transition: .3s ease-in-out;
     outline: 0
 }
@@ -1054,8 +1055,13 @@ ul#additional_links li:after {
 }
 
 .follow_us ul li a i {
-    color: #555;
-    opacity: .6
+    /*color: #555;
+    opacity: .6*/
+        color: #fff;
+    background: #125191;
+    padding: 7px 8px 6px 7px;
+    border-radius: 26px;
+    margin: 0px;
 }
 
 ul#footer-selector {
@@ -1227,6 +1233,83 @@ ul#additional_links li:after {
     .main_title_2 {
         margin-bottom: 10px
     }
+    .hero_single.version_4{
+          margin-top: 39px !important;
+    }
+    .hero_single.version_2 .wrapper p, .hero_single.version_4 .wrapper p{
+            margin: 5px 0 12px !important;
+    }
+    .hero_single.version_4{
+            height: 349px !important;
+                background: url(../img/pattern_1.svg) center bottom repeat-x #062050 !important;
+    }
+    a.box_cat_home ul{
+            margin: 0px 0px -27px 0px !important;
+    background: #ffffffed;
+    max-width: 100% !important;
+    }
+    a.box_cat_home h3{
+            margin-bottom: 19px;
+    font-weight: 800;
+    color: #11366c;
+    text-transform: uppercase;
+    }
+    .scrollmenuss{
+          overflow: auto;
+    max-width: 100%;
+    text-wrap: nowrap;
+
+    }
+   /* .hero_in .restaurant_detail{
+
+    }*/
+    .secondary_nav{
+            background: #1c3f66 !important;
+    padding: 13px 14px !important;
+    }
+    .accordion_2 .card .card-header{
+            border-bottom: 1px solid #0d0e7c !important;
+    padding: 12px !important;
+    }
+    .add_bottom_45{
+        margin-bottom: 10px !important;
+    }
+    .hhismns{
+            margin-top: 15px !important;
+    }
+    .detail_title_1 h1{
+            font-size: 21px !important;
+    margin: 0px 0px 17px !important;
+    }
+    .sub_header_in.sticky_header{
+            margin-top: 67px !important;
+    background: #1d4269;
+    }
+
+    a.box_cat_home{
+            border: 2px solid #172642 !important;
+    }
+    a.box_cat_home{
+            padding: 5px 15px 28px !important;
+    margin-bottom: 14px !important;
+    }
+    .custom-search-input-2 input[type=submit]{
+            font-size: 19px !important;
+    text-transform: uppercase;
+    background: #0c2c68 !important;
+    color: #fff !important;
+    }
+    #logo img{
+            max-width: 38% !important;
+    height: 49% !important;
+    background: #fff;
+    padding: 5px;
+    margin-top: -4px !important;
+    border-radius: 3px;
+    }
+    header.header_in{
+            padding: 24px 14px 14px !important;
+    }
     .main_title_2 h2 {
         font-size: 1.625rem
     }
@@ -1335,9 +1418,9 @@ ul#additional_links li:after {
 }
 
 .hero_single.version_4 {
-    height: 400px;
+        height: 400px;
     margin-top: 80px;
-    background: url(../img/pattern_1.svg) center bottom repeat-x #004dda
+    background: url(../img/pattern_1.svg) center bottom repeat-x #11355e;
 }
 
 .hero_single.version_4 .wrapper {
@@ -2240,8 +2323,8 @@ a.box_news figure img {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #004dda !important;
-    outline: 0 !important
+    background: #153b62 !important;
+    outline: 0 !important;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -3506,7 +3589,7 @@ a.btn_search_mobile {
 .hero_in.hotels_detail .wrapper,
 .hero_in.restaurant_detail .wrapper,
 .hero_in.shop_detail .wrapper {
-    background-color: rgba(0, 0, 0, .2)
+       background-color: rgb(6 6 47 / 64%);
 }
 
 .hero_in.hotels_detail:before {
@@ -3579,8 +3662,8 @@ a.btn_search_mobile {
 }
 
 .secondary_nav {
-    background: #004dda;
-    padding: 15px 0
+   background: #153b62;
+    padding: 7px 0;
 }
 
 .secondary_nav.is_stuck {
@@ -3590,10 +3673,10 @@ a.btn_search_mobile {
 }
 
 .secondary_nav ul li {
-    display: inline-block;
+        display: inline-block !important;
     margin-right: 20px;
     font-weight: 500;
-    font-size: 1rem
+    font-size: 1rem;
 }
 
 .secondary_nav ul li a {
@@ -6626,17 +6709,16 @@ a.social_bt {
 }
 
 #toTop {
-    position: fixed;
+       position: fixed;
     right: 25px;
     bottom: 25px;
     z-index: 9999;
     width: 46px;
     height: 46px;
-    background-color: rgba(0, 0, 0, .6);
-    border-radius: 50%;
+    background-color: rgb(21 59 98);
     font-size: 21px;
     color: #fff;
-    cursor: pointer
+    cursor: pointer;
 }
 
 #cookie-bar,

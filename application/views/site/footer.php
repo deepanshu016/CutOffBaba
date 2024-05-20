@@ -1,16 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <footer class="plus_border">
+
 	<div class="container margin_60_35">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<h3 data-bs-target="#collapse_ft_1">Quick Links</h3>
 				<div class="collapse dont-collapse-sm" id="collapse_ft_1">
 					<ul class="links">
-						<li><a href="<?=base_url('about-us');?>">About us</a></li>
-						<li><a href="#0">Faq</a></li>
-						<li><a href="#0">Help</a></li>
-						<li><a href="#0">My account</a></li>
-						<li><a href="#0">Create account</a></li>
-						<li><a href="#0">Contacts</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="<?=base_url('about-us');?>">About us</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="#0">Faq</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="#0">Help</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="#0">My account</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="#0">Create account</a></li>
+						<li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="#0">Contacts</a></li>
 					</ul>
 				</div>
 			</div>
@@ -19,7 +22,7 @@
 				<div class="collapse dont-collapse-sm" id="collapse_ft_2">
 					<ul class="links">
 						<?php foreach($streams as $stream){ ?>
-					        <li><span><a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>"><?=$stream['stream'];?></a></span></li>
+					        <li><span> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>"><?=$stream['stream'];?></a></span></li>
 					    <?php } ?>	 
 					</ul>
 				</div>
