@@ -41,7 +41,7 @@
 			<?php foreach ($streams as $stream) { ?>
 				<?php $count=$this->db->select('*')->where('stream',$stream['id'])->get('tbl_college')->num_rows(); if($count>0){?>
 				<div class="col-lg-4 col-md-6 " >
-					<a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']);?>" class="box_cat_home text-left" style="background:url('<?=asset_url();?>stream/<?=$stream['stream_image'];?>') no-repeat;background-size: 100% 100%;">
+					<a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']).'/'.$stream['id'];?>" class="box_cat_home text-left" style="background:url('<?=asset_url();?>stream/<?=$stream['stream_image'];?>') no-repeat;background-size: 100% 100%;">
 						<h3 class="text-left"><?=$stream['stream'];?></h3>
 						<p style="max-width:50%;padding:10px;background:rgb(0 0 0 / 50%);color:#fff;border-radius:2px "><?=substr($stream['description'],0,80);?></p>
 						
