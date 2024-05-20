@@ -27,7 +27,7 @@
             ];
         }
     }
-
+///BRANCH WITH COURSE SHORT NAME
     if (!empty($branches)) {
         foreach ($branches as $branch) {
             $combined[] = [

@@ -10,6 +10,7 @@ class Home extends MY_Controller {
 	{
 		$data['title'] = 'CUTOFFBABA';
 		$data['streams']=$this->streamdata();		
+		$data['courses']=$this->coursedata();		
 		$data['colleges']=$this->collegeData([],'12');
 		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings']=$data['siteSettings'][0];
@@ -38,6 +39,27 @@ class Home extends MY_Controller {
                 $stream['degreetype']=$finaldegree;
                 $finalstream[]=$stream;
             }	
+            return $finalstream;
+	}
+	function coursedata($where=[],$limit=null){
+                $degries=$this->db->select('distinct(degree_type)')->get('tbl_course')->result_array();
+                 $finalcourse=array();
+                 $finaldegree=array();
+                foreach ($degries as $degree) {
+                    $deg=array();
+                    $degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+                    $deg=$degry[0];
+                    $courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->get('tbl_course')->result_array();
+                    $finalcourse=array();
+                    foreach ($courses as $course) {
+                        $finalcourse[]=$course;
+                    }
+                    $deg['courses']=$finalcourse;
+                    $finaldegree[]=$deg;
+                }
+                $stream['degreetype']=$finaldegree;
+                $finalstream[]=$stream;
             return $finalstream;
 	}
 	function collegeData($where=[],$limit=null){

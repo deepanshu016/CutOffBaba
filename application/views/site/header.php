@@ -11,6 +11,7 @@
     <link href="<?=base_url('assets/css');?>/style.css" rel="stylesheet">
 	<link href="<?=base_url('assets/css');?>/vendors.css" rel="stylesheet">
 	<link href="<?=base_url('app/assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
+	<link href="<?=base_url('assets/css');?>/tables.css" rel="stylesheet">
 </head>
 <body>		
 	<div id="page">
