@@ -158,8 +158,12 @@ class MasterModel extends CI_Model {
 		return $query->result_array();
 	}
 
-	function getExamCourses($exam_id){
+	public function getExamCoursesList($exam_id){
+		echo $exam_id; die;
+	}
+	public function getExamCourses($exam_id){
 		$examData = $this->db->get_where('tbl_exam',['id'=>$exam_id])->row_array();
+		
 		if(empty($examData)){
 			return [];
 		}
