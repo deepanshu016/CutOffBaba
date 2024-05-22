@@ -618,12 +618,16 @@ Class Authenticate extends MY_Controller {
 	}
     public function userProfile()
 	{
+        $user = $this->session->userdata('user');
         $data['title'] = 'User Dashboard | CUTOFFBABA';
 		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
         $data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
+        
         $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-        $data['coursesList'] = $this->master->getExamCourses($this->session->userdata('user')['selected_exam']);
-		$this->load->view('site/user_profile',$data);
+        $exam_id = $user['selected_exam'];
+        $data['coursesList'] = $this->master->getExamCourses($exam_id);
+		
+        $this->load->view('site/user_profile',$data);
 	}
    
 
