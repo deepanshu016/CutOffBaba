@@ -14,13 +14,12 @@
         </h2>
         <div id="faq-content-<?= $key; ?>" class="accordion-collapse collapse <?= (empty($userPreferences)) ? 'show' : ''; ?>" data-bs-parent="#faqlist">
             <div class="accordion-body fcXvcs">
-            <div class="accordion" id="accordionExample" style="background-color:#141414!important;">
+            <div class="accordion" id="accordionExample" >
                 <div class="accordion-item"> 
                 <?php 
                     if(!empty($levelData)){
                         foreach($levelData as $keys=>$level) { ?>
                         <div class="input-group mb-3 category-wrapper">
-                            <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
                             <select class="form-control raffss get-sub-category" data-key="<?= $key; ?>" data-keys="<?= $keys; ?>"  name="profile[course_data][<?=$key; ?>][category][<?=$keys; ?>][category_id]" id="">
                                 <option value="">Select Central Category</option>
                                 <?php 
@@ -39,7 +38,6 @@
                         <div class="input-group mb-3 sub-category-data"></div>
                 <?php } } ?>
                     <div class="input-group mb-3 category-wrapper">
-                        <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
                         <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="">
                             <option value="">Select Domicile Central</option>
                             <?php 

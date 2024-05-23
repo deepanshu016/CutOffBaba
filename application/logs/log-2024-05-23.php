@@ -1664,3 +1664,393 @@ DEBUG - 2024-05-23 19:18:36 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-05-23 19:18:36 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-05-23 19:18:36 --> 404 Page Not Found: Assets/site
 ERROR - 2024-05-23 19:18:36 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:24:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:24:22 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:24:22 --> cURL Class Initialized
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:24:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:22 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:24:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:24:44 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:24:44 --> cURL Class Initialized
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:24:44 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:44 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:44 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:24:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:44 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:24:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:24:44 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:25:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:25:29 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:25:29 --> cURL Class Initialized
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:25:29 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:25:29 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:25:29 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:25:29 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:25:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:25:29 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:25:29 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:26:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:26:32 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:26:32 --> cURL Class Initialized
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:26:32 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:26:32 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:26:32 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:26:32 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:26:32 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:26:32 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:26:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:26:32 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:30:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:30:39 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:30:39 --> cURL Class Initialized
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Assets/site
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:30:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:30:39 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:30:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:30:39 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:31:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:31:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:31:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:31:41 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:31:41 --> cURL Class Initialized
+ERROR - 2024-05-23 19:31:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:41 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:31:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:31:41 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:31:41 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:31:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:31:41 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:31:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:58 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:31:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:31:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:31:58 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:31:58 --> cURL Class Initialized
+ERROR - 2024-05-23 19:31:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:58 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:31:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:31:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:31:58 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:31:58 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:31:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:31:58 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:32:19 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:32:19 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:32:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:32:19 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:32:19 --> cURL Class Initialized
+ERROR - 2024-05-23 19:32:19 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:32:19 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:32:19 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:19 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:32:19 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:32:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:32:19 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:32:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:32:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:32:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:32:41 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:32:41 --> cURL Class Initialized
+ERROR - 2024-05-23 19:32:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:32:41 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:32:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:41 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:32:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:32:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:32:41 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:32:41 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:33:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:33:02 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:33:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:33:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:33:02 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:33:02 --> cURL Class Initialized
+ERROR - 2024-05-23 19:33:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:33:02 --> UTF-8 Support Enabled
+ERROR - 2024-05-23 19:33:02 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:33:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:33:02 --> 404 Page Not Found: Img/logo.png
+DEBUG - 2024-05-23 19:33:02 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:33:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:33:02 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:33:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:33:49 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:33:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:33:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:33:49 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:33:49 --> cURL Class Initialized
+ERROR - 2024-05-23 19:33:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:33:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:33:49 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:33:49 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:33:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:33:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:33:49 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:33:49 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:34:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:05 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:34:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:34:05 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:34:05 --> cURL Class Initialized
+ERROR - 2024-05-23 19:34:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:34:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:06 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:06 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:34:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:34:06 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:34:06 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:34:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:28 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:34:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:34:28 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:34:28 --> cURL Class Initialized
+ERROR - 2024-05-23 19:34:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:34:28 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:28 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:28 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:34:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:34:28 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:34:28 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:34:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:50 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:34:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:34:50 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:34:50 --> cURL Class Initialized
+ERROR - 2024-05-23 19:34:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:50 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:34:50 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:34:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:34:50 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:34:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:34:50 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:35:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:35:12 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:35:12 --> cURL Class Initialized
+ERROR - 2024-05-23 19:35:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:35:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:35:12 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:35:12 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:35:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:35:22 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:35:22 --> cURL Class Initialized
+ERROR - 2024-05-23 19:35:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:35:22 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:22 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:35:22 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:35:22 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:35:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:44 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:35:44 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:35:44 --> cURL Class Initialized
+ERROR - 2024-05-23 19:35:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:35:44 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:44 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:35:44 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:35:44 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:35:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:57 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:35:58 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:35:58 --> cURL Class Initialized
+ERROR - 2024-05-23 19:35:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:35:58 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:35:58 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:58 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:35:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:35:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:35:58 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:35:58 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:36:23 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:23 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:23 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:36:23 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:23 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:23 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:36:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:36:55 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:36:55 --> cURL Class Initialized
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:55 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:36:55 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:55 --> 404 Page Not Found: Assets/site
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:55 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:36:55 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:36:55 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:36:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:36:55 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:37:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:37:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:37:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:37:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:37:11 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:37:11 --> cURL Class Initialized
+ERROR - 2024-05-23 19:37:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:37:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:37:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:37:11 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:37:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:37:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:37:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:37:11 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:37:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:37:11 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:37:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:37:11 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:38:01 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:38:01 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:38:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-23 19:38:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-23 19:38:01 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-05-23 19:38:01 --> cURL Class Initialized
+ERROR - 2024-05-23 19:38:01 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:38:01 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:38:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:38:01 --> 404 Page Not Found: Img/logo.png
+ERROR - 2024-05-23 19:38:01 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:38:01 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:38:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:38:01 --> 404 Page Not Found: Assets/vendor
+ERROR - 2024-05-23 19:38:01 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-23 19:38:01 --> UTF-8 Support Enabled
+DEBUG - 2024-05-23 19:38:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-23 19:38:01 --> 404 Page Not Found: Assets/vendor

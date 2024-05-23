@@ -14,109 +14,31 @@
 				<h2><i class="fa fa-user"></i>Profile details</h2>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
-					<div class="form-group">
-					   <label>Your photo</label>
-						
-				      </div>
-				</div>
-				<div class="col-md-8 add_top_30">
+				<div class="col-md-12 add_top_30">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div class="form-group">
 								<label>Name</label>
                 <input type="text" class="form-control raforms" placeholder="Full Name*" name="profile[user][name]" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['name']; ?>">
                   <input type="hidden" class="form-control raforms" placeholder="Full Name*" name="profile[user][id]" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['id']; ?>">
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Last name</label>
-								<input type="text" class="form-control" placeholder="Your last name">
-							</div>
-						</div>
-					</div>
-					<!-- /row-->
-					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div class="form-group">
 								<label>Telephone</label>
 								<input type="text" class="form-control " placeholder="123-456-7890" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['mobile']; ?>" name="profile[user][mobile]">
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div class="form-group">
 								<label>Email</label>
 								<input type="text" class="form-control raforms" placeholder="Email Address*" aria-label="Username" aria-describedby="basic-addon1" value="<?= @$user['email']; ?>" name="profile[user][email]">
 							</div>
 						</div>
 					</div>
-					<!-- /row-->
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group">
-								<label>Personal info</label>
-								<textarea style="height:100px;" class="form-control" placeholder="Personal info"></textarea>
-							</div>
-						</div>
-					</div>
-					<!-- /row-->
-				</div>
-			</div>
-		</div>
-		<!-- /box_general-->
-		<div class="row">
-			<div class="col-md-6">
-				<div class="box_general padding_bottom">
-					<div class="header_box version_2">
-						<h2><i class="fa fa-lock"></i>Change password</h2>
-					</div>
-					<div class="form-group">
-						<label>Old password</label>
-						<input class="form-control" type="password">
-					</div>
-					<div class="form-group">
-						<label>New password</label>
-						<input class="form-control" type="password">
-					</div>
-					<div class="form-group">
-						<label>Confirm new password</label>
-						<input class="form-control" type="password">
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="box_general padding_bottom">
-					<div class="header_box version_2">
-						<h2><i class="fa fa-envelope"></i>Change email</h2>
-					</div>
-					<div class="form-group">
-						<label>Old email</label>
-						<input class="form-control" name="old_email" id="old_email" type="email">
-					</div>
-					<div class="form-group">
-						<label>New email</label>
-						<input class="form-control" name="new_email" id="new_email" type="email">
-					</div>
-					<div class="form-group">
-						<label>Confirm new email</label>
-						<input class="form-control" name="confirm_new_email" id="confirm_new_email" type="email">
-					</div>
-				</div>
-			</div>
-		</div>
-    
-        <div class="perTxt bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
+            <div class="row">
+                  <div class="col-md-6">
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss raforms" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vector.png')?>" alt=""> </span>
-                        <input type="file" class="form-control raforms" name="photo" accept="images/*">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss " id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/ststse.png')?>" alt=""> </span>
                         <select class="form-control "  name="profile[user][current_state]" id="">
                             <option value="">Select State</option>
                             <?php 
@@ -126,8 +48,9 @@
                             <?php } } ?>
                         </select>
                     </div>
+                    </div>
+                  <div class="col-md-6">
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss " id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/Vectorss.png')?>" alt=""> </span>
                         <select class="form-control " name="profile[user][current_city]" id="">
                             <option value="">City & District</option>
                             <?php 
@@ -139,14 +62,16 @@
                     </div>
                 </div>
             </div> 
-        </div>
-        <div class="sectionbgs">
-            <div class="container">
-                <div class="row">
+				</div>
+			</div>
+		</div>
+	<div class="box_general padding_bottom">
+      <div class="header_box version_2">
+        <h2><i class="fa fa-user"></i>Examination</h2>
+      </div>
+              <div class="row">
                 <div class="col-md-12">
-                  <h4 class="f16spx">Examination</h4>
                     <div class="input-group mb-3">
-                        <span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/exmas.png')?>" alt=""> </span>
                         <select class="form-control raffss get-courses"  name="profile[user][selected_exam]" id="">
                             <option value="">Select Exam</option>
                             <?php 
@@ -156,8 +81,7 @@
                             <?php } } ?>
                         </select>
                     </div>
-                </div>
-                <div class="rankTest">
+                </div></div>
                     <div class="row">
                         <div class="col-4 ">
                             <input type="text" class="form-control" placeholder="Enter AIR" name="profile[user][air]" value="<?= @$user['air']; ?>"> 
@@ -169,9 +93,14 @@
                             <input type="text" class="form-control" placeholder="Enter Marks"name="profile[user][marks]" value="<?= @$user['marks']; ?>">
                         </div>
                     </div>
-                </div>
+                  </div>
+
+                    <div class="box_general padding_bottom">
+      <div class="header_box version_2">
+        <h2><i class="fa fa-user"></i>Reservation Details</h2>
+      </div>
+      <div class="row">
                 <div class="col-md-12 course-data">
-                    <h4 class="f16spx">Reservation Details</h4>
                     <?php if(!empty($coursesList)) { 
                         $this->load->view('site/user/course_data', ['coursesList'=>$coursesList,'levelData'=>$levelData,'domicileCategory'=>$domicileCategory,'user'=>$user]);
                     } ?>
@@ -180,10 +109,6 @@
             </div>
         </div>
         </form>
-		<!-- /row-->
-		<p><a href="#0" class="btn_1 medium">Save</a></p>
-	  </div>
-	  <!-- /.container-fluid-->
    	</div>
 <?php include('footer.php'); ?>
 <script>
