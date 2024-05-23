@@ -4,19 +4,15 @@ Class Dashboard extends MY_Controller {
 
 	public function __construct() {
    	 	parent::__construct();
-   	 	$this->load->model('SiteSettings','site');
-   	 	$this->load->model('CourseCategory','category');
    	 	$this->load->model('MasterModel','master');
-   	 	$this->load->model('User','us');
     }
 	public function index()
 	{
 		
 		if ($this->is_user_logged_in() == true) {
-			
-			$data['user_session'] = $this->session->userdata('user');
-			$data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-			$this->load->view('site/dashboard',$data);
+			$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+			$data['siteSettings']=$data['siteSettings'][0];
+			$this->load->view('site/user/dashboard',$data);
 		}else{
 			$this->session->set_flashdata('error','Please login first');
 			return redirect('login');

@@ -95,12 +95,13 @@
 		<div class="main_categories">
 			<div class="container">
 				<ul class="clearfix">
-					<!-- <?php foreach ($courses as $course) { //print_r($course);?>
-						<li>
-						<a href="<?=base_url('course/').$courses['id'];?>"><label class="container_check"><?=$courses['course'];?> ( <?=$count;?> Colleges )
-						</label></a>
+					<?php foreach ($courses as $course) { //print_r($course);?>
+						<li >
+						<a href="<?=base_url('course/').$course['id'];?>"class="img-thumbnail m-2">
+							<img src="<?=$course['course_icon']!=""?asset_url()."course/".$course['course_icon']:base_url('assets/img/no-image.jpg');?>"  style="max-height: 150px;width: 100%;margin-bottom: 20px;">
+							<label ><?=$course['course'];?></label></a>
 					</li>
-					<?php  }?> -->
+					<?php  }?>
 				</ul>
 			</div>
 			<!-- /container -->

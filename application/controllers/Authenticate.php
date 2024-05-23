@@ -21,7 +21,7 @@ Class Authenticate extends MY_Controller {
             $userData = $this->master->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
             if(!empty($userData)){
                 $this->session->set_userdata('user',$userData);
-                $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('streams'));
+                $response = array('status' => 'success','message' => 'Logged in successfull','url'=>base_url('user_dashboard'));
             }else{
                 $response = array('status' => 'errors','message' => 'Credentials not matched','url'=>'');
             }
@@ -59,6 +59,7 @@ Class Authenticate extends MY_Controller {
             $result = $this->master->insert('tbl_users',$data);
             if($result){
                 $checkLogin = $this->master->singleRecord('tbl_users',array('id'=>$result));
+                $this->session->userdata('user',$checkLogin);
                 $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('/user_dashboard'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
@@ -82,17 +83,7 @@ Class Authenticate extends MY_Controller {
         ->set_content_type('application/json')
         ->set_output(json_encode($response));
     }
-    public function demo()
-    {
-       if ($this->is_user_logged_in() == false) {
-            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]); 
-            $this->load->view('site/demotext',$data);
-        }else{
-            $this->session->set_flashdata('error','Access not allowed');
-            return redirect('/');
-        }
-    }
-    
+  
 	
 	//Forgot Password
 	public function forgotPassword()
@@ -524,7 +515,7 @@ Class Authenticate extends MY_Controller {
 		$data['coursesList'] = $this->master->getExamCourses($data['user']['selected_exam']);
         $data['levelData'] = $this->master->getRecords('tbl_counselling_level',[]);
         $data['domicileCategory'] = $this->master->getDomicileCategories($data['user']);
-		$this->load->view('site/profile',$data);
+		$this->load->view('site/user-profile',$data);
 	}
     public function forgot_password()
 	{
@@ -619,11 +610,17 @@ Class Authenticate extends MY_Controller {
     public function userProfile()
 	{
         $data['title'] = 'User Dashboard | CUTOFFBABA';
-		$data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
-        $data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
+		$data['title'] = 'Profile | CUTOFFBABA';
+        $data['settings'] = $this->master->singleRecord('tbl_site_settings',['id'=>1]);
+        $data['exams'] = $this->master->getRecords('tbl_exam');
+        $data['states'] = $this->master->getRecords('tbl_state');
+        $data['district'] = $this->master->getRecords('tbl_city');
+        $data['user'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
         $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
-        $data['coursesList'] = $this->master->getExamCourses($this->session->userdata('user')['selected_exam']);
-		$this->load->view('site/user_profile',$data);
+        $data['coursesList'] = $this->master->getExamCourses($data['user']['selected_exam']);
+        $data['levelData'] = $this->master->getRecords('tbl_counselling_level',[]);
+        $data['domicileCategory'] = $this->master->getDomicileCategories($data['user']);
+		$this->load->view('site/user/user-profile',$data);
 	}
    
 
