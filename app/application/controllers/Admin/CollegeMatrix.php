@@ -105,6 +105,7 @@ Class CollegeMatrix extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $json_data = file_get_contents('php://input');
             $request_data = json_decode($json_data, true);
+            
             if(!empty($request_data['branch_id'])){
                 foreach($request_data['branch_id'] as $key=>$branch){
                     $data[$key]['stream_id'] = $request_data['stream_id'];
@@ -112,7 +113,7 @@ Class CollegeMatrix extends MY_Controller {
                     $data[$key]['degree_type_id'] = $request_data['degree_type_id'];
                     $data[$key]['course_id'] = $request_data['course_id'];
                     $data[$key]['branch_id'] = $branch;
-                    $data[$key]['seats'] = (isset($request_data['seats'][$key])) ? $request_data['seats'][$key] : 0;
+                    $data[$key]['seat'] = (isset($request_data['seats'][$key])) ? $request_data['seats'][$key] : 0;
                 }
             }
             $this->master->deleteRecord('tbl_college_seat_matrix_data',['college_id'=>$request_data['college_id']]);

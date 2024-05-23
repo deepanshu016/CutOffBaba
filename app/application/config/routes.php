@@ -16,6 +16,7 @@ $route['about-us'] = 'Home/aboutUs';
 $route['contact-us'] = 'Home/contactUs';
 $route['post-enquiry'] = 'Enquiry/submitEnquiry';
 $route['all-colleges'] = 'Home/allColleges';
+
 $route['college-info/(:any)/(:any)'] = 'Home/collegeInfo/$1/$2';
 $route['college-detail/(:any)/(:any)/(:any)'] = 'Home/collegeDetail/$1/$2/$3';
 $route['terms-condition'] = 'Home/termsConditions';

@@ -26,7 +26,7 @@
                     <?php if(!empty($branchList)) { 
                             $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branchList['id']])->get()->row_array();
                     ?>
-                        <td><input type="hidden" name="branch_id[]" class="form-control branch_id" value="<?= $branch['id']; ?>"><input type="text" placeholder="Seat" name="seat[]" class="form-control" value="<?= empty($SeatMatrixData)?0:$SeatMatrixData['seats']; ?>"></th>
+                        <td><input type="hidden" name="branch_id[]" class="form-control branch_id" value="<?= $branchList['id']; ?>"><input type="text" placeholder="Seat" name="seat[]" class="form-control" value="<?= empty($SeatMatrixData)?0:$SeatMatrixData['seats']; ?>"></th>
                     <?php }  ?>
                     <td><a href="#" class="btn btn-primary save-seat-matrix-data">Save</a></td>
                 </tr>

@@ -16,7 +16,7 @@ $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';
 $route['get-search-filter'] = 'Home/getSearchFilterData';
 
-
+$route['get-cutoff-matrix'] = 'Home/get_cutoff_matrix';
 
 
 

@@ -31,7 +31,7 @@
 				<ul class="clearfix d-flex scrollmenuss justify-content-between">
 					<li><a href="#basic" class="active">Overviews</a></li>
 					<li><a href="#fees">Courses & Fees</a></li>
-					<li><a href="#course">Seat Matrix</a></li>
+					<li><a href="#seat_matrix">Seat Matrix</a></li>
 					<li><a href="#rank">Cutoff & Rank</a></li>
 					<li><a href="#placement">Placement</a></li>
 					<li><a href="#gallery">Gallery</a></li>
@@ -50,83 +50,83 @@
 					<div class="col-lg-12">
 						<section id="basic">
 							<div class="row">
-                     <div class="col-md-9">
-                        <div class="card card-body">
-                           <div class="row">
-                           <div class="col-md-12">
-                              <h4 class="mainShorst">Short Information</h4>
-                           </div>
-                           <div class="clearfix"></div>
-                           <div class="col-md-4 col-12">
-                              <div class="form-group">
-                                 <div class="why-choose-box">
-                                    <div class="icon">
-                                       <img src="https://cutoffbaba.com/Icon/ownership.png">
-                                    </div>
-                                    <div class="content">
-                                       <div class="sp-text-second"><b>Ownership</b></div>
-                                       <div id="tdownership1" class="text-justify">Government</div>
-                                       <input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-5 col-12">
-                              <div class="form-group">
-                                 <div class="why-choose-box">
-                                    <div class="icon">
-                                       <img src="https://cutoffbaba.com/Icon/approved.png">
-                                    </div>
-                                    <div class="content">
-                                       <div class="sp-text-second"><b>Approval</b></div>
-                                       <div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-5">
-                              <div class="form-group">
-                                 <div class="why-choose-box">
-                                    <div class="icon">
-                                       <img src="https://cutoffbaba.com/Icon/hostel.png">
-                                    </div>
-                                    <div class="content">
-                                       <div class="sp-text-second"><b>Hostel</b></div>
-                                       <div id="tdhostel" class="text-justify">Yes</div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-4 col-7">
-                              <div class="why-choose-box">
-                                 <div class="icon">
-                                    <img src="https://cutoffbaba.com/Icon/toilets.png">
-                                 </div>
-                                 <div class="content">
-                                    <div class="sp-text-second"><b>Gender Accepted</b></div>
-                                    <div id="tdgender" class="text-justify">Male &amp; Female</div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-8 col-sm-12">
-                              <div class="why-choose-box">
-                                 <div class="icon">
-                                    <img src="https://cutoffbaba.com/Icon/university.png">
-                                 </div>
-                                 <div class="content">
-                                    <div class="sp-text-second"><b>University</b></div>
-                                    <div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="row mt-4">
-                         <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
-                         <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
-                         <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
-                         <div id="tdother1" class="col-md-6"></div>
-                         <div id="tdother2" class="col-md-6"></div>
-                     </div>
+							<div class="col-md-9">
+								<div class="card card-body">
+								<div class="row">
+								<div class="col-md-12">
+									<h4 class="mainShorst">Short Information</h4>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-md-4 col-12">
+									<div class="form-group">
+										<div class="why-choose-box">
+											<div class="icon">
+											<img src="https://cutoffbaba.com/Icon/ownership.png">
+											</div>
+											<div class="content">
+											<div class="sp-text-second"><b>Ownership</b></div>
+											<div id="tdownership1" class="text-justify">Government</div>
+											<input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-5 col-12">
+									<div class="form-group">
+										<div class="why-choose-box">
+											<div class="icon">
+											<img src="https://cutoffbaba.com/Icon/approved.png">
+											</div>
+											<div class="content">
+											<div class="sp-text-second"><b>Approval</b></div>
+											<div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-5">
+									<div class="form-group">
+										<div class="why-choose-box">
+											<div class="icon">
+											<img src="https://cutoffbaba.com/Icon/hostel.png">
+											</div>
+											<div class="content">
+											<div class="sp-text-second"><b>Hostel</b></div>
+											<div id="tdhostel" class="text-justify">Yes</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4 col-7">
+									<div class="why-choose-box">
+										<div class="icon">
+											<img src="https://cutoffbaba.com/Icon/toilets.png">
+										</div>
+										<div class="content">
+											<div class="sp-text-second"><b>Gender Accepted</b></div>
+											<div id="tdgender" class="text-justify">Male &amp; Female</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8 col-sm-12">
+									<div class="why-choose-box">
+										<div class="icon">
+											<img src="https://cutoffbaba.com/Icon/university.png">
+										</div>
+										<div class="content">
+											<div class="sp-text-second"><b>University</b></div>
+											<div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								<div class="row mt-4">
+								<div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
+								<div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
+								<div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
+								<div id="tdother1" class="col-md-6"></div>
+								<div id="tdother2" class="col-md-6"></div>
+							</div>
                         </div>
                      </div>
                      <div class="col-md-3"></div>
@@ -162,32 +162,89 @@
 							foreach ($dtype as $key => $value) {
 								$degree_type=$this->db->select('*')->where_in('id',$value['degree_type'])->get('tbl_degree_type')->result_array();
 								?>
-						<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
-							<div class="card">
-								<div class="card-header" role="tab">
-									<h5 class="mb-0">
-										<a data-bs-toggle="collapse" href="#collapse<?=$key;?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $degree_type[0]['degreetype']; ?></a>
-									</h5>
-								</div>
+								<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
+									<div class="card">
+										<div class="card-header" role="tab">
+											<h5 class="mb-0">
+												<a data-bs-toggle="collapse" href="#collapse<?=$key;?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $degree_type[0]['degreetype']; ?></a>
+											</h5>
+										</div>
 
-								<div id="collapse<?=$key;?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
-									<div class="card-body">
-										<?php $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
-										foreach ($courselist as $course) {
-										?>
-										<h5 class="title"><?=$course['course_full_name']."( ".$course['course']." )";?></h5>
-										<?=$course['course_fees'];?>
-									<?php } ?>
-										
+										<div id="collapse<?=$key;?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
+											<div class="card-body">
+												<?php $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
+												foreach ($courselist as $course) {
+													$collegeFeesWithCourse = $this->db->select('*')->where('college_id',$course['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
+												?>
+												<h5 class="title"><?=$course['course_full_name']."( ".$course['course']." )";?></h5>
+												<?=$course['course_fees'];?>
+
+												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['tution_fees']) ? $collegeFeesWithCourse['tution_fees'] : ''; ?>
+												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['hostel_fees']) ? $collegeFeesWithCourse['hostel_fees'] : ''; ?>		
+												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['misc_fees']) ? $collegeFeesWithCourse['misc_fees'] : ''; ?>		
+												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['seat_indentity_charges']) ? $collegeFeesWithCourse['seat_indentity_charges'] : ''; ?>		
+												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['upgradation_processing_fees']) ? $collegeFeesWithCourse['upgradation_processing_fees'] : ''; ?>		
+											<?php } ?>
+												
+											</div>
+										</div>
+									</div>
+
+								</div>
+							<?php } ?>
+						</section>
+						<section id="seat_matrix">
+							<h3>Seat Matrix</h3>
+							<?php  
+								$coursess=explode(",", $collegeDetail['course_offered']);
+								$degreeType=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
+								foreach ($degreeType as $key => $degree) {		
+									$degree_types=$this->db->select('*')->where_in('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();			
+							?>	
+								<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
+									<div class="card">
+										<div class="card-header" role="tab">
+											<h5 class="mb-0">
+												<a data-bs-toggle="collapse" href="#collapse<?=$key;?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $degree_types[0]['degreetype']; ?></a>
+											</h5>
+										</div>
+										<div id="collapse<?=$key;?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
+											<div class="card-body">
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col">Course</th>
+															<th scope="col">Branches & Seats</th>
+														</tr>
+													</thead>
+													<tbody>
+														<?php $courselist=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where_in('id',$coursess)->get('tbl_course')->result_array();
+															foreach ($courselist as $course) {
+																$branchList = $this->db->select('*')->where('courses',$course['id'])->get('tbl_branch')->result_array();
+														?>
+															<tr>
+																<td><?= $course['course']; ?></td>
+																<td>
+																	<?php 
+																	if(!empty($branchList)){
+																		foreach($branchList as $branch){ 
+																			$SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id'],'degree_type_id'=>$degree_types[0]['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id']])->get()->row_array();
+																			
+																	?>
+																		<p><?= $branch['branch'] ?> : <?= !empty($SeatMatrixData) ? '<b>'.$SeatMatrixData['seat'].' Seats </b>': '0'; ?></p>	
+																	<?php } } ?>
+																</td>
+															</tr>
+														<?php } ?>
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-
-						</div>
-					<?php } ?>
+							<?php } ?>
 						</section>
 						<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
-							
 						<?php 
 						$courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
 						foreach($courseids as $courseid){
@@ -202,136 +259,38 @@
 										<a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
 									</h5>
 								</div>
-								<div id="course<?=$coursedetaildata['id'];?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
+								<div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
 									<div class="card-body table-responsive">
 										<h3>CENTRAL COUNSELLING</h3>
 										<div class="d-flex justify-content-between">
 											<div>
-												<select class="form-control form-select">
-													<option>Sub Category</option>
-												</select>
-											</div>
-											<div>
-												<select class="form-control form-select">
-													<option>Sub Category</option>
-												</select>
-											</div>
-										</div>
-								<?php 
-								$branchids=$this->db->select('distinct(branch_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-								foreach($branchids as $branchid){
-									?>
-									<table class="table table-bordered text-center">
-										<tr>
-											<th>Category</th>
-											<th>Round 1</th>
-											<th>Round 2</th>
-											<th>Round 3</th>
-											<th>Round 4</th>
-											<th>Round 5</th>
-										</tr>
-										<tr>
-											<th></th>
-											<th><table class="table table-bordered">
-												<tr>
-													<th>AIR</th>
-													<th>SR</th>
-													<th>Marks</th>
-												</tr>
-											</table></th><th><table class="table table-bordered">
-												<tr>
-													<th>AIR</th>
-													<th>SR</th>
-													<th>Marks</th>
-												</tr>
-											</table></th><th><table class="table table-bordered">
-												<tr>
-													<th>AIR</th>
-													<th>SR</th>
-													<th>Marks</th>
-												</tr>
-											</table></th><th><table class="table table-bordered">
-												<tr>
-													<th>AIR</th>
-													<th>SR</th>
-													<th>Marks</th>
-												</tr>
-											</table></th><th><table class="table table-bordered">
-												<tr>
-													<th>AIR</th>
-													<th>SR</th>
-													<th>Marks</th>
-												</tr>
-											</table></th>
-											
-										</tr>
-										<?php
-									$catids=$this->db->select('distinct(category_type)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('cat_id',20)->get('tbl_cutfoff_marks_data')->result_array(); 
-									foreach($catids as $catid){
-										$branchdetaildata=$this->db->select('*')->where('id',$catid['category_type'])->get('tbl_sub_category')->result_array();
-									$R1=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_one',1)->get('tbl_cutfoff_marks_data')->result_array();
-									 
-									$R2=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_two',1)->get('tbl_cutfoff_marks_data')->result_array(); 
-									$R3=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_three',1)->get('tbl_cutfoff_marks_data')->result_array(); 
-									$R4=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_four',1)->get('tbl_cutfoff_marks_data')->result_array(); 
-									$R5=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_five',1)->get('tbl_cutfoff_marks_data')->result_array(); 
-									?>
-										<tr>
-											<th><?=$branchdetaildata[0]['sub_category_name'];?></th>
-											<th><table class="table table-bordered">
-												<?php if (count($R1)>0): ?>
-												<tr>
-													<th><?=$R1[0]['air']!=""?$R1[0]['air']:"0";?></th>
-													<th><?=$R1[0]['sr']!=""?$R1[0]['sr']:"0";?></th>
-													<th><?=$R1[0]['marks']!=""?$R1[0]['marks']:"0";?></th>
-												</tr>
-												<?php endif ?>
-											</table></th>
-											<th><table class="table table-bordered">
-												<?php if (count($R2)>0): ?>
-												<tr>
-													<th><?=$R2[0]['air']!=""?$R2[0]['air']:"0";?></th>
-													<th><?=$R2[0]['sr']!=""?$R2[0]['sr']:"0";?></th>
-													<th><?=$R2[0]['marks']!=""?$R2[0]['marks']:"0";?></th>
-												</tr>
-												<?php endif ?>
-											</table></th><th><table class="table table-bordered">
-												<?php if (count($R3)>0): ?>
-												<tr>
-													<th><?=$R3[0]['air']!=""?$R3[0]['air']:"0";?></th>
-													<th><?=$R3[0]['sr']!=""?$R3[0]['sr']:"0";?></th>
-													<th><?=$R3[0]['marks']!=""?$R3[0]['marks']:"0";?></th>
-												</tr>
-												<?php endif ?>
-											</table></th><th><table class="table table-bordered">
-												<?php if (count($R4)>0): ?>
-												<tr>
-													<th><?=$R4[0]['air']!=""?$R4[0]['air']:"0";?></th>
-													<th><?=$R4[0]['sr']!=""?$R4[0]['sr']:"0";?></th>
-													<th><?=$R4[0]['marks']!=""?$R4[0]['marks']:"0";?></th>
-												</tr>
-												<?php endif ?>
-											</table></th><th><table class="table table-bordered">
-												<?php if (count($R5)>0): ?>
-												<tr>
-													<th><?=$R5[0]['air']!=""?$R5[0]['air']:"0";?></th>
-													<th><?=$R5[0]['sr']!=""?$R5[0]['sr']:"0";?></th>
-													<th><?=$R5[0]['marks']!=""?$R5[0]['marks']:"0";?></th>
-												</tr>
-												<?php endif ?>
-											</table></th>
-											
-										</tr>
-									<?php } ?>
-									<!-- <?php
+												<input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
+												<input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
+												<select class="form-control form-select get_cutoff_matrix">
+													<option>Year</option>
+													<?php
+													// Get the current year
+													$currentYear = date("Y");
 
-									$catids=$this->db->select('distinct(cat_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-									foreach($catids as $catid){
-										$subcategorydatas=$this->db->select('distinct(category_type)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('cat_id',$catid['cat_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-										print_r($subcategorydatas);
-									}
-								}?> -->
-							</table>
+													// Loop to display the last 4 years
+													for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
+														echo "<option value='$i'>$i</option>";
+													}
+													?>
+												</select>
+											</div>
+											<!-- <div>
+												<select class="form-control form-select">
+													<option>Sub Category</option>
+												</select>
+											</div> -->
+										</div>
+										<div class="cutoff_matrix">
+											<?php
+											$year = 2023;
+											?>
+											<?php $this->load->view('site/show_college_matrix',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
+										</div>		
 								</div>
 				</div>
 			</div><?php
@@ -469,6 +428,22 @@
 							</div>
 							<!-- /review-container -->
 						</section>
+						<section id="gallery">
+							<h2>College gallery</h2>
+							<div class="col-md-12">
+								<div class="row">
+									<?php if(!empty($collegeGallery)){
+										foreach($collegeGallery as $gallery){ ?>
+									<div class="col-md-4">
+										<div class="gallery-item" style="padding: 15px 5px 5px;margin-left: -10px;">
+											<img style="max-height: 200px;" src="<?= base_url('app/assets/uploads/media/image/').$gallery['file_name'];?>" alt="">
+										</div>
+									</div>
+									<?php } } ?> 
+								</div>
+							</div>	
+							
+						</section>
 						<!-- /section -->
 						<hr>
 
@@ -571,3 +546,21 @@
 	</main>
 
 <?php $this->load->view('site/footer');?>
+<script>
+	$(function() {
+		$("body").on("change",".get_cutoff_matrix",function(e){
+			var year = $(this).val();
+			var course_id = $("input[name='course_id']").val();
+			var college_id = $('.college_id').val();
+			$.ajax({
+				url: "<?php echo base_url('get-cutoff-matrix'); ?>",
+				type: "POST",
+				data: {year:year,course_id:course_id,college_id:college_id},
+				dataType: 'json',
+				success: function(data){
+					$(this).closest('.card-body').find('.cutoff_matrix').html(data.html);
+				}
+			});
+		});
+	});
+</script>
