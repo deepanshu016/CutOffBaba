@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from www.ansonika.com/sparker/index-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 23:49:25 GMT -->
+<!-- Mirrored from www.ansonika.com/sparker/index-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 15:05:28 GMT -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
 
     <!-- ALTERNATIVE COLORS CSS -->
 	<link href="#" id="colors" rel="stylesheet">
-
+	
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 		
 	<header class="header menu_fixed">
 		<div id="logo">
-			<a href="index.html" title="Sparker - Directory and listings template">
+			<a href="index-2.html" title="Sparker - Directory and listings template">
 				<img src="img/logo.svg" width="165" height="35" alt="" class="logo_normal">
 				<img src="img/logo_sticky.svg" width="165" height="35" alt="" class="logo_sticky">
 			</a>
@@ -58,16 +58,16 @@
 		    <ul>
 		        <li><span><a href="#0">Home</a></span>
 		            <ul>
-		                <li><a href="index.html">Home version 1</a></li>
-		                <li><a href="index-2.html">Home version 2</a></li>
-		                <li><a href="index-3.html">Home version 3</a></li>
-		                <li><a href="index-4.html">Home version 4</a></li>
-		                <li><a href="index-5.html">Home version 5</a></li>
+		                <li><a href="index-2.html">Home version 1</a></li>
+		                <li><a href="index-3.html">Home version 2</a></li>
+		                <li><a href="index-4.html">Home version 3</a></li>
+		                <li><a href="index-5.html">Home version 4</a></li>
+		                <li><a href="index-6.html">Home version 5</a></li>
 		                <li><a href="index-8.html">Home Kenburns <strong>New!</strong></a></li>
 		                <li><a href="index-9.html">Youtube/Vimeo <strong>New!</strong></a></li>
 		                <li><a href="index-10.html">Home Mp4 Video <strong>New!</strong></a></li>
-		                <li><a href="index-6.html">Home version 6 (GDPR)</a></li>
-		                <li><a href="index-7.html">Src Address Autocomplete</a></li>
+		                <li><a href="index-7.html">Home version 6 (GDPR)</a></li>
+		                <li><a href="index-11.html">Src Address Autocomplete</a></li>
 		            </ul>
 		        </li>
 		        <li><span><a href="#0">Listings</a></span>
@@ -110,7 +110,7 @@
 								<li><a href="listing-map-openstreetmap.html">Listing Map</a></li>
 							</ul>
 		                </li>
-		                <li>
+		               <li>
 		                    <span><a href="#0">Detail pages</a></span>
 		                    <ul>
 		                        <li><a href="detail-hotel.html">Detail page 1</a></li>
@@ -182,7 +182,7 @@
 							</div>
 							<div class="col-lg-3">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Where" id="autocomplete">
+									<input class="form-control" type="text" placeholder="Where">
 									<i class="icon_pin_alt"></i>
 								</div>
 							</div>
@@ -448,17 +448,14 @@
 		
 		<div class="container margin_80_55">
 			<div class="main_title_2">
-				<span><em></em></span>
-				<h2>Sparker App Available</h2>
-				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-			</div>
+						<span><em></em></span>
+						<h2>Sparker App Available</h2>
+						<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+					</div>
 			<div class="row justify-content-center text-center">
 				<div class="col-md-6">
 					<img src="img/mobile.svg" alt="" class="img-fluid add_bottom_45">
-					<div class="app_icons">
-						<a href="#0" class="pe-lg-2"><img src="img/app_android.svg" alt=""></a>
-						<a href="#0" class="ps-lg-2"><img src="img/app_apple.svg" alt=""></a>
-					</div>
+					<div class="app_icons"><a href="#0" class="pe-lg-2"><img src="img/app_android.svg" alt=""></a> <a href="#0" class="ps-lg-2"><img src="img/app_apple.svg" alt=""></a></div>
 					<div class="add_bottom_15"><small>*An eum dolores tractatos, aeterno menandri deseruisse ut eum.</small></div>
 				</div>
 			</div>
@@ -628,34 +625,17 @@
 	
 	<!-- SPECIFIC SCRIPTS -->
 	<script src="js/animated_canvas_min.js"></script>
+	<script src="js/jquery.cookiebar.js"></script>
+	<script>
+		$(document).ready(function() {
+			'use strict';
+			$.cookieBar({
+				fixed: true
+			});
+		});
+	</script>
 
-	<!-- Autocomplete -->
-    <script>
-    function initMap() {
-	  var input = document.getElementById('autocomplete');
-	  var autocomplete = new google.maps.places.Autocomplete(input);
-	 
-	  autocomplete.addListener('place_changed', function() {
-	    var place = autocomplete.getPlace();
-	    if (!place.geometry) {
-	      window.alert("Autocomplete's returned place contains no geometry");
-	      return;
-	    }
-
-	    var address = '';
-	    if (place.address_components) {
-	      address = [
-	        (place.address_components[0] && place.address_components[0].short_name || ''),
-	        (place.address_components[1] && place.address_components[1].short_name || ''),
-	        (place.address_components[2] && place.address_components[2].short_name || '')
-	      ].join(' ');
-	    } 
-	  });
-	}
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgI03_4XvqP9TOZcKHEYOZ53iQS3V5Ixo&amp;libraries=places&amp;callback=initMap"></script>
-
-    <!-- COLOR SWITCHER  -->
+	 <!-- COLOR SWITCHER  -->
 	<script src="js/switcher.js"></script>
 	<div id="style-switcher">
 		<h6>Color Switcher <a href="#"><i class="ti-settings"></i></a></h6>
@@ -679,5 +659,5 @@
 
 </body>
 
-<!-- Mirrored from www.ansonika.com/sparker/index-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Apr 2024 23:49:25 GMT -->
+<!-- Mirrored from www.ansonika.com/sparker/index-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 15:05:28 GMT -->
 </html>

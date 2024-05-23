@@ -14,7 +14,10 @@ $route['states/(:any)'] = 'Home/stateList/$1';
 $route['loginchk'] = 'Authenticate/login';
 $route['signup'] = 'Home/signup';
 $route['register'] = 'Authenticate/register';
+$route['user_dashboard'] = 'Dashboard';
 $route['get-search-filter'] = 'Home/getSearchFilterData';
+$route['logout'] = 'Authenticate/logout';
+$route['user-profile'] = 'Authenticate/userProfile';
 
 
 
@@ -24,12 +27,6 @@ $route['get-search-filter'] = 'Home/getSearchFilterData';
 
 
 
-
-
-// $route['login'] = 'home/login';
-// $route['loginchk'] = 'Authenticate/login';
-// $route['signup'] = 'Home/signup';
-// $route['register'] = 'Authenticate/register';
 // $route['forgot-password'] = 'Home/forgot_password';
 // $route['streams'] = 'Home/streams';
 // $route['our-success-story'] = 'Home/browseSuccessStories';
@@ -45,7 +42,7 @@ $route['get-search-filter'] = 'Home/getSearchFilterData';
 // $route['news'] = 'Home/news';
 // $route['news-detail/(:any)/(:any)'] = 'Home/newsDetail/$1/$2';
 // $route['edit-profile'] = 'Authenticate/EditUserProfile';
-// $route['profile'] = 'Authenticate/userProfile';
+// 
 // $route['search'] = 'Home/searchPage';
 // $route['payments'] = 'Home/paymentList';
 // $route['search-content'] = 'Home/searchContent';
@@ -73,4 +70,4 @@ $route['get-search-filter'] = 'Home/getSearchFilterData';
 // $route['small/about-us'] = 'SmallScreen/Home/about_us';
 // $route['testimonials'] = 'Home/testimonials';
 // $route['testimonial-explore'] = 'Home/testimonials_explore';
-// $route['user/logout'] = 'SmallScreen/Authenticate/logout';
+// 
