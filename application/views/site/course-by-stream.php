@@ -16,7 +16,7 @@
 					<div id="filters_col">
 						<a data-bs-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
 						<div class="collapse show" id="collapseFilters">
-							<div class="filter_type">
+							<div class="filter_type mb-3">
 								<?php foreach($courseByStreams[0]['degreetype'] as $degreetype){ 
 									?>
 									<h6><?=$degreetype['degreetype'];?></h6>
@@ -36,8 +36,13 @@
 									</ul>
 								<?php } ?>
 							</div>
+						</div>
+					</div>
+					<div id="filters_col">
+						<div class="collapse show" id="collapseFilters">
+							<h6>Affiliation</h6>
 							<div class="filter_type">
-								<h6>Affiliation</h6>
+								
 								<ul>
 									<?php if(!empty($ownerList)) { 
 										foreach($ownerList as $owner){ 
@@ -52,6 +57,10 @@
 									<?php } } ?>
 								</ul>
 							</div>
+							</div>
+					</div>
+					<div id="filters_col">
+						<div class="collapse show" id="collapseFilters">
 							<div class="filter_type">
 								<h6>Approvals</h6>
 								<ul>
@@ -68,6 +77,10 @@
 									<?php } } ?>
 								</ul>
 							</div>
+							</div>
+					</div>
+					<div id="filters_col">
+						<div class="collapse show" id="collapseFilters">
 							<div class="filter_type">
 								<h6>Gender</h6>
 								<ul>
@@ -84,6 +97,10 @@
 									<?php } } ?>
 								</ul>
 							</div>
+							</div>
+					</div>
+					<div id="filters_col">
+						<div class="collapse show" id="collapseFilters">
 							<div class="filter_type">
 								<h6>States</h6>
 								<ul>

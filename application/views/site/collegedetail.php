@@ -1,9 +1,9 @@
 <?php $this->load->view('site/header');?>
 <main>		
-	<style type="text/css">
+	<!-- <style type="text/css">
 .hero_in.restaurant_detail:before{background: url('<?=asset_url()."college/banner/".$collegeDetail['college_banner'];?>') no-repeat;background-size: 100% 100%;background-position: center;}
-	</style>
-		<div class="hero_in restaurant_detail">
+	</style> -->
+		<div class="hero_in restaurant_detail" style="no-repeat;background-size: 100% 100%;background-position: center; background-image:url('https://www.gdcamritsar.com/wp-content/uploads/2016/07/cu_banner-1.jpg');">
 			<div class="wrapper">
 				<span class="magnific-gallery">
 					<a href="img/gallery/hotel_list_1.jpg" class="btn_photos" title="Photo title" >Download Brouchure</a>
@@ -11,17 +11,33 @@
 			</div>
 		</div>
 		<!--/hero_in-->
+
+		<section class="main_posyion d-none d-sm-block d-sm-none d-md-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<img class="lofcss" src="https://www.freeiconspng.com/thumbs/logo-design/circle-logo-brand-design-png-transparent-image-19.png"> 
+					</div>
+					<div class="col-md-4">
+						<h4 class="text-white lefts">Punjab Government Dental College and Hospital, Amritsar: Admission, Courses, Fees, Placements</h4> 
+						<p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> Amritsar, Punjab  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD 1969 </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliated College : </span> of Baba Farid University of Health Sciences, Faridkot</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 		<nav class="secondary_nav sticky_horizontal_2">
 			<div class="container">
 				<ul class="clearfix d-flex scrollmenuss justify-content-between">
-					<li><a href="#basic" class="active">Basic Information</a></li>
+					<li><a href="#basic" class="active">Overviews</a></li>
 					<li><a href="#fees">Courses & Fees</a></li>
-					<li><a href="#course">Courses & Seats</a></li>
+					<li><a href="#course">Seat Matrix</a></li>
 					<li><a href="#rank">Cutoff & Rank</a></li>
 					<li><a href="#placement">Placement</a></li>
 					<li><a href="#gallery">Gallery</a></li>
 					<li><a href="#admission">Admission</a></li>
+					<li><a href="#hospital">Hospital Details</a></li>
+					<li><a href="#contacts">Contact Us</a></li>
 
 					<li><a href="#reviews">Reviews</a></li>
 				</ul>
@@ -33,6 +49,88 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<section id="basic">
+							<div class="row">
+                     <div class="col-md-9">
+                        <div class="card card-body">
+                           <div class="row">
+                           <div class="col-md-12">
+                              <h4 class="mainShorst">Short Information</h4>
+                           </div>
+                           <div class="clearfix"></div>
+                           <div class="col-md-4 col-12">
+                              <div class="form-group">
+                                 <div class="why-choose-box">
+                                    <div class="icon">
+                                       <img src="https://cutoffbaba.com/Icon/ownership.png">
+                                    </div>
+                                    <div class="content">
+                                       <div class="sp-text-second"><b>Ownership</b></div>
+                                       <div id="tdownership1" class="text-justify">Government</div>
+                                       <input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-5 col-12">
+                              <div class="form-group">
+                                 <div class="why-choose-box">
+                                    <div class="icon">
+                                       <img src="https://cutoffbaba.com/Icon/approved.png">
+                                    </div>
+                                    <div class="content">
+                                       <div class="sp-text-second"><b>Approval</b></div>
+                                       <div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-5">
+                              <div class="form-group">
+                                 <div class="why-choose-box">
+                                    <div class="icon">
+                                       <img src="https://cutoffbaba.com/Icon/hostel.png">
+                                    </div>
+                                    <div class="content">
+                                       <div class="sp-text-second"><b>Hostel</b></div>
+                                       <div id="tdhostel" class="text-justify">Yes</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4 col-7">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/toilets.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Gender Accepted</b></div>
+                                    <div id="tdgender" class="text-justify">Male &amp; Female</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-8 col-sm-12">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/university.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>University</b></div>
+                                    <div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row mt-4">
+                         <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
+                         <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
+                         <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
+                         <div id="tdother1" class="col-md-6"></div>
+                         <div id="tdother2" class="col-md-6"></div>
+                     </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3"></div>
+                  </div>
 							<div class="detail_title_1">
 								<h1><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h1>
 								<a class="address" href="https://www.google.com/maps/dir//Assistance+–+Hôpitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+Hôpitaux+de+Paris+(AP-HP)+-+Siège!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"><?=$collegeDetail['full_name'];?></a>
@@ -44,11 +142,11 @@
                                     <div class="col-md-12">
                                         <ul>
                                             <li>Estd. Year : <span><?=$collegeDetail['establishment'];?></span></li>
-                                            <!-- <li>Gender Accepted : <span><?=$collegeDetail['gender'];?></span></li> -->
+                                            
                                             <li>Affliated From : <span><?=$collegeDetail['university_name'];?></span></li>
                                             <li>University : <span><?=$collegeDetail['university_name'];?></span></li>
                                             <li>Approved By : <span>9 AM - 5 PM</span></li>
-                                            <!-- <li>Ownership : <span><?=$collegeDetail['ownertitle'];?></span></li> -->
+                                             
                                         </ul>
                                     </div>
                                 </div>
@@ -58,9 +156,9 @@
 							<h3>Course & Fees</h3>
 							<?php 
 							$courses=explode(",", $collegeDetail['course_offered']);
-							//print_r($courses);
+							 
 							$dtype=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
-							//print_r($dtype);
+							 
 							foreach ($dtype as $key => $value) {
 								$degree_type=$this->db->select('*')->where_in('id',$value['degree_type'])->get('tbl_degree_type')->result_array();
 								?>
@@ -96,7 +194,7 @@
 							$coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
 							if (count($coursedetaildata)>0) {
 								$coursedetaildata=$coursedetaildata[0];
-								//print_r($coursedetaildata);
+								 
 								?>
 								<div class="card">
 								<div class="card-header" role="tab">
@@ -172,7 +270,7 @@
 									foreach($catids as $catid){
 										$branchdetaildata=$this->db->select('*')->where('id',$catid['category_type'])->get('tbl_sub_category')->result_array();
 									$R1=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_one',1)->get('tbl_cutfoff_marks_data')->result_array();
-									//echo $this->db->last_query(); 
+									 
 									$R2=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_two',1)->get('tbl_cutfoff_marks_data')->result_array(); 
 									$R3=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_three',1)->get('tbl_cutfoff_marks_data')->result_array(); 
 									$R4=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('cat_id',20)->where('year',2023)->where('round_four',1)->get('tbl_cutfoff_marks_data')->result_array(); 

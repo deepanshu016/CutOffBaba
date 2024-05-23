@@ -136,3 +136,74 @@ DEBUG - 2024-05-21 01:17:37 --> Total execution time: 0.1603
 DEBUG - 2024-05-21 01:17:38 --> Total execution time: 0.0336
 DEBUG - 2024-05-21 01:18:13 --> Total execution time: 0.1768
 DEBUG - 2024-05-21 01:18:14 --> Total execution time: 0.0470
+ERROR - 2024-05-21 01:48:25 --> Severity: Warning --> Undefined array key "id" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+ERROR - 2024-05-21 01:48:25 --> Severity: Warning --> Undefined array key "course" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+DEBUG - 2024-05-21 01:48:25 --> Total execution time: 0.1568
+ERROR - 2024-05-21 01:48:27 --> Severity: Warning --> Undefined array key "id" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+ERROR - 2024-05-21 01:48:27 --> Severity: Warning --> Undefined array key "course" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+DEBUG - 2024-05-21 01:48:27 --> Total execution time: 0.1442
+ERROR - 2024-05-21 01:48:28 --> Severity: Warning --> Undefined array key "id" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+ERROR - 2024-05-21 01:48:28 --> Severity: Warning --> Undefined array key "course" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+DEBUG - 2024-05-21 01:48:28 --> Total execution time: 0.1463
+DEBUG - 2024-05-21 01:48:30 --> Total execution time: 0.9123
+DEBUG - 2024-05-21 01:48:30 --> Total execution time: 0.0409
+DEBUG - 2024-05-21 01:48:41 --> Total execution time: 0.0345
+DEBUG - 2024-05-21 01:48:45 --> Total execution time: 0.0391
+DEBUG - 2024-05-21 01:48:47 --> Total execution time: 0.0395
+DEBUG - 2024-05-21 01:48:51 --> Total execution time: 0.0488
+DEBUG - 2024-05-21 01:48:57 --> Total execution time: 0.0366
+DEBUG - 2024-05-21 01:49:01 --> Total execution time: 0.0378
+DEBUG - 2024-05-21 01:49:05 --> Total execution time: 0.0272
+DEBUG - 2024-05-21 01:49:09 --> Total execution time: 0.9529
+DEBUG - 2024-05-21 01:49:09 --> Total execution time: 0.0420
+DEBUG - 2024-05-21 01:49:45 --> Total execution time: 0.9808
+DEBUG - 2024-05-21 01:49:46 --> Total execution time: 0.0456
+DEBUG - 2024-05-21 01:49:56 --> Total execution time: 0.9688
+DEBUG - 2024-05-21 01:49:57 --> Total execution time: 0.0438
+DEBUG - 2024-05-21 01:50:05 --> Total execution time: 0.9670
+DEBUG - 2024-05-21 01:50:05 --> Total execution time: 0.0447
+DEBUG - 2024-05-21 01:50:29 --> Total execution time: 0.9540
+DEBUG - 2024-05-21 01:50:29 --> Total execution time: 0.0461
+DEBUG - 2024-05-21 01:51:04 --> Total execution time: 0.9406
+DEBUG - 2024-05-21 01:51:04 --> Total execution time: 0.0566
+DEBUG - 2024-05-21 01:51:22 --> Total execution time: 1.0030
+DEBUG - 2024-05-21 01:51:22 --> Total execution time: 0.0454
+DEBUG - 2024-05-21 01:51:44 --> Total execution time: 1.0725
+DEBUG - 2024-05-21 01:51:44 --> Total execution time: 0.0418
+DEBUG - 2024-05-21 01:51:50 --> Total execution time: 0.8564
+DEBUG - 2024-05-21 01:51:50 --> Total execution time: 0.0388
+DEBUG - 2024-05-21 01:52:12 --> Total execution time: 0.9523
+DEBUG - 2024-05-21 01:52:12 --> Total execution time: 0.0448
+ERROR - 2024-05-21 01:52:26 --> Severity: Warning --> Undefined array key "id" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+ERROR - 2024-05-21 01:52:26 --> Severity: Warning --> Undefined array key "course" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+DEBUG - 2024-05-21 01:52:26 --> Total execution time: 0.1395
+DEBUG - 2024-05-21 01:55:19 --> Total execution time: 0.0508
+DEBUG - 2024-05-21 01:55:19 --> Total execution time: 0.0214
+DEBUG - 2024-05-21 01:55:19 --> Total execution time: 0.0387
+DEBUG - 2024-05-21 01:55:19 --> Total execution time: 0.0330
+DEBUG - 2024-05-21 01:55:21 --> Total execution time: 0.0411
+DEBUG - 2024-05-21 01:55:22 --> Total execution time: 0.0298
+DEBUG - 2024-05-21 01:55:23 --> Total execution time: 0.0325
+DEBUG - 2024-05-21 01:55:24 --> Total execution time: 0.0332
+DEBUG - 2024-05-21 01:55:24 --> Total execution time: 0.0426
+DEBUG - 2024-05-21 01:55:24 --> Total execution time: 0.0403
+DEBUG - 2024-05-21 01:55:25 --> Total execution time: 0.0182
+DEBUG - 2024-05-21 01:55:25 --> Total execution time: 0.0288
+DEBUG - 2024-05-21 01:55:26 --> Total execution time: 0.0379
+DEBUG - 2024-05-21 01:55:29 --> Total execution time: 0.0313
+DEBUG - 2024-05-21 01:55:30 --> Total execution time: 0.0380
+DEBUG - 2024-05-21 01:55:30 --> Total execution time: 0.0351
+DEBUG - 2024-05-21 01:55:34 --> Total execution time: 0.0447
+DEBUG - 2024-05-21 01:55:35 --> Total execution time: 0.0373
+DEBUG - 2024-05-21 01:55:41 --> Total execution time: 0.0290
+DEBUG - 2024-05-21 01:55:42 --> Total execution time: 0.0202
+DEBUG - 2024-05-21 01:55:42 --> Total execution time: 0.0388
+DEBUG - 2024-05-21 01:55:46 --> Total execution time: 0.0403
+ERROR - 2024-05-21 01:55:55 --> Severity: Warning --> Undefined array key "gender" C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 47
+ERROR - 2024-05-21 01:55:55 --> Severity: Warning --> Undefined array key "ownertitle" C:\wamp64\www\Project\CutOffBaba\application\views\site\collegedetail.php 51
+DEBUG - 2024-05-21 01:56:03 --> Total execution time: 7.9797
+ERROR - 2024-05-21 02:00:24 --> Severity: Warning --> Undefined array key "id" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+ERROR - 2024-05-21 02:00:24 --> Severity: Warning --> Undefined array key "course" C:\wamp64\www\Project\CutOffBaba\application\views\site\home.php 100
+DEBUG - 2024-05-21 02:00:24 --> Total execution time: 0.1561
+DEBUG - 2024-05-21 02:00:59 --> Total execution time: 0.8722
+DEBUG - 2024-05-21 02:00:59 --> Total execution time: 0.0419

@@ -3576,7 +3576,26 @@ a.btn_search_mobile {
 .hero_in.hotels_detail,
 .hero_in.restaurant_detail,
 .hero_in.shop_detail {
-    height: 550px
+    max-height: 484px;
+}
+.lefts{
+        margin-left: -127px;
+    font-size: 23px;
+}
+.leftsss{
+        margin-left: -127px; 
+        color: #fff;
+}
+.main_posyion{
+    position: absolute;
+    top: 183px;
+    left: 127px;
+}
+.lofcss{
+        max-width: 140px;
+    background: azure;
+    border-radius: 2px;
+    padding: 13px;
 }
 
 .hero_in.shop_detail:before {
@@ -3622,10 +3641,13 @@ a.btn_search_mobile {
 .hero_in .wrapper {
     height: 100%
 }
+.mainShorst{
+    
+}
 
 .hero_in a.btn_photos {
     position: absolute;
-    left: 20px;
+        left: 139px;
     bottom: 20px;
     background-color: #fff;
     -webkit-border-radius: 3px;
