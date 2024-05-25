@@ -96,10 +96,10 @@
 			<div class="container">
 				<ul class="clearfix">
 					<?php foreach ($courses as $course) { //print_r($course);?>
-						<li >
+						<li>
 						<a href="<?=base_url('course/').$course['id'];?>"class="img-thumbnail m-2">
-							<img src="<?=$course['course_icon']!=""?asset_url()."course/".$course['course_icon']:base_url('assets/img/no-image.jpg');?>"  style="max-height: 150px;width: 100%;margin-bottom: 20px;">
-							<label ><?=$course['course'];?></label></a>
+							<img class="courseResponsive" src="<?=$course['course_icon']!=""?asset_url()."course/".$course['course_icon']:base_url('assets/img/no-image.jpg');?>"  style="max-height: 150px;width: 100%;margin-bottom: 20px;">
+							<label class="labeCsss"><?=$course['course'];?></label></a>
 					</li>
 					<?php  }?>
 				</ul>
@@ -117,23 +117,23 @@
 					<ul class="pricing-wrapper">
 						<li data-type="monthly" class="is-visible">
 							<header class="pricing-header">
-								<h2>Basic</h2>
-
+								<h2>Quick Info</h2>
+								<h1 class="econsicss">ECONOMY PLAN</h1>
 								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">30</span>
-									<span class="price-duration">mo</span>
+									<span class="currency">₹</span>
+									<span class="price-value"> 119.00</span> 
+									<span class="mainTsh">10% OFF   132</span>
 								</div>
 							</header>
 							<!-- /pricing-header -->
 							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>1</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
+								<ul class="pricing-features ddPrics">
+									<li><em>Tuition Fees Info</em>  </li>
+									<li><em>Seat Matrix Info</em>  </li>
+									<li><em>Approved Colleges Info</em>  </li>
+									<li><em>Cutoff Info</em>  </li>
+									<li><em>Category Info</em>  </li>
+									<li><em>Counselling Dates</em>  </li>
 								</ul>
 							</div>
 							<!-- /pricing-body -->
@@ -174,22 +174,23 @@
 					<ul class="pricing-wrapper">
 						<li data-type="monthly" class="is-visible">
 							<header class="pricing-header">
-								<h2>Popular</h2>
+								<h2>Quick Info</h2>
+								<h1 class="econsicss">ECONOMY PLAN</h1>
 								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">60</span>
-									<span class="price-duration">mo</span>
+									<span class="currency">₹</span>
+									<span class="price-value"> 119.00</span> 
+									<span class="mainTsh">10% OFF   132</span>
 								</div>
 							</header>
 							<!-- /pricing-header -->
 							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>3</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
+								<ul class="pricing-features ddPrics">
+									<li><em>Tuition Fees Info</em>  </li>
+									<li><em>Seat Matrix Info</em>  </li>
+									<li><em>Approved Colleges Info</em>  </li>
+									<li><em>Cutoff Info</em>  </li>
+									<li><em>Category Info</em>  </li>
+									<li><em>Counselling Dates</em>  </li>
 								</ul>
 							</div>
 							<!-- /pricing-body -->
@@ -230,22 +231,23 @@
 					<ul class="pricing-wrapper">
 						<li data-type="monthly" class="is-visible">
 							<header class="pricing-header">
-								<h2>Premier</h2>
+								<h2>Counselling Package</h2>
+								<h1 class="econsicss">PREMIUM PLAN</h1>
 								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">90</span>
-									<span class="price-duration">mo</span>
+									<span class="currency">₹</span>
+									<span class="price-value"> 29,999</span> 
+									<span class="mainTsh">10% OFF  ₹ 33333</span>
 								</div>
 							</header>
 							<!-- /pricing-header -->
 							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>5</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
+								<ul class="pricing-features ddPrics">
+									<li><em>Tuition Fees Info</em>  </li>
+									<li><em>Seat Matrix Info</em>  </li>
+									<li><em>Approved Colleges Info</em>  </li>
+									<li><em>Cutoff Info</em>  </li>
+									<li><em>Category Info</em>  </li>
+									<li><em>Counselling Dates</em>  </li>
 								</ul>
 							</div>
 							<!-- /pricing-body -->

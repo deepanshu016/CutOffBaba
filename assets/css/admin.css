@@ -1,30 +1,4 @@
-/*
-Theme Name: SPARKER
-Theme URI: http://www.ansonika.com/sparker/
-Author: Ansonika
-Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
-
-1. SITE STRUCTURE
-- 1.1 Typography
-- 1.2 Buttons
-- 1.3 Structure
-
-2. CONTENT
-- 2.1 Courses
-
-3. COMMON
-- 3.1 Forms
-- 3.2 Pagination
-- 3.3 Misc
-- 3.4 Spacing
-- 3.5 Select
-
-/*============================================================================================*/
-/* 1.  SITE STRUCTURE */
-/*============================================================================================*/
-/*Import*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,700i,800");
 html {
   position: relative;
@@ -659,11 +633,6 @@ ul.booking_list li strong {
   color: #333;
 }
 
-.form-control {
-  font-size: 14px;
-  font-size: 0.875rem;
-  padding: .65rem;
-}
 .form-control.search-top {
   width: 300px;
   padding: .45rem;
@@ -671,9 +640,6 @@ ul.booking_list li strong {
   border: none;
 }
 
-select.form-control:not([size]):not([multiple]) {
-  height: calc(2.68rem + 2px);
-}
 
 label.fix_spacing {
   padding-top: 12px !important;

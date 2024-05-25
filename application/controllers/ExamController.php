@@ -30,7 +30,6 @@ class ExamController extends MY_Controller {
             return false;
         }
         $html = '';
-        $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
         $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id="">';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
@@ -44,6 +43,7 @@ class ExamController extends MY_Controller {
 
     public function updateUserProfile(){
         $allData = $this->input->post('profile');
+        print_r($allData);
         $profileData = $allData['user'];
         $courseData = $allData['course_data'];
         if(!empty($_FILES['photo']['name'])) {
@@ -90,7 +90,6 @@ class ExamController extends MY_Controller {
             return false;
         }
         $html = '';
-        $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
         $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id="">';
         $html  .= '<option value="">Select Domicile State Category</option>';
         foreach($categoryData as $category){
@@ -111,7 +110,7 @@ class ExamController extends MY_Controller {
             return false;
         }
         $html = '';
-        $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
+        
         $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id="">';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){

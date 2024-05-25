@@ -20,7 +20,14 @@ $route['logout'] = 'Authenticate/logout';
 $route['user-profile'] = 'Authenticate/userProfile';
 
 $route['get-cutoff-matrix'] = 'Home/get_cutoff_matrix';
-
+$route['update-profile'] = 'ExamController/updateUserProfile';
+$route['get-exam-courses'] = 'ExamController/getExamCourses';
+$route['get-sub-category'] = 'ExamController/getSubCategory';
+$route['get-domicile-sub-category'] = 'ExamController/getDomicileSubCategory';
+$route['get-domicile-main-category'] = 'ExamController/getDomicileMainCategories';
+$route['states/(:any)'] = 'Home/stateList/$1';
+$route['state-wise-colleges/(:any)/(:any)'] = 'Home/state_wise_colleges/$1/$2';
+$route['course-details/(:any)/(:any)'] = 'Home/selectedCourse/$1/$2';
 
 
 

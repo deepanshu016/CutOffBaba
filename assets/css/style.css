@@ -1891,7 +1891,7 @@ a.box_cat_home {
     display: inline-block;
     width: 20%;
     float: left;
-    border-right: 1px solid #d2d8dd
+/*    border-right: 1px solid #d2d8dd*/
 }
 
 .main_categories ul li:last-child {
@@ -3583,13 +3583,105 @@ a.btn_search_mobile {
     font-size: 23px;
 }
 .leftsss{
-        margin-left: -127px; 
-        color: #fff;
+      margin-left: 0px;
+    color: #fff;
+}
+.csolling{
+
+}
+.ssuuiwww{
+       overflow: auto;
+    height: 300px;
+    background: blue; 
+}
+.scrollable tbody {
+    display: block;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+.rs-counter .rs-counter-list {
+   border: 2px solid rgb(179 179 179);
+    margin-bottom: 9px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px;
+    transition: .3s all ease;
+    background: lavender;
+}
+.rs-counter h1 {
+    margin-bottom: 5px;
+}
+.rs-counter .rs-counter-list .counter-desc {
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.cnnyuc7us{
+    font-size: 19px;
+    color: red;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 7px 6px 8px 8px;
+}
+.btn-ddd{
+        background: #153b62;
+    max-width: 156px;
+    padding: 6px 19px;
+    color: #fff;
+    margin: 0px 8px 8px 14px;
+    border-radius: 22px;
+}
+.dangerss{
+    background: #153b62;
+    color: #fff;
+    border-radius: 0px;
+    margin-bottom: 7px;
+    width: 100%;
+}
+.ddds{
+   background: #fff;
+    margin-bottom: 6px;
+    padding: 5px;
+}
+.sss8iss{
+       margin: 0px 34px;
+    float: inline-start;
+}
+.uui8sss{
+    max-width: 74px;
+}
+.btn__dangerss{
+        background: #183e65;
+    color: #fff;
+    border-radius: 0px;
+    margin-bottom: 12px;
+}
+.text__uppercase{
+    font-size: 18px;
+    margin-top: 10px;
 }
 .main_posyion{
     position: absolute;
     top: 183px;
     left: 127px;
+}
+.hhusCss{
+    background: #183e65;
+    text-align: center;
+}
+.ssSocil{
+    padding: 3px 10px;
+    font-size: 21px;
+    background: darkblue;
+    color: #fff;
+}
+.course-features-info {
+    margin-bottom: 10px;
+    background: #ffffff;
+    padding: 10px;
+    color: #000;
 }
 .lofcss{
         max-width: 140px;
@@ -7055,6 +7147,31 @@ ul.bullets li:before {
         display: none !important
     }
 }
+.courseResponsive{
+    object-fit: scale-down;
+    background: #eaeaf6;
+    max-height: 156px !important;
+    margin-bottom: 14px !important;
+}
+.labeCsss{
+        font-weight: 800;
+}
+.mainTsh{
+        font-size: 21px;
+    font-weight: 600;
+    color: red;
+}
+.ddPrics li{
+        padding: 6px !important;
+    font-size: 15px !important;
+}
+.econsicss{
+   font-size: 24px;
+    margin: 0px;
+    font-weight: 600;
+    color: #183e65;
+    margin-top: 13px;
+}
 
 @media (max-width:575px) {
     h1.main_title_in {
@@ -7062,6 +7179,9 @@ ul.bullets li:before {
     }
     .sub_header_in h1 {
         font-size: 1.125rem
+    }
+    .main_categories ul li{
+            width: 50% !important;
     }
     footer h3 {
         cursor: pointer;

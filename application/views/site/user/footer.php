@@ -39,7 +39,6 @@
 	 <script src="<?=base_url('assets/');?>vendor/jquery.selectbox-0.2.js"></script>
 	 <script src="<?=base_url('assets/');?>vendor/jquery.magnific-popup.min.js"></script>
     <script src="<?=base_url('assets/');?>js/admin.js"></script>
-    <script src="<?=base_url('assets/');?>js/admin-charts.js"></script>
     <script src="<?=base_url('assets/');?>vendor/dropzone.min.js"></script>
 	
 </body>

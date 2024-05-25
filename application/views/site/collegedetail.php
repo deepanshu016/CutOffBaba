@@ -1,566 +1,648 @@
 <?php $this->load->view('site/header');?>
-<main>		
-	<!-- <style type="text/css">
-.hero_in.restaurant_detail:before{background: url('<?=asset_url()."college/banner/".$collegeDetail['college_banner'];?>') no-repeat;background-size: 100% 100%;background-position: center;}
-	</style> -->
-		<div class="hero_in restaurant_detail" style="no-repeat;background-size: 100% 100%;background-position: center; background-image:url('https://www.gdcamritsar.com/wp-content/uploads/2016/07/cu_banner-1.jpg');">
-			<div class="wrapper">
-				<span class="magnific-gallery">
-					<a href="img/gallery/hotel_list_1.jpg" class="btn_photos" title="Photo title" >Download Brouchure</a>
-				</span>
-			</div>
-		</div>
-		<!--/hero_in-->
-
-		<section class="main_posyion d-none d-sm-block d-sm-none d-md-block">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<img class="lofcss" src="https://www.freeiconspng.com/thumbs/logo-design/circle-logo-brand-design-png-transparent-image-19.png"> 
-					</div>
-					<div class="col-md-4">
-						<h4 class="text-white lefts">Punjab Government Dental College and Hospital, Amritsar: Admission, Courses, Fees, Placements</h4> 
-						<p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> Amritsar, Punjab  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD 1969 </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliated College : </span> of Baba Farid University of Health Sciences, Faridkot</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<nav class="secondary_nav sticky_horizontal_2">
-			<div class="container">
-				<ul class="clearfix d-flex scrollmenuss justify-content-between">
-					<li><a href="#basic" class="active">Overviews</a></li>
-					<li><a href="#fees">Courses & Fees</a></li>
-					<li><a href="#seat_matrix">Seat Matrix</a></li>
-					<li><a href="#rank">Cutoff & Rank</a></li>
-					<li><a href="#placement">Placement</a></li>
-					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="#admission">Admission</a></li>
-					<li><a href="#hospital">Hospital Details</a></li>
-					<li><a href="#contacts">Contact Us</a></li>
-
-					<li><a href="#reviews">Reviews</a></li>
-				</ul>
-			</div>
-		</nav>
-		<?php //echo '<pre>';print_r($collegeDetail); ?>
-
-		<div class="container margin_60_35">
-				<div class="row">
-					<div class="col-lg-12">
-						<section id="basic">
-							<div class="row">
-							<div class="col-md-9">
-								<div class="card card-body">
-								<div class="row">
-								<div class="col-md-12">
-									<h4 class="mainShorst">Short Information</h4>
-								</div>
-								<div class="clearfix"></div>
-								<div class="col-md-4 col-12">
-									<div class="form-group">
-										<div class="why-choose-box">
-											<div class="icon">
-											<img src="https://cutoffbaba.com/Icon/ownership.png">
-											</div>
-											<div class="content">
-											<div class="sp-text-second"><b>Ownership</b></div>
-											<div id="tdownership1" class="text-justify">Government</div>
-											<input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-5 col-12">
-									<div class="form-group">
-										<div class="why-choose-box">
-											<div class="icon">
-											<img src="https://cutoffbaba.com/Icon/approved.png">
-											</div>
-											<div class="content">
-											<div class="sp-text-second"><b>Approval</b></div>
-											<div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3 col-5">
-									<div class="form-group">
-										<div class="why-choose-box">
-											<div class="icon">
-											<img src="https://cutoffbaba.com/Icon/hostel.png">
-											</div>
-											<div class="content">
-											<div class="sp-text-second"><b>Hostel</b></div>
-											<div id="tdhostel" class="text-justify">Yes</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 col-7">
-									<div class="why-choose-box">
-										<div class="icon">
-											<img src="https://cutoffbaba.com/Icon/toilets.png">
-										</div>
-										<div class="content">
-											<div class="sp-text-second"><b>Gender Accepted</b></div>
-											<div id="tdgender" class="text-justify">Male &amp; Female</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-8 col-sm-12">
-									<div class="why-choose-box">
-										<div class="icon">
-											<img src="https://cutoffbaba.com/Icon/university.png">
-										</div>
-										<div class="content">
-											<div class="sp-text-second"><b>University</b></div>
-											<div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
-										</div>
-									</div>
-								</div>
-								</div>
-								<div class="row mt-4">
-								<div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
-								<div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
-								<div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
-								<div id="tdother1" class="col-md-6"></div>
-								<div id="tdother2" class="col-md-6"></div>
-							</div>
+<main>
+   <!-- <style type="text/css">
+      .hero_in.restaurant_detail:before{background: url('') no-repeat;background-size: 100% 100%;background-position: center;}
+      	</style> -->
+   <div class="hero_in restaurant_detail" style="no-repeat;background-size: 100% 100%;background-position: center; background-image:url('<?=asset_url()."college/banner/".$collegeDetail['college_banner'];?>');">
+      <div class="wrapper">
+         <span class="magnific-gallery">
+         </span>
+      </div>
+   </div>
+   <!--/hero_in-->
+   <section class="main_posyion d-none d-sm-block d-sm-none d-md-block">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2">
+               <img class="lofcss" src="<?=asset_url()."college/logo/".$collegeDetail['college_logo'];?>"> 
+            </div>
+            <div class="col-md-5">
+               <h4 class="text-white"><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h4>
+               <p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> Amritsar, Punjab  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD 1969 </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliated College : </span> of Baba Farid University of Health Sciences, Faridkot</p>
+            </div>
+            <div class="col-md-3"><a style="float: right;" href="<?=asset_url()."college/banner/".$collegeDetail['college_logo'];?>" class="btn btn-primary" title="Photo title" >Download Brouchure</a></div>
+         </div>
+      </div>
+   </section>
+   <nav class="secondary_nav sticky_horizontal_2">
+      <div class="container">
+         <ul class="clearfix d-flex scrollmenuss justify-content-between">
+            <li><a href="#basic" class="active">Overviews</a></li>
+            <li><a href="#fees">Courses & Fees</a></li>
+            <li><a href="#seat_matrix">Seat Matrix</a></li>
+            <li><a href="#rank">Cutoff & Rank</a></li>
+            <li><a href="#placement">Placement</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#admission">Admission</a></li>
+            <li><a href="#hospital">Hospital Details</a></li>
+            <li><a href="#contacts">Contact Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+         </ul>
+      </div>
+   </nav>
+   <?php //echo '<pre>';print_r($collegeDetail); ?>
+   <div class="container margin_60_35">
+   <div class="row">
+      <div class="col-lg-12">
+         <section id="basic">
+            <div class="row">
+               <div class="col-md-9">
+                  <div class="card card-body">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h4 class="mainShorst">Short Information</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4 col-12">
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/ownership.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Ownership</b></div>
+                                    <div id="tdownership1" class="text-justify">Government</div>
+                                    <input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-5 col-12">
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/approved.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Approval</b></div>
+                                    <div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-3 col-5">
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/hostel.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Hostel</b></div>
+                                    <div id="tdhostel" class="text-justify">Yes</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-7">
+                           <div class="why-choose-box">
+                              <div class="icon">
+                                 <img src="https://cutoffbaba.com/Icon/toilets.png">
+                              </div>
+                              <div class="content">
+                                 <div class="sp-text-second"><b>Gender Accepted</b></div>
+                                 <div id="tdgender" class="text-justify">Male &amp; Female</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                           <div class="why-choose-box">
+                              <div class="icon">
+                                 <img src="https://cutoffbaba.com/Icon/university.png">
+                              </div>
+                              <div class="content">
+                                 <div class="sp-text-second"><b>University</b></div>
+                                 <div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
+                              </div>
+                           </div>
                         </div>
                      </div>
-                     <div class="col-md-3"></div>
+                     <div class="row mt-4">
+                        <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
+                        <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
+                        <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
+                        <div id="tdother1" class="col-md-6"></div>
+                        <div id="tdother2" class="col-md-6"></div>
+                     </div>
+
+                     
+
                   </div>
-							<div class="detail_title_1">
-								<h1><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h1>
-								<a class="address" href="https://www.google.com/maps/dir//Assistance+–+Hôpitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+Hôpitaux+de+Paris+(AP-HP)+-+Siège!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"><?=$collegeDetail['full_name'];?></a>
-							</div>
-							<?=$collegeDetail['short_description'];?>
-							<div class="opening">
-                                <h4>Basic Details</h4>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li>Estd. Year : <span><?=$collegeDetail['establishment'];?></span></li>
-                                            
-                                            <li>Affliated From : <span><?=$collegeDetail['university_name'];?></span></li>
-                                            <li>University : <span><?=$collegeDetail['university_name'];?></span></li>
-                                            <li>Approved By : <span>9 AM - 5 PM</span></li>
-                                             
-                                        </ul>
+
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">PB. Government Dental College And Hospital , AMRITSAR Highlights 2024</h4>
+                        <p>PB. Government Dental College And Hospital , AMRITSAR has since established itself as a leading institution of higher learning in Amritsar, Punjab. With a focus on providing quality education, the institute presents a variety of PG and UG course options in full-time mode, which are approved by DCI. The institute's experienced faculty members are dedicated to imparting knowledge and skills in fields such as Medicine and Health Sciences, and more. The total seat intake for these courses is 68. The institute strives to make education accessible to all by setting the fee range at INR 320,000-375,000. At the PB. Government Dental College And Hospital , AMRITSAR, students can expect to receive a well-rounded education that prepares them for successful careers in their chosen fields. With a focus on affordability and accessibility, the institute provides a valuable education that is within reach of many students.</p>
+                     </div>
+
+                     <table class="table table-bordered">
+                     <tbody>
+                        <tr>
+                           <th><font>Particulars</font></th>
+                           <th><font>Statistics</font></th>
+                        </tr>
+                        <tr>
+                           <td>Campus Location</td>
+                           <td>Amritsar, Punjab</td>
+                        </tr>
+                        <tr>
+                           <td>Courses Offered</td>
+                           <td>PG and UG</td>
+                        </tr>
+                        <tr>
+                           <td>No. of Seats</td>
+                           <td>68</td>
+                        </tr>
+                        <tr>
+                           <td>Median Salary</td>
+                           <td>-</td>
+                        </tr>
+                        <tr>
+                           <td>Fees Range</td>
+                           <td>INR 320,000-375,000</td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+                  </section>
+
+
+                   <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Seat Matrix</h4>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div>
+                                       <span>Post Graduate</span>
                                     </div>
-                                </div>
-                            </div>
-						</section>
-						<section class="hhismns" id="fees">	
-							<h3>Course & Fees</h3>
-							<?php 
-							$courses=explode(",", $collegeDetail['course_offered']);
-							 
-							$dtype=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
-							 
-							foreach ($dtype as $key => $value) {
-								$degree_type=$this->db->select('*')->where_in('id',$value['degree_type'])->get('tbl_degree_type')->result_array();
-								?>
-								<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
-									<div class="card">
-										<div class="card-header" role="tab">
-											<h5 class="mb-0">
-												<a data-bs-toggle="collapse" href="#collapse<?=$key;?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $degree_type[0]['degreetype']; ?></a>
-											</h5>
-										</div>
-
-										<div id="collapse<?=$key;?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
-											<div class="card-body">
-												<?php $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
-												foreach ($courselist as $course) {
-													$collegeFeesWithCourse = $this->db->select('*')->where('college_id',$course['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
-												?>
-												<h5 class="title"><?=$course['course_full_name']."( ".$course['course']." )";?></h5>
-												<?=$course['course_fees'];?>
-
-												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['tution_fees']) ? $collegeFeesWithCourse['tution_fees'] : ''; ?>
-												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['hostel_fees']) ? $collegeFeesWithCourse['hostel_fees'] : ''; ?>		
-												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['misc_fees']) ? $collegeFeesWithCourse['misc_fees'] : ''; ?>		
-												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['seat_indentity_charges']) ? $collegeFeesWithCourse['seat_indentity_charges'] : ''; ?>		
-												<?= ($collegeFeesWithCourse && $collegeFeesWithCourse['upgradation_processing_fees']) ? $collegeFeesWithCourse['upgradation_processing_fees'] : ''; ?>		
-											<?php } ?>
-												
-											</div>
-										</div>
-									</div>
-
-								</div>
-							<?php } ?>
-						</section>
-						<section id="seat_matrix">
-							<h3>Seat Matrix</h3>
-							<?php  
-								$coursess=explode(",", $collegeDetail['course_offered']);
-								$degreeType=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
-								foreach ($degreeType as $key => $degree) {		
-									$degree_types=$this->db->select('*')->where_in('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();			
-							?>	
-								<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
-									<div class="card">
-										<div class="card-header" role="tab">
-											<h5 class="mb-0">
-												<a data-bs-toggle="collapse" href="#collapse<?=$key;?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $degree_types[0]['degreetype']; ?></a>
-											</h5>
-										</div>
-										<div id="collapse<?=$key;?>" class="collapse show" role="tabpanel" data-bs-parent="#payment">
-											<div class="card-body">
-												<table class="table">
-													<thead>
-														<tr>
-															<th scope="col">Course</th>
-															<th scope="col">Branches & Seats</th>
-														</tr>
-													</thead>
-													<tbody>
-														<?php $courselist=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where_in('id',$coursess)->get('tbl_course')->result_array();
-															foreach ($courselist as $course) {
-																$branchList = $this->db->select('*')->where('courses',$course['id'])->get('tbl_branch')->result_array();
-														?>
-															<tr>
-																<td><?= $course['course']; ?></td>
-																<td>
-																	<?php 
-																	if(!empty($branchList)){
-																		foreach($branchList as $branch){ 
-																			$SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id'],'degree_type_id'=>$degree_types[0]['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id']])->get()->row_array();
-																			
-																	?>
-																		<p><?= $branch['branch'] ?> : <?= !empty($SeatMatrixData) ? '<b>'.$SeatMatrixData['seat'].' Seats </b>': '0'; ?></p>	
-																	<?php } } ?>
-																</td>
-															</tr>
-														<?php } ?>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-							<?php } ?>
-						</section>
-						<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
-						<?php 
-						$courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-						foreach($courseids as $courseid){
-							$coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
-							if (count($coursedetaildata)>0) {
-								$coursedetaildata=$coursedetaildata[0];
-								 
-								?>
-								<div class="card">
-								<div class="card-header" role="tab">
-									<h5 class="mb-0">
-										<a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
-									</h5>
-								</div>
-								<div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
-									<div class="card-body table-responsive">
-										<h3>CENTRAL COUNSELLING</h3>
-										<div class="d-flex justify-content-between">
-											<div>
-												<input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
-												<input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
-												<select class="form-control form-select get_cutoff_matrix">
-													<option>Year</option>
-													<?php
-													// Get the current year
-													$currentYear = date("Y");
-
-													// Loop to display the last 4 years
-													for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
-														echo "<option value='$i'>$i</option>";
-													}
-													?>
-												</select>
-											</div>
-											<!-- <div>
-												<select class="form-control form-select">
-													<option>Sub Category</option>
-												</select>
-											</div> -->
-										</div>
-										<div class="cutoff_matrix">
-											<?php
-											$year = 2023;
-											?>
-											<?php $this->load->view('site/show_college_matrix',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
-										</div>		
-								</div>
-				</div>
-			</div><?php
-							}
-						}	
-
-						?>
-
-<table>
-
-	<tr>
-
-	</tr>
-</table>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <div>
+                                       <table class="table table-hover table-bordered">
+                                          <tbody>
+                                             <tr>
+                                                <th>#</th>
+                                                <th>Course</th>
+                                                <th>Branch</th>
+                                                <th>Seats</th>
+                                                <th>Recognisation</th>
+                                             </tr>
+                                             <tr>
+                                                <td>1</td>
+                                                <td>MDS</td>
+                                                <td>Conservative Dentistry &amp; Endodontics</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>2</td>
+                                                <td>MDS</td>
+                                                <td>Oral &amp; Maxillofacial Pathology and Oral Microbiology</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>3</td>
+                                                <td>MDS</td>
+                                                <td>Oral and Maxillofacial Surgery</td>
+                                                <td>4</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>4</td>
+                                                <td>MDS</td>
+                                                <td>Oral Medicine &amp; Radiology</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>5</td>
+                                                <td>MDS</td>
+                                                <td>Orthodonitics &amp; Dentofacial Orthopedics</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>6</td>
+                                                <td>MDS</td>
+                                                <td>Pediatric and Preventive Dentistry</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>7</td>
+                                                <td>MDS</td>
+                                                <td>Periodontology</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                             <tr>
+                                                <td>8</td>
+                                                <td>MDS</td>
+                                                <td>Prosthodontics and Crown &amp; Bridge</td>
+                                                <td>5</td>
+                                                <td>Recognised</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </section>
 
 
-						<section id="reviews">
-							<h2>Reviews</h2>
-							<div class="reviews-container add_bottom_30">
-								<div class="row">
-									<div class="col-lg-3">
-										<div id="review_summary">
-											<strong>8.5</strong>
-											<em>Superb</em>
-											<small>Based on 4 reviews</small>
-										</div>
-									</div>
-									<div class="col-lg-9">
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-									</div>
-								</div>
-								<!-- /row -->
-							</div>
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Cutoff of Ahmedabad Dental College & Hospital, Gandhinagar</h4>
 
-							<div class="reviews-container">
+                        <h5 class="cnnyuc7us">Central Counselling Cutoff </h5> 
+                        <a class=" btn-ddd" href="#!">VIEW CUTOFF</a>
 
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar1.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Admin – April 03, 2016:
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- /review-box -->
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar2.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Ahsan – April 01, 2016:
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- /review-box -->
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar3.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Sara – March 31, 2016:
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- /review-box -->
-							</div>
-							<!-- /review-container -->
-						</section>
-						<section id="gallery">
-							<h2>College gallery</h2>
-							<div class="col-md-12">
-								<div class="row">
-									<?php if(!empty($collegeGallery)){
-										foreach($collegeGallery as $gallery){ ?>
-									<div class="col-md-4">
-										<div class="gallery-item" style="padding: 15px 5px 5px;margin-left: -10px;">
-											<img style="max-height: 200px;" src="<?= base_url('app/assets/uploads/media/image/').$gallery['file_name'];?>" alt="">
-										</div>
-									</div>
-									<?php } } ?> 
-								</div>
-							</div>	
-							
-						</section>
-						<!-- /section -->
-						<hr>
+                        <h5 class="cnnyuc7us"> State Counselling Cutoff </h5> 
+                        <a class=" btn-ddd" href="#!">VIEW CUTOFF</a>
 
-							<div class="add-review">
-								<h5>Leave a Review</h5>
-								<form>
-									<div class="row">
-										<div class="form-group col-md-6">
-											<label>Name and Lastname *</label>
-											<input type="text" name="name_review" id="name_review" placeholder="" class="form-control">
-										</div>
-										<div class="form-group col-md-6">
-											<label>Email *</label>
-											<input type="email" name="email_review" id="email_review" class="form-control">
-										</div>
-										<div class="form-group col-md-6">
-											<label>Rating </label>
-											<div class="custom-select-form">
-											<select name="rating_review" id="rating_review" class="wide">
-												<option value="1">1 (lowest)</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5" selected>5 (medium)</option>
-												<option value="6">6</option>
-												<option value="7">7</option>
-												<option value="8">8</option>
-												<option value="9">9</option>
-												<option value="10">10 (highest)</option>
-											</select>
-											</div>
-										</div>
-										<div class="form-group col-md-12">
-											<label>Your Review</label>
-											<textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
-										</div>
-										<div class="form-group col-md-12 add_top_20 add_bottom_30">
-											<input type="submit" value="Submit" class="btn_1" id="submit-review">
-										</div>
-									</div>
-								</form>
-							</div>
-					</div>
-					<!-- /col -->
-					
-					<!-- <aside class="col-lg-4" id="sidebar">
-						<div class="box_detail booking">
-							<div class="price">
-								<h5 class="d-inline">Book Now</h5>
-								<div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div>
-							</div>
+                     </div>
+                  </section>
 
-							<div class="form-group" id="input-dates">
-								<input class="form-control" type="text" name="dates" placeholder="When..">
-								<i class="icon_calendar"></i>
-							</div>
-							
-							<div class="dropdown">
-								<a href="#" data-bs-toggle="dropdown">Guests <span id="qty_total">0</span></a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<div class="dropdown-menu-content">
-										<label>Adults</label>
-										<div class="qty-buttons">
-											<input type="button" value="+" class="qtyplus" name="adults">
-											<input type="text" name="adults" id="adults" value="0" class="qty">
-											<input type="button" value="-" class="qtyminus" name="adults">
-										</div>
-									</div>
-									<div class="dropdown-menu-content">
-										<label>Childrens</label>
-										<div class="qty-buttons">
-											<input type="button" value="+" class="qtyplus" name="child">
-											<input type="text" name="child" id="child" value="0" class="qty">
-											<input type="button" value="-" class="qtyminus" name="child">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form-group clearfix">
-								<div class="custom-select-form">
-									<select class="wide">
-										<option>Time</option>	
-										<option>Lunch</option>
-										<option>Dinner</option>
-									</select>
-								</div>
-							</div>
-							<a href="checkout.html" class=" add_top_30 btn_1 full-width purchase">Purchase</a>
-							<a href="wishlist.html" class="btn_1 full-width outline wishlist"><i class="icon_heart"></i> Add to wishlist</a>
-							<div class="text-center"><small>No money charged in this step</small></div>
-						</div>
-						<ul class="share-buttons">
-							<li><a class="fb-share" href="#0"><i class="social_facebook"></i> Share</a></li>
-							<li><a class="twitter-share" href="#0"><i class="social_twitter"></i> Share</a></li>
-							<li><a class="gplus-share" href="#0"><i class="social_googleplus"></i> Share</a></li>
-						</ul>
-					</aside> -->
-				</div>
-		</div>
-	</main>
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Fees Structure of Ahmedabad Dental College & Hospital, Gandhinagar</h4>
 
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr>
+                                 <th class="fcc1">Courses</th>
+                                 <th class="fcc1">Tuition Fees</th>
+                                 <th class="fcc1">Eligibility</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="">
+                                 <td class="">
+                                    <div>
+                                       <a href="#!">BDS</a>
+                                       <span class="_037f">
+                                          ( 1  course )
+                                       </span>
+                                    </div>
+                                 </td>
+                                 <td class="">
+                                    <div class="c390"> 3.2 L</div>
+                                 </td>
+                                 <td class="">
+                                    <div class="_5ffb">
+                                       <div>
+                                          <span>10+2 : </span>
+                                          <span>
+                                             50 %
+                                          </span>
+                                       </div>
+                                       <span>
+                                          <div><span>Exams : </span><span class="c229"><a href="#!">NEET</a><a href="#!">Punjab NEET</a></span></div>
+                                       </span>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="">
+                                 <td class="">
+                                    <div>
+                                       <a class="_69c7 ripple dark" uilpwidgetname="acp_section_fees_and_eligibility" widgetspecificlabel="MDS" href="/college/pb-government-dental-college-and-hospital-amritsar-62807/courses/mds-bc">MDS</a>
+                                       <span class="_037f">
+                                          (<!-- -->5<!-- --> courses<!-- -->)
+                                       </span>
+                                    </div>
+                                 </td>
+                                 <td class="">
+                                    <div class="c390"> 3.8 L</div>
+                                 </td>
+                                 <td class="">
+                                    <div class="_5ffb">
+                                       <span>
+                                          <div><span>Exams : </span><span class="c229"><a href="#!">NEET MDS</a><a href="#!">Punjab NEET PG</a></span></div>
+                                       </span>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                  </section>
+
+                   <section class="card card-body rs-counter">
+                     <div class="row">
+                        <h4 class="mainShorst">Hospital Details</h4>
+                        <div class="row">
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-bed" style="font-size: 40px;"></i>
+                                 <h1 id="H1" class="plus">0</h1>
+                                 <h4 class="counter-desc">Total Beds</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
+                                 <h1 id="H2" class="plus">0</h1>
+                                 <h4 class="counter-desc">IPD</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
+                                 <h1 id="H3" class="plus">0</h1>
+                                 <h4 class="counter-desc">OPD</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-telegram" style="font-size: 40px;"></i>
+                                 <h1 id="H4" class="plus">0</h1>
+                                 <h4 class="counter-desc">BOR</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-plus-circle" style="font-size: 40px;"></i>
+                                 <h1 id="H5" class="plus">0</h1>
+                                 <h4 class="counter-desc">CASUALTIES</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Seat Matrix</h4>
+
+                     </div>
+                  </section>
+
+
+               </div>
+               <div class="col-md-3">
+
+                  
+
+                  <div class="course-features-info">
+                       <h4 class="desc-title text-center" style="color: #000; margin-top: 0px;">SHARE THIS COLLEGE</h4>
+                       <div class="text-center">
+                           <a href="javascript:" onclick="return whatsappclick()" id="tdwhatsapp" class="ssSocil"><i class="fa fa-whatsapp"></i></a>
+                           <a href="javascript:" onclick="fbs_click()" class="ssSocil"><i class="fa fa-facebook"></i></a>
+                           <a href="javascript:" class="ssSocil"><i class="fa fa-twitter"></i></a>
+                           <a href="javascript:" class="ssSocil"><i class="fa fa-youtube"></i></a>
+                       </div> 
+                   </div>
+                   <div class="box_detail booking">
+                     <div class="price">
+                        <h5 class="text-center">Send Quick Enquiry</h5>
+                        
+                     </div>
+                     <div class="form-group" id="input-dates">
+                        <input class="form-control" type="text" name="dates" placeholder="Full Name"> 
+                     </div>
+                      <div class="form-group" id="input-dates">
+                        <input class="form-control" type="text" name="dates" placeholder="Email Address"> 
+                     </div>
+                      <div class="form-group" id="input-dates">
+                        <input class="form-control" type="text" name="dates" placeholder="Phone Number"> 
+                     </div>
+                     <div class="form-group clearfix">
+                        <div class="custom-select-form">
+                           <select class="wide">
+                              <option>Location</option>
+                              <option>Patna</option>
+                              <option>Chapra</option>
+                           </select>
+                        </div>
+                     </div>
+                     <a href="#!" class="btn_1 full-width purchase">SEND NOW</a> 
+                  </div>
+
+                   <table class="table course-features-info">
+                       <thead class="hhusCss">
+                           <tr>
+                               <th colspan="2" class="not-color1 text-white">NOTIFICATION
+                               </th>
+                           </tr>
+                       </thead>
+                       <tbody id="tdnotification"><tr><td class="text-center" colspan="2">NO DATA AVAILABLE</td></tr></tbody>
+                   </table>
+
+                   <div class="course-features-info text-center mt-4 mb-4">
+                       <img src="https://cutoffbaba.com/Icon/ownership.png">
+                       <h5 class="text__uppercase">Interested in this College ?</h5>
+                       <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn__dangerss"><i class="fa fa-user"></i>&nbsp;Apply Now For Admission</button>
+                   </div>
+
+                       <div class="hhusCss"> 
+                        <h5 class="text-white">SIMILAR COLLEGE </h5> 
+                       </div>
+
+                       <div class="ssuuiwww">
+                          <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+                        <div class="ddds">
+                          <div class="row ">
+                          <div class="col-md-2">
+                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
+                          </div>
+                          <div class="col-md-10">
+                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
+                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
+                          </div>
+                       </div>
+                       </div>
+                       </div>
+
+                       <br>
+                       <button type="button" class="btn dangerss" data-toggle="modal" data-target="#exampleModalCenter">APPLY NOW </button>
+
+                       <button type="button" class="btn dangerss mb-2">DOWNLOAD BROCHURE  </button>
+
+                       <table class="mt-15 table course-features-info scrollable">
+                        <thead class="hhusCss">
+                           <tr>
+                              <th colspan="2" class="not-color1 text-white">Statewise MBBS College</th>
+                           </tr>
+                        </thead>
+                        <tbody id="tdmed">
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDAMAN AND NICOBAR ISLANDS</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDHRA PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ARUNACHAL PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ASSAM</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="morecollege.aspx?stateid=1"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">BIHAR</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHANDIGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHHATTISGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DADRA AND NAGAR HAVELI</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DAMAN AND DIU</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DELHI</span></a></td>
+                           </tr>
+                            <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDAMAN AND NICOBAR ISLANDS</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDHRA PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ARUNACHAL PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ASSAM</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="morecollege.aspx?stateid=1"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">BIHAR</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHANDIGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHHATTISGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DADRA AND NAGAR HAVELI</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DAMAN AND DIU</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DELHI</span></a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                    
+
+                  
+               </div>
+            </div>
+         </section>
+         
+      </div>
+   </div>
+</main>
 <?php $this->load->view('site/footer');?>
 <script>
-	$(function() {
-		$("body").on("change",".get_cutoff_matrix",function(e){
-			var year = $(this).val();
-			var course_id = $("input[name='course_id']").val();
-			var college_id = $('.college_id').val();
-			$.ajax({
-				url: "<?php echo base_url('get-cutoff-matrix'); ?>",
-				type: "POST",
-				data: {year:year,course_id:course_id,college_id:college_id},
-				dataType: 'json',
-				success: function(data){
-					$(this).closest('.card-body').find('.cutoff_matrix').html(data.html);
-				}
-			});
-		});
-	});
+   $(function() {
+   	$("body").on("change",".get_cutoff_matrix",function(e){
+   		var year = $(this).val();
+   		var course_id = $("input[name='course_id']").val();
+   		var college_id = $('.college_id').val();
+   		$.ajax({
+   			url: "<?php echo base_url('get-cutoff-matrix'); ?>",
+   			type: "POST",
+   			data: {year:year,course_id:course_id,college_id:college_id},
+   			dataType: 'json',
+   			success: function(data){
+   				$(this).closest('.card-body').find('.cutoff_matrix').html(data.html);
+   			}
+   		});
+   	});
+   });
 </script>

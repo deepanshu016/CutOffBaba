@@ -5,21 +5,14 @@
         if(!empty($course['category_data'])){
             $userPreferences = $this->db->select('*')->from('tbl_user_course_preferences')->where('user_id',$this->session->userdata('user')['id'])->where('course_id',$course['id'])->get()->result_array();
 ?>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-buttonCss collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-<?= $key; ?>">
-           <?= $course["course"] ?>
-           <input type="hidden" class="form-control" name="profile[course_data][<?=$key; ?>][course_id]" value="<?= @$course['id'];?>">
-            </button>
-        </h2>
-        <div id="faq-content-<?= $key; ?>" class="accordion-collapse collapse <?= (empty($userPreferences)) ? 'show' : ''; ?>" data-bs-parent="#faqlist">
-            <div class="accordion-body fcXvcs">
-            <div class="accordion" id="accordionExample" >
-                <div class="accordion-item"> 
+    <div class="card">
+        <h5 class="card-header"><?= $course["course"] ?><input type="hidden" class="form-control" name="profile[course_data][<?=$key; ?>][course_id]" value="<?= @$course['id'];?>"></h5>
+        <div class="card-body">
+            <div class="row">
                 <?php 
                     if(!empty($levelData)){
                         foreach($levelData as $keys=>$level) { ?>
-                        <div class="input-group mb-3 category-wrapper">
+                        <div class="col-md-6 col-12 input-group mb-3 category-wrapper">
                             <select class="form-control raffss get-sub-category" data-key="<?= $key; ?>" data-keys="<?= $keys; ?>"  name="profile[course_data][<?=$key; ?>][category][<?=$keys; ?>][category_id]" id="">
                                 <option value="">Select Central Category</option>
                                 <?php 
@@ -35,9 +28,9 @@
                                 <?php } ?>
                             </select>
                         </div>
-                        <div class="input-group mb-3 sub-category-data"></div>
+                        <div class="col-md-6 col-12  input-group mb-3 sub-category-data"></div>
                 <?php } } ?>
-                    <div class="input-group mb-3 category-wrapper">
+                    <div class="col-md-6 col-12  input-group mb-3 category-wrapper">
                         <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="">
                             <option value="">Select Domicile Central</option>
                             <?php 
@@ -46,8 +39,8 @@
                             <?php } ?>
                         </select>
                     </div>
-                    <div class="input-group mb-3 category-wrapper domicile-main-category-data"></div>
-                    <div class="input-group mb-3 get-domicile-subs-category"></div>
+                    <div class="col-md-6 col-12   input-group mb-3 category-wrapper domicile-main-category-data"></div>
+                    <div class="col-md-12 col-12   input-group mb-3 get-domicile-subs-category"></div>
                 <?php } ?>
                 </div>
             </div>

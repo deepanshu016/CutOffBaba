@@ -6,7 +6,7 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Add listing</li>
+        <li class="breadcrumb-item active">Upate Profile</li>
       </ol>
        <form action="<?= base_url('update-profile'); ?>" class="profile-form"  method="POST" id="profileForm" enctype="multipart/form-data">
 		<div class="box_general padding_bottom">
@@ -14,8 +14,6 @@
 				<h2><i class="fa fa-user"></i>Profile details</h2>
 			</div>
 			<div class="row">
-				<div class="col-md-12 add_top_30">
-					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
 								<label>Name</label>
@@ -63,8 +61,6 @@
                 </div>
             </div> 
 				</div>
-			</div>
-		</div>
 	<div class="box_general padding_bottom">
       <div class="header_box version_2">
         <h2><i class="fa fa-user"></i>Examination</h2>
@@ -112,6 +108,118 @@
    	</div>
 <?php include('footer.php'); ?>
 <script>
+  const CommonLib = {
+    ajaxForm:function(formData,method,url) {
+        $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+        return $.ajax({
+            type: method,
+            url: url,
+            data:formData,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            beforeSend: function() {;},
+            success: function(d){;}
+        });
+    },
+    notification:{
+        success:function(message){
+            return toastr.success(message, "Success", {
+                closeButton: true,
+                debug: false,
+                newestOnTop: false,
+                progressBar: true,
+                positionClass: "toast-top-right",
+                preventDuplicates: false,
+                onclick: null,
+                showDuration: "1000",
+                hideDuration: "1000",
+                timeOut: "5000",
+                extendedTimeOut: "1000",
+                showEasing: "swing",
+                hideEasing: "linear",
+                showMethod: "fadeIn",
+                hideMethod: "fadeOut"
+            });
+        },
+        error:function(message){
+            return toastr.error(message, "Failure", {
+                closeButton: true,
+                debug: false,
+                newestOnTop: false,
+                progressBar: true,
+                positionClass: "toast-top-right",
+                preventDuplicates: false,
+                onclick: null,
+                showDuration: "1000",
+                hideDuration: "1000",
+                timeOut: "5000",
+                extendedTimeOut: "1000",
+                showEasing: "swing",
+                hideEasing: "linear",
+                showMethod: "fadeIn",
+                hideMethod: "fadeOut"
+            });
+        },
+        warning:function(message){
+            return toastr.warning(message, "Info", {
+                closeButton: true,
+                debug: false,
+                newestOnTop: false,
+                progressBar: true,
+                positionClass: "toast-top-right",
+                preventDuplicates: false,
+                onclick: null,
+                showDuration: "1000",
+                hideDuration: "1000",
+                timeOut: "5000",
+                extendedTimeOut: "1000",
+                showEasing: "swing",
+                hideEasing: "linear",
+                showMethod: "fadeIn",
+                hideMethod: "fadeOut"
+            });
+        },
+    },
+    sweetalert:{
+        confirm:function(formData,method,url){
+            swal({
+                title: "Are you sure ?",
+                text: "Data can't be reverted",
+                type: "warning",
+                confirmButtonText: "Yes",
+                showCancelButton: true
+            }).then((result) => {
+                if (result.value) {
+                    CommonLib.ajaxForm(formData,method,url).then(d=>{
+                        if(d.status === 200){
+                            CommonLib.notification.success(d.msg);
+                            window.location = d.url;
+                        }
+                    }).catch(e=>{
+                        CommonLib.notification.error(e.errors);
+                    });
+                } else if (result.dismiss === 'cancel') {
+                    CommonLib.notification.warning("Action Cancelled!!!");
+                }
+            })
+        },
+        success:function(){
+
+        },
+    },
+    baseUrl:()=>{
+        var base_url = window.location;
+        console.log(base_url);
+    },
+    truncateString:(str, maxLength)=>{
+        if (str.length > maxLength) {
+            return str.substring(0, maxLength) + "...";
+        }
+        return str;
+    }
+}
+
     $("body").on("change", ".get-courses", function(e){
        var val = $(this).val();
        var url = "<?= base_url('get-exam-courses'); ?>";
