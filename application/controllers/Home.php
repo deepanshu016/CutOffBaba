@@ -169,7 +169,7 @@ class Home extends MY_Controller {
 		$data['streams'] = $this->streamdata();
 		$data['siteSettings'] = $this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings'] = $data['siteSettings'][0];
-		$data['collegeDetail'] = $this->db->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name' )->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')->join('tbl_country','tbl_country.id=tbl_college.country')->join('tbl_state','tbl_state.id=tbl_college.state')->where(['tbl_college.id'=>$id])->get('tbl_college')->result_array();
+		$data['collegeDetail'] = $this->db->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name,o.id as ownership_id,o.title as o_title' )->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')->join('tbl_country','tbl_country.id=tbl_college.country')->join('tbl_ownership as o','o.id=tbl_college.ownership')->join('tbl_state','tbl_state.id=tbl_college.state')->where(['tbl_college.id'=>$id])->get('tbl_college')->result_array();
 		$data['collegeDetail'] = $data['collegeDetail'][0];
 		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id]);
 		// echo "<pre>";

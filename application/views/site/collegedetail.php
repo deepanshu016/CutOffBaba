@@ -61,13 +61,13 @@
                                  </div>
                                  <div class="content">
                                     <div class="sp-text-second"><b>Ownership</b></div>
-                                    <div id="tdownership1" class="text-justify">Government</div>
+                                    <div id="tdownership1" class="text-justify"><?= @$collegeDetail['o_title'];?></div>
                                     <input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="col-md-5 col-12">
+                        <div class="col-md-5 col-12"> 
                            <div class="form-group">
                               <div class="why-choose-box">
                                  <div class="icon">
@@ -75,7 +75,21 @@
                                  </div>
                                  <div class="content">
                                     <div class="sp-text-second"><b>Approval</b></div>
-                                    <div id="tdapproval">ECFMG (USA), NMC (Former MCI), WHO</div>
+                                    
+                                    <div id="tdapproval">
+                                    <?php
+                                       if(!empty($collegeDetail['approved_by'])){
+                                          $approvals = '';
+                                          $approval_ids = explode(',',$collegeDetail['approved_by']);
+                                          foreach ($approval_ids as $approval) {
+                                             $approvalBy = $this->db->select('approval')->where('id',$approval)->get('tbl_approval')->row_array();
+                                             $approvals .= $approvalBy['approval'].',';
+                                          }
+                                       }
+                                       echo replace_last_comma($approvals,',');
+                                    ?>
+                                    
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -100,7 +114,19 @@
                               </div>
                               <div class="content">
                                  <div class="sp-text-second"><b>Gender Accepted</b></div>
-                                 <div id="tdgender" class="text-justify">Male &amp; Female</div>
+                                 <div id="tdgender" class="text-justify">
+                                 <?php
+                                       if(!empty($collegeDetail['gender_accepted'])){
+                                          $genders = '';
+                                          $genders_ids = explode(',',$collegeDetail['gender_accepted']);
+                                          foreach ($genders_ids as $gender) {
+                                             $genderBy = $this->db->select('gender')->where('id',$gender)->get('tbl_gender')->row_array();
+                                             $genders .= $genderBy['gender'].'&';
+                                          }
+                                       }
+                                       echo replace_last_comma($genders,'&');
+                                    ?>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -111,15 +137,27 @@
                               </div>
                               <div class="content">
                                  <div class="sp-text-second"><b>University</b></div>
-                                 <div id="tdaffiliated" class="text-justify">West Bengal University of Health Sciences,Kolkata</div>
+                                 <div id="tdaffiliated" class="text-justify"><?= @$collegeDetail['university_name']; ?></div>
                               </div>
                            </div>
                         </div>
                      </div>
                      <div class="row mt-4">
-                        <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname">Govt Medical College Burdwan</b></div>
-                        <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear">1969</b></div>
-                        <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">MBBS, PG Diploma, MD/MS, DM / M.Ch</b></div>
+                        <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname"><?= @$collegeDetail['popular_name_one']; ?></b></div>
+                        <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear"><?= @$collegeDetail['establishment']; ?></b></div>
+                        <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">
+                        <?php
+                           if(!empty($collegeDetail['course_offered'])){
+                              $courses = '';
+                              $course_ids = explode(',',$collegeDetail['course_offered']);
+                              foreach ($course_ids as $course) {
+                                 $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                 $courses .= $courseBy['course'].',';
+                              }
+                           }
+                           echo replace_last_comma($courses,',');
+                        ?>
+                        </b></div>
                         <div id="tdother1" class="col-md-6"></div>
                         <div id="tdother2" class="col-md-6"></div>
                      </div>
@@ -131,8 +169,8 @@
 
                   <section class="card card-body">
                      <div class="row">
-                        <h4 class="mainShorst">PB. Government Dental College And Hospital , AMRITSAR Highlights 2024</h4>
-                        <p>PB. Government Dental College And Hospital , AMRITSAR has since established itself as a leading institution of higher learning in Amritsar, Punjab. With a focus on providing quality education, the institute presents a variety of PG and UG course options in full-time mode, which are approved by DCI. The institute's experienced faculty members are dedicated to imparting knowledge and skills in fields such as Medicine and Health Sciences, and more. The total seat intake for these courses is 68. The institute strives to make education accessible to all by setting the fee range at INR 320,000-375,000. At the PB. Government Dental College And Hospital , AMRITSAR, students can expect to receive a well-rounded education that prepares them for successful careers in their chosen fields. With a focus on affordability and accessibility, the institute provides a valuable education that is within reach of many students.</p>
+                        <h4 class="mainShorst"><?= @$collegeDetail['full_name']; ?></h4>
+                        <p><?= @$collegeDetail['full_name']; ?></p>
                      </div>
 
                      <table class="table table-bordered">
@@ -143,15 +181,38 @@
                         </tr>
                         <tr>
                            <td>Campus Location</td>
-                           <td>Amritsar, Punjab</td>
+                           <td>
+                              <?php
+                                 $states = $this->db->select('name')->where('id',$collegeDetail['state'])->get('tbl_state')->row_array();
+                                 $city = $this->db->select('city')->where('id',$collegeDetail['city'])->get('tbl_city')->row_array();
+                                 echo $city['city'].',',$states['name'];
+                              ?>
+                           </td>
                         </tr>
                         <tr>
                            <td>Courses Offered</td>
-                           <td>PG and UG</td>
+                           <td>
+                           <?php
+                           if(!empty($collegeDetail['course_offered'])){
+                              $courses = '';
+                              $course_ids = explode(',',$collegeDetail['course_offered']);
+                              foreach ($course_ids as $course) {
+                                 $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                 $courses .= $courseBy['course'].',';
+                              }
+                           }
+                           echo replace_last_comma($courses,',');
+                           ?>
+                           </td>
                         </tr>
                         <tr>
                            <td>No. of Seats</td>
-                           <td>68</td>
+                           <td>
+                              <?php
+                                 $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id']])->get()->num_rows();
+                                 echo $SeatMatrixData;
+                              ?>
+                           </td>
                         </tr>
                         <tr>
                            <td>Median Salary</td>
@@ -171,11 +232,18 @@
                      <div class="row">
                         <h4 class="mainShorst">Seat Matrix</h4>
                         <table class="table table-bordered">
+                        <?php  
+                           $courses=explode(",", $collegeDetail['course_offered']);
+                           $degreeType=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
+                          
+                           foreach ($degreeType as $key => $degree) {		
+                              $degree_types=$this->db->select('*')->where_in('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();			
+							   ?>
                            <tbody>
                               <tr>
                                  <td>
                                     <div>
-                                       <span>Post Graduate</span>
+                                       <span><?= $degree_types[0]['degreetype']; ?></span>
                                     </div>
                                  </td>
                               </tr>
@@ -191,68 +259,29 @@
                                                 <th>Seats</th>
                                                 <th>Recognisation</th>
                                              </tr>
+                                             <?php 
+                                                $courselist=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
+                                                foreach ($courselist as $course) {
+                                                   $branchList = $this->db->select('*')->where('courses',$course['id'])->get('tbl_branch')->result_array();
+                                                foreach($branchList as $key=>$branch){
+                                                   $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id'],'degree_type_id'=>$degree_types[0]['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id']])->get()->row_array();
+                                             ?>
                                              <tr>
-                                                <td>1</td>
-                                                <td>MDS</td>
-                                                <td>Conservative Dentistry &amp; Endodontics</td>
-                                                <td>5</td>
+                                                <td><?= $key+1; ?></td>
+                                                <td><?= $course['course']; ?></td>
+
+                                                <td><?= $branch['branch']; ?></td>
+                                                <td><?= !empty($SeatMatrixData) ? $SeatMatrixData['seat']: '0'; ?></td>
                                                 <td>Recognised</td>
                                              </tr>
-                                             <tr>
-                                                <td>2</td>
-                                                <td>MDS</td>
-                                                <td>Oral &amp; Maxillofacial Pathology and Oral Microbiology</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>3</td>
-                                                <td>MDS</td>
-                                                <td>Oral and Maxillofacial Surgery</td>
-                                                <td>4</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>4</td>
-                                                <td>MDS</td>
-                                                <td>Oral Medicine &amp; Radiology</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>5</td>
-                                                <td>MDS</td>
-                                                <td>Orthodonitics &amp; Dentofacial Orthopedics</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>6</td>
-                                                <td>MDS</td>
-                                                <td>Pediatric and Preventive Dentistry</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>7</td>
-                                                <td>MDS</td>
-                                                <td>Periodontology</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
-                                             <tr>
-                                                <td>8</td>
-                                                <td>MDS</td>
-                                                <td>Prosthodontics and Crown &amp; Bridge</td>
-                                                <td>5</td>
-                                                <td>Recognised</td>
-                                             </tr>
+                                             <?php } } ?>
                                           </tbody>
                                        </table>
                                     </div>
                                  </td>
                               </tr>
                            </tbody>
+                        <?php } ?>
                         </table>
                      </div>
                   </section>
@@ -394,24 +423,44 @@
                   <section id="fees" class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Courses Offered</h4>
-                        <p>Punjab Govt Dental College & Hospital Amritsar offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
-
-                        <h5>BDS Duration & Intake</h5>
-                        <p>Here, you can learn about the undergraduate courses by Punjab Govt Dental College Amritsar, including the duration and number of seats.</p>
-                        <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Duration</strong></td><td><strong>Intake</strong></td></tr><tr><td>BDS</td><td>4+1 year Internship</td><td>50</td></tr></tbody></table>
-
-                        <h5>MDS Duration & Intake</h5>
+                        <p><?= $collegeDetail['full_name']; ?> offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
+                        <?php
+                        if(!empty($collegeDetail['course_offered'])){
+                           $courses = '';
+                           $course_ids = explode(',',$collegeDetail['course_offered']);
+                           foreach ($course_ids as $course) {
+                              $courseData = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                              $courseSeats = $this->db->select('seat')->where('course_id',$course)->get('tbl_college_seat_matrix_data')->row_array();
+                        ?>                          
+                        <h5><?= $courseData['course']; ?> Duration & Intake</h5>
+                        <p>Here, you can learn about the undergraduate courses by <?= $collegeDetail['full_name']; ?>, including the duration and number of seats.</p>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td><strong>Course</strong></td>
+                                 <td><strong>Duration</strong></td>
+                                 <td><strong>Intake</strong></td>
+                              </tr>
+                              <tr>
+                                 <td><?= $courseData['course']; ?></td>
+                                 <td><?= $courseData['course_duration']; ?></td>
+                                 <td><?= ($courseSeats) ? $courseSeats['seat'] : 0; ?></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <?php } } ?>
+                        <!-- <h5>MDS Duration & Intake</h5>
                         <p>Here, you can learn about the postgraduate courses by Punjab Govt Dental College Amritsar, including the duration and number of seats.</p>
                          <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Speciality</strong></td><td><strong>Duration</strong></td><td><strong>Intake</strong></td></tr><tr><td>MDS</td><td>Prosthodontics and Crown &amp; Bridge</td><td>3 Years</td><td>3</td></tr><tr><td>MDS</td><td>Pediatric and Preventive Dentistry</td><td>3 Years </td><td>6</td></tr><tr><td>MDS</td><td>Oral and Maxillofacial Surgery</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Conservative Dentistry &amp; Endodontics</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Periodontology</td><td>3 Years </td><td>3</td></tr></tbody></table>
 
                          <h5>MDS Admission 2024-24</h5>
                          <p>If you want admission to Govt Dental College Amritsar, you must follow the college admission procedure; here in this Section, we provide detailed information about the Punjab Govt Dental College and Hospital Amritsar PG Medical Course Admission Process.</p>
 
-                         <table class="table table-bordered"><thead><tr><th>Particular</th><th>Description</th></tr></thead><tbody><tr><td>Entrance Exam </td><td>Candidates must qualify for the <a href="#!" target="_blank" rel="dofollow noopener"></a><a href="#!" target="_blank" rel="dofollow noopener">NEET MDS</a> entrance exam conducted by NBEMS.</td></tr><tr><td>Counselling Procedure</td><td>After the Qualify the NEET entrance exam, candidates must participate in the <a href="#!" target="_blank" rel="dofollow noopener">Punjab NEET MDS Counselling</a>, conducted by the Baba Farid University of Health Sciences (BFUHS), Faridkot. </td></tr></tbody></table>
+                         <table class="table table-bordered"><thead><tr><th>Particular</th><th>Description</th></tr></thead><tbody><tr><td>Entrance Exam </td><td>Candidates must qualify for the <a href="#!" target="_blank" rel="dofollow noopener"></a><a href="#!" target="_blank" rel="dofollow noopener">NEET MDS</a> entrance exam conducted by NBEMS.</td></tr><tr><td>Counselling Procedure</td><td>After the Qualify the NEET entrance exam, candidates must participate in the <a href="#!" target="_blank" rel="dofollow noopener">Punjab NEET MDS Counselling</a>, conducted by the Baba Farid University of Health Sciences (BFUHS), Faridkot. </td></tr></tbody></table> -->
 
-                         <h5>Eligibility Criteria</h5>
+                         <!-- <h5>Eligibility Criteria</h5>
                          <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
-                         <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table>
+                         <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table> -->
 
 
 
@@ -423,8 +472,26 @@
                      <div class="row">
                         <h4 class="mainShorst">Eligibility Criteria</h4>
                         <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
-
-                        <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td><strong>Courses</strong></td>
+                                 <td><strong>Eligibility Criteria</strong></td>
+                              </tr>
+                              <?php
+                              if(!empty($collegeDetail['course_offered'])){
+                                 $courses = '';
+                                 $course_ids = explode(',',$collegeDetail['course_offered']);
+                                 foreach ($course_ids as $course) {
+                                    $courseDatas = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                              ?>     
+                              <tr>
+                                 <td><?= $courseDatas['course']; ?></td>
+                                 <td><?= ($courseDatas['course_eligibility']) ? $courseDatas['course_eligibility'] : '-'; ?></td>
+                              </tr>
+                              <?php } } ?>
+                           </tbody>
+                        </table>        
 
                      </div>
                   </section>
@@ -483,102 +550,21 @@
                         <br>
                         <div class="grid-gallery">
                            <ul class="magnific-gallery">
+                           <?php if(!empty($collegeGallery)){
+										foreach($collegeGallery as $gallery){ ?>
                               <li>
                                  <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <img src="<?= base_url('app/assets/uploads/media/image/').$gallery['file_name'];?>" alt="">
                                     <figcaption>
                                        <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                          <a href="<?= base_url('app/assets/uploads/media/image/').$gallery['file_name'];?>" title="Photo title" data-effect="mfp-zoom-in">
                                              <i class="pe-7s-albums"></i> 
                                           </a>
                                        </div>
                                     </figcaption>
                                  </figure>
                               </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/23.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/23.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/19.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/19.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/15.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                             <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
-                              <li>
-                                 <figure>
-                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
-                                    <figcaption>
-                                       <div class="caption-content">
-                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
-                                             <i class="pe-7s-albums"></i> 
-                                          </a>
-                                       </div>
-                                    </figcaption>
-                                 </figure>
-                              </li>
+                              <?php } } ?> 
                            </ul>
                         </div>  
                      </div>
@@ -595,7 +581,7 @@
                                     Name of Institute 
                                  </td>
                                  <td>
-                                     Punjab Government Dental
+                                     <?= $collegeDetail['full_name']; ?>
                                  </td>
                               </tr>
                               <tr>
@@ -603,7 +589,7 @@
                                     Location 
                                  </td>
                                  <td>
-                                     GDC Amritsar
+                                 <?= $city['city']; ?>,<?= $states['name']; ?>
                                  </td>
                               </tr>
                               <tr>
@@ -619,7 +605,17 @@
                                     Courses Offered 
                                  </td>
                                  <td>
-                                     BDS, MDS, Advanced Oral Implantology, Practice Management Programmes 
+                                 <?php
+                                 if(!empty($collegeDetail['course_offered'])){
+                                    $coursesDatas = '';
+                                    $course_ids = explode(',',$collegeDetail['course_offered']);
+                                    foreach ($course_ids as $course) {
+                                       $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                       $coursesDatas .= $courseBy['course'].',';
+                                    }
+                                 }
+                                 echo replace_last_comma($coursesDatas,',');
+                                 ?>
                                  </td>
                               </tr>
                               <tr>
