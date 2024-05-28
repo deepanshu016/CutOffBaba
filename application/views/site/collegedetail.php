@@ -167,7 +167,7 @@
                   </section>
 
 
-                   <section class="card card-body">
+                   <section id="seat_matrix" class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Seat Matrix</h4>
                         <table class="table table-bordered">
@@ -258,7 +258,7 @@
                   </section>
 
 
-                  <section class="card card-body">
+                  <section id="rank" class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Cutoff of Ahmedabad Dental College & Hospital, Gandhinagar</h4>
 
@@ -270,6 +270,9 @@
 
                      </div>
                   </section>
+
+
+
 
                   <section class="card card-body">
                      <div class="row">
@@ -336,7 +339,16 @@
                      </div>
                   </section>
 
-                   <section class="card card-body rs-counter">
+
+                  <section class="card card-body">
+                     <div class="row">
+                        
+                        <img class="img-fluid" src="https://cutoffbaba.com/images/RegularUpdates.jpeg">
+
+                     </div>
+                  </section>
+
+                   <section id="hospital" class="card card-body rs-counter">
                      <div class="row">
                         <h4 class="mainShorst">Hospital Details</h4>
                         <div class="row">
@@ -379,9 +391,483 @@
                      </div>
                   </section>
 
+                  <section id="fees" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Courses Offered</h4>
+                        <p>Punjab Govt Dental College & Hospital Amritsar offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
+
+                        <h5>BDS Duration & Intake</h5>
+                        <p>Here, you can learn about the undergraduate courses by Punjab Govt Dental College Amritsar, including the duration and number of seats.</p>
+                        <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Duration</strong></td><td><strong>Intake</strong></td></tr><tr><td>BDS</td><td>4+1 year Internship</td><td>50</td></tr></tbody></table>
+
+                        <h5>MDS Duration & Intake</h5>
+                        <p>Here, you can learn about the postgraduate courses by Punjab Govt Dental College Amritsar, including the duration and number of seats.</p>
+                         <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Speciality</strong></td><td><strong>Duration</strong></td><td><strong>Intake</strong></td></tr><tr><td>MDS</td><td>Prosthodontics and Crown &amp; Bridge</td><td>3 Years</td><td>3</td></tr><tr><td>MDS</td><td>Pediatric and Preventive Dentistry</td><td>3 Years </td><td>6</td></tr><tr><td>MDS</td><td>Oral and Maxillofacial Surgery</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Conservative Dentistry &amp; Endodontics</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Periodontology</td><td>3 Years </td><td>3</td></tr></tbody></table>
+
+                         <h5>MDS Admission 2024-24</h5>
+                         <p>If you want admission to Govt Dental College Amritsar, you must follow the college admission procedure; here in this Section, we provide detailed information about the Punjab Govt Dental College and Hospital Amritsar PG Medical Course Admission Process.</p>
+
+                         <table class="table table-bordered"><thead><tr><th>Particular</th><th>Description</th></tr></thead><tbody><tr><td>Entrance Exam </td><td>Candidates must qualify for the <a href="#!" target="_blank" rel="dofollow noopener"></a><a href="#!" target="_blank" rel="dofollow noopener">NEET MDS</a> entrance exam conducted by NBEMS.</td></tr><tr><td>Counselling Procedure</td><td>After the Qualify the NEET entrance exam, candidates must participate in the <a href="#!" target="_blank" rel="dofollow noopener">Punjab NEET MDS Counselling</a>, conducted by the Baba Farid University of Health Sciences (BFUHS), Faridkot. </td></tr></tbody></table>
+
+                         <h5>Eligibility Criteria</h5>
+                         <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
+                         <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table>
+
+
+
+                     </div>
+                  </section>
+
+
                   <section class="card card-body">
                      <div class="row">
-                        <h4 class="mainShorst">Seat Matrix</h4>
+                        <h4 class="mainShorst">Eligibility Criteria</h4>
+                        <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
+
+                        <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table>
+
+                     </div>
+                  </section>
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Fee Structure</h4>
+                        <p>The Govt Dental College Amritsar fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
+
+                        <h6><strong>For BDS Fees</strong></h6>
+
+                        <table class="table table-bordered"><tbody><tr><td><strong>BDS Course</strong></td><td><strong>Fees</strong></td></tr><tr><td>1st Year</td><td>80,000/-</td></tr><tr><td>2nd Year</td><td>90,000/-</td></tr><tr><td>3rd Year</td><td>1,00,000/-</td></tr><tr><td>4th Year</td><td>1,10,000/-</td></tr></tbody></table>
+
+                        <h6><strong>For MDS Fees</strong></h6>
+                        <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Fees (Annual)</strong></td></tr><tr><td>MDS</td><td>1,25,000/-</td></tr></tbody></table>
+
+                     </div>
+                  </section>
+
+
+
+                  <section id="placement" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Placements</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                        <td>
+                        Clove Dental 
+                        </td>
+                        <td>
+                        Innodata 
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        I.T.S Centre for Dental Studies and Research 
+                        </td>
+                        <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                     </div>
+                  </section>
+
+                  <section id="gallery" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst"><strong>College Gallery</strong></h4>
+                        <br>
+                        <div class="grid-gallery">
+                           <ul class="magnific-gallery">
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/23.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/23.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/19.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/19.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/15.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                             <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <li>
+                                 <figure>
+                                    <img src="https://www.gdcamritsar.com/images2/27.jpg" alt="">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="https://www.gdcamritsar.com/images2/27.jpg" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                           </ul>
+                        </div>  
+                     </div>
+                  </section>
+
+                  <section id="admission" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Admission</h4>
+                        <p>The highlights of the admission details of Punjab College are given in the table below </p>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    Name of Institute 
+                                 </td>
+                                 <td>
+                                     Punjab Government Dental
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Location 
+                                 </td>
+                                 <td>
+                                     GDC Amritsar
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Type of Institute 
+                                 </td>
+                                 <td>
+                                    Private 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Courses Offered 
+                                 </td>
+                                 <td>
+                                     BDS, MDS, Advanced Oral Implantology, Practice Management Programmes 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Mode of Application 
+                                 </td>
+                                 <td>
+                                     Online 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Entrance Examination 
+                                 </td>
+                                 <td>
+                                    NEET 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Mode of Examination 
+                                 </td>
+                                 <td>
+                                     Offline 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Selection Criteria 
+                                 </td>
+                                 <td>
+                                     50% in English, Physics, Chemistry and Biology and 40% for SC, ST, OBC 
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+
+
+
+                     </div>
+                  </section>
+
+                   <section id="contacts" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Contact Us</h4>
+                        <div class="form_container"> 
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Full Name*">
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email ID*">
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Location*">
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="State*">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <textarea class="form-control" placeholder="Message"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                            
+                           <div class="text-center"><input type="submit" value="Submit Now" class="btn_1 full-width"></div>
+                            
+                        </div>
+
+                     </div>
+                  </section>
+
+                  <section id="reviews" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">College Reviews</h4>
+                        <section id="reviews">
+                      
+                     <div class="reviews-container add_bottom_30">
+                        <div class="row">
+                           <div class="col-lg-3">
+                              <div id="review_summary">
+                                 <strong>8.5</strong>
+                                 <em>Superb</em>
+                                 <small>Based on 4 reviews</small>
+                              </div>
+                           </div>
+                           <div class="col-lg-9">
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                           </div>
+                        </div>
+                        <!-- /row -->
+                     </div>
+
+                     <div class="reviews-container">
+
+                        <div class="review-box clearfix">
+                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                           </figure>
+                           <div class="rev-content">
+                              <div class="rating">
+                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                              </div>
+                              <div class="rev-info">
+                                 Admin – April 03, 2016:
+                              </div>
+                              <div class="rev-text">
+                                 <p>
+                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /review-box -->
+                        <div class="review-box clearfix">
+                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                           </figure>
+                           <div class="rev-content">
+                              <div class="rating">
+                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                              </div>
+                              <div class="rev-info">
+                                 Ahsan – April 01, 2016:
+                              </div>
+                              <div class="rev-text">
+                                 <p>
+                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /review-box -->
+                        <div class="review-box clearfix">
+                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                           </figure>
+                           <div class="rev-content">
+                              <div class="rating">
+                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                              </div>
+                              <div class="rev-info">
+                                 Sara – March 31, 2016:
+                              </div>
+                              <div class="rev-text">
+                                 <p>
+                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /review-box -->
+                     </div>
+                     <!-- /review-container -->
+                  </section>
+
+                  <div class="add-review">
+                        <h5>Leave a Review</h5>
+                        <form>
+                           <div class="row">
+                              <div class="form-group col-md-6">
+                                 <label>Name and Lastname *</label>
+                                 <input type="text" name="name_review" id="name_review" placeholder="" class="form-control">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label>Email *</label>
+                                 <input type="email" name="email_review" id="email_review" class="form-control">
+                              </div>
+                              <div class="form-group col-md-12">
+                                 <label>Rating </label>
+                                 <div class="custom-select-form">
+                                 <select name="rating_review" id="rating_review" class="wide" style="display: none;">
+                                    <option value="1">1 (lowest)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5" selected="">5 (medium)</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10 (highest)</option>
+                                 </select><div class="nice-select wide" tabindex="0"><span class="current">5 (medium)</span><ul class="list"><li data-value="1" class="option">1 (lowest)</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option selected">5 (medium)</li><li data-value="6" class="option">6</li><li data-value="7" class="option">7</li><li data-value="8" class="option">8</li><li data-value="9" class="option">9</li><li data-value="10" class="option">10 (highest)</li></ul></div>
+                                 </div>
+                              </div>
+                              <div class="form-group col-md-12">
+                                 <label>Your Review</label>
+                                 <textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
+                              </div>
+                              <div class="form-group col-md-12 add_top_20 add_bottom_30">
+                                 <input type="submit" value="Submit" class="btn_1" id="submit-review">
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+
 
                      </div>
                   </section>
