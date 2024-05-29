@@ -43,7 +43,6 @@ class ExamController extends MY_Controller {
 
     public function updateUserProfile(){
         $allData = $this->input->post('profile');
-        print_r($allData);
         $profileData = $allData['user'];
         $courseData = $allData['course_data'];
         if(!empty($_FILES['photo']['name'])) {

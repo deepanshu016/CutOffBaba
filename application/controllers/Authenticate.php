@@ -18,6 +18,7 @@ Class Authenticate extends MY_Controller {
         if ($this->form_validation->run()) {
             $phone = $this->input->post('phone');
             $password = sha1($this->input->post('password'));
+            
             $userData = $this->master->singleRecord('tbl_users',array('mobile'=>$phone,'password'=>$password,'user_type'=>1));
             if(!empty($userData)){
                 $this->session->set_userdata('user',$userData);
@@ -208,6 +209,7 @@ Class Authenticate extends MY_Controller {
         }
     }
 	public function userLogin(){
+        
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run()) {

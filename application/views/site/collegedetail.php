@@ -1,4 +1,9 @@
 <?php $this->load->view('site/header');?>
+<style>
+   .modal-backdrop{
+      display: none;
+   }
+</style>
 <main>
    <!-- <style type="text/css">
       .hero_in.restaurant_detail:before{background: url('') no-repeat;background-size: 100% 100%;background-position: center;}
@@ -9,6 +14,10 @@
          </span>
       </div>
    </div>
+   <?php  
+      $states = $this->db->select('name')->where('id',$collegeDetail['state'])->get('tbl_state')->row_array();
+      $city = $this->db->select('city')->where('id',$collegeDetail['city'])->get('tbl_city')->row_array();
+   ?>
    <!--/hero_in-->
    <section class="main_posyion d-none d-sm-block d-sm-none d-md-block">
       <div class="container">
@@ -18,7 +27,7 @@
             </div>
             <div class="col-md-5">
                <h4 class="text-white"><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h4>
-               <p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> Amritsar, Punjab  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD 1969 </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliated College : </span> of Baba Farid University of Health Sciences, Faridkot</p>
+               <p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> <?= @$city['city']; ?>, <?= @$states['name']; ?>  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD <?= $collegeDetail['establishment']; ?> </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliation : </span>  <?= $collegeDetail['university_name']; ?></p>
             </div>
             <div class="col-md-3"><a style="float: right;" href="<?=asset_url()."college/banner/".$collegeDetail['college_logo'];?>" class="btn btn-primary" title="Photo title" >Download Brouchure</a></div>
          </div>
@@ -257,7 +266,7 @@
                                                 <th>Course</th>
                                                 <th>Branch</th>
                                                 <th>Seats</th>
-                                                <th>Recognisation</th>
+                                                <!-- <th>Recognisation</th> -->
                                              </tr>
                                              <?php 
                                                 $courselist=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
@@ -272,7 +281,7 @@
 
                                                 <td><?= $branch['branch']; ?></td>
                                                 <td><?= !empty($SeatMatrixData) ? $SeatMatrixData['seat']: '0'; ?></td>
-                                                <td>Recognised</td>
+                                                <!-- <td>Recognised</td> -->
                                              </tr>
                                              <?php } } ?>
                                           </tbody>
@@ -289,13 +298,20 @@
 
                   <section id="rank" class="card card-body">
                      <div class="row">
-                        <h4 class="mainShorst">Cutoff of Ahmedabad Dental College & Hospital, Gandhinagar</h4>
+                        <h4 class="mainShorst">Cutoff of <?= $collegeDetail['full_name']; ?></h4>
 
                         <h5 class="cnnyuc7us">Central Counselling Cutoff </h5> 
-                        <a class=" btn-ddd" href="#!">VIEW CUTOFF</a>
-
+                        <?php
+                        if(empty($this->session->userdata('user'))){ ?>
+                           <a class="btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
+                        <?php } else{ ?>
+                        <?php } ?>
                         <h5 class="cnnyuc7us"> State Counselling Cutoff </h5> 
-                        <a class=" btn-ddd" href="#!">VIEW CUTOFF</a>
+                        <?php
+                        if(empty($this->session->userdata('user'))){ ?>
+                        <a class=" btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
+                        <?php } else{ ?>
+                        <?php } ?>
 
                      </div>
                   </section>
@@ -305,7 +321,7 @@
 
                   <section class="card card-body">
                      <div class="row">
-                        <h4 class="mainShorst">Fees Structure of Ahmedabad Dental College & Hospital, Gandhinagar</h4>
+                        <h4 class="mainShorst">Fees Structure of  <?= $collegeDetail['full_name']; ?></h4>
 
                         <table class="table table-bordered">
                            <thead>
@@ -316,52 +332,42 @@
                               </tr>
                            </thead>
                            <tbody>
-                              <tr class="">
-                                 <td class="">
-                                    <div>
-                                       <a href="#!">BDS</a>
-                                       <span class="_037f">
-                                          ( 1  course )
-                                       </span>
-                                    </div>
-                                 </td>
-                                 <td class="">
-                                    <div class="c390"> 3.2 L</div>
-                                 </td>
-                                 <td class="">
-                                    <div class="_5ffb">
+                              <?php
+                                 if(!empty($collegeDetail['course_offered'])){
+                                    $courses = '';
+                                    $course_ids = explode(',',$collegeDetail['course_offered']);
+                                    foreach ($course_ids as $course) {
+                                       $courseData = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                                       $branchCount = $this->db->select('*')->where('courses',$course)->get('tbl_branch')->num_rows(); 
+                              ?>  
+                                 <tr class="">
+                                    <td class="">
                                        <div>
-                                          <span>10+2 : </span>
-                                          <span>
-                                             50 %
+                                          <a href="#!"><?= $courseData['course']; ?></a>
+                                          <span class="_037f">
+                                             (<?= $branchCount; ?>  course )
                                           </span>
                                        </div>
-                                       <span>
-                                          <div><span>Exams : </span><span class="c229"><a href="#!">NEET</a><a href="#!">Punjab NEET</a></span></div>
-                                       </span>
-                                    </div>
-                                 </td>
-                              </tr>
-                              <tr class="">
-                                 <td class="">
-                                    <div>
-                                       <a class="_69c7 ripple dark" uilpwidgetname="acp_section_fees_and_eligibility" widgetspecificlabel="MDS" href="/college/pb-government-dental-college-and-hospital-amritsar-62807/courses/mds-bc">MDS</a>
-                                       <span class="_037f">
-                                          (<!-- -->5<!-- --> courses<!-- -->)
-                                       </span>
-                                    </div>
-                                 </td>
-                                 <td class="">
-                                    <div class="c390"> 3.8 L</div>
-                                 </td>
-                                 <td class="">
-                                    <div class="_5ffb">
-                                       <span>
-                                          <div><span>Exams : </span><span class="c229"><a href="#!">NEET MDS</a><a href="#!">Punjab NEET PG</a></span></div>
-                                       </span>
-                                    </div>
-                                 </td>
-                              </tr>
+                                    </td>
+                                    <td class="">
+                                       <div class="c390"> <?= $courseData['course_fees']; ?></div>
+                                    </td>
+                                    <td class="">
+                                       <div class="_5ffb">
+                                          <div>
+                                          <?= $courseData['course_eligibility']; ?>
+                                             <!-- <span>10+2 : </span>
+                                             <span>
+                                                50 %
+                                             </span> -->
+                                          </div>
+                                          <!-- <span>
+                                             <div><span>Exams : </span><span class="c229"><a href="#!">NEET</a><a href="#!">Punjab NEET</a></span></div>
+                                          </span> -->
+                                       </div>
+                                    </td>
+                                 </tr>
+                              <?php } }?>
                            </tbody>
                         </table>
 
@@ -499,21 +505,43 @@
                   <section class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Fee Structure</h4>
-                        <p>The Govt Dental College Amritsar fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
-
-                        <h6><strong>For BDS Fees</strong></h6>
-
-                        <table class="table table-bordered"><tbody><tr><td><strong>BDS Course</strong></td><td><strong>Fees</strong></td></tr><tr><td>1st Year</td><td>80,000/-</td></tr><tr><td>2nd Year</td><td>90,000/-</td></tr><tr><td>3rd Year</td><td>1,00,000/-</td></tr><tr><td>4th Year</td><td>1,10,000/-</td></tr></tbody></table>
-
-                        <h6><strong>For MDS Fees</strong></h6>
-                        <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Fees (Annual)</strong></td></tr><tr><td>MDS</td><td>1,25,000/-</td></tr></tbody></table>
-
+                        <p>The <?= $collegeDetail['full_name']; ?> fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
+                        <?php 
+                           $courses=explode(",", $collegeDetail['course_offered']);
+                           
+                           $dtype=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
+                           
+                           foreach ($dtype as $key => $value) {
+                              $degree_type=$this->db->select('*')->where_in('id',$value['degree_type'])->get('tbl_degree_type')->result_array();
+								?>            
+                        <h6><strong>For <?=  $degree_type[0]['degreetype']; ?> Fees</strong></h6>
+                        <?php 
+                           $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
+                              foreach ($courselist as $course) {
+                                 $collegeFeesWithCourse = $this->db->select('*')->where('college_id',$course['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
+                        ?>
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><strong><?= $course['course']; ?></strong></td>
+                                    <!-- <td><strong>Fees</strong></td> -->
+                                 </tr>
+                                 <p>Tution Fees:- <?= @$collegeFeesWithCourse['tution_fees']; ?></p>
+                                 <p>Hostel Fees:- <?= @$collegeFeesWithCourse['hostel_fees']; ?></p>
+                                 <p>Misc. Fees:- <?= @$collegeFeesWithCourse['misc_fees']; ?></p>
+                                 <p>eat Identity Charges:- <?= @$collegeFeesWithCourse['seat_indentity_charges']; ?></p>
+                                 <p>Upgradation Fees:- <?= @$collegeFeesWithCourse['upgradation_processing_fees']; ?></p>
+                                 <p>Bank Details :- <?= @$collegeFeesWithCourse['bank_details_1']; ?>  <?= @$collegeFeesWithCourse['bank_details_2']; ?></p>
+                                 <p>Demand Draft Details :- <?= @$collegeFeesWithCourse['demand_draft_name']; ?></p>
+                              </tbody>
+                           </table>      
+                        <?php } } ?> 
                      </div>
                   </section>
 
 
 
-                  <section id="placement" class="card card-body">
+                  <!-- <section id="placement" class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Placements</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -542,7 +570,7 @@
                         </table>
 
                      </div>
-                  </section>
+                  </section> -->
 
                   <section id="gallery" class="card card-body">
                      <div class="row">
@@ -597,7 +625,10 @@
                                      Type of Institute 
                                  </td>
                                  <td>
-                                    Private 
+                                    <?php
+                                       $institueType = $this->db->select('title')->where('id',$collegeDetail['ownership'])->get('tbl_ownership')->row_array();
+                                    ?>
+                                    <?= $institueType['title']; ?>
                                  </td>
                               </tr>
                               <tr>
@@ -623,7 +654,7 @@
                                      Mode of Application 
                                  </td>
                                  <td>
-                                     Online 
+                                     Online , Offline
                                  </td>
                               </tr>
                               <tr>
@@ -631,7 +662,18 @@
                                     Entrance Examination 
                                  </td>
                                  <td>
-                                    NEET 
+                                 <?php
+                                    if(!empty($collegeDetail['course_offered'])){
+                                       $exams = '';
+                                       $exams_ids = explode(',',$collegeDetail['course_offered']);
+                                       foreach ($course_ids as $course_id) {
+                                          $examsBy = $this->db->select('exam')->where("FIND_IN_SET(" . $course_id. ", course_accepting) > 0", NULL, FALSE)->get('tbl_exam')->row_array();
+                                          $exams .= $examsBy['exam'].',';
+                                       }
+                                    }
+                                    echo replace_last_comma($exams,',');
+                                 ?>
+                                     
                                  </td>
                               </tr>
                               <tr>
@@ -639,7 +681,7 @@
                                      Mode of Examination 
                                  </td>
                                  <td>
-                                     Offline 
+                                    Online,  Offline 
                                  </td>
                               </tr>
                               <tr>
@@ -663,37 +705,41 @@
                      <div class="row">
                         <h4 class="mainShorst">Contact Us</h4>
                         <div class="form_container"> 
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Full Name*">
+                           <form class="all-form" action="<?= base_url('post-enquiry'); ?>" method="POST">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="name" placeholder="Full Name*">
+                                       <div class="text-danger" id="name"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="email"" placeholder="Email ID*">
+                                       <div class="text-danger" id="email"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="phone" placeholder="Mobile*">
+                                       <div class="text-danger" id="phone"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="subject"  placeholder="Subject*">
+                                       <div class="text-danger" id="subject"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                                       <div class="text-danger" id="message"></div>
+                                    </div>
                                  </div>
                               </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email ID*">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Location*">
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="State*">
-                                 </div>
-                              </div>
-                              <div class="col-md-12">
-                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Message"></textarea>
-                                 </div>
-                              </div>
-                           </div>
-                           
-                            
-                           <div class="text-center"><input type="submit" value="Submit Now" class="btn_1 full-width"></div>
-                            
+                              <div class="text-center"><input type="submit" value="Submit Now" class="btn_1 full-width"></div>
+                           </form> 
                         </div>
 
                      </div>
@@ -1109,6 +1155,49 @@
       </div>
    </div>
 </main>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999999999;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form method="post" action="<?=base_url('loginchk');?>" id="loginForm">
+            <div class="sign-in-wrapper">
+               <div class="form-group">
+                  <label>Mobile</label>
+                  <input type="number" class="form-control" name="phone" id="phone">
+                  <!-- <i class="icon_phone" style="top: 42px;left: 5px;position: absolute;"></i> -->
+               </div>
+               <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" id="password" value="">
+                  <!-- <i class="icon_lock_alt" style="top: 42px;left: 5px;position: absolute;"></i> -->
+               </div>
+               <div class="clearfix add_bottom_15">
+                  <div class="checkboxes float-start">
+                     <label class="container_check">Remember me
+                     <input type="checkbox">
+                     <span class="checkmark"></span>
+                     </label>
+                  </div>
+                  <div class="float-end mt-1"><a id="forgot" href="<?=base_url('forget');?>">Forgot Password?</a></div>
+               </div>
+               <div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
+               <div class="text-center">
+                  Don’t have an account? <a href="<?=base_url('signup');?>">Sign up</a>
+               </div>
+            </div>                 
+         </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?php $this->load->view('site/footer');?>
 <script>
    $(function() {
@@ -1126,5 +1215,42 @@
    			}
    		});
    	});
+      $("body").on('click','.open_login_modal',function(e){
+         e.preventDefault();
+         var href = $(this).attr('href');
+         $(href).show();
+      });
+
+      $(document).on("submit",'#loginForm',function(e){
+         e.preventDefault();
+         var method = $(this).attr('method');
+         var url = $(this).attr("action");
+         var form = $('#loginForm')[0];
+         var form_data = new FormData(form);   
+         var current_url = "<?= $this->uri->segment(1); ?>"; 
+         $.ajax({
+            type: method,
+            url: url,
+            data:form_data,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data){
+              
+                  if(data.status == 'error'){
+                     $.each(data.errors, function(key, value) {
+                        $('#'+key).addClass('is-invalid');
+                        $('#'+key).html(value);
+                     });  
+                  }
+                  if(data.status == 'success'){
+                     location.reload();
+                  }
+                  if(data.status == 'errors'){
+                     showNotify(data.message,data.status,data.url);
+                  }
+            }
+         }); 
+      })
    });
 </script>
