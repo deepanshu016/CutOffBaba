@@ -20,6 +20,7 @@ $route['logout'] = 'Authenticate/logout';
 $route['user-profile'] = 'Authenticate/userProfile';
 
 $route['get-cutoff-matrix'] = 'Home/get_cutoff_matrix';
+$route['get-cutoff-state-matrix'] = 'Home/get_cutoff_state_matrix';
 $route['update-profile'] = 'ExamController/updateUserProfile';
 $route['get-exam-courses'] = 'ExamController/getExamCourses';
 $route['get-sub-category'] = 'ExamController/getSubCategory';

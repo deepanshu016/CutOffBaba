@@ -1,5 +1,4 @@
 <?php 
-									
 									$branchids=$this->db->select('distinct(branch_id)')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->get('tbl_cutfoff_marks_data')->result_array(); 
 									
 									foreach($branchids as $branchid){
@@ -50,11 +49,11 @@
 										</tr>
 										<?php
 										$userData = $this->session->userdata('user');
-										$courseSubCategoryPreferences = $this->db->select('sub_category_id')->where('user_id',$userData['id'])->group_by('sub_category_id')->get('tbl_user_course_preferences')->result_array();
+										$courseSubCategoryPreferences = $this->db->select('domicile_state_sub_category_id')->where('user_id',$userData['id'])->group_by('sub_category_id')->get('tbl_user_course_preferences')->result_array();
 										$userCentralSubCategory = [];
 										if(!empty($courseSubCategoryPreferences)){
 											foreach($courseSubCategoryPreferences as $sub){
-												$userCentralSubCategory[] = $sub['sub_category_id'];
+												$userCentralSubCategory[] = $sub['domicile_state_sub_category_id'];
 											}
 										}
 										$catids=$this->db
@@ -66,13 +65,10 @@
 											->where('branch_id',$branchid['branch_id'])
 											->get('tbl_cutfoff_marks_data')
 											->result_array(); 
-										// echo $this->db->last_query();
 										if(!empty($catids)){
 										foreach($catids as $catid){
 											$branchdetaildata=$this->db->select('*')->where('id',$catid['category_type'])->get('tbl_sub_category')->result_array();
 											$R1=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('year',$year)->where('round_one',1)->get('tbl_cutfoff_marks_data')->result_array();
-											
-									
 											$R2=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('year',$year)->where('round_two',1)->get('tbl_cutfoff_marks_data')->result_array(); 
 											$R3=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('year',$year)->where('round_three',1)->get('tbl_cutfoff_marks_data')->result_array(); 
 											$R4=$this->db->select('*')->where('college_id',$collegeDetail['id'])->where('course_id',$courseid['course_id'])->where('branch_id',$branchid['branch_id'])->where('category_type',$catid['category_type'])->where('year',$year)->where('round_four',1)->get('tbl_cutfoff_marks_data')->result_array(); 

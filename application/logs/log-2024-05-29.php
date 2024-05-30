@@ -1114,3 +1114,7 @@ DEBUG - 2024-05-29 20:33:11 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-05-29 20:33:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2024-05-29 20:33:11 --> Pagination class already loaded. Second attempt ignored.
 DEBUG - 2024-05-29 20:33:11 --> cURL Class Initialized
+ERROR - 2024-05-29 21:16:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-05-29 21:16:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-29 21:16:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-05-29 21:16:12 --> 404 Page Not Found: Faviconico/index

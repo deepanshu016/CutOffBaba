@@ -247,14 +247,13 @@
 						</section>
 						<div role="tablist" class="add_bottom_45 accordion_2" id="payment">
 						<?php 
-						$courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
-						foreach($courseids as $courseid){
-							$coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
-							if (count($coursedetaildata)>0) {
-								$coursedetaildata=$coursedetaildata[0];
-								 
-								?>
-								<div class="card">
+							$courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+							foreach($courseids as $courseid){
+								$coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+								if (count($coursedetaildata)>0) {
+									$coursedetaildata=$coursedetaildata[0];
+						?>
+							<div class="card">
 								<div class="card-header" role="tab">
 									<h5 class="mb-0">
 										<a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
@@ -292,20 +291,17 @@
 											?>
 											<?php $this->load->view('site/show_college_matrix',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
 										</div>		
+									</div>
 								</div>
-				</div>
-			</div><?php
-							}
-						}	
+							</div>
+						<?php } } ?>
 
-						?>
+						<table>
 
-<table>
+							<tr>
 
-	<tr>
-
-	</tr>
-</table>
+							</tr>
+						</table>
 
 
 						<section id="reviews">

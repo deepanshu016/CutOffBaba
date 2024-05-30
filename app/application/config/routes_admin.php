@@ -420,6 +420,7 @@ $route['admin/export-college-seat-matrix'] = 'Admin/CollegeMatrix/exportSeatMatr
 $route['admin/import-college-seat-matrix-data'] = 'Admin/CollegeMatrix/importSeatMatrixData';
 $route['admin/export-college-seat-matrix-data/(:any)/(:any)/(:any)/(:any)'] = 'Admin/CollegeMatrix/exportSeatMatrixData/$1/$2/$3/$4';
 
+$route['admin/enquiries'] = 'Admin/Enquiry/index';
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

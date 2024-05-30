@@ -530,6 +530,16 @@ class Home extends MY_Controller {
 		echo json_encode($response);
 		return false;
 	}
+	public function get_cutoff_state_matrix(){
+		$data = $this->input->post();
+		$datas['year'] = $data['year'];
+		$datas['collegeDetail'] = $this->master->singleRecord('tbl_college',['id'=>$data['college_id']]);
+		$datas['courseid'] = $this->db->select('id as course_id')->where('id',$data['course_id'])->get('tbl_course')->row_array();
+		$result = $this->load->view('site/show_college_matrix_state',$datas,TRUE);
+		$response = array('status' => 'success','message'=> 'Colleges found successfully','html'=>$result);
+		echo json_encode($response);
+		return false;
+	}
 
 	public function submitEnquiry()
     {

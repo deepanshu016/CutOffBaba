@@ -302,16 +302,108 @@
 
                         <h5 class="cnnyuc7us">Central Counselling Cutoff </h5> 
                         <?php
-                        if(empty($this->session->userdata('user'))){ ?>
-                           <a class="btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
-                        <?php } else{ ?>
-                        <?php } ?>
+                           if(empty($this->session->userdata('user'))){ ?>
+                              <a class="btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
+                        <?php } else{ 
+                           $courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+                           foreach($courseids as $courseid){
+                             
+                              $coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+                              if (count($coursedetaildata)>0) {
+                                 $coursedetaildata=$coursedetaildata[0];
+                        ?>
+                           <div class="card">
+                              <div class="card-header" role="tab">
+                                 <h5 class="mb-0">
+                                    <a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
+                                 </h5>
+                              </div>
+                              <div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
+                                 <div class="card-body table-responsive">
+                                    <div class="d-flex justify-content-between">
+                                       <div>
+                                          <input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
+                                          <input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
+                                          <select class="form-control form-select get_cutoff_matrix">
+                                             <option>Year</option>
+                                             <?php
+                                             // Get the current year
+                                                $currentYear = date("Y");
+                                                // Loop to display the last 4 years
+                                                for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
+                                                   echo "<option value='$i'>$i</option>";
+                                                }
+                                             ?>
+                                          </select>
+                                       </div>
+                                       <!-- <div>
+                                          <select class="form-control form-select">
+                                             <option>Sub Category</option>
+                                          </select>
+                                       </div> -->
+                                    </div>
+                                    <div class="cutoff_matrix">
+                                       <?php
+                                       $year = date('Y');
+                                       ?>
+                                       <?php $this->load->view('site/show_college_matrix',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
+                                    </div>		
+                                 </div>
+                              </div>
+                           </div>
+                        <?php } } } ?>
                         <h5 class="cnnyuc7us"> State Counselling Cutoff </h5> 
                         <?php
-                        if(empty($this->session->userdata('user'))){ ?>
+                           if(empty($this->session->userdata('user'))){ ?>
                         <a class=" btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
-                        <?php } else{ ?>
-                        <?php } ?>
+                        <?php } else{ 
+                           $courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+                           foreach($courseids as $courseid){
+                             
+                              $coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+                              if (count($coursedetaildata)>0) {
+                                 $coursedetaildata=$coursedetaildata[0];
+                        ?>
+                        <div class="card">
+                              <div class="card-header" role="tab">
+                                 <h5 class="mb-0">
+                                    <a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
+                                 </h5>
+                              </div>
+                              <div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
+                                 <div class="card-body table-responsive">
+                                    <div class="d-flex justify-content-between">
+                                       <div>
+                                          <input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
+                                          <input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
+                                          <select class="form-control form-select get_state_cutoff_matrix">
+                                             <option>Year</option>
+                                             <?php
+                                             // Get the current year
+                                                $currentYear = date("Y");
+                                                // Loop to display the last 4 years
+                                                for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
+                                                   echo "<option value='$i'>$i</option>";
+                                                }
+                                             ?>
+                                          </select>
+                                       </div>
+                                       <!-- <div>
+                                          <select class="form-control form-select">
+                                             <option>Sub Category</option>
+                                          </select>
+                                       </div> -->
+                                    </div>
+                                    <div class="cutoff_matrix">
+                                       <?php
+                                       $year = date('Y');
+                                       ?>
+                                       <?php $this->load->view('site/show_college_matrix_state',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
+                                    </div>		
+                                 </div>
+                              </div>
+                           </div>
+                        <?php } } } ?>
 
                      </div>
                   </section>
@@ -477,7 +569,7 @@
                   <section class="card card-body">
                      <div class="row">
                         <h4 class="mainShorst">Eligibility Criteria</h4>
-                        <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
+                        <p>If you want admission to <?= $collegeDetail['full_name']; ?>, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
                         <table class="table table-bordered">
                            <tbody>
                               <tr>
@@ -1205,13 +1297,31 @@
    		var year = $(this).val();
    		var course_id = $("input[name='course_id']").val();
    		var college_id = $('.college_id').val();
+         var currentWrapper = $(this);
    		$.ajax({
    			url: "<?php echo base_url('get-cutoff-matrix'); ?>",
    			type: "POST",
    			data: {year:year,course_id:course_id,college_id:college_id},
    			dataType: 'json',
    			success: function(data){
-   				$(this).closest('.card-body').find('.cutoff_matrix').html(data.html);
+               console.log(data)
+   				currentWrapper.closest('.card-body').find('.cutoff_matrix').html(data.html);
+   			}
+   		});
+   	});
+   	$("body").on("change",".get_state_cutoff_matrix",function(e){
+   		var year = $(this).val();
+   		var course_id = $("input[name='course_id']").val();
+   		var college_id = $('.college_id').val();
+         var currentWrapper = $(this);
+   		$.ajax({
+   			url: "<?php echo base_url('get-cutoff-state-matrix'); ?>",
+   			type: "POST",
+   			data: {year:year,course_id:course_id,college_id:college_id},
+   			dataType: 'json',
+   			success: function(data){
+               console.log(data)
+   				currentWrapper.closest('.card-body').find('.cutoff_matrix').html(data.html);
    			}
    		});
    	});

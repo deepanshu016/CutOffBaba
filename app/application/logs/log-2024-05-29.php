@@ -126,3 +126,9 @@ ERROR - 2024-05-29 20:30:43 --> 404 Page Not Found: Assets/admin
 DEBUG - 2024-05-29 20:31:35 --> UTF-8 Support Enabled
 DEBUG - 2024-05-29 20:31:35 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-05-29 20:31:35 --> 404 Page Not Found: Assets/admin
+DEBUG - 2024-05-29 21:16:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-29 21:16:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-29 21:16:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-05-29 21:16:12 --> UTF-8 Support Enabled
+DEBUG - 2024-05-29 21:16:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-05-29 21:16:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
