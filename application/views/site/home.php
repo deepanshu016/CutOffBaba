@@ -53,6 +53,110 @@
 			<?php } }?>
 		</div>
 	</div>
+	<div class="container margin_60_35">
+			<div class="main_title_2">
+			<span><em></em></span>
+			<h2>STATE WISE COLLEGE FEE STRUCTURE </h2>
+		</div>
+			<div class="pricing-container cd-has-margins">
+			<ul class="pricing-list bounce-invert" >
+				<li >
+					<ul class="pricing-wrapper" >
+						<li data-type="monthly" class="is-visible" >
+							 
+							<header class="pricing-header"> 
+								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
+								<div class="price"> 
+									<span class="price-value"> BIHAR</span>  
+								</div>
+							</header>
+							 
+							<div class="pricing-body">
+								<ul class="pricing-features ddPrics">
+									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
+									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
+									 
+								</ul>
+							</div>
+							 
+							<footer class="pricing-footer">
+								<a class="select-plan" href="#0">more College</a>
+							</footer>
+						</li>
+						 
+					</ul>
+					 
+				</li>
+				<li >
+					<ul class="pricing-wrapper" >
+						<li data-type="monthly" class="is-visible" >
+							 
+							<header class="pricing-header"> 
+								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
+								<div class="price"> 
+									<span class="price-value"> BIHAR</span>  
+								</div>
+							</header>
+							 
+							<div class="pricing-body">
+								<ul class="pricing-features ddPrics">
+									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
+									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
+									 
+								</ul>
+							</div>
+							 
+							<footer class="pricing-footer">
+								<a class="select-plan" href="#0">more College</a>
+							</footer>
+						</li>
+						 
+					</ul>
+					 
+				</li>
+				<li >
+					<ul class="pricing-wrapper" >
+						<li data-type="monthly" class="is-visible" >
+							 
+							<header class="pricing-header"> 
+								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
+								<div class="price"> 
+									<span class="price-value"> BIHAR</span>  
+								</div>
+							</header>
+							 
+							<div class="pricing-body">
+								<ul class="pricing-features ddPrics">
+									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
+									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
+									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
+									 
+								</ul>
+							</div>
+							 
+							<footer class="pricing-footer">
+								<a class="select-plan" href="#0">more College</a>
+							</footer>
+						</li>
+						 
+					</ul>
+					 
+				</li>
+				 
+				 
+			</ul>
+			 
+		</div>
+		 
+		</div>
 	<div class="call_section pattern">
 			<div class="wrapper">
 				<div class="container margin_80_55">
@@ -106,189 +210,88 @@
 			</div>
 			<!-- /container -->
 		</div>
-		<div class="container margin_60_35">
-			<div class="main_title_2">
+		<section>
+			 <div class="container">
+			 	<div class=" ">
 			<span><em></em></span>
-			<h2>Our Counselling Plans </h2>
-		</div>
-			<div class="pricing-container cd-has-margins">
-			<ul class="pricing-list bounce-invert">
-				<li>
-					<ul class="pricing-wrapper">
-						<li data-type="monthly" class="is-visible">
-							<header class="pricing-header">
-								<h2>Quick Info</h2>
-								<h1 class="econsicss">ECONOMY PLAN</h1>
-								<div class="price">
-									<span class="currency">₹</span>
-									<span class="price-value"> 119.00</span> 
-									<span class="mainTsh">10% OFF   132</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>Tuition Fees Info</em>  </li>
-									<li><em>Seat Matrix Info</em>  </li>
-									<li><em>Approved Colleges Info</em>  </li>
-									<li><em>Cutoff Info</em>  </li>
-									<li><em>Category Info</em>  </li>
-									<li><em>Counselling Dates</em>  </li>
-								</ul>
-							</div>
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-						<li data-type="yearly" class="is-hidden">
-							<header class="pricing-header">
-								<h2>Basic</h2>
+			<h2 class="text-center">OUR PAID COUNSELLING SERVICES </h2>
+			<br>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable">
+                    <div class="pricingTable-header">
+                    	<h6 class="qilck">Quick Info</h6>
+                        <h3 class="title">ECONOMY PLAN</h3>
+                    </div>
+                    <div class="price-value">
+                        <span class="amount">₹ 119.00</span>
+                        <span class="month">10% OFF ₹ 132</span>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>Tuition Fees Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+                        <li>Seat Matrix Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Approved Colleges Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Cutoff Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Category Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
+                        <li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <!-- <li class="disable">15 Subdomains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span>  </li>
+                        <li class="disable">20 Domains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span></li> -->
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable magenta">
+                    <div class="pricingTable-header">
+                    	<h6 class="qilck">Expertise Info</h6>
+                        <h3 class="title">STANDARD PLAN</h3>
+                    </div>
+                    <div class="price-value">
+                        <span class="amount">₹ 999.00</span>
+                        <span class="month">10% OFF ₹ 1110</span>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>All Quick Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+                        <li>Counselling Procedures <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Counselling Eligibility <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
+                        <li>College Selection Guidance <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Bonds & Service Rules <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+                        <li>How To Apply For <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Counselling Of Other States <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                         
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable ">
+                     <div class="pricingTable-header">
+                    	<h6 class="qilck">Counselling Package</h6>
+                        <h3 class="title">PREMIUM PLAN</h3>
+                    </div>
+                    <div class="price-value">
+                        <span class="amount">₹ 29,999</span>
+                        <span class="month">10% OFF ₹ 33333</span>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>Unlimited Quick Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+                        <li>Unlimited Expert Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Access To Counselling Tools <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
+                        <li>Access To College Predictor <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Full Support In Counselling <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+                        <li>Option & Choice Entry <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                        <li>Post Seat Allocation <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+		</section>
 
-								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">320</span>
-									<span class="price-duration">yr</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>1</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
-								</ul>
-							</div> 
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-					</ul>
-					<!-- /pricing-wrapper -->
-				</li>
-				<li class="popular">
-					<ul class="pricing-wrapper">
-						<li data-type="monthly" class="is-visible">
-							<header class="pricing-header">
-								<h2>Quick Info</h2>
-								<h1 class="econsicss">ECONOMY PLAN</h1>
-								<div class="price">
-									<span class="currency">₹</span>
-									<span class="price-value"> 119.00</span> 
-									<span class="mainTsh">10% OFF   132</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>Tuition Fees Info</em>  </li>
-									<li><em>Seat Matrix Info</em>  </li>
-									<li><em>Approved Colleges Info</em>  </li>
-									<li><em>Cutoff Info</em>  </li>
-									<li><em>Category Info</em>  </li>
-									<li><em>Counselling Dates</em>  </li>
-								</ul>
-							</div>
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-						<li data-type="yearly" class="is-hidden">
-							<header class="pricing-header">
-								<h2>Popular</h2>
 
-								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">630</span>
-									<span class="price-duration">yr</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>3</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
-								</ul>
-							</div>
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-					</ul>
-					<!-- /cd-pricing-wrapper -->
-				</li>
-				<li>
-					<ul class="pricing-wrapper">
-						<li data-type="monthly" class="is-visible">
-							<header class="pricing-header">
-								<h2>Counselling Package</h2>
-								<h1 class="econsicss">PREMIUM PLAN</h1>
-								<div class="price">
-									<span class="currency">₹</span>
-									<span class="price-value"> 29,999</span> 
-									<span class="mainTsh">10% OFF  ₹ 33333</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>Tuition Fees Info</em>  </li>
-									<li><em>Seat Matrix Info</em>  </li>
-									<li><em>Approved Colleges Info</em>  </li>
-									<li><em>Cutoff Info</em>  </li>
-									<li><em>Category Info</em>  </li>
-									<li><em>Counselling Dates</em>  </li>
-								</ul>
-							</div>
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-						<li data-type="yearly" class="is-hidden">
-							<header class="pricing-header">
-								<h2>Premier</h2>
-
-								<div class="price">
-									<span class="currency">$</span>
-									<span class="price-value">950</span>
-									<span class="price-duration">yr</span>
-								</div>
-							</header>
-							<!-- /pricing-header -->
-							<div class="pricing-body">
-								<ul class="pricing-features">
-									<li><em>One Time</em> Fee</li>
-									<li><em>5</em> User</li>
-									<li><em>Lifetime</em> Availability</li>
-									<li><em>Non</em> Featured</li>
-									<li><em>30 days</em> Listing</li>
-									<li><em>24/7</em> Support</li>
-								</ul>
-							</div>
-							<!-- /pricing-body -->
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">Select</a>
-							</footer>
-						</li>
-					</ul>
-					<!-- /pricing-wrapper -->
-				</li>
-			</ul>
-			<!-- /pricing-list -->
-		</div>
-		<!-- /pricing-container -->	
-		</div>
+		 
 	<div class="container-fluid margin_80_55">
 		<div class="main_title_2">
 			<span><em></em></span>
@@ -304,5 +307,71 @@
 			<?php } ?>
 		</div>
 	</div>
+
+	<section>
+		
+	</section>
+
+	<div class="container margin_80_55">
+			<div class="main_title_2">
+				<span><em></em></span>
+				<h2>OUR BLOG</h2>
+				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<a class="box_news" href="#!">
+						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
+						<ul>
+							<li>Restaurants</li>
+							<li>20.11.2017</li>
+						</ul>
+						<h4>Pri oportere scribentur eu</h4>
+						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+					</a>
+				</div>
+				<!-- /box_news -->
+				<div class="col-lg-6">
+					<a class="box_news" href="#!">
+						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
+						<ul>
+							<li>Shops</li>
+							<li>20.11.2017</li>
+						</ul>
+						<h4>Duo eius postea suscipit ad</h4>
+						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+					</a>
+				</div>
+				<!-- /box_news -->
+				<div class="col-lg-6">
+					<a class="box_news" href="#!">
+						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
+						<ul>
+							<li>Shops</li>
+							<li>20.11.2017</li>
+						</ul>
+						<h4>Elitr mandamus cu has</h4>
+						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+					</a>
+				</div>
+				<!-- /box_news -->
+				<div class="col-lg-6">
+					<a class="box_news" href="#!">
+						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
+						<ul>
+							<li>Bars</li>
+							<li>20.11.2017</li>
+						</ul>
+						<h4>Id est adhuc ignota delenit</h4>
+						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+					</a>
+				</div>
+				<!-- /box_news -->
+			</div>
+			<!-- /row -->
+			<p class="btn_home_align"><a href="#!" class="btn_1 rounded">View all news</a></p>
+		</div>
+
+
 </main>
 <?php $this->load->view('site/footer');?>
