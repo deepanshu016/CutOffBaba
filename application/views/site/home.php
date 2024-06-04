@@ -58,7 +58,7 @@
 			<span><em></em></span>
 			<h2>STATE WISE COLLEGE FEE STRUCTURE </h2>
 		</div>
-			<div class="pricing-container cd-has-margins">
+		<div class="pricing-container cd-has-margins">
 			<ul class="pricing-list bounce-invert" >
 				<li >
 					<ul class="pricing-wrapper" >
@@ -152,11 +152,9 @@
 				</li>
 				 
 				 
-			</ul>
-			 
+			</ul> 
 		</div>
-		 
-		</div>
+	</div>
 	<div class="call_section pattern">
 			<div class="wrapper">
 				<div class="container margin_80_55">
@@ -211,83 +209,48 @@
 			<!-- /container -->
 		</div>
 		<section>
-			 <div class="container">
-			 	<div class=" ">
-			<span><em></em></span>
-			<h2 class="text-center">OUR PAID COUNSELLING SERVICES </h2>
-			<br>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="pricingTable">
-                    <div class="pricingTable-header">
-                    	<h6 class="qilck">Quick Info</h6>
-                        <h3 class="title">ECONOMY PLAN</h3>
-                    </div>
-                    <div class="price-value">
-                        <span class="amount">₹ 119.00</span>
-                        <span class="month">10% OFF ₹ 132</span>
-                    </div>
-                    <ul class="pricing-content">
-                        <li>Tuition Fees Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
-                        <li>Seat Matrix Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Approved Colleges Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Cutoff Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Category Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
-                        <li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <!-- <li class="disable">15 Subdomains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span>  </li>
-                        <li class="disable">20 Domains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span></li> -->
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="pricingTable magenta">
-                    <div class="pricingTable-header">
-                    	<h6 class="qilck">Expertise Info</h6>
-                        <h3 class="title">STANDARD PLAN</h3>
-                    </div>
-                    <div class="price-value">
-                        <span class="amount">₹ 999.00</span>
-                        <span class="month">10% OFF ₹ 1110</span>
-                    </div>
-                    <ul class="pricing-content">
-                        <li>All Quick Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
-                        <li>Counselling Procedures <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Counselling Eligibility <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
-                        <li>College Selection Guidance <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Bonds & Service Rules <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
-                        <li>How To Apply For <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Counselling Of Other States <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                         
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="pricingTable ">
-                     <div class="pricingTable-header">
-                    	<h6 class="qilck">Counselling Package</h6>
-                        <h3 class="title">PREMIUM PLAN</h3>
-                    </div>
-                    <div class="price-value">
-                        <span class="amount">₹ 29,999</span>
-                        <span class="month">10% OFF ₹ 33333</span>
-                    </div>
-                    <ul class="pricing-content">
-                        <li>Unlimited Quick Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
-                        <li>Unlimited Expert Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Access To Counselling Tools <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
-                        <li>Access To College Predictor <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Full Support In Counselling <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
-                        <li>Option & Choice Entry <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                        <li>Post Seat Allocation <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-                    </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="container">
+			<div class=" ">
+				<span><em></em></span>
+					<h2 class="text-center">OUR PAID COUNSELLING SERVICES </h2>
+				<br>
+			<div class="row">
+				<?php if(!empty($planList)) { 
+					foreach($planList as $plan) { ?>
+					<div class="col-md-4 col-sm-6">
+						<div class="pricingTable">
+							<div class="pricingTable-header">
+								<h6 class="qilck">Quick Info</h6>
+								<h3 class="title"><?= $plan['plan_name']; ?></h3>
+							</div>
+							<div class="price-value">
+								<span class="amount">₹ <?= $plan['price']; ?></span>
+								<span class="month">
+									<!-- 10% OFF  -->
+									₹ <?= $plan['discounted_price']; ?></span>
+							</div>
+							<?= $plan['description']; ?>
+							<!-- <ul class="pricing-content"> -->
+								<!-- <li>Tuition Fees Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+								<li>Seat Matrix Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+								<li>Approved Colleges Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+								<li>Cutoff Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+								<li>Category Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
+								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
+								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> -->
+								<!-- <li class="disable">15 Subdomains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span>  </li>
+								<li class="disable">20 Domains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span></li> -->
+							<!-- </ul> -->
+							<?php if(!$this->session->userdata('user')) { ?>
+								<a href="<?= base_url('/signup'); ?>" class="pricingTable-signup">Sign Up</a>
+							<?php } else{ ?>
+								<a href="#" class="pricingTable-signup purchase_now" data-id="<?= $plan['id']; ?>" data-amount="<?= $plan['discounted_price']; ?>">Proceed</a>
+							<?php } ?>
+						</div>
+					</div>
+				<?php } } ?>
+			</div>
+		</div>
 		</section>
 
 
@@ -312,61 +275,30 @@
 		
 	</section>
 
-	<div class="container margin_80_55">
+		<div class="container margin_80_55">
 			<div class="main_title_2">
 				<span><em></em></span>
 				<h2>OUR BLOG</h2>
 				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
-					<a class="box_news" href="#!">
-						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
-						<ul>
-							<li>Restaurants</li>
-							<li>20.11.2017</li>
-						</ul>
-						<h4>Pri oportere scribentur eu</h4>
-						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-					</a>
-				</div>
-				<!-- /box_news -->
-				<div class="col-lg-6">
-					<a class="box_news" href="#!">
-						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
-						<ul>
-							<li>Shops</li>
-							<li>20.11.2017</li>
-						</ul>
-						<h4>Duo eius postea suscipit ad</h4>
-						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-					</a>
-				</div>
-				<!-- /box_news -->
-				<div class="col-lg-6">
-					<a class="box_news" href="#!">
-						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
-						<ul>
-							<li>Shops</li>
-							<li>20.11.2017</li>
-						</ul>
-						<h4>Elitr mandamus cu has</h4>
-						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-					</a>
-				</div>
-				<!-- /box_news -->
-				<div class="col-lg-6">
-					<a class="box_news" href="#!">
-						<figure><img src="assets/news_home_1.jpg" alt=""></figure>
-						<ul>
-							<li>Bars</li>
-							<li>20.11.2017</li>
-						</ul>
-						<h4>Id est adhuc ignota delenit</h4>
-						<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-					</a>
-				</div>
-				<!-- /box_news -->
+				<?php 
+					if(!empty($newsList)){
+						foreach($newsList as $news) { 
+						$courseData  = 	$this->db->select('course')->where('id',$news['course_id'])->get('tbl_course')->row_array();	
+				?>
+						<div class="col-lg-6">
+							<a class="box_news" href="#!">
+								<figure><img src="<?= base_url('app/assets/uploads/news').'/'.$news['image']; ?>" alt=""></figure>
+								<ul>
+									<li><?= $courseData['course']; ?></li>
+									<li><?= date('d.M.Y',strtotime($news['created_at'])); ?></li>
+								</ul>
+								<h4><?= $news['title']; ?></h4>
+								<p><?= $news['short_description']; ?></p>
+							</a>
+						</div>
+				<?php } } ?>
 			</div>
 			<!-- /row -->
 			<p class="btn_home_align"><a href="#!" class="btn_1 rounded">View all news</a></p>
@@ -375,3 +307,39 @@
 
 </main>
 <?php $this->load->view('site/footer');?>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+	var SITEURL = "<?php echo base_url() ?>";
+	$('body').on('click', '.purchase_now', function(e){
+		e.preventDefault();
+		var totalAmount = $(this).attr("data-amount");
+		var plan_id =  $(this).attr("data-id");
+		var options = {
+		"key": "rzp_test_q2ifqqk3pzoTyk",
+		"amount": (totalAmount*100), // 2000 paise = INR 20
+		"name": "CUTOFFBABA",
+		"description": "Plan Purchase",
+		"image": "http://cutoffbaba/assets/site/img/uyesr.png",
+		"handler": function (response){
+				$.ajax({
+				url: SITEURL + 'payment/pay-success',
+				type: 'post',
+				dataType: 'json',
+				data: {
+					razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,plan_id : plan_id,
+				}, 
+				success: function (msg) {
+					window.location.href = msg.url;
+				}
+			});
+		
+		},
+		"theme": {
+			"color": "#528FF0"
+		}
+	};
+	var rzp1 = new Razorpay(options);
+	rzp1.open();
+		e.preventDefault();
+	});
+</script>

@@ -15,14 +15,14 @@
 <body class="fixed-nav sticky-footer" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="165" height="36"></a>
+    <a class="navbar-brand" href="<?= base_url('/'); ?>"><img src="img/logo.png" alt="" width="165" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="<?= base_url('/'); ?>">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -37,6 +37,12 @@
           <a class="nav-link" href="bookings.html">
             <i class="fa fa-fw fa-calendar-check-o"></i>
             <span class="nav-link-text">Bookings <span class="badge badge-pill badge-primary">6 New</span></span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
+          <a class="nav-link" href="<?= base_url('/payments'); ?>">
+            <i class="fa fa-fw fa-calendar-check-o"></i>
+            <span class="nav-link-text">Payments </span>
           </a>
         </li>
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">

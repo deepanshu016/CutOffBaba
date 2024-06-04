@@ -54,9 +54,7 @@
       <script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
       <script src="<?=base_url('/')?>assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script>
-         $(document).ready(function(){
-
-         });
+        
          $("body").on("submit","#verifyOtp",function(e){
             e.preventDefault();
             var currentWrapper = $(this);

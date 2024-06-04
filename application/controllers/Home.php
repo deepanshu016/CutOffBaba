@@ -14,6 +14,8 @@ class Home extends MY_Controller {
 		$data['colleges']=$this->collegeData([],'12');
 		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings']=$data['siteSettings'][0];
+		$data['planList'] = $this->master->getRecords('tbl_counsellng_plans',[]);
+		$data['newsList'] = $this->master->getRecords('tbl_news',[]);
 		$this->load->view('site/home',$data);
 	}
 	function streamdata($where=[],$limit=null){
@@ -121,7 +123,19 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$data['siteSettings'][0];
 		$this->load->view('site/contact',$data);
 	}
-
+	public function forgotPassword()
+	{
+        if ($this->is_user_logged_in() == false) {
+			$data['title'] = 'CUTOFFBABA-Forgot Password';		
+			$data['streams']=$this->streamdata();		
+            $data['user_session'] = $this->session->userdata('user');
+            $data['siteSettings'] = $this->master->singleRecord('tbl_site_settings',[]);
+    		$this->load->view('site/forgot_password',$data);
+        }else{
+            $this->session->set_flashdata('error','Access not allowed');
+            return redirect('/');
+        }
+	}
 	public function aboutUs()
 	{
 		$data['title'] = 'CUTOFFBABA-About Us';		
@@ -579,4 +593,26 @@ class Home extends MY_Controller {
         ->set_content_type('application/json')
         ->set_output(json_encode($response));
     }
+	public function successPayment()
+	{
+        $user_id =  $this->session->userdata('user')['id'];
+		$data = [
+            'user_id' => $user_id,
+            'txn_id' => $this->input->post('razorpay_payment_id'),
+            'amount' => $this->input->post('totalAmount'),
+            'plan_id' => $this->input->post('plan_id'),
+            'purchased_date' => date('Y-m-d H:i:s'),
+            'status' => '1'
+        ];
+        $insert = $this->master->insert('payments', $data);
+        if($insert){
+            $response =  array('status' => 200,'message' => 'Payment done successfully','url'=>base_url('user_dashboard'));
+            echo json_encode($response);
+            return true;
+        }else{
+            $response =  array('status' => 400,'message' => 'Something went wrong','url'=>'');
+            echo json_encode($response);
+            return true;
+        }
+	}
 }	

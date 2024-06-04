@@ -21,6 +21,7 @@ class MY_Controller extends CI_Controller {
 	}
 	public function is_user_logged_in() {
 		$user = $this->session->userdata('user');
+        
 		if ($user) {
 			return true;
 		} else {

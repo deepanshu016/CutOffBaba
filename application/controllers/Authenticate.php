@@ -60,7 +60,7 @@ Class Authenticate extends MY_Controller {
             $result = $this->master->insert('tbl_users',$data);
             if($result){
                 $checkLogin = $this->master->singleRecord('tbl_users',array('id'=>$result));
-                $this->session->userdata('user',$checkLogin);
+                $this->session->set_userdata('user',$checkLogin);
                 $response = array('status' => 'success','message' => 'User signed up succesfully !!!','url'=>base_url('/user_dashboard'));
             }else{
                 $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
@@ -87,16 +87,86 @@ Class Authenticate extends MY_Controller {
   
 	
 	//Forgot Password
-	public function forgotPassword()
+	// public function forgot_password()
+	// {
+	// 	$this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
+    //     if ($this->form_validation->run()) {
+    //     	$phone = $this->input->post('phone');
+	// 		$userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone));
+    //     	if(!empty($userData)){
+	// 			$otp = substr(uniqid(), -4);
+	// 			$msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
+	// 			$phone = urlencode($phone);
+	// 			$msg = urlencode($msg);
+	// 			$apiUrl = "http://sms.shubhsandesh.in/vb/apikey.php?apikey=Tdp9KMSdKp6RI2G3&senderid=COBABA&&number=".$phone."&message=".$msg;
+	// 			$ch = curl_init($apiUrl);
+	// 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	// 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	// 			$response = curl_exec($ch);
+	// 			curl_close($ch);
+	// 			$data = json_decode($response, true);
+	// 			if ($data['code'] == "011") {
+	// 				$this->us->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
+	// 				$response =  array('status' => 'success','message' => 'OTP Sent Successfully','url'=>base_url('user/verify-otp').'/'.base64_encode($userData['id']));
+	// 				echo json_encode($response);
+	// 				return true;
+	// 			} else {
+	// 				$response =  array('status' => 'errors','message' => 'Something went wrong','url'=>'');
+	// 				echo json_encode($response);
+	// 				return true;
+	// 			}
+        		
+    //     	}else{
+    //     		$response = array('status' => 'errors','message' => 'Phone number not exists in our record','url'=>'');
+	// 			echo json_encode($response);
+	// 			return true;
+	// 		}   
+    //     }else{
+    //     	$response =  array(
+    //     		'status' => 'error',
+    //     		'errors' => array(
+	// 			    'phone' => form_error('phone')
+    //     		)  
+	// 	   	);
+	// 		echo json_encode($response);
+	// 		return true;
+    //     }
+	// }
+
+    public function verify_otp($phone)
 	{
-        if ($this->is_user_logged_in() == false) {
-            $data['user_session'] = $this->session->userdata('user');
-            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-    		$this->load->view('site/forgot_password',$data);
-        }else{
-            $this->session->set_flashdata('error','Access not allowed');
-            return redirect('/');
-        }
+		$user_id =  base64_decode($phone);
+		$data['userData'] = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
+        $data['user_session'] = $this->session->userdata('user');
+        $data['siteSettings'] = $this->master->singleRecord('tbl_site_settings',[]);
+        $data['title'] = 'CUTOFFBABA-Contact Us';		
+		$data['streams']=$this->streamdata();		
+		$this->load->view('site/verify_otp',$data);
+	}
+    function streamdata($where=[],$limit=null){
+		$streamList = $this->master->getRecordsbyLimit('tbl_stream',$where,$limit);
+             $finalstream=array();
+            foreach ($streamList as $stream) {
+                $degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                 $finalcourse=array();
+                 $finaldegree=array();
+                foreach ($degries as $degree) {
+                    $deg=array();
+                    $degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+                    $deg=$degry[0];
+                    $courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where('stream',$stream['id'])->get('tbl_course')->result_array();
+                    $finalcourse=array();
+                    foreach ($courses as $course) {
+                        $finalcourse[]=$course;
+                    }
+                    $deg['courses']=$finalcourse;
+                    $finaldegree[]=$deg;
+                }
+                $stream['degreetype']=$finaldegree;
+                $finalstream[]=$stream;
+            }	
+            return $finalstream;
 	}
     public function resetPassword($token)
     {    
@@ -524,7 +594,7 @@ Class Authenticate extends MY_Controller {
 		$this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
         if ($this->form_validation->run()) {
         	$phone = $this->input->post('phone');
-			$userData = $this->us->singleRecord('tbl_users',array('mobile'=>$phone));
+			$userData = $this->master->singleRecord('tbl_users',array('mobile'=>$phone));
         	if(!empty($userData)){
 				$otp = substr(uniqid(), -4);
 				$msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
@@ -538,8 +608,8 @@ Class Authenticate extends MY_Controller {
 				curl_close($ch);
 				$data = json_decode($response, true);
 				if ($data['code'] == "011") {
-					$this->us->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
-					$response =  array('status' => 'success','message' => 'OTP Sent Successfully','url'=>base_url('verify-otp').'/'.base64_encode($userData['id']));
+					$this->master->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
+					$response =  array('status' => 'success','message' => 'OTP Sent Successfully','url'=>base_url('user/verify-otp').'/'.base64_encode($userData['id']));
 					echo json_encode($response);
 					return true;
 				} else {
@@ -564,13 +634,13 @@ Class Authenticate extends MY_Controller {
 			return true;
         }
 	}
-    public function verify_otp($phone)
-	{
+    // public function verify_otp($phone)
+	// {
        
-		$user_id =  base64_decode($phone);
-		$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
-		$this->load->view('site/verify_otp',['userData'=>$userData]);
-	}
+	// 	$user_id =  base64_decode($phone);
+	// 	$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
+	// 	$this->load->view('site/verify_otp',['userData'=>$userData]);
+	// }
 
     public function OtpVerification()
 	{
@@ -582,7 +652,7 @@ Class Authenticate extends MY_Controller {
 				$otp = $this->input->post('otp');
 				if($otp == $userData['token']){
 					$this->master->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>NULL]);
-					$response =  array('status' => 200,'message' => 'OTP verified Successfully','url'=>base_url('verify-done'));
+					$response =  array('status' => 200,'message' => 'OTP verified Successfully','url'=>base_url('user/verify-done'));
 					echo json_encode($response);
 					return true;
 				}else{

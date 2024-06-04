@@ -18,6 +18,19 @@ Class Dashboard extends MY_Controller {
 			return redirect('login');
 		}
 	}
+	public function payments()
+	{
+		if ($this->is_user_logged_in() == true) {
+			$data['user_session'] = $this->session->userdata('user');
+			$data['siteSettings'] = $this->master->singleRecord('tbl_site_settings',[]);
+			
+			$data['paymentList'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
+			$this->load->view('site/user/payments',$data);
+		}else{
+			$this->session->set_flashdata('error','Please login first');
+			return redirect('login');
+		}
+	}
 	public function profile()
 	{
 		if ($this->is_user_logged_in() == true) {
