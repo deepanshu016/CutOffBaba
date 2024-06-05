@@ -163,7 +163,6 @@ class MasterModel extends CI_Model {
 	}
 	public function getExamCourses($exam_id){
 		$examData = $this->db->get_where('tbl_exam',['id'=>$exam_id])->row_array();
-		
 		if(empty($examData)){
 			return [];
 		}
@@ -190,12 +189,10 @@ class MasterModel extends CI_Model {
 				$coursesData[$key]['branch_type'] = $course['branch_type'];
 				$coursesData[$key]['status'] = $course['status'];
 				$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
-				//echo $this->db->last_query();
-				if (count($head_data)>0) {
+				if(!empty($head_data)){
 					$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
+					$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
 				}
-				
-				$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
 			}
 		}
 		return $coursesData;
