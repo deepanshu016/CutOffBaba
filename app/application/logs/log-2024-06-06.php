@@ -1,0 +1,24 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+DEBUG - 2024-06-06 01:11:10 --> Total execution time: 0.7036
+DEBUG - 2024-06-06 01:11:15 --> Total execution time: 0.0707
+DEBUG - 2024-06-06 01:11:17 --> Total execution time: 0.0927
+DEBUG - 2024-06-06 01:11:58 --> Total execution time: 0.0844
+DEBUG - 2024-06-06 01:13:32 --> Total execution time: 0.0402
+DEBUG - 2024-06-06 01:13:36 --> Total execution time: 0.0536
+DEBUG - 2024-06-06 01:27:05 --> Total execution time: 0.0890
+DEBUG - 2024-06-06 01:27:26 --> Total execution time: 0.0406
+DEBUG - 2024-06-06 01:27:31 --> Total execution time: 0.0492
+DEBUG - 2024-06-06 01:27:34 --> Total execution time: 0.0461
+DEBUG - 2024-06-06 01:27:38 --> Total execution time: 0.0462
+DEBUG - 2024-06-06 01:27:43 --> Total execution time: 0.0314
+DEBUG - 2024-06-06 01:27:45 --> Total execution time: 0.0161
+DEBUG - 2024-06-06 01:28:54 --> Total execution time: 0.0396
+DEBUG - 2024-06-06 01:28:57 --> Total execution time: 0.0343
+DEBUG - 2024-06-06 01:29:00 --> Total execution time: 0.0441
+DEBUG - 2024-06-06 01:29:03 --> Total execution time: 0.0562
+DEBUG - 2024-06-06 01:29:06 --> Total execution time: 0.0361
+DEBUG - 2024-06-06 01:29:18 --> Total execution time: 0.0953
+DEBUG - 2024-06-06 01:29:27 --> Total execution time: 0.0373
+DEBUG - 2024-06-06 01:29:30 --> Total execution time: 0.0293
+DEBUG - 2024-06-06 01:29:33 --> Total execution time: 0.0347

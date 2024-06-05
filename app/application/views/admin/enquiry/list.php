@@ -53,7 +53,7 @@
                                         <td><?= $enquiry['phone']; ?></td>
                                         <td><?= $enquiry['subject']; ?></td>
                                         <td><?= $enquiry['message']; ?></td>
-                                        <td><?= ($enquiry['status'] == '1') ? 'Active' : 'Inactive' ; ?></td>
+                                        <td><?= ($enquiry['status'] == '1') ? 'Resolved' : 'Pending' ; ?></td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">
                                               <a href="<?= base_url('admin/view-enquiry'.'/'.$enquiry['id']) ?>" class="link-success fs-15"><i class="ri-eye-line"></i></a>

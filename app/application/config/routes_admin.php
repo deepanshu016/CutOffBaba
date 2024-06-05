@@ -421,6 +421,8 @@ $route['admin/import-college-seat-matrix-data'] = 'Admin/CollegeMatrix/importSea
 $route['admin/export-college-seat-matrix-data/(:any)/(:any)/(:any)/(:any)'] = 'Admin/CollegeMatrix/exportSeatMatrixData/$1/$2/$3/$4';
 
 $route['admin/enquiries'] = 'Admin/Enquiry/index';
+$route['admin/view-enquiry/(:any)'] = 'Admin/Enquiry/viewEnquiry/$1';
+$route['admin/update-enquiry'] = 'Admin/Enquiry/updateEnquiry/$1';
 
 
 $route['admin/logout'] = 'Admin/Authenticate/logout';

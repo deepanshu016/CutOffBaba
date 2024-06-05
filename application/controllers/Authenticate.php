@@ -381,19 +381,19 @@ Class Authenticate extends MY_Controller {
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required'); 
         if ($this->form_validation->run()) {
             $user_id = $this->input->post('user_id');
-            $email = base64_decode($token);
-            $userData = $this->us->singleRecord('tbl_users',array('email'=>$email));
+            //$email = base64_decode($token);
+            $userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
             $data['password'] = sha1($this->input->post('password'));
             $data['updated_at'] = date('Y-m-d H:i:s');
-            $result = $this->us->updateRecord('tbl_users',array('id'=>$user_id),$data);
+            $result = $this->master->updateRecord('tbl_users',array('id'=>$user_id),$data);
             if($result){
-                $response = array('status' => 'success','message' => 'Your password updated successfully','url'=>base_url('verify-done'));
+                $response = array('status' => 200,'message' => 'Your password updated successfully','url'=>base_url('signup'));
             }else{
-                $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
+                $response = array('status' => 400,'message' => 'Something went wrong !!!','url'=>'');
             }
         }else{
             $response = array(
-                'status' => 'error',
+                'status' => 401,
                 'errors' => array(
                     'password' => form_error('password'),
                     'confirm_password' => form_error('confirm_password')
@@ -597,17 +597,20 @@ Class Authenticate extends MY_Controller {
 			$userData = $this->master->singleRecord('tbl_users',array('mobile'=>$phone));
         	if(!empty($userData)){
 				$otp = substr(uniqid(), -4);
-				$msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
-				$phone = urlencode($phone);
-				$msg = urlencode($msg);
-				$apiUrl = "http://sms.shubhsandesh.in/vb/apikey.php?apikey=Tdp9KMSdKp6RI2G3&senderid=COBABA&&number=".$phone."&message=".$msg;
-				$ch = curl_init($apiUrl);
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				$response = curl_exec($ch);
-				curl_close($ch);
-				$data = json_decode($response, true);
-				if ($data['code'] == "011") {
+				// $msg = "Here is you OTP for Cutoff Baba Account is  ".$otp.". It will be valid for 10 minutes. Do not share this OTP with anyone. Team, Cutoff Baba";
+				// $phone = urlencode($phone);
+				// $msg = urlencode($msg);
+				// $apiUrl = "http://sms.shubhsandesh.in/vb/apikey.php?apikey=Tdp9KMSdKp6RI2G3&senderid=COBABA&&number=".$phone."&message=".$msg;
+				// $ch = curl_init($apiUrl);
+				// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				// $response = curl_exec($ch);
+				// curl_close($ch);
+				// $data = json_decode($response, true);
+                $result = $this->master->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
+
+				// if ($data['code'] == "011") {
+				if ($result) {
 					$this->master->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>$otp]);
 					$response =  array('status' => 'success','message' => 'OTP Sent Successfully','url'=>base_url('user/verify-otp').'/'.base64_encode($userData['id']));
 					echo json_encode($response);
@@ -644,7 +647,7 @@ Class Authenticate extends MY_Controller {
 
     public function OtpVerification()
 	{
-		$this->form_validation->set_rules('otp', 'OTP', 'trim|required|numeric');
+		$this->form_validation->set_rules('otp', 'OTP', 'trim|required');
         if ($this->form_validation->run()) {
 			$user_id = $this->input->post('user_id');
 			$userData = $this->master->singleRecord('tbl_users',array('id'=>$user_id));
@@ -652,7 +655,7 @@ Class Authenticate extends MY_Controller {
 				$otp = $this->input->post('otp');
 				if($otp == $userData['token']){
 					$this->master->updateRecord('tbl_users',array('id'=>$userData['id']),['token'=>NULL]);
-					$response =  array('status' => 200,'message' => 'OTP verified Successfully','url'=>base_url('user/verify-done'));
+					$response =  array('status' => 200,'message' => 'OTP verified Successfully','url'=>base_url('user/verify-done/').$userData['id']);
 					echo json_encode($response);
 					return true;
 				}else{
@@ -675,9 +678,14 @@ Class Authenticate extends MY_Controller {
 		}
 	}
     
-    public function verify_done()
+    public function verify_done($user_id)
 	{
-		$this->load->view('site/verify_done');
+        $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$user_id]);
+        $data['user_session'] = $this->session->userdata('user');
+        $data['siteSettings'] = $this->master->singleRecord('tbl_site_settings',[]);
+        $data['title'] = 'CUTOFFBABA-Contact Us';		
+		$data['streams']=$this->streamdata();		
+		$this->load->view('site/verify_done',$data);
 	}
     public function userProfile()
 	{
@@ -743,6 +751,45 @@ Class Authenticate extends MY_Controller {
 			return true;
         }
 	}
+
+    public function saveEnquiry()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
+        $this->form_validation->set_rules('subject', 'Subject', 'trim|required');
+        $this->form_validation->set_rules('message', 'Message', 'trim|required');
+        if ($this->form_validation->run()) {
+            $data['name'] = $this->input->post('name');
+            $data['email'] = $this->input->post('email');
+            $data['phone'] = $this->input->post('phone');
+            $data['subject'] = $this->input->post('subject');
+            $data['message'] = $this->input->post('message');
+            $data['status'] = '1';
+            $data['created_at'] = date('Y-m-d H:i:s');
+            $result = $this->master->insert('tbl_enquiries',$data);
+            if($result){
+                $response = array('status' => 200,'message' => 'Enquiry submitted successfully !!!','url'=>base_url('signup'));
+            }else{
+                $response = array('status' => 400,'message' => 'Something went wrong !!!','url'=>'');
+            }
+        }else{
+            $response = array(
+                'status' => 401,
+                'errors' => array(
+                    'name' => form_error('name'),
+                    'email' => form_error('email'),
+                    'phone' => form_error('phone'),
+                    'subject' => form_error('subject'),
+                    'message' => form_error('message')
+                )  
+            );
+
+        }
+        $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode($response));
+    }
 }
 
 ?>

@@ -16,6 +16,7 @@
                                     <div class="form-group">
                                         <label>Mobile</label>
                                         <input type="number" class="form-control" name="phone">
+                                        <span id="phone" class="text-danger"></span>
                                     </div>
                                     <div class="text-center">
                                         <input type="submit" value="Send OTP" class="btn_1 full-width">
@@ -37,7 +38,6 @@
         e.preventDefault();
         var method = $(this).attr('method');
         var url = $(this).attr("action");
-        alert(url)
         var form = $(this)[0];
         var form_data = new FormData(form);    
         $.ajax({

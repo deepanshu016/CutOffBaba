@@ -12,12 +12,13 @@
                         <h3 class="client">Verify OTP</h3>
                         <div class="form_container">
                             <br>OTP sent on  +91 <?= @$userData['mobile']; ?><br><br></span>
-                            <form method="post" action="<?= base_url('/user/otp-verification') ?>" class="all-form">
+                            <form method="post" action="<?= base_url('/user/otp-verification') ?>" id="verifyOtp">
                                 <div class="sign-in-wrapper">
                                     <div class="form-group">
                                         <label>OTP</label>
-                                        <input type="number" class="form-control" name="otp" required>
+                                        <input type="text" class="form-control" name="otp" required>
                                         <input type="hidden" class="form-control" name="user_id" value="<?= $userData['id']; ?>">
+                                        <span id="otp" class="text-danger"></span>
                                     </div>
                                     <div class="text-center"><input type="submit" value="Verify OTP" class="btn_1 full-width"></div>
                                 </div>
@@ -34,23 +35,20 @@
 		<!-- /container -->
 	</main>
 <?php $this->load->view('site/footer');?>
+
+<script src="<?=base_url('/')?>app/assets/site/js/CommonLib.js"></script>
 <script>
-        
          $("body").on("submit","#verifyOtp",function(e){
             e.preventDefault();
             var currentWrapper = $(this);
             var url = currentWrapper.attr('action');
             var method = currentWrapper.attr('method');
-            const first_digit = $("#first_digit").val();
-            const second_digit = $("#second_digit").val();
-            const third_digit = $("#third_digit").val();
-            const four_digit = $("#four_digit").val();
-            const otp = first_digit.toString() + second_digit.toString() + third_digit.toString() + four_digit.toString();
             var formData = $('#verifyOtp')[0];
             formData = new FormData(formData);
-            formData.append('otp',otp);
             CommonLib.ajaxForm(formData,method,url).then(d=>{
+                  console.log(d.status)
                   if(d.status === 200){
+                     console.log(d.status)
                      CommonLib.notification.success(d.message);
                      setTimeout(() => {
                         window.location = d.url;
