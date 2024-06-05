@@ -700,6 +700,8 @@ Class Authenticate extends MY_Controller {
         $data['coursesList'] = $this->master->getExamCourses($data['user']['selected_exam']);
         $data['levelData'] = $this->master->getRecords('tbl_counselling_level',[]);
         $data['domicileCategory'] = $this->master->getDomicileCategories($data['user']);
+        // echo "<pre>";
+        // print_r($data); die;
 		$this->load->view('site/user/user-profile',$data);
 	}
    
