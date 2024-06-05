@@ -231,3 +231,6 @@ DEBUG - 2024-06-05 19:59:30 --> Session: "sess_save_path" is empty; using "sessi
 DEBUG - 2024-06-05 19:59:33 --> UTF-8 Support Enabled
 DEBUG - 2024-06-05 19:59:33 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-06-05 19:59:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-05 20:28:10 --> UTF-8 Support Enabled
+DEBUG - 2024-06-05 20:28:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-05 20:28:11 --> 404 Page Not Found: Assets/admin
