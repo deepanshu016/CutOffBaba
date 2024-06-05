@@ -67,6 +67,7 @@
 											->get('tbl_cutfoff_marks_data')
 											->result_array(); 
 										// echo $this->db->last_query();
+											
 										if(!empty($catids)){
 										foreach($catids as $catid){
 											$branchdetaildata=$this->db->select('*')->where('id',$catid['category_type'])->get('tbl_sub_category')->result_array();

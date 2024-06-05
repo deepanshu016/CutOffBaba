@@ -15,7 +15,7 @@
 <body class="fixed-nav sticky-footer" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
-    <a class="navbar-brand" href="<?= base_url('/'); ?>"><img src="img/logo.png" alt="" width="165" height="36"></a>
+    <a class="navbar-brand" href="<?= base_url('/'); ?>"><img src="https://app.cutoffbaba.in/assets/uploads/settings/c62f5611daa0aa3877a72e3b21ad3241.png" alt="" width="165" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,7 +27,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
+	<!-- 	<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
           <a class="nav-link" href="messages.html">
             <i class="fa fa-fw fa-envelope-open"></i>
             <span class="nav-link-text">Messages</span>
@@ -79,14 +79,14 @@
             <i class="fa fa-fw fa-plus-circle"></i>
             <span class="nav-link-text">Add listing</span>
           </a>
-        </li>
+        </li> -->
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
           <a class="nav-link" href="<?=base_url('user-profile');?>">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">My Profile</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+		<!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents">
             <i class="fa fa-fw fa-gear"></i>
             <span class="nav-link-text">Components</span>
@@ -99,7 +99,7 @@
               <a href="tables.html">Tables</a>
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -109,7 +109,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-envelope"></i>
             <span class="d-lg-none">Messages
@@ -197,7 +197,8 @@
               </span>
             </div>
           </form>
-        </li>
+        </li> -->
+
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>

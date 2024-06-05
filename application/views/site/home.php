@@ -53,7 +53,7 @@
 			<?php } }?>
 		</div>
 	</div>
-	<div class="container margin_60_35">
+	<!-- <div class="container margin_60_35">
 			<div class="main_title_2">
 			<span><em></em></span>
 			<h2>STATE WISE COLLEGE FEE STRUCTURE </h2>
@@ -154,7 +154,9 @@
 				 
 			</ul> 
 		</div>
-	</div>
+	</div> -->
+
+
 	<div class="call_section pattern">
 			<div class="wrapper">
 				<div class="container margin_80_55">
@@ -189,7 +191,7 @@
 						</div>
 					</div>
 					<!-- /row -->
-					<p class="text-center add_top_30 wow bounceIn" data-wow-delay="0.5"><a href="account.html" class="btn_1 rounded">Register Now</a></p>
+					<p class="text-center add_top_30 wow bounceIn" data-wow-delay="0.5"><a href="<?=base_url('signup');?>" class="btn_1 rounded">Register Now</a></p>
 				</div>
 			</div>
 			<!-- /wrapper -->

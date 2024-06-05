@@ -807,8 +807,9 @@
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <input type="text" class="form-control" name="email"" placeholder="Email ID*">
+                                       <input type="text" class="form-control" name="email" placeholder="Email ID*">
                                        <div class="text-danger" id="email"></div>
+                                       
                                     </div>
                                  </div>
                                  <div class="col-md-6">

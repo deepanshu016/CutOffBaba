@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+oll<?php include('header.php'); ?>
 <div class="content-wrapper">
   <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -9,7 +9,7 @@
       <li class="breadcrumb-item active">My Dashboard</li>
     </ol>
   <!-- Icon Cards-->
-    <div class="row">
+   <!--  <div class="row">
       <div class="col-xl-3 col-sm-6 mb-3">
         <div class="card dashboard text-white bg-primary o-hidden h-100">
           <div class="card-body">
@@ -74,7 +74,7 @@
           </a>
         </div>
       </div>
-	</div>
+	</div> -->
 	<!-- /cards -->
 	<h2></h2>
 	<div class="box_general padding_bottom">
