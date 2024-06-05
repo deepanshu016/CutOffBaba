@@ -276,7 +276,7 @@
 	<section>
 		
 	</section>
-
+<?php if(!empty($newsList)){ ?>
 		<div class="container margin_80_55">
 			<div class="main_title_2">
 				<span><em></em></span>
@@ -285,7 +285,7 @@
 			</div>
 			<div class="row">
 				<?php 
-					if(!empty($newsList)){
+					
 						foreach($newsList as $news) { 
 						$courseData  = 	$this->db->select('course')->where('id',$news['course_id'])->get('tbl_course')->row_array();	
 				?>
@@ -300,12 +300,12 @@
 								<p><?= $news['short_description']; ?></p>
 							</a>
 						</div>
-				<?php } } ?>
+				<?php } ?>
 			</div>
 			<!-- /row -->
 			<p class="btn_home_align"><a href="#!" class="btn_1 rounded">View all news</a></p>
 		</div>
-
+<?php } ?>
 
 </main>
 <?php $this->load->view('site/footer');?>

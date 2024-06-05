@@ -8,7 +8,7 @@
         </li>
         <li class="breadcrumb-item active">Upate Profile</li>
       </ol>
-       <form action="<?= base_url('update-profile'); ?>"  method="POST"  enctype="multipart/form-data">
+       <form action="<?= base_url('update-profile'); ?>" id="profileForm"  method="POST"  enctype="multipart/form-data">
 		<div class="box_general padding_bottom">
 			<div class="header_box version_2">
 				<h2><i class="fa fa-user"></i>Profile details</h2>

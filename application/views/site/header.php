@@ -36,10 +36,10 @@ if(! empty($_SERVER['HTTP_USER_AGENT'])){
 			
 				<?php if($this->session->userdata('user')) { ?>
 					<li>
-						<a href="<?= base_url('/user_dashboard'); ?>" class="p-3 m-3"><?= $this->session->userdata('user')['name']; ?></a>
+						<a href="<?= base_url('/user_dashboard'); ?>" class="btn_add p-3 m-3"><?= $this->session->userdata('user')['name']; ?></a>
 					</li>
 					<li>
-						<a href="<?= base_url('/logout'); ?>" class="p-3 m-3">Logout</a>
+						<a href="<?= base_url('/logout'); ?>" class="btn_add p-3 m-3">Logout</a>
 					</li>
 				<?php } else{ ?>
 					<li>

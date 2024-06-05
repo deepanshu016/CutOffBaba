@@ -93,3 +93,69 @@ DEBUG - 2024-06-06 01:10:59 --> Total execution time: 0.0344
 DEBUG - 2024-06-06 01:11:01 --> Total execution time: 0.0438
 DEBUG - 2024-06-06 01:11:04 --> Total execution time: 0.1392
 DEBUG - 2024-06-06 01:29:39 --> Total execution time: 0.0997
+DEBUG - 2024-06-06 03:32:31 --> Total execution time: 0.2141
+ERROR - 2024-06-06 03:33:12 --> Query error: Table 'cutoff_baba.tbl_stream' doesn't exist - Invalid query: SELECT *
+FROM `tbl_stream`
+ORDER BY `id` ASC
+ERROR - 2024-06-06 03:33:15 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\CutOffBaba\application\views\site\collegedetail.php 763
+ERROR - 2024-06-06 03:33:15 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\CutOffBaba\application\views\site\collegedetail.php 763
+ERROR - 2024-06-06 03:33:15 --> Severity: Notice --> Trying to access array offset on value of type null C:\wamp64\www\CutOffBaba\application\views\site\collegedetail.php 763
+DEBUG - 2024-06-06 03:33:15 --> Total execution time: 0.1461
+DEBUG - 2024-06-06 03:38:56 --> Total execution time: 0.1033
+DEBUG - 2024-06-06 03:39:13 --> Total execution time: 0.0361
+DEBUG - 2024-06-06 03:39:18 --> Total execution time: 0.0336
+DEBUG - 2024-06-06 03:39:24 --> Total execution time: 0.0344
+DEBUG - 2024-06-06 03:39:29 --> Total execution time: 0.0317
+DEBUG - 2024-06-06 03:39:33 --> Total execution time: 0.0280
+DEBUG - 2024-06-06 03:39:35 --> Total execution time: 0.0234
+ERROR - 2024-06-06 03:39:40 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:42:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:42:12 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:42:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:42:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:42:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:47:16 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:48:21 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+DEBUG - 2024-06-06 03:48:36 --> Total execution time: 0.0349
+DEBUG - 2024-06-06 03:48:49 --> Total execution time: 0.0355
+DEBUG - 2024-06-06 03:48:50 --> Total execution time: 0.0205
+DEBUG - 2024-06-06 03:48:50 --> Total execution time: 0.0277
+ERROR - 2024-06-06 03:48:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+ERROR - 2024-06-06 03:51:03 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3 - Invalid query: SELECT *
+FROM `tbl_category`
+WHERE `head_id` IN()
+DEBUG - 2024-06-06 03:52:08 --> Total execution time: 0.0791
+DEBUG - 2024-06-06 03:52:16 --> Total execution time: 0.0905
+DEBUG - 2024-06-06 03:52:23 --> Total execution time: 0.0764
+DEBUG - 2024-06-06 03:52:51 --> Total execution time: 0.0343
+DEBUG - 2024-06-06 03:52:53 --> Total execution time: 0.0255
+DEBUG - 2024-06-06 03:52:54 --> Total execution time: 0.0281
+DEBUG - 2024-06-06 03:52:58 --> Total execution time: 0.0124
+DEBUG - 2024-06-06 03:53:01 --> Total execution time: 0.0354
+DEBUG - 2024-06-06 03:53:03 --> Total execution time: 0.0643
+DEBUG - 2024-06-06 03:53:39 --> Total execution time: 0.0748
+DEBUG - 2024-06-06 03:53:41 --> Total execution time: 0.0216
+DEBUG - 2024-06-06 03:53:44 --> Total execution time: 0.0319
+DEBUG - 2024-06-06 03:53:46 --> Total execution time: 0.0270
+DEBUG - 2024-06-06 03:53:48 --> Total execution time: 0.0350
+DEBUG - 2024-06-06 03:53:50 --> Total execution time: 0.0380
+DEBUG - 2024-06-06 03:54:27 --> Total execution time: 0.0381
+DEBUG - 2024-06-06 03:56:19 --> Total execution time: 0.1206
