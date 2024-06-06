@@ -23,6 +23,8 @@ class ExamController extends MY_Controller {
         $id = $this->input->post('id');
         $key = $this->input->post('key');
         $keys = $this->input->post('keys');
+        $course_id = $this->input->post('course_id');
+        $user = $this->session->userdata('user');
         $subCategory = $this->master->getRecords('tbl_sub_category',['category_id'=>$id]);
         if(empty($subCategory)){
             $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
@@ -34,7 +36,12 @@ class ExamController extends MY_Controller {
         $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id="">';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
-            $html  .='<option value="'.$sub['id'].'">'.ucwords($sub['sub_category_name']).'</option>';
+            $subCategoryData = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();
+            $html  .='<option value="'.$sub['id'].'"';
+            if(!empty($subCategoryData)){
+                $html  .='selected';
+            }
+            $html  .='>'.ucwords($sub['sub_category_name']).'</option>';
         }
         $html .= '</select></div>';
         $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html);                
@@ -76,6 +83,9 @@ class ExamController extends MY_Controller {
         $id = $this->input->post('id');
         $key = $this->input->post('key');
         $keys = $this->input->post('keys');
+        $course_id = $this->input->post('course_id');
+        $user = $this->session->userdata('user');
+        
         $headData = $this->master->getRecords('tbl_counselling_head',['state_id'=>$id]);
         if(empty($headData)){
             $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
@@ -94,7 +104,13 @@ class ExamController extends MY_Controller {
         $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id="">';
         $html  .= '<option value="">Select Domicile State Category</option>';
         foreach($categoryData as $category){
-            $html  .='<option value="'.$category['id'].'">'.ucwords($category['category_name']).'</option>';
+            $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'domicile_state_category_id'=>$category['id'],'course_id'=>$course_id])->get()->row_array();
+            
+            $html  .='<option value="'.$category['id'].'"';
+            if(!empty($subCategoryDatas)){
+                $html  .='selected';
+            }
+            $html  .='>'.ucwords($category['category_name']).'</option>';
         }
         $html .= '</select></div>';
         $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html);                
@@ -104,6 +120,8 @@ class ExamController extends MY_Controller {
     public function getDomicileSubCategory(){
         $id = $this->input->post('id');
         $key = $this->input->post('key');
+        $course_id = $this->input->post('course_id');
+        $user = $this->session->userdata('user');
         $subCategory = $this->master->getRecords('tbl_sub_category',['category_id'=>$id]);
         if(empty($subCategory)){
             $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
@@ -115,7 +133,12 @@ class ExamController extends MY_Controller {
         $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id="">';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
-            $html  .='<option value="'.$sub['id'].'">'.ucwords($sub['sub_category_name']).'</option>';
+            $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'domicile_state_sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();    
+            $html  .='<option value="'.$sub['id'].'"';
+            if(!empty($subCategoryDatas)){
+                $html  .='selected';
+            }
+            $html  .='>'.ucwords($sub['sub_category_name']).'</option>';
         }
         $html .= '</select></div>';
         $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html);                

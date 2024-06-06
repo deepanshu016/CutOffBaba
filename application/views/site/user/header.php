@@ -10,6 +10,7 @@
   <link href="<?=base_url('assets/');?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url('assets/');?>vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <link href="<?=base_url('assets/css');?>/custom-admin.css" rel="stylesheet">
+  <link href="<?=base_url('app/assets/admin/css/toastr.css')?>" rel="stylesheet" type="text/css">
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">

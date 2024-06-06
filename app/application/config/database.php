@@ -22,19 +22,19 @@ $db['default'] = array(
 
 
 
-'hostname' => 'localhost',
+	'hostname' => 'localhost',
 
 
 
-	'username' => 'u916255990_cutoff',
+	'username' => 'root',
 
 
 
-	'password' => 'Dg#hhLGEN/&0',
+	'password' => '',
 
 
 
-	'database' => 'u916255990_cutoff',
+	'database' => 'cutoff_baba',
 
 
 

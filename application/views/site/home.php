@@ -263,7 +263,7 @@
 			<h2>Popular Colleges </h2>
 		</div>
 		<div id="reccomended" class="owl-carousel owl-theme">
-			<?php foreach ($colleges as $college) { //print_r($college);
+			<?php foreach ($colleges as $key=>$college) { //print_r($college);
 
 				?>
 				<div class="item">
