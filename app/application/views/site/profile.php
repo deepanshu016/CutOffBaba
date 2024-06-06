@@ -115,6 +115,22 @@
 </main>
 <?php $this->load->view('site/footer'); ?>
 <script>
+    window.onload = function(){
+        $('.get-sub-category').each(function(){
+            var currentWrapper = $(this);
+            getSubCategories(currentWrapper);
+        });
+        $('.get-domicile-main-category').each(function(){
+            var currentWrapper = $(this);
+            getDomicileMainCategories(currentWrapper);
+        });
+        setTimeout(function(){
+            $('.get-domicile-sub-category').each(function(){
+                var currentWrappers = $(this);
+                getDomicileSubCategoriessss(currentWrappers);
+            });     
+        },2000);
+    }
     $("body").on("change", ".get-courses", function(e){
        var val = $(this).val();
        var url = "<?= base_url('get-exam-courses'); ?>";
@@ -132,14 +148,19 @@
     });
     $("body").on("change",".get-sub-category",function(){
         var currentWrapper = $(this);
+        getSubCategories(currentWrapper);
+    });
+    function getSubCategories(currentWrapper){
         var catId=currentWrapper.val();
         var key=currentWrapper.data('key');
         var keys=currentWrapper.data('keys');
+        var course_id = currentWrapper.closest('.course-data').find('.accordion-item .course_id').val();
         var url = "<?= base_url('get-sub-category'); ?>";
         var formData = new FormData();
         formData.append('id',catId);
         formData.append('key',key);
         formData.append('keys',keys);
+        formData.append('course_id',course_id);
         CommonLib.ajaxForm(formData,'POST',url).then(d=>{
             if(d.status === 200){
                 currentWrapper.closest('.category-wrapper').next('.sub-category-data').html(d.html);
@@ -152,21 +173,27 @@
             currentWrapper.closest('.category-wrapper').next('.sub-category-data').html('');
             CommonLib.notification.error(e.responseJSON.errors);
         });
-    });
+    }
     $("body").on("change",".get-domicile-main-category",function(){
         var currentWrapper = $(this);
+        getDomicileMainCategories(currentWrapper);
+    });
+    function getDomicileMainCategories(currentWrapper){
         var catId=currentWrapper.val();
         var key=currentWrapper.data('key');
         var keys=currentWrapper.data('keys');
+        var course_id = currentWrapper.closest('.course-data').find('.accordion-item .course_id').val();
         var url = "<?= base_url('get-domicile-main-category'); ?>";
         var formData = new FormData();
         formData.append('id',catId);
         formData.append('key',key);
         formData.append('keys',keys);
+        formData.append('course_id',course_id);
         CommonLib.ajaxForm(formData,'POST',url).then(d=>{
             console.log("Response",d);
             if(d.status === 200){
                 currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html(d.html);
+                
             }else{
                 currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
                 CommonLib.notification.error(d.message);
@@ -176,41 +203,23 @@
             currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
             CommonLib.notification.error(e.responseJSON.errors);
         });
-    });
-    // $("body").on("change",". get-domicile-sub-category",function(){
-    //     var currentWrapper = $(this);
-    //     var catId=currentWrapper.val();
-    //     var key=currentWrapper.data('key');
-    //     var keys=currentWrapper.data('keys');
-    //     var url = "<?= base_url(' get-domicile-sub-category'); ?>";
-    //     var formData = new FormData();
-    //     formData.append('id',catId);
-    //     formData.append('key',key);
-    //     formData.append('keys',keys);
-    //     CommonLib.ajaxForm(formData,'POST',url).then(d=>{
-    //         console.log("Response",d);
-    //         if(d.status === 200){
-    //             currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html(d.html);
-    //         }else{
-    //             currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
-    //             CommonLib.notification.error(d.message);
-    //         }
-    //     }).catch(e=>{
-    //         console.error("Error:", e);
-    //         currentWrapper.closest('.category-wrapper').next('.domicile-main-category-data').html('');
-    //         CommonLib.notification.error(e.responseJSON.errors);
-    //     });
-    // });
+    }
     $("body").on("change",".get-domicile-sub-category",function(){
         var currentWrapper = $(this);
+        getDomicileSubCategoriessss(currentWrapper);
+    });
+    function getDomicileSubCategoriessss(currentWrapper){
+        
         var catId=currentWrapper.val();
         var key=currentWrapper.data('key');
         var keys=currentWrapper.data('keys');
         var url = "<?= base_url('get-domicile-sub-category'); ?>";
+        var course_id = currentWrapper.closest('.course-data').find('.accordion-item .course_id').val();
         var formData = new FormData();
         formData.append('id',catId);
         formData.append('key',key);
         formData.append('keys',keys);
+        formData.append('course_id',course_id);
         CommonLib.ajaxForm(formData,'POST',url).then(d=>{
             if(d.status === 200){
                 currentWrapper.closest('.category-wrapper').next('.get-domicile-subs-category').html(d.html);
@@ -223,7 +232,7 @@
             currentWrapper.closest('.category-wrapper').next('.get-domicile-subs-category').html('');
             CommonLib.notification.error(e.responseJSON.errors);
         });
-    });
+    }
     $("body").on("submit","#profileForm",function(e){
         e.preventDefault();
         var currentWrapper = $(this);

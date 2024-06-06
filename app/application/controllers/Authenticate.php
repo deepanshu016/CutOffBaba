@@ -623,7 +623,8 @@ Class Authenticate extends MY_Controller {
         $data['paymentsData'] = $this->master->getRecords('payments',['user_id'=>$this->session->userdata('user')['id']]);
         $data['userData'] = $this->master->singleRecord('tbl_users',['id'=>$this->session->userdata('user')['id']]);
         $data['coursesList'] = $this->master->getExamCourses($this->session->userdata('user')['selected_exam']);
-		$this->load->view('site/user_profile',$data);
+		//echo "hello"; die;
+        $this->load->view('site/user_profile',$data);
 	}
    
 

@@ -40,6 +40,7 @@
 	 <script src="<?=base_url('assets/');?>vendor/jquery.magnific-popup.min.js"></script>
     <script src="<?=base_url('assets/');?>js/admin.js"></script>
     <script src="<?=base_url('assets/');?>vendor/dropzone.min.js"></script>
+    <script src="<?=base_url('/app/')?>assets/admin/js/toastr.js"></script>
 	
 </body>
 </html>

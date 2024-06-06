@@ -6,6 +6,7 @@
             $userPreferences = $this->db->select('*')->from('tbl_user_course_preferences')->where('user_id',$this->session->userdata('user')['id'])->where('course_id',$course['id'])->get()->result_array();
 ?>
     <div class="card">
+        <input type="hidden" name="course_id" class="course_id" value="<?= $course['id']; ?>">
         <h5 class="card-header"><?= $course["course"] ?><input type="hidden" class="form-control" name="profile[course_data][<?=$key; ?>][course_id]" value="<?= @$course['id'];?>"></h5>
         <div class="card-body">
             <div class="row">
@@ -34,8 +35,15 @@
                         <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="">
                             <option value="">Select Domicile Central</option>
                             <?php 
-                                foreach($domicileCategory as $domicile) { ?>
-                                    <option value="<?= $domicile['id']; ?>"><?= $domicile['name']; ?></option>
+                                foreach($domicileCategory as $domicile) { 
+                                    $domicileCategoryData = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'state_id'=>$domicile['id'],'course_id'=>$course['id']])->get()->row_array();
+                                    if (!empty($domicileCategoryData)) {
+                                        $selected = 'selected';
+                                    } else {
+                                        $selected = '';
+                                    }  
+                            ?>
+                                    <option value="<?= $domicile['id']; ?>" <?= $selected ?>><?= $domicile['name']; ?></option>
                             <?php } ?>
                         </select>
                     </div>

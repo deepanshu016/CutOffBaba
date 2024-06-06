@@ -306,8 +306,8 @@
                               <a class="btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
                         <?php } else{ 
                            $courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+                          
                            foreach($courseids as $courseid){
-                             
                               $coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
                               if (count($coursedetaildata)>0) {
                                  $coursedetaildata=$coursedetaildata[0];

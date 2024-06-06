@@ -163,9 +163,12 @@ class MasterModel extends CI_Model {
 		if(empty($examData)){
 			return [];
 		}
+		
 		$coursesData = [];
 		$coursesOffered = explode(',',$examData['course_accepting']);
+		
 		$allCourses = $this->db->select('*')->from('tbl_course')->where_in('id', $coursesOffered)->get()->result_array();
+		
 		if(!empty($allCourses)){
 			foreach($allCourses as $key=>$course){
 				$coursesData[$key]['id'] = $course['id'];
@@ -186,8 +189,13 @@ class MasterModel extends CI_Model {
 				$coursesData[$key]['branch_type'] = $course['branch_type'];
 				$coursesData[$key]['status'] = $course['status'];
 				$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
-				$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
-				$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
+				if(!empty($head_data)){
+					$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
+					$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
+				}else{
+					$coursesData[$key]['category_data'] = [];
+					$coursesData[$key]['sub_category_data'] = [];
+				}
 			}
 		}
 		return $coursesData;
