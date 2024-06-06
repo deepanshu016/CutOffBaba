@@ -21,7 +21,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <button class=" canvaCss" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                     <a class="float-end ccsFv" href="#!"><img class="userCanv rounded" height="50" width="50" src="<?= (@$userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>" alt=""></a>
+                     <a class="float-end ccsFv" href="#!"><img class="userCanv rounded" height="50" width="50" src="<?= ($userData['image'] != '' && file_exists(FCPATH.'assets/uploads/users/'.$userData['image'])) ? base_url('assets/uploads/users/').'/'.$userData['image'] : base_url('assets/site/img/user.png');?>" alt=""></a>
                      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                         <div class="offcanvas-header bg-light">
                            <h5 class="offcanvas-title" id="offcanvasScrollingLabel"> </h5>

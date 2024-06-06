@@ -1,19 +1,40 @@
 <?php
+
+
+
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
 $active_group = 'default';
+
+
+
 $query_builder = TRUE;
+
+
+
 $db['default'] = array(
+
+
+
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
 
 
 
-	'password' => '',
+'hostname' => 'localhost',
 
 
 
-	'database' => 'cutoff_baba',
+	'username' => 'u916255990_cutoff',
+
+
+
+	'password' => 'Dg#hhLGEN/&0',
+
+
+
+	'database' => 'u916255990_cutoff',
 
 
 

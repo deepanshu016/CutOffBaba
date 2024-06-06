@@ -5,15 +5,15 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
+	'username' => 'u916255990_cutoff',
 
 
 
-	'password' => '',
+	'password' => 'Dg#hhLGEN/&0',
 
 
 
-	'database' => 'cutoff_baba',
+	'database' => 'u916255990_cutoff',
 
 
 

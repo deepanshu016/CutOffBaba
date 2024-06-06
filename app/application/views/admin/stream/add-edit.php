@@ -60,11 +60,12 @@
                                       <div class="col-lg-12">
                                           <div class="form-group">
                                               <label for="basiInput" class="form-label">Description</label>
-                                              <textarea class="form-control"  name="description" id="description" placeholder="Description"><?= (!empty($singleStream)) ? $singleStream['description'] : '';?></textarea>
+                                              <textarea class="form-control"  name="description"  placeholder="Description"><?= (!empty($singleStream)) ? $singleStream['description'] : '';?></textarea>
                                               <span class="text-danger" id="description"></span>
                                           </div>
                                       </div>
                                   </div>
+                                  
                                   <div class="row">
                                       <div class="col-lg-12">
                                           <div class="form-group">

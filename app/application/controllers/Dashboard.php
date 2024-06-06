@@ -69,8 +69,6 @@ Class Dashboard extends MY_Controller {
 			return redirect('login');
 		}
 	}
-
-	
 }
 
 ?>

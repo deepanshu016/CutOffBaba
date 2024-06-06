@@ -160,17 +160,12 @@ class MasterModel extends CI_Model {
 
 	function getExamCourses($exam_id){
 		$examData = $this->db->get_where('tbl_exam',['id'=>$exam_id])->row_array();
-		
 		if(empty($examData)){
 			return [];
 		}
 		$coursesData = [];
-		$coursesOffered = explode('|',$examData['course_accepting']);
-		
-		
+		$coursesOffered = explode(',',$examData['course_accepting']);
 		$allCourses = $this->db->select('*')->from('tbl_course')->where_in('id', $coursesOffered)->get()->result_array();
-		
-		
 		if(!empty($allCourses)){
 			foreach($allCourses as $key=>$course){
 				$coursesData[$key]['id'] = $course['id'];
@@ -191,13 +186,8 @@ class MasterModel extends CI_Model {
 				$coursesData[$key]['branch_type'] = $course['branch_type'];
 				$coursesData[$key]['status'] = $course['status'];
 				$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
-				if(!empty($head_data)){
-					$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
-					$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
-				}else{
-					$coursesData[$key]['category_data'] = [];
-					$coursesData[$key]['sub_category_data'] = [];
-				}
+				$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
+				$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
 			}
 		}
 		return $coursesData;
@@ -434,41 +424,6 @@ class MasterModel extends CI_Model {
 						->join('tbl_ownership as o', 'o.id = c.ownership');
 		return  $college_query->get()->row_array();
 	}
-	// public function getExamCourses($exam_id){
-	// 	$examData = $this->db->get_where('tbl_exam',['id'=>$exam_id])->row_array();
-		
-	// 	if(empty($examData)){
-	// 		return [];
-	// 	}
-	// 	$coursesData = [];
-	// 	$coursesOffered = explode(',',$examData['course_accepting']);
-	// 	$allCourses = $this->db->select('*')->from('tbl_course')->where_in('id', $coursesOffered)->get()->result_array();
-	// 	if(!empty($allCourses)){
-	// 		foreach($allCourses as $key=>$course){
-	// 			$coursesData[$key]['id'] = $course['id'];
-	// 			$coursesData[$key]['course'] = $course['course'];
-	// 			$coursesData[$key]['course_full_name'] = $course['course_full_name'];
-	// 			$coursesData[$key]['course_short_name'] = $course['course_short_name'];
-	// 			$coursesData[$key]['course_icon'] = $course['course_icon'];
-	// 			$coursesData[$key]['stream'] = $course['stream'];
-	// 			$coursesData[$key]['degree_type'] = $course['degree_type'];
-	// 			$coursesData[$key]['course_duration'] = $course['course_duration'];
-	// 			$coursesData[$key]['exam'] = $course['exam'];
-	// 			$coursesData[$key]['course_eligibility'] = $course['course_eligibility'];
-	// 			$coursesData[$key]['course_opportunity'] = $course['course_opportunity'];
-	// 			$coursesData[$key]['expected_salary'] = $course['expected_salary'];
-	// 			$coursesData[$key]['course_fees'] = $course['course_fees'];
-	// 			$coursesData[$key]['counselling_authority'] = $course['counselling_authority'];
-	// 			$coursesData[$key]['college'] = $course['college'];
-	// 			$coursesData[$key]['branch_type'] = $course['branch_type'];
-	// 			$coursesData[$key]['status'] = $course['status'];
-	// 			$head_data = array_column($this->db->select('id')->from('tbl_counselling_head')->where("FIND_IN_SET(" . $course['id'] . ", course_id) > 0", NULL, FALSE)->get()->result_array(),'id');
-	// 			$coursesData[$key]['category_data'] = $this->db->select('*')->from('tbl_category')->where_in('head_id', $head_data)->get()->result_array();
-	// 			$coursesData[$key]['sub_category_data'] = $this->db->select('*')->from('tbl_sub_category')->get()->result_array();
-	// 		}
-	// 	}
-	// 	return $coursesData;
-	// }
 }
 
 ?>

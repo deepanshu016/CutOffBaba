@@ -18,9 +18,6 @@
                                 <a href="<?= base_url('admin/country'); ?>" class="nav-link" data-key="t-calendar">Location </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('admin/enquiries'); ?>" class="nav-link" data-key="t-calendar">Enquiries </a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="<?= base_url('admin/ownership'); ?>" class="nav-link" data-key="t-calendar"> Ownership </a>
                             </li>
                             <li class="nav-item">
