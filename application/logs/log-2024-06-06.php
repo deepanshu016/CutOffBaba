@@ -939,3 +939,9 @@ ERROR - 2024-06-06 16:41:12 --> Could not find the specified $config['composer_a
 DEBUG - 2024-06-06 16:41:12 --> UTF-8 Support Enabled
 DEBUG - 2024-06-06 16:41:12 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-06-06 16:41:12 --> 404 Page Not Found: College/523
+ERROR - 2024-06-06 19:40:37 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-06 19:40:37 --> UTF-8 Support Enabled
+DEBUG - 2024-06-06 19:40:37 --> No URI present. Default controller set.
+DEBUG - 2024-06-06 19:40:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-06 19:40:37 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'u916255990_cutoff'@'localhost' (using password: YES) /Applications/MAMP/htdocs/CutOffBaba/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2024-06-06 19:40:37 --> Unable to connect to the database
