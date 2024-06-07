@@ -666,3 +666,15 @@ ERROR - 2024-06-07 20:00:07 --> Could not find the specified $config['composer_a
 DEBUG - 2024-06-07 20:00:07 --> UTF-8 Support Enabled
 DEBUG - 2024-06-07 20:00:07 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-06-07 20:00:07 --> 404 Page Not Found: Faviconico/index
+ERROR - 2024-06-07 21:55:34 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-07 21:55:34 --> UTF-8 Support Enabled
+DEBUG - 2024-06-07 21:55:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-07 21:55:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-07 21:55:34 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-07 21:55:34 --> cURL Class Initialized
+ERROR - 2024-06-07 21:55:36 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-07 21:55:36 --> UTF-8 Support Enabled
+DEBUG - 2024-06-07 21:55:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-07 21:55:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-07 21:55:36 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-07 21:55:36 --> cURL Class Initialized
