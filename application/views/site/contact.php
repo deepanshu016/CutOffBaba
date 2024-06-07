@@ -52,7 +52,8 @@
 								<textarea class="form-control" id="message_contact" name="message" style="height:150px;" placeholder="Message"></textarea>
 								<span id="message" class="text-danger"></span>
 							</div>
-							<p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact"></p>
+							<p class="add_top_30">
+								<input type="submit" value="Submit" class="btn_1 rounded" id="submit-contact"></p>
 						</form>
 				</div>
 				<div class="col-xl-6 col-lg-6 pl-xl-5">
