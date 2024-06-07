@@ -336,3 +336,9 @@ DEBUG - 2024-06-07 01:43:13 --> Total execution time: 0.0644
 DEBUG - 2024-06-07 01:43:19 --> Total execution time: 0.0929
 DEBUG - 2024-06-07 01:43:33 --> Total execution time: 0.1005
 DEBUG - 2024-06-07 01:44:01 --> Total execution time: 0.0871
+ERROR - 2024-06-07 10:21:31 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-07 10:21:31 --> UTF-8 Support Enabled
+DEBUG - 2024-06-07 10:21:31 --> No URI present. Default controller set.
+DEBUG - 2024-06-07 10:21:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-07 10:21:31 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /Applications/MAMP/htdocs/CutOffBaba/system/database/drivers/mysqli/mysqli_driver.php 211
+ERROR - 2024-06-07 10:21:31 --> Unable to connect to the database
