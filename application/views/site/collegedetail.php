@@ -25,6 +25,7 @@
             <div class="col-md-2">
                <img class="lofcss" src="<?=asset_url()."college/logo/".$collegeDetail['college_logo'];?>"> 
             </div>
+            
             <div class="col-md-5">
                <h4 class="text-white"><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h4>
                <p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> <?= @$city['city']; ?>, <?= @$states['name']; ?>  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD <?= $collegeDetail['establishment']; ?> </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliation : </span>  <?= $collegeDetail['university_name']; ?></p>
@@ -1021,33 +1022,36 @@
                            <a href="javascript:" class="ssSocil"><i class="fa fa-twitter"></i></a>
                            <a href="javascript:" class="ssSocil"><i class="fa fa-youtube"></i></a>
                        </div> 
-                   </div>
+                   </div> 
                    <div class="box_detail booking">
                      <div class="price">
                         <h5 class="text-center">Send Quick Enquiry</h5>
                         
                      </div>
-                     <div class="form-group" id="input-dates">
-                        <input class="form-control" type="text" name="dates" placeholder="Full Name"> 
-                     </div>
-                      <div class="form-group" id="input-dates">
-                        <input class="form-control" type="text" name="dates" placeholder="Email Address"> 
-                     </div>
-                      <div class="form-group" id="input-dates">
-                        <input class="form-control" type="text" name="dates" placeholder="Phone Number"> 
-                     </div>
-                     <div class="form-group clearfix">
-                        <div class="custom-select-form">
-                           <select class="wide">
-                              <option>Location</option>
-                              <option>Patna</option>
-                              <option>Chapra</option>
-                           </select>
+                     <form method="post" action="<?= base_url('save-enquiry'); ?>" id="contactForm" autocomplete="off">
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="name_contact" name="name" placeholder="Name">
+                           <span id="name" class="text-danger"></span>
                         </div>
-                     </div>
-                     <a href="#!" class="btn_1 full-width purchase">SEND NOW</a> 
-                  </div>
-
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="email_contact" name="email" placeholder="Email">
+                           <span id="email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="phone_contact" name="phone"  placeholder="Telephone">
+                           <span id="phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="phone_contact" name="subject" placeholder="Subject">
+                           <span id="subject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <textarea class="form-control" id="message_contact" name="message" style="height:150px;" placeholder="Message"></textarea>
+                           <span id="message" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn_1 full-width purchase">SEND NOW</button>
+                     </form>   
+                     </div>              
                    <table class="table course-features-info">
                        <thead class="hhusCss">
                            <tr>
@@ -1065,102 +1069,29 @@
                    </div>
 
                        <div class="hhusCss"> 
-                        <h5 class="text-white">SIMILAR COLLEGE </h5> 
+                           <h5 class="text-white">SIMILAR COLLEGE </h5> 
                        </div>
 
                        <div class="ssuuiwww">
-                          <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
-                        <div class="ddds">
-                          <div class="row ">
-                          <div class="col-md-2">
-                             <img src="https://cutoffbaba.com/Admin/Logo/5687353Adesh%20Medical%20College%20Bhatinda%20Cutoff.png" class="uui8sss">
-                          </div>
-                          <div class="col-md-10">
-                             <a class="sss8iss" href="#!"> Guru Nanak Ayurvedic Medical College </a> 
-                             <a class="sss8iss" href="#!"><span>Muktsar</span> , <span>PUNJAB</span></a>
-                          </div>
-                       </div>
-                       </div>
+                           <?php if(!empty($similarCollege)){
+                              foreach($similarCollege as $similar) { 
+                                 $statessss = $this->db->select('name')->where('id',$similar['state'])->get('tbl_state')->row_array();
+                                 $cityss = $this->db->select('city')->where('id',$similar['city'])->get('tbl_city')->row_array();
+                     
+                                 
+                        ?>
+                              <div class="ddds">
+                                 <div class="row">
+                                    <div class="col-md-2">
+                                       <img src="<?=asset_url()."college/banner/".$similar['college_banner'];?>" class="uui8sss">
+                                    </div>
+                                    <div class="col-md-10">
+                                       <a class="sss8iss" href="<?=base_url('college-detail/'.$similar['slug']."/".$similar['id']);?>"><?= $similar['full_name']; ?> </a> 
+                                       <a class="sss8iss" href="<?=base_url('college-detail/'.$similar['slug']."/".$similar['id']);?>"><span> <?= @$cityss['city']; ?>,</span> , <span><?= @$statessss['name']; ?></span></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           <?php } } ?>
                        </div>
 
                        <br>
@@ -1292,6 +1223,42 @@
   </div>
 </div>
 <?php $this->load->view('site/footer');?>
+<script src="<?=base_url('/')?>app/assets/site/js/CommonLib.js"></script>
+	<script>
+    $("body").on("submit","#contactForm",function(e){
+        e.preventDefault();
+        var currentWrapper = $(this);
+        var url = currentWrapper.attr('action');
+        var method = currentWrapper.attr('method');
+        var formData = $('#contactForm')[0];
+        formData = new FormData(formData);
+        CommonLib.ajaxForm(formData,method,url).then(d=>{
+            if(d.status === 200){
+                console.log(d.status)
+                CommonLib.notification.success(d.message);
+                setTimeout(() => {
+                  location.reload();
+               }, 1000);
+            }else if(d.status == 401){
+               if(d.errors.name){
+                  CommonLib.notification.error(d.errors.name);
+               }else if(d.errors.email){
+                  CommonLib.notification.error(d.errors.email);
+               }else if(d.errors.phone){
+                  CommonLib.notification.error(d.errors.phone);
+               }else if(d.errors.subject){
+                  CommonLib.notification.error(d.errors.subject);
+               }else if(d.errors.message){
+                  CommonLib.notification.error(d.errors.message);
+               } 
+            }else{
+                CommonLib.notification.error(d.errors);
+            }
+        }).catch(e=>{
+                CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+</script>
 <script>
    $(function() {
    	$("body").on("change",".get_cutoff_matrix",function(e){
@@ -1347,7 +1314,6 @@
             processData: false,
             contentType: false,
             success: function(data){
-              
                   if(data.status == 'error'){
                      $.each(data.errors, function(key, value) {
                         $('#'+key).addClass('is-invalid');
