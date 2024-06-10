@@ -162,3 +162,17 @@ $(function(){
 	}       
 });  
 </script>  
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+		var locationName = "<?=$full_name;?>"; // Replace with your location name
+		var encodedLocationName = encodeURIComponent(locationName);
+		var googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodedLocationName;
+		
+		var mapLinks = document.getElementsByClassName('address');
+		// Loop through the elements and update each one
+		for (var i = 0; i < mapLinks.length; i++) {
+			mapLinks[i].href = googleMapsUrl;
+			// mapLinks[i].innerText = 'Open ' + locationName + ' in Google Maps';
+		}
+	});
+</script>

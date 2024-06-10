@@ -666,9 +666,3 @@ ERROR - 2024-06-07 20:00:07 --> Could not find the specified $config['composer_a
 DEBUG - 2024-06-07 20:00:07 --> UTF-8 Support Enabled
 DEBUG - 2024-06-07 20:00:07 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2024-06-07 20:00:07 --> 404 Page Not Found: Faviconico/index
-ERROR - 2024-06-07 21:31:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
-DEBUG - 2024-06-07 21:31:39 --> UTF-8 Support Enabled
-DEBUG - 2024-06-07 21:31:39 --> No URI present. Default controller set.
-DEBUG - 2024-06-07 21:31:39 --> Global POST, GET and COOKIE data sanitized
-ERROR - 2024-06-07 21:31:39 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /Applications/MAMP/htdocs/CutOffBaba/system/database/drivers/mysqli/mysqli_driver.php 211
-ERROR - 2024-06-07 21:31:39 --> Unable to connect to the database

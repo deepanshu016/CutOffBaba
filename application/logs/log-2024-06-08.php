@@ -58,3 +58,6 @@ DEBUG - 2024-06-08 01:27:58 --> Total execution time: 0.1240
 DEBUG - 2024-06-08 01:29:24 --> Total execution time: 1.2427
 DEBUG - 2024-06-08 01:29:24 --> Total execution time: 0.0349
 DEBUG - 2024-06-08 01:29:49 --> Total execution time: 0.1308
+ERROR - 2024-06-08 03:25:36 --> Severity: Warning --> Undefined variable $full_name C:\deepanshu\CutOffBaba\application\views\site\coursedetail.php 167
+DEBUG - 2024-06-08 03:25:36 --> Total execution time: 2.0014
+DEBUG - 2024-06-08 03:25:36 --> Total execution time: 0.0504
