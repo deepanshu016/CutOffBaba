@@ -160,6 +160,7 @@ class Home extends MY_Controller {
 		$data['ownerList']=$this->master->getRecords('tbl_ownership',[]);
 		$data['genderList']=$this->master->getRecords('tbl_gender',[]);
 		$data['streamDetails']=$this->master->singleRecord('tbl_stream',['id'=>$stream_id]);
+		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$stream_id]);
 		// echo "<pre>";
 		// print_r($data['streamDetails']);die;
 		$this->load->view('site/course-by-stream',$data);

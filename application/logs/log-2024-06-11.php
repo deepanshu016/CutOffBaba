@@ -273,3 +273,48 @@ ERROR - 2024-06-11 01:53:12 --> Severity: Warning --> Undefined variable $full_n
 DEBUG - 2024-06-11 01:53:12 --> Total execution time: 0.1789
 DEBUG - 2024-06-11 01:53:12 --> Total execution time: 0.0197
 DEBUG - 2024-06-11 01:53:13 --> Total execution time: 0.1270
+DEBUG - 2024-06-11 02:01:35 --> Total execution time: 0.5194
+DEBUG - 2024-06-11 02:01:36 --> Total execution time: 0.0565
+DEBUG - 2024-06-11 02:01:37 --> Total execution time: 0.1225
+DEBUG - 2024-06-11 02:01:39 --> Total execution time: 0.5218
+DEBUG - 2024-06-11 02:01:39 --> Total execution time: 0.0316
+DEBUG - 2024-06-11 02:01:40 --> Total execution time: 0.1330
+DEBUG - 2024-06-11 02:01:57 --> Total execution time: 0.4998
+DEBUG - 2024-06-11 02:01:57 --> Total execution time: 0.0209
+DEBUG - 2024-06-11 02:02:00 --> Total execution time: 0.0923
+DEBUG - 2024-06-11 02:02:05 --> Total execution time: 0.4987
+DEBUG - 2024-06-11 02:02:05 --> Total execution time: 0.0349
+DEBUG - 2024-06-11 02:02:09 --> Total execution time: 0.1278
+DEBUG - 2024-06-11 02:02:11 --> Total execution time: 0.4950
+DEBUG - 2024-06-11 02:02:11 --> Total execution time: 0.0436
+ERROR - 2024-06-11 02:03:10 --> Severity: Warning --> Undefined variable $id C:\deepanshu\CutOffBaba\application\controllers\Home.php 163
+DEBUG - 2024-06-11 02:03:10 --> Total execution time: 0.5090
+DEBUG - 2024-06-11 02:03:11 --> Total execution time: 0.0537
+DEBUG - 2024-06-11 02:03:21 --> Total execution time: 0.5124
+DEBUG - 2024-06-11 02:03:22 --> Total execution time: 0.0376
+ERROR - 2024-06-11 02:03:26 --> Severity: Warning --> Undefined variable $full_name C:\deepanshu\CutOffBaba\application\views\site\coursedetail.php 168
+DEBUG - 2024-06-11 02:03:26 --> Total execution time: 1.3285
+DEBUG - 2024-06-11 02:03:26 --> Total execution time: 0.0415
+DEBUG - 2024-06-11 02:03:46 --> Total execution time: 0.1251
+DEBUG - 2024-06-11 02:03:49 --> Total execution time: 0.4981
+DEBUG - 2024-06-11 02:03:49 --> Total execution time: 0.0414
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Attempt to read property "status" on null C:\deepanshu\CutOffBaba\application\helpers\common_helper.php 213
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Attempt to read property "status" on null C:\deepanshu\CutOffBaba\application\helpers\common_helper.php 213
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Attempt to read property "status" on null C:\deepanshu\CutOffBaba\application\helpers\common_helper.php 213
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Attempt to read property "status" on null C:\deepanshu\CutOffBaba\application\helpers\common_helper.php 213
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key 0 C:\deepanshu\CutOffBaba\application\controllers\Home.php 215
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Attempt to read property "statename" on null C:\deepanshu\CutOffBaba\application\controllers\Home.php 215
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "title" C:\deepanshu\CutOffBaba\application\views\site\header.php 15
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "favicon" C:\deepanshu\CutOffBaba\application\views\site\header.php 16
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "title" C:\deepanshu\CutOffBaba\application\views\site\header.php 31
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "logo" C:\deepanshu\CutOffBaba\application\views\site\header.php 32
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "address" C:\deepanshu\CutOffBaba\application\views\site\footer.php 34
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "mobile_no" C:\deepanshu\CutOffBaba\application\views\site\footer.php 35
+ERROR - 2024-06-11 02:03:53 --> Severity: Warning --> Undefined array key "email" C:\deepanshu\CutOffBaba\application\views\site\footer.php 36
+DEBUG - 2024-06-11 02:03:53 --> Total execution time: 0.4017
+ERROR - 2024-06-11 02:04:08 --> Severity: Warning --> Undefined variable $full_name C:\deepanshu\CutOffBaba\application\views\site\coursedetail.php 168
+DEBUG - 2024-06-11 02:04:08 --> Total execution time: 1.4146
+DEBUG - 2024-06-11 02:04:08 --> Total execution time: 0.0202
+DEBUG - 2024-06-11 02:06:06 --> Total execution time: 0.1229
+DEBUG - 2024-06-11 02:06:08 --> Total execution time: 0.5065
+DEBUG - 2024-06-11 02:06:08 --> Total execution time: 0.0224

@@ -908,3 +908,227 @@ DEBUG - 2024-06-10 20:23:13 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2024-06-10 20:23:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2024-06-10 20:23:13 --> Pagination class already loaded. Second attempt ignored.
 DEBUG - 2024-06-10 20:23:13 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:35 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:35 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:35 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:35 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:35 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:35 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:36 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:36 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:37 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:37 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:37 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:31:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:37 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:37 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:39 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:39 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:39 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:39 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:39 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:39 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:39 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:40 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:40 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:40 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:31:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:40 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:40 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:56 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:56 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:56 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:56 --> cURL Class Initialized
+ERROR - 2024-06-10 20:31:57 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:31:57 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:31:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:31:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:31:57 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:31:57 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:00 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:00 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:00 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:32:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:00 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:00 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:04 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:04 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:04 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:04 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:05 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:05 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:05 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:05 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:09 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:09 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:09 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:32:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:09 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:09 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:10 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:10 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:10 --> cURL Class Initialized
+ERROR - 2024-06-10 20:32:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:32:11 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:32:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:32:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:32:11 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:32:11 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:10 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:10 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:10 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:10 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:11 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:11 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:11 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:11 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:12 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:12 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:12 --> 404 Page Not Found: Faviconico/index
+ERROR - 2024-06-10 20:33:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:21 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:21 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:21 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:21 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:21 --> 404 Page Not Found: Assets/site
+ERROR - 2024-06-10 20:33:21 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:21 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:22 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:22 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:24 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:24 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:24 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:24 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:26 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:26 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:26 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:26 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:45 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:45 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:45 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:33:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:46 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:46 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:48 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:48 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:48 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:48 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:49 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:49 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:49 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:49 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:50 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:50 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:50 --> 404 Page Not Found: Assets/site
+ERROR - 2024-06-10 20:33:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:53 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:33:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:33:53 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:33:53 --> cURL Class Initialized
+ERROR - 2024-06-10 20:33:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:53 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:53 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:53 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:53 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:53 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:53 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:53 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:53 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:53 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:54 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:54 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:54 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:54 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:54 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:54 --> 404 Page Not Found: States/img
+ERROR - 2024-06-10 20:33:54 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:33:54 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:33:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:33:54 --> 404 Page Not Found: Faviconico/index
+ERROR - 2024-06-10 20:34:07 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:34:07 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:34:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:34:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:34:07 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:34:07 --> cURL Class Initialized
+ERROR - 2024-06-10 20:34:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:34:08 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:34:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:34:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:34:08 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:34:08 --> cURL Class Initialized
+ERROR - 2024-06-10 20:36:06 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:36:06 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:36:06 --> No URI present. Default controller set.
+DEBUG - 2024-06-10 20:36:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:36:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:36:06 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:36:06 --> cURL Class Initialized
+ERROR - 2024-06-10 20:36:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:36:08 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:36:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:36:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:36:08 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:36:08 --> cURL Class Initialized
+ERROR - 2024-06-10 20:36:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:36:08 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:36:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2024-06-10 20:36:08 --> 404 Page Not Found: Assets/site
+ERROR - 2024-06-10 20:36:08 --> Could not find the specified $config['composer_autoload'] path: vendor/autoload.php
+DEBUG - 2024-06-10 20:36:08 --> UTF-8 Support Enabled
+DEBUG - 2024-06-10 20:36:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2024-06-10 20:36:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2024-06-10 20:36:08 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2024-06-10 20:36:08 --> cURL Class Initialized
