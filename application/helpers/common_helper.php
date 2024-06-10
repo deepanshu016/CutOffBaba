@@ -233,4 +233,13 @@ if ( ! function_exists('asset_url()'))
 		return $string;
 	}
  }
+ if(!function_exists('truncate_string')){
+ function truncate_string($string, $length = 20) {
+    if (strlen($string) > $length) {
+        return substr($string, 0, $length) . '...';
+    } else {
+        return $string;
+    }
+}
+ }
 ?>

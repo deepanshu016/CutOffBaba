@@ -16,6 +16,10 @@ class Home extends MY_Controller {
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['planList'] = $this->master->getRecords('tbl_counsellng_plans',[]);
 		$data['newsList'] = $this->master->getRecords('tbl_news',[]);
+		$data['totalLocation'] = $this->db->distinct()->select('city')->from('tbl_college')->count_all_results();
+		$data['totalActiveUsers'] = $this->db->select('id')->from('tbl_users')->where('user_type !=','5')->count_all_results();
+		$data['totalcolleges'] = $this->db->select('id')->from('tbl_college')->count_all_results();
+		
 		$this->load->view('site/home',$data);
 	}
 	function streamdata($where=[],$limit=null){
@@ -172,33 +176,39 @@ class Home extends MY_Controller {
 		$data['approvalList']=$this->master->getRecords('tbl_approval',[]);
 		$data['ownerList']=$this->master->getRecords('tbl_ownership',[]);
 		$data['genderList']=$this->master->getRecords('tbl_gender',[]);
-		
+		$data['courseLists'] = $this->master->getRecords('tbl_course',['stream'=>$id]);
 		$colleges=$this->collegeData(['course_offered'=>$id]);
 		$data['colleges']=$colleges;
 		$this->load->view('site/coursedetail',$data);
 	}
 	public function collegeDetail($slug=null,$id=null)
 	{
+		
 		$data['title'] = 'COURSES | CUTOFFBABA';
 		$data['streams'] = $this->streamdata();
 		$data['siteSettings'] = $this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings'] = $data['siteSettings'][0];
-		$data['collegeDetail'] = $this->db->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name,o.id as ownership_id,o.title as o_title' )->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')->join('tbl_country','tbl_country.id=tbl_college.country')->join('tbl_ownership as o','o.id=tbl_college.ownership')->join('tbl_state','tbl_state.id=tbl_college.state')->where(['tbl_college.id'=>$id])->get('tbl_college')->result_array();
-		$data['collegeDetail'] = $data['collegeDetail'][0];
+		$data['collegeDetail'] = $this->db
+		->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name,o.id as ownership_id,o.title as o_title' )
+		->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')
+		->join('tbl_country','tbl_country.id=tbl_college.country')
+		->join('tbl_ownership as o','o.id=tbl_college.ownership')
+		->join('tbl_state','tbl_state.id=tbl_college.state')
+		->where(['tbl_college.id'=>$id])
+		->get('tbl_college')
+		->result_array();
+		
+		$data['collegeDetail'] = @$data['collegeDetail'][0];
 		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id]);
 		$data['similarCollege'] = $this->master->getSimilarColleges($data['collegeDetail']);
-		// echo "<pre>";
-		// print_r($data['similarCollege']); die;
 		$this->load->view('site/collegedetail',$data);
 	}
 	public function stateList($id=null)
 	{
-		
 		$data['streams']=curlInfo('stream');
 		$data['siteSettings']=curlInfo('sitesettings');
 		$data['states']=curlInfo('states');
 		if ($id) {
-			
 			$data['colleges']=curlInfo('state/'.$id);
 			//print_r($data['statedetail']);
 			$data['title'] = $data['colleges'][0]->statename;

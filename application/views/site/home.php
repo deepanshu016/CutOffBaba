@@ -24,8 +24,9 @@
 					</div>
 				</div>
 				<ul class="counter">
-					<li><strong>256,020</strong> Locations</li>
-					<li><strong>150,543</strong> Active users</li>
+					<li><strong><?= $totalLocation; ?></strong> Locations</li>
+					<li><strong><?= $totalActiveUsers; ?></strong> Active users</li>
+					<li><strong><?= $totalcolleges; ?></strong> Colleges</li>
 				</ul>
 			</div>
 		</div>
@@ -170,7 +171,6 @@
 							<div class="box_how">
 								<i class="pe-7s-search"></i>
 								<h3>Search Locations</h3>
-								<p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.</p>
 								<span></span>
 							</div>
 						</div>
@@ -178,7 +178,6 @@
 							<div class="box_how">
 								<i class="pe-7s-info"></i>
 								<h3>View Location Info</h3>
-								<p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.</p>
 								<span></span>
 							</div>
 						</div>
@@ -186,7 +185,6 @@
 							<div class="box_how">
 								<i class="pe-7s-like2"></i>
 								<h3>Book, Reach or Call</h3>
-								<p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam id.</p>
 							</div>
 						</div>
 					</div>
@@ -203,7 +201,7 @@
 						<li>
 						<a href="<?=base_url('course/').$course['id'];?>"class="img-thumbnail m-2">
 							<img class="courseResponsive" src="<?=$course['course_icon']!=""?asset_url()."course/".$course['course_icon']:base_url('assets/img/no-image.jpg');?>"  style="max-height: 150px;width: 100%;margin-bottom: 20px;">
-							<label class="labeCsss"><?=$course['course'];?></label></a>
+							<label class="labeCsss"><?=truncate_string($course['course'],20);?></label></a>
 					</li>
 					<?php  }?>
 				</ul>
@@ -232,8 +230,8 @@
 									₹ <?= $plan['discounted_price']; ?></span>
 							</div>
 							<?= $plan['description']; ?>
-							<!-- <ul class="pricing-content"> -->
-								<!-- <li>Tuition Fees Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
+							<ul class="pricing-content">
+								<li>Tuition Fees Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span> </li>
 								<li>Seat Matrix Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
 								<li>Approved Colleges Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
 								<li>Cutoff Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
@@ -242,7 +240,7 @@
 								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> -->
 								<!-- <li class="disable">15 Subdomains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span>  </li>
 								<li class="disable">20 Domains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span></li> -->
-							<!-- </ul> -->
+							</ul>
 							<?php if(!$this->session->userdata('user')) { ?>
 								<a href="<?= base_url('/signup'); ?>" class="pricingTable-signup">Sign Up</a>
 							<?php } else{ ?>

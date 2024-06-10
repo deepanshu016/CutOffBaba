@@ -26,7 +26,7 @@
 </div>
 
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('DOMContentLoaded', function () {
 		var locationName = "<?=$full_name;?>"; // Replace with your location name
 		var encodedLocationName = encodeURIComponent(locationName);
 		var googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodedLocationName;

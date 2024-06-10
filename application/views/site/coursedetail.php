@@ -12,6 +12,200 @@
 <?php //echo '<pre>';print_r($courseDetail); ?>
 
 	<main>
+	<div class=" w-100 my-md-3 ps-md-3 bg-light pb-5 mb-5">
+   <?php if(!empty($courseLists)) { 
+      foreach($courseLists as $course) { ?>
+         <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="card shaDo mb-3" style="max-width: 540px;background: url('<?= ($course['course_icon'] != '' && file_exists(FCPATH.'assets/uploads/course/'.$course['course_icon'])) ? base_url('assets/uploads/course/').'/'.$course['course_icon'] : base_url('assets/site/img/medical-tr.png');?>');background-size: 100% 100%;">
+               <div class="row g-0">
+                  <div class="col-8 col pb-3">
+                     <div class="card-body nopad">
+                        <h5 class="card-title"><?= $course['course']; ?></h5>
+                        <p class="card-text nop"><?= $course['course_full_name']; ?></p>
+                        <a class="btn btn-primary" href="<?= base_url('course').'/'.$course['id']; ?>">Explore More  <i class="fa fa-angle-right"></i> </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=" w-100   bg-light">
+            <div class="lc-block text-center">
+               <div id="carouselTestimonial" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner innscr ">
+                     <div class="carousel-item active">
+                        <div class="p-2  text-center overflow-hidden">
+                           <div class="row">
+                              <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('course').'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">About <?=  $course['course']; ?></h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('states').'/'.$course['id']; ?>">
+                                       <h5 class="card-title smTxt">State Wise Colleges</h5>
+                                       <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                    </a>
+                                    </div>
+                                 </div>
+                              </div>
+                               <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/branch'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Branches & Seats</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/fee-expenses'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Fees & Expenses</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="p-2 text-center overflow-hidden">
+                           <div class="row">
+                             
+                              <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/clinic-exposure'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Clinic Exposure</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/service-bond-rules'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Service & Bond Rules</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                               <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/reviews'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Reviews</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/central-cutoff'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Central Cutoff</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="p-2 text-center overflow-hidden">
+                           <div class="row">
+                               <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/reviews'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Reviews</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/state-cutoff'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">State Cutoff</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                               <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/cutoff-comparison'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Cutoff Comparison</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/faq'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">FAQs</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="p-2 text-center overflow-hidden">
+                           <div class="row">
+                               <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/college-predictor'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Predictor</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/college-gallery'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">College Gallery</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col col-sm-6">
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/college-updates'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Counselling Updates</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="card shaDo noHis">
+                                    <div class="card-body mbbsCss">
+                                       <a href="<?= base_url('college-info').'/recommended-colleges'.'/'.$course['id']; ?>">
+                                          <h5 class="card-title smTxt">Recommended College</h5>
+                                          <p class="card-text">Nemo enim ipsam voluptatem </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+   <?php } } ?>
+</div>
 		<div class="container margin_60_35">
 			<div class="row">
 				<aside class="col-lg-3" id="sidebar">
