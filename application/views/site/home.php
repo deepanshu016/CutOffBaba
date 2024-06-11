@@ -2,9 +2,9 @@
 <main>
 	<section class="hero_single version_4">
 		<div class="wrapper">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row justify-content-center">
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<h3>Find what you need!</h3>
 						<p>Discover Top Rated College, Courses And Exams Around The World</p>
 						<form method="post" action="#">
@@ -33,14 +33,14 @@
 	</section>
 	
 		
-	<div class="container margin_30_5">
+	<div class="container-fluid margin_30_5">
 		<div class="main_title_2">
 			<span><em></em></span>
 			<h2>Popular Streams </h2>
 		</div>
 		<div class="row justify-content-center">
 			<?php foreach ($streams as $stream) { ?>
-				<?php $count=$this->db->select('*')->where('stream',$stream['id'])->get('tbl_college')->num_rows(); if($count>0){?>
+				<?php $count=$this->db->select('*')->where('stream',$stream['id'])->get('tbl_college')->num_rows(); //if($count>0){?>
 				<div class="col-lg-4 col-md-6 " >
 					<a href="<?=base_url('courses/').str_replace(" ","-",$stream['stream']).'/'.$stream['id'];?>" class="box_cat_home text-left" style="background:url('<?=asset_url();?>stream/<?=$stream['stream_image'];?>') no-repeat;background-size: 100% 100%;">
 						<h3 class="text-left"><?=$stream['stream'];?></h3>
@@ -51,113 +51,9 @@
 						</ul>
 					</a>
 				</div>
-			<?php } }?>
+			<?php } //}?>
 		</div>
 	</div>
-	<!-- <div class="container margin_60_35">
-			<div class="main_title_2">
-			<span><em></em></span>
-			<h2>STATE WISE COLLEGE FEE STRUCTURE </h2>
-		</div>
-		<div class="pricing-container cd-has-margins">
-			<ul class="pricing-list bounce-invert" >
-				<li >
-					<ul class="pricing-wrapper" >
-						<li data-type="monthly" class="is-visible" >
-							 
-							<header class="pricing-header"> 
-								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
-								<div class="price"> 
-									<span class="price-value"> BIHAR</span>  
-								</div>
-							</header>
-							 
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
-									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
-									 
-								</ul>
-							</div>
-							 
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">more College</a>
-							</footer>
-						</li>
-						 
-					</ul>
-					 
-				</li>
-				<li >
-					<ul class="pricing-wrapper" >
-						<li data-type="monthly" class="is-visible" >
-							 
-							<header class="pricing-header"> 
-								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
-								<div class="price"> 
-									<span class="price-value"> BIHAR</span>  
-								</div>
-							</header>
-							 
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
-									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
-									 
-								</ul>
-							</div>
-							 
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">more College</a>
-							</footer>
-						</li>
-						 
-					</ul>
-					 
-				</li>
-				<li >
-					<ul class="pricing-wrapper" >
-						<li data-type="monthly" class="is-visible" >
-							 
-							<header class="pricing-header"> 
-								<h1 class="econsicss">MBBS FEE STRUCTURE</h1>
-								<div class="price"> 
-									<span class="price-value"> BIHAR</span>  
-								</div>
-							</header>
-							 
-							<div class="pricing-body">
-								<ul class="pricing-features ddPrics">
-									<li><em>All India Institute of Medical</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Anugrah Narayan Magadh</em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Darbhanga Medical College </em>  <span class="ssslhs">Fee:1350</span></li>
-									<li><em>Government Medical College </em> <span class="ssslhs">Fee:1350</span> </li>
-									<li><em>Indira Gandhi Institute of </em> <span class="ssslhs">Fee:1350</span> </li>
-									 
-								</ul>
-							</div>
-							 
-							<footer class="pricing-footer">
-								<a class="select-plan" href="#0">more College</a>
-							</footer>
-						</li>
-						 
-					</ul>
-					 
-				</li>
-				 
-				 
-			</ul> 
-		</div>
-	</div> -->
-
-
 	<div class="call_section pattern">
 			<div class="wrapper">
 				<div class="container margin_80_55">
@@ -206,7 +102,6 @@
 					<?php  }?>
 				</ul>
 			</div>
-			<!-- /container -->
 		</div>
 		<section>
 		<div class="container">
@@ -237,7 +132,7 @@
 								<li>Cutoff Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
 								<li>Category Info <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> 
 								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
-								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li> -->
+								<li>Counselling Dates <span class="floaIli"><i class="fa fa-check" aria-hidden="true"></i></span></li>
 								<!-- <li class="disable">15 Subdomains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span>  </li>
 								<li class="disable">20 Domains <span class="floaIli text-danger"><i class="fa fa-times" aria-hidden="true"></i> </span></li> -->
 							</ul>
