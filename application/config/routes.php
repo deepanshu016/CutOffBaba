@@ -12,6 +12,7 @@ $route['get-college-data/(:any)/(:any)'] = 'Home/loadCollegesRecord/$1/$2';
 $route['get-college-data-by-stream/(:any)/(:any)'] = 'Home/loadCollegesRecordByStream/$1/$2';
 $route['college-detail/(:any)/(:any)'] = 'Home/collegeDetail/$1/$2';
 $route['college-details/(:any)/(:any)/(:any)'] = 'Home/collegeDetails/$1/$2/$3';
+$route['post-review-for-college'] = 'Home/postReviewForCollege';
 $route['states'] = 'Home/stateList';
 $route['states/(:any)'] = 'Home/stateList/$1';
 $route['loginchk'] = 'Authenticate/login';

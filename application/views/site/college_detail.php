@@ -37,16 +37,16 @@
    <nav class="secondary_nav sticky_horizontal_2">
       <div class="container">
          <ul class="clearfix d-flex scrollmenuss justify-content-between">
-            <li><a href="#basic" class="active">Overviews</a></li>
-            <li><a href="#fees">Courses & Fees</a></li>
-            <li><a href="#seat_matrix">Seat Matrix</a></li>
-            <li><a href="#rank">Cutoff & Rank</a></li>
-            <li><a href="#placement">Placement</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#admission">Admission</a></li>
-            <li><a href="#hospital">Hospital Details</a></li>
-            <li><a href="#contacts">Contact Us</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#basic"  class="active">Overviews</a></li>
+            <li><a href="#fees" class="<?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>">Courses & Fees</a></li>
+            <li><a href="#seat_matrix" class="<?= ($tag != 'branch') ? 'd-none' : ''; ?>">Seat Matrix</a></li>
+            <li><a href="#rank" class="<?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>">Cutoff & Rank</a></li>
+            <li><a href="#placement" class="<?= ($tag != 'placement') ? 'd-none' : ''; ?>">Placement</a></li>
+            <li><a href="#gallery" class="<?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>">Gallery</a></li>
+            <li><a href="#admission" class="<?= ($tag != 'admission') ? 'd-none' : ''; ?>">Admission</a></li>
+            <li><a href="#hospital" class="<?= ($tag != 'hospital') ? 'd-none' : ''; ?>">Hospital Details</a></li>
+            <li><a href="#contacts" class="<?= ($tag != 'contacts') ? 'd-none' : ''; ?>">Contact Us</a></li>
+            <li><a href="#reviews" class="<?= ($tag != 'reviews') ? 'd-none' : ''; ?>">Reviews</a></li>
          </ul>
       </div>
    </nav>
@@ -238,7 +238,7 @@
                   </section>
 
 
-                   <section id="seat_matrix" class="card card-body">
+                   <section id="seat_matrix" class="card card-body <?= ($tag != 'branch') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Seat Matrix</h4>
                         <table class="table table-bordered">
@@ -297,7 +297,7 @@
                   </section>
 
 
-                  <section id="rank" class="card card-body">
+                  <section id="rank" class="card card-body <?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Cutoff of <?= $collegeDetail['full_name']; ?></h4>
 
@@ -412,7 +412,7 @@
 
 
 
-                  <section class="card card-body">
+                  <section class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Fees Structure of  <?= $collegeDetail['full_name']; ?></h4>
 
@@ -476,7 +476,7 @@
                      </div>
                   </section>
 
-                   <section id="hospital" class="card card-body rs-counter">
+                   <section id="hospital" class="card card-body rs-counter <?= ($tag != 'hospital') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Hospital Details</h4>
                         <div class="row">
@@ -519,7 +519,7 @@
                      </div>
                   </section>
 
-                  <section id="fees" class="card card-body">
+                  <section id="fees" class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Courses Offered</h4>
                         <p><?= $collegeDetail['full_name']; ?> offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
@@ -595,7 +595,7 @@
                      </div>
                   </section>
 
-                  <section class="card card-body">
+                  <section class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Fee Structure</h4>
                         <p>The <?= $collegeDetail['full_name']; ?> fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
@@ -665,7 +665,7 @@
                      </div>
                   </section> -->
 
-                  <section id="gallery" class="card card-body">
+                  <section id="gallery" class="card card-body <?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst"><strong>College Gallery</strong></h4>
                         <br>
@@ -691,7 +691,7 @@
                      </div>
                   </section>
 
-                  <section id="admission" class="card card-body">
+                  <section id="admission" class="card card-body <?= ($tag != 'admission') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Admission</h4>
                         <p>The highlights of the admission details of Punjab College are given in the table below </p>
@@ -794,7 +794,7 @@
                      </div>
                   </section>
 
-                   <section id="contacts" class="card card-body">
+                   <section id="contacts" class="card card-body <?= ($tag != 'contacts') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Contact Us</h4>
                         <div class="form_container"> 
@@ -839,7 +839,7 @@
                      </div>
                   </section>
 
-                  <section id="reviews" class="card card-body">
+                  <section id="reviews" class="card card-body <?= ($tag != 'reviews') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">College Reviews</h4>
                         <section id="reviews">
@@ -964,47 +964,40 @@
                      <!-- /review-container -->
                   </section>
 
-                  <div class="add-review">
-                        <h5>Leave a Review</h5>
-                        <form>
-                           <div class="row">
-                              <div class="form-group col-md-6">
-                                 <label>Name and Lastname *</label>
-                                 <input type="text" name="name_review" id="name_review" placeholder="" class="form-control">
-                              </div>
-                              <div class="form-group col-md-6">
-                                 <label>Email *</label>
-                                 <input type="email" name="email_review" id="email_review" class="form-control">
-                              </div>
-                              <div class="form-group col-md-12">
-                                 <label>Rating </label>
-                                 <div class="custom-select-form">
-                                 <select name="rating_review" id="rating_review" class="wide" style="display: none;">
-                                    <option value="1">1 (lowest)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5" selected="">5 (medium)</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10 (highest)</option>
-                                 </select><div class="nice-select wide" tabindex="0"><span class="current">5 (medium)</span><ul class="list"><li data-value="1" class="option">1 (lowest)</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option selected">5 (medium)</li><li data-value="6" class="option">6</li><li data-value="7" class="option">7</li><li data-value="8" class="option">8</li><li data-value="9" class="option">9</li><li data-value="10" class="option">10 (highest)</li></ul></div>
+                     <div class="add-review">
+                        <?php
+                           if(empty($this->session->userdata('user'))){ ?>
+                              Please <a data-bs-toggle="modal" data-bs-target="#loginModal" style="color:#153b62;font-weight: 600;">Login</a>  to add your review for <?=$collegeDetail['full_name'];?>
+                        <?php } else { ?>
+                           <h5>Leave a Review</h5>
+                           <form id="reviewForm" action="<?= base_url('post-review-for-college'); ?>" method="POST">
+                              <div class="row">
+                                 <div class="form-group col-md-12">
+                                    <label>Rating </label>
+                                    <input type="hidden" name="college_id" value="<?= $collegeDetail['id']; ?>">
+                                    <div class="custom-select-form">
+                                       <select name="rating" id="rating_review" class="wide" style="display: none;">
+                                       <option value="">Rating</option>   
+                                       <option value="1">1 (lowest)</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5 (highest)</option>
+                                       </select>
+                                       <span class="text-danger" id="rating"></span>
+                                    </div>
+                                 </div>
+                                 <div class="form-group col-md-12">
+                                    <label>Your Review</label>
+                                    <textarea name="message" id="review_text" class="form-control" style="height:130px;"></textarea>
+                                 </div>
+                                 <div class="form-group col-md-12 add_top_20 add_bottom_30">
+                                    <input type="submit" value="Submit" class="btn_1" id="submit-review">
                                  </div>
                               </div>
-                              <div class="form-group col-md-12">
-                                 <label>Your Review</label>
-                                 <textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
-                              </div>
-                              <div class="form-group col-md-12 add_top_20 add_bottom_30">
-                                 <input type="submit" value="Submit" class="btn_1" id="submit-review">
-                              </div>
-                           </div>
-                        </form>
+                           </form>
+                        <?php } ?>
                      </div>
-
-
                      </div>
                   </section>
 
@@ -1251,6 +1244,33 @@
                }else if(d.errors.message){
                   CommonLib.notification.error(d.errors.message);
                } 
+            }else{
+                CommonLib.notification.error(d.errors);
+            }
+        }).catch(e=>{
+                CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+    $("body").on("submit","#reviewForm",function(e){
+        e.preventDefault();
+        var currentWrapper = $(this);
+        var url = currentWrapper.attr('action');
+        var method = currentWrapper.attr('method');
+        var formData = $('#reviewForm')[0];
+        formData = new FormData(formData);
+        CommonLib.ajaxForm(formData,method,url).then(d=>{
+            if(d.status === 200){
+                console.log(d.status)
+                CommonLib.notification.success(d.message);
+                setTimeout(() => {
+                  location.reload();
+               }, 1000);
+            }else if(d.status == 401){
+               
+               $.each(d.errors, function(key, value) {
+                  $('#'+key).addClass('is-invalid');
+                  $('#'+key).html(value);
+               });  
             }else{
                 CommonLib.notification.error(d.errors);
             }

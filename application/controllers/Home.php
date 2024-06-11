@@ -185,7 +185,7 @@ class Home extends MY_Controller {
 	}
 	public function collegeDetail($slug=null,$id=null)
 	{
-		
+		$data['tag'] = '';	
 		$data['title'] = 'COURSES | CUTOFFBABA';
 		$data['streams'] = $this->streamdata();
 		$data['siteSettings'] = $this->db->select('*')->get('tbl_site_settings')->result_array();
@@ -660,6 +660,33 @@ class Home extends MY_Controller {
 		$data['collegeDetail'] = @$data['collegeDetail'][0];
 		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id]);
 		$data['similarCollege'] = $this->master->getSimilarColleges($data['collegeDetail']);
-		$this->load->view('site/collegedetail',$data);
+		$this->load->view('site/college_detail',$data);
+	}
+
+	public function postReviewForCollege(){
+		$this->form_validation->set_rules('rating', 'Rating', 'trim|required');   
+        if ($this->form_validation->run()) {
+			$user = $this->session->userdata('user');
+            $college_id = $this->input->post('college_id');
+            $data['user_id'] = $user['id'];
+            $data['college_id'] = $this->input->post('college_id');
+            $data['rating'] = $this->input->post('rating');
+            $data['message'] = $this->input->post('message');
+            $result = $this->master->insert('tbl_college_review',$data);
+            if($result){
+                $response = array('status' => 200,'message' => 'Your review added successfully');
+            }else{
+                $response = array('status' => 400,'message' => 'Something went wrong !!!','url'=>'');
+            }
+        }else{
+            $response = array(
+                'status' => 401,
+                'errors' => array(
+                    'rating' => form_error('rating')
+                )  
+            );
+
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
 	}
 }	
