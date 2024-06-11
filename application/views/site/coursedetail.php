@@ -19,6 +19,7 @@
 					<div id="filters_col">
 						<a data-bs-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
 						<div class="collapse show" id="collapseFilters">
+							<?php if(empty($state_filter)) { ?>
 							<div class="filter_type">
 								<h6>Affiliation</h6>
 								<ul>
@@ -67,6 +68,7 @@
 									<?php } } ?>
 								</ul>
 							</div>
+							<?php } ?>
 							<div class="filter_type">
 								<h6>States</h6>
 								<ul>

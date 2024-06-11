@@ -1,16 +1,22 @@
-<?php $this->load->view('site/header'); ?>
-<main>
-    <div class="position-relative overflow-hidden p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-            <h4 class=" fw-bold text-start txtColorss"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"> </h4>
-            <h5 class="card-title barCss">Branch & Seats</h5>
-            <img src="<?=base_url('assets/site/img/college1.png')?>" alt="">
-        </div>
-    </div>
-    <div class="perTxt bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+<?php $this->load->view('site/header');?>
+<style>
+	.sr-only{
+		display: none!important;
+	}
+</style>
+<div class="sub_header_in sticky_header">
+	<div class="container">
+		<h1><?=$courseDetail['course_full_name'];?> ( <?=$courseDetail['course'];?> )</h1>
+	</div>
+</div>
+<?php //echo '<pre>';print_r($courseDetail); ?>
+
+	<main>
+	
+		<div class="container margin_60_35">
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="col-lg-9">
                     <form action="<?= base_url('go-to-college-details'); ?>" class="profile-form"  method="POST" id="collegeForm">
                         <div class="input-group mb-3">
                             <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> 
@@ -27,13 +33,19 @@
                         </div>
                         <button class="w-100 btn btn-primary sProfil go-to-college-details">Know About It</button>
                     </form>
-                </div>
-            </div>
-        </div> 
-    </div>
-</main>
-<?php $this->load->view('site/footer'); ?>
-<script>
+				</div>
+				<!-- /col -->
+			</div>		
+		</div>
+		<!-- /container -->
+		
+	</main>
+	
+<?php $this->load->view('site/footer');?>
+<script src="<?=base_url('/')?>app/assets/site/js/CommonLib.js"></script>
+
+<script type='text/javascript'>  
+$(function(){  
     $("body").on("click",".go-to-college-details",function(e){
         e.preventDefault();
         var course_id = $(".course_id").val();
@@ -43,7 +55,8 @@
             CommonLib.notification.error('Please select college');   
             return false; 
         }
-        var url = "<?=base_url('college-detail'); ?>"+'/' + tag+'/'+course_id+ '/' + college_id;
+        var url = "<?=base_url('college-details'); ?>"+'/' + tag+'/'+course_id+ '/' + college_id;
         window.location.href = url;
     });
-</script>
+});  
+</script> 

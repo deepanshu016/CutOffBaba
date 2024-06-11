@@ -165,10 +165,11 @@ class Home extends MY_Controller {
 		// print_r($data['streamDetails']);die;
 		$this->load->view('site/course-by-stream',$data);
 	}
-	public function getcoursedetail($id=null)
+	public function getcoursedetail($id=null,$filter = null)
 	{
 		$data['title'] = 'COLLEGES | CUTOFFBABA';
 		$data['streams']=$this->streamdata();
+		$data['state_filter'] = $filter;
 		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
 		$data['siteSettings']=$data['siteSettings'][0];
 		$data['courseDetail']=$this->master->singleRecord('tbl_course',['id'=>$id]);
@@ -444,14 +445,14 @@ class Home extends MY_Controller {
 		$data['ownershipList'] = $this->master->getRecords('tbl_ownership',[]);	
 		$this->load->view('site/all_colleges',$data);
 	}
-	public function collegeInfo($tag='',$course_id)
-	{
-		$data['title'] = 'College Info | CUTOFFBABA';	
-		$data['tag'] = $tag;	
-		$data['course_id'] = $course_id;	
-		$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
-		$this->load->view('site/college_info',$data);
-	}
+	// public function collegeInfo($tag='',$course_id)
+	// {
+	// 	$data['title'] = 'College Info | CUTOFFBABA';	
+	// 	$data['tag'] = $tag;	
+	// 	$data['course_id'] = $course_id;	
+	// 	$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
+	// 	$this->load->view('site/college_info',$data);
+	// }
 	
 	
 
@@ -624,5 +625,41 @@ class Home extends MY_Controller {
             echo json_encode($response);
             return true;
         }
+	}
+
+	public function collegeInfo($tag='',$course_id)
+	{
+		
+		$data['title'] = 'College Info | CUTOFFBABA';	
+		$data['tag'] = $tag;	
+		$data['course_id'] = $course_id;
+		$data['courseDetail'] = $this->master->singleRecord('tbl_course',['id'=>$course_id]);
+		$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
+		$data['siteSettings']=$this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings']=$data['siteSettings'][0];
+		$data['streams']=$this->streamdata();		
+		$this->load->view('site/college_info',$data);
+	}
+	public function collegeDetails($tag='',$course_id='',$id='')
+	{
+		$data['title'] = 'COLLEGE DETAIL | CUTOFFBABA';
+		$data['tag'] = $tag;	
+		$data['course_id'] = $course_id;	
+		$data['streams'] = $this->streamdata();
+		$data['siteSettings'] = $this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings'] = $data['siteSettings'][0];
+		$data['collegeDetail'] = $this->db
+		->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name,o.id as ownership_id,o.title as o_title' )
+		->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')
+		->join('tbl_country','tbl_country.id=tbl_college.country')
+		->join('tbl_ownership as o','o.id=tbl_college.ownership')
+		->join('tbl_state','tbl_state.id=tbl_college.state')
+		->where(['tbl_college.id'=>$id])
+		->get('tbl_college')
+		->result_array();
+		$data['collegeDetail'] = @$data['collegeDetail'][0];
+		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id]);
+		$data['similarCollege'] = $this->master->getSimilarColleges($data['collegeDetail']);
+		$this->load->view('site/collegedetail',$data);
 	}
 }	

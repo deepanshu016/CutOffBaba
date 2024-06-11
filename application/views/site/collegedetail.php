@@ -37,16 +37,16 @@
    <nav class="secondary_nav sticky_horizontal_2">
       <div class="container">
          <ul class="clearfix d-flex scrollmenuss justify-content-between">
-            <li><a href="#basic" class="active">Overviews</a></li>
-            <li><a href="#fees">Courses & Fees</a></li>
-            <li><a href="#seat_matrix">Seat Matrix</a></li>
-            <li><a href="#rank">Cutoff & Rank</a></li>
-            <li><a href="#placement">Placement</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#admission">Admission</a></li>
-            <li><a href="#hospital">Hospital Details</a></li>
-            <li><a href="#contacts">Contact Us</a></li>
-            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#basic"  class="active">Overviews</a></li>
+            <li><a href="#fees" class="<?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>">Courses & Fees</a></li>
+            <li><a href="#seat_matrix" class="<?= ($tag != 'branch') ? 'd-none' : ''; ?>">Seat Matrix</a></li>
+            <li><a href="#rank" class="<?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>">Cutoff & Rank</a></li>
+            <li><a href="#placement" class="<?= ($tag != 'placement') ? 'd-none' : ''; ?>">Placement</a></li>
+            <li><a href="#gallery" class="<?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>">Gallery</a></li>
+            <li><a href="#admission" class="<?= ($tag != 'admission') ? 'd-none' : ''; ?>">Admission</a></li>
+            <li><a href="#hospital" class="<?= ($tag != 'hospital') ? 'd-none' : ''; ?>">Hospital Details</a></li>
+            <li><a href="#contacts" class="<?= ($tag != 'contacts') ? 'd-none' : ''; ?>">Contact Us</a></li>
+            <li><a href="#reviews" class="<?= ($tag != 'reviews') ? 'd-none' : ''; ?>">Reviews</a></li>
          </ul>
       </div>
    </nav>
@@ -238,7 +238,7 @@
                   </section>
 
 
-                   <section id="seat_matrix" class="card card-body">
+                   <section id="seat_matrix" class="card card-body <?= ($tag != 'branch') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Seat Matrix</h4>
                         <table class="table table-bordered">
@@ -297,7 +297,7 @@
                   </section>
 
 
-                  <section id="rank" class="card card-body">
+                  <section id="rank" class="card card-body <?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Cutoff of <?= $collegeDetail['full_name']; ?></h4>
 
@@ -412,7 +412,7 @@
 
 
 
-                  <section class="card card-body">
+                  <section class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Fees Structure of  <?= $collegeDetail['full_name']; ?></h4>
 
@@ -476,7 +476,7 @@
                      </div>
                   </section>
 
-                   <section id="hospital" class="card card-body rs-counter">
+                   <section id="hospital" class="card card-body rs-counter <?= ($tag != 'hospital') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Hospital Details</h4>
                         <div class="row">
@@ -519,7 +519,7 @@
                      </div>
                   </section>
 
-                  <section id="fees" class="card card-body">
+                  <section id="fees" class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Courses Offered</h4>
                         <p><?= $collegeDetail['full_name']; ?> offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
@@ -595,7 +595,7 @@
                      </div>
                   </section>
 
-                  <section class="card card-body">
+                  <section class="card card-body <?= ($tag != 'fee-expenses') ? 'd-none' : 'show active'; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Fee Structure</h4>
                         <p>The <?= $collegeDetail['full_name']; ?> fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
@@ -665,7 +665,7 @@
                      </div>
                   </section> -->
 
-                  <section id="gallery" class="card card-body">
+                  <section id="gallery" class="card card-body <?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst"><strong>College Gallery</strong></h4>
                         <br>
@@ -691,7 +691,7 @@
                      </div>
                   </section>
 
-                  <section id="admission" class="card card-body">
+                  <section id="admission" class="card card-body <?= ($tag != 'admission') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Admission</h4>
                         <p>The highlights of the admission details of Punjab College are given in the table below </p>
@@ -794,7 +794,7 @@
                      </div>
                   </section>
 
-                   <section id="contacts" class="card card-body">
+                   <section id="contacts" class="card card-body <?= ($tag != 'contacts') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">Contact Us</h4>
                         <div class="form_container"> 
@@ -839,7 +839,7 @@
                      </div>
                   </section>
 
-                  <section id="reviews" class="card card-body">
+                  <section id="reviews" class="card card-body <?= ($tag != 'reviews') ? 'd-none' : ''; ?>">
                      <div class="row">
                         <h4 class="mainShorst">College Reviews</h4>
                         <section id="reviews">
@@ -1002,7 +1002,7 @@
                               </div>
                            </div>
                         </form>
-                     </div>
+                  </div>
 
 
                      </div>
