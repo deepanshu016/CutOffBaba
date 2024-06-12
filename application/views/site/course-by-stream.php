@@ -12,11 +12,11 @@
     </div>
 </div>
 <main>
-    <div class=" w-100 my-md-3 ps-md-3 bg-light pb-5 mb-5">
+    <div class="container-fluid my-md-3 ps-md-3 bg-light pb-5 mb-5">
         <?php if(!empty($courseLists)) { 
       foreach($courseLists as $course) { ?>
-        <div class="card">
-        <div class=" d-flex justify-content-between p-3 bg-white">
+        <div class="card mb-3">
+        <div class=" card-header d-flex justify-content-between p-3 bg-white">
             <div>
                 <h5 class="card-title">
                     <?= $course['course']; ?>
@@ -29,8 +29,6 @@
             <div><a class="btn btn-primary" href="<?= base_url('course').'/'.$course['id']; ?>">Explore More  <i class="fa fa-angle-right"></i> </a>
             </div>
         </div>
-        </div>
-        <div class=" w-100   bg-light">
             <div class="row">
                 <div class="col">
                     <div class="card shaDo noHis">
