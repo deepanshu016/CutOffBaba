@@ -905,61 +905,43 @@
                      </div>
 
                      <div class="reviews-container">
-
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Admin – April 03, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- /review-box -->
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Ahsan – April 01, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- /review-box -->
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Sara – March 31, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
+                        <?php
+                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college')->result_array();
+                           if(!empty($collegeReviews)){
+                              foreach($collegeReviews as $review) { 
+                                 $userDetail = $this->db->select('*')->where('id',$review['user_id'])->get('tbl_users')->row_array();
+                        ?>
+                           <div class="review-box clearfix">
+                              <figure class="rev-thumb">
+                                 <?php if($userDetail['image']){ ?>
+                                    <img src="<?= base_url('app/assets/uploads/users/').'/'.$userDetail['image']; ?>" alt="">
+                                 <?php } else{ ?>
+                                    <img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                                 <?php } ?>
+                                
+                              </figure>
+                              <div class="rev-content">
+                                 <div class="rating">
+                                    <?php 
+                                    for($i=0;$i<5;$i++){ 
+                                       if($i < $review['rating']){
+                                    ?>
+                                       <i class="icon_star voted"></i>
+                                    <?php }else{ ?>
+                                       <i class="icon_star"></i>
+                                    <?php } } ?>
+                                 </div>
+                                 <div class="rev-info">
+                                    <?= $userDetail['name']; ?> – <?= date("F d, Y",strtotime($review['created_at'])); ?>
+                                 </div>
+                                 <div class="rev-text">
+                                    <p>
+                                       <?= $review['message']; ?>
+                                    </p>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                        <!-- /review-box -->
+                        <?php } } ?>
                      </div>
                      <!-- /review-container -->
                   </section>

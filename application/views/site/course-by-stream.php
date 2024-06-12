@@ -123,14 +123,14 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card shaDo noHis">
+                    <!-- <div class="card shaDo noHis">
                         <div class="card-body mbbsCss">
                             <a href="<?= base_url('college-info').'/cutoff-comparison'.'/'.$course['id']; ?>">
                                 <h5 class="card-title smTxt">Cutoff Comparison</h5>
                                 
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="card shaDo noHis">
                         <div class="card-body mbbsCss">
                             <a href="<?= base_url('college-info').'/faq'.'/'.$course['id']; ?>">

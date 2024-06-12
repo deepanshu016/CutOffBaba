@@ -660,7 +660,11 @@ class Home extends MY_Controller {
 		$data['collegeDetail'] = @$data['collegeDetail'][0];
 		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id]);
 		$data['similarCollege'] = $this->master->getSimilarColleges($data['collegeDetail']);
-		$this->load->view('site/college_detail',$data);
+		if($tag  == 'faq'){
+			$this->load->view('site/faq',$data);
+		}else{
+			$this->load->view('site/college_detail',$data);
+		}
 	}
 
 	public function postReviewForCollege(){

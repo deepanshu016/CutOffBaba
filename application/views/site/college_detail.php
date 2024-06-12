@@ -843,126 +843,133 @@
                      <div class="row">
                         <h4 class="mainShorst">College Reviews</h4>
                         <section id="reviews">
-                      
-                     <div class="reviews-container add_bottom_30">
-                        <div class="row">
-                           <div class="col-lg-3">
-                              <div id="review_summary">
-                                 <strong>8.5</strong>
-                                 <em>Superb</em>
-                                 <small>Based on 4 reviews</small>
+                           <?php
+                              $SumRating = $this->db->select_sum('rating')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->row()->rating;
+                              $totalRating = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              $fiveStarRating = $this->db->select('*')->where('rating','5')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              $fourStarRating = $this->db->select('*')->where('rating',4)->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              $threeStarRating = $this->db->select('*')->where('rating','3')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              $twoStarRating = $this->db->select('*')->where('rating','2')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              
+                              $oneStarRating = $this->db->select('*')->where('rating','1')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->num_rows();
+                              $averageRating = $SumRating / $totalRating;
+                           ?>
+                           <div class="reviews-container add_bottom_30">
+                              <div class="row">
+                                 <div class="col-lg-3">
+                                    <div id="review_summary">
+                                       <strong><?= number_format($averageRating,1); ?></strong>
+                                       <em>Superb</em>
+                                       <small>Based on <?= (float)$totalRating; ?> reviews</small>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-9">
+                                    <div class="row">
+                                       <div class="col-lg-10 col-9">
+                                          <div class="progress">
+                                             <?php
+                                                   $fiveStartRatingPercent = ($fiveStarRating / $totalRating) * 100;
+                                             ?>
+                                             <div class="progress-bar" role="progressbar" style="width: <?= $fiveStartRatingPercent;?>%" aria-valuenow="<?= $fiveStartRatingPercent;?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                       <div class="col-lg-10 col-9">
+                                          <div class="progress">
+                                             <?php
+                                                $fourStartRatingPercent = ($fourStarRating / $totalRating) * 100;
+                                             ?>
+                                             <div class="progress-bar" role="progressbar" style="width: <?= $fourStartRatingPercent;?>%" aria-valuenow="<?= $fourStartRatingPercent;?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                       <div class="col-lg-10 col-9">
+                                          <div class="progress">
+                                             <?php
+                                                $threeStartRatingPercent = ($threeStarRating / $totalRating) * 100;
+                                             ?>
+                                             <div class="progress-bar" role="progressbar" style="width: <?= $threeStartRatingPercent;?>%" aria-valuenow="<?= $threeStartRatingPercent;?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                       <div class="col-lg-10 col-9">
+                                          <div class="progress">
+                                             <?php
+                                                $twoStartRatingPercent = ($twoStarRating / $totalRating) * 100;
+                                             ?>
+                                             <div class="progress-bar" role="progressbar" style="width: <?= $twoStartRatingPercent;?>%" aria-valuenow="<?= $twoStartRatingPercent;?>%" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                       <div class="col-lg-10 col-9">
+                                          <div class="progress">
+                                             <?php
+                                                $oneStartRatingPercent = ($oneStarRating / $totalRating) * 100;
+                                             ?>
+                                             <div class="progress-bar" role="progressbar" style="width: <?= $oneStartRatingPercent;?>%" aria-valuenow="<?= $oneStartRatingPercent;?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                 </div>
                               </div>
+                              <!-- /row -->
                            </div>
-                           <div class="col-lg-9">
-                              <div class="row">
-                                 <div class="col-lg-10 col-9">
-                                    <div class="progress">
-                                       <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
-                              </div>
-                              <!-- /row -->
-                              <div class="row">
-                                 <div class="col-lg-10 col-9">
-                                    <div class="progress">
-                                       <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
-                              </div>
-                              <!-- /row -->
-                              <div class="row">
-                                 <div class="col-lg-10 col-9">
-                                    <div class="progress">
-                                       <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
-                              </div>
-                              <!-- /row -->
-                              <div class="row">
-                                 <div class="col-lg-10 col-9">
-                                    <div class="progress">
-                                       <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
-                              </div>
-                              <!-- /row -->
-                              <div class="row">
-                                 <div class="col-lg-10 col-9">
-                                    <div class="progress">
-                                       <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
-                              </div>
-                              <!-- /row -->
-                           </div>
-                        </div>
-                        <!-- /row -->
-                     </div>
 
-                     <div class="reviews-container">
-
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Admin – April 03, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
-                              </div>
+                           <div class="reviews-container">
+                              <?php
+                                 $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->result_array();
+                                 if(!empty($collegeReviews)){
+                                    foreach($collegeReviews as $review) { 
+                                       $userDetail = $this->db->select('*')->where('id',$review['user_id'])->get('tbl_users')->row_array();
+                              ?>
+                                 <div class="review-box clearfix">
+                                    <figure class="rev-thumb">
+                                       <?php if($userDetail['image']){ ?>
+                                          <img src="<?= base_url('app/assets/uploads/users/').'/'.$userDetail['image']; ?>" alt="">
+                                       <?php } else{ ?>
+                                          <img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                                       <?php } ?>
+                                    
+                                    </figure>
+                                    <div class="rev-content">
+                                       <div class="rating">
+                                          <?php 
+                                          for($i=0;$i<5;$i++){ 
+                                             if($i < $review['rating']){
+                                          ?>
+                                             <i class="icon_star voted"></i>
+                                          <?php }else{ ?>
+                                             <i class="icon_star"></i>
+                                          <?php } } ?>
+                                       </div>
+                                       <div class="rev-info">
+                                          <?= $userDetail['name']; ?> – <?= date("F d, Y",strtotime($review['created_at'])); ?>
+                                       </div>
+                                       <div class="rev-text">
+                                          <p>
+                                             <?= $review['message']; ?>
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              <?php } } ?>
                            </div>
-                        </div>
-                        <!-- /review-box -->
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Ahsan – April 01, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- /review-box -->
-                        <div class="review-box clearfix">
-                           <figure class="rev-thumb"><img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
-                           </figure>
-                           <div class="rev-content">
-                              <div class="rating">
-                                 <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                              </div>
-                              <div class="rev-info">
-                                 Sara – March 31, 2016:
-                              </div>
-                              <div class="rev-text">
-                                 <p>
-                                    Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-                                 </p>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- /review-box -->
-                     </div>
-                     <!-- /review-container -->
-                  </section>
+                           <!-- /review-container -->
+                     </section>
 
                      <div class="add-review">
                         <?php
