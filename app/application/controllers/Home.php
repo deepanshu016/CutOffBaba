@@ -243,6 +243,29 @@ class Home extends MY_Controller {
 		$data['courseWiseColleges'] = $this->master->getCollegesCourseWise($course_id);
 		$this->load->view('site/college_info',$data);
 	}
+	public function collegeInfos($college_id)
+	{
+		
+		$data['tag'] = '';	
+		$data['title'] = 'COURSES | CUTOFFBABA';
+		$data['streams'] = $this->streamdata();
+		$data['siteSettings'] = $this->db->select('*')->get('tbl_site_settings')->result_array();
+		$data['siteSettings'] = $data['siteSettings'][0];
+		$data['collegeDetails'] = $this->db
+		->select('tbl_college.*, tbl_stream.stream, tbl_country.name, tbl_state.name,o.id as ownership_id,o.title as o_title' )
+		->join('tbl_stream', 'tbl_stream.id=tbl_college.stream')
+		->join('tbl_country','tbl_country.id=tbl_college.country')
+		->join('tbl_ownership as o','o.id=tbl_college.ownership')
+		->join('tbl_state','tbl_state.id=tbl_college.state')
+		->where(['tbl_college.id'=>$college_id])
+		->get('tbl_college')
+		->result_array();
+		
+		$data['collegeDetail'] = @$data['collegeDetails'][0];
+		$data['collegeGallery'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$college_id]);
+		$data['similarCollege'] = $this->master->getSimilarColleges($data['collegeDetail']);
+		$this->load->view('site/college_detail',$data);
+	}
 	public function collegeDetail($tag='',$course_id='',$college_id='')
 	{
 		$data['title'] = 'College Detail | CUTOFFBABA';	
@@ -254,5 +277,121 @@ class Home extends MY_Controller {
 		$data['courseList'] = $this->master->getRecords('tbl_course');
 		$this->load->view('site/college_detail',$data);
 	}
-	
+
+	public function get_cutoff_matrix(){
+		$data = $this->input->post();
+		$datas['year'] = $data['year'];
+		$datas['collegeDetail'] = $this->master->singleRecord('tbl_college',['id'=>$data['college_id']]);
+		$datas['courseid'] = $this->db->select('id as course_id')->where('id',$data['course_id'])->get('tbl_course')->row_array();
+		$result = $this->load->view('site/show_college_matrix',$datas,TRUE);
+		$response = array('status' => 'success','message'=> 'Colleges found successfully','html'=>$result);
+		echo json_encode($response);
+		return false;
+	}
+	public function get_cutoff_state_matrix(){
+		$data = $this->input->post();
+		$datas['year'] = $data['year'];
+		$datas['collegeDetail'] = $this->master->singleRecord('tbl_college',['id'=>$data['college_id']]);
+		$datas['courseid'] = $this->db->select('id as course_id')->where('id',$data['course_id'])->get('tbl_course')->row_array();
+		$result = $this->load->view('site/show_college_matrix_state',$datas,TRUE);
+		$response = array('status' => 'success','message'=> 'Colleges found successfully','html'=>$result);
+		echo json_encode($response);
+		return false;
+	}
+	function streamdata($where=[],$limit=null){
+		$streamList = $this->master->getRecordsbyLimit('tbl_stream',$where,$limit);
+		$finalstream=array();
+		foreach ($streamList as $stream) {
+			$degries=$this->db->select('distinct(degree_type)')->where('stream',$stream['id'])->get('tbl_course')->result_array();
+				$finalcourse=array();
+				$finaldegree=array();
+			foreach ($degries as $degree) {
+				$deg=array();
+				$degry=$this->db->select('*')->where('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();
+
+				$deg=$degry[0];
+				$courses=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where('stream',$stream['id'])->get('tbl_course')->result_array();
+				$finalcourse=array();
+				foreach ($courses as $course) {
+					$finalcourse[]=$course;
+				}
+				$deg['courses']=$finalcourse;
+				$finaldegree[]=$deg;
+			}
+			$stream['degreetype']=$finaldegree;
+			$finalstream[]=$stream;
+		}	
+		return $finalstream;
+	}
+	function coursedata($where=[],$limit=null){
+            $courses=$this->db->select('*')->where($where)->limit($limit)->get('tbl_course')->result_array();                   
+            return $courses;
+	}
+	function collegeData($where=[],$limit=null){
+
+		$collegeList = $this->master->getRecordsbyLimit('tbl_college',$where,$limit);
+		$collegeData = [];
+		if(!empty($collegeList)){
+			foreach($collegeList as $key=>$college){
+				$course_data = ($college['course_offered']) ? explode('|',$college['course_offered']) : [];
+				$gender_data = ($college['gender_accepted']) ? explode('|',$college['gender_accepted']) : [];
+				$collegeData[$key]['college_id'] = $college['id'];
+				$collegeData[$key]['full_name'] = $college['full_name'];
+				$collegeData[$key]['banner'] = $college['college_banner'];
+				$collegeData[$key]['slug'] = $college['slug'];
+				$collegeData[$key]['short_description'] = $college['short_description'];
+				$collegeData[$key]['popular_name_one'] = $college['popular_name_one'];
+				$collegeData[$key]['popular_name_two'] = $college['popular_name_two'];
+				$collegeData[$key]['establishment'] = $college['establishment'];
+				if(!empty($course_data)){
+					$collegeData[$key]['courses'] = $this->db->select('*')->where_in('id',$course_data)->get('tbl_course')->result_array();
+				}else{
+					$collegeData[$key]['courses'] = [];
+				}
+				if(!empty($gender_data)){
+					$collegeData[$key]['gender'] = $this->db->select('*')->where_in('id',$gender_data)->get('tbl_gender')->result_array();
+				}else{
+					$collegeData[$key]['gender'] = [];
+				}
+				
+				$collegeData[$key]['country'] = $this->master->singleRecord('tbl_country',['id'=>$college['country']]);
+				$collegeData[$key]['state'] = $this->master->singleRecord('tbl_state',['id'=>$college['state']]);
+				$collegeData[$key]['district'] = $this->master->singleRecord('tbl_city',['id'=>$college['city']]);
+				$collegeData[$key]['affiliated_by'] = $college['affiliated_by'];
+				$collegeData[$key]['university_name'] = $college['university_name'];
+				$collegeData[$key]['approval'] = $this->master->singleRecord('tbl_approval',['id'=>$college['approved_by']]);
+				$collegeData[$key]['approved_by'] = $college['approved_by'];
+				$collegeData[$key]['college_logo'] = $college['college_logo'];
+				$collegeData[$key]['college_banner'] = $college['college_banner'];
+				$college_logo=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_logo']])->get('tbl_uploaded_files')->result_array();
+			if (count($college_logo)>0) {
+				$collegeData[$key]['college_logofile']=$college_logo[0]['file_name'];
+			}else{
+				$collegeData[$key]['college_logofile']="";
+			}
+			$college_banner=$this->db->select('*')->where(['tbl_uploaded_files.id'=>$college['college_banner']])->get('tbl_uploaded_files')->result_array();
+			if (count($college_banner)>0) {
+				$collegeData[$key]['college_bannerfile']=$college_banner[0]['file_name'];
+			}else{$collegeData[$key]['college_bannerfile']="";}
+
+
+				$collegeData[$key]['prospectus_file'] = $college['prospectus_file'];
+				$collegeData[$key]['ownership'] = $this->master->singleRecord('tbl_ownership',['id'=>$college['ownership']]);
+				$collegeData[$key]['website'] = $college['website'];
+				$collegeData[$key]['email'] = $college['email'];
+				$collegeData[$key]['contact_one'] = $college['contact_one'];
+				$collegeData[$key]['contact_two'] = $college['contact_two'];
+				$collegeData[$key]['contact_three'] = $college['contact_three'];
+				$collegeData[$key]['nodal_officer_name'] = $college['nodal_officer_name'];
+				$collegeData[$key]['nodal_officer_no'] = $college['nodal_officer_no'];
+				$collegeData[$key]['keywords'] = $college['keywords'];
+				$collegeData[$key]['tags'] = $college['tags'];
+				$collegeData[$key]['added_by'] = $college['added_by'];
+				$collegeData[$key]['status'] = $college['status'];
+				$collegeData[$key]['created_at'] = $college['created_at'];
+				$collegeData[$key]['updated_at'] = $college['updated_at'];
+			}
+		}
+		return $collegeData;
+	}
 }

@@ -432,6 +432,23 @@ class MasterModel extends CI_Model {
 						->join('tbl_ownership as o', 'o.id = c.ownership');
 		return  $college_query->get()->row_array();
 	}
+	public function getSimilarColleges($collegeDetail){
+		$similarCollege = [];
+		if(!empty($collegeDetail)){
+			$courseIds = explode(',',$collegeDetail['course_offered']);
+			$query = $this->db->select('*');
+			if(!empty($courseIds)){
+				$query = $query->where("FIND_IN_SET('{$courseIds[0]}', course_offered) >",0);
+				$this->db->group_start();
+				foreach ($courseIds as $course) {
+					$query = $query->or_where("FIND_IN_SET('{$course}', course_offered) >",0);
+				}
+				$this->db->group_end();
+			}
+			$similarCollege = $query->limit(10)->get('tbl_college')->result_array();
+		}
+		return $similarCollege;
+	}
 }
 
 ?>

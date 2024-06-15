@@ -1,733 +1,1309 @@
-<!doctype html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Branch & Seats</title>
-      <link href="<?=base_url('assets/site/css/bootstrap.min.css')?>" rel="stylesheet">
-      <link href="<?=base_url('assets/site/css/style.css')?>" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css"> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   </head>
-   <body class="bg-white">
-      <main>
-         <div class="position-relative overflow-hidden p-md-5 m-md-3 text-center bg-light">
-            <div class="col-md-5 p-lg-5 p-3 mx-auto ">
-               <h4 class=" fw-bold text-start txtColorss"><a href="<?= base_url('college-info').'/'.$tag.'/'.$course_id; ?>"> <img src="<?=base_url('assets/site/img/rightarrow.png')?>"></a> </h4>
-               <h5 class="card-title barcCtxt">College Details</h5>
+<?php $this->load->view('site/header');?>
+<main>
+   
+   <div class="hero_in restaurant_detail" style="no-repeat;background-size: 100% 100%;background-position: center; background-image:url('<?=asset_url()."college/banner/".$collegeDetail['college_banner'];?>');">
+      <div class="wrapper">
+         <span class="magnific-gallery">
+         </span>
+      </div>
+   </div>
+   <?php  
+      $states = $this->db->select('name')->where('id',$collegeDetail['state'])->get('tbl_state')->row_array();
+      $city = $this->db->select('city')->where('id',$collegeDetail['city'])->get('tbl_city')->row_array();
+   ?>
+   <!--/hero_in-->
+   <section class="main_posyion d-sm-block d-sm-none d-md-block">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2">
+               <img class="lofcss" src="<?=asset_url()."college/logo/".$collegeDetail['college_logo'];?>"> 
             </div>
+            
+            <div class="col-md-5">
+               <h4 class="text-white"><?=$collegeDetail['full_name'];?> ( <?=$collegeDetail['short_name'];?> )</h4>
+               <p class="leftsss"> <i class="fa fa-location-arrow" aria-hidden="true"></i> <?= @$city['city']; ?>, <?= @$states['name']; ?>  <span> <i class="fa fa-star-o text-white" aria-hidden="true"></i> ESTD <?= $collegeDetail['establishment']; ?> </span>  <span> <i class="fa fa-bookmark-o" aria-hidden="true"></i> Affiliation : </span>  <?= $collegeDetail['university_name']; ?></p>
+            </div>
+            <div class="col-md-3"><a style="float: right;" href="<?=asset_url()."college/banner/".$collegeDetail['college_logo'];?>" class="btn btn-primary" title="Photo title" >Download Brouchure</a></div>
          </div>
-         </div>
-         <section >
-            <div class="collgeTx">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-12 ">
-                        <div class="lc-block bgfosb">
-                           <div class="d-flex px-1">
-                              <div>
-                                 <img class="sf9js" src="<?=base_url('assets/site/img/logocollege.png')?>" alt="">
-                              </div>
-                              <div class="lc-block ps-2">
-                                 <div editable="rich">
-                                    <h3 class="h6 "><strong><?= $collegeData['full_name']; ?></strong><br></h3>
-                                    <img class="bsnXs" src="<?=base_url('assets/site/img/locations.png')?>" alt=""> <span class="loPts"><?= @$collegeData['city_name'].', '; ?> <?= @$collegeData['state_name'].', '; ?>, <?= @$collegeData['country_name']; ?></span>  <br/>
-                                    <img class="bsnXs" src="<?=base_url('assets/site/img/emailsss.png')?>" alt=""> <span class="loPts"><?= @$collegeData['email']; ?></span> <br>  <img class="bsnXs" src="<?=base_url('assets/site/img/website.png')?>" alt=""> <span class="loPts"> <?= @$collegeData['website']; ?> </span>
+      </div>
+   </section>
+   <nav class="secondary_nav sticky_horizontal_2">
+      <div class="container">
+         <ul class="clearfix d-flex scrollmenuss justify-content-between">
+            <li><a href="#basic" class="active">Overviews</a></li>
+            <li><a href="#fees">Courses & Fees</a></li>
+            <li><a href="#seat_matrix">Seat Matrix</a></li>
+            <li><a href="#rank">Cutoff & Rank</a></li>
+            <li><a href="#placement">Placement</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#admission">Admission</a></li>
+            <li><a href="#hospital">Hospital Details</a></li>
+            <li><a href="#contacts">Contact Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+         </ul>
+      </div>
+   </nav>
+   
+   <div class="container margin_60_35">
+   <div class="row">
+      <div class="col-lg-12">
+         <section id="basic">
+            <div class="row">
+               <div class="col-md-9">
+                  <div class="card card-body">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h4 class="mainShorst">Short Information</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4 col-12">
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/ownership.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Ownership</b></div>
+                                    <div id="tdownership1" class="text-justify"><?= @$collegeDetail['o_title'];?></div>
+                                    <input type="hidden" name="hfcollegeamt" id="hfcollegeamt" value="0">
                                  </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <?php 
-                     $genderAccepted = explode(',', $collegeData['gender_accepted']);
-                     $genderData = $this->db->select('gender')->from('tbl_gender')->where_in('id',$genderAccepted)->get()->result_array();
-                     $genderData = (!empty($genderData)) ?  implode('/',array_column($genderData,'gender')): [];
-
-                     $collegeGalleryData =  $this->db->select('gender')->from('tbl_gender')->where_in('id',$genderAccepted)->get()->result_array();
-                  ?>
-                  <div class="row">
-                     <div class="col-12">
-                        <div class="maiPoint"> <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['short_description']; ?></span>
-                           <img src="<?=base_url('assets/site/img/sign1.png')?>" alt=""> <span class="apnsFonts">Alternate</span>
-                           <img src="<?=base_url('assets/site/img/estd.png')?>" alt=""> <span class="apnsFonts">Estd.<?= @date('Y',strtotime($collegeData['establishment'])); ?></span>
-                           <img src="<?=base_url('assets/site/img/patsh.png')?>" alt=""> <span class="apnsFonts">AKU, Patna</span>
-                           <img src="<?=base_url('assets/site/img/mci.png')?>" alt=""> <span class="apnsFonts"><?= @$collegeData['approval']; ?> Approved</span>
-                           <img src="<?=base_url('assets/site/img/yess.png')?>" alt=""> <span class="apnsFonts">Yes</span>
-                           <img src="<?=base_url('assets/site/img/mals.png')?>" alt=""> <span class="apnsFonts"><?= @$genderData; ?></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section>
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="scrollmenu " id="pills-tab" role="tablist">
-                        <a class="active text-primary d-none" href="#home" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Info</a>
-                        <a class="<?= ($tag != 'branch') ? 'd-none' : ''; ?>" href="#news" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Course & Seats</a>
-                        <a class="<?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>" href="#contact" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Courses & CutOff</a>
-                        <a class="<?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>" href="#about" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Courses & Fee</a>
-                        <a class="<?= ($tag != 'hospital') ? 'd-none' : ''; ?>"  href="#support" id="pills-hopspital-tab" data-bs-toggle="pill" data-bs-target="#pills-hopspital" type="button" role="tab" aria-controls="pills-hopspital" aria-selected="false">Hospital Details</a>
-                        <a class="<?= ($tag != 'reviews') ? 'd-none' : ''; ?>" href="#blog" id="pills-college-tab" data-bs-toggle="pill" data-bs-target="#pills-college" type="button" role="tab" aria-controls="pills-college" aria-selected="false">College Reviews</a>
-                        <a class="<?= ($tag != 'college-gallery') ? 'd-none' : ''; ?>" href="#tools" id="pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#pills-gallery" type="button" role="tab" aria-controls="pills-gallery" aria-selected="false">College Gallery</a>  
-                        <a class="d-none" href="#base" id="pills-deta-tab" data-bs-toggle="pill" data-bs-target="#pills-deta" type="button" role="tab" aria-controls="pills-deta" aria-selected="false">College Cont. Deta</a>
-                        <a class="d-none" href="#custom" id="pills-paid-tab" data-bs-toggle="pill" data-bs-target="#pills-paid" type="button" role="tab" aria-controls="pills-paid" aria-selected="false">Paid Counselling</a>
-                        <a class="d-none" href="#more" id="pills-adverTise-tab" data-bs-toggle="pill" data-bs-target="#pills-adverTise" type="button" role="tab" aria-controls="pills-adverTise" aria-selected="false">Advertise</a>
-                        <a class="d-none" href="#logo" id="pills-counselling-tab" data-bs-toggle="pill" data-bs-target="#pills-counselling" type="button" role="tab" aria-controls="pills-counselling" aria-selected="false">Counselling</a>
-                        <a class="d-none" href="#friends" id="pills-simi-tab" data-bs-toggle="pill" data-bs-target="#pills-simi" type="button" role="tab" aria-controls="pills-simi" aria-selected="false">Top/Simi Col</a> 
-                     </div>
-                     <div class="tab-content tsyTops" id="pills-tabContent">
-                        <div class="tab-pane fade show active d-none" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                           <h4>About The College</h4>
-                           <p><?= @$collegeData['short_description']; ?></p>
-                           <div class="text-center">
-                              <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade <?= ($tag != 'branch') ? 'd-none' : 'show active'; ?>" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                           <h5 class="cnTxtcou">Course & Seats</h5>
-                           <div class="table-responsive">
-                              <table class="table table-bordered ">
-                                 <thead class="trgBgs">
-                                    <tr>
-                                       <th scope="col">Stream</th>
-                                       <th scope="col">Deg. Type</th>
-                                       <th scope="col">Course</th>
-                                       <th scope="col">Branch</th>
-                                       <th scope="col">Seats</th>
-                                       <th scope="col">Estd.</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
+                        <div class="col-md-5 col-12"> 
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/approved.png">
+                                 </div>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Approval</b></div>
+                                    
+                                    <div id="tdapproval">
                                     <?php
-                                    $courseStreamData = $this->db->select('*')->from('tbl_stream')->where('id', $singleCourse['stream'])->get()->row_array();
-                                    $courseDegreeTypeData = $this->db->select('*')->from('tbl_degree_type')->where('id', $singleCourse['degree_type'])->get()->row_array();
-                                    $branchListData = $this->db->select('*')->from('tbl_branch')->where('branch_type', $singleCourse['branch_type'])->get()->result_array();
-
-                                    if (!empty($branchListData)) {
-                                       foreach ($branchListData as $key => $branch) {
-                                             if ($key === 0) {
-                                                ?>
-                                                <tr>
-                                                   <td><?= $courseStreamData['stream']; ?></td>
-                                                   <td><?= $courseDegreeTypeData['degreetype']; ?></td>
-                                                   <td><?= $singleCourse['course']; ?></td>
-                                                   <td><?= $branch['branch']; ?></td>
-                                                   <td>0</td>
-                                                   <td>0</td>
-                                                </tr>
-                                             <?php } else { ?>
-                                                <tr>
-                                                   <td class="bgColosmn" colspan="3"></td>
-                                                   <td><?= $branch['branch']; ?></td>
-                                                   <td>0</td>
-                                                   <td>0</td>
-                                                </tr>
-                                             <?php }
+                                       if(!empty($collegeDetail['approved_by'])){
+                                          $approvals = '';
+                                          $approval_ids = explode(',',$collegeDetail['approved_by']);
+                                          foreach ($approval_ids as $approval) {
+                                             $approvalBy = $this->db->select('approval')->where('id',$approval)->get('tbl_approval')->row_array();
+                                             $approvals .= $approvalBy['approval'].',';
+                                          }
                                        }
-                                    }
-
-                                    if (!empty($courseList)) {
-                                       foreach ($courseList as $value) {
-                                             $courseStreamData = $this->db->select('*')->from('tbl_stream')->where('id', $value['stream'])->get()->row_array();
-                                             $courseDegreeTypeData = $this->db->select('*')->from('tbl_degree_type')->where('id', $value['degree_type'])->get()->row_array();
-                                             $branchListData = $this->db->select('*')->from('tbl_branch')->where('branch_type', $singleCourse['branch_type'])->get()->result_array();
-
-                                             if (!empty($branchListData)) {
-                                                foreach ($branchListData as $keys => $branches) {
-                                                   if ($keys === 0) { ?>
-                                                         <tr>
-                                                            <td><?= $courseStreamData['stream']; ?></td>
-                                                            <td><?= $courseDegreeTypeData['degreetype']; ?></td>
-                                                            <td><?= $value['course']; ?></td>
-                                                            <td><?= $branches['branch']; ?></td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                         </tr>
-                                                   <?php } else { ?>
-                                                         <tr>
-                                                            <td class="bgColosmn" colspan="3"></td>
-                                                            <td><?= $branches['branch']; ?></td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                         </tr>
-                                                   <?php }
-                                                }
-                                             }
-                                       }
-                                    }
+                                       echo replace_last_comma($approvals,',');
                                     ?>
-                                 </tbody>
-
-                              </table>
-                           </div>
-                           <br>
-                           <div class="text-center">
-                              <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade <?= ($tag != 'central-cutoff') ? 'd-none' : ''; ?>" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-                           <div class="row">
-                                 <div class="input-group mb-3 col">
-                                    <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
-                                    <select class="form-control raformsss"  name="" id="">
-                                       <option value="">Select Degree Type</option>
-                                    </select>
+                                    
+                                    </div>
                                  </div>
-                                 <div class="input-group mb-3 col">
-                                    <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/coou.png')?>" alt=""> </span>
-                                    <select class="form-control raformsss"  name="" id="">
-                                       <option value="">Select Courses</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              <h5 class="cnTxtcou">Course & Fee</h5>
-                              <div class="table-responsive">
-                                 <table class="table table-bordered ">
-                                    <thead class="trgBgs">
-                                       <tr>
-                                          <th scope="col">Stream</th>
-                                          <th scope="col">Deg_Type</th>
-                                          <th scope="col">Course</th>
-                                          <th scope="col">Branch</th>
-                                          <th scope="col">Seats</th>
-                                          <th scope="col">Estd.</th>
-                                       </tr>
-                                    </thead>
-                                    <tbody>
-                                       <tr>
-                                          <td>Stream1</td>
-                                          <td>U.G</td>
-                                          <td>MBBS</td>
-                                          <td>Branch1</td>
-                                          <td>115</td>
-                                          <td>1895</td>
-                                       </tr>
-                                       <tr>
-                                          <td class="bgColosmn" colspan="3"> </td>
-                                          <td>Branch2</td>
-                                          <td>84</td>
-                                          <td class="bgColosmn" colspan="1"> </td>
-                                       </tr>
-                                       <tr>
-                                          <td>Stream2</td>
-                                          <td>Deg. Type</td>
-                                          <td>Course</td>
-                                          <td>Branch</td>
-                                          <td>99</td>
-                                          <td>1994</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Stream3</td>
-                                          <td>Deg. Type</td>
-                                          <td>Course</td>
-                                          <td>Branch</td>
-                                          <td>111</td>
-                                          <td>2000</td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                              <br>
-                              <div class="text-center">
-                                 <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
                               </div>
                            </div>
                         </div>
-                        <div class="tab-pane fade <?= ($tag != 'fee-expenses') ? 'd-none' : ''; ?>" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
-                           <div class="row">
-                              <div class="input-group mb-3 col">
-                                 <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/colls.png')?>" alt=""> </span>
-                                 <select class="form-control raformsss"  name="" id="">
-                                    <option value="">Select Degree Type</option>
-                                 </select>
-                              </div>
-                              <div class="input-group mb-3 col">
-                                 <span class="input-group-text appendCXCss raformsss" id="basic-addon1"> <img class="img-fluid useHsih" src="<?=base_url('assets/site/img/coou.png')?>" alt=""> </span>
-                                 <select class="form-control raformsss"  name="" id="">
-                                    <option value="">Select Courses</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <h5 class="cnTxtcou">Course & Fee</h5>
-                           <div class="table-responsive">
-                              <table class="table table-bordered ">
-                                 <thead class="trgBgs">
-                                    <tr>
-                                       <th scope="col">Stream</th>
-                                       <th scope="col">Deg_Type</th>
-                                       <th scope="col">Course</th>
-                                       <th scope="col">Branch</th>
-                                       <th scope="col">Seats</th>
-                                       <th scope="col">Estd.</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    <tr>
-                                       <td>Stream1</td>
-                                       <td>U.G</td>
-                                       <td>MBBS</td>
-                                       <td>Branch1</td>
-                                       <td>115</td>
-                                       <td>1895</td>
-                                    </tr>
-                                    <tr>
-                                       <td class="bgColosmn" colspan="3"> </td>
-                                       <td>Branch2</td>
-                                       <td>84</td>
-                                       <td class="bgColosmn" colspan="1"> </td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream2</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>99</td>
-                                       <td>1994</td>
-                                    </tr>
-                                    <tr>
-                                       <td>Stream3</td>
-                                       <td>Deg. Type</td>
-                                       <td>Course</td>
-                                       <td>Branch</td>
-                                       <td>111</td>
-                                       <td>2000</td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                           <br>
-                           <div class="text-center">
-                              <a  href="#!" class="text-decoration-none txtDdf">View all details</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade <?= ($tag != 'hospital') ? 'd-none' : ''; ?>" id="pills-hopspital" role="tabpanel" aria-labelledby="pills-hopspital-tab" tabindex="0">
-                           <h5 class="clinkTxt">Clinical Details</h5>
-                           <div class="container">
-                              <div class="row ">
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/bedllust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Total Bed</h5>
-                                    </div>
+                        <div class="col-md-3 col-5">
+                           <div class="form-group">
+                              <div class="why-choose-box">
+                                 <div class="icon">
+                                    <img src="https://cutoffbaba.com/Icon/hostel.png">
                                  </div>
-
-                                 <div class="col col-md-2 ">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/inpatientillust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/papap.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/Breastfeeding.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/deathllust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Born</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/BORillust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Death</h5>
-                                    </div>
-                                 </div>
-
-
-
-
-                              </div>
-                           </div>
-
-                           <h5 class="clinkTxt">Clinical Details</h5>
-                           <div class="container">
-                              <div class="row ">
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/bedllust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Total Bed</h5>
-                                    </div>
-                                 </div>
-
-                                 <div class="col col-md-2 ">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/inpatientillust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/papap.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/Breastfeeding.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Out Patient</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/deathllust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Born</h5>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2">
-                                    <div class="CustoScollShet" >
-                                       <img src="<?=base_url('assets/site/img/BORillust.png')?>" class="card-img-top resPis" alt="..."> 
-                                    </div>
-                                    <div class="besdTxt">
-                                       <h5 class="card-title toptaTx">Death</h5>
-                                    </div>
-                                 </div>
-
-
-
-
-                              </div>
-                           </div>
-
-
-                        </div>
-                        <div class="tab-pane fade <?= ($tag != 'reviews') ? 'd-none' : ''; ?>" id="pills-college" role="tabpanel" aria-labelledby="pills-college-tab" tabindex="0">
-                              <h5 class="clinkTxt">Review & Rating</h5>
-                              <div class="container">
-                                  
-                                 <div class="row">
-                                    <div class="col-md-6 py-4">
-                                       <div class="lc-block"><img alt="" class="rounded-circle float-start me-4" src="https://images.unsplash.com/photo-1574698550747-3f839e813107?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80" style="width:10vh;" loading="lazy">
-                                          <div editable="rich">
-                                             <h5><strong>Sahil SIngh</strong></h5>
-                                          </div>
-
-                                          <small editable="inline" class="text-secondary" style="letter-spacing:1px">AIEEE Mentee</small>
-
-                                          <div editable="rich">
-                                             <p>  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="lc-block float-start ">
-
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-share" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> Reply </a>
-                                       </div>
-                                    </div>
-                                     
-                                 </div>
-
-                                 <div class="row">
-                                    <div class="col-md-6 py-4">
-                                       <div class="lc-block"><img alt="" class="rounded-circle float-start me-4" src="https://images.unsplash.com/photo-1574698550747-3f839e813107?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80" style="width:10vh;" loading="lazy">
-                                          <div editable="rich">
-                                             <h5><strong>Sahil SIngh</strong></h5>
-                                          </div>
-
-                                          <small editable="inline" class="text-secondary" style="letter-spacing:1px">AIEEE Mentee</small>
-
-                                          <div editable="rich">
-                                             <p>  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="lc-block float-start ">
-
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-share" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> Reply </a>
-                                       </div>
-                                    </div>
-                                     
-                                 </div>
-
-                                 <div class="row">
-                                    <div class="col-md-6 py-4">
-                                       <div class="lc-block"><img alt="" class="rounded-circle float-start me-4" src="https://images.unsplash.com/photo-1574698550747-3f839e813107?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=772&amp;q=80" style="width:10vh;" loading="lazy">
-                                          <div editable="rich">
-                                             <h5><strong>Sahil SIngh</strong></h5>
-                                          </div>
-
-                                          <small editable="inline" class="text-secondary" style="letter-spacing:1px">AIEEE Mentee</small>
-
-                                          <div editable="rich">
-                                             <p>  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</p>
-                                          </div>
-                                       </div>
-
-                                       <div class="lc-block float-start ">
-
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-up" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-thumbs-down" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> <i class="fa fa-share" aria-hidden="true"></i> </a>
-                                          <a class="text-dark text-decoration-none reviCdss" href="#!"> Reply </a>
-                                       </div>
-                                    </div>
-                                     
-                                 </div>
-
-                                 <div class="row">  
-                                    <div class="col-md-12">
-                                    <h5 class="clinkTxt">Comment</h5>
-                                    <div class="mb-3"> 
-                                     <textarea name="" id="" cols="10" rows="5" class="form-control" placeholder="Write your message"></textarea>
-                                      </div>
-
-                                      <h5 class="clinkTxt">How likely are you to......</h5>
-                                      <div class="starRating">
-                                        <a class="startDex" href="#!"> <i class="fa fa-star"></i> </a>
-                                        <a class="startDex" href="#!"> <i class="fa fa-star"></i> </a>
-                                        <a class="startDex" href="#!"> <i class="fa fa-star"></i> </a>
-                                        <a class="startDex" href="#!"> <i class="fa fa-star"></i> </a>
-                                        <a class="startDex" href="#!"> <i class="fa fa-star-half"></i> </a>
-                                    </div>
-
-
-                                    </div>
-                                    <br>
-                                    <button class="w-100 btn btn-primary p6t">Submit</button>
-
-                                 </div>
-                                 
-
-
-                              </div>
-                        </div>
-                        <div class="tab-pane fade " id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab" tabindex="0">
-                        <!-- <h5 class="clinkTxt">College Building</h5> -->
-                           <div class="photo-gallery">
-                              <div class="container">
-                                 <div class="row photos">
-                                 <?php if(!empty($galleryList)) {
-                                    foreach($galleryList as $gallery) { ?>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?= ($gallery['file_name'] != '' && file_exists(FCPATH.'assets/uploads/media/image/'.$gallery['file_name'])) ? base_url('assets/uploads/media/image/').'/'.$gallery['file_name'] : base_url('assets/site/img/coll1.png');?>" data-lightbox="photos"><img class="img-fluid" src="<?= ($gallery['file_name'] != '' && file_exists(FCPATH.'assets/uploads/media/image/'.$gallery['file_name'])) ? base_url('assets/uploads/media/image/').'/'.$gallery['file_name'] : base_url('assets/site/img/coll1.png');?>"></a></div>
-                                 <?php }  } ?>
+                                 <div class="content">
+                                    <div class="sp-text-second"><b>Hostel</b></div>
+                                    <div id="tdhostel" class="text-justify">Yes</div>
                                  </div>
                               </div>
-                           </div> 
-
-
-                     <!-- <h5 class="clinkTxt">College Library</h5>
-
-                        
-                     <div class="photo-gallery">
-                        <div class="container">
-                              
-                              <div class="row photos">
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll5.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll5.png')?>"></a></div>
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll6.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll6.png')?>"></a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-7">
+                           <div class="why-choose-box">
+                              <div class="icon">
+                                 <img src="https://cutoffbaba.com/Icon/toilets.png">
                               </div>
-                              <div class="row photos">
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/coll7.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/coll7.png')?>"></a></div>
-                                 <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/uiis.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/uiis.png')?>"></a></div>
-                              </div>
-                        </div>
-                     </div> 
-
-                     <h5 class="clinkTxt">College Events</h5>
-
-                        
-                        <div class="photo-gallery">
-                           <div class="container">
-                                 
-                                 <div class="row photos">
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt1.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt1.png')?>"></a></div>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt2.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt2.png')?>"></a></div>
-                                 </div>
-                                 <div class="row photos">
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt3.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt3.png')?>"></a></div>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt4.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt4.png')?>"></a></div>
-                                 </div>
-                           </div>
-                        </div> 
-
-
-                        <h5 class="clinkTxt">College Activity</h5>
-
-                        
-                        <div class="photo-gallery">
-                           <div class="container">
-                                 
-                                 <div class="row photos">
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt1.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt1.png')?>"></a></div>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt2.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt2.png')?>"></a></div>
-                                 </div>
-                                 <div class="row photos">
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt3.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt3.png')?>"></a></div>
-                                    <div class="col-sm-6 col-md-4 col-lg-3 col item"><a href="<?=base_url('assets/site/img/evt4.png')?>" data-lightbox="photos"><img class="img-fluid" src="<?=base_url('assets/site/img/evt4.png')?>"></a></div>
-                                 </div>
-                           </div>
-                        </div>  -->
-                        </div>
-                        <div class="tab-pane fade " id="pills-deta" role="tabpanel" aria-labelledby="pills-deta-tab" tabindex="0">
-                           <h5 class="clinkTxt">College Details</h5> 
-                           <ul class="list-group list-group-flush">
-                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/mamps.png')?>" alt=""> Ashok Rajpath, Patna University Campus,Patna, Bihar, India - 800001</li>
-                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Admission Cell - 0612-2300343</li>
-                                 <li class="list-group-item"> <img src="<?=base_url('assets/site/img/Phone.png')?>" alt=""> Enquiry Cell - 0612-284443</li>
-                                 <li class="list-group-item"> </li> 
-                           </ul>
-                           <div class="maos shadow">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5184192849442!2d85.15581068885493!3d25.620914200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58e59b047959%3A0x59dab447f5633075!2sPatna%20Medical%20College%20-%20PMC!5e0!3m2!1sen!2sin!4v1708429282015!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade " id="pills-paid" role="tabpanel" aria-labelledby="pills-paid-tab" tabindex="0">
-
-                         
-                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                           <br>
-                           <br>
-                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-                           
-                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                           <br>
-                           <br>
-                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-                           <img class="img-fluid" src="<?=base_url('assets/site/img/ddd.png')?>" alt="">
-                           <br>
-                           <br>
-                           <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  </p>
-
-                        
-                           <div class="position-relative">
-                        
-                        <div class="swiper mySwiper-RANDOMID position-relative">
-                           <!-- Additional required wrapper -->
-                           <div class="swiper-wrapper  ">
-                           
-                              <div class="swiper-slide lc-block">
-                                 <div>
-                                    <div class="lc-block card py-xl-6 border-0">
-                                       <div class="d-flex flex-column justify-content-between">
-                                       <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
-                                       <div class="mcidis">
-                                       <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
-                                       </div>
-                                       </div>
-                                    </div>
+                              <div class="content">
+                                 <div class="sp-text-second"><b>Gender Accepted</b></div>
+                                 <div id="tdgender" class="text-justify">
+                                 <?php
+                                       if(!empty($collegeDetail['gender_accepted'])){
+                                          $genders = '';
+                                          $genders_ids = explode(',',$collegeDetail['gender_accepted']);
+                                          foreach ($genders_ids as $gender) {
+                                             $genderBy = $this->db->select('gender')->where('id',$gender)->get('tbl_gender')->row_array();
+                                             $genders .= $genderBy['gender'].'&';
+                                          }
+                                       }
+                                       echo replace_last_comma($genders,'&');
+                                    ?>
                                  </div>
                               </div>
-                              
-                              <div class="swiper-slide lc-block">
-                              <div>
-                                    <div class="lc-block card h-100 py-xl-6 border-0">
-                                       <div class="d-flex flex-column justify-content-between">
-                                       <img src="<?=base_url('assets/site/img/imsh.png')?>" alt="">
-                                       <div class="mcidis">
-                                       <h5 class="counTxt">Lorem ipsum dolor sit amet</h5>
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum.</p>
-                                       </div>
-                                       </div>
-                                    </div>
-                                 </div>
                            </div>
                         </div>
-                  </div>
-
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-adverTise" role="tabpanel" aria-labelledby="pills-adverTise-tab" tabindex="0"> 
-
-                           <div class="card card-body shadow bg-black">
-                           <h2>Bg Red</h2>
+                        <div class="col-md-8 col-sm-12">
+                           <div class="why-choose-box">
+                              <div class="icon">
+                                 <img src="https://cutoffbaba.com/Icon/university.png">
+                              </div>
+                              <div class="content">
+                                 <div class="sp-text-second"><b>University</b></div>
+                                 <div id="tdaffiliated" class="text-justify"><?= @$collegeDetail['university_name']; ?></div>
+                              </div>
                            </div>
-
-
                         </div>
-                        <div class="tab-pane fade" id="pills-counselling" role="tabpanel" aria-labelledby="pills-counselling-tab" tabindex="0">counselling</div>
-                        <div class="tab-pane fade" id="pills-simi" role="tabpanel" aria-labelledby="pills-simi-tab" tabindex="0">simi</div>
                      </div>
+                     <div class="row mt-4">
+                        <div class="col-md-9">Popular Name:&nbsp; <b id="tdpopularname"><?= @$collegeDetail['popular_name_one']; ?></b></div>
+                        <div class="col-md-3">Estd Year:&nbsp; <b id="tdestdyear"><?= @$collegeDetail['establishment']; ?></b></div>
+                        <div class="col-md-12">Course Offered:&nbsp; <b id="tdcourse">
+                        <?php
+                           if(!empty($collegeDetail['course_offered'])){
+                              $courses = '';
+                              $course_ids = explode(',',$collegeDetail['course_offered']);
+                              foreach ($course_ids as $course) {
+                                 $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                 $courses .= $courseBy['course'].',';
+                              }
+                           }
+                           echo replace_last_comma($courses,',');
+                        ?>
+                        </b></div>
+                        <div id="tdother1" class="col-md-6"></div>
+                        <div id="tdother2" class="col-md-6"></div>
+                     </div>
+
+                     
+
                   </div>
+
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst"><?= @$collegeDetail['full_name']; ?></h4>
+                        <p><?= @$collegeDetail['full_name']; ?></p>
+                     </div>
+
+                     <table class="table table-bordered">
+                     <tbody>
+                        <tr>
+                           <th><font>Particulars</font></th>
+                           <th><font>Statistics</font></th>
+                        </tr>
+                        <tr>
+                           <td>Campus Location</td>
+                           <td>
+                              <?php
+                                 $states = $this->db->select('name')->where('id',$collegeDetail['state'])->get('tbl_state')->row_array();
+                                 $city = $this->db->select('city')->where('id',$collegeDetail['city'])->get('tbl_city')->row_array();
+                                 echo $city['city'].',',$states['name'];
+                              ?>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Courses Offered</td>
+                           <td>
+                           <?php
+                           if(!empty($collegeDetail['course_offered'])){
+                              $courses = '';
+                              $course_ids = explode(',',$collegeDetail['course_offered']);
+                              foreach ($course_ids as $course) {
+                                 $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                 $courses .= $courseBy['course'].',';
+                              }
+                           }
+                           echo replace_last_comma($courses,',');
+                           ?>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>No. of Seats</td>
+                           <td>
+                              <?php
+                                 $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id']])->get()->num_rows();
+                                 echo $SeatMatrixData;
+                              ?>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Median Salary</td>
+                           <td>-</td>
+                        </tr>
+                        <tr>
+                           <td>Fees Range</td>
+                           <td>INR 320,000-375,000</td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+                  </section>
+
+
+                   <section id="seat_matrix" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Seat Matrix</h4>
+                        <table class="table table-bordered">
+                        <?php  
+                           $courses=explode(",", $collegeDetail['course_offered']);
+                           $degreeType=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
+                          
+                           foreach ($degreeType as $key => $degree) {		
+                              $degree_types=$this->db->select('*')->where_in('id',$degree['degree_type'])->get('tbl_degree_type')->result_array();			
+							   ?>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div>
+                                       <span><?= $degree_types[0]['degreetype']; ?></span>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <div>
+                                       <table class="table table-hover table-bordered">
+                                          <tbody>
+                                             <tr>
+                                                <th>#</th>
+                                                <th>Course</th>
+                                                <th>Branch</th>
+                                                <th>Seats</th>
+                                                <!-- <th>Recognisation</th> -->
+                                             </tr>
+                                             <?php 
+                                                $courselist=$this->db->select('*')->where('degree_type',$degree['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
+                                                foreach ($courselist as $course) {
+                                                   $branchList = $this->db->select('*')->where('courses',$course['id'])->get('tbl_branch')->result_array();
+                                                foreach($branchList as $key=>$branch){
+                                                   $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$collegeDetail['id'],'degree_type_id'=>$degree_types[0]['id'],'course_id'=>$course['id'],'branch_id'=>$branch['id']])->get()->row_array();
+                                             ?>
+                                             <tr>
+                                                <td><?= $key+1; ?></td>
+                                                <td><?= $course['course']; ?></td>
+
+                                                <td><?= $branch['branch']; ?></td>
+                                                <td><?= !empty($SeatMatrixData) ? $SeatMatrixData['seat']: '0'; ?></td>
+                                                <!-- <td>Recognised</td> -->
+                                             </tr>
+                                             <?php } } ?>
+                                          </tbody>
+                                       </table>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        <?php } ?>
+                        </table>
+                     </div>
+                  </section>
+
+
+                  <section id="rank" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Cutoff of <?= $collegeDetail['full_name']; ?></h4>
+
+                        <h5 class="cnnyuc7us">Central Counselling Cutoff </h5> 
+                        <?php
+                           if(empty($this->session->userdata('user'))){ ?>
+                              <a class="btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
+                        <?php } else{ 
+                           $courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+                          
+                           foreach($courseids as $courseid){
+                              $coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+                              if (count($coursedetaildata)>0) {
+                                 $coursedetaildata=$coursedetaildata[0];
+                        ?>
+                           <div class="card">
+                              <div class="card-header" role="tab">
+                                 <h5 class="mb-0">
+                                    <a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
+                                 </h5>
+                              </div>
+                              <div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
+                                 <div class="card-body table-responsive">
+                                    <div class="d-flex justify-content-between">
+                                       <div>
+                                          <input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
+                                          <input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
+                                          <select class="form-control form-select get_cutoff_matrix">
+                                             <option>Year</option>
+                                             <?php
+                                             // Get the current year
+                                                $currentYear = date("Y");
+                                                // Loop to display the last 4 years
+                                                for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
+                                                   echo "<option value='$i'>$i</option>";
+                                                }
+                                             ?>
+                                          </select>
+                                       </div>
+                                       <!-- <div>
+                                          <select class="form-control form-select">
+                                             <option>Sub Category</option>
+                                          </select>
+                                       </div> -->
+                                    </div>
+                                    <div class="cutoff_matrix">
+                                       <?php
+                                       $year = date('Y');
+                                       ?>
+                                       <?php $this->load->view('site/show_college_matrix',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
+                                    </div>		
+                                 </div>
+                              </div>
+                           </div>
+                        <?php } } } ?>
+                        <h5 class="cnnyuc7us"> State Counselling Cutoff </h5> 
+                        <?php
+                           if(empty($this->session->userdata('user'))){ ?>
+                        <a class=" btn-ddd" data-bs-toggle="modal" data-bs-target="#loginModal">VIEW CUTOFF</a>
+                        <?php } else{ 
+                           $courseids=$this->db->select('distinct(course_id)')->where('college_id',$collegeDetail['id'])->get('tbl_cutfoff_marks_data')->result_array(); 
+                           foreach($courseids as $courseid){
+                             
+                              $coursedetaildata=$this->db->select('*')->where('id',$courseid['course_id'])->get('tbl_course')->result_array();
+                              if (count($coursedetaildata)>0) {
+                                 $coursedetaildata=$coursedetaildata[0];
+                        ?>
+                        <div class="card">
+                              <div class="card-header" role="tab">
+                                 <h5 class="mb-0">
+                                    <a data-bs-toggle="collapse" href="#course<?=$coursedetaildata['id'];?>" aria-expanded="true"><i class="indicator ti-minus"></i><?php echo $coursedetaildata['course_full_name']; ?></a>
+                                 </h5>
+                              </div>
+                              <div id="course<?=$coursedetaildata['id'];?>" class="collapse show parent_data" role="tabpanel" data-bs-parent="#payment">
+                                 <div class="card-body table-responsive">
+                                    <div class="d-flex justify-content-between">
+                                       <div>
+                                          <input type="hidden" name="course_id" class="course_id" value="<?= $courseid['course_id']; ?>">
+                                          <input type="hidden" name="college_id" class="college_id" value="<?= $collegeDetail['id']; ?>">
+                                          <select class="form-control form-select get_state_cutoff_matrix">
+                                             <option>Year</option>
+                                             <?php
+                                             // Get the current year
+                                                $currentYear = date("Y");
+                                                // Loop to display the last 4 years
+                                                for ($i = $currentYear; $i >= $currentYear - 3; $i--) {
+                                                   echo "<option value='$i'>$i</option>";
+                                                }
+                                             ?>
+                                          </select>
+                                       </div>
+                                       <!-- <div>
+                                          <select class="form-control form-select">
+                                             <option>Sub Category</option>
+                                          </select>
+                                       </div> -->
+                                    </div>
+                                    <div class="cutoff_matrix">
+                                       <?php
+                                       $year = date('Y');
+                                       ?>
+                                       <?php $this->load->view('site/show_college_matrix_state',['collegeDetail'=>$collegeDetail,'courseid'=>$courseid,'year'=>$year]); ?>
+                                    </div>		
+                                 </div>
+                              </div>
+                           </div>
+                        <?php } } } ?>
+
+                     </div>
+                  </section>
+
+
+
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Fees Structure of  <?= $collegeDetail['full_name']; ?></h4>
+
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr>
+                                 <th class="fcc1">Courses</th>
+                                 <th class="fcc1">Tuition Fees</th>
+                                 <th class="fcc1">Eligibility</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <?php
+                                 if(!empty($collegeDetail['course_offered'])){
+                                    $courses = '';
+                                    $course_ids = explode(',',$collegeDetail['course_offered']);
+                                    foreach ($course_ids as $course) {
+                                       $courseData = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                                       $branchCount = $this->db->select('*')->where('courses',$course)->get('tbl_branch')->num_rows(); 
+                              ?>  
+                                 <tr class="">
+                                    <td class="">
+                                       <div>
+                                          <a href="#!"><?= $courseData['course']; ?></a>
+                                          <span class="_037f">
+                                             (<?= $branchCount; ?>  course )
+                                          </span>
+                                       </div>
+                                    </td>
+                                    <td class="">
+                                       <div class="c390"> <?= $courseData['course_fees']; ?></div>
+                                    </td>
+                                    <td class="">
+                                       <div class="_5ffb">
+                                          <div>
+                                          <?= $courseData['course_eligibility']; ?>
+                                             <!-- <span>10+2 : </span>
+                                             <span>
+                                                50 %
+                                             </span> -->
+                                          </div>
+                                          <!-- <span>
+                                             <div><span>Exams : </span><span class="c229"><a href="#!">NEET</a><a href="#!">Punjab NEET</a></span></div>
+                                          </span> -->
+                                       </div>
+                                    </td>
+                                 </tr>
+                              <?php } }?>
+                           </tbody>
+                        </table>
+
+                     </div>
+                  </section>
+
+
+                  <section class="card card-body">
+                     <div class="row">
+                        
+                        <img class="img-fluid" src="https://cutoffbaba.com/images/RegularUpdates.jpeg">
+
+                     </div>
+                  </section>
+
+                   <section id="hospital" class="card card-body rs-counter">
+                     <div class="row">
+                        <h4 class="mainShorst">Hospital Details</h4>
+                        <div class="row">
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-bed" style="font-size: 40px;"></i>
+                                 <h1 id="H1" class="plus">0</h1>
+                                 <h4 class="counter-desc">Total Beds</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
+                                 <h1 id="H2" class="plus">0</h1>
+                                 <h4 class="counter-desc">IPD</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
+                                 <h1 id="H3" class="plus">0</h1>
+                                 <h4 class="counter-desc">OPD</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-telegram" style="font-size: 40px;"></i>
+                                 <h1 id="H4" class="plus">0</h1>
+                                 <h4 class="counter-desc">BOR</h4>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="rs-counter-list">
+                                 <i class="fa fa-plus-circle" style="font-size: 40px;"></i>
+                                 <h1 id="H5" class="plus">0</h1>
+                                 <h4 class="counter-desc">CASUALTIES</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+
+                  <section id="fees" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Courses Offered</h4>
+                        <p><?= $collegeDetail['full_name']; ?> offers quality medical programs under highly qualified faculty and state-of-the-art infrastructure. The College is famous for its undergraduate medical programs, which are five years long, and postgraduate programs, which are three years long.</p>
+                        <?php
+                        if(!empty($collegeDetail['course_offered'])){
+                           $courses = '';
+                           $course_ids = explode(',',$collegeDetail['course_offered']);
+                           foreach ($course_ids as $course) {
+                              $courseData = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                              $courseSeats = $this->db->select('seat')->where('course_id',$course)->get('tbl_college_seat_matrix_data')->row_array();
+                        ?>                          
+                        <h5><?= $courseData['course']; ?> Duration & Intake</h5>
+                        <p>Here, you can learn about the undergraduate courses by <?= $collegeDetail['full_name']; ?>, including the duration and number of seats.</p>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td><strong>Course</strong></td>
+                                 <td><strong>Duration</strong></td>
+                                 <td><strong>Intake</strong></td>
+                              </tr>
+                              <tr>
+                                 <td><?= $courseData['course']; ?></td>
+                                 <td><?= $courseData['course_duration']; ?></td>
+                                 <td><?= ($courseSeats) ? $courseSeats['seat'] : 0; ?></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <?php } } ?>
+                        <!-- <h5>MDS Duration & Intake</h5>
+                        <p>Here, you can learn about the postgraduate courses by Punjab Govt Dental College Amritsar, including the duration and number of seats.</p>
+                         <table class="table table-bordered"><tbody><tr><td><strong>Course</strong></td><td><strong>Speciality</strong></td><td><strong>Duration</strong></td><td><strong>Intake</strong></td></tr><tr><td>MDS</td><td>Prosthodontics and Crown &amp; Bridge</td><td>3 Years</td><td>3</td></tr><tr><td>MDS</td><td>Pediatric and Preventive Dentistry</td><td>3 Years </td><td>6</td></tr><tr><td>MDS</td><td>Oral and Maxillofacial Surgery</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Conservative Dentistry &amp; Endodontics</td><td>3 Years </td><td>3</td></tr><tr><td>MDS</td><td>Periodontology</td><td>3 Years </td><td>3</td></tr></tbody></table>
+
+                         <h5>MDS Admission 2024-24</h5>
+                         <p>If you want admission to Govt Dental College Amritsar, you must follow the college admission procedure; here in this Section, we provide detailed information about the Punjab Govt Dental College and Hospital Amritsar PG Medical Course Admission Process.</p>
+
+                         <table class="table table-bordered"><thead><tr><th>Particular</th><th>Description</th></tr></thead><tbody><tr><td>Entrance Exam </td><td>Candidates must qualify for the <a href="#!" target="_blank" rel="dofollow noopener"></a><a href="#!" target="_blank" rel="dofollow noopener">NEET MDS</a> entrance exam conducted by NBEMS.</td></tr><tr><td>Counselling Procedure</td><td>After the Qualify the NEET entrance exam, candidates must participate in the <a href="#!" target="_blank" rel="dofollow noopener">Punjab NEET MDS Counselling</a>, conducted by the Baba Farid University of Health Sciences (BFUHS), Faridkot. </td></tr></tbody></table> -->
+
+                         <!-- <h5>Eligibility Criteria</h5>
+                         <p>If you want admission to Punjab Govt Dental College Amritsar, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
+                         <table class="table table-bordered"><tbody><tr><td><strong>Courses</strong></td><td><strong>Eligibility Criteria</strong></td></tr><tr><td>BDS</td><td>10+2 examination or its equivalent examination with 50% marks.</td></tr><tr><td>MDS</td><td>BDS degree or its equivalent degree.</td></tr></tbody></table> -->
+
+
+
+                     </div>
+                  </section>
+
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Eligibility Criteria</h4>
+                        <p>If you want admission to <?= $collegeDetail['full_name']; ?>, you must follow the college eligibility criteria; in this section, we provide detailed information about the eligibility criteria.</p>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td><strong>Courses</strong></td>
+                                 <td><strong>Eligibility Criteria</strong></td>
+                              </tr>
+                              <?php
+                              if(!empty($collegeDetail['course_offered'])){
+                                 $courses = '';
+                                 $course_ids = explode(',',$collegeDetail['course_offered']);
+                                 foreach ($course_ids as $course) {
+                                    $courseDatas = $this->db->select('*')->where('id',$course)->get('tbl_course')->row_array(); 
+                              ?>     
+                              <tr>
+                                 <td><?= $courseDatas['course']; ?></td>
+                                 <td><?= ($courseDatas['course_eligibility']) ? $courseDatas['course_eligibility'] : '-'; ?></td>
+                              </tr>
+                              <?php } } ?>
+                           </tbody>
+                        </table>        
+
+                     </div>
+                  </section>
+
+                  <section class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Fee Structure</h4>
+                        <p>The <?= $collegeDetail['full_name']; ?> fee structure for the undergraduate and postgraduate medical courses is mentioned below.</p>
+                        <?php 
+                           $courses=explode(",", $collegeDetail['course_offered']);
+                           
+                           $dtype=$this->db->select('distinct(degree_type)')->where_in('id',$courses)->get('tbl_course')->result_array();
+                           
+                           foreach ($dtype as $key => $value) {
+                              $degree_type=$this->db->select('*')->where_in('id',$value['degree_type'])->get('tbl_degree_type')->result_array();
+								?>            
+                        <h6><strong>For <?=  $degree_type[0]['degreetype']; ?> Fees</strong></h6>
+                        <?php 
+                           $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
+                              foreach ($courselist as $course) {
+                                 $collegeFeesWithCourse = $this->db->select('*')->where('college_id',$course['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
+                        ?>
+                           <table class="table table-bordered">
+                              <tbody>
+                                 <tr>
+                                    <td><strong><?= $course['course']; ?></strong></td>
+                                    <!-- <td><strong>Fees</strong></td> -->
+                                 </tr>
+                                 <p>Tution Fees:- <?= @$collegeFeesWithCourse['tution_fees']; ?></p>
+                                 <p>Hostel Fees:- <?= @$collegeFeesWithCourse['hostel_fees']; ?></p>
+                                 <p>Misc. Fees:- <?= @$collegeFeesWithCourse['misc_fees']; ?></p>
+                                 <p>eat Identity Charges:- <?= @$collegeFeesWithCourse['seat_indentity_charges']; ?></p>
+                                 <p>Upgradation Fees:- <?= @$collegeFeesWithCourse['upgradation_processing_fees']; ?></p>
+                                 <p>Bank Details :- <?= @$collegeFeesWithCourse['bank_details_1']; ?>  <?= @$collegeFeesWithCourse['bank_details_2']; ?></p>
+                                 <p>Demand Draft Details :- <?= @$collegeFeesWithCourse['demand_draft_name']; ?></p>
+                              </tbody>
+                           </table>      
+                        <?php } } ?> 
+                     </div>
+                  </section>
+
+
+
+                  <!-- <section id="placement" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Placements</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                        <td>
+                        Clove Dental 
+                        </td>
+                        <td>
+                        Innodata 
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        I.T.S Centre for Dental Studies and Research 
+                        </td>
+                        <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                     </div>
+                  </section> -->
+
+                  <section id="gallery" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst"><strong>College Gallery</strong></h4>
+                        <br>
+                        <div class="grid-gallery">
+                           <ul class="magnific-gallery">
+                           <?php if(!empty($collegeGallery)){
+										foreach($collegeGallery as $gallery){ ?>
+                              <li>
+                                 <figure>
+                                    <img src="<?= base_url('assets/uploads/media/image/').$gallery['file_name'];?>" alt="" style="height: 200px;
+    width: 200px;">
+                                    <figcaption>
+                                       <div class="caption-content">
+                                          <a href="<?= base_url('assets/uploads/media/image/').$gallery['file_name'];?>" title="Photo title" data-effect="mfp-zoom-in">
+                                             <i class="pe-7s-albums"></i> 
+                                          </a>
+                                       </div>
+                                    </figcaption>
+                                 </figure>
+                              </li>
+                              <?php } } ?> 
+                           </ul>
+                        </div>  
+                     </div>
+                  </section>
+
+                  <section id="admission" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Admission</h4>
+                        <p>The highlights of the admission details of Punjab College are given in the table below </p>
+                        <table class="table table-bordered">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    Name of Institute 
+                                 </td>
+                                 <td>
+                                     <?= $collegeDetail['full_name']; ?>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Location 
+                                 </td>
+                                 <td>
+                                 <?= $city['city']; ?>,<?= $states['name']; ?>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Type of Institute 
+                                 </td>
+                                 <td>
+                                    <?php
+                                       $institueType = $this->db->select('title')->where('id',$collegeDetail['ownership'])->get('tbl_ownership')->row_array();
+                                    ?>
+                                    <?= $institueType['title']; ?>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Courses Offered 
+                                 </td>
+                                 <td>
+                                 <?php
+                                 if(!empty($collegeDetail['course_offered'])){
+                                    $coursesDatas = '';
+                                    $course_ids = explode(',',$collegeDetail['course_offered']);
+                                    foreach ($course_ids as $course) {
+                                       $courseBy = $this->db->select('course')->where('id',$course)->get('tbl_course')->row_array();
+                                       $coursesDatas .= $courseBy['course'].',';
+                                    }
+                                 }
+                                 echo replace_last_comma($coursesDatas,',');
+                                 ?>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Mode of Application 
+                                 </td>
+                                 <td>
+                                     Online , Offline
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Entrance Examination 
+                                 </td>
+                                 <td>
+                                 <?php
+                                    if(!empty($collegeDetail['course_offered'])){
+                                       $exams = '';
+                                       $exams_ids = explode(',',$collegeDetail['course_offered']);
+                                       foreach ($course_ids as $course_id) {
+                                          $examsBy = $this->db->select('exam')->where("FIND_IN_SET(" . $course_id. ", course_accepting) > 0", NULL, FALSE)->get('tbl_exam')->row_array();
+                                          $exams .= $examsBy['exam'].',';
+                                       }
+                                    }
+                                    echo replace_last_comma($exams,',');
+                                 ?>
+                                     
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Mode of Examination 
+                                 </td>
+                                 <td>
+                                    Online,  Offline 
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                     Selection Criteria 
+                                 </td>
+                                 <td>
+                                     50% in English, Physics, Chemistry and Biology and 40% for SC, ST, OBC 
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+
+
+
+                     </div>
+                  </section>
+
+                   <section id="contacts" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">Contact Us</h4>
+                        <div class="form_container"> 
+                           <form class="all-form" action="<?= base_url('post-enquiry'); ?>" method="POST">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="name" placeholder="Full Name*">
+                                       <div class="text-danger" id="name"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="email" placeholder="Email ID*">
+                                       <div class="text-danger" id="email"></div>
+                                       
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="phone" placeholder="Mobile*">
+                                       <div class="text-danger" id="phone"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" name="subject"  placeholder="Subject*">
+                                       <div class="text-danger" id="subject"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                       <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                                       <div class="text-danger" id="message"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="text-center"><input type="submit" value="Submit Now" class="btn_1 full-width"></div>
+                           </form> 
+                        </div>
+
+                     </div>
+                  </section>
+
+                  <section id="reviews" class="card card-body">
+                     <div class="row">
+                        <h4 class="mainShorst">College Reviews</h4>
+                        <section id="reviews">
+                      
+                     <div class="reviews-container add_bottom_30">
+                        <div class="row">
+                           <div class="col-lg-3">
+                              <div id="review_summary">
+                                 <strong>8.5</strong>
+                                 <em>Superb</em>
+                                 <small>Based on 4 reviews</small>
+                              </div>
+                           </div>
+                           <div class="col-lg-9">
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                              <div class="row">
+                                 <div class="col-lg-10 col-9">
+                                    <div class="progress">
+                                       <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                              </div>
+                              <!-- /row -->
+                           </div>
+                        </div>
+                        <!-- /row -->
+                     </div>
+
+                     <div class="reviews-container">
+                        <?php
+                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college')->result_array();
+                           if(!empty($collegeReviews)){
+                              foreach($collegeReviews as $review) { 
+                                 $userDetail = $this->db->select('*')->where('id',$review['user_id'])->get('tbl_users')->row_array();
+                        ?>
+                           <div class="review-box clearfix">
+                              <figure class="rev-thumb">
+                                 <?php if($userDetail['image']){ ?>
+                                    <img src="<?= base_url('assets/uploads/users/').'/'.$userDetail['image']; ?>" alt="">
+                                 <?php } else{ ?>
+                                    <img src="https://www.ansonika.com/sparker/img/avatar1.jpg" alt="">
+                                 <?php } ?>
+                                
+                              </figure>
+                              <div class="rev-content">
+                                 <div class="rating">
+                                    <?php 
+                                    for($i=0;$i<5;$i++){ 
+                                       if($i < $review['rating']){
+                                    ?>
+                                       <i class="icon_star voted"></i>
+                                    <?php }else{ ?>
+                                       <i class="icon_star"></i>
+                                    <?php } } ?>
+                                 </div>
+                                 <div class="rev-info">
+                                    <?= $userDetail['name']; ?> – <?= date("F d, Y",strtotime($review['created_at'])); ?>
+                                 </div>
+                                 <div class="rev-text">
+                                    <p>
+                                       <?= $review['message']; ?>
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        <?php } } ?>
+                     </div>
+                     <!-- /review-container -->
+                  </section>
+
+                  <div class="add-review">
+                        <h5>Leave a Review</h5>
+                        <form>
+                           <div class="row">
+                              <div class="form-group col-md-6">
+                                 <label>Name and Lastname *</label>
+                                 <input type="text" name="name_review" id="name_review" placeholder="" class="form-control">
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <label>Email *</label>
+                                 <input type="email" name="email_review" id="email_review" class="form-control">
+                              </div>
+                              <div class="form-group col-md-12">
+                                 <label>Rating </label>
+                                 <div class="custom-select-form">
+                                 <select name="rating_review" id="rating_review" class="wide" style="display: none;">
+                                    <option value="1">1 (lowest)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5" selected="">5 (medium)</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10 (highest)</option>
+                                 </select><div class="nice-select wide" tabindex="0"><span class="current">5 (medium)</span><ul class="list"><li data-value="1" class="option">1 (lowest)</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option selected">5 (medium)</li><li data-value="6" class="option">6</li><li data-value="7" class="option">7</li><li data-value="8" class="option">8</li><li data-value="9" class="option">9</li><li data-value="10" class="option">10 (highest)</li></ul></div>
+                                 </div>
+                              </div>
+                              <div class="form-group col-md-12">
+                                 <label>Your Review</label>
+                                 <textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
+                              </div>
+                              <div class="form-group col-md-12 add_top_20 add_bottom_30">
+                                 <input type="submit" value="Submit" class="btn_1" id="submit-review">
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+
+
+                     </div>
+                  </section>
+
+
+               </div>
+               <div class="col-md-3">
+
+                  
+
+                  <div class="course-features-info">
+                       <h4 class="desc-title text-center" style="color: #000; margin-top: 0px;">SHARE THIS COLLEGE</h4>
+                       <div class="text-center">
+                           <a href="javascript:" onclick="return whatsappclick()" id="tdwhatsapp" class="ssSocil"><i class="fa fa-whatsapp"></i></a>
+                           <a href="javascript:" onclick="fbs_click()" class="ssSocil"><i class="fa fa-facebook"></i></a>
+                           <a href="javascript:" class="ssSocil"><i class="fa fa-twitter"></i></a>
+                           <a href="javascript:" class="ssSocil"><i class="fa fa-youtube"></i></a>
+                       </div> 
+                   </div> 
+                   <div class="box_detail booking">
+                     <div class="price">
+                        <h5 class="text-center">Send Quick Enquiry</h5>
+                        
+                     </div>
+                     <form method="post" action="<?= base_url('save-enquiry'); ?>" id="contactForm" autocomplete="off">
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="name_contact" name="name" placeholder="Name">
+                           <span id="name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="email_contact" name="email" placeholder="Email">
+                           <span id="email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="phone_contact" name="phone"  placeholder="Telephone">
+                           <span id="phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <input class="form-control" type="text" id="phone_contact" name="subject" placeholder="Subject">
+                           <span id="subject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                           <textarea class="form-control" id="message_contact" name="message" style="height:150px;" placeholder="Message"></textarea>
+                           <span id="message" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn_1 full-width purchase">SEND NOW</button>
+                     </form>   
+                     </div>              
+                   <table class="table course-features-info">
+                       <thead class="hhusCss">
+                           <tr>
+                               <th colspan="2" class="not-color1 text-white">NOTIFICATION
+                               </th>
+                           </tr>
+                       </thead>
+                       <tbody id="tdnotification"><tr><td class="text-center" colspan="2">NO DATA AVAILABLE</td></tr></tbody>
+                   </table>
+
+                   <div class="course-features-info text-center mt-4 mb-4">
+                       <img src="https://cutoffbaba.com/Icon/ownership.png">
+                       <h5 class="text__uppercase">Interested in this College ?</h5>
+                       <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn__dangerss"><i class="fa fa-user"></i>&nbsp;Apply Now For Admission</button>
+                   </div>
+
+                       <div class="hhusCss"> 
+                           <h5 class="text-white">SIMILAR COLLEGE </h5> 
+                       </div>
+
+                       <div class="ssuuiwww">
+                           <?php if(!empty($similarCollege)){
+                              foreach($similarCollege as $similar) { 
+                                 $statessss = $this->db->select('name')->where('id',$similar['state'])->get('tbl_state')->row_array();
+                                 $cityss = $this->db->select('city')->where('id',$similar['city'])->get('tbl_city')->row_array();
+                     
+                                 
+                        ?>
+                              <div class="ddds">
+                                 <div class="row">
+                                    <div class="col-md-2">
+                                       <img src="<?=asset_url()."college/banner/".$similar['college_banner'];?>" class="uui8sss">
+                                    </div>
+                                    <div class="col-md-10">
+                                       <a class="sss8iss" href="<?=base_url('college-detail/'.$similar['slug']."/".$similar['id']);?>"><?= $similar['full_name']; ?> </a> 
+                                       <a class="sss8iss" href="<?=base_url('college-detail/'.$similar['slug']."/".$similar['id']);?>"><span> <?= @$cityss['city']; ?>,</span> , <span><?= @$statessss['name']; ?></span></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           <?php } } ?>
+                       </div>
+
+                       <br>
+                       <button type="button" class="btn dangerss" data-toggle="modal" data-target="#exampleModalCenter">APPLY NOW </button>
+
+                       <button type="button" class="btn dangerss mb-2">DOWNLOAD BROCHURE  </button>
+
+                       <table class="mt-15 table course-features-info scrollable">
+                        <thead class="hhusCss">
+                           <tr>
+                              <th colspan="2" class="not-color1 text-white">Statewise MBBS College</th>
+                           </tr>
+                        </thead>
+                        <tbody id="tdmed">
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDAMAN AND NICOBAR ISLANDS</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDHRA PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ARUNACHAL PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ASSAM</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="morecollege.aspx?stateid=1"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">BIHAR</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHANDIGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHHATTISGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DADRA AND NAGAR HAVELI</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DAMAN AND DIU</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DELHI</span></a></td>
+                           </tr>
+                            <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDAMAN AND NICOBAR ISLANDS</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ANDHRA PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ARUNACHAL PRADESH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">ASSAM</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="morecollege.aspx?stateid=1"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">BIHAR</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHANDIGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">CHHATTISGARH</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DADRA AND NAGAR HAVELI</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DAMAN AND DIU</span></a></td>
+                           </tr>
+                           <tr>
+                              <td style="border-bottom:3px dotted #fcd1d1;">&nbsp;&nbsp;<a href="#!"><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;<span class="label neet-bold">DELHI</span></a></td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                    
+
+                  
                </div>
             </div>
          </section>
-         <footer>
-            <ul class="nav justify-content-center border-bottom  text-center">
-                <li class="nav-item"><a href="<?= base_url('streams'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/home.png')?>"> <br> Home</a></li>
-                <li class="nav-item"><a href="<?= base_url('plan'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/start.png')?>"> <br> Premium</a></li>
-                <li class="nav-item"><a href="<?= base_url('search'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/serch.png')?>"> <br> Search</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Award.png')?>"> <br> Award</a></li>
-                <li class="nav-item"><a href="<?= base_url('profile'); ?>" class="nav-link px-2 text-muted">   <img src="<?=base_url('assets/site/img/Userss.png')?>"> <br> Profile</a></li>
-            </ul>
-        </footer>
-      </main>
-      <script src="<?=base_url('assets/site/js/bootstrap.bundle.min.js')?>"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-      <link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <!-- lazily load the Swiper JS file -->
-      <script defer="defer" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
-      <!-- lc-needs-hard-refresh -->
-      <script>
-         function initializeSwiperRANDOMID(){
-             // Launch SwiperJS  
-             const swiper = new Swiper(".mySwiper-RANDOMID", {
-                     slidesPerView: 1,
-                     grabCursor: true,
-                     spaceBetween: 30,
-                     pagination: {
-                         el: ".swiper-pagination",
-                         clickable: true,
-                     },
-                     breakpoints: {
-                     640: {
-                         slidesPerView: 1,
-                         spaceBetween: 20,
-                     },
-                     768: {
-                         slidesPerView: 2,
-                         spaceBetween: 30,
-                     },
-                     1024: {
-                         slidesPerView: 3,
-                         spaceBetween: 30,
-                     },
-                 },
-             });
-         }
-      </script>
-   </body>
-</html>
+         
+      </div>
+   </div>
+</main>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999999999;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form method="post" action="<?=base_url('loginchk');?>" id="loginForm">
+            <div class="sign-in-wrapper">
+               <div class="form-group">
+                  <label>Mobile</label>
+                  <input type="number" class="form-control" name="phone" id="phone">
+                  <!-- <i class="icon_phone" style="top: 42px;left: 5px;position: absolute;"></i> -->
+               </div>
+               <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" id="password" value="">
+                  <!-- <i class="icon_lock_alt" style="top: 42px;left: 5px;position: absolute;"></i> -->
+               </div>
+               <div class="clearfix add_bottom_15">
+                  <div class="checkboxes float-start">
+                     <label class="container_check">Remember me
+                     <input type="checkbox">
+                     <span class="checkmark"></span>
+                     </label>
+                  </div>
+                  <div class="float-end mt-1"><a id="forgot" href="<?=base_url('forget');?>">Forgot Password?</a></div>
+               </div>
+               <div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
+               <div class="text-center">
+                  Don’t have an account? <a href="<?=base_url('signup');?>">Sign up</a>
+               </div>
+            </div>                 
+         </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php $this->load->view('site/footer');?>
+<script src="<?=base_url('/')?>assets/site/js/CommonLib.js"></script>
+	<script>
+    $("body").on("submit","#contactForm",function(e){
+        e.preventDefault();
+        var currentWrapper = $(this);
+        var url = currentWrapper.attr('action');
+        var method = currentWrapper.attr('method');
+        var formData = $('#contactForm')[0];
+        formData = new FormData(formData);
+        CommonLib.ajaxForm(formData,method,url).then(d=>{
+            if(d.status === 200){
+                console.log(d.status)
+                CommonLib.notification.success(d.message);
+                setTimeout(() => {
+                  location.reload();
+               }, 1000);
+            }else if(d.status == 401){
+               if(d.errors.name){
+                  CommonLib.notification.error(d.errors.name);
+               }else if(d.errors.email){
+                  CommonLib.notification.error(d.errors.email);
+               }else if(d.errors.phone){
+                  CommonLib.notification.error(d.errors.phone);
+               }else if(d.errors.subject){
+                  CommonLib.notification.error(d.errors.subject);
+               }else if(d.errors.message){
+                  CommonLib.notification.error(d.errors.message);
+               } 
+            }else{
+                CommonLib.notification.error(d.errors);
+            }
+        }).catch(e=>{
+                CommonLib.notification.error(e.responseJSON.errors);
+        });
+    });
+</script>
+<script>
+   $(function() {
+   	$("body").on("change",".get_cutoff_matrix",function(e){
+   		var year = $(this).val();
+   		var course_id = $("input[name='course_id']").val();
+   		var college_id = $('.college_id').val();
+         var currentWrapper = $(this);
+   		$.ajax({
+   			url: "<?php echo base_url('get-cutoff-matrix'); ?>",
+   			type: "POST",
+   			data: {year:year,course_id:course_id,college_id:college_id},
+   			dataType: 'json',
+   			success: function(data){
+               console.log(data)
+   				currentWrapper.closest('.card-body').find('.cutoff_matrix').html(data.html);
+   			}
+   		});
+   	});
+   	$("body").on("change",".get_state_cutoff_matrix",function(e){
+   		var year = $(this).val();
+   		var course_id = $("input[name='course_id']").val();
+   		var college_id = $('.college_id').val();
+         var currentWrapper = $(this);
+   		$.ajax({
+   			url: "<?php echo base_url('get-cutoff-state-matrix'); ?>",
+   			type: "POST",
+   			data: {year:year,course_id:course_id,college_id:college_id},
+   			dataType: 'json',
+   			success: function(data){
+               console.log(data)
+   				currentWrapper.closest('.card-body').find('.cutoff_matrix').html(data.html);
+   			}
+   		});
+   	});
+      $("body").on('click','.open_login_modal',function(e){
+         e.preventDefault();
+         var href = $(this).attr('href');
+         $(href).show();
+      });
+
+      $(document).on("submit",'#loginForm',function(e){
+         e.preventDefault();
+         var method = $(this).attr('method');
+         var url = $(this).attr("action");
+         var form = $('#loginForm')[0];
+         var form_data = new FormData(form);   
+         var current_url = "<?= $this->uri->segment(1); ?>"; 
+         $.ajax({
+            type: method,
+            url: url,
+            data:form_data,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data){
+                  if(data.status == 'error'){
+                     $.each(data.errors, function(key, value) {
+                        $('#'+key).addClass('is-invalid');
+                        $('#'+key).html(value);
+                     });  
+                  }
+                  if(data.status == 'success'){
+                     location.reload();
+                  }
+                  if(data.status == 'errors'){
+                     showNotify(data.message,data.status,data.url);
+                  }
+            }
+         }); 
+      })
+   });
+</script>
