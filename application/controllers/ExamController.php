@@ -31,8 +31,13 @@ class ExamController extends MY_Controller {
             echo json_encode($response);
             return false;
         }
+        $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();  
         $html = '';
-        $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id="">';
+        $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id=""';
+        if(!empty($subCategoryDatas) && $subCategoryDatas['sub_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
             $subCategoryData = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();
@@ -68,7 +73,7 @@ class ExamController extends MY_Controller {
         $userProfile = $this->master->updateRecord('tbl_users',['id'=>$profileData['id']],$profileData);
         $result = $this->master->updateCoursePreferences('tbl_user_course_preferences',$allData);
         if($result > 0){
-            $response = array('status' => 200,'message' => 'Profile Updated successfully','url'=>base_url('profile'));
+            $response = array('status' => 200,'message' => 'Profile Updated successfully','url'=>base_url('user-profile'));
             echo json_encode($response);
             return false;
         }else{
@@ -99,7 +104,13 @@ class ExamController extends MY_Controller {
             return false;
         }
         $html = '';
-        $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id="">';
+        $domicilesubCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();
+
+        $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id=""';
+        if(!empty($domicilesubCategoryDatas) && $domicilesubCategoryDatas['domicile_state_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select Domicile State Category</option>';
         
         foreach($categoryData as $category){
@@ -129,7 +140,14 @@ class ExamController extends MY_Controller {
         }
         $html = '';
         
-        $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id="">';
+        $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id=""';
+       
+        $domicilesubCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();
+
+        if(!empty($domicilesubCategoryDatas) && $domicilesubCategoryDatas['domicile_state_sub_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
             $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'domicile_state_sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();    

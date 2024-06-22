@@ -41,6 +41,7 @@
                                     <th class="sort" data-sort="customer_name">S.No.</th>
                                     <th class="sort" data-sort="email">College Names</th>
                                     <th class="sort" data-sort="email">Total Files</th>
+                                    <th class="sort">Manage</th>
                                     <th class="sort" data-sort="action">Action</th>
                                 </tr>
                              </thead>
@@ -55,6 +56,9 @@
                                             Total Images: <?= $college['image_count']; ?>,
                                             Total Document: <?= $college['doc_count']; ?>,
                                             Total Videos: <?= $college['video_count']; ?>
+                                        </td>
+                                        <td>
+                                          <a href="<?= base_url('admin/manage-media'.'/'.$college['college_id']) ?>" class="link-success fs-15">Manage Media</a>
                                         </td>
                                         <td>
                                            <div class="hstack gap-3 flex-wrap">

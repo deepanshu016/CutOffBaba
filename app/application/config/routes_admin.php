@@ -400,6 +400,12 @@ $route['admin/delete-college-files'] = 'Admin/CollegeFiles/deleteCollegeFiles';
 $route['admin/assign-media/(:any)'] = 'Admin/CollegeFiles/assignMedia/$1';
 $route['admin/save-media-to-gallery'] = 'Admin/CollegeFiles/saveMediaToGallery';
 $route['admin/delete-media-from-college'] = 'Admin/CollegeFiles/deleteMediaToGallery';
+$route['admin/manage-media/(:any)'] = 'Admin/CollegeFiles/manageMedia/$1';
+$route['admin/get-college-media'] = 'Admin/CollegeFiles/getCollegeMedia';
+$route['admin/delete-college-media'] = 'Admin/CollegeFiles/deleteCollegeMedia';
+
+
+
 
 $route['admin/cutoff-entry-data'] = 'Admin/CounsellingHead/cutOffEntryData';
 $route['admin/filter-cutoff-data'] = 'Admin/CounsellingHead/filterCutOffData';

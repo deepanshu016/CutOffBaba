@@ -31,9 +31,14 @@ class ExamController extends MY_Controller {
             echo json_encode($response);
             return false;
         }
+        $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();  
         $html = '';
         $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
-        $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id="">';
+        $html .= '<select class="form-control raffss"  name="profile[course_data]['.$key.'][category]['.$keys.'][sub_category_id]" id=""';
+        if(!empty($subCategoryDatas) && $subCategoryDatas['sub_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
             $subCategoryData = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();
@@ -85,7 +90,7 @@ class ExamController extends MY_Controller {
         $keys = $this->input->post('keys');
         $course_id = $this->input->post('course_id');
         $user = $this->session->userdata('user');
-        
+         
         $headData = $this->master->getRecords('tbl_counselling_head',['state_id'=>$id]);
         if(empty($headData)){
             $response = array('status' => 400,'message' => 'No Data found !!!','url'=>'','html'=>'');                
@@ -101,7 +106,12 @@ class ExamController extends MY_Controller {
         }
         $html = '';
         $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
-        $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id="">';
+        $domicilesubCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();
+        $html .= '<select class="form-control raffss get-domicile-sub-category" data-key="'.$key.'"  name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_category_id]" id=""';
+        if(!empty($domicilesubCategoryDatas) && $domicilesubCategoryDatas['domicile_state_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select Domicile State Category</option>';
         foreach($categoryData as $category){
             $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'domicile_state_category_id'=>$category['id'],'course_id'=>$course_id])->get()->row_array();
@@ -130,7 +140,12 @@ class ExamController extends MY_Controller {
         }
         $html = '';
         $html .= '<span class="input-group-text appendCXCss raffss" id="basic-addon1"> <img class="img-fluid useHsih" src='.base_url('assets/site/img/exmas.png').' alt=""> </span>';
-        $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id="">';
+        $domicilesubCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course_id])->get()->row_array();
+        $html .= '<select class="form-control raffss" data-key="'.$key.'" name="profile[course_data]['.$key.'][domicile_category_id][domicile_state_sub_category_id]" id=""';
+        if(!empty($domicilesubCategoryDatas) && $domicilesubCategoryDatas['domicile_state_sub_category_id'] != '0'){
+            $html  .='disabled';
+        }
+        $html .= '>';
         $html  .= '<option value="">Select State Category</option>';
         foreach($subCategory as $sub){
             $subCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'domicile_state_sub_category_id'=>$sub['id'],'course_id'=>$course_id])->get()->row_array();    

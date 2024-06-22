@@ -12,9 +12,12 @@
             <div class="row">
                 <?php 
                     if(!empty($levelData)){
-                        foreach($levelData as $keys=>$level) { ?>
+                        foreach($levelData as $keys=>$level) { 
+                            $categoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course['id']])->get()->row_array();  
+                            
+                ?>
                         <div class="col-md-6 col-12 input-group mb-3 category-wrapper">
-                            <select class="form-control raffss get-sub-category" data-key="<?= $key; ?>" data-keys="<?= $keys; ?>"  name="profile[course_data][<?=$key; ?>][category][<?=$keys; ?>][category_id]" id="">
+                            <select class="form-control raffss get-sub-category" data-key="<?= $key; ?>" data-keys="<?= $keys; ?>"  name="profile[course_data][<?=$key; ?>][category][<?=$keys; ?>][category_id]" id="" <?= (!empty($categoryDatas) && $categoryDatas['category_id'] != '0')?'disabled':'';?>>
                                 <option value="">Select Central Category</option>
                                 <?php 
                                     foreach($course['category_data'] as $category) { 
@@ -32,7 +35,11 @@
                         <div class="col-md-6 col-12  input-group mb-3 sub-category-data"></div>
                 <?php } } ?>
                     <div class="col-md-6 col-12  input-group mb-3 category-wrapper">
-                        <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="">
+                        <?php
+                             $domicileCategoryDatas = $this->db->select('*')->from('tbl_user_course_preferences')->where(['user_id'=>$user['id'],'course_id'=>$course['id']])->get()->row_array();
+                        ?>
+                        <select class="form-control raffss get-domicile-main-category" data-key="<?= $key; ?>"  name="profile[course_data][<?=$key; ?>][domicile_category_id][state_id]" id="" <?= (!empty($domicileCategoryDatas) && $domicileCategoryDatas['state_id'] != '0')?'disabled':'';?>>
+
                             <option value="">Select Domicile Central</option>
                             <?php 
                                 foreach($domicileCategory as $domicile) { 
