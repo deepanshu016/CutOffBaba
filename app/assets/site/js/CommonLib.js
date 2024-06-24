@@ -93,10 +93,7 @@ const CommonLib = {
                     CommonLib.notification.warning("Action Cancelled!!!");
                 }
             })
-        },
-        success:function(){
-
-        },
+        }
     },
     baseUrl:()=>{
         var base_url = window.location;

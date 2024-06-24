@@ -611,24 +611,30 @@
                         <?php 
                            $courselist=$this->db->select('*')->where('degree_type',$value['degree_type'])->where_in('id',$courses)->get('tbl_course')->result_array();
                               foreach ($courselist as $course) {
-                                 $collegeFeesWithCourse = $this->db->select('*')->where('college_id',$course['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
+                                 $collegeFeesWithCourse = $this->db->select('*')->where('course_id',$course['id'])->where('college_id',$collegeDetail['id'])->where('year',date('Y'))->get('tbl_college_fees')->row_array();
+                                 
                         ?>
                            <table class="table table-bordered">
                               <tbody>
                                  <tr>
-                                    <td><strong><?= $course['course']; ?></strong></td>
+                                    <td><strong><?= $course['course']; ?><?= $course['id']; ?></strong></td>
                                     <!-- <td><strong>Fees</strong></td> -->
                                  </tr>
-                                 <p>Tution Fees:- <?= @$collegeFeesWithCourse['tution_fees']; ?></p>
-                                 <p>Hostel Fees:- <?= @$collegeFeesWithCourse['hostel_fees']; ?></p>
-                                 <p>Misc. Fees:- <?= @$collegeFeesWithCourse['misc_fees']; ?></p>
-                                 <p>eat Identity Charges:- <?= @$collegeFeesWithCourse['seat_indentity_charges']; ?></p>
-                                 <p>Upgradation Fees:- <?= @$collegeFeesWithCourse['upgradation_processing_fees']; ?></p>
-                                 <p>Bank Details :- <?= @$collegeFeesWithCourse['bank_details_1']; ?>  <?= @$collegeFeesWithCourse['bank_details_2']; ?></p>
-                                 <p>Demand Draft Details :- <?= @$collegeFeesWithCourse['demand_draft_name']; ?></p>
+                                 <?php if(!empty($collegeFeesWithCourse)){ ?>
+                                    <p><?= @$collegeFeesWithCourse['tution_fees']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['hostel_fees']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['misc_fees']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['seat_indentity_charges']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['upgradation_processing_fees']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['bank_details_1']; ?>  <?= @$collegeFeesWithCourse['bank_details_2']; ?></p>
+                                    <p><?= @$collegeFeesWithCourse['demand_draft_name']; ?></p>
+                                 <?php } else{  ?> 
+                                    <p>No Fee Structure added</p>
+                                 <?php }  ?> 
                               </tbody>
-                           </table>      
-                        <?php } } ?> 
+                           </table>   
+                        <?php } }  ?> 
+                          
                      </div>
                   </section>
 
@@ -906,7 +912,7 @@
 
                      <div class="reviews-container">
                         <?php
-                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college')->result_array();
+                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->result_array();
                            if(!empty($collegeReviews)){
                               foreach($collegeReviews as $review) { 
                                  $userDetail = $this->db->select('*')->where('id',$review['user_id'])->get('tbl_users')->row_array();
