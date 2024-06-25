@@ -438,7 +438,7 @@
                                        <div>
                                           <a href="#!"><?= $courseData['course']; ?></a>
                                           <span class="_037f">
-                                             (<?= $branchCount; ?>  course )
+                                             (<?= $branchCount; ?>  Branches )
                                           </span>
                                        </div>
                                     </td>
