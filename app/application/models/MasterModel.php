@@ -217,17 +217,19 @@ class MasterModel extends CI_Model {
 		$this->deleteRecord($table, ['user_id'=>$course_data['user']['id']]);
 		if(!empty($course_data)){
 			foreach($course_data['course_data'] as $key => $course){
-				foreach($course['category'] as $keys=>$category){
-					$datas['user_id'] = $course_data['user']['id'];
-					$datas['course_id'] = $course['course_id'];
-					$datas['category_id'] = $category['category_id'];
-					$datas['sub_category_id'] = $category['sub_category_id'];
-					$result = $this->insert($table,$datas);
-					if($result){
-						$count += 1;
+				if(!empty($course['category'])){
+					foreach($course['category'] as $keys=>$category){
+						$datas['user_id'] = $course_data['user']['id'];
+						$datas['course_id'] = $course['course_id'];
+						$datas['category_id'] = $category['category_id'];
+						$datas['sub_category_id'] = $category['sub_category_id'];
+						$result = $this->insert($table,$datas);
+						if($result){
+							$count += 1;
+						}
 					}
 				}
-				if($course['domicile_category_id'] != ''){
+				if(isset($course['domicile_category_id']) && $course['domicile_category_id'] != ''){
 					$datas['user_id'] = $course_data['user']['id'];
 					$datas['course_id'] = $course['course_id'];
 					$datas['state_id'] = $course['domicile_category_id']['state_id'];

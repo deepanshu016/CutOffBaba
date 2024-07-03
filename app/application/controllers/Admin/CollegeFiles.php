@@ -193,7 +193,41 @@ Class CollegeFiles extends MY_Controller {
             return redirect('admin');
         }
     }
+    public function manageMedia($id){
+        if ($this->is_admin_logged_in() == true) {
+            $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
+            $data['admin_session'] = $this->session->userdata('admin');
+            $data['imageData'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id,'file_type'=>'image']);
+            $data['videoData'] = $this->master->getRecords('tbl_uploaded_files',['file_data'=>$id,'file_type'=>'video']);
+            $data['collegeHeads'] = $this->master->getRecords('tbl_gallery',['college_id'=>$id]);
+            $data['college_id'] = $id;
+            $this->load->view('admin/collegefiles/manage-media-gallery',$data);
+        }else{
+            $this->session->set_flashdata('error','Please login first');
+            return redirect('admin');
+        }
+    }
+    public function deleteCollegeMedia(){
+        $media_id = $this->input->post('media_id');
+        $college_id = $this->input->post('college_id');
+        $result = $this->master->deleteRecord('tbl_uploaded_files',['id'=>$media_id]);
+        $results = $this->master->deleteRecord('tbl_gallery',['media_id'=>$media_id,'college_id'=>$college_id]);
+        $response = array('status' => 200,'message' => 'Action performed successfully !','url'=>'');                
+        echo json_encode($response);
+        return false;
+    }
 
+
+
+    public function getCollegeMedia(){
+        $head_id = $this->input->post('head_id');
+        $college_id = $this->input->post('college_id');
+        $data['mediaData'] = $this->master->getRecords('tbl_gallery',['college_id'=>$college_id,'head_id'=>$head_id]);
+        $html_content = $this->load->view('admin/collegefiles/master_manage_gallery', $data, true);
+        $response = array('status' => 200,'message' => 'Data fetched successfully !','url'=>'','html'=>$html_content);                
+        echo json_encode($response);
+        return false;
+    }
     public function saveMediaToGallery(){
           $request_datas = json_decode($this->input->post('data'),true);
           //print_r($request_datas);

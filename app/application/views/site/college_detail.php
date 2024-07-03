@@ -107,6 +107,7 @@
                                     $courseDegreeTypeData = $this->db->select('*')->from('tbl_degree_type')->where('id', $singleCourse['degree_type'])->get()->row_array();
                                     $branchListData = $this->db->select('*')->from('tbl_branch')->where('branch_type', $singleCourse['branch_type'])->get()->result_array();
 
+<<<<<<< HEAD
                                     if (!empty($branchListData)) {
                                        foreach ($branchListData as $key => $branch) {
                                              if ($key === 0) {
@@ -731,3 +732,37 @@
       </script>
    </body>
 </html>
+=======
+      $(document).on("submit",'#loginForm',function(e){
+         e.preventDefault();
+         var method = $(this).attr('method');
+         var url = $(this).attr("action");
+         var form = $('#loginForm')[0];
+         var form_data = new FormData(form);   
+         var current_url = "<?= $this->uri->segment(1); ?>"; 
+         $.ajax({
+            type: method,
+            url: url,
+            data:form_data,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data){
+                  if(data.status == 'error'){
+                     $.each(data.errors, function(key, value) {
+                        $('#'+key).addClass('is-invalid');
+                        $('#'+key).html(value);
+                     });  
+                  }
+                  if(data.status == 'success'){
+                     location.reload();
+                  }
+                  if(data.status == 'errors'){
+                     showNotify(data.message,data.status,data.url);
+                  }
+            }
+         }); 
+      })
+   });
+</script>d
+>>>>>>> 4fb0fa67d456d44e98d229c9d1e80250da3ad067
