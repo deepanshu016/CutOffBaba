@@ -5,17 +5,50 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'cutoff_baba',
+	'username' => 'u821666352_cutoff',
+
+
+
+	'password' => '!4To8/YePwW',
+
+
+
+	'database' => 'u821666352_cutoff',
+
+
+
 	'dbdriver' => 'mysqli',
+
+
+
 	'dbprefix' => '',
+
+
+
 	'pconnect' => FALSE,
+
+
+
 	'db_debug' => (ENVIRONMENT !== 'production'),
+
+
+
 	'cache_on' => FALSE,
+
+
+
 	'cachedir' => '',
+
+
+
 	'char_set' => 'utf8',
+
+
+
 	'dbcollat' => 'utf8_general_ci',
+
+
+
 	'swap_pre' => '',
 
 

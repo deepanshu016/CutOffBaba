@@ -906,7 +906,7 @@
 
                      <div class="reviews-container">
                         <?php
-                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college')->result_array();
+                           $collegeReviews = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_college_review')->result_array();
                            if(!empty($collegeReviews)){
                               foreach($collegeReviews as $review) { 
                                  $userDetail = $this->db->select('*')->where('id',$review['user_id'])->get('tbl_users')->row_array();

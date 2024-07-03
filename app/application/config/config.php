@@ -454,7 +454,7 @@ $config['allow_get_array'] = TRUE;
 
 */
 
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 2;
 
 
 

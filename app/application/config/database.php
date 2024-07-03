@@ -24,17 +24,16 @@ $db['default'] = array(
 
 	'hostname' => 'localhost',
 
-
-
-	'username' => 'root',
-
-
-
-	'password' => '',
+	'username' => 'u821666352_cutoff',
 
 
 
-	'database' => 'cutoff_baba',
+	'password' => '!4To8/YePwW',
+
+
+
+	'database' => 'u821666352_cutoff',
+
 
 
 
