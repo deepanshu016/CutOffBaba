@@ -80,8 +80,7 @@
                         <i class="ri-user-5-line"></i> <span data-key="t-landing">College Master</span>
                     </a>
                 </li>
-                
-                  <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarcutoff" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarcutoff">
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Cutoff Master</span>
                     </a>
@@ -178,6 +177,11 @@
                             <li class="nav-item">
                                 <a class="nav-link"  href="<?= base_url('admin/facilities'); ?>" data-key="t-calendar">
                                     Facilities
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="<?= base_url('admin/hospital'); ?>">
+                                    Hospital Data
                                 </a>
                             </li>
                         </ul>

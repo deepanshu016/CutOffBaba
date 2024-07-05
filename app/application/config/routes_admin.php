@@ -175,6 +175,19 @@ $route['admin/export-college'] = 'Admin/Export/college';
 
 
 
+// 05-07-2024
+$route['admin/hospital'] = 'Admin/Hospital/index';
+$route['admin/add-hospital'] = 'Admin/Hospital/add';
+$route['admin/save-hospital'] = 'Admin/Hospital/saveHospital';
+$route['admin/update-hospital'] = 'Admin/Hospital/updateHospital';
+$route['admin/edit-hospital/(:any)'] = 'Admin/Hospital/editHospital/$1';
+$route['admin/delete-hospital'] = 'Admin/Hospital/deleteHospital';
+$route['admin/import-hospital'] = 'Admin/Hospital/importHospital';
+$route['admin/import-hospital-by-excel'] = 'Admin/Hospital/importHospitalByExcel';
+$route['admin/export-hospital'] = 'Admin/Export/Hospital';
+$route['admin/get-college-facilities'] = 'Admin/Hospital/getCollegeFacilities';
+
+
 $route['admin/feeshead'] = 'Admin/FeesHead/index';
 $route['admin/add-feeshead'] = 'Admin/FeesHead/add';
 $route['admin/save-feeshead'] = 'Admin/FeesHead/saveFeesHead';
