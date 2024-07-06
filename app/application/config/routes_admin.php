@@ -184,7 +184,7 @@ $route['admin/edit-hospital/(:any)'] = 'Admin/Hospital/editHospital/$1';
 $route['admin/delete-hospital'] = 'Admin/Hospital/deleteHospital';
 $route['admin/import-hospital'] = 'Admin/Hospital/importHospital';
 $route['admin/import-hospital-by-excel'] = 'Admin/Hospital/importHospitalByExcel';
-$route['admin/export-hospital'] = 'Admin/Export/Hospital';
+$route['admin/export-hospital'] = 'Admin/Export/hospitalExport';
 $route['admin/get-college-facilities'] = 'Admin/Hospital/getCollegeFacilities';
 
 

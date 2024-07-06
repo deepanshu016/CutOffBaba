@@ -1,0 +1,13 @@
+<pre>Array
+(
+    [0] => 1
+    [1] => 1_Andaman & Nicobar Islands Institute of Medical Sciences & GB Pant Hospital, Port Blair
+)
+<pre>Array
+(
+    [0] => 4
+    [1] => 2_ACSR Government Medical College Nellore
+)
+ID,College,1_Ambulance,2_ATM,"3_Blood Bank","4_Water Cooler",5_Pharmacy,6_Cafeteria
+1,"1_Andaman & Nicobar Islands Institute of Medical Sciences & GB Pant Hospital, Port Blair"
+4,"2_ACSR Government Medical College Nellore"

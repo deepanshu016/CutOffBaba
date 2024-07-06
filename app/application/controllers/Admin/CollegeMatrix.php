@@ -259,7 +259,15 @@ Class CollegeMatrix extends MY_Controller {
 
 
     public function exportSeatMatrixData($stream_id=null,$degree_type_id=null,$course_id=null,$branch_id=null){
+        // echo 'Stream ID - '.$stream_id;
+        // echo 'degree_type_id - '.$degree_type_id;
+        // echo 'course_id - '.$course_id;
+        // echo 'course_id - '.$course_id;
+        // echo 'branch_id - '.$branch_id;
         
+        
+        
+        // die;
         require 'vendor/autoload.php';
 		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
 		$sheet = $spreadsheet->getActiveSheet();
@@ -283,8 +291,9 @@ Class CollegeMatrix extends MY_Controller {
             foreach($collegeList as $key=>$college){
                 $sheet->setCellValue('A'. $row, $college['college_id']);
                     $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id])->get()->row_array();
+                   
                     if(!empty($SeatMatrixData)){
-                        $sheet->setCellValue($columns[1].$row, $SeatMatrixData['seats']);
+                        $sheet->setCellValue($columns[1].$row, $SeatMatrixData['seat']);
                     }else{
                         $sheet->setCellValue($columns[1].$row, 0);
                     }

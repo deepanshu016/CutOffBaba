@@ -167,108 +167,163 @@ Class Hospital extends MY_Controller {
         if ($this->is_admin_logged_in() == true) {
             $data['admin_session'] = $this->session->userdata('admin');
             $data['siteSettings'] = $this->site->singleRecord('tbl_site_settings',[]);
-            $this->load->view('admin/college/import',$data);
+            $this->load->view('admin/hospital/import',$data);
         }else{
             $this->session->set_flashdata('error','Please login first');
             return redirect('admin');
         }
     }
-
+ 
     // Import CSV in DB
     public function importHospitalByExcel(){
+        if (!empty($_FILES['excel_file'])) {
+            if(!empty($_FILES['excel_file']['name'])) {
+                $config['upload_path']  = 'assets/uploads/excels';
+                $config['allowed_types'] = 'csv|CSV|xlsx|XLSX|xls|XLS';
+                $config['encrypt_name'] =  TRUE;
+                $config['max_size']      = 1024;
+                $uploadedFile = $this->uploadFile($_FILES['excel_file']['name'], 'excel_file', $config);
+                $file_data = $uploadedFile['file'];
+            }
+            $path = 'assets/uploads/excels/';
+            $json 		= [];
+            $file_name 	= $path.$file_data;
 
-        if($_FILES['excel_file']['error'] == 0){
-            $name = $_FILES['excel_file']['name'];
-            $ext = explode('.', $name);
-            
-            $type = $_FILES['excel_file']['type'];
-            $tmpName = $_FILES['excel_file']['tmp_name'];
-            if($ext[1] === 'csv'){
-                if(($handle = fopen($tmpName, 'r')) !== FALSE) {
-                    set_time_limit(0);
-                    $row = 0;
-                    while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
-                        $col_count = count($data);
-                        if ($row>0) {
-                            $impdata['full_name'] = $data[1];
-                            $impdata['slug'] = $this->slug($data[1]);
-                            $impdata['short_name'] = $data[2];
-                            $impdata['short_description'] = $data[3];
-                            $impdata['popular_name_one'] = $data[4];
-                            $impdata['popular_name_two'] = $data[5];
-                            $impdata['establishment'] = $data[6];
-                            $impdata['gender_accepted'] = $data[7];
-                            $impdata['stream'] = $data[8];
-                            $impdata['course_offered'] = $data[9];
-                            $impdata['country'] = $data[10];
-                            $impdata['state'] = $data[11];
-                            $impdata['city'] = $data[12];
-                            $impdata['subdistrict'] = $data[13];
-                            $impdata['affiliated_by'] = $data[14];
-                            $impdata['university_name'] = $data[15];
-                            $impdata['approved_by'] = $data[16];
-                            $impdata['ownership'] = $data[17];
-                            $impdata['website'] =  $data[18];
-                            $impdata['email'] = $data[19];
-                            $impdata['contact_one'] = $data[20];
-                            $impdata['contact_two'] = $data[21];
-                            $impdata['contact_three'] = $data[22];
-                            $impdata['nodal_officer_name'] = $data[23];
-                            $impdata['nodal_officer_no'] = $data[24];
-                            $impdata['keywords'] = $data[25];
-                            $impdata['tags'] = $data[26];                            
-                            $impdata['facility'] = $data[27];
-                            $impdata['status'] = $data[28];
-                            $id=$data[0];
-                            if($id==""){
-                                $this->db->insert('tbl_hospital',$impdata);
-                            }else{
-                                $this->db->where('id',$id)->update('tbl_hospital',$impdata);
-                            }
+            $arr_file 	= explode('.', $file_name);
+            $extension 	= end($arr_file);
+            if('csv' == $extension) {
+                $reader 	= new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+            } else {
+                $reader 	= new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+            }
+            $spreadsheet 	= $reader->load($file_name);
+            $sheet_data 	= $spreadsheet->getActiveSheet()->toArray();
+        
+            $insertDatas 	= [];
+            foreach($sheet_data as $key=>$sheet){
+                if($key == 0) {
+                    for($i=2;$i<count($sheet);$i++){
+                        $insertDatas[$i-2]['facility_id'] = explode('_',$sheet[$i])[0];
+                    }
+                }
+                if($key > 0){
+                    $importData['college_id'] = explode('_',$sheet[1])[0];
+                    for($i=2;$i<count($sheet);$i++){
+                        if(isset($sheet[$i])){
+                            $insertDatas[$i-2]['value'] = $sheet[$i];
+                        }else{
+                            $insertDatas[$i-2]['value'] = 0;
                         }
-                        $row++;
-                     }
-                     fclose($handle);
-                    $response = array('status' => 'success','message' => 'College imported successfully','url'=>base_url('admin/college'));
-                    echo json_encode($response);
-                    return true;
+                    }
+                    $importData['facilities'] = json_encode($insertDatas);
+                    $ids = $sheet[0];
+                    if(!$ids){
+                        $this->master->insert('tbl_hospital',$importData);
+                    }else{
+                        $this->master->updateRecord('tbl_hospital',array('id'=>$ids),$importData);
+                    }
+                }
+            }
+            $response = array('status' => 'success','message'=> 'Data imported successfully','url'=>base_url('admin/hospital'));
+            echo json_encode($response);
+            return false;
+        }else{
+            $response = array('status' => 'errors','message' => 'Something went wrong !!!','url'=>'');
+        }
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+
+
+
+        // if($_FILES['excel_file']['error'] == 0){
+        //     $name = $_FILES['excel_file']['name'];
+        //     $ext = explode('.', $name);
+            
+        //     $type = $_FILES['excel_file']['type'];
+        //     $tmpName = $_FILES['excel_file']['tmp_name'];
+        //     if($ext[1] === 'csv'){
+        //         if(($handle = fopen($tmpName, 'r')) !== FALSE) {
+        //             set_time_limit(0);
+        //             $row = 0;
+        //             //$datas = fgetcsv($handle, 1000, ',');
+                   
+        //             while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+        //                 $col_count = count($data);
+        //                 $facilityData = [];    
+                        
+        //                 if($row == 0){
+        //                     $totalFacility = count($data);
+        //                     for($i=2;$i<$totalFacility;$i++){
+        //                         $facilityData[$i-2]['facility_id'] = $data[$i];
+        //                         $facilityData[$i-2]['index'] = $i;
+        //                     }
+        //                 }
+        //                 $facilityData = array_filter($facilityData);
+        //                 if ($row > 0) {
+        //                     echo "<pre>";
+        //                     print_r($facilityData);die;
+        //                     $impdata['college_id'] = explode('_',$data[1])[0];
+                            
+        //                     foreach($facilityData as $key=>$face){
+                               
+        //                         // if(!empty($face) && isset($data[$face['index']])){
+        //                         //     $newFace[$key]['facility_id'] = explode('_',$face['facility_id'])[0];
+        //                         //     $newFace[$key]['value'] = $data[$face['index']];
+                                    
+        //                         // }
+        //                         // $facilityDatas[$key]['facility_id'] = (isset($data[$face['index']])) ? ;
+        //                         // $facilityDatas[$key]['facility_id'] = (isset($data[$face['index']])) ? ;
+        //                     }
+        //                     $impdata['facilities'] = json_encode($newFace);
+        //                     // $id=$data[0];
+        //                     // if($id==""){
+        //                     //     $this->db->insert('tbl_hospital',$impdata);
+        //                     // }else{
+        //                     //     $this->db->where('id',$id)->update('tbl_hospital',$impdata);
+        //                     // }
+        //                     // echo "<pre>";
+        //                     // print_r($impdata); 
+        //                 }
+        //                 $row++;
+        //              } 
+        //              die;
+        //              fclose($handle);
+        //             $response = array('status' => 'success','message' => 'College imported successfully','url'=>base_url('admin/college'));
+        //             echo json_encode($response);
+        //             return true;
 
                     
 
-                }else{
+        //         }else{
 
-                    $response = array(
-                        'status' => 'error',
-                        'errors' => array(
-                            'excel_file' => form_error('excel_file')
-                        )
-                    );
-            echo json_encode($response);
-            return false;
-
-                }
-
-            }else{
-                $response = array(
-                'status' => 'error',
-                'errors' => array(
-                    'excel_file' => form_error('excel_file')
-                )
-            );
-            echo json_encode($response);
-            return false;
-
-            }
-        }else{
-            $response = array(
-                'status' => 'error',
-                'errors' => array(
-                    'excel_file' => form_error('excel_file')
-                )
-            );
-            echo json_encode($response);
-            return false;
-        }
+        //             $response = array(
+        //                 'status' => 'error',
+        //                 'errors' => array(
+        //                     'excel_file' => form_error('excel_file')
+        //                 )
+        //             );
+        //             echo json_encode($response);
+        //             return false;
+        //         }
+        //     }else{
+        //         $response = array(
+        //         'status' => 'error',
+        //         'errors' => array(
+        //             'excel_file' => form_error('excel_file')
+        //             )
+        //         );
+        //         echo json_encode($response);
+        //         return false;
+        //     }
+        // }else{
+        //     $response = array(
+        //         'status' => 'error',
+        //         'errors' => array(
+        //             'excel_file' => form_error('excel_file')
+        //         )
+        //     );
+        //     echo json_encode($response);
+        //     return false;
+        // }
     }
 
 

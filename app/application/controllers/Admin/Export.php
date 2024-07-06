@@ -10,6 +10,59 @@ class Export extends CI_Controller {
         $this->load->model('MasterModel','master');
         $this->load->model('SiteSettings','site');
     }
+
+
+	public function hospitalExport(){
+		$hospitalData = $this->master->getRecords('tbl_hospital',[]);
+		if(count($hospitalData) > 0){
+			$facilities = $this->master->getRecords('tbl_facilities',[]);
+			$delimiter = ","; 
+		    $filename = "hospitals_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w');
+			$fields = array('ID', 'College'); 
+			foreach($facilities as $facility){ 
+				$fields[] = $facility['id'].'_'.$facility['facility'];
+			}
+			fputcsv($f, $fields, $delimiter); 
+			foreach($hospitalData as $hospital){ 
+				$collegeData = $this->master->singleRecord('tbl_college',['id'=>$hospital['college_id']]);
+		        $lineData = array($hospital['id'], $collegeData['id'].'_'.$collegeData['full_name']); 
+				$facilityData = json_decode($hospital['facilities'],true);
+				
+				//fputcsv($f, $lineData, $delimiter); 
+				foreach($facilities as $faci){ 
+					$checkFacility = array_filter($facilityData, function($value) use ($faci) {
+						return $value['id'] == $faci['facility_id'];
+					});
+					$facility_ids = array_map(function($item) {
+						return $item['value'];
+					}, $checkFacility);
+					
+					// if(!empty($facility_ids)){
+					// 	$lineData[] = $facility_ids['value'];
+					// }else{
+					// 	$lineData[] = '0';
+					// }	
+				}
+				foreach($facility_ids as $fa){
+					$lineData[] = $fa;
+				}
+				// echo "<pre>";
+				// print_r($facility_ids);
+				fputcsv($f, $lineData, $delimiter); 
+				// echo "<pre>";
+				// 	print_r($lineData);
+		    } 
+			fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f); 
+		}
+	}
+
+
+
+
 	public function state(){	
 		$query = $this->db->select('s.id as state_id,s.name as state_name , s.country_id,c.countryCode,c.name')->from('tbl_state as s')->join('tbl_country as c', 's.country_id = c.id')->get()->result_array(); 
 		if(count($query) > 0){ 

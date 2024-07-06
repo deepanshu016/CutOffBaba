@@ -9,7 +9,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard'); ?>">Home</a></li>
-                                <li class="breadcrumb-item active">Import College</li>
+                                <li class="breadcrumb-item active">Import Hospital</li>
                             </ol>
                         </div>
 
@@ -21,23 +21,23 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">
-                            <h4 class="card-title mb-0">Import College</h4>
+                            <h4 class="card-title mb-0">Import Hospital</h4>
                             <div>
-                                <a href="<?= base_url('admin/college'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
-                                <a href="<?= base_url('admin/export-college'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
+                                <a href="<?= base_url('admin/hospital'); ?>" class="btn btn-success add-btn" ><i class="ri-list-check"></i> List</a>
+                                <a href="<?= base_url('admin/export-hospital'); ?>" class="btn btn-primary add-btn" ><i class="ri-download-2-line"></i> Sample File </a>
                             </div>
                         </div>
                         <!-- end card header -->
                         <div class="card-body">
                             <div id="customerList">
                                 <div class="row g-4 mb-3">
-                                    <span class="">Notes:-</span>
+                                    <!-- <span class="">Notes:-</span>
                                     <ul style="color:red;margin-left: 15px;">
                                         <li>Please fill all details properly in excel file which you need to upload</li>
                                         <li>'full_name' field is required while uploading college data</li>
                                        
-                                    </ul>
-                                    <form action="<?= base_url('admin/import-college-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
+                                    </ul> -->
+                                    <form action="<?= base_url('admin/import-hospital-by-excel') ?>" method="POST" enctype="multipart/form-data" class="all-form">
                                         <div class="live-preview">
                                             <div class="row">
                                                 <div class="col-lg-12">
