@@ -197,29 +197,33 @@ Class CollegeMatrix extends MY_Controller {
                         set_time_limit(0);
                         $row = 0;
                         $firstRowData = fgetcsv($handle, 1000, ',');
+                       
                         while(($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
-                            for($k=1;$k < count($firstRowData);$k++){
-                                if(!empty($data)){
-                                    $firstRowData[$k];
-                                    $brid=explode("-",$firstRowData[$k]);
+                            // for($k=1;$k < count($firstRowData);$k++){
+                                if($row >0){
+                                    // $firstRowData[$k];
+                                    // $brid=explode("-",$firstRowData[$k]);
                                     //print_r($brid);
                                     $col_count = count($data);
-                                    $impdata['college_id']=$data[0];
+                                    
+                                    $impdata['college_id']=explode('_',$data[0])[0];
                                     $impdata['stream_id']=$stream_id;
                                     $impdata['degree_type_id']=$degree_type_id;
                                     $impdata['course_id']=$course_id;
-                                    $impdata['branch_id']=$brid[0];
-                                    $impdata['seat']=$data[$k];
-                                    $this->master->deleteRecord('tbl_college_seat_matrix_data',['college_id'=>$data[0],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$brid[0]]);
+                                    $impdata['branch_id']=$branch_id;
+                                    $impdata['seat']=$data[1];
+                                   
+                                    $this->master->deleteRecord('tbl_college_seat_matrix_data',['college_id'=>explode('_',$data[0])[0],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id]);
                                     //echo $this->db->last_query();
                                     $this->master->insert('tbl_college_seat_matrix_data',$impdata);
                                     //echo $this->db->last_query();
                                 }
                                 // }
-                            }
+                           // }
                             $row++;
                             // $this->master->insert('tbl_college_seat_matrix_data',$impdata);
                         }
+                        //die;
                         fclose($handle);
                         $response = array('status' => 'success','message' => 'College Seats imported successfully','url'=>base_url('admin/import-college-seat-matrix'));
                         echo json_encode($response);
@@ -268,45 +272,64 @@ Class CollegeMatrix extends MY_Controller {
         
         
         // die;
-        require 'vendor/autoload.php';
-		$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
-		$sheet = $spreadsheet->getActiveSheet();
+        // require 'vendor/autoload.php';
+		// $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+		// $sheet = $spreadsheet->getActiveSheet();
         $collegeList = $this->master->getMinimumCollegeWithCourse();
         $branchList = $this->master->getBranchesWithid($branch_id);
-        $collegeListssss = [];
-        $sheet->setCellValue('A1', 'College ID');
-        $columns = range('A', 'Z');
-        if(!empty($branchList)){
-            foreach($branchList as $key=>$branch){
-                if ($key>=25) {
-                    $sheet->setCellValue("A".$columns[$key-25].'1', $branch['id']."-".$branch['branch']);
-                }else{
-                    $sheet->setCellValue($columns[$key+1].'1', $branch['id']."-".$branch['branch']);
-                }
-                
+        // echo "<pre>";
+        // print_r($branchList); die;
+        if(count($collegeList) > 0){ 
+		    $delimiter = ","; 
+		    $filename = "seat_matrix_" . date('Y-m-d') . ".csv"; 
+		    $f = fopen('php://memory', 'w'); 
+		    $fields = array('College ID');
+            foreach($branchList as $branch){
+                $fields[] = $branch['branch'];
             }
-        }        
-        if(!empty($collegeList)){
-            $row = 2;
-            foreach($collegeList as $key=>$college){
-                $sheet->setCellValue('A'. $row, $college['college_id']);
-                    $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id])->get()->row_array();
-                   
+		    fputcsv($f, $fields, $delimiter); 
+		    foreach($collegeList as $row){ 
+            $lineData = array($row['college_id'].'_'.$row['full_name']); 
+                foreach($branchList as $br){
+                    $SeatMatrixData = $this->db->select('*')
+                    ->from('tbl_college_seat_matrix_data')
+                    ->where(['college_id'=>$row['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id])
+                    ->get()
+                    ->row_array();
                     if(!empty($SeatMatrixData)){
-                        $sheet->setCellValue($columns[1].$row, $SeatMatrixData['seat']);
+                        $lineData[] = $SeatMatrixData['seat'];
                     }else{
-                        $sheet->setCellValue($columns[1].$row, 0);
+                        $lineData[] = '0';
                     }
-                $row++;
-            }
+                    
+                }
+		        fputcsv($f, $lineData, $delimiter); 
+		    } 
+		    fseek($f, 0); 
+		    header('Content-Type: text/csv'); 
+		    header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+		    fpassthru($f);
         }
-        $filename = 'Seat_Matrix.csv';
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="' . $filename . '"');
-        header('Cache-Control: max-age=0');
-        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
-        $writer->save('php://output');
-        exit;
+        // // if(!empty($collegeList)){
+        // //     $row = 2;
+        // //     foreach($collegeList as $key=>$college){
+        // //         $sheet->setCellValue('A'. $row, $college['college_id']);
+        // //             $SeatMatrixData = $this->db->select('*')->from('tbl_college_seat_matrix_data')->where(['college_id'=>$college['college_id'],'stream_id'=>$stream_id,'degree_type_id'=>$degree_type_id,'course_id'=>$course_id,'branch_id'=>$branch_id])->get()->row_array();
+                   
+        // //             if(!empty($SeatMatrixData)){
+        // //                 $sheet->setCellValue($columns[1].$row, $SeatMatrixData['seat']);
+        // //             }else{
+        // //                 $sheet->setCellValue($columns[1].$row, 0);
+        // //             }
+        // //         $row++;
+        // //     }
+        // // }
+        // $filename = 'Seat_Matrix.csv';
+        // header('Content-Type:  text/csv');
+        // header('Content-Disposition: attachment; filename="' . $filename . '";'); 
+        // $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+        // $writer->save('php://output');
+        // exit;
     }
 
 

@@ -18,6 +18,16 @@
       $states = $this->db->select('name')->where('id',$collegeDetail['state'])->get('tbl_state')->row_array();
       $city = $this->db->select('city')->where('id',$collegeDetail['city'])->get('tbl_city')->row_array();
    ?>
+   <?php
+      $facilities = [];
+      $collegeFacilities = $this->db->select('*')->where('college_id',$collegeDetail['id'])->get('tbl_hospital')->row_array();
+      if(!empty($collegeFacilities)){
+         $facilities = json_decode($collegeFacilities['facilities'],true);
+
+      }
+      // echo "<pre>";
+      // print_r($collegeFacilities); die;
+   ?> 
    <!--/hero_in-->
    <section class="main_posyion d-none d-sm-block d-sm-none d-md-block">
       <div class="container">
@@ -44,7 +54,9 @@
             <li><a href="#placement">Placement</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#admission">Admission</a></li>
+            <?php if(!empty($facilities)) { ?>
             <li><a href="#hospital">Hospital Details</a></li>
+            <?php } ?>
             <li><a href="#contacts">Contact Us</a></li>
             <li><a href="#reviews">Reviews</a></li>
          </ul>
@@ -475,49 +487,27 @@
 
                      </div>
                   </section>
-
-                   <section id="hospital" class="card card-body rs-counter">
+                  <?php if(!empty($facilities)) { ?>
+                  <section id="hospital" class="card card-body rs-counter">
                      <div class="row">
                         <h4 class="mainShorst">Hospital Details</h4>
+                       
                         <div class="row">
+                           <?php foreach($facilities as $facility) { 
+                              $facilityData = $this->db->get_where('tbl_facilities', array('id' =>$facility['facility_id']))->row_array();
+                           ?>
                            <div class="col">
                               <div class="rs-counter-list">
-                                 <i class="fa fa-bed" style="font-size: 40px;"></i>
-                                 <h1 id="H1" class="plus">0</h1>
-                                 <h4 class="counter-desc">Total Beds</h4>
+                                 <!-- <i class="fa fa-bed" style="font-size: 40px;"></i> -->
+                                 <h1 id="H1" class="plus"><?= $facility['value']; ?></h1>
+                                 <h4 class="counter-desc"><?= $facilityData['facility']; ?></h4>
                               </div>
                            </div>
-                           <div class="col">
-                              <div class="rs-counter-list">
-                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
-                                 <h1 id="H2" class="plus">0</h1>
-                                 <h4 class="counter-desc">IPD</h4>
-                              </div>
-                           </div>
-                           <div class="col">
-                              <div class="rs-counter-list">
-                                 <i class="fa fa-hospital-o" style="font-size: 40px;"></i>
-                                 <h1 id="H3" class="plus">0</h1>
-                                 <h4 class="counter-desc">OPD</h4>
-                              </div>
-                           </div>
-                           <div class="col">
-                              <div class="rs-counter-list">
-                                 <i class="fa fa-telegram" style="font-size: 40px;"></i>
-                                 <h1 id="H4" class="plus">0</h1>
-                                 <h4 class="counter-desc">BOR</h4>
-                              </div>
-                           </div>
-                           <div class="col">
-                              <div class="rs-counter-list">
-                                 <i class="fa fa-plus-circle" style="font-size: 40px;"></i>
-                                 <h1 id="H5" class="plus">0</h1>
-                                 <h4 class="counter-desc">CASUALTIES</h4>
-                              </div>
-                           </div>
+                           <?php } ?>
                         </div>
                      </div>
                   </section>
+                  <?php } ?>
 
                   <section id="fees" class="card card-body">
                      <div class="row">

@@ -8,6 +8,8 @@ class MasterModel extends CI_Model {
 //		debugger($this->db->queries);
 	}
 	function insert($table = '', $data = []) {
+		// echo "<pre>";
+		// print_r($data); die;
 		$q = $this->db->insert($table, $data);
 		return  $this->db->insert_id();
 		
